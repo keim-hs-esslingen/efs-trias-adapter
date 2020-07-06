@@ -1,0 +1,5 @@
+
+# Ignoring output files
+trias-xsd/
+trias-xsd-*/
+generated/
