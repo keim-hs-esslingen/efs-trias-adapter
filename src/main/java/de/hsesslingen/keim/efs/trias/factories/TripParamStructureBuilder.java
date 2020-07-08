@@ -24,8 +24,11 @@
 package de.hsesslingen.keim.efs.trias.factories;
 
 import de.vdv.trias.PtModeFilterStructure;
+import de.vdv.trias.PtModesEnumeration;
 import de.vdv.trias.TripParamStructure;
 import java.math.BigInteger;
+import java.util.Collection;
+import java.util.stream.Stream;
 
 /**
  *
@@ -39,6 +42,42 @@ public class TripParamStructureBuilder extends TripParamStructure {
 
     public TripParamStructureBuilder ptModeFilter(PtModeFilterStructure ptModeFilter) {
         this.ptModeFilter = ptModeFilter;
+        return this;
+    }
+
+    public TripParamStructureBuilder ptModeFilterByExclude(boolean exclude) {
+        this.ptModeFilter = new PtModeFilterStructure();
+        ptModeFilter.setExclude(exclude);
+        return this;
+    }
+
+    public TripParamStructureBuilder ptModeFilter(boolean exclude, Collection<PtModesEnumeration> modes, Collection<Object> subModeChoiceGroups) {
+        this.ptModeFilter = new PtModeFilterStructure();
+        ptModeFilter.setExclude(exclude);
+
+        if (modes != null) {
+            ptModeFilter.getPtMode().addAll(modes);
+        }
+
+        if (subModeChoiceGroups != null) {
+            ptModeFilter.getPtSubmodeChoiceGroup().addAll(subModeChoiceGroups);
+        }
+
+        return this;
+    }
+
+    public TripParamStructureBuilder ptModeFilter(boolean exclude, Stream<PtModesEnumeration> modes, Stream<Object> subModeChoiceGroups) {
+        this.ptModeFilter = new PtModeFilterStructure();
+        ptModeFilter.setExclude(exclude);
+
+        if (modes != null) {
+            modes.forEachOrdered(ptModeFilter.getPtMode()::add);
+        }
+
+        if (subModeChoiceGroups != null) {
+            subModeChoiceGroups.forEachOrdered(ptModeFilter.getPtSubmodeChoiceGroup()::add);
+        }
+
         return this;
     }
 

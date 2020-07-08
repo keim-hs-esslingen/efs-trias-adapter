@@ -31,7 +31,6 @@ import de.hsesslingen.keim.efs.trias.factories.TripParamStructureBuilder;
 import de.hsesslingen.keim.efs.trias.factories.TripRequestStructureBuilder;
 import de.vdv.trias.InitialLocationInputStructure;
 import de.vdv.trias.LocationInformationRequestStructure;
-import de.vdv.trias.PtModeFilterStructure;
 import de.vdv.trias.RequestPayloadStructure;
 import de.vdv.trias.ServiceRequestStructure;
 import de.vdv.trias.StopPointRefStructure;
@@ -64,6 +63,10 @@ public class TriasRequestFactory {
     @Value("${trias.api-user-reference}")
     private String apiUserReference;
 
+    @Value("${trias.provider-time-zone-id}")
+    private String providerTimeZoneIdStr;
+    private ZoneId providerTimeZoneId;
+
     @PostConstruct
     private void init() {
         if (StringUtils.isBlank(triasVersion)) {
@@ -72,6 +75,12 @@ public class TriasRequestFactory {
 
         if (StringUtils.isBlank(apiUserReference)) {
             throw new MissingConfigParamException("trias.api-user-reference");
+        }
+
+        if (providerTimeZoneIdStr == null) {
+            providerTimeZoneId = ZoneId.systemDefault();
+        } else {
+            providerTimeZoneId = ZoneId.of(providerTimeZoneIdStr);
         }
     }
 
@@ -98,34 +107,24 @@ public class TriasRequestFactory {
     }
 
     public TripRequestStructure createTripRequestStructure(Place from, Place to, Instant startTime, Instant endTime) {
-
-        var origin = new LocationContextStructureBuilder()
-                .locationRef(LocationRefStructureFactory.fromCoordinates(from))
-                .depArrTime(startTime.atZone(ZoneId.of("Europe/Berlin")))
-                .build();
-
-        var destination = new LocationContextStructureBuilder()
-                .locationRef(LocationRefStructureFactory.fromCoordinates(to))
-                .depArrTime(endTime.atZone(ZoneId.of("Europe/Berlin")))
-                .build();
-
-        var ptModeFilter = new PtModeFilterStructure();
-        ptModeFilter.setExclude(true);
-
-        var params = new TripParamStructureBuilder()
-                .ptModeFilter(ptModeFilter)
-                .includeFares(true)
-                .immediateTripStart(false)
-                .includeIntermediateStops(false)
-                .includeLegProjection(false)
-                .includeTrackSections(true)
-                .numberOfResults(numberOfResults)
-                .build();
-
         return new TripRequestStructureBuilder()
-                .origin(origin)
-                .destination(destination)
-                .params(params)
+                .origin(new LocationContextStructureBuilder()
+                        .locationRef(LocationRefStructureFactory.fromCoordinates(from))
+                        .depArrTime(startTime.atZone(providerTimeZoneId))
+                        .build())
+                .destination(new LocationContextStructureBuilder()
+                        .locationRef(LocationRefStructureFactory.fromCoordinates(to))
+                        .depArrTime(endTime.atZone(providerTimeZoneId))
+                        .build())
+                .params(new TripParamStructureBuilder()
+                        .ptModeFilterByExclude(true)
+                        .includeFares(true)
+                        .immediateTripStart(false)
+                        .includeIntermediateStops(false)
+                        .includeLegProjection(false)
+                        .includeTrackSections(true)
+                        .numberOfResults(numberOfResults)
+                        .build())
                 .build();
     }
 
