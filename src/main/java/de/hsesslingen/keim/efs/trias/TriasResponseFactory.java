@@ -170,8 +170,6 @@ public class TriasResponseFactory {
 
         if (stopPointRef != null) {
             place.setStopId(stopPointRef.getValue());
-
-            //place.setLat(Double.NaN)
         }
 
         if (stopPointName != null) {

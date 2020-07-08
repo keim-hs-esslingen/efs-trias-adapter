@@ -24,11 +24,12 @@
 package de.hsesslingen.keim.efs.trias;
 
 import de.hsesslingen.keim.efs.middleware.common.Place;
-import de.vdv.trias.GeoPositionStructure;
+import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
+import de.hsesslingen.keim.efs.trias.factories.LocationContextStructureBuilder;
+import de.hsesslingen.keim.efs.trias.factories.LocationRefStructureFactory;
+import de.hsesslingen.keim.efs.trias.factories.TripRequestStructureBuilder;
 import de.vdv.trias.InitialLocationInputStructure;
-import de.vdv.trias.LocationContextStructure;
 import de.vdv.trias.LocationInformationRequestStructure;
-import de.vdv.trias.LocationRefStructure;
 import de.vdv.trias.PtModeFilterStructure;
 import de.vdv.trias.RequestPayloadStructure;
 import de.vdv.trias.ServiceRequestStructure;
@@ -36,11 +37,12 @@ import de.vdv.trias.StopPointRefStructure;
 import de.vdv.trias.Trias;
 import de.vdv.trias.TripParamStructure;
 import de.vdv.trias.TripRequestStructure;
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import javax.annotation.PostConstruct;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import uk.org.siri.siri.ParticipantRefStructure;
@@ -54,7 +56,7 @@ import uk.org.siri.siri.ParticipantRefStructure;
 @Component
 public class TriasRequestFactory {
 
-    @Value("${trias.number-of-results}")
+    @Value("${trias.number-of-results:5}")
     private String numberOfResults;
 
     @Value("${trias.trias-version}")
@@ -63,74 +65,50 @@ public class TriasRequestFactory {
     @Value("${trias.api-user-reference}")
     private String apiUserReference;
 
+    @PostConstruct
+    private void init() {
+        if (StringUtils.isBlank(triasVersion)) {
+            throw new MissingConfigParamException("trias.triasVersion");
+        }
+
+        if (StringUtils.isBlank(apiUserReference)) {
+            throw new MissingConfigParamException("trias.api-user-reference");
+        }
+    }
+
     public Trias createBaseRequestTrias() {
         var baseRequestTrias = new Trias();
 
         // to set the Version is important, otherwise the API will return null 
         baseRequestTrias.setVersion(triasVersion);
 
-        var requestPayLoad = new RequestPayloadStructure();
         var serviceRequest = new ServiceRequestStructure();
 
-        serviceRequest.setRequestPayload(requestPayLoad);
+        serviceRequest.setRequestPayload(new RequestPayloadStructure());
+
         //set current TimeStamp
         serviceRequest.setRequestTimestamp(ZonedDateTime.now());
 
-        var requestorRef = new ParticipantRefStructure();
+        // the API Maintainer want to know who is requesting
+        serviceRequest.setRequestorRef(new ParticipantRefStructure());
+        serviceRequest.getRequestorRef().setValue(apiUserReference);
 
-        // the API Maintainer want to know how is requesting
-        requestorRef.setValue(apiUserReference);
-        serviceRequest.setRequestorRef(requestorRef);
         baseRequestTrias.setServiceRequest(serviceRequest);
 
         return baseRequestTrias;
     }
 
-    public Trias buildTripRequestTrias(Place from, Place to, Instant startTime, Instant endTime) {
+    public TripRequestStructure createTripRequestStructure(Place from, Place to, Instant startTime, Instant endTime) {
 
-        var tripRequest = new TripRequestStructure();
+        var origin = new LocationContextStructureBuilder()
+                .locationRef(LocationRefStructureFactory.fromCoordinates(from))
+                .depArrTime(startTime.atZone(ZoneId.of("Europe/Berlin")))
+                .build();
 
-        var origin = new LocationContextStructure();
-        var locationRefOrigin = new LocationRefStructure();
-        var geoPositionOrigin = new GeoPositionStructure();
-        geoPositionOrigin.setLatitude(new BigDecimal(from.getLat()));
-        geoPositionOrigin.setLongitude(new BigDecimal(from.getLon()));
-        locationRefOrigin.setGeoPosition(geoPositionOrigin);
-        origin.setLocationRef(locationRefOrigin);
-
-        // The Departure- and ArrivalTime can be specified in the Origin / Destination  (LocationRefStructure)
-        // If there is both a Departure- and an ArrivalTime defined then the  DepartureTime is fully ignored
-        if (startTime != null) {
-            origin.setDepArrTime(startTime.atZone(ZoneId.of("Europe/Berlin")));
-        }
-
-        // Note from the documentation: Usually there's only one origin and one destination object.
-        // Only in case you want to provide multiple origins and destinations with individual time stamps,
-        // you can add all of those in to this list. The server will then choose the best fit.
-        tripRequest.getOrigin().add(origin);
-
-        var destination = new LocationContextStructure();
-        var locationRefDestination = new LocationRefStructure();
-        var geoPositionDestination = new GeoPositionStructure();
-
-//        if (to == null) {
-//            geoPositionDestination.setLatitude(new BigDecimal(49.414072));
-//            geoPositionDestination.setLongitude(new BigDecimal(8.717618));
-//        } else {
-        geoPositionDestination.setLatitude(new BigDecimal(to.getLat()));
-        geoPositionDestination.setLongitude(new BigDecimal(to.getLon()));
-//        }
-
-        locationRefDestination.setGeoPosition(geoPositionDestination);
-        destination.setLocationRef(locationRefDestination);
-
-        // The Departure- and ArrivalTime can be specified in the Origin / Destination  (LocationRefStructure)
-        // If there is both a Departure- and an ArrivalTime defined then the  DepartureTime is fully ignored
-        if (endTime != null) {
-            destination.setDepArrTime(endTime.atZone(ZoneId.of("Europe/Berlin")));
-        }
-
-        tripRequest.getDestination().add(destination);
+        var destination = new LocationContextStructureBuilder()
+                .locationRef(LocationRefStructureFactory.fromCoordinates(to))
+                .depArrTime(endTime.atZone(ZoneId.of("Europe/Berlin")))
+                .build();
 
         var ptModeFilter = new PtModeFilterStructure();
         ptModeFilter.setExclude(Boolean.TRUE);
@@ -138,16 +116,24 @@ public class TriasRequestFactory {
         var params = new TripParamStructure();
 
         params.setPtModeFilter(ptModeFilter);
-        params.setIncludeFares(Boolean.TRUE);
-        params.setImmediateTripStart(Boolean.FALSE);
-        params.setIncludeIntermediateStops(Boolean.FALSE);
-        params.setIncludeLegProjection(Boolean.FALSE);
-        params.setIncludeTrackSections(Boolean.TRUE);
+        params.setIncludeFares(true);
+        params.setImmediateTripStart(false);
+        params.setIncludeIntermediateStops(false);
+        params.setIncludeLegProjection(false);
+        params.setIncludeTrackSections(true);
         params.setNumberOfResults(new BigInteger(numberOfResults));
-        tripRequest.setParams(params);
+
+        return new TripRequestStructureBuilder()
+                .origin(origin)
+                .destination(destination)
+                .params(params)
+                .build();
+    }
+
+    public Trias buildTripRequestTrias(Place from, Place to, Instant startTime, Instant endTime) {
+        var tripRequest = createTripRequestStructure(from, to, startTime, endTime);
 
         var tripRequestTrias = createBaseRequestTrias();
-
         tripRequestTrias.getServiceRequest().getRequestPayload().setTripRequest(tripRequest);
 
         return tripRequestTrias;
