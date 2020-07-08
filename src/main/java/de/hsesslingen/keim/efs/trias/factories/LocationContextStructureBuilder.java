@@ -31,29 +31,10 @@ import java.time.ZonedDateTime;
  *
  * @author ben
  */
-public class LocationContextStructureBuilder {
-
-    private LocationRefStructure locationRef;
-
-    /**
-     * The Departure- and ArrivalTime can be specified in the Origin /
-     * Destination (LocationRefStructure) If there is both a Departure- and an
-     * ArrivalTime defined then the DepartureTime is fully ignored
-     */
-    private ZonedDateTime depArrTime;
+public class LocationContextStructureBuilder extends LocationContextStructure {
 
     public LocationContextStructure build() {
-        var location = new LocationContextStructure();
-
-        if (locationRef != null) {
-            location.setLocationRef(locationRef);
-        }
-
-        if (depArrTime != null) {
-            location.setDepArrTime(depArrTime);
-        }
-
-        return location;
+        return this;
     }
 
     public LocationContextStructureBuilder locationRef(LocationRefStructure locationRef) {

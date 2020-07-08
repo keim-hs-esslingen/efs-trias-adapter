@@ -27,6 +27,7 @@ import de.hsesslingen.keim.efs.middleware.common.Place;
 import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
 import de.hsesslingen.keim.efs.trias.factories.LocationContextStructureBuilder;
 import de.hsesslingen.keim.efs.trias.factories.LocationRefStructureFactory;
+import de.hsesslingen.keim.efs.trias.factories.TripParamStructureBuilder;
 import de.hsesslingen.keim.efs.trias.factories.TripRequestStructureBuilder;
 import de.vdv.trias.InitialLocationInputStructure;
 import de.vdv.trias.LocationInformationRequestStructure;
@@ -35,9 +36,7 @@ import de.vdv.trias.RequestPayloadStructure;
 import de.vdv.trias.ServiceRequestStructure;
 import de.vdv.trias.StopPointRefStructure;
 import de.vdv.trias.Trias;
-import de.vdv.trias.TripParamStructure;
 import de.vdv.trias.TripRequestStructure;
-import java.math.BigInteger;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -57,7 +56,7 @@ import uk.org.siri.siri.ParticipantRefStructure;
 public class TriasRequestFactory {
 
     @Value("${trias.number-of-results:5}")
-    private String numberOfResults;
+    private long numberOfResults;
 
     @Value("${trias.trias-version}")
     private String triasVersion;
@@ -111,17 +110,17 @@ public class TriasRequestFactory {
                 .build();
 
         var ptModeFilter = new PtModeFilterStructure();
-        ptModeFilter.setExclude(Boolean.TRUE);
+        ptModeFilter.setExclude(true);
 
-        var params = new TripParamStructure();
-
-        params.setPtModeFilter(ptModeFilter);
-        params.setIncludeFares(true);
-        params.setImmediateTripStart(false);
-        params.setIncludeIntermediateStops(false);
-        params.setIncludeLegProjection(false);
-        params.setIncludeTrackSections(true);
-        params.setNumberOfResults(new BigInteger(numberOfResults));
+        var params = new TripParamStructureBuilder()
+                .ptModeFilter(ptModeFilter)
+                .includeFares(true)
+                .immediateTripStart(false)
+                .includeIntermediateStops(false)
+                .includeLegProjection(false)
+                .includeTrackSections(true)
+                .numberOfResults(numberOfResults)
+                .build();
 
         return new TripRequestStructureBuilder()
                 .origin(origin)

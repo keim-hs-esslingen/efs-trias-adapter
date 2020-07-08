@@ -29,84 +29,28 @@ import de.vdv.trias.NotViaStructure;
 import de.vdv.trias.TripParamStructure;
 import de.vdv.trias.TripRequestStructure;
 import de.vdv.trias.ViaStructure;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 /**
  *
  * @author ben
  */
-public class TripRequestStructureBuilder {
-
-    private LocationContextStructure origin;
-    private LocationContextStructure destination;
-    private TripParamStructure params;
-
-    // Using list of streams for generic way of adding locations.
-    // We have to iterate over them anyways, if we want to add them to the 
-    // target object. Therefore it doesn't matter if we use a collection or
-    // a stream.
-    private List<Stream<LocationContextStructure>> origins;
-    private List<Stream<LocationContextStructure>> destinations;
-    private List<Stream<ViaStructure>> vias;
-    private List<Stream<NotViaStructure>> notVias;
-    private List<Stream<NoChangeAtStructure>> noChangeAts;
-
-    private <T> void addIfPresent(T member, Consumer<T> consumer) {
-        if (member != null) {
-            consumer.accept(member);
-        }
-    }
+public class TripRequestStructureBuilder extends TripRequestStructure {
 
     public TripRequestStructure build() {
-        var req = new TripRequestStructure();
-
-        addIfPresent(origin, req.getOrigin()::add);
-        addIfPresent(destination, req.getDestination()::add);
-        addIfPresent(params, req::setParams);
-
-        if (origins != null) {
-            origins.stream()
-                    .flatMap(s -> s)
-                    .forEachOrdered(req.getOrigin()::add);
-        }
-
-        if (destinations != null) {
-            destinations.stream()
-                    .flatMap(s -> s)
-                    .forEachOrdered(req.getDestination()::add);
-        }
-
-        if (vias != null) {
-            vias.stream()
-                    .flatMap(s -> s)
-                    .forEachOrdered(req.getVia()::add);
-        }
-
-        if (notVias != null) {
-            notVias.stream()
-                    .flatMap(s -> s)
-                    .forEachOrdered(req.getNotVia()::add);
-        }
-
-        if (noChangeAts != null) {
-            noChangeAts.stream()
-                    .flatMap(s -> s)
-                    .forEachOrdered(req.getNoChangeAt()::add);
-        }
-
-        return req;
+        // Simply returning this, because we already ARE a TripRequestStructure.
+        // This is equal to making a cast on the TripRequestStructureBuilder object
+        // but calling build() is more convenient.
+        return this;
     }
 
     public TripRequestStructureBuilder origin(LocationContextStructure origin) {
-        this.origin = origin;
+        this.getOrigin().add(origin);
         return this;
     }
 
     public TripRequestStructureBuilder destination(LocationContextStructure destination) {
-        this.destination = destination;
+        this.getDestination().add(destination);
         return this;
     }
 
@@ -116,52 +60,32 @@ public class TripRequestStructureBuilder {
     }
 
     public TripRequestStructureBuilder addOrigins(Stream<LocationContextStructure> origins) {
-        if (this.origins == null) {
-            this.origins = new ArrayList<>(1);
-        }
-
-        this.origins.add(origins);
-
+        this.getOrigin(); // Using getter once to make sure the list is not null.
+        origins.forEachOrdered(this.origin::add);
         return this;
     }
 
     public TripRequestStructureBuilder addDestinations(Stream<LocationContextStructure> destinations) {
-        if (this.destinations == null) {
-            this.destinations = new ArrayList<>(1);
-        }
-
-        this.destinations.add(destinations);
-
+        this.getDestination(); // Using getter once to make sure the list is not null.
+        destinations.forEachOrdered(this.destination::add);
         return this;
     }
 
     public TripRequestStructureBuilder addVias(Stream<ViaStructure> vias) {
-        if (this.vias == null) {
-            this.vias = new ArrayList<>(1);
-        }
-
-        this.vias.add(vias);
-
+        this.getVia(); // Using getter once to make sure the list is not null.
+        vias.forEachOrdered(this.via::add);
         return this;
     }
 
     public TripRequestStructureBuilder addNotVias(Stream<NotViaStructure> notVias) {
-        if (this.notVias == null) {
-            this.notVias = new ArrayList<>(1);
-        }
-
-        this.notVias.add(notVias);
-
+        this.getNotVia(); // Using getter once to make sure the list is not null.
+        notVias.forEachOrdered(this.notVia::add);
         return this;
     }
 
     public TripRequestStructureBuilder addNoChangeAts(Stream<NoChangeAtStructure> noChangeAts) {
-        if (this.noChangeAts == null) {
-            this.noChangeAts = new ArrayList<>(1);
-        }
-
-        this.noChangeAts.add(noChangeAts);
-
+        this.getNoChangeAt(); // Using getter once to make sure the list is not null.
+        noChangeAts.forEachOrdered(this.noChangeAt::add);
         return this;
     }
 
