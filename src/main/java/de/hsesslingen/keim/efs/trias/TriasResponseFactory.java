@@ -54,6 +54,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.validation.constraints.NotNull;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,50 +84,40 @@ public class TriasResponseFactory {
         var place = new Place();
 
         if (locationRef.getGeoPosition() != null) {
-            place.setLat(locationRef.getGeoPosition().getLatitude().doubleValue());
-            place.setLon(locationRef.getGeoPosition().getLongitude().doubleValue());
+            place.setLat(locationRef.getGeoPosition().getLatitude());
+            place.setLon(locationRef.getGeoPosition().getLongitude());
         }
 
         if (locationRef.getStopPointRef() != null) {
             place.setStopId(locationRef.getStopPointRef().getValue());
-            // Here we face the Problem, that if a stopPointRef (StationName. StationId) is given we don't get the GeoPosition for the Station.
-            // This is not very convenent for further processing and therefore we use the LocationInformationService from the Trias API to convert SationIDs to GeoPositions
-
-            //TODO: Here seems to be a Problem     
-//                GeoPositionStructure geoPosition = triasLocationInformationService.getGeoPositionFromStopPoint(locationRef.getStopPointRef());
-//                if (geoPosition!=null){
-//                    place.setLat(geoPosition.getLatitude().doubleValue());
-//                    place.setLon(geoPosition.getLongitude().doubleValue());
-//                 }
-//            
         }
 
-        if (locationRef.getLocationName() != null) {
-            if (locationRef.getLocationName().get(0) != null) {
-                place.setName(locationRef.getLocationName().get(0).getText());
-            }
+        var names = locationRef.getLocationName(); // names is never null. See src.
+
+        if (!names.isEmpty()) {
+            place.setName(names.get(0).getText());
         }
 
         return place;
     }
 
-    public Place createPlaceFromStopPoint(StopPointRefStructure stopPointRef, List<InternationalTextStructure> stopPointName) {
+    public Place createPlaceFromStopPoint(StopPointRefStructure stopPointRef, @NotNull List<InternationalTextStructure> stopPointName) {
         var place = new Place();
 
         if (stopPointRef != null) {
             place.setStopId(stopPointRef.getValue());
         }
 
-        if (stopPointName != null) {
-            if (stopPointName.get(0) != null) {
-                place.setName(stopPointName.get(0).getText());
-                // Here we face the Problem, that for TimedLegs we only get the stopPointRef (StationName. StationId) but no GeoPosition for the Station.
-                // This is not very convenent for further processing and therefore we use the LocationInformationService from the Trias API to convert SationIDs to GeoPositions
-                GeoPositionStructure geoPosition = triasLocationInformationService.getGeoPositionFromStopPoint(stopPointRef);
-                if (geoPosition != null) {
-                    place.setLat(geoPosition.getLatitude().doubleValue());
-                    place.setLon(geoPosition.getLongitude().doubleValue());
-                }
+        if (!stopPointName.isEmpty()) {
+            place.setName(stopPointName.get(0).getText());
+
+            // Here we face the Problem, that for TimedLegs we only get the stopPointRef (StationName. StationId) but no GeoPosition for the Station.
+            // This is not very convenent for further processing and therefore we use the LocationInformationService from the Trias API to convert SationIDs to GeoPositions
+            GeoPositionStructure geoPosition = triasLocationInformationService.getGeoPositionFromStopPoint(stopPointRef);
+
+            if (geoPosition != null) {
+                place.setLat(geoPosition.getLatitude());
+                place.setLon(geoPosition.getLongitude());
             }
         }
 
@@ -223,7 +214,6 @@ public class TriasResponseFactory {
         leg.setServiceId(serviceId);
 
         return leg;
-
     }
 
     // A Trias - timed Leg means a Leg with timetabled schedule like Bus, Tram, Train,...
