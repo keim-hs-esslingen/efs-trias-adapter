@@ -31,8 +31,6 @@ import de.hsesslingen.keim.efs.trias.factories.LocationInformationRequestFactory
 import de.hsesslingen.keim.efs.trias.factories.TriasServiceRequest;
 import de.hsesslingen.keim.efs.trias.factories.TripParamStructureBuilder;
 import de.hsesslingen.keim.efs.trias.factories.TripRequestStructureBuilder;
-import de.vdv.trias.InitialLocationInputStructure;
-import de.vdv.trias.LocationInformationRequestStructure;
 import de.vdv.trias.StopPointRefStructure;
 import de.vdv.trias.Trias;
 import de.vdv.trias.TripRequestStructure;
