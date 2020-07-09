@@ -42,7 +42,7 @@
         <java.version>14</java.version>
     </properties>
     
-    <dependencies>
+    <dependencies>        
         <dependency>
             <groupId>de.hsesslingen.keim</groupId>
             <artifactId>rest-utils</artifactId>
@@ -68,11 +68,16 @@
             <version>0.0.1-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
-        
-        <!-- Needed for the JAXB annotations to work. -->
+                
         <dependency>
+            <!-- Needed for the JAXB annotations to work. -->
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
+        </dependency>
+        <dependency>
+            <!-- Needed to be able to de/serialize XML with JAXB.. -->
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
         </dependency>
         
         <dependency>
