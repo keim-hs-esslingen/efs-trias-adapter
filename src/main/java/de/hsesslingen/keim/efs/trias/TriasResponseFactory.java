@@ -39,6 +39,7 @@ import static de.vdv.trias.IndividualModesEnumeration.SELF_DRIVE_CAR;
 import static de.vdv.trias.IndividualModesEnumeration.TRUCK;
 import de.vdv.trias.InternationalTextStructure;
 import de.vdv.trias.LocationRefStructure;
+import de.vdv.trias.PtModesEnumeration;
 import static de.vdv.trias.PtModesEnumeration.CABLEWAY;
 import static de.vdv.trias.PtModesEnumeration.COACH;
 import static de.vdv.trias.PtModesEnumeration.INTERCITY_RAIL;
@@ -109,6 +110,58 @@ public class TriasResponseFactory {
         return place;
     }
 
+    public Place createPlaceFromStopPoint(StopPointRefStructure stopPointRef, List<InternationalTextStructure> stopPointName) {
+        var place = new Place();
+
+        if (stopPointRef != null) {
+            place.setStopId(stopPointRef.getValue());
+        }
+
+        if (stopPointName != null) {
+            if (stopPointName.get(0) != null) {
+                place.setName(stopPointName.get(0).getText());
+                // Here we face the Problem, that for TimedLegs we only get the stopPointRef (StationName. StationId) but no GeoPosition for the Station.
+                // This is not very convenent for further processing and therefore we use the LocationInformationService from the Trias API to convert SationIDs to GeoPositions
+                GeoPositionStructure geoPosition = triasLocationInformationService.getGeoPositionFromStopPoint(stopPointRef);
+                if (geoPosition != null) {
+                    place.setLat(geoPosition.getLatitude().doubleValue());
+                    place.setLon(geoPosition.getLongitude().doubleValue());
+                }
+            }
+        }
+
+        return place;
+    }
+
+    private Mode ptModeToMode(PtModesEnumeration mode) {
+        switch (mode) {
+            case BUS:
+            case TROLLEY_BUS:
+                return Mode.BUS;
+            case COACH:
+                return Mode.BUSISH;
+            case TRAM:
+                return Mode.TRAM;
+            case TAXI:
+                return Mode.TAXI;
+            case METRO:
+                return Mode.SUBWAY;
+            case RAIL:
+            case INTERCITY_RAIL:
+                return Mode.RAIL;
+            case FUNICULAR:
+                return Mode.FUNICULAR;
+            case WATER:
+                return Mode.FERRY;
+            case CABLEWAY:
+                return Mode.GONDOLA;
+            case URBAN_RAIL:
+                return Mode.TRAINISH;
+            default:
+                return null;
+        }
+    }
+
     // A Trias - contninous Leg means a Leg that is not bound to a Timetable like walking, bicycle- or carride
     public Leg createLegFromContinuousLeg(ContinuousLegStructure continuousLeg) {
         var leg = new Leg();
@@ -142,119 +195,94 @@ public class TriasResponseFactory {
             switch (continuousLeg.getService().getIndividualMode()) {
                 case WALK:
                     leg.setMode(Mode.WALK);
+                    break;
                 case CYCLE:
                     leg.setMode(Mode.BICYCLE);
+                    break;
                 case TAXI:
                     leg.setMode(Mode.TAXI);
+                    break;
                 case SELF_DRIVE_CAR:
                     leg.setMode(Mode.CAR);
+                    break;
                 case OTHERS_DRIVE_CAR:
                     leg.setMode(Mode.BUSISH);
+                    break;
                 case MOTORCYCLE:
                     leg.setMode(Mode.BICYCLE);
+                    break;
                 case TRUCK:
                     leg.setMode(Mode.CAR);
+                    break;
                 default:
                     leg.setMode(null);
+                    break;
             }
         }
 
         leg.setServiceId(serviceId);
-        
+
         return leg;
 
-    }
-
-    public Place createPlaceFromStopPoint(StopPointRefStructure stopPointRef, List<InternationalTextStructure> stopPointName) {
-        var place = new Place();
-
-        if (stopPointRef != null) {
-            place.setStopId(stopPointRef.getValue());
-        }
-
-        if (stopPointName != null) {
-            if (stopPointName.get(0) != null) {
-                place.setName(stopPointName.get(0).getText());
-                // Here we face the Problem, that for TimedLegs we only get the stopPointRef (StationName. StationId) but no GeoPosition for the Station.
-                // This is not very convenent for further processing and therefore we use the LocationInformationService from the Trias API to convert SationIDs to GeoPositions
-                GeoPositionStructure geoPosition = triasLocationInformationService.getGeoPositionFromStopPoint(stopPointRef);
-                if (geoPosition != null) {
-                    place.setLat(geoPosition.getLatitude().doubleValue());
-                    place.setLon(geoPosition.getLongitude().doubleValue());
-                }
-            }
-        }
-
-        return place;
     }
 
     // A Trias - timed Leg means a Leg with timetabled schedule like Bus, Tram, Train,...
     public Leg createLegFromTimedLeg(TimedLegStructure timedLeg) {
         var leg = new Leg();
 
+        // Extract time information...
         // The Trias Object LegBoard contains Information about boarding the vehicle 
-        if (timedLeg.getLegBoard().getServiceDeparture().getTimetabledTime() != null) {
-            leg.setStartTime(timedLeg.getLegBoard().getServiceDeparture().getTimetabledTime().toInstant());
+        var departure = timedLeg.getLegBoard().getServiceDeparture().getTimetabledTime();
+        if (departure != null) {
+            leg.setStartTime(departure.toInstant());
         }
-
-        leg.setFrom(createPlaceFromStopPoint(timedLeg.getLegBoard().getStopPointRef(), timedLeg.getLegBoard().getStopPointName()));
 
         // The Trias Object LegAlight contains Information about getting off (alighting) the vehicle 
-        if (timedLeg.getLegAlight().getServiceArrival().getTimetabledTime() != null) {
-            leg.setEndTime(timedLeg.getLegAlight().getServiceArrival().getTimetabledTime().toInstant());
+        var arrival = timedLeg.getLegAlight().getServiceArrival().getTimetabledTime();
+        if (arrival != null) {
+            leg.setEndTime(arrival.toInstant());
         }
 
-        leg.setTo(createPlaceFromStopPoint(timedLeg.getLegAlight().getStopPointRef(), timedLeg.getLegAlight().getStopPointName()));
+        // Extract place information...
+        var track = timedLeg.getLegTrack();
+        var trackSections = track != null ? track.getTrackSection() : null; //getTrackSection() never returns null.
 
-        // triplength is calculated by summing up all TrackSection - Length
-        if (timedLeg.getLegTrack() != null) {
-            if (timedLeg.getLegTrack().getTrackSection() != null) {
-                // if the field length is null then 0 is added
-                var totalTrackLength = timedLeg.getLegTrack().getTrackSection().stream().map(s -> (s.getLength() != null) ? s.getLength().intValue() : 0).reduce(0, (a, b) -> a + b);
-                leg.setDistance(totalTrackLength);
-            }
+        if (trackSections != null && !trackSections.isEmpty()) {
+            // extract geo positions from track details.
+            var section = trackSections.get(0);
+
+            leg.setFrom(createPlaceFromLocationRef(section.getTrackStart()));
+            leg.setTo(createPlaceFromLocationRef(section.getTrackEnd()));
+        } else {
+            // no track details from which we could extract the geo positions.
+            var legBoard = timedLeg.getLegBoard();
+            var legAlight = timedLeg.getLegAlight();
+
+            leg.setFrom(createPlaceFromStopPoint(legBoard.getStopPointRef(), legBoard.getStopPointName()));
+            leg.setTo(createPlaceFromStopPoint(legAlight.getStopPointRef(), legAlight.getStopPointName()));
         }
 
-        if (timedLeg.getService().getServiceSection().get(0) != null) {
+        // Calculate trip length...
+        if (trackSections != null && !trackSections.isEmpty()) {
+            // triplength is calculated by summing up all TrackSection - Length
+            // if the field length is null then 0 is added
+            var totalTrackLength = trackSections.stream()
+                    .filter(s -> s.getLength() != null)
+                    .mapToInt(s -> s.getLength().intValue())
+                    .sum();
 
-            // set Service-ID (eg. Bus Number):
-            if (timedLeg.getService().getServiceSection().get(0).getPublishedLineName().get(0) != null) {
-                leg.setServiceId(timedLeg.getService().getServiceSection().get(0).getPublishedLineName().get(0).getText());
-            }
+            leg.setDistance(totalTrackLength);
+        }
 
-            // set Mode
-            switch (timedLeg.getService().getServiceSection().get(0).getMode().getPtMode()) {
-                case BUS:
-                    leg.setMode(Mode.BUS);
-                case TROLLEY_BUS:
-                    leg.setMode(Mode.BUS);
-                case COACH:
-                    leg.setMode(Mode.BUSISH);
-                case TRAM:
-                    leg.setMode(Mode.TRAM);
-                case TAXI:
-                    leg.setMode(Mode.TAXI);
-                case METRO:
-                    leg.setMode(Mode.SUBWAY);
-                case RAIL:
-                    leg.setMode(Mode.RAIL);
-                case FUNICULAR:
-                    leg.setMode(Mode.FUNICULAR);
-                case WATER:
-                    leg.setMode(Mode.FERRY);
-                case CABLEWAY:
-                    leg.setMode(Mode.GONDOLA);
-                case URBAN_RAIL:
-                    leg.setMode(Mode.TRAINISH);
-                case INTERCITY_RAIL:
-                    leg.setMode(Mode.TRAINISH);
-                default:
-                    leg.setMode(null);
-            }
+        // Set Mode information...
+        var serviceSections = timedLeg.getService().getServiceSection();
+
+        if (!serviceSections.isEmpty()) {
+            leg.setMode(ptModeToMode(serviceSections.get(0).getMode().getPtMode()));
         }
 
         leg.setServiceId(serviceId);
-        
+
         return leg;
     }
 
