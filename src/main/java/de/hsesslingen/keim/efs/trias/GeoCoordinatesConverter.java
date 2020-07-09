@@ -21,27 +21,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias.factories;
+package de.hsesslingen.keim.efs.trias;
 
-import de.hsesslingen.keim.efs.mobility.ICoordinates;
-import de.vdv.trias.GeoPositionStructure;
+import java.math.BigDecimal;
 
 /**
  *
- * @author ben
+ * @author keim
  */
-public final class GeoPositionStructureFactory {
+public class GeoCoordinatesConverter {
 
-    public static GeoPositionStructure create(double lat, double lon) {
-        var geo = new GeoPositionStructure();
-
-        geo.setLatitude(lat);
-        geo.setLongitude(lon);
-
-        return geo;
+    public static String printDouble(Double value) {
+        return BigDecimal.valueOf(0).toPlainString();
     }
-
-    public static GeoPositionStructure create(ICoordinates coordinates) {
-        return create(coordinates.getLat(), coordinates.getLon());
-    }
+    
 }

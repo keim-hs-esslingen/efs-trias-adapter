@@ -5,28 +5,33 @@
     xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc">
 
     <jaxb:globalBindings>
+        <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xs:dateTime" parseMethod="java.time.ZonedDateTime.parse" printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printZonedDateTime" />
+        <jaxb:javaType name="java.time.LocalDate" xmlType="xs:date" parseMethod="java.time.LocalDate.parse" printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printLocalDate" />
+        <jaxb:javaType name="java.time.OffsetTime" xmlType="xs:time" parseMethod="java.time.OffsetTime.parse" printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printOffsetTime" />
 
-        <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xs:dateTime" 
-            parseMethod="java.time.ZonedDateTime.parse" 
-            printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printZonedDateTime" />
-        <jaxb:javaType name="java.time.LocalDate" xmlType="xs:date" 
-            parseMethod="java.time.LocalDate.parse" 
-            printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printLocalDate" />
-        <jaxb:javaType name="java.time.OffsetTime" xmlType="xs:time" 
-            parseMethod="java.time.OffsetTime.parse" 
-            printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printOffsetTime" />
-
-        <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xsd:dateTime" 
-            parseMethod="java.time.ZonedDateTime.parse" 
-            printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printZonedDateTime" />
-        <jaxb:javaType name="java.time.LocalDate" xmlType="xsd:date" 
-            parseMethod="java.time.LocalDate.parse" 
-            printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printLocalDate" />
-        <jaxb:javaType name="java.time.OffsetTime" xmlType="xsd:time" 
-            parseMethod="java.time.OffsetTime.parse" 
-            printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printOffsetTime" />
-
+        <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xsd:dateTime" parseMethod="java.time.ZonedDateTime.parse" printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printZonedDateTime" />
+        <jaxb:javaType name="java.time.LocalDate" xmlType="xsd:date" parseMethod="java.time.LocalDate.parse" printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printLocalDate" />
+        <jaxb:javaType name="java.time.OffsetTime" xmlType="xsd:time" parseMethod="java.time.OffsetTime.parse" printMethod="de.hsesslingen.keim.efs.trias.DateTimeConverter.printOffsetTime" />
     </jaxb:globalBindings>
+
+
+    <jaxb:bindings schemaLocation="Trias_Utility.xsd">
+        <!-- 
+        This binding makes the coordinates in GeoPositions be parsed to Doubles instead of BigDecimals.
+        For Coordinates the precision of Doubles is high enough. Unless you have high requirements and also
+        do some kinds of high precision arithmetic computations on coordinate values, this should be ok for most cases.
+        -->
+        <jaxb:bindings node="//xs:simpleType[@name='LongitudeType']">
+            <jaxb:javaType name="java.lang.Double" parseMethod="java.lang.Double.parseDouble" printMethod="de.hsesslingen.keim.efs.trias.GeoCoordinatesConverter.printDouble" />
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:simpleType[@name='LatitudeType']">
+            <jaxb:javaType name="java.lang.Double" parseMethod="java.lang.Double.parseDouble" printMethod="de.hsesslingen.keim.efs.trias.GeoCoordinatesConverter.printDouble" />
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:simpleType[@name='AltitudeType']">
+            <jaxb:javaType name="java.lang.Double" parseMethod="java.lang.Double.parseDouble" printMethod="de.hsesslingen.keim.efs.trias.GeoCoordinatesConverter.printDouble" />
+        </jaxb:bindings>
+    </jaxb:bindings>
+
 
     <jaxb:bindings schemaLocation="siri-1.4/datex2/DATEXIISchema_1_0_1_0.xsd">
         <jaxb:bindings node="//xsd:complexType[@name='Comment']">

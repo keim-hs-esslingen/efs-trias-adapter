@@ -31,11 +31,12 @@
 
 package de.vdv.trias;
 
-import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -69,22 +70,28 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class GeoPositionStructure {
 
-    @XmlElement(name = "Longitude", namespace = "http://www.vdv.de/trias", required = true)
-    protected BigDecimal longitude;
-    @XmlElement(name = "Latitude", namespace = "http://www.vdv.de/trias", required = true)
-    protected BigDecimal latitude;
-    @XmlElement(name = "Altitude", namespace = "http://www.vdv.de/trias")
-    protected BigDecimal altitude;
+    @XmlElement(name = "Longitude", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "decimal")
+    protected Double longitude;
+    @XmlElement(name = "Latitude", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlSchemaType(name = "decimal")
+    protected Double latitude;
+    @XmlElement(name = "Altitude", namespace = "http://www.vdv.de/trias", type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlSchemaType(name = "decimal")
+    protected Double altitude;
 
     /**
      * Gets the value of the longitude property.
      * 
      * @return
      *     possible object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public BigDecimal getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
@@ -93,10 +100,10 @@ public class GeoPositionStructure {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public void setLongitude(BigDecimal value) {
+    public void setLongitude(Double value) {
         this.longitude = value;
     }
 
@@ -105,10 +112,10 @@ public class GeoPositionStructure {
      * 
      * @return
      *     possible object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public BigDecimal getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
@@ -117,10 +124,10 @@ public class GeoPositionStructure {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public void setLatitude(BigDecimal value) {
+    public void setLatitude(Double value) {
         this.latitude = value;
     }
 
@@ -129,10 +136,10 @@ public class GeoPositionStructure {
      * 
      * @return
      *     possible object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public BigDecimal getAltitude() {
+    public Double getAltitude() {
         return altitude;
     }
 
@@ -141,10 +148,10 @@ public class GeoPositionStructure {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public void setAltitude(BigDecimal value) {
+    public void setAltitude(Double value) {
         this.altitude = value;
     }
 
