@@ -23,6 +23,7 @@
  */
 package de.hsesslingen.keim.efs.trias.factories;
 
+import de.hsesslingen.keim.efs.mobility.ICoordinates;
 import de.vdv.trias.LocationContextStructure;
 import de.vdv.trias.LocationRefStructure;
 import java.time.ZonedDateTime;
@@ -39,6 +40,11 @@ public class LocationContextStructureBuilder extends LocationContextStructure {
 
     public LocationContextStructureBuilder locationRef(LocationRefStructure locationRef) {
         this.locationRef = locationRef;
+        return this;
+    }
+
+    public LocationContextStructureBuilder locationRef(ICoordinates coordinates) {
+        this.locationRef = new LocationRefStructureBuilder().geoPosition(coordinates);
         return this;
     }
 

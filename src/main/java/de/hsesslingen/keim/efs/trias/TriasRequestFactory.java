@@ -25,14 +25,14 @@ package de.hsesslingen.keim.efs.trias;
 
 import de.hsesslingen.keim.efs.middleware.common.Place;
 import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
+import de.hsesslingen.keim.efs.mobility.ICoordinates;
 import de.hsesslingen.keim.efs.trias.factories.LocationContextStructureBuilder;
-import de.hsesslingen.keim.efs.trias.factories.LocationRefStructureFactory;
+import de.hsesslingen.keim.efs.trias.factories.LocationInformationRequestFactory;
+import de.hsesslingen.keim.efs.trias.factories.TriasServiceRequest;
 import de.hsesslingen.keim.efs.trias.factories.TripParamStructureBuilder;
 import de.hsesslingen.keim.efs.trias.factories.TripRequestStructureBuilder;
 import de.vdv.trias.InitialLocationInputStructure;
 import de.vdv.trias.LocationInformationRequestStructure;
-import de.vdv.trias.RequestPayloadStructure;
-import de.vdv.trias.ServiceRequestStructure;
 import de.vdv.trias.StopPointRefStructure;
 import de.vdv.trias.Trias;
 import de.vdv.trias.TripRequestStructure;
@@ -43,7 +43,6 @@ import javax.annotation.PostConstruct;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import uk.org.siri.siri.ParticipantRefStructure;
 
 /**
  * This class creates Trias Request - Objects from input - parameters and
@@ -63,7 +62,7 @@ public class TriasRequestFactory {
     @Value("${trias.api-user-reference}")
     private String apiUserReference;
 
-    @Value("${trias.provider-time-zone-id}")
+    @Value("${trias.provider-time-zone-id:}")
     private String providerTimeZoneIdStr;
     private ZoneId providerTimeZoneId;
 
@@ -77,44 +76,35 @@ public class TriasRequestFactory {
             throw new MissingConfigParamException("trias.api-user-reference");
         }
 
-        if (providerTimeZoneIdStr == null) {
+        if (StringUtils.isBlank(providerTimeZoneIdStr)) {
             providerTimeZoneId = ZoneId.systemDefault();
         } else {
             providerTimeZoneId = ZoneId.of(providerTimeZoneIdStr);
         }
     }
 
-    public Trias createBaseRequestTrias() {
-        var baseRequestTrias = new Trias();
-
-        // to set the Version is important, otherwise the API will return null 
-        baseRequestTrias.setVersion(triasVersion);
-
-        var serviceRequest = new ServiceRequestStructure();
-
-        serviceRequest.setRequestPayload(new RequestPayloadStructure());
-
-        //set current TimeStamp
-        serviceRequest.setRequestTimestamp(ZonedDateTime.now());
-
-        // the API Maintainer want to know who is requesting
-        serviceRequest.setRequestorRef(new ParticipantRefStructure());
-        serviceRequest.getRequestorRef().setValue(apiUserReference);
-
-        baseRequestTrias.setServiceRequest(serviceRequest);
-
-        return baseRequestTrias;
+    public TriasServiceRequest newTriasServiceRequest() {
+        return new TriasServiceRequest(triasVersion, apiUserReference);
     }
 
-    public TripRequestStructure createTripRequestStructure(Place from, Place to, Instant startTime, Instant endTime) {
+    public TripRequestStructure createTripRequestPayload(ICoordinates from, ICoordinates to, Instant startTime, Instant endTime) {
+        return TriasRequestFactory.this.createTripRequestPayload(
+                from,
+                to,
+                startTime != null ? startTime.atZone(providerTimeZoneId) : null,
+                endTime != null ? endTime.atZone(providerTimeZoneId) : null
+        );
+    }
+
+    public TripRequestStructure createTripRequestPayload(ICoordinates from, ICoordinates to, ZonedDateTime startTime, ZonedDateTime endTime) {
         return new TripRequestStructureBuilder()
                 .origin(new LocationContextStructureBuilder()
-                        .locationRef(LocationRefStructureFactory.fromCoordinates(from))
-                        .depArrTime(startTime.atZone(providerTimeZoneId))
+                        .locationRef(from)
+                        .depArrTime(startTime)
                         .build())
                 .destination(new LocationContextStructureBuilder()
-                        .locationRef(LocationRefStructureFactory.fromCoordinates(to))
-                        .depArrTime(endTime.atZone(providerTimeZoneId))
+                        .locationRef(to)
+                        .depArrTime(endTime)
                         .build())
                 .params(new TripParamStructureBuilder()
                         .ptModeFilterByExclude(true)
@@ -128,32 +118,21 @@ public class TriasRequestFactory {
                 .build();
     }
 
-    public Trias buildTripRequestTrias(Place from, Place to, Instant startTime, Instant endTime) {
-        var tripRequest = createTripRequestStructure(from, to, startTime, endTime);
-
-        var tripRequestTrias = createBaseRequestTrias();
-        tripRequestTrias.getServiceRequest().getRequestPayload().setTripRequest(tripRequest);
-
-        return tripRequestTrias;
+    public Trias createTripRequest(Place from, Place to, Instant startTime, Instant endTime) {
+        return new TriasServiceRequest(triasVersion, apiUserReference)
+                .tripRequest(createTripRequestPayload(from, to, startTime, endTime));
     }
 
-    public Trias buildLocationRequestTrias(StopPointRefStructure stopPointRef) {
-        var locationInformationRequest = new LocationInformationRequestStructure();
+    public Trias createLocationInformationRequest(String locationNameToSearch) {
+        return newTriasServiceRequest().locationInformationRequest(
+                LocationInformationRequestFactory.byLocationName(locationNameToSearch)
+        );
+    }
 
-        var initialInput = new InitialLocationInputStructure();
-
-        // LocationName is very general like a Search  Engine Input String  (like Streetname, Point of Interest,...) to find a certain Location
-        // In this case we use as Input Sring for the built in Serach Engine the StopPointRef an we hope that the GeoPositon is found (therefore the nullPpinter check for the return Statement
-        initialInput.setLocationName(stopPointRef.getValue());
-
-        locationInformationRequest.setInitialInput(initialInput);
-
-        var locationRequestTrias = createBaseRequestTrias();
-
-        locationRequestTrias.getServiceRequest().getRequestPayload().setLocationInformationRequest(locationInformationRequest);
-
-        return locationRequestTrias;
-
+    public Trias createLocationInformationRequest(StopPointRefStructure stopPointRef) {
+        return newTriasServiceRequest().locationInformationRequest(
+                LocationInformationRequestFactory.byStopPointRef(stopPointRef)
+        );
     }
 
 }

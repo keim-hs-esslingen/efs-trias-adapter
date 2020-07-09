@@ -60,7 +60,7 @@ public class TriasLocationInformationService {
      */
     public GeoPositionStructure getGeoPositionFromStopPoint(StopPointRefStructure stopPointRef) throws AbstractEfsException {
 
-        Trias locationRequestTrias = triasRequestFactory.buildLocationRequestTrias(stopPointRef);
+        Trias locationRequestTrias = triasRequestFactory.createLocationInformationRequest(stopPointRef);
 
         Trias responseLocationTrias;
 

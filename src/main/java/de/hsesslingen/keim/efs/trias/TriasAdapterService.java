@@ -78,7 +78,7 @@ public class TriasAdapterService implements IBookingService<TriasCredentials> {
             return new ArrayList<>();
         }
 
-        var requestTrias = triasRequestFactory.buildTripRequestTrias(from, to, startTime, endTime);
+        var requestTrias = triasRequestFactory.createTripRequest(from, to, startTime, endTime);
 
         Trias responseTrias;
 
