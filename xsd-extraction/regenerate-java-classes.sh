@@ -22,13 +22,13 @@ mkdir "$target_dir"
 cp ../bindings.xml ./bindings.xml
 
 # Compile classes
-xjc -d "$target_dir" -npa -b bindings.xml Trias.xsd
+xjc -d "$target_dir" -npa -extension -b bindings.xml Trias.xsd
 
 # Remove local copy of bindings.xml to avoid confusion with original file.
 rm bindings.xml
 
+# Run post processing...
+../post-process.sh $target_dir
 
-echo "Post-processing files..."
 
-# call post-processing script for each file once.
-find "$target_dir" -name "*.java" -exec $(pwd)/../post-process.sh {} \;
+
