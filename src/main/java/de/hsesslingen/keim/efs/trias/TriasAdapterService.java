@@ -31,7 +31,7 @@ import de.hsesslingen.keim.efs.middleware.booking.NewBooking;
 import de.hsesslingen.keim.efs.middleware.common.Options;
 import de.hsesslingen.keim.efs.middleware.common.Place;
 import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
-import de.hsesslingen.keim.efs.mobility.exception.HttpServerException;
+import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
 import de.vdv.trias.Trias;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -39,7 +39,6 @@ import java.util.List;
 import javax.xml.bind.JAXBException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 /**
@@ -90,7 +89,7 @@ public class TriasAdapterService implements IBookingService<TriasCredentials> {
                     .go()
                     .getBody();
         } catch (JAXBException ex) {
-            throw new HttpServerException("An error occured when converting to or from XML.", HttpStatus.INTERNAL_SERVER_ERROR);
+            throw internalServerError("An error occured when converting to or from XML.");
         } finally {
             long end = System.nanoTime();
 
@@ -105,23 +104,28 @@ public class TriasAdapterService implements IBookingService<TriasCredentials> {
 
     @Override
     public List<Booking> getBookings(BookingState state, TriasCredentials credentials) throws AbstractEfsException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public Booking createNewBooking(NewBooking newBooking, TriasCredentials credentials) throws AbstractEfsException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public Booking getBookingById(String id, TriasCredentials credentials) throws AbstractEfsException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public Booking modifyBooking(String id, BookingAction action, Booking booking,
+    public Booking modifyBooking(String id, Booking booking,
             TriasCredentials credentials) throws AbstractEfsException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void performAction(String bookingId, BookingAction action, String assetId, String secret, String more, TriasCredentials credentials) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

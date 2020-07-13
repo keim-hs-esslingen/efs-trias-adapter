@@ -24,14 +24,13 @@
 package de.hsesslingen.keim.efs.trias;
 
 import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
-import de.hsesslingen.keim.efs.mobility.exception.HttpServerException;
+import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
 import de.vdv.trias.GeoPositionStructure;
 import de.vdv.trias.StopPointRefStructure;
 import de.vdv.trias.Trias;
 import javax.xml.bind.JAXBException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 /**
@@ -70,7 +69,7 @@ public class TriasLocationInformationService {
                     .go()
                     .getBody();
         } catch (JAXBException ex) {
-            throw new HttpServerException("An error occured when converting to or from XML.", HttpStatus.INTERNAL_SERVER_ERROR);
+            throw internalServerError("An error occured when converting to or from XML.");
         }
 
         if (responseLocationTrias == null) {
