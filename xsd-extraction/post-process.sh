@@ -36,8 +36,35 @@ processFile(){
 
 echo "Post-processing files..."
 
-# call post-processing script for each file once.
+# call general processFile function for each file once.
 find "$TARGET_DIR" -name '*.java' -print0 | 
     while IFS= read -r -d '' line; do 
         processFile "$line"
     done
+
+# Color setup.
+RED=`tput setaf 1`
+GREEN=`tput setaf 2`
+YELLOW=`tput setaf 3`
+BLUE=`tput setaf 4`
+PURPLE=`tput setaf 5`
+LOGCOLOR=$YELLOW
+NONE=`tput sgr0` # No Color
+
+log() {
+    printf "$1\n"
+}
+
+# Make replacements in specified files
+
+replace(){
+    log "[ ${YELLOW}Replacing${NONE} ]: \"$RED$2$NONE\" with \"$GREEN$3$NONE\" in file $PURPLE$1$NONE"
+    sed -i -e "s/$2/$3/g" $1
+}
+
+VDV="$TARGET_DIR/de/vdv/trias"
+PACKAGE="de.hsesslingen.keim.efs.trias.supertypes"
+implements="implements $PACKAGE."
+
+replace "$VDV/LegAlightStructure.java" "class LegAlightStructure" "class LegAlightStructure $implements ILegEnd"
+replace "$VDV/LegBoardStructure.java" "class LegBoardStructure" "class LegBoardStructure $implements ILegEnd"

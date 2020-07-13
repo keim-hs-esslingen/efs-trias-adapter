@@ -37,7 +37,6 @@ import static de.vdv.trias.IndividualModesEnumeration.MOTORCYCLE;
 import static de.vdv.trias.IndividualModesEnumeration.OTHERS_DRIVE_CAR;
 import static de.vdv.trias.IndividualModesEnumeration.SELF_DRIVE_CAR;
 import static de.vdv.trias.IndividualModesEnumeration.TRUCK;
-import de.vdv.trias.InternationalTextStructure;
 import de.vdv.trias.LocationRefStructure;
 import de.vdv.trias.PtModesEnumeration;
 import static de.vdv.trias.PtModesEnumeration.CABLEWAY;
@@ -47,19 +46,18 @@ import static de.vdv.trias.PtModesEnumeration.METRO;
 import static de.vdv.trias.PtModesEnumeration.TROLLEY_BUS;
 import static de.vdv.trias.PtModesEnumeration.URBAN_RAIL;
 import static de.vdv.trias.PtModesEnumeration.WATER;
-import de.vdv.trias.StopPointRefStructure;
 import de.vdv.trias.TimedLegStructure;
 import de.vdv.trias.Trias;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.validation.constraints.NotNull;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import de.hsesslingen.keim.efs.trias.supertypes.ILegEnd;
 
 /**
  * This class creates EFS- Mobility Objects from Trias Response - Objects
@@ -101,19 +99,19 @@ public class TriasResponseFactory {
         return place;
     }
 
-    public Place createPlaceFromStopPoint(StopPointRefStructure stopPointRef, @NotNull List<InternationalTextStructure> stopPointName) {
+    public Place createPlaceFromStopPoint(ILegEnd legEnd) {
         var place = new Place();
 
-        if (stopPointRef != null) {
-            place.setStopId(stopPointRef.getValue());
+        if (legEnd.getStopPointRef() != null) {
+            place.setStopId(legEnd.getStopPointRef().getValue());
         }
 
-        if (!stopPointName.isEmpty()) {
-            place.setName(stopPointName.get(0).getText());
+        if (!legEnd.getStopPointName().isEmpty()) {
+            place.setName(legEnd.getStopPointName().get(0).getText());
 
             // Here we face the Problem, that for TimedLegs we only get the stopPointRef (StationName. StationId) but no GeoPosition for the Station.
             // This is not very convenent for further processing and therefore we use the LocationInformationService from the Trias API to convert SationIDs to GeoPositions
-            GeoPositionStructure geoPosition = triasLocationInformationService.getGeoPositionFromStopPoint(stopPointRef);
+            GeoPositionStructure geoPosition = triasLocationInformationService.getGeoPositionFromStopPoint(legEnd.getStopPointRef());
 
             if (geoPosition != null) {
                 place.setLat(geoPosition.getLatitude());
@@ -248,8 +246,8 @@ public class TriasResponseFactory {
             var legBoard = timedLeg.getLegBoard();
             var legAlight = timedLeg.getLegAlight();
 
-            leg.setFrom(createPlaceFromStopPoint(legBoard.getStopPointRef(), legBoard.getStopPointName()));
-            leg.setTo(createPlaceFromStopPoint(legAlight.getStopPointRef(), legAlight.getStopPointName()));
+            leg.setFrom(createPlaceFromStopPoint(legBoard));
+            leg.setTo(createPlaceFromStopPoint(legAlight));
         }
 
         // Calculate trip length...
