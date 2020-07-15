@@ -44,7 +44,7 @@ public class Adapter2
     }
 
     public String marshal(LocalDate value) {
-        return (de.hsesslingen.keim.efs.trias.DateTimeConverter.printLocalDate(value));
+        return (de.hsesslingen.keim.efs.trias.jaxb.DateTimeSerializer.printLocalDate(value));
     }
 
 }

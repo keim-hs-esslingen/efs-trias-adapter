@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias;
+package de.hsesslingen.keim.efs.trias.jaxb;
 
 import java.time.LocalDate;
 import java.time.OffsetTime;
@@ -32,7 +32,7 @@ import java.time.format.DateTimeFormatter;
  *
  * @author ben
  */
-public class DateTimeConverter {
+public class DateTimeSerializer {
 
     public static String printZonedDateTime(ZonedDateTime dateTime) {
         return dateTime.format(DateTimeFormatter.ISO_ZONED_DATE_TIME);

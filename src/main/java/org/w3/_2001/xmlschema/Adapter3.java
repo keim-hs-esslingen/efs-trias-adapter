@@ -44,7 +44,7 @@ public class Adapter3
     }
 
     public String marshal(OffsetTime value) {
-        return (de.hsesslingen.keim.efs.trias.DateTimeConverter.printOffsetTime(value));
+        return (de.hsesslingen.keim.efs.trias.jaxb.DateTimeSerializer.printOffsetTime(value));
     }
 
 }

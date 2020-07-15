@@ -43,7 +43,7 @@ public class Adapter2
     }
 
     public String marshal(Double value) {
-        return (de.hsesslingen.keim.efs.trias.GeoCoordinatesConverter.printDouble(value));
+        return (de.hsesslingen.keim.efs.trias.jaxb.DoubleSerializer.printDouble(value));
     }
 
 }

@@ -44,7 +44,7 @@ public class Adapter1
     }
 
     public String marshal(ZonedDateTime value) {
-        return (de.hsesslingen.keim.efs.trias.DateTimeConverter.printZonedDateTime(value));
+        return (de.hsesslingen.keim.efs.trias.jaxb.DateTimeSerializer.printZonedDateTime(value));
     }
 
 }

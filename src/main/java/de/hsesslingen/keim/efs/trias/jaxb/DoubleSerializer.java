@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias;
+package de.hsesslingen.keim.efs.trias.jaxb;
 
 import java.math.BigDecimal;
 
@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  *
  * @author keim
  */
-public class GeoCoordinatesConverter {
+public class DoubleSerializer {
 
     public static String printDouble(Double value) {
         return BigDecimal.valueOf(value).toPlainString();

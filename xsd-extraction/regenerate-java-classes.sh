@@ -1,6 +1,6 @@
 #!/bin/bash
 
-target_dir=../generated
+TARGET_DIR=../java
 
 # If trias-xsd dir does not exist yet, extract the package...
 if [[ ! -d trias-xsd ]]; then
@@ -11,24 +11,24 @@ fi
 cd trias-xsd
 
 # Remove previous output dir if existing...
-if [[ -d "$target_dir" ]]; then
-    rm -r "$target_dir"
+if [[ -d "$TARGET_DIR" ]]; then
+    rm -r "$TARGET_DIR"
 fi
 
 # ...and regenerate new one
-mkdir "$target_dir"
+mkdir "$TARGET_DIR"
 
 # Overwrite bindings file with current one
 cp ../bindings.xml ./bindings.xml
 
 # Compile classes
-xjc -d "$target_dir" -npa -extension -b bindings.xml Trias.xsd
+xjc -d "$TARGET_DIR" -npa -extension -b bindings.xml Trias.xsd
 
 # Remove local copy of bindings.xml to avoid confusion with original file.
 rm bindings.xml
 
 # Run post processing...
-../post-process.sh $target_dir
+../post-process.sh $TARGET_DIR
 
 
 
