@@ -1,21 +1,34 @@
 #!/bin/bash
 
+# Color setup.
+RED=`tput setaf 1`
+GREEN=`tput setaf 2`
+YELLOW=`tput setaf 3`
+BLUE=`tput setaf 4`
+PURPLE=`tput setaf 5`
+LOGCOLOR=$YELLOW
+NONE=`tput sgr0` # No Color
+
+log() {
+    printf "$1\n"
+}
+
 # Check if sponge is installed.
 if [[ -z $(which sponge) ]]; then
-    echo "\"sponge\" is not installed. Please install sponge from moreutils."
+    log "[$RED Error $NONE]: \"sponge\" is not installed. Please install sponge from moreutils."
     exit 0;
 fi
 
 TARGET_DIR=$1
 
 if [[ -z $TARGET_DIR ]]; then
-    echo "Target dir is not specified."
+    echo "[$RED Error $NONE]: Target dir is not specified. Pass it as the first arg to post-process.sh"
     exit 0;
 fi
- 
+
+
 # Get directory where this script resides.
 SDIR="$(dirname "$(readlink -f "$0")")"
-
 
 processFile(){
     srcfile=$1
@@ -34,34 +47,22 @@ processFile(){
 }
 
 
-echo "Post-processing files..."
+log "[$GREEN General $NONE]: Adding licenseheaders and removing generation timestamps..."
 
-# call general processFile function for each file once.
+# Call general processFile function for each file once.
 find "$TARGET_DIR" -name '*.java' -print0 | 
     while IFS= read -r -d '' line; do 
         processFile "$line"
     done
 
-# Color setup.
-RED=`tput setaf 1`
-GREEN=`tput setaf 2`
-YELLOW=`tput setaf 3`
-BLUE=`tput setaf 4`
-PURPLE=`tput setaf 5`
-LOGCOLOR=$YELLOW
-NONE=`tput sgr0` # No Color
 
-log() {
-    printf "$1\n"
-}
-
-# Make replacements in specified files
-
+# Make replacements in various files
 replace(){
-    log "[ ${YELLOW}Replacing${NONE} ]: \"$RED$2$NONE\" with \"$GREEN$3$NONE\" in file $PURPLE$1$NONE"
+    log "[$YELLOW Replacing $NONE]: \"$RED$2$NONE\" with \"$GREEN$3$NONE\" in file $PURPLE$1$NONE"
     sed -i -e "s/$2/$3/g" $1
 }
 
+# Some reusable variables for convenience:
 VDV="$TARGET_DIR/de/vdv/trias"
 PACKAGE="de.hsesslingen.keim.efs.trias.supertypes"
 implements="implements $PACKAGE."
