@@ -23,6 +23,7 @@
  */
 package de.hsesslingen.keim.efs.trias.jaxb;
 
+import java.math.BigDecimal;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
@@ -38,7 +39,7 @@ public class DoubleAdapter extends XmlAdapter<String, Double> {
 
     @Override
     public String marshal(Double bt) throws Exception {
-        return String.format("%f", bt);
+        return BigDecimal.valueOf(bt).toPlainString();
     }
 
 }

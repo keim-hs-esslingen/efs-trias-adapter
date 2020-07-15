@@ -13,8 +13,6 @@
 
         <xjc:javaType name="java.time.OffsetTime" xmlType="xs:time" adapter="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter" />
         <xjc:javaType name="java.time.OffsetTime" xmlType="xsd:time" adapter="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter" />
-
-
     </jaxb:globalBindings>
 
     <jaxb:bindings schemaLocation="Trias_Utility.xsd">
