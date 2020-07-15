@@ -109,7 +109,7 @@ public class TriasRequestFactory {
                         .includeFares(true)
                         .immediateTripStart(false)
                         .includeIntermediateStops(false)
-                        .includeLegProjection(false)
+                        .includeLegProjection(true)
                         .includeTrackSections(true)
                         .numberOfResults(numberOfResults)
                         .build())

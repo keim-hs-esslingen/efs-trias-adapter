@@ -29,6 +29,7 @@ import de.hsesslingen.keim.efs.middleware.common.LegBaseItem;
 import de.hsesslingen.keim.efs.middleware.common.Options;
 import de.hsesslingen.keim.efs.middleware.common.Place;
 import de.hsesslingen.keim.efs.middleware.common.TypeOfAsset;
+import de.hsesslingen.keim.efs.mobility.ICoordinates;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
 import de.vdv.trias.ContinuousLegStructure;
 import de.vdv.trias.GeoPositionStructure;
@@ -51,13 +52,15 @@ import de.vdv.trias.Trias;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import de.hsesslingen.keim.efs.trias.supertypes.ILegEnd;
+import de.vdv.trias.IndividualModesEnumeration;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 
 /**
  * This class creates EFS- Mobility Objects from Trias Response - Objects
@@ -100,6 +103,11 @@ public class TriasResponseFactory {
     }
 
     public Place createPlaceFromStopPoint(ILegEnd legEnd) {
+        var pos = triasLocationInformationService.getGeoPositionFromStopPoint(legEnd.getStopPointRef());
+        return createPlaceFromStopPoint(legEnd, pos);
+    }
+
+    public Place createPlaceFromStopPoint(ILegEnd legEnd, GeoPositionStructure geoPosition) {
         var place = new Place();
 
         if (legEnd.getStopPointRef() != null) {
@@ -108,10 +116,6 @@ public class TriasResponseFactory {
 
         if (!legEnd.getStopPointName().isEmpty()) {
             place.setName(legEnd.getStopPointName().get(0).getText());
-
-            // Here we face the Problem, that for TimedLegs we only get the stopPointRef (StationName. StationId) but no GeoPosition for the Station.
-            // This is not very convenent for further processing and therefore we use the LocationInformationService from the Trias API to convert SationIDs to GeoPositions
-            GeoPositionStructure geoPosition = triasLocationInformationService.getGeoPositionFromStopPoint(legEnd.getStopPointRef());
 
             if (geoPosition != null) {
                 place.setLat(geoPosition.getLatitude());
@@ -151,6 +155,33 @@ public class TriasResponseFactory {
         }
     }
 
+    private Mode indivModeToMode(IndividualModesEnumeration mode) {
+        switch (mode) {
+            case WALK:
+                return Mode.WALK;
+            case CYCLE:
+                return Mode.BICYCLE;
+            case TAXI:
+                return Mode.TAXI;
+            case SELF_DRIVE_CAR:
+                return Mode.CAR;
+            case OTHERS_DRIVE_CAR:
+                return Mode.BUSISH;
+            case MOTORCYCLE:
+                return Mode.BICYCLE;
+            case TRUCK:
+                return Mode.CAR;
+            default:
+                return null;
+        }
+    }
+
+    private CompletableFuture<GeoPositionStructure> getGeoPositionAsync(ILegEnd legEnd) {
+        return CompletableFuture.supplyAsync(() -> {
+            return triasLocationInformationService.getGeoPositionFromStopPoint(legEnd.getStopPointRef());
+        });
+    }
+
     // A Trias - contninous Leg means a Leg that is not bound to a Timetable like walking, bicycle- or carride
     public Leg createLegFromContinuousLeg(ContinuousLegStructure continuousLeg) {
         var leg = new Leg();
@@ -181,32 +212,7 @@ public class TriasResponseFactory {
         }
 
         if (continuousLeg.getService().getIndividualMode() != null) {
-            switch (continuousLeg.getService().getIndividualMode()) {
-                case WALK:
-                    leg.setMode(Mode.WALK);
-                    break;
-                case CYCLE:
-                    leg.setMode(Mode.BICYCLE);
-                    break;
-                case TAXI:
-                    leg.setMode(Mode.TAXI);
-                    break;
-                case SELF_DRIVE_CAR:
-                    leg.setMode(Mode.CAR);
-                    break;
-                case OTHERS_DRIVE_CAR:
-                    leg.setMode(Mode.BUSISH);
-                    break;
-                case MOTORCYCLE:
-                    leg.setMode(Mode.BICYCLE);
-                    break;
-                case TRUCK:
-                    leg.setMode(Mode.CAR);
-                    break;
-                default:
-                    leg.setMode(null);
-                    break;
-            }
+            leg.setMode(indivModeToMode(continuousLeg.getService().getIndividualMode()));
         }
 
         leg.setServiceId(serviceId);
@@ -218,7 +224,7 @@ public class TriasResponseFactory {
     public Leg createLegFromTimedLeg(TimedLegStructure timedLeg) {
         var leg = new Leg();
 
-        // Extract time information...
+        // ### TIME INFO ###
         // The Trias Object LegBoard contains Information about boarding the vehicle 
         var departure = timedLeg.getLegBoard().getServiceDeparture().getTimetabledTime();
         if (departure != null) {
@@ -231,26 +237,71 @@ public class TriasResponseFactory {
             leg.setEndTime(arrival.toInstant());
         }
 
-        // Extract place information...
+        // ### PLACE INFO ###
+        var legBoard = timedLeg.getLegBoard();
+        var legAlight = timedLeg.getLegAlight();
+
+        var futureBoard = getGeoPositionAsync(legBoard);
+        var futureAlight = getGeoPositionAsync(legAlight);
+
+        GeoPositionStructure startFromTrack = null;
+        GeoPositionStructure endFromTrack = null;
+        GeoPositionStructure startFromService = null;
+        GeoPositionStructure endFromService = null;
+
         var track = timedLeg.getLegTrack();
         var trackSections = track != null ? track.getTrackSection() : null; //getTrackSection() never returns null.
 
         if (trackSections != null && !trackSections.isEmpty()) {
-            // extract geo positions from track details.
+            // extract geo positions from track projection details.
             var section = trackSections.get(0);
+            var projection = section.getProjection();
 
-            leg.setFrom(createPlaceFromLocationRef(section.getTrackStart()));
-            leg.setTo(createPlaceFromLocationRef(section.getTrackEnd()));
-        } else {
-            // no track details from which we could extract the geo positions.
-            var legBoard = timedLeg.getLegBoard();
-            var legAlight = timedLeg.getLegAlight();
-
-            leg.setFrom(createPlaceFromStopPoint(legBoard));
-            leg.setTo(createPlaceFromStopPoint(legAlight));
+            if (projection != null && !projection.getPosition().isEmpty()) {
+                var positions = projection.getPosition();
+                startFromTrack = positions.get(0);
+                endFromTrack = positions.get(positions.size() - 1);
+            }
         }
 
-        // Calculate trip length...
+        try {
+            // Wait for the information requests to return...
+            startFromService = futureBoard.get();
+            endFromService = futureAlight.get();
+        } catch (InterruptedException | ExecutionException ex) {
+            log.error(ex);
+        }
+
+        // We prefer using the information from the service, because it's probably more accurate.
+        var start = startFromService != null ? startFromService : startFromTrack;
+        var end = endFromService != null ? endFromService : endFromTrack;
+
+        // We are interested in how accurate the endings in the track projection are. Lets log the difference:
+        if (log.isTraceEnabled()) {
+            if (startFromService != null
+                    && startFromTrack != null
+                    && endFromService != null
+                    && endFromTrack != null) {
+                log.trace("\nDifference real track start and projection start:\n"
+                        + "\tlat: " + Math.abs(startFromService.getLatitude() - startFromTrack.getLatitude())
+                        + "\tlon: " + Math.abs(startFromService.getLongitude() - startFromTrack.getLongitude())
+                        + "\tkm: " + ICoordinates.distanceKmBetween(startFromService, startFromTrack)
+                        + "\nDifference real track end and projection end:\n"
+                        + "\tlat: " + Math.abs(endFromService.getLatitude() - endFromTrack.getLatitude())
+                        + "\tlon: " + Math.abs(endFromService.getLongitude() - endFromTrack.getLongitude())
+                        + "\tkm: " + ICoordinates.distanceKmBetween(endFromService, endFromTrack)
+                );
+            } else {
+                log.trace("Cannot calculate difference between real track ends and projection ends. "
+                        + "At least one of the needed values is missing.");
+            }
+        }
+
+        // Set the values in the leg
+        leg.setFrom(createPlaceFromStopPoint(legBoard, start));
+        leg.setTo(createPlaceFromStopPoint(legAlight, end));
+
+        // ### TRIP LENGTH ###
         if (trackSections != null && !trackSections.isEmpty()) {
             // triplength is calculated by summing up all TrackSection - Length
             // if the field length is null then 0 is added
@@ -262,7 +313,7 @@ public class TriasResponseFactory {
             leg.setDistance(totalTrackLength);
         }
 
-        // Set Mode information...
+        // ### MODE INFO ###
         var serviceSections = timedLeg.getService().getServiceSection();
 
         if (!serviceSections.isEmpty()) {
@@ -279,7 +330,7 @@ public class TriasResponseFactory {
         // extract the Mobility - Options from responseTrias:
         var options = new ArrayList<Options>();
 
-        for (var tripResult : responseTrias.getServiceDelivery().getDeliveryPayload().getTripResponse().getTripResult().stream().collect(Collectors.toList())) {
+        for (var tripResult : responseTrias.getServiceDelivery().getDeliveryPayload().getTripResponse().getTripResult()) {
             // each tripResult from Trias represents a Mobility - Option from efsMaas
             var option = new Options();
 
@@ -291,7 +342,7 @@ public class TriasResponseFactory {
             // Therefor the Details about subLegs are stored in a List and later convertet to a String which is stored in meta.other
             var legs = new ArrayList<Leg>();
 
-            for (var tripLeg : tripResult.getTrip().getTripLeg().stream().collect(Collectors.toList())) {
+            for (var tripLeg : tripResult.getTrip().getTripLeg()) {
                 if (tripLeg.getContinuousLeg() != null) {
                     Leg leg = createLegFromContinuousLeg(tripLeg.getContinuousLeg());
 
@@ -352,8 +403,8 @@ public class TriasResponseFactory {
 
                 options.add(option);
             }
-
         }
+
         return options;
     }
 

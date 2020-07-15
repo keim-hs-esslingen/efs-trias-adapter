@@ -32,7 +32,7 @@ import java.math.BigDecimal;
 public class GeoCoordinatesConverter {
 
     public static String printDouble(Double value) {
-        return BigDecimal.valueOf(0).toPlainString();
+        return BigDecimal.valueOf(value).toPlainString();
     }
     
 }

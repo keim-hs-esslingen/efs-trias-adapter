@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "latitude",
     "altitude"
 })
-public class GeoPositionStructure {
+public class GeoPositionStructure implements de.hsesslingen.keim.efs.mobility.ICoordinates {
 
     @XmlElement(name = "Longitude", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
@@ -155,4 +155,13 @@ public class GeoPositionStructure {
         this.altitude = value;
     }
 
+	@Override
+	public Double getLat() {
+		return latitude;
+	}
+
+	@Override
+	public Double getLon() {
+		return longitude;
+	}
 }

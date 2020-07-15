@@ -83,7 +83,7 @@ import javax.xml.bind.annotation.XmlType;
     "noBoardingAtStop",
     "noAlightingAtStop"
 })
-public class LegAlightStructure  implements de.hsesslingen.keim.efs.trias.supertypes. ILegEnd {
+public class LegAlightStructure implements de.hsesslingen.keim.efs.trias.supertypes. ILegEnd {
 
     @XmlElement(name = "StopPointRef", namespace = "http://www.vdv.de/trias", required = true)
     protected StopPointRefStructure stopPointRef;
