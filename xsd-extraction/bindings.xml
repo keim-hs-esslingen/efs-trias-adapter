@@ -5,15 +5,6 @@
     xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc">
 
     <jaxb:globalBindings>
-        <!-- <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xs:dateTime" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter.marshal" />
-        <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xsd:dateTime" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter.marshal" />
-
-        <jaxb:javaType name="java.time.LocalDate" xmlType="xs:date" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter.marshal"/>
-        <jaxb:javaType name="java.time.LocalDate" xmlType="xsd:date" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter.marshal" />
-
-        <jaxb:javaType name="java.time.OffsetTime" xmlType="xs:time" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter.marshal"/>
-        <jaxb:javaType name="java.time.OffsetTime" xmlType="xsd:time" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter.marshal"/>
-     -->
         <xjc:javaType name="java.time.ZonedDateTime" xmlType="xs:dateTime" adapter="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter" />
         <xjc:javaType name="java.time.ZonedDateTime" xmlType="xsd:dateTime" adapter="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter" />
 
