@@ -37,6 +37,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import de.hsesslingen.keim.efs.trias.jaxb.DoubleAdapter;
 
 
 /**
@@ -71,15 +72,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 public class GeoPositionStructure implements de.hsesslingen.keim.efs.mobility.ICoordinates {
 
     @XmlElement(name = "Longitude", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlJavaTypeAdapter(DoubleAdapter.class)
     @XmlSchemaType(name = "decimal")
     protected Double longitude;
     @XmlElement(name = "Latitude", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlJavaTypeAdapter(DoubleAdapter.class)
     @XmlSchemaType(name = "decimal")
     protected Double latitude;
     @XmlElement(name = "Altitude", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(DoubleAdapter.class)
     @XmlSchemaType(name = "decimal")
     protected Double altitude;
 

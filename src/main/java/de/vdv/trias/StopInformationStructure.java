@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -106,15 +106,15 @@ public class StopInformationStructure {
     @XmlElement(name = "DisplayContent", namespace = "http://www.vdv.de/trias")
     protected List<DisplayContentStructure> displayContent;
     @XmlElement(name = "ArrivalScheduled", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime arrivalScheduled;
     @XmlElement(name = "DepartureScheduled", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime departureScheduled;
     @XmlElement(name = "RecordedArrivalTime", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime recordedArrivalTime;
     @XmlElement(name = "DistanceToNextStop", namespace = "http://www.vdv.de/trias")

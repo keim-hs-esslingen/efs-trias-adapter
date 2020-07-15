@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter3;
+import de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter;
 
 
 /**
@@ -64,7 +64,7 @@ import org.w3._2001.xmlschema.Adapter3;
 public class Time {
 
     @XmlValue
-    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlJavaTypeAdapter(OffsetTimeAdapter.class)
     @XmlSchemaType(name = "time")
     protected OffsetTime value;
 

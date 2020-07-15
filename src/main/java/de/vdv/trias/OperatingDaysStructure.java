@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter2;
+import de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter;
 
 
 /**
@@ -73,11 +73,11 @@ import org.w3._2001.xmlschema.Adapter2;
 public class OperatingDaysStructure {
 
     @XmlElement(name = "From", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     @XmlSchemaType(name = "date")
     protected LocalDate from;
     @XmlElement(name = "To", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     @XmlSchemaType(name = "date")
     protected LocalDate to;
     @XmlElement(name = "Pattern", namespace = "http://www.vdv.de/trias", required = true)

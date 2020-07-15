@@ -39,8 +39,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 import eu.datex2.schema._1_0._1_0.SourceTypeEnum;
-import org.w3._2001.xmlschema.Adapter1;
 
 
 /**
@@ -120,7 +120,7 @@ public class SituationSourceStructure {
     @XmlElement(name = "SourceRole", namespace = "http://www.siri.org.uk/siri")
     protected String sourceRole;
     @XmlElement(name = "TimeOfCommunication", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime timeOfCommunication;
     @XmlElement(name = "ExternalCode", namespace = "http://www.siri.org.uk/siri")

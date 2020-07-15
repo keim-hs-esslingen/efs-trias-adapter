@@ -39,8 +39,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 import de.vdv.trias.AbstractTriasServiceRequestStructure;
-import org.w3._2001.xmlschema.Adapter1;
 
 
 /**
@@ -83,7 +83,7 @@ public class ContextualisedRequestStructure {
     @XmlElement(name = "ServiceRequestContext", namespace = "http://www.siri.org.uk/siri")
     protected ServiceRequestContextStructure serviceRequestContext;
     @XmlElement(name = "RequestTimestamp", namespace = "http://www.siri.org.uk/siri", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime requestTimestamp;
     @XmlElement(name = "Address", namespace = "http://www.siri.org.uk/siri")

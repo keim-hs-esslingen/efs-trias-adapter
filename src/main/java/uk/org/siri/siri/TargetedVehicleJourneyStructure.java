@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -146,11 +146,11 @@ public class TargetedVehicleJourneyStructure {
     @XmlElement(name = "HeadwayService", namespace = "http://www.siri.org.uk/siri", defaultValue = "false")
     protected Boolean headwayService;
     @XmlElement(name = "OriginAimedDepartureTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime originAimedDepartureTime;
     @XmlElement(name = "DestinationAimedArrivalTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime destinationAimedArrivalTime;
     @XmlElement(name = "TargetedCall", namespace = "http://www.siri.org.uk/siri")

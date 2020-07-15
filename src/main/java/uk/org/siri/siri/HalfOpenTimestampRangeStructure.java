@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -75,11 +75,11 @@ import org.w3._2001.xmlschema.Adapter1;
 public class HalfOpenTimestampRangeStructure {
 
     @XmlElement(name = "StartTime", namespace = "http://www.siri.org.uk/siri", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime startTime;
     @XmlElement(name = "EndTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime endTime;
 

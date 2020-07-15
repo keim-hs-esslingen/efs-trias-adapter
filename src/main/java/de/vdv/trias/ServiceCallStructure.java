@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -73,23 +73,23 @@ import org.w3._2001.xmlschema.Adapter1;
 public class ServiceCallStructure {
 
     @XmlElement(name = "TimetabledTime", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime timetabledTime;
     @XmlElement(name = "RecordedAtTime", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime recordedAtTime;
     @XmlElement(name = "EstimatedTime", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime estimatedTime;
     @XmlElement(name = "EstimatedTimeLow", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime estimatedTimeLow;
     @XmlElement(name = "EstimatedTimeHigh", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime estimatedTimeHigh;
 

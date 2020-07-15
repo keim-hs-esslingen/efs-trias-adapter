@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -115,7 +115,7 @@ public class DatedCallStructure {
     @XmlElement(name = "CallNote", namespace = "http://www.siri.org.uk/siri")
     protected List<NaturalLanguageStringStructure> callNote;
     @XmlElement(name = "AimedArrivalTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime aimedArrivalTime;
     @XmlElement(name = "ArrivalPlatformName", namespace = "http://www.siri.org.uk/siri")
@@ -124,7 +124,7 @@ public class DatedCallStructure {
     @XmlSchemaType(name = "NMTOKEN")
     protected ArrivalBoardingActivityEnumeration arrivalBoardingActivity;
     @XmlElement(name = "AimedDepartureTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime aimedDepartureTime;
     @XmlElement(name = "DeparturePlatformName", namespace = "http://www.siri.org.uk/siri")

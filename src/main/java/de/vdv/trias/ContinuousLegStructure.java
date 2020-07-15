@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -100,11 +100,11 @@ public class ContinuousLegStructure {
     @XmlElement(name = "Service", namespace = "http://www.vdv.de/trias", required = true)
     protected ContinuousServiceStructure service;
     @XmlElement(name = "TimeWindowStart", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime timeWindowStart;
     @XmlElement(name = "TimeWindowEnd", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime timeWindowEnd;
     @XmlElement(name = "Duration", namespace = "http://www.vdv.de/trias", required = true)

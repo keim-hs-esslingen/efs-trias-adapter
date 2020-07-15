@@ -23,16 +23,24 @@
  */
 package de.hsesslingen.keim.efs.trias.jaxb;
 
-import java.math.BigDecimal;
+import java.time.OffsetTime;
+import java.time.format.DateTimeFormatter;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  *
- * @author keim
+ * @author ben
  */
-public class DoubleSerializer {
+public class OffsetTimeAdapter extends XmlAdapter<String, OffsetTime> {
 
-    public static String printDouble(Double value) {
-        return BigDecimal.valueOf(value).toPlainString();
+    @Override
+    public OffsetTime unmarshal(String vt) throws Exception {
+        return OffsetTime.parse(vt);
     }
-    
+
+    @Override
+    public String marshal(OffsetTime bt) throws Exception {
+        return bt.format(DateTimeFormatter.ISO_OFFSET_TIME);
+    }
+
 }

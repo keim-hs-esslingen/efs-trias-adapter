@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter2;
+import de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter;
 
 
 /**
@@ -73,7 +73,7 @@ public class StopFaresRequestStructure {
     @XmlElement(name = "StopPointRef", namespace = "http://www.vdv.de/trias", required = true)
     protected StopPointRefStructure stopPointRef;
     @XmlElement(name = "Date", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     @XmlSchemaType(name = "date")
     protected LocalDate date;
 

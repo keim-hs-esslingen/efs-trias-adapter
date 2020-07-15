@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -92,11 +92,11 @@ public class RouteStructure {
     @XmlElement(name = "Duration", namespace = "http://www.vdv.de/trias", required = true)
     protected Duration duration;
     @XmlElement(name = "StartTime", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime startTime;
     @XmlElement(name = "EndTime", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime endTime;
     @XmlElement(name = "Distance", namespace = "http://www.vdv.de/trias")

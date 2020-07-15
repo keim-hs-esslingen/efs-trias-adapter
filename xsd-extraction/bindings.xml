@@ -5,15 +5,26 @@
     xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc">
 
     <jaxb:globalBindings>
-        <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xs:dateTime" parseMethod="java.time.ZonedDateTime.parse" printMethod="de.hsesslingen.keim.efs.trias.jaxb.DateTimeSerializer.printZonedDateTime" />
-        <jaxb:javaType name="java.time.LocalDate" xmlType="xs:date" parseMethod="java.time.LocalDate.parse" printMethod="de.hsesslingen.keim.efs.trias.jaxb.DateTimeSerializer.printLocalDate" />
-        <jaxb:javaType name="java.time.OffsetTime" xmlType="xs:time" parseMethod="java.time.OffsetTime.parse" printMethod="de.hsesslingen.keim.efs.trias.jaxb.DateTimeSerializer.printOffsetTime" />
+        <!-- <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xs:dateTime" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter.marshal" />
+        <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xsd:dateTime" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter.marshal" />
 
-        <jaxb:javaType name="java.time.ZonedDateTime" xmlType="xsd:dateTime" parseMethod="java.time.ZonedDateTime.parse" printMethod="de.hsesslingen.keim.efs.trias.jaxb.DateTimeSerializer.printZonedDateTime" />
-        <jaxb:javaType name="java.time.LocalDate" xmlType="xsd:date" parseMethod="java.time.LocalDate.parse" printMethod="de.hsesslingen.keim.efs.trias.jaxb.DateTimeSerializer.printLocalDate" />
-        <jaxb:javaType name="java.time.OffsetTime" xmlType="xsd:time" parseMethod="java.time.OffsetTime.parse" printMethod="de.hsesslingen.keim.efs.trias.jaxb.DateTimeSerializer.printOffsetTime" />
+        <jaxb:javaType name="java.time.LocalDate" xmlType="xs:date" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter.marshal"/>
+        <jaxb:javaType name="java.time.LocalDate" xmlType="xsd:date" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter.marshal" />
+
+        <jaxb:javaType name="java.time.OffsetTime" xmlType="xs:time" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter.marshal"/>
+        <jaxb:javaType name="java.time.OffsetTime" xmlType="xsd:time" parseMethod="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter.unmarshal" printMethod="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter.marshal"/>
+     -->
+        <xjc:javaType name="java.time.ZonedDateTime" xmlType="xs:dateTime" adapter="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter" />
+        <xjc:javaType name="java.time.ZonedDateTime" xmlType="xsd:dateTime" adapter="de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter" />
+
+        <xjc:javaType name="java.time.LocalDate" xmlType="xs:date" adapter="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter" />
+        <xjc:javaType name="java.time.LocalDate" xmlType="xsd:date" adapter="de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter" />
+
+        <xjc:javaType name="java.time.OffsetTime" xmlType="xs:time" adapter="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter" />
+        <xjc:javaType name="java.time.OffsetTime" xmlType="xsd:time" adapter="de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter" />
+
+
     </jaxb:globalBindings>
-
 
     <jaxb:bindings schemaLocation="Trias_Utility.xsd">
         <!-- 
@@ -22,13 +33,13 @@
         do some kinds of high precision arithmetic computations on coordinate values, this should be ok for most cases.
         -->
         <jaxb:bindings node="//xs:simpleType[@name='LongitudeType']">
-            <jaxb:javaType name="java.lang.Double" parseMethod="java.lang.Double.parseDouble" printMethod="de.hsesslingen.keim.efs.trias.jaxb.DoubleSerializer.printDouble" />
+            <xjc:javaType name="java.lang.Double" adapter="de.hsesslingen.keim.efs.trias.jaxb.DoubleAdapter" />
         </jaxb:bindings>
         <jaxb:bindings node="//xs:simpleType[@name='LatitudeType']">
-            <jaxb:javaType name="java.lang.Double" parseMethod="java.lang.Double.parseDouble" printMethod="de.hsesslingen.keim.efs.trias.jaxb.DoubleSerializer.printDouble" />
+            <xjc:javaType name="java.lang.Double" adapter="de.hsesslingen.keim.efs.trias.jaxb.DoubleAdapter" />
         </jaxb:bindings>
         <jaxb:bindings node="//xs:simpleType[@name='AltitudeType']">
-            <jaxb:javaType name="java.lang.Double" parseMethod="java.lang.Double.parseDouble" printMethod="de.hsesslingen.keim.efs.trias.jaxb.DoubleSerializer.printDouble" />
+            <xjc:javaType name="java.lang.Double" adapter="de.hsesslingen.keim.efs.trias.jaxb.DoubleAdapter" />
         </jaxb:bindings>
     </jaxb:bindings>
 

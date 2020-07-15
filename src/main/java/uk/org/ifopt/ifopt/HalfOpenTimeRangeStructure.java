@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter3;
+import de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter;
 
 
 /**
@@ -75,11 +75,11 @@ import org.w3._2001.xmlschema.Adapter3;
 public class HalfOpenTimeRangeStructure {
 
     @XmlElement(name = "StartTime", namespace = "http://www.ifopt.org.uk/ifopt", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlJavaTypeAdapter(OffsetTimeAdapter.class)
     @XmlSchemaType(name = "time")
     protected OffsetTime startTime;
     @XmlElement(name = "EndTime", namespace = "http://www.ifopt.org.uk/ifopt", type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlJavaTypeAdapter(OffsetTimeAdapter.class)
     @XmlSchemaType(name = "time")
     protected OffsetTime endTime;
 

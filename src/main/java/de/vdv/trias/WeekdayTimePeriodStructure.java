@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
-import org.w3._2001.xmlschema.Adapter3;
+import de.hsesslingen.keim.efs.trias.jaxb.OffsetTimeAdapter;
 
 
 /**
@@ -79,7 +79,7 @@ public class WeekdayTimePeriodStructure {
     @XmlSchemaType(name = "string")
     protected List<WeekdayTypeEnumeration> weekday;
     @XmlElement(name = "StartTime", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlJavaTypeAdapter(OffsetTimeAdapter.class)
     @XmlSchemaType(name = "time")
     protected OffsetTime startTime;
     @XmlElement(name = "Duration", namespace = "http://www.vdv.de/trias", required = true)

@@ -45,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 import eu.datex2.schema._1_0._1_0.InformationStatusEnum;
-import org.w3._2001.xmlschema.Adapter1;
 import uk.org.ifopt.acsb.PassengerAccessibilityNeedsStructure;
 import uk.org.ifopt.ifopt.AccessModesEnumeration;
 import uk.org.ifopt.ifopt.CountryRefStructure;
@@ -124,7 +124,7 @@ public class SituationExchangeRequestStructure
     @XmlElement(name = "PreviewInterval", namespace = "http://www.siri.org.uk/siri")
     protected Duration previewInterval;
     @XmlElement(name = "StartTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime startTime;
     @XmlElement(name = "VehicleMode", namespace = "http://www.siri.org.uk/siri", defaultValue = "unknown")

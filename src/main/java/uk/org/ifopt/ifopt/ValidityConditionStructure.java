@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -88,11 +88,11 @@ import org.w3._2001.xmlschema.Adapter1;
 public class ValidityConditionStructure {
 
     @XmlElement(name = "FromDateTime", namespace = "http://www.ifopt.org.uk/ifopt", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime fromDateTime;
     @XmlElement(name = "ToDateTime", namespace = "http://www.ifopt.org.uk/ifopt", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime toDateTime;
     @XmlElement(name = "DayType", namespace = "http://www.ifopt.org.uk/ifopt")

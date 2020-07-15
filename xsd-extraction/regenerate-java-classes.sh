@@ -22,7 +22,7 @@ mkdir "$TARGET_DIR"
 cp ../bindings.xml ./bindings.xml
 
 # Compile classes
-xjc -d "$TARGET_DIR" -npa -extension -b bindings.xml Trias.xsd
+xjc -d "$TARGET_DIR" -npa -extension -classpath ../../src/main/java/ -b bindings.xml Trias.xsd
 
 # Remove local copy of bindings.xml to avoid confusion with original file.
 rm bindings.xml

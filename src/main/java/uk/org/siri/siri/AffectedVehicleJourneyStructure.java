@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 import uk.org.ifopt.acsb.AccessibilityAssessmentStructure;
 
 
@@ -130,11 +130,11 @@ public class AffectedVehicleJourneyStructure {
     @XmlElement(name = "Route", namespace = "http://www.siri.org.uk/siri", required = true)
     protected List<AffectedRouteStructure> route;
     @XmlElement(name = "OriginAimedDepartureTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime originAimedDepartureTime;
     @XmlElement(name = "DestinationAimedArrivalTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime destinationAimedArrivalTime;
     @XmlElement(name = "AccessibilityAssessment", namespace = "http://www.siri.org.uk/siri")

@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -77,7 +77,7 @@ public class TimetabledFeederArrivalStructure
     @XmlElement(name = "FeederJourney", namespace = "http://www.siri.org.uk/siri", required = true)
     protected InterchangeJourneyStructure feederJourney;
     @XmlElement(name = "AimedArrivalTime", namespace = "http://www.siri.org.uk/siri", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime aimedArrivalTime;
     @XmlElement(name = "Extensions", namespace = "http://www.siri.org.uk/siri")

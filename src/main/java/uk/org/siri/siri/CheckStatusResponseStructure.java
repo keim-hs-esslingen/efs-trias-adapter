@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -96,13 +96,13 @@ public class CheckStatusResponseStructure
     @XmlElement(name = "ErrorCondition", namespace = "http://www.siri.org.uk/siri")
     protected uk.org.siri.siri.CheckStatusResponseBodyStructure.ErrorCondition errorCondition;
     @XmlElement(name = "ValidUntil", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime validUntil;
     @XmlElement(name = "ShortestPossibleCycle", namespace = "http://www.siri.org.uk/siri")
     protected Duration shortestPossibleCycle;
     @XmlElement(name = "ServiceStartedTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime serviceStartedTime;
     @XmlElement(name = "Extensions", namespace = "http://www.siri.org.uk/siri")

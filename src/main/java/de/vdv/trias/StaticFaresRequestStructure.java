@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter2;
+import de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter;
 
 
 /**
@@ -73,7 +73,7 @@ import org.w3._2001.xmlschema.Adapter2;
 public class StaticFaresRequestStructure {
 
     @XmlElement(name = "Date", namespace = "http://www.vdv.de/trias", type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     @XmlSchemaType(name = "date")
     protected LocalDate date;
     @XmlElement(name = "TicketRef", namespace = "http://www.vdv.de/trias")

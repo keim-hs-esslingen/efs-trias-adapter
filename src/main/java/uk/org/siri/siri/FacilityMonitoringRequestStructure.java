@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 import uk.org.ifopt.ifopt.StopPlaceComponentRefStructure;
 import uk.org.ifopt.ifopt.StopPlaceRefStructure;
 
@@ -99,7 +99,7 @@ public class FacilityMonitoringRequestStructure
     @XmlElement(name = "PreviewInterval", namespace = "http://www.siri.org.uk/siri")
     protected Duration previewInterval;
     @XmlElement(name = "StartTime", namespace = "http://www.siri.org.uk/siri", type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime startTime;
     @XmlElement(name = "FacilityRef", namespace = "http://www.siri.org.uk/siri")

@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter2;
+import de.hsesslingen.keim.efs.trias.jaxb.LocalDateAdapter;
 
 
 /**
@@ -64,7 +64,7 @@ import org.w3._2001.xmlschema.Adapter2;
 public class Date {
 
     @XmlValue
-    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     @XmlSchemaType(name = "date")
     protected LocalDate value;
 

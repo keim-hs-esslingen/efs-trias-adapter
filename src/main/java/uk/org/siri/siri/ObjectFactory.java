@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 import javax.xml.namespace.QName;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**
@@ -4021,7 +4021,7 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ActualDepartureTime")
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     public JAXBElement<ZonedDateTime> createActualDepartureTime(ZonedDateTime value) {
         return new JAXBElement<ZonedDateTime>(_ActualDepartureTime_QNAME, ZonedDateTime.class, null, value);
     }
@@ -4392,7 +4392,7 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AimedDepartureTime")
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     public JAXBElement<ZonedDateTime> createAimedDepartureTime(ZonedDateTime value) {
         return new JAXBElement<ZonedDateTime>(_AimedDepartureTime_QNAME, ZonedDateTime.class, null, value);
     }
@@ -4564,7 +4564,7 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ResponseTimestamp")
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     public JAXBElement<ZonedDateTime> createResponseTimestamp(ZonedDateTime value) {
         return new JAXBElement<ZonedDateTime>(_ResponseTimestamp_QNAME, ZonedDateTime.class, null, value);
     }
@@ -4664,7 +4664,7 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ActualArrivalTime")
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     public JAXBElement<ZonedDateTime> createActualArrivalTime(ZonedDateTime value) {
         return new JAXBElement<ZonedDateTime>(_ActualArrivalTime_QNAME, ZonedDateTime.class, null, value);
     }
@@ -4719,7 +4719,7 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AimedArrivalTime")
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     public JAXBElement<ZonedDateTime> createAimedArrivalTime(ZonedDateTime value) {
         return new JAXBElement<ZonedDateTime>(_AimedArrivalTime_QNAME, ZonedDateTime.class, null, value);
     }
@@ -5161,7 +5161,7 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ExpectedDepartureTime")
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     public JAXBElement<ZonedDateTime> createExpectedDepartureTime(ZonedDateTime value) {
         return new JAXBElement<ZonedDateTime>(_ExpectedDepartureTime_QNAME, ZonedDateTime.class, null, value);
     }
@@ -5712,7 +5712,7 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "RequestTimestamp")
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     public JAXBElement<ZonedDateTime> createRequestTimestamp(ZonedDateTime value) {
         return new JAXBElement<ZonedDateTime>(_RequestTimestamp_QNAME, ZonedDateTime.class, null, value);
     }
@@ -5803,7 +5803,7 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ExpectedArrivalTime")
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     public JAXBElement<ZonedDateTime> createExpectedArrivalTime(ZonedDateTime value) {
         return new JAXBElement<ZonedDateTime>(_ExpectedArrivalTime_QNAME, ZonedDateTime.class, null, value);
     }

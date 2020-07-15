@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter1;
+import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
 import uk.org.ifopt.ifopt.CountryRefStructure;
 
 
@@ -81,7 +81,7 @@ import uk.org.ifopt.ifopt.CountryRefStructure;
 public class AbstractSituationElementStructure {
 
     @XmlElement(name = "CreationTime", namespace = "http://www.siri.org.uk/siri", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
     @XmlSchemaType(name = "dateTime")
     protected ZonedDateTime creationTime;
     @XmlElement(name = "CountryRef", namespace = "http://www.siri.org.uk/siri")
