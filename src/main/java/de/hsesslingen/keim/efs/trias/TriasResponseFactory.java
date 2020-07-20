@@ -128,28 +128,45 @@ public class TriasResponseFactory {
 
     private Mode ptModeToMode(PtModesEnumeration mode) {
         return switch (mode) {
-            case BUS, TROLLEY_BUS -> Mode.BUS;
-            case COACH -> Mode.BUSISH;
-            case TRAM -> Mode.TRAM;
-            case TAXI -> Mode.TAXI;
-            case METRO -> Mode.SUBWAY;
-            case RAIL, INTERCITY_RAIL -> Mode.RAIL;
-            case FUNICULAR -> Mode.FUNICULAR;
-            case WATER -> Mode.FERRY;
-            case CABLEWAY -> Mode.GONDOLA;
-            case URBAN_RAIL -> Mode.TRAINISH;
-            default -> null;
+            case BUS, TROLLEY_BUS ->
+                Mode.BUS;
+            case COACH ->
+                Mode.BUSISH;
+            case TRAM ->
+                Mode.TRAM;
+            case TAXI ->
+                Mode.TAXI;
+            case METRO ->
+                Mode.SUBWAY;
+            case RAIL, INTERCITY_RAIL ->
+                Mode.RAIL;
+            case FUNICULAR ->
+                Mode.FUNICULAR;
+            case WATER ->
+                Mode.FERRY;
+            case CABLEWAY ->
+                Mode.GONDOLA;
+            case URBAN_RAIL ->
+                Mode.TRAINISH;
+            default ->
+                null;
         };
     }
 
     private Mode indivModeToMode(IndividualModesEnumeration mode) {
         return switch (mode) {
-            case WALK -> Mode.WALK;
-            case CYCLE, MOTORCYCLE -> Mode.BICYCLE;
-            case TAXI -> Mode.TAXI;
-            case SELF_DRIVE_CAR, TRUCK -> Mode.CAR;
-            case OTHERS_DRIVE_CAR -> Mode.BUSISH;
-            default -> null;
+            case WALK ->
+                Mode.WALK;
+            case CYCLE, MOTORCYCLE ->
+                Mode.BICYCLE;
+            case TAXI ->
+                Mode.TAXI;
+            case SELF_DRIVE_CAR, TRUCK ->
+                Mode.CAR;
+            case OTHERS_DRIVE_CAR ->
+                Mode.BUSISH;
+            default ->
+                null;
         };
     }
 
