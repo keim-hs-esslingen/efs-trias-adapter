@@ -29,7 +29,7 @@ import de.hsesslingen.keim.efs.middleware.common.LegBaseItem;
 import de.hsesslingen.keim.efs.middleware.common.Options;
 import de.hsesslingen.keim.efs.middleware.common.Place;
 import de.hsesslingen.keim.efs.middleware.common.TypeOfAsset;
-import de.hsesslingen.keim.efs.mobility.ICoordinates;
+import de.hsesslingen.keim.efs.mobility.exception.HttpException;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
 import de.vdv.trias.ContinuousLegStructure;
 import de.vdv.trias.GeoPositionStructure;
@@ -50,7 +50,6 @@ import static de.vdv.trias.PtModesEnumeration.WATER;
 import de.vdv.trias.TimedLegStructure;
 import de.vdv.trias.Trias;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -59,8 +58,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import de.hsesslingen.keim.efs.trias.supertypes.ILegEnd;
 import de.vdv.trias.IndividualModesEnumeration;
+import de.vdv.trias.TripLegStructure;
+import de.vdv.trias.TripResultStructure;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 /**
  * This class creates EFS- Mobility Objects from Trias Response - Objects
@@ -170,9 +172,12 @@ public class TriasResponseFactory {
         };
     }
 
-    private CompletableFuture<GeoPositionStructure> getGeoPositionAsync(ILegEnd legEnd) {
+    private CompletableFuture<Place> createPlaceFromLegEndAsync(ILegEnd legEnd) {
         return CompletableFuture.supplyAsync(() -> {
-            return triasLocationInformationService.getGeoPositionFromStopPoint(legEnd.getStopPointRef());
+            // First get the geo coordinates from the server.
+            var geoPos = triasLocationInformationService.getGeoPositionFromStopPoint(legEnd.getStopPointRef());
+            // The convert it to a place.
+            return createPlaceFromStopPoint(legEnd, geoPos);
         });
     }
 
@@ -218,6 +223,11 @@ public class TriasResponseFactory {
     public Leg createLegFromTimedLeg(TimedLegStructure timedLeg) {
         var leg = new Leg();
 
+        // ### PLACE INFO ###
+        // Kick of async retrieval of place creation, which involves a call to the TRIAS api for geo coordinates.
+        var futureBoard = createPlaceFromLegEndAsync(timedLeg.getLegBoard());
+        var futureAlight = createPlaceFromLegEndAsync(timedLeg.getLegAlight());
+
         // ### TIME INFO ###
         // The Trias Object LegBoard contains Information about boarding the vehicle 
         var departure = timedLeg.getLegBoard().getServiceDeparture().getTimetabledTime();
@@ -231,71 +241,9 @@ public class TriasResponseFactory {
             leg.setEndTime(arrival.toInstant());
         }
 
-        // ### PLACE INFO ###
-        var legBoard = timedLeg.getLegBoard();
-        var legAlight = timedLeg.getLegAlight();
-
-        var futureBoard = getGeoPositionAsync(legBoard);
-        var futureAlight = getGeoPositionAsync(legAlight);
-
-        GeoPositionStructure startFromTrack = null;
-        GeoPositionStructure endFromTrack = null;
-        GeoPositionStructure startFromService = null;
-        GeoPositionStructure endFromService = null;
-
-        var track = timedLeg.getLegTrack();
-        var trackSections = track != null ? track.getTrackSection() : null; //getTrackSection() never returns null.
-
-        if (trackSections != null && !trackSections.isEmpty()) {
-            // extract geo positions from track projection details.
-            var section = trackSections.get(0);
-            var projection = section.getProjection();
-
-            if (projection != null && !projection.getPosition().isEmpty()) {
-                var positions = projection.getPosition();
-                startFromTrack = positions.get(0);
-                endFromTrack = positions.get(positions.size() - 1);
-            }
-        }
-
-        try {
-            // Wait for the information requests to return...
-            startFromService = futureBoard.get();
-            endFromService = futureAlight.get();
-        } catch (InterruptedException | ExecutionException ex) {
-            log.error(ex);
-        }
-
-        // We prefer using the information from the service, because it's probably more accurate.
-        var start = startFromService != null ? startFromService : startFromTrack;
-        var end = endFromService != null ? endFromService : endFromTrack;
-
-        // We are interested in how accurate the endings in the track projection are. Lets log the difference:
-        if (log.isTraceEnabled()) {
-            if (startFromService != null
-                    && startFromTrack != null
-                    && endFromService != null
-                    && endFromTrack != null) {
-                log.trace("\nDifference real track start and projection start:\n"
-                        + "\tlat: " + Math.abs(startFromService.getLatitude() - startFromTrack.getLatitude())
-                        + "\tlon: " + Math.abs(startFromService.getLongitude() - startFromTrack.getLongitude())
-                        + "\tkm: " + ICoordinates.distanceKmBetween(startFromService, startFromTrack)
-                        + "\nDifference real track end and projection end:\n"
-                        + "\tlat: " + Math.abs(endFromService.getLatitude() - endFromTrack.getLatitude())
-                        + "\tlon: " + Math.abs(endFromService.getLongitude() - endFromTrack.getLongitude())
-                        + "\tkm: " + ICoordinates.distanceKmBetween(endFromService, endFromTrack)
-                );
-            } else {
-                log.trace("Cannot calculate difference between real track ends and projection ends. "
-                        + "At least one of the needed values is missing.");
-            }
-        }
-
-        // Set the values in the leg
-        leg.setFrom(createPlaceFromStopPoint(legBoard, start));
-        leg.setTo(createPlaceFromStopPoint(legAlight, end));
-
         // ### TRIP LENGTH ###
+        var trackSections = timedLeg.getLegTrack().getTrackSection();
+
         if (trackSections != null && !trackSections.isEmpty()) {
             // triplength is calculated by summing up all TrackSection - Length
             // if the field length is null then 0 is added
@@ -316,90 +264,131 @@ public class TriasResponseFactory {
 
         leg.setServiceId(serviceId);
 
+        // ### REST OF PLACE INFO ###
+        try {
+            // Wait for the asynchronous creation of place data to finish and then insert the gained information...
+            leg.setFrom(futureBoard.get());
+            leg.setTo(futureAlight.get());
+        } catch (InterruptedException | ExecutionException ex) {
+            throw HttpException.internalServerError(ex, "Unable to retrieve geo location data for start and end points.");
+        }
+
         return leg;
     }
 
-    public List<Options> extractMobilityOptionsFromTrias(Trias responseTrias) {
-
-        // extract the Mobility - Options from responseTrias:
-        var options = new ArrayList<Options>();
-
-        for (var tripResult : responseTrias.getServiceDelivery().getDeliveryPayload().getTripResponse().getTripResult()) {
-            // each tripResult from Trias represents a Mobility - Option from efsMaas
-            var option = new Options();
-
-            // each Options can store just one LegBaseItem
-            var legBaseItem = new LegBaseItem();
-
-            var meta = new TypeOfAsset();
-
-            // Therefor the Details about subLegs are stored in a List and later convertet to a String which is stored in meta.other
-            var legs = new ArrayList<Leg>();
-
-            for (var tripLeg : tripResult.getTrip().getTripLeg()) {
-                if (tripLeg.getContinuousLeg() != null) {
-                    Leg leg = createLegFromContinuousLeg(tripLeg.getContinuousLeg());
-
-                    //The Mobility Mode "WALK" should not be listest as own Mobility - Leg, even if WALK is performed with Legs :) 
-                    if (leg.getMode() != Mode.WALK) {
-                        legs.add(leg);
-                    }
-                }
-
-                if (tripLeg.getTimedLeg() != null) {
-                    Leg leg = createLegFromTimedLeg(tripLeg.getTimedLeg());
-
-                    meta.setMode(leg.getMode());
-                    meta.setName(leg.getServiceId());
-                    meta.setTypeID(leg.getServiceId());
-                    legs.add(leg);
-                }
-            }
-
-            if (legs.size() > 0) {
-
-                legBaseItem.setServiceId(serviceId);
-
-                // since the efsMaas  Options- Object can contain just one Leg (LegBaseItem) a workaround is done here 
-                //assign the StartTime and OriginPlace of the first Leg to the legBaseItem
-                legBaseItem.setStartTime(legs.get(0).getStartTime());
-                legBaseItem.setFrom(legs.get(0).getFrom());
-
-                //assign the EndTime and DestinationPlace of the last Leg to the legBaseItem
-                legBaseItem.setEndTime(legs.get(legs.size() - 1).getEndTime());
-                legBaseItem.setTo(legs.get(legs.size() - 1).getTo());
-
-                option.setLeg(legBaseItem);
-
-                // now we are facing a problem here: the efsMaas  Options- Object can contain just one Leg (LegBaseItem) so a workaround has to be done here.
-                // first we have to decide which Travel Mode should be displayed as the Main- Travelmode.
-                // we use an simple solution here by assigning the Mode of the first Leg as the Main Mode. Maybe a better Solution is found here.
-                meta.setMode(legs.get(0).getMode());
-
-                // for the detailed Leg Information for the intermediate Legs we use a Sub Json which we store in the field Options-Meta-other
-                // we assign "[]" that in case of an Mapping error, at least an empty JSON is returned here
-                String optionsAsJsonString = "[]";
-
-                // convert whole Leg - List  to JSON :
-                try {
-                    optionsAsJsonString = objectMapper.writeValueAsString(legs);
-                } catch (IOException e) {
-
-                }
-
-                meta.setOther(optionsAsJsonString);
-
-                log.info("subJSON##########################");
-                log.info("");
-                log.info(optionsAsJsonString);
-                log.info("");
-                option.setMeta(meta);
-
-                options.add(option);
-            }
+    private Leg createLegFromTripLeg(TripLegStructure tripLeg) {
+        if (tripLeg.getContinuousLeg() != null) {
+            return createLegFromContinuousLeg(tripLeg.getContinuousLeg());
         }
 
-        return options;
+        if (tripLeg.getTimedLeg() != null) {
+            return createLegFromTimedLeg(tripLeg.getTimedLeg());
+        }
+
+        return null;
+    }
+
+    private Leg getLastNonWalkLeg(List<Leg> legs) {
+        // First try the very last one...
+        Leg res = legs.get(legs.size() - 1);
+
+        if (res.getMode() != Mode.WALK) {
+            return res;
+        }
+
+        //If that did work, create a list iterator and walk backwards from the end.
+        var lit = legs.listIterator(legs.size() - 1);
+
+        do {
+            res = lit.previous();
+        } while (res.getMode() == Mode.WALK);
+
+        return res;
+    }
+
+    /**
+     * Each trip result from TRIAS represents an Option from EFS
+     *
+     * @param tripResult
+     * @return
+     */
+    private Options createOptionFromTripResult(TripResultStructure tripResult) {
+
+        // each option can store just one LegBaseItem
+        var legBaseItem = new LegBaseItem();
+        legBaseItem.setServiceId(serviceId);
+
+        var meta = new TypeOfAsset();
+
+        // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
+        var legs = tripResult.getTrip().getTripLeg()
+                .parallelStream()
+                .map(this::createLegFromTripLeg)
+                .filter(leg -> leg != null)
+                .collect(Collectors.toList());
+
+        if (!legs.isEmpty()) {
+            // Get the first leg that is not WALK:
+            var firstOpt = legs.stream()
+                    .filter(l -> l.getMode() != Mode.WALK)
+                    .findFirst();
+
+            if (!firstOpt.isPresent()) {
+                // If we don't have any NON-walk legs, return null!
+                return null;
+            }
+
+            var first = firstOpt.get();
+
+            // Get the last leg that is not WALK:
+            var last = getLastNonWalkLeg(legs);
+
+            // since the efsMaas  Options- Object can contain just one Leg (LegBaseItem) a workaround is done here 
+            //assign the StartTime and OriginPlace of the first Leg to the legBaseItem
+            legBaseItem.setStartTime(first.getStartTime());
+            legBaseItem.setFrom(first.getFrom());
+
+            //assign the EndTime and DestinationPlace of the last Leg to the legBaseItem
+            legBaseItem.setEndTime(last.getEndTime());
+            legBaseItem.setTo(last.getTo());
+
+            // now we are facing a problem here: the efsMaas  Options- Object can contain just one Leg (LegBaseItem) so a workaround has to be done here.
+            // first we have to decide which Travel Mode should be displayed as the Main- Travelmode.
+            // we use an simple solution here by assigning the Mode of the first Leg as the Main Mode. Maybe a better Solution is found here.
+            meta.setMode(first.getMode());
+
+            // for the detailed Leg Information for the intermediate Legs we use a Sub Json which we store in the field Options-Meta-other
+            // we assign "[]" that in case of an Mapping error, at least an empty JSON is returned here
+            String optionsAsJsonString = "[]";
+
+            // convert whole Leg - List  to JSON :
+            try {
+                optionsAsJsonString = objectMapper.writeValueAsString(legs);
+            } catch (IOException e) {
+
+            }
+
+            meta.setOther(optionsAsJsonString);
+
+            log.trace("Sub-Legs: " + optionsAsJsonString);
+        }
+
+        var option = new Options();
+        option.setLeg(legBaseItem);
+        option.setMeta(meta);
+        return option;
+    }
+
+    public List<Options> extractMobilityOptionsFromTrias(Trias responseTrias) {
+        // Convert the trip results in parallel to options...
+        return responseTrias.getServiceDelivery()
+                .getDeliveryPayload()
+                .getTripResponse()
+                .getTripResult()
+                .parallelStream()
+                .map(this::createOptionFromTripResult)
+                .filter(opt -> opt != null)
+                .collect(Collectors.toList());
     }
 
 }

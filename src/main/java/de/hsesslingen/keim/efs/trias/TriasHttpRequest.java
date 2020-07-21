@@ -33,8 +33,6 @@ import java.util.List;
 import java.util.Map;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.http.HttpHeaders;
@@ -55,14 +53,11 @@ public class TriasHttpRequest {
     private static final Log log = LogFactory.getLog(TriasHttpRequest.class);
     private static final String CONTENT_TYPE = MediaType.APPLICATION_XML_VALUE;
 
-    private static Unmarshaller unmarshaller;
-    private static Marshaller marshaller;
+    private static JAXBContext jaxbContext;
 
     static {
         try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Trias.class);
-            unmarshaller = jaxbContext.createUnmarshaller();
-            marshaller = jaxbContext.createMarshaller();
+            jaxbContext = JAXBContext.newInstance(Trias.class);
         } catch (JAXBException ex) {
             log.error(ex);
         }
@@ -277,7 +272,8 @@ public class TriasHttpRequest {
     public ResponseEntity<Trias> go() throws JAXBException {
         // Generate request XML...
         StringWriter writer = new StringWriter();
-        marshaller.marshal(body, writer);
+
+        jaxbContext.createMarshaller().marshal(body, writer);
         String requestXml = writer.toString();
 
         if (log.isTraceEnabled()) {
@@ -294,7 +290,7 @@ public class TriasHttpRequest {
 
         // Deserialize response...
         String xml = response.getBody();
-        Trias trias = (Trias) unmarshaller.unmarshal(new StringReader(xml));
+        Trias trias = (Trias) jaxbContext.createUnmarshaller().unmarshal(new StringReader(xml));
 
         // Build adapted response object...
         return ResponseEntity.status(response.getStatusCode()).body(trias);
