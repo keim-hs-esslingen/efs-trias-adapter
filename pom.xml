@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>de.hsesslingen.keim.efs</groupId>
+        <groupId>com.github.keim-hs-esslingen</groupId>
         <artifactId>efs-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     
-    <groupId>de.hsesslingen.keim.efs</groupId>
+    <groupId>com.github.keim-hs-esslingen</groupId>
     <artifactId>trias-api-adapter</artifactId>
     <version>1.2.1</version>
     <name>TRIAS-Adapter</name>
@@ -44,26 +44,26 @@
     
     <dependencies>        
         <dependency>
-            <groupId>de.hsesslingen.keim</groupId>
+            <groupId>com.github.keim-hs-esslingen</groupId>
             <artifactId>rest-utils</artifactId>
         </dependency>
         <dependency>
-            <groupId>de.hsesslingen.keim.efs</groupId>
+            <groupId>com.github.keim-hs-esslingen</groupId>
             <artifactId>mobility-commons</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>de.hsesslingen.keim.efs</groupId>
+            <groupId>com.github.keim-hs-esslingen</groupId>
             <artifactId>middleware-core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>de.hsesslingen.keim.efs</groupId>
+            <groupId>com.github.keim-hs-esslingen</groupId>
             <artifactId>middleware-security</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>de.hsesslingen.keim.efs</groupId>
+            <groupId>com.github.keim-hs-esslingen</groupId>
             <artifactId>middleware-test</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>test</scope>
