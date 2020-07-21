@@ -288,7 +288,7 @@ public class TriasResponseFactory {
         return null;
     }
 
-    private Leg getLastNonWalkLeg(List<Leg> legs) {
+    Leg getLastNonWalkLeg(List<Leg> legs) {
         // First try the very last one...
         Leg res = legs.get(legs.size() - 1);
 
