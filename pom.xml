@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.github.keim-hs-esslingen</groupId>
         <artifactId>efs-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     
@@ -40,6 +40,9 @@
 
     <properties>
         <java.version>14</java.version>
+		<mobility-commons.version>1.0.0</mobility-commons.version>
+		<middleware-core.version>1.0.0</middleware-core.version>
+		<middleware-security.version>1.0.0</middleware-security.version>
     </properties>
     
     <dependencies>        
@@ -50,23 +53,17 @@
         <dependency>
             <groupId>com.github.keim-hs-esslingen</groupId>
             <artifactId>mobility-commons</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${mobility-commons.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.keim-hs-esslingen</groupId>
             <artifactId>middleware-core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${middleware-core.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.keim-hs-esslingen</groupId>
             <artifactId>middleware-security</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.keim-hs-esslingen</groupId>
-            <artifactId>middleware-test</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>test</scope>
+            <version>${middleware-security.version}</version>
         </dependency>
                 
         <dependency>
