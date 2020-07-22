@@ -40,30 +40,14 @@
 
     <properties>
         <java.version>14</java.version>
-		<mobility-commons.version>1.0.0</mobility-commons.version>
 		<middleware-core.version>1.0.0</middleware-core.version>
-		<middleware-security.version>1.0.0</middleware-security.version>
     </properties>
     
-    <dependencies>        
-        <dependency>
-            <groupId>com.github.keim-hs-esslingen</groupId>
-            <artifactId>rest-utils</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.keim-hs-esslingen</groupId>
-            <artifactId>mobility-commons</artifactId>
-            <version>${mobility-commons.version}</version>
-        </dependency>
+    <dependencies>
         <dependency>
             <groupId>com.github.keim-hs-esslingen</groupId>
             <artifactId>middleware-core</artifactId>
             <version>${middleware-core.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.keim-hs-esslingen</groupId>
-            <artifactId>middleware-security</artifactId>
-            <version>${middleware-security.version}</version>
         </dependency>
                 
         <dependency>
@@ -72,7 +56,7 @@
             <artifactId>jakarta.xml.bind-api</artifactId>
         </dependency>
         <dependency>
-            <!-- Needed to be able to de/serialize XML with JAXB.. -->
+            <!-- Needed to be able to (de-)serialize XML with JAXB.. -->
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
         </dependency>
