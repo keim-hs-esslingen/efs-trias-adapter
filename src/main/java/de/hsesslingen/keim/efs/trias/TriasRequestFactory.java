@@ -38,7 +38,6 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import javax.annotation.PostConstruct;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -66,15 +65,15 @@ public class TriasRequestFactory {
 
     @PostConstruct
     private void init() {
-        if (StringUtils.isBlank(triasVersion)) {
+        if (triasVersion == null || triasVersion.isBlank()) {
             throw new MissingConfigParamException("trias.triasVersion");
         }
 
-        if (StringUtils.isBlank(apiUserReference)) {
+        if (apiUserReference == null || apiUserReference.isBlank()) {
             throw new MissingConfigParamException("trias.api-user-reference");
         }
 
-        if (StringUtils.isBlank(providerTimeZoneIdStr)) {
+        if (providerTimeZoneIdStr == null || providerTimeZoneIdStr.isBlank()) {
             providerTimeZoneId = ZoneId.systemDefault();
         } else {
             providerTimeZoneId = ZoneId.of(providerTimeZoneIdStr);
