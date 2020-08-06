@@ -129,47 +129,51 @@ public class TriasResponseFactory {
     }
 
     private Mode ptModeToMode(PtModesEnumeration mode) {
-        return switch (mode) {
-            case BUS, TROLLEY_BUS ->
-                Mode.BUS;
-            case COACH ->
-                Mode.BUSISH;
-            case TRAM ->
-                Mode.TRAM;
-            case TAXI ->
-                Mode.TAXI;
-            case METRO ->
-                Mode.SUBWAY;
-            case RAIL, INTERCITY_RAIL ->
-                Mode.RAIL;
-            case FUNICULAR ->
-                Mode.FUNICULAR;
-            case WATER ->
-                Mode.FERRY;
-            case CABLEWAY ->
-                Mode.GONDOLA;
-            case URBAN_RAIL ->
-                Mode.TRAINISH;
-            default ->
-                null;
-        };
+        switch (mode) {
+            case BUS:
+            case TROLLEY_BUS:
+                return Mode.BUS;
+            case COACH:
+                return Mode.BUSISH;
+            case TRAM:
+                return Mode.TRAM;
+            case TAXI:
+                return Mode.TAXI;
+            case METRO:
+                return Mode.SUBWAY;
+            case RAIL:
+            case INTERCITY_RAIL:
+                return Mode.RAIL;
+            case FUNICULAR:
+                return Mode.FUNICULAR;
+            case WATER:
+                return Mode.FERRY;
+            case CABLEWAY:
+                return Mode.GONDOLA;
+            case URBAN_RAIL:
+                return Mode.TRAINISH;
+            default:
+                return null;
+        }
     }
 
     private Mode indivModeToMode(IndividualModesEnumeration mode) {
-        return switch (mode) {
-            case WALK ->
-                Mode.WALK;
-            case CYCLE, MOTORCYCLE ->
-                Mode.BICYCLE;
-            case TAXI ->
-                Mode.TAXI;
-            case SELF_DRIVE_CAR, TRUCK ->
-                Mode.CAR;
-            case OTHERS_DRIVE_CAR ->
-                Mode.BUSISH;
-            default ->
-                null;
-        };
+        switch (mode) {
+            case WALK:
+                return Mode.WALK;
+            case CYCLE:
+            case MOTORCYCLE:
+                return Mode.BICYCLE;
+            case TAXI:
+                return Mode.TAXI;
+            case SELF_DRIVE_CAR:
+            case TRUCK:
+                return Mode.CAR;
+            case OTHERS_DRIVE_CAR:
+                return Mode.BUSISH;
+            default:
+                return null;
+        }
     }
 
     private CompletableFuture<Place> createPlaceFromLegEndAsync(ILegEnd legEnd) {
