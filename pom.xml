@@ -17,12 +17,12 @@
     
     <name>TRIAS-Adapter</name>
     <description>Adapter base for TRIAS-APIs.</description>
-    <url>https://github.com/keim-hs-esslingen/trias-adapter</url>
+    <url>https://github.com/keim-hs-esslingen/efs-trias-adapter</url>
     
     <scm>
-        <connection>scm:git:git://github.com:keim-hs-esslingen/trias-adapter.git</connection>
-        <developerConnection>scm:git:ssh://github.com:keim-hs-esslingen/trias-adapter.git</developerConnection>
-        <url>https://github.com/keim-hs-esslingen/trias-adapter</url>
+        <connection>scm:git:git://github.com:keim-hs-esslingen/efs-trias-adapter.git</connection>
+        <developerConnection>scm:git:ssh://github.com:keim-hs-esslingen/efs-trias-adapter.git</developerConnection>
+        <url>https://github.com/keim-hs-esslingen/efs-trias-adapter</url>
     </scm>
 
     <licenses>
