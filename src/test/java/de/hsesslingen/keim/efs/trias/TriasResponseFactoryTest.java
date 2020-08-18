@@ -23,7 +23,7 @@
  */
 package de.hsesslingen.keim.efs.trias;
 
-import de.hsesslingen.keim.efs.middleware.booking.Leg;
+import de.hsesslingen.keim.efs.middleware.common.Leg;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
 import java.util.List;
 import org.junit.After;

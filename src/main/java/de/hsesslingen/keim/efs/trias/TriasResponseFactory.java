@@ -24,8 +24,7 @@
 package de.hsesslingen.keim.efs.trias;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import de.hsesslingen.keim.efs.middleware.booking.Leg;
-import de.hsesslingen.keim.efs.middleware.common.LegBaseItem;
+import de.hsesslingen.keim.efs.middleware.common.Leg;
 import de.hsesslingen.keim.efs.middleware.common.Options;
 import de.hsesslingen.keim.efs.middleware.common.Place;
 import de.hsesslingen.keim.efs.middleware.common.TypeOfAsset;
@@ -319,8 +318,8 @@ public class TriasResponseFactory {
     private Options createOptionFromTripResult(TripResultStructure tripResult) {
 
         // each option can store just one LegBaseItem
-        var legBaseItem = new LegBaseItem();
-        legBaseItem.setServiceId(serviceId);
+        var mainLeg = new Leg();
+        mainLeg.setServiceId(serviceId);
 
         var meta = new TypeOfAsset();
 
@@ -349,17 +348,18 @@ public class TriasResponseFactory {
 
             // since the efsMaas  Options- Object can contain just one Leg (LegBaseItem) a workaround is done here 
             //assign the StartTime and OriginPlace of the first Leg to the legBaseItem
-            legBaseItem.setStartTime(first.getStartTime());
-            legBaseItem.setFrom(first.getFrom());
+            mainLeg.setStartTime(first.getStartTime());
+            mainLeg.setFrom(first.getFrom());
 
             //assign the EndTime and DestinationPlace of the last Leg to the legBaseItem
-            legBaseItem.setEndTime(last.getEndTime());
-            legBaseItem.setTo(last.getTo());
+            mainLeg.setEndTime(last.getEndTime());
+            mainLeg.setTo(last.getTo());
 
             // now we are facing a problem here: the efsMaas  Options- Object can contain just one Leg (LegBaseItem) so a workaround has to be done here.
             // first we have to decide which Travel Mode should be displayed as the Main- Travelmode.
             // we use an simple solution here by assigning the Mode of the first Leg as the Main Mode. Maybe a better Solution is found here.
             meta.setMode(first.getMode());
+            mainLeg.setMode(first.getMode());
 
             // for the detailed Leg Information for the intermediate Legs we use a Sub Json which we store in the field Options-Meta-other
             // we assign "[]" that in case of an Mapping error, at least an empty JSON is returned here
@@ -378,7 +378,7 @@ public class TriasResponseFactory {
         }
 
         var option = new Options();
-        option.setLeg(legBaseItem);
+        option.setLeg(mainLeg);
         option.setMeta(meta);
         return option;
     }
