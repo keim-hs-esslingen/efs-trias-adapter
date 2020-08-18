@@ -23,7 +23,7 @@
  */
 package de.hsesslingen.keim.efs.trias;
 
-import de.hsesslingen.keim.efs.middleware.apis.security.AbstractCredentials;
+import de.hsesslingen.keim.efs.middleware.provider.credentials.AbstractCredentials;
 
 /**
  * This class is just a placeholder because for VRN no Credentials are necessary

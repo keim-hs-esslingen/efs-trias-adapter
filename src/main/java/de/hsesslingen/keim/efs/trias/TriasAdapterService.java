@@ -23,7 +23,7 @@
  */
 package de.hsesslingen.keim.efs.trias;
 
-import de.hsesslingen.keim.efs.middleware.apis.IBookingService;
+import de.hsesslingen.keim.efs.middleware.provider.IBookingService;
 import de.hsesslingen.keim.efs.middleware.model.Booking;
 import de.hsesslingen.keim.efs.middleware.model.BookingAction;
 import de.hsesslingen.keim.efs.middleware.model.BookingState;
