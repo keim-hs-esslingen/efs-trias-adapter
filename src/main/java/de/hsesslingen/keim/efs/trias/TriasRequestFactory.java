@@ -23,7 +23,7 @@
  */
 package de.hsesslingen.keim.efs.trias;
 
-import de.hsesslingen.keim.efs.middleware.common.Place;
+import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
 import de.hsesslingen.keim.efs.mobility.ICoordinates;
 import de.hsesslingen.keim.efs.trias.factories.LocationContextStructureBuilder;

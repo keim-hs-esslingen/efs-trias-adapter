@@ -24,12 +24,12 @@
 package de.hsesslingen.keim.efs.trias;
 
 import de.hsesslingen.keim.efs.middleware.apis.IBookingService;
-import de.hsesslingen.keim.efs.middleware.booking.Booking;
-import de.hsesslingen.keim.efs.middleware.booking.BookingAction;
-import de.hsesslingen.keim.efs.middleware.booking.BookingState;
-import de.hsesslingen.keim.efs.middleware.booking.NewBooking;
-import de.hsesslingen.keim.efs.middleware.common.Options;
-import de.hsesslingen.keim.efs.middleware.common.Place;
+import de.hsesslingen.keim.efs.middleware.model.Booking;
+import de.hsesslingen.keim.efs.middleware.model.BookingAction;
+import de.hsesslingen.keim.efs.middleware.model.BookingState;
+import de.hsesslingen.keim.efs.middleware.model.NewBooking;
+import de.hsesslingen.keim.efs.middleware.model.Options;
+import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
 import de.vdv.trias.Trias;

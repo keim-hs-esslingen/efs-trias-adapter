@@ -24,10 +24,10 @@
 package de.hsesslingen.keim.efs.trias;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import de.hsesslingen.keim.efs.middleware.common.Leg;
-import de.hsesslingen.keim.efs.middleware.common.Options;
-import de.hsesslingen.keim.efs.middleware.common.Place;
-import de.hsesslingen.keim.efs.middleware.common.TypeOfAsset;
+import de.hsesslingen.keim.efs.middleware.model.Leg;
+import de.hsesslingen.keim.efs.middleware.model.Options;
+import de.hsesslingen.keim.efs.middleware.model.Place;
+import de.hsesslingen.keim.efs.middleware.model.TypeOfAsset;
 import de.hsesslingen.keim.efs.mobility.exception.HttpException;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
 import de.vdv.trias.ContinuousLegStructure;
