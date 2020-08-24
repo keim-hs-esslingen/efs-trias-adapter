@@ -48,7 +48,6 @@ import org.springframework.stereotype.Service;
  * @author Ben Oesch and Emanuel Reichsöllner
  * @see IBookingService
  */
-@Service
 public class TriasAdapterService implements IBookingService<TriasCredentials> {
 
     private static final int DEFAULT_MAX_RADIUS_METERS = 500;
