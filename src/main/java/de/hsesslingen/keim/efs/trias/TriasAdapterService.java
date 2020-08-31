@@ -39,6 +39,7 @@ import java.util.List;
 import javax.xml.bind.JAXBException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.stereotype.Service;
 
 /**
@@ -48,6 +49,8 @@ import org.springframework.stereotype.Service;
  * @author Ben Oesch and Emanuel Reichsöllner
  * @see IBookingService
  */
+@Service
+@ConditionalOnMissingBean(IBookingService.class)
 public class TriasAdapterService implements IBookingService<TriasCredentials> {
 
     private static final int DEFAULT_MAX_RADIUS_METERS = 500;
@@ -61,7 +64,7 @@ public class TriasAdapterService implements IBookingService<TriasCredentials> {
 
     @Autowired
     private TriasResponseFactory triasResponseFactory;
-
+    
     @Override
     public List<Options> getBookingOptions(Place from, Instant startTime, TriasCredentials credentials) throws AbstractEfsException {
         return getBookingOptions(from, null, startTime, null, DEFAULT_MAX_RADIUS_METERS, false, credentials);
