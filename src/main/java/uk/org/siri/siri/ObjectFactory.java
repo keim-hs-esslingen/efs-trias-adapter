@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 import javax.xml.namespace.QName;
-import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
+import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
 /**

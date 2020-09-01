@@ -21,15 +21,20 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias;
+package de.hsesslingen.keim.efs.adapter.trias.supertypes;
 
-import de.hsesslingen.keim.efs.middleware.provider.credentials.AbstractCredentials;
+import de.vdv.trias.InternationalTextStructure;
+import de.vdv.trias.StopPointRefStructure;
+import java.util.List;
 
 /**
- * This class is just a placeholder because for VRN no Credentials are necessary
  *
- * @author Ben Oesch and Emanuel Reichsöllner
+ * @author keim
  */
-public class TriasCredentials extends AbstractCredentials {
+public interface ILegEnd {
+
+    public StopPointRefStructure getStopPointRef();
+
+    public List<InternationalTextStructure> getStopPointName();
 
 }

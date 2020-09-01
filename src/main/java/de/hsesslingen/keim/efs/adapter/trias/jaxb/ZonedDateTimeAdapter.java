@@ -21,25 +21,26 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias.jaxb;
+package de.hsesslingen.keim.efs.adapter.trias.jaxb;
 
-import java.math.BigDecimal;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  *
- * @author keim
+ * @author ben
  */
-public class DoubleAdapter extends XmlAdapter<String, Double> {
+public class ZonedDateTimeAdapter extends XmlAdapter<String, ZonedDateTime> {
 
     @Override
-    public Double unmarshal(String vt) throws Exception {
-        return Double.parseDouble(vt);
+    public ZonedDateTime unmarshal(String vt) throws Exception {
+        return ZonedDateTime.parse(vt);
     }
 
     @Override
-    public String marshal(Double bt) throws Exception {
-        return BigDecimal.valueOf(bt).toPlainString();
+    public String marshal(ZonedDateTime bt) throws Exception {
+        return bt.format(DateTimeFormatter.ISO_ZONED_DATE_TIME);
     }
 
 }

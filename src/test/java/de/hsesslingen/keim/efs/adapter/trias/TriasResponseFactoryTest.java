@@ -21,8 +21,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias;
+package de.hsesslingen.keim.efs.adapter.trias;
 
+import de.hsesslingen.keim.efs.adapter.trias.TriasResponseFactory;
 import de.hsesslingen.keim.efs.middleware.model.Leg;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
 import java.util.List;

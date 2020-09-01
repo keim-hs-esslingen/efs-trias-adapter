@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias.factories;
+package de.hsesslingen.keim.efs.adapter.trias.factories;
 
 import de.hsesslingen.keim.efs.mobility.ICoordinates;
 import de.vdv.trias.AddressRefStructure;

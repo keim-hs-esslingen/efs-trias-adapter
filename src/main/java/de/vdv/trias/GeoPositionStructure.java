@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import de.hsesslingen.keim.efs.trias.jaxb.DoubleAdapter;
+import de.hsesslingen.keim.efs.adapter.trias.jaxb.DoubleAdapter;
 
 
 /**

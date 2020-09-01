@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias;
+package de.hsesslingen.keim.efs.adapter.trias;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.hsesslingen.keim.efs.middleware.model.Leg;
@@ -55,7 +55,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import de.hsesslingen.keim.efs.trias.supertypes.ILegEnd;
+import de.hsesslingen.keim.efs.adapter.trias.supertypes.ILegEnd;
 import de.vdv.trias.IndividualModesEnumeration;
 import de.vdv.trias.TripLegStructure;
 import de.vdv.trias.TripResultStructure;

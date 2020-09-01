@@ -21,9 +21,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias.jaxb;
+package de.hsesslingen.keim.efs.adapter.trias.jaxb;
 
-import java.time.LocalDate;
+import java.time.OffsetTime;
 import java.time.format.DateTimeFormatter;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
@@ -31,16 +31,16 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
  *
  * @author ben
  */
-public class LocalDateAdapter extends XmlAdapter<String, LocalDate> {
+public class OffsetTimeAdapter extends XmlAdapter<String, OffsetTime> {
 
     @Override
-    public LocalDate unmarshal(String vt) throws Exception {
-        return LocalDate.parse(vt);
+    public OffsetTime unmarshal(String vt) throws Exception {
+        return OffsetTime.parse(vt);
     }
 
     @Override
-    public String marshal(LocalDate bt) throws Exception {
-        return bt.format(DateTimeFormatter.ISO_LOCAL_DATE);
+    public String marshal(OffsetTime bt) throws Exception {
+        return bt.format(DateTimeFormatter.ISO_OFFSET_TIME);
     }
 
 }

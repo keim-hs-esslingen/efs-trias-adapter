@@ -21,16 +21,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias;
+package de.hsesslingen.keim.efs.adapter.trias;
 
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
 import de.hsesslingen.keim.efs.mobility.ICoordinates;
-import de.hsesslingen.keim.efs.trias.factories.LocationContextStructureBuilder;
-import de.hsesslingen.keim.efs.trias.factories.LocationInformationRequestFactory;
-import de.hsesslingen.keim.efs.trias.factories.TriasServiceRequest;
-import de.hsesslingen.keim.efs.trias.factories.TripParamStructureBuilder;
-import de.hsesslingen.keim.efs.trias.factories.TripRequestStructureBuilder;
+import de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextStructureBuilder;
+import de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory;
+import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
+import de.hsesslingen.keim.efs.adapter.trias.factories.TripParamStructureBuilder;
+import de.hsesslingen.keim.efs.adapter.trias.factories.TripRequestStructureBuilder;
 import de.vdv.trias.StopPointRefStructure;
 import de.vdv.trias.Trias;
 import de.vdv.trias.TripRequestStructure;

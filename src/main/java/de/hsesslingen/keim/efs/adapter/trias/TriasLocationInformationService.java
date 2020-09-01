@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias;
+package de.hsesslingen.keim.efs.adapter.trias;
 
 import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;

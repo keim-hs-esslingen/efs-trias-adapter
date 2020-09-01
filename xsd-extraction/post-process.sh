@@ -64,7 +64,7 @@ replace(){
 
 # Some reusable variables for convenience:
 VDV="$TARGET_DIR/de/vdv/trias"
-PACKAGE="de.hsesslingen.keim.efs.trias.supertypes"
+PACKAGE="de.hsesslingen.keim.efs.adapter.trias.supertypes"
 implements="implements $PACKAGE."
 
 replace "$VDV/LegAlightStructure.java" "class LegAlightStructure" "class LegAlightStructure $implements ILegEnd"

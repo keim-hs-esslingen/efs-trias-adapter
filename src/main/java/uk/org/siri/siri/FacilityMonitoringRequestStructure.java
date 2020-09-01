@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
-import de.hsesslingen.keim.efs.trias.jaxb.ZonedDateTimeAdapter;
+import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 import uk.org.ifopt.ifopt.StopPlaceComponentRefStructure;
 import uk.org.ifopt.ifopt.StopPlaceRefStructure;
 

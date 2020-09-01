@@ -21,26 +21,36 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  */
-package de.hsesslingen.keim.efs.trias.jaxb;
+package de.hsesslingen.keim.efs.adapter.trias.factories;
 
+import de.hsesslingen.keim.efs.mobility.ICoordinates;
+import de.vdv.trias.LocationContextStructure;
+import de.vdv.trias.LocationRefStructure;
 import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  *
  * @author ben
  */
-public class ZonedDateTimeAdapter extends XmlAdapter<String, ZonedDateTime> {
+public class LocationContextStructureBuilder extends LocationContextStructure {
 
-    @Override
-    public ZonedDateTime unmarshal(String vt) throws Exception {
-        return ZonedDateTime.parse(vt);
+    public LocationContextStructure build() {
+        return this;
     }
 
-    @Override
-    public String marshal(ZonedDateTime bt) throws Exception {
-        return bt.format(DateTimeFormatter.ISO_ZONED_DATE_TIME);
+    public LocationContextStructureBuilder locationRef(LocationRefStructure locationRef) {
+        this.locationRef = locationRef;
+        return this;
+    }
+
+    public LocationContextStructureBuilder locationRef(ICoordinates coordinates) {
+        this.locationRef = new LocationRefStructureBuilder().geoPosition(coordinates);
+        return this;
+    }
+
+    public LocationContextStructureBuilder depArrTime(ZonedDateTime depArrTime) {
+        this.depArrTime = depArrTime;
+        return this;
     }
 
 }
