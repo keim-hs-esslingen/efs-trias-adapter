@@ -1,5 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-de.hsesslingen.keim.efs.trias.TriasRequestFactory,\
-de.hsesslingen.keim.efs.trias.TriasLocationInformationService,\
-de.hsesslingen.keim.efs.trias.TriasResponseFactory,\
-de.hsesslingen.keim.efs.trias.TriasAdapterService
+de.hsesslingen.keim.efs.adapter.trias.TriasRequestFactory,\
+de.hsesslingen.keim.efs.adapter.trias.TriasLocationInformationService,\
+de.hsesslingen.keim.efs.adapter.trias.TriasResponseFactory,\
+de.hsesslingen.keim.efs.adapter.trias.TriasAdapterService
