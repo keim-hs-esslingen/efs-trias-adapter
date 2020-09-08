@@ -115,7 +115,7 @@ public class TriasRequestFactory {
                 .build();
     }
 
-    public Trias createTripRequest(Place from, Place to, Instant startTime, Instant endTime) {
+    public Trias createTripRequest(Place from, Place to, ZonedDateTime startTime, ZonedDateTime endTime) {
         return new TriasServiceRequest(triasVersion, apiUserReference)
                 .tripRequest(createTripRequestPayload(from, to, startTime, endTime));
     }

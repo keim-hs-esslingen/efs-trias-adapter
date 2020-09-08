@@ -30,10 +30,11 @@ import de.hsesslingen.keim.efs.middleware.model.BookingState;
 import de.hsesslingen.keim.efs.middleware.model.NewBooking;
 import de.hsesslingen.keim.efs.middleware.model.Options;
 import de.hsesslingen.keim.efs.middleware.model.Place;
+import de.hsesslingen.keim.efs.middleware.provider.IOptionsService;
 import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
 import de.vdv.trias.Trias;
-import java.time.Instant;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.JAXBException;
@@ -51,7 +52,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @ConditionalOnMissingBean(IBookingService.class)
-public class TriasAdapterService implements IBookingService<TriasCredentials> {
+public class TriasAdapterService implements IOptionsService<TriasCredentials>, IBookingService<TriasCredentials> {
 
     private static final int DEFAULT_MAX_RADIUS_METERS = 500;
 
@@ -64,14 +65,14 @@ public class TriasAdapterService implements IBookingService<TriasCredentials> {
 
     @Autowired
     private TriasResponseFactory triasResponseFactory;
-    
+
     @Override
-    public List<Options> getBookingOptions(Place from, Instant startTime, TriasCredentials credentials) throws AbstractEfsException {
-        return getBookingOptions(from, null, startTime, null, DEFAULT_MAX_RADIUS_METERS, false, credentials);
+    public List<Options> getOptions(Place from, ZonedDateTime startTime, TriasCredentials credentials) throws AbstractEfsException {
+        return getOptions(from, null, startTime, null, DEFAULT_MAX_RADIUS_METERS, false, credentials);
     }
 
     @Override
-    public List<Options> getBookingOptions(Place from, Place to, Instant startTime, Instant endTime,
+    public List<Options> getOptions(Place from, Place to, ZonedDateTime startTime, ZonedDateTime endTime,
             Integer radiusMeter, Boolean sharingAllowed, TriasCredentials credentials) throws AbstractEfsException {
 
         // if no destination is specified an empty Optionslist is returned
