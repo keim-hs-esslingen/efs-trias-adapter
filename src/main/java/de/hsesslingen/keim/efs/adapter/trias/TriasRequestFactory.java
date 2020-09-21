@@ -25,7 +25,7 @@ package de.hsesslingen.keim.efs.adapter.trias;
 
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
-import de.hsesslingen.keim.efs.mobility.ICoordinates;
+import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
 import de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextStructureBuilder;
 import de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;

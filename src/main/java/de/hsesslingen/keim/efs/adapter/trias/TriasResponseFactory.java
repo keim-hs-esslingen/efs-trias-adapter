@@ -310,6 +310,32 @@ public class TriasResponseFactory {
     }
 
     /**
+     * if the MobilityOption contains more than one Leg with different
+     * TravelModes we assign the TravelMode of the Leg with the longest
+     * Distance as MainMode
+     *
+     * @param legs
+     * @return
+     */
+    public Mode assignMainMode(List<Leg> legs) {
+
+        // set Mode.WALK as default Mode if no other Mode can be assigned
+        Mode mainMode = Mode.WALK;
+
+        int longestDistance = 0;
+
+        for (Leg leg : legs) {
+            if (leg.getDistance() != null) {
+                if (leg.getDistance() > longestDistance) {
+                    mainMode = leg.getMode();
+                    longestDistance = leg.getDistance();
+                }
+            }
+        }
+        return mainMode;
+    }
+
+    /**
      * Each trip result from TRIAS represents an Option from EFS
      *
      * @param tripResult
@@ -346,7 +372,7 @@ public class TriasResponseFactory {
             // Get the last leg that is not WALK:
             var last = getLastNonWalkLeg(legs);
 
-            // since the efsMaas  Options- Object can contain just one Leg (LegBaseItem) a workaround is done here 
+            // since the efsMaas  Options- Object can contain just one MainLeg (LegBaseItem) a workaround is done here 
             //assign the StartTime and OriginPlace of the first Leg to the legBaseItem
             mainLeg.setStartTime(first.getStartTime());
             mainLeg.setFrom(first.getFrom());
@@ -355,23 +381,26 @@ public class TriasResponseFactory {
             mainLeg.setEndTime(last.getEndTime());
             mainLeg.setTo(last.getTo());
 
-            // now we are facing a problem here: the efsMaas  Options- Object can contain just one Leg (LegBaseItem) so a workaround has to be done here.
+            // now we are facing a problem here: the efsMaas  Options- Object can contain just one MainLeg (LegBaseItem) so a workaround has to be done here.
             // first we have to decide which Travel Mode should be displayed as the Main- Travelmode.
-            // we use an simple solution here by assigning the Mode of the first Leg as the Main Mode. Maybe a better Solution is found here.
-            meta.setMode(first.getMode());
-            mainLeg.setMode(first.getMode());
+            // we call the Method assignMainMode() which assigns from several Legs the Mode of the Leg with the longest Distance as MainMode
+            Mode mainMode = assignMainMode(legs);
+
+            meta.setMode(mainMode);
+            mainLeg.setMode(mainMode);
 
             // for the detailed Leg Information for the intermediate Legs we use a Sub Json which we store in the field Options-Meta-other
             // we assign "[]" that in case of an Mapping error, at least an empty JSON is returned here
             String optionsAsJsonString = "[]";
 
-            // convert whole Leg - List  to JSON :
+            // convert whole Leg - List (including WALK - Legs) to JSON :
             try {
                 optionsAsJsonString = objectMapper.writeValueAsString(legs);
             } catch (IOException e) {
 
             }
 
+            // assign the whole Leg - List as subJSON to the field meta.other
             meta.setOther(optionsAsJsonString);
 
             log.trace("Sub-Legs: " + optionsAsJsonString);
