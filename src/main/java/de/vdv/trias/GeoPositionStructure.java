@@ -69,7 +69,7 @@ import de.hsesslingen.keim.efs.adapter.trias.jaxb.DoubleAdapter;
     "latitude",
     "altitude"
 })
-public class GeoPositionStructure implements de.hsesslingen.keim.efs.mobility.ICoordinates {
+public class GeoPositionStructure implements de.hsesslingen.keim.efs.middleware.model.ICoordinates {
 
     @XmlElement(name = "Longitude", namespace = "http://www.vdv.de/trias", required = true, type = String.class)
     @XmlJavaTypeAdapter(DoubleAdapter.class)

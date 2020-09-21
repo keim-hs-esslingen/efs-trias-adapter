@@ -23,7 +23,7 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias.factories;
 
-import de.hsesslingen.keim.efs.mobility.ICoordinates;
+import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
 import de.vdv.trias.AddressRefStructure;
 import de.vdv.trias.GeoPositionStructure;
 import de.vdv.trias.InternationalTextStructure;
