@@ -71,6 +71,6 @@ replace "$VDV/LegAlightStructure.java" "class LegAlightStructure" "class LegAlig
 replace "$VDV/LegBoardStructure.java" "class LegBoardStructure" "class LegBoardStructure $implements ILegEnd"
 
 # Implementing interface ICoordinates on GeoPositionStructure. (Adding interface and methods)
-replace "$VDV/GeoPositionStructure.java" "class GeoPositionStructure" "class GeoPositionStructure implements de.hsesslingen.keim.efs.mobility.ICoordinates"
+replace "$VDV/GeoPositionStructure.java" "class GeoPositionStructure" "class GeoPositionStructure implements de.hsesslingen.keim.efs.middleware.model.ICoordinates"
 replace "$VDV/GeoPositionStructure.java" "^}$" "\t@Override\n\tpublic Double getLat() {\n\t\treturn latitude;\n\t}\n\n\t@Override\n\tpublic Double getLon() {\n\t\treturn longitude;\n\t}\n}"
 
