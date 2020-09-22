@@ -50,8 +50,6 @@ import de.vdv.trias.TimedLegStructure;
 import de.vdv.trias.Trias;
 import java.io.IOException;
 import java.util.List;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -62,6 +60,8 @@ import de.vdv.trias.TripResultStructure;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class creates EFS- Mobility Objects from Trias Response - Objects
@@ -71,7 +71,7 @@ import java.util.stream.Collectors;
 @Component
 public class TriasResponseFactory {
 
-    private static final Log log = LogFactory.getLog(TriasResponseFactory.class);
+    private static final Logger logger = LoggerFactory.getLogger(TriasResponseFactory.class);
 
     @Value("${efs.mobility-service.id}")
     private String serviceId;
@@ -403,7 +403,7 @@ public class TriasResponseFactory {
             // assign the whole Leg - List as subJSON to the field meta.other
             meta.setOther(optionsAsJsonString);
 
-            log.trace("Sub-Legs: " + optionsAsJsonString);
+            logger.trace("Sub-Legs: " + optionsAsJsonString);
         }
 
         var option = new Options();

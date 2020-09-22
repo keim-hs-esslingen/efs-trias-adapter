@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Map;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -50,7 +50,7 @@ import org.springframework.web.util.UriComponentsBuilder;
  */
 public class TriasHttpRequest {
 
-    private static final Log log = LogFactory.getLog(TriasHttpRequest.class);
+    private static final Logger logger = LoggerFactory.getLogger(TriasHttpRequest.class);
     private static final String CONTENT_TYPE = MediaType.APPLICATION_XML_VALUE;
 
     private static JAXBContext jaxbContext;
@@ -59,7 +59,7 @@ public class TriasHttpRequest {
         try {
             jaxbContext = JAXBContext.newInstance(Trias.class);
         } catch (JAXBException ex) {
-            log.error(ex);
+            logger.error("{}", ex);
         }
     }
 
@@ -276,8 +276,8 @@ public class TriasHttpRequest {
         jaxbContext.createMarshaller().marshal(body, writer);
         String requestXml = writer.toString();
 
-        if (log.isTraceEnabled()) {
-            log.trace("Going to send the following Trias-Request:\n" + requestXml);
+        if (logger.isTraceEnabled()) {
+            logger.trace("Going to send the following Trias-Request:\n" + requestXml);
         }
 
         // Configure request...
