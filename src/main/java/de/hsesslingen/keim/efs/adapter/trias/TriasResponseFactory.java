@@ -73,7 +73,7 @@ public class TriasResponseFactory {
 
     private static final Logger logger = LoggerFactory.getLogger(TriasResponseFactory.class);
 
-    @Value("${efs.mobility-service.id}")
+    @Value("${middleware.provider.mobility-service.id}")
     private String serviceId;
 
     @Autowired
