@@ -24,9 +24,11 @@
 package de.hsesslingen.keim.efs.adapter.trias.factories;
 
 import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
+import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.vdv.trias.LocationContextStructure;
 import de.vdv.trias.LocationRefStructure;
 import java.time.ZonedDateTime;
+import static org.apache.commons.lang.StringUtils.isBlank;
 
 /**
  *
@@ -43,8 +45,27 @@ public class LocationContextStructureBuilder extends LocationContextStructure {
         return this;
     }
 
-    public LocationContextStructureBuilder locationRef(ICoordinates coordinates) {
+    public LocationContextStructureBuilder coordinates(ICoordinates coordinates) {
         this.locationRef = new LocationRefStructureBuilder().geoPosition(coordinates);
+        return this;
+    }
+
+    public LocationContextStructureBuilder place(Place place) {
+        var builder = new LocationRefStructureBuilder();
+
+        if (!isBlank(place.getPlaceId())) {
+            builder.stopPlaceRef(place.getPlaceId());
+        }
+
+        if (!isBlank(place.getStopId())) {
+            builder.stopPointRef(place.getStopId());
+        }
+
+        if (place.hasCoordinates()) {
+            builder.geoPosition(place);
+        }
+
+        this.locationRef = builder;
         return this;
     }
 

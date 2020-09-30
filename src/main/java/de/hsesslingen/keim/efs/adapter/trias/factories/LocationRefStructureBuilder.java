@@ -45,8 +45,22 @@ public class LocationRefStructureBuilder extends LocationRefStructure {
         return this;
     }
 
+    public LocationRefStructureBuilder stopPointRef(String value) {
+        var pointRef = new StopPointRefStructure();
+        pointRef.setValue(value);
+        this.stopPointRef = pointRef;
+        return this;
+    }
+
     public LocationRefStructureBuilder stopPlaceRef(StopPlaceRefStructure value) {
         this.stopPlaceRef = value;
+        return this;
+    }
+
+    public LocationRefStructureBuilder stopPlaceRef(String value) {
+        var placeRef = new StopPlaceRefStructure();
+        placeRef.setValue(value);
+        this.stopPlaceRef = placeRef;
         return this;
     }
 

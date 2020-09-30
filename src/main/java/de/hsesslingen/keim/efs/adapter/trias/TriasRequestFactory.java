@@ -25,7 +25,6 @@ package de.hsesslingen.keim.efs.adapter.trias;
 
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
-import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
 import de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextStructureBuilder;
 import de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
@@ -84,7 +83,7 @@ public class TriasRequestFactory {
         return new TriasServiceRequest(triasVersion, apiUserReference);
     }
 
-    public TripRequestStructure createTripRequestPayload(ICoordinates from, ICoordinates to, Instant startTime, Instant endTime) {
+    public TripRequestStructure createTripRequestPayload(Place from, Place to, Instant startTime, Instant endTime) {
         return TriasRequestFactory.this.createTripRequestPayload(
                 from,
                 to,
@@ -93,14 +92,14 @@ public class TriasRequestFactory {
         );
     }
 
-    public TripRequestStructure createTripRequestPayload(ICoordinates from, ICoordinates to, ZonedDateTime startTime, ZonedDateTime endTime) {
+    public TripRequestStructure createTripRequestPayload(Place from, Place to, ZonedDateTime startTime, ZonedDateTime endTime) {
         return new TripRequestStructureBuilder()
                 .origin(new LocationContextStructureBuilder()
-                        .locationRef(from)
+                        .place(from)
                         .depArrTime(startTime)
                         .build())
                 .destination(new LocationContextStructureBuilder()
-                        .locationRef(to)
+                        .place(to)
                         .depArrTime(endTime)
                         .build())
                 .params(new TripParamStructureBuilder()

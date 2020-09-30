@@ -23,15 +23,26 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias;
 
+import de.hsesslingen.keim.efs.adapter.trias.factories.GeoPositionStructureFactory;
+import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
+import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
+import de.vdv.trias.GeoCircleStructure;
 import de.vdv.trias.GeoPositionStructure;
+import de.vdv.trias.GeoRestrictionsStructure;
 import de.vdv.trias.StopPointRefStructure;
 import de.vdv.trias.Trias;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 import javax.xml.bind.JAXBException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import static de.hsesslingen.keim.efs.adapter.trias.Utils.nullsafe;
+import de.hsesslingen.keim.efs.middleware.provider.IPlacesService;
 
 /**
  * The class TriasLocationInformationService is a Service to covert public
@@ -40,7 +51,13 @@ import org.springframework.stereotype.Service;
  * @author Ben Oesch and Emanuel Reichsöllner
  */
 @Service
-public class TriasLocationInformationService {
+public class TriasLocationInformationService implements IPlacesService<TriasCredentials> {
+
+    @Value("${trias.defaults.place-search-radius-meter:500}")
+    private int defaultSearchRadius;
+
+    @Value("${trias.icon-urls.default-stop-place:}")
+    private String stopPlaceIconUrl;
 
     // get the custom settings from application.yml
     @Value("${trias.api-url}")
@@ -85,6 +102,70 @@ public class TriasLocationInformationService {
         }
 
         return null;
+    }
+
+    @Override
+    public List<Place> search(String searchQuery, ICoordinates searchCenterCoordinates, Integer searchRadiusMeter, TriasCredentials credentials) {
+
+        Trias locationRequestTrias = triasRequestFactory.createLocationInformationRequest(searchQuery);
+
+        var req = locationRequestTrias.getServiceRequest().getRequestPayload().getLocationInformationRequest();
+
+        if (searchCenterCoordinates != null) {
+            var radius = searchRadiusMeter != null ? searchRadiusMeter : defaultSearchRadius;
+
+            var circle = new GeoCircleStructure();
+            circle.setCenter(GeoPositionStructureFactory.create(searchCenterCoordinates));
+            circle.setRadius(BigInteger.valueOf(radius));
+
+            var circleRestriction = new GeoRestrictionsStructure();
+            circleRestriction.setCircle(circle);
+
+            req.getInitialInput().setGeoRestriction(circleRestriction);
+        }
+
+        Trias responseLocationTrias;
+
+        try {
+            responseLocationTrias = TriasHttpRequest.post(API_URL)
+                    .body(locationRequestTrias)
+                    .go()
+                    .getBody();
+        } catch (JAXBException ex) {
+            throw internalServerError("An error occured when converting to or from XML.");
+        }
+
+        if (responseLocationTrias == null) {
+            return new ArrayList<>();
+        }
+
+        var locationRes = responseLocationTrias.getServiceDelivery().getDeliveryPayload().getLocationInformationResponse().getLocationResult();
+
+        if (locationRes == null) {
+            return new ArrayList<>();
+        }
+
+        var places = locationRes.stream()
+                .map(locRes -> locRes.getLocation())
+                .filter(location -> location != null)
+                .map(location -> {
+                    var place = new Place();
+
+                    place.setName(location.getLocationName().get(0).getText());
+                    place.setCoordinates(location.getGeoPosition());
+
+                    // StopPlace represent the stop location in general.
+                    place.setPlaceId(nullsafe(() -> location.getStopPlace().getStopPlaceRef().getValue()));
+                    // StopPoint represents the exact stop point at the location, e.g. at which platform the train departs.
+                    place.setStopId(nullsafe(() -> location.getStopPoint().getStopPointRef().getValue()));
+
+                    place.setIconUrl(stopPlaceIconUrl);
+
+                    return place;
+                })
+                .collect(Collectors.toList());
+
+        return places;
     }
 
 }
