@@ -30,6 +30,7 @@ fi
 # Get directory where this script resides.
 SDIR="$(dirname "$(readlink -f "$0")")"
 
+IDENTIFIER="[a-zA-Z0-9_]+"
 CLASSPAT="[a-zA-Z_0-9\.]+" # Classname Pattern
 EOLPAT="([ {]*)\\\$?"
 
@@ -48,6 +49,8 @@ processFile(){
 
     cat "$licensefile" "$srcfile" | sed -e "0,/yyyy/ {s/yyyy/$YEAR/}" -e '\_// Generated on: [0-9\.]* at [0-9:]* .*$_ d' | sponge "$srcfile"
 
+    local CLASSNAME=$(echo $(basename "$srcfile") | sed -E -e "s/(Structure)?.java//")
+
     sed -i -E -e "s/import ($CLASSPAT)Structure/import \1/" \
         -e "s/public class ($CLASSPAT)Structure$EOLPAT/public class \1\2/" \
         -e "s/public abstract class ($CLASSPAT)Structure$EOLPAT/public abstract class \1\2/" \
@@ -57,8 +60,11 @@ processFile(){
         -e "s/([ \(<])($CLASSPAT)Structure([ \(\)>\.])/\1\2\3/g" \
         "$srcfile"
 
+    perl -0777 -pi -e "s/    public void set($IDENTIFIER)\(($IDENTIFIER) value\) \{\n([^=]+)= value\;\n    \}/    public $CLASSNAME set\1(\2 value) {\n\3= value\;\n        return this\;\n    }/g" "$srcfile"
+        
+
     if [[ "$srcfile" =~ "Structure.java" ]]; then
-        local NEWNAME=$(echo "$srcfile" | sed -E -e "s/Structure\.java/.java/")
+        local NEWNAME=$(echo "$srcfile" | sed -e "s/Structure\.java/.java/")
         log "[$YELLOW Renaming $NONE]: $RED$(basename $srcfile)$NONE to $GREEN$(basename $NEWNAME)$NONE"
         mv "$srcfile" "$NEWNAME"
     fi
