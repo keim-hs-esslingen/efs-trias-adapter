@@ -23,67 +23,67 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias.factories;
 
-import de.vdv.trias.LocationContextStructure;
-import de.vdv.trias.NoChangeAtStructure;
-import de.vdv.trias.NotViaStructure;
-import de.vdv.trias.TripParamStructure;
-import de.vdv.trias.TripRequestStructure;
-import de.vdv.trias.ViaStructure;
+import de.vdv.trias.LocationContext;
+import de.vdv.trias.NoChangeAt;
+import de.vdv.trias.NotVia;
+import de.vdv.trias.TripParam;
+import de.vdv.trias.TripRequest;
+import de.vdv.trias.Via;
 import java.util.stream.Stream;
 
 /**
  *
  * @author ben
  */
-public class TripRequestStructureBuilder extends TripRequestStructure {
+public class TripRequestBuilder extends TripRequest {
 
-    public TripRequestStructure build() {
-        // Simply returning this, because we already ARE a TripRequestStructure.
-        // This is equal to making a cast on the TripRequestStructureBuilder object
+    public TripRequest build() {
+        // Simply returning this, because we already ARE a TripRequest.
+        // This is equal to making a cast on the TripRequestBuilder object
         // but calling build() is more convenient.
         return this;
     }
 
-    public TripRequestStructureBuilder origin(LocationContextStructure origin) {
+    public TripRequestBuilder origin(LocationContext origin) {
         this.getOrigin().add(origin);
         return this;
     }
 
-    public TripRequestStructureBuilder destination(LocationContextStructure destination) {
+    public TripRequestBuilder destination(LocationContext destination) {
         this.getDestination().add(destination);
         return this;
     }
 
-    public TripRequestStructureBuilder params(TripParamStructure params) {
+    public TripRequestBuilder params(TripParam params) {
         this.params = params;
         return this;
     }
 
-    public TripRequestStructureBuilder addOrigins(Stream<LocationContextStructure> origins) {
+    public TripRequestBuilder addOrigins(Stream<LocationContext> origins) {
         this.getOrigin(); // Using getter once to make sure the list is not null.
         origins.forEachOrdered(this.origin::add);
         return this;
     }
 
-    public TripRequestStructureBuilder addDestinations(Stream<LocationContextStructure> destinations) {
+    public TripRequestBuilder addDestinations(Stream<LocationContext> destinations) {
         this.getDestination(); // Using getter once to make sure the list is not null.
         destinations.forEachOrdered(this.destination::add);
         return this;
     }
 
-    public TripRequestStructureBuilder addVias(Stream<ViaStructure> vias) {
+    public TripRequestBuilder addVias(Stream<Via> vias) {
         this.getVia(); // Using getter once to make sure the list is not null.
         vias.forEachOrdered(this.via::add);
         return this;
     }
 
-    public TripRequestStructureBuilder addNotVias(Stream<NotViaStructure> notVias) {
+    public TripRequestBuilder addNotVias(Stream<NotVia> notVias) {
         this.getNotVia(); // Using getter once to make sure the list is not null.
         notVias.forEachOrdered(this.notVia::add);
         return this;
     }
 
-    public TripRequestStructureBuilder addNoChangeAts(Stream<NoChangeAtStructure> noChangeAts) {
+    public TripRequestBuilder addNoChangeAts(Stream<NoChangeAt> noChangeAts) {
         this.getNoChangeAt(); // Using getter once to make sure the list is not null.
         noChangeAts.forEachOrdered(this.noChangeAt::add);
         return this;

@@ -30,14 +30,14 @@ import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.model.TypeOfAsset;
 import de.hsesslingen.keim.efs.mobility.exception.HttpException;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
-import de.vdv.trias.ContinuousLegStructure;
-import de.vdv.trias.GeoPositionStructure;
+import de.vdv.trias.ContinuousLeg;
+import de.vdv.trias.GeoPosition;
 import static de.vdv.trias.IndividualModesEnumeration.CYCLE;
 import static de.vdv.trias.IndividualModesEnumeration.MOTORCYCLE;
 import static de.vdv.trias.IndividualModesEnumeration.OTHERS_DRIVE_CAR;
 import static de.vdv.trias.IndividualModesEnumeration.SELF_DRIVE_CAR;
 import static de.vdv.trias.IndividualModesEnumeration.TRUCK;
-import de.vdv.trias.LocationRefStructure;
+import de.vdv.trias.LocationRef;
 import de.vdv.trias.PtModesEnumeration;
 import static de.vdv.trias.PtModesEnumeration.CABLEWAY;
 import static de.vdv.trias.PtModesEnumeration.COACH;
@@ -46,7 +46,7 @@ import static de.vdv.trias.PtModesEnumeration.METRO;
 import static de.vdv.trias.PtModesEnumeration.TROLLEY_BUS;
 import static de.vdv.trias.PtModesEnumeration.URBAN_RAIL;
 import static de.vdv.trias.PtModesEnumeration.WATER;
-import de.vdv.trias.TimedLegStructure;
+import de.vdv.trias.TimedLeg;
 import de.vdv.trias.Trias;
 import java.io.IOException;
 import java.util.List;
@@ -55,8 +55,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import de.hsesslingen.keim.efs.adapter.trias.supertypes.ILegEnd;
 import de.vdv.trias.IndividualModesEnumeration;
-import de.vdv.trias.TripLegStructure;
-import de.vdv.trias.TripResultStructure;
+import de.vdv.trias.TripLeg;
+import de.vdv.trias.TripResult;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
@@ -82,7 +82,7 @@ public class TriasResponseFactory {
     @Autowired
     private TriasLocationInformationService triasLocationInformationService;
 
-    public Place createPlaceFromLocationRef(LocationRefStructure locationRef) {
+    public Place createPlaceFromLocationRef(LocationRef locationRef) {
         var place = new Place();
 
         if (locationRef.getGeoPosition() != null) {
@@ -108,7 +108,7 @@ public class TriasResponseFactory {
         return createPlaceFromStopPoint(legEnd, pos);
     }
 
-    public Place createPlaceFromStopPoint(ILegEnd legEnd, GeoPositionStructure geoPosition) {
+    public Place createPlaceFromStopPoint(ILegEnd legEnd, GeoPosition geoPosition) {
         var place = new Place();
 
         if (legEnd.getStopPointRef() != null) {
@@ -185,7 +185,7 @@ public class TriasResponseFactory {
     }
 
     // A Trias - contninous Leg means a Leg that is not bound to a Timetable like walking, bicycle- or carride
-    public Leg createLegFromContinuousLeg(ContinuousLegStructure continuousLeg) {
+    public Leg createLegFromContinuousLeg(ContinuousLeg continuousLeg) {
         var leg = new Leg();
 
         // origin Time 
@@ -223,7 +223,7 @@ public class TriasResponseFactory {
     }
 
     // A Trias - timed Leg means a Leg with timetabled schedule like Bus, Tram, Train,...
-    public Leg createLegFromTimedLeg(TimedLegStructure timedLeg) {
+    public Leg createLegFromTimedLeg(TimedLeg timedLeg) {
         var leg = new Leg();
 
         // ### PLACE INFO ###
@@ -279,7 +279,7 @@ public class TriasResponseFactory {
         return leg;
     }
 
-    private Leg createLegFromTripLeg(TripLegStructure tripLeg) {
+    private Leg createLegFromTripLeg(TripLeg tripLeg) {
         if (tripLeg.getContinuousLeg() != null) {
             return createLegFromContinuousLeg(tripLeg.getContinuousLeg());
         }
@@ -341,7 +341,7 @@ public class TriasResponseFactory {
      * @param tripResult
      * @return
      */
-    private Options createOptionFromTripResult(TripResultStructure tripResult) {
+    private Options createOptionFromTripResult(TripResult tripResult) {
 
         // each option can store just one LegBaseItem
         var mainLeg = new Leg();

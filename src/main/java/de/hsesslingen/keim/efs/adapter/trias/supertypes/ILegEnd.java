@@ -23,8 +23,8 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias.supertypes;
 
-import de.vdv.trias.InternationalTextStructure;
-import de.vdv.trias.StopPointRefStructure;
+import de.vdv.trias.InternationalText;
+import de.vdv.trias.StopPointRef;
 import java.util.List;
 
 /**
@@ -33,8 +33,8 @@ import java.util.List;
  */
 public interface ILegEnd {
 
-    public StopPointRefStructure getStopPointRef();
+    public StopPointRef getStopPointRef();
 
-    public List<InternationalTextStructure> getStopPointName();
+    public List<InternationalText> getStopPointName();
 
 }

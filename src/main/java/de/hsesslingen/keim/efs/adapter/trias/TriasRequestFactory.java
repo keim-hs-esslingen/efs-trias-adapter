@@ -25,14 +25,14 @@ package de.hsesslingen.keim.efs.adapter.trias;
 
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
-import de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextStructureBuilder;
+import de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextBuilder;
 import de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
-import de.hsesslingen.keim.efs.adapter.trias.factories.TripParamStructureBuilder;
-import de.hsesslingen.keim.efs.adapter.trias.factories.TripRequestStructureBuilder;
-import de.vdv.trias.StopPointRefStructure;
+import de.hsesslingen.keim.efs.adapter.trias.factories.TripParamBuilder;
+import de.hsesslingen.keim.efs.adapter.trias.factories.TripRequestBuilder;
+import de.vdv.trias.StopPointRef;
 import de.vdv.trias.Trias;
-import de.vdv.trias.TripRequestStructure;
+import de.vdv.trias.TripRequest;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -83,7 +83,7 @@ public class TriasRequestFactory {
         return new TriasServiceRequest(triasVersion, apiUserReference);
     }
 
-    public TripRequestStructure createTripRequestPayload(Place from, Place to, Instant startTime, Instant endTime) {
+    public TripRequest createTripRequestPayload(Place from, Place to, Instant startTime, Instant endTime) {
         return TriasRequestFactory.this.createTripRequestPayload(
                 from,
                 to,
@@ -92,17 +92,17 @@ public class TriasRequestFactory {
         );
     }
 
-    public TripRequestStructure createTripRequestPayload(Place from, Place to, ZonedDateTime startTime, ZonedDateTime endTime) {
-        return new TripRequestStructureBuilder()
-                .origin(new LocationContextStructureBuilder()
+    public TripRequest createTripRequestPayload(Place from, Place to, ZonedDateTime startTime, ZonedDateTime endTime) {
+        return new TripRequestBuilder()
+                .origin(new LocationContextBuilder()
                         .place(from)
                         .depArrTime(startTime)
                         .build())
-                .destination(new LocationContextStructureBuilder()
+                .destination(new LocationContextBuilder()
                         .place(to)
                         .depArrTime(endTime)
                         .build())
-                .params(new TripParamStructureBuilder()
+                .params(new TripParamBuilder()
                         .ptModeFilterByExclude(true)
                         .includeFares(true)
                         .immediateTripStart(false)
@@ -120,7 +120,7 @@ public class TriasRequestFactory {
     }
 
 
-    public Trias createLocationInformationRequest(StopPointRefStructure stopPointRef) {
+    public Trias createLocationInformationRequest(StopPointRef stopPointRef) {
         return newTriasServiceRequest().locationInformationRequest(
                 LocationInformationRequestFactory.byStopPointRef(stopPointRef)
         );

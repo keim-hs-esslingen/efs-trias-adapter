@@ -23,9 +23,9 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias.factories;
 
-import de.vdv.trias.PtModeFilterStructure;
+import de.vdv.trias.PtModeFilter;
 import de.vdv.trias.PtModesEnumeration;
-import de.vdv.trias.TripParamStructure;
+import de.vdv.trias.TripParam;
 import java.math.BigInteger;
 import java.util.Collection;
 import java.util.stream.Stream;
@@ -34,25 +34,25 @@ import java.util.stream.Stream;
  *
  * @author ben
  */
-public class TripParamStructureBuilder extends TripParamStructure {
+public class TripParamBuilder extends TripParam {
 
-    public TripParamStructure build() {
+    public TripParam build() {
         return this;
     }
 
-    public TripParamStructureBuilder ptModeFilter(PtModeFilterStructure ptModeFilter) {
+    public TripParamBuilder ptModeFilter(PtModeFilter ptModeFilter) {
         this.ptModeFilter = ptModeFilter;
         return this;
     }
 
-    public TripParamStructureBuilder ptModeFilterByExclude(boolean exclude) {
-        this.ptModeFilter = new PtModeFilterStructure();
+    public TripParamBuilder ptModeFilterByExclude(boolean exclude) {
+        this.ptModeFilter = new PtModeFilter();
         ptModeFilter.setExclude(exclude);
         return this;
     }
 
-    public TripParamStructureBuilder ptModeFilter(boolean exclude, Collection<PtModesEnumeration> modes, Collection<Object> subModeChoiceGroups) {
-        this.ptModeFilter = new PtModeFilterStructure();
+    public TripParamBuilder ptModeFilter(boolean exclude, Collection<PtModesEnumeration> modes, Collection<Object> subModeChoiceGroups) {
+        this.ptModeFilter = new PtModeFilter();
         ptModeFilter.setExclude(exclude);
 
         if (modes != null) {
@@ -66,8 +66,8 @@ public class TripParamStructureBuilder extends TripParamStructure {
         return this;
     }
 
-    public TripParamStructureBuilder ptModeFilter(boolean exclude, Stream<PtModesEnumeration> modes, Stream<Object> subModeChoiceGroups) {
-        this.ptModeFilter = new PtModeFilterStructure();
+    public TripParamBuilder ptModeFilter(boolean exclude, Stream<PtModesEnumeration> modes, Stream<Object> subModeChoiceGroups) {
+        this.ptModeFilter = new PtModeFilter();
         ptModeFilter.setExclude(exclude);
 
         if (modes != null) {
@@ -81,47 +81,47 @@ public class TripParamStructureBuilder extends TripParamStructure {
         return this;
     }
 
-    public TripParamStructureBuilder includeFares(boolean value) {
+    public TripParamBuilder includeFares(boolean value) {
         this.includeFares = value;
         return this;
     }
 
-    public TripParamStructureBuilder immediateTripStart(boolean value) {
+    public TripParamBuilder immediateTripStart(boolean value) {
         this.immediateTripStart = value;
         return this;
     }
 
-    public TripParamStructureBuilder includeIntermediateStops(boolean value) {
+    public TripParamBuilder includeIntermediateStops(boolean value) {
         this.includeIntermediateStops = value;
         return this;
     }
 
-    public TripParamStructureBuilder includeLegProjection(boolean value) {
+    public TripParamBuilder includeLegProjection(boolean value) {
         this.includeLegProjection = value;
         return this;
     }
 
-    public TripParamStructureBuilder includeTrackSections(boolean value) {
+    public TripParamBuilder includeTrackSections(boolean value) {
         this.includeTrackSections = value;
         return this;
     }
 
-    public TripParamStructureBuilder numberOfResults(long value) {
+    public TripParamBuilder numberOfResults(long value) {
         this.numberOfResults = BigInteger.valueOf(value);
         return this;
     }
 
-    public TripParamStructureBuilder numberOfResults(int value) {
+    public TripParamBuilder numberOfResults(int value) {
         this.numberOfResults = BigInteger.valueOf(value);
         return this;
     }
 
-    public TripParamStructureBuilder numberOfResults(String value) {
+    public TripParamBuilder numberOfResults(String value) {
         this.numberOfResults = new BigInteger(value);
         return this;
     }
 
-    public TripParamStructureBuilder numberOfResults(BigInteger value) {
+    public TripParamBuilder numberOfResults(BigInteger value) {
         this.numberOfResults = value;
         return this;
     }

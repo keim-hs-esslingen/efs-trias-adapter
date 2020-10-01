@@ -25,8 +25,8 @@ package de.hsesslingen.keim.efs.adapter.trias.factories;
 
 import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
 import de.hsesslingen.keim.efs.middleware.model.Place;
-import de.vdv.trias.LocationContextStructure;
-import de.vdv.trias.LocationRefStructure;
+import de.vdv.trias.LocationContext;
+import de.vdv.trias.LocationRef;
 import java.time.ZonedDateTime;
 import static org.apache.commons.lang.StringUtils.isBlank;
 
@@ -34,24 +34,24 @@ import static org.apache.commons.lang.StringUtils.isBlank;
  *
  * @author ben
  */
-public class LocationContextStructureBuilder extends LocationContextStructure {
+public class LocationContextBuilder extends LocationContext {
 
-    public LocationContextStructure build() {
+    public LocationContext build() {
         return this;
     }
 
-    public LocationContextStructureBuilder locationRef(LocationRefStructure locationRef) {
+    public LocationContextBuilder locationRef(LocationRef locationRef) {
         this.locationRef = locationRef;
         return this;
     }
 
-    public LocationContextStructureBuilder coordinates(ICoordinates coordinates) {
-        this.locationRef = new LocationRefStructureBuilder().geoPosition(coordinates);
+    public LocationContextBuilder coordinates(ICoordinates coordinates) {
+        this.locationRef = new LocationRefBuilder().geoPosition(coordinates);
         return this;
     }
 
-    public LocationContextStructureBuilder place(Place place) {
-        var builder = new LocationRefStructureBuilder();
+    public LocationContextBuilder place(Place place) {
+        var builder = new LocationRefBuilder();
 
         if (!isBlank(place.getPlaceId())) {
             builder.stopPlaceRef(place.getPlaceId());
@@ -69,7 +69,7 @@ public class LocationContextStructureBuilder extends LocationContextStructure {
         return this;
     }
 
-    public LocationContextStructureBuilder depArrTime(ZonedDateTime depArrTime) {
+    public LocationContextBuilder depArrTime(ZonedDateTime depArrTime) {
         this.depArrTime = depArrTime;
         return this;
     }

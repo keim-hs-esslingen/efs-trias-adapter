@@ -23,14 +23,14 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias;
 
-import de.hsesslingen.keim.efs.adapter.trias.factories.GeoPositionStructureFactory;
+import de.hsesslingen.keim.efs.adapter.trias.factories.GeoPositionFactory;
 import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
-import de.vdv.trias.GeoCircleStructure;
-import de.vdv.trias.GeoPositionStructure;
-import de.vdv.trias.GeoRestrictionsStructure;
-import de.vdv.trias.StopPointRefStructure;
+import de.vdv.trias.GeoCircle;
+import de.vdv.trias.GeoPosition;
+import de.vdv.trias.GeoRestrictions;
+import de.vdv.trias.StopPointRef;
 import de.vdv.trias.Trias;
 import java.math.BigInteger;
 import java.util.List;
@@ -41,10 +41,10 @@ import org.springframework.stereotype.Service;
 import static de.hsesslingen.keim.efs.adapter.trias.Utils.nullsafe;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory.byInitialInput;
 import de.hsesslingen.keim.efs.middleware.provider.IPlacesService;
-import de.vdv.trias.InitialLocationInputStructure;
-import de.vdv.trias.LocationInformationResponseStructure;
-import de.vdv.trias.LocationParamStructure;
-import de.vdv.trias.LocationResultStructure;
+import de.vdv.trias.InitialLocationInput;
+import de.vdv.trias.LocationInformationResponse;
+import de.vdv.trias.LocationParam;
+import de.vdv.trias.LocationResult;
 import java.util.stream.Stream;
 
 /**
@@ -73,10 +73,10 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
      * convert a stopPointRef (eg. Stationname) to a GeoPosition
      *
      * @param stopPointRef
-     * @return GeoPositionStructure
+     * @return GeoPosition
      * @throws AbstractEfsException
      */
-    public GeoPositionStructure getGeoPositionFromStopPoint(StopPointRefStructure stopPointRef) throws AbstractEfsException {
+    public GeoPosition getGeoPositionFromStopPoint(StopPointRef stopPointRef) throws AbstractEfsException {
 
         Trias locationRequestTrias = requestFactory.createLocationInformationRequest(stopPointRef);
 
@@ -100,16 +100,16 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
     @Override
     public List<Place> search(String query, ICoordinates areaCenter, Integer radiusMeter, TriasCredentials credentials) {
 
-        GeoRestrictionsStructure restrictions = null;
+        GeoRestrictions restrictions = null;
 
         if (areaCenter != null) {
             var radius = radiusMeter != null ? radiusMeter : defaultSearchRadius;
 
-            var circle = new GeoCircleStructure();
-            circle.setCenter(GeoPositionStructureFactory.create(areaCenter));
+            var circle = new GeoCircle();
+            circle.setCenter(GeoPositionFactory.create(areaCenter));
             circle.setRadius(BigInteger.valueOf(radius));
 
-            restrictions = new GeoRestrictionsStructure();
+            restrictions = new GeoRestrictions();
             restrictions.setCircle(circle);
         }
 
@@ -152,16 +152,16 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
      * @param restrictions
      * @return
      */
-    private Stream<LocationInformationResponseStructure> initialLocationInformationStream(
-            String searchText, GeoPositionStructure geoPos, GeoRestrictionsStructure restrictions
+    private Stream<LocationInformationResponse> initialLocationInformationStream(
+            String searchText, GeoPosition geoPos, GeoRestrictions restrictions
     ) {
-        var initialInput = new InitialLocationInputStructure();
+        var initialInput = new InitialLocationInput();
 
         initialInput.setLocationName(searchText);
         initialInput.setGeoPosition(geoPos);
         initialInput.setGeoRestriction(restrictions);
 
-        var params = new LocationParamStructure();
+        var params = new LocationParam();
 
         var request = requestFactory.newTriasServiceRequest()
                 .locationInformationRequest(byInitialInput(initialInput, params));
@@ -204,8 +204,8 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
      * @param restrictions
      * @return
      */
-    public Stream<LocationResultStructure> queryInitialLocationInformation(
-            String searchText, GeoPositionStructure geoPos, GeoRestrictionsStructure restrictions
+    public Stream<LocationResult> queryInitialLocationInformation(
+            String searchText, GeoPosition geoPos, GeoRestrictions restrictions
     ) {
         return initialLocationInformationStream(searchText, geoPos, restrictions)
                 .map(locResponse -> locResponse.getLocationResult())
@@ -224,9 +224,9 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
      * @param requestLimit The number of requests to send at most.
      * @return
      */
-    public Stream<LocationResultStructure> queryInitialLocationInformation(
-            String searchText, GeoPositionStructure geoPos,
-            GeoRestrictionsStructure restrictions, long requestLimit
+    public Stream<LocationResult> queryInitialLocationInformation(
+            String searchText, GeoPosition geoPos,
+            GeoRestrictions restrictions, long requestLimit
     ) {
         return initialLocationInformationStream(searchText, geoPos, restrictions)
                 .limit(requestLimit)

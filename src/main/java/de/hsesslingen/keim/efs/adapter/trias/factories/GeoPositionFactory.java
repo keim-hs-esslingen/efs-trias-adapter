@@ -24,16 +24,16 @@
 package de.hsesslingen.keim.efs.adapter.trias.factories;
 
 import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
-import de.vdv.trias.GeoPositionStructure;
+import de.vdv.trias.GeoPosition;
 
 /**
  *
  * @author ben
  */
-public final class GeoPositionStructureFactory {
+public final class GeoPositionFactory {
 
-    public static GeoPositionStructure create(double lat, double lon) {
-        var geo = new GeoPositionStructure();
+    public static GeoPosition create(double lat, double lon) {
+        var geo = new GeoPosition();
 
         geo.setLatitude(lat);
         geo.setLongitude(lon);
@@ -41,7 +41,7 @@ public final class GeoPositionStructureFactory {
         return geo;
     }
 
-    public static GeoPositionStructure create(ICoordinates coordinates) {
+    public static GeoPosition create(ICoordinates coordinates) {
         return create(coordinates.getLat(), coordinates.getLon());
     }
 }

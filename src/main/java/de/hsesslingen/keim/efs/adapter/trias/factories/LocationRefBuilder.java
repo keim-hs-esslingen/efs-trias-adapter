@@ -24,82 +24,82 @@
 package de.hsesslingen.keim.efs.adapter.trias.factories;
 
 import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
-import de.vdv.trias.AddressRefStructure;
-import de.vdv.trias.GeoPositionStructure;
-import de.vdv.trias.InternationalTextStructure;
-import de.vdv.trias.LocalityRefStructure;
-import de.vdv.trias.LocationRefStructure;
-import de.vdv.trias.PointOfInterestRefStructure;
-import de.vdv.trias.StopPlaceRefStructure;
-import de.vdv.trias.StopPointRefStructure;
+import de.vdv.trias.AddressRef;
+import de.vdv.trias.GeoPosition;
+import de.vdv.trias.InternationalText;
+import de.vdv.trias.LocalityRef;
+import de.vdv.trias.LocationRef;
+import de.vdv.trias.PointOfInterestRef;
+import de.vdv.trias.StopPlaceRef;
+import de.vdv.trias.StopPointRef;
 import java.util.Collection;
 
 /**
  *
  * @author ben
  */
-public class LocationRefStructureBuilder extends LocationRefStructure {
+public class LocationRefBuilder extends LocationRef {
 
-    public LocationRefStructureBuilder stopPointRef(StopPointRefStructure value) {
+    public LocationRefBuilder stopPointRef(StopPointRef value) {
         this.stopPointRef = value;
         return this;
     }
 
-    public LocationRefStructureBuilder stopPointRef(String value) {
-        var pointRef = new StopPointRefStructure();
+    public LocationRefBuilder stopPointRef(String value) {
+        var pointRef = new StopPointRef();
         pointRef.setValue(value);
         this.stopPointRef = pointRef;
         return this;
     }
 
-    public LocationRefStructureBuilder stopPlaceRef(StopPlaceRefStructure value) {
+    public LocationRefBuilder stopPlaceRef(StopPlaceRef value) {
         this.stopPlaceRef = value;
         return this;
     }
 
-    public LocationRefStructureBuilder stopPlaceRef(String value) {
-        var placeRef = new StopPlaceRefStructure();
+    public LocationRefBuilder stopPlaceRef(String value) {
+        var placeRef = new StopPlaceRef();
         placeRef.setValue(value);
         this.stopPlaceRef = placeRef;
         return this;
     }
 
-    public LocationRefStructureBuilder geoPosition(GeoPositionStructure value) {
+    public LocationRefBuilder geoPosition(GeoPosition value) {
         this.geoPosition = value;
         return this;
     }
 
-    public LocationRefStructureBuilder geoPosition(ICoordinates value) {
-        this.geoPosition = GeoPositionStructureFactory.create(value);
+    public LocationRefBuilder geoPosition(ICoordinates value) {
+        this.geoPosition = GeoPositionFactory.create(value);
         return this;
     }
 
-    public LocationRefStructureBuilder geoPosition(double lat, double lon) {
-        this.geoPosition = GeoPositionStructureFactory.create(lat, lon);
+    public LocationRefBuilder geoPosition(double lat, double lon) {
+        this.geoPosition = GeoPositionFactory.create(lat, lon);
         return this;
     }
 
-    public LocationRefStructureBuilder localityRef(LocalityRefStructure value) {
+    public LocationRefBuilder localityRef(LocalityRef value) {
         this.localityRef = value;
         return this;
     }
 
-    public LocationRefStructureBuilder pointOfInterest(PointOfInterestRefStructure value) {
+    public LocationRefBuilder pointOfInterest(PointOfInterestRef value) {
         this.pointOfInterestRef = value;
         return this;
     }
 
-    public LocationRefStructureBuilder addressRef(AddressRefStructure value) {
+    public LocationRefBuilder addressRef(AddressRef value) {
         this.addressRef = value;
         return this;
     }
 
-    public LocationRefStructureBuilder locationName(InternationalTextStructure value) {
+    public LocationRefBuilder locationName(InternationalText value) {
         this.getLocationName().add(value);
         return this;
     }
 
-    public LocationRefStructureBuilder locationName(Collection<InternationalTextStructure> value) {
+    public LocationRefBuilder locationName(Collection<InternationalText> value) {
         this.getLocationName().addAll(value);
         return this;
     }
