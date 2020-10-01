@@ -87,8 +87,9 @@ public class WeatherRelated {
      *     {@link ExtensionType }
      *     
      */
-    public void setWeatherRelatedExtension(ExtensionType value) {
+    public WeatherRelated setWeatherRelatedExtension(ExtensionType value) {
         this.weatherRelatedExtension = value;
+        return this;
     }
 
 }

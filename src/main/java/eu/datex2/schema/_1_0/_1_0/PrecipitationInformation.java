@@ -93,8 +93,9 @@ public class PrecipitationInformation
      *     {@link PrecipitationDetail }
      *     
      */
-    public void setPrecipitationDetail(PrecipitationDetail value) {
+    public PrecipitationInformation setPrecipitationDetail(PrecipitationDetail value) {
         this.precipitationDetail = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class PrecipitationInformation
      *     {@link ExtensionType }
      *     
      */
-    public void setPrecipitationInformationExtension(ExtensionType value) {
+    public PrecipitationInformation setPrecipitationInformationExtension(ExtensionType value) {
         this.precipitationInformationExtension = value;
+        return this;
     }
 
 }

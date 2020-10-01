@@ -113,8 +113,9 @@ public class ImpactDetails {
      *     {@link Float }
      *     
      */
-    public void setCapacityRemaining(Float value) {
+    public ImpactDetails setCapacityRemaining(Float value) {
         this.capacityRemaining = value;
+        return this;
     }
 
     /**
@@ -137,8 +138,9 @@ public class ImpactDetails {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfLanesRestricted(BigInteger value) {
+    public ImpactDetails setNumberOfLanesRestricted(BigInteger value) {
         this.numberOfLanesRestricted = value;
+        return this;
     }
 
     /**
@@ -161,8 +163,9 @@ public class ImpactDetails {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfOperationalLanes(BigInteger value) {
+    public ImpactDetails setNumberOfOperationalLanes(BigInteger value) {
         this.numberOfOperationalLanes = value;
+        return this;
     }
 
     /**
@@ -185,8 +188,9 @@ public class ImpactDetails {
      *     {@link BigInteger }
      *     
      */
-    public void setOriginalNumberOfLanes(BigInteger value) {
+    public ImpactDetails setOriginalNumberOfLanes(BigInteger value) {
         this.originalNumberOfLanes = value;
+        return this;
     }
 
     /**
@@ -209,8 +213,9 @@ public class ImpactDetails {
      *     {@link TrafficRestrictionTypeEnum }
      *     
      */
-    public void setTrafficRestrictionType(TrafficRestrictionTypeEnum value) {
+    public ImpactDetails setTrafficRestrictionType(TrafficRestrictionTypeEnum value) {
         this.trafficRestrictionType = value;
+        return this;
     }
 
     /**
@@ -233,8 +238,9 @@ public class ImpactDetails {
      *     {@link ExtensionType }
      *     
      */
-    public void setImpactDetailsExtension(ExtensionType value) {
+    public ImpactDetails setImpactDetailsExtension(ExtensionType value) {
         this.impactDetailsExtension = value;
+        return this;
     }
 
 }

@@ -146,8 +146,9 @@ public class AlertCLocation {
      *     {@link BigInteger }
      *     
      */
-    public void setSpecificLocation(BigInteger value) {
+    public AlertCLocation setSpecificLocation(BigInteger value) {
         this.specificLocation = value;
+        return this;
     }
 
     /**
@@ -170,8 +171,9 @@ public class AlertCLocation {
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCLocationExtension(ExtensionType value) {
+    public AlertCLocation setAlertCLocationExtension(ExtensionType value) {
         this.alertCLocationExtension = value;
+        return this;
     }
 
 

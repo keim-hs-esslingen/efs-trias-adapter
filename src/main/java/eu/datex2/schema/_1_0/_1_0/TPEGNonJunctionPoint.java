@@ -99,8 +99,9 @@ public class TPEGNonJunctionPoint
      *     {@link PointCoordinates }
      *     
      */
-    public void setPointCoordinates(PointCoordinates value) {
+    public TPEGNonJunctionPoint setPointCoordinates(PointCoordinates value) {
         this.pointCoordinates = value;
+        return this;
     }
 
     /**
@@ -152,8 +153,9 @@ public class TPEGNonJunctionPoint
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegnonJunctionPointExtension(ExtensionType value) {
+    public TPEGNonJunctionPoint setTpegnonJunctionPointExtension(ExtensionType value) {
         this.tpegnonJunctionPointExtension = value;
+        return this;
     }
 
 }

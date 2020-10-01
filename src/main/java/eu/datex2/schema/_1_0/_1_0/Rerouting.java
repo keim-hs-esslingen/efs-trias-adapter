@@ -127,8 +127,9 @@ public class Rerouting
      *     {@link Boolean }
      *     
      */
-    public void setAlternativeRerouting(Boolean value) {
+    public Rerouting setAlternativeRerouting(Boolean value) {
         this.alternativeRerouting = value;
+        return this;
     }
 
     /**
@@ -175,8 +176,9 @@ public class Rerouting
      *     {@link ReroutingTypeEnum }
      *     
      */
-    public void setReroutingType(ReroutingTypeEnum value) {
+    public Rerouting setReroutingType(ReroutingTypeEnum value) {
         this.reroutingType = value;
+        return this;
     }
 
     /**
@@ -199,8 +201,9 @@ public class Rerouting
      *     {@link ExtensionType }
      *     
      */
-    public void setReroutingExtension(ExtensionType value) {
+    public Rerouting setReroutingExtension(ExtensionType value) {
         this.reroutingExtension = value;
+        return this;
     }
 
 

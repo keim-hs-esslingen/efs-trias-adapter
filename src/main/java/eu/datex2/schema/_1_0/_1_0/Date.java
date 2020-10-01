@@ -88,8 +88,9 @@ public class Date {
      *     {@link String }
      *     
      */
-    public void setValue(LocalDate value) {
+    public Date setValue(LocalDate value) {
         this.value = value;
+        return this;
     }
 
 }

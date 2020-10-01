@@ -179,8 +179,9 @@ public class HazardousMaterials {
      *     {@link Float }
      *     
      */
-    public void setDangerousGoodsFlashPoint(Float value) {
+    public HazardousMaterials setDangerousGoodsFlashPoint(Float value) {
         this.dangerousGoodsFlashPoint = value;
+        return this;
     }
 
     /**
@@ -203,8 +204,9 @@ public class HazardousMaterials {
      *     {@link DangerousGoodRegulationsEnum }
      *     
      */
-    public void setDangerousGoodsRegulations(DangerousGoodRegulationsEnum value) {
+    public HazardousMaterials setDangerousGoodsRegulations(DangerousGoodRegulationsEnum value) {
         this.dangerousGoodsRegulations = value;
+        return this;
     }
 
     /**
@@ -227,8 +229,9 @@ public class HazardousMaterials {
      *     {@link String }
      *     
      */
-    public void setHazardCodeIdentification(String value) {
+    public HazardousMaterials setHazardCodeIdentification(String value) {
         this.hazardCodeIdentification = value;
+        return this;
     }
 
     /**
@@ -251,8 +254,9 @@ public class HazardousMaterials {
      *     {@link BigInteger }
      *     
      */
-    public void setHazardCodeVersionNumber(BigInteger value) {
+    public HazardousMaterials setHazardCodeVersionNumber(BigInteger value) {
         this.hazardCodeVersionNumber = value;
+        return this;
     }
 
     /**
@@ -275,8 +279,9 @@ public class HazardousMaterials {
      *     {@link String }
      *     
      */
-    public void setHazardSubstanceItemPageNumber(String value) {
+    public HazardousMaterials setHazardSubstanceItemPageNumber(String value) {
         this.hazardSubstanceItemPageNumber = value;
+        return this;
     }
 
     /**
@@ -299,8 +304,9 @@ public class HazardousMaterials {
      *     {@link String }
      *     
      */
-    public void setTremCardNumber(String value) {
+    public HazardousMaterials setTremCardNumber(String value) {
         this.tremCardNumber = value;
+        return this;
     }
 
     /**
@@ -323,8 +329,9 @@ public class HazardousMaterials {
      *     {@link String }
      *     
      */
-    public void setUNDGNumber(String value) {
+    public HazardousMaterials setUNDGNumber(String value) {
         this.undgNumber = value;
+        return this;
     }
 
     /**
@@ -347,8 +354,9 @@ public class HazardousMaterials {
      *     {@link Float }
      *     
      */
-    public void setVolumeOfDangerousGoods(Float value) {
+    public HazardousMaterials setVolumeOfDangerousGoods(Float value) {
         this.volumeOfDangerousGoods = value;
+        return this;
     }
 
     /**
@@ -371,8 +379,9 @@ public class HazardousMaterials {
      *     {@link Float }
      *     
      */
-    public void setWeightOfDangerousGoods(Float value) {
+    public HazardousMaterials setWeightOfDangerousGoods(Float value) {
         this.weightOfDangerousGoods = value;
+        return this;
     }
 
     /**
@@ -395,8 +404,9 @@ public class HazardousMaterials {
      *     {@link ExtensionType }
      *     
      */
-    public void setHazardousMaterialsExtension(ExtensionType value) {
+    public HazardousMaterials setHazardousMaterialsExtension(ExtensionType value) {
         this.hazardousMaterialsExtension = value;
+        return this;
     }
 
 

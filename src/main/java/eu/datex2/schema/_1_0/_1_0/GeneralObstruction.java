@@ -126,8 +126,9 @@ public class GeneralObstruction
      *     {@link ExtensionType }
      *     
      */
-    public void setGeneralObstructionExtension(ExtensionType value) {
+    public GeneralObstruction setGeneralObstructionExtension(ExtensionType value) {
         this.generalObstructionExtension = value;
+        return this;
     }
 
 }

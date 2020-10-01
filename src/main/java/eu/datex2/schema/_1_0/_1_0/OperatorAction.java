@@ -111,8 +111,9 @@ public abstract class OperatorAction
      *     {@link OperatorActionOriginEnum }
      *     
      */
-    public void setActionOrigin(OperatorActionOriginEnum value) {
+    public OperatorAction setActionOrigin(OperatorActionOriginEnum value) {
         this.actionOrigin = value;
+        return this;
     }
 
     /**
@@ -135,8 +136,9 @@ public abstract class OperatorAction
      *     {@link OperatorActionStatusEnum }
      *     
      */
-    public void setOperatorActionStatus(OperatorActionStatusEnum value) {
+    public OperatorAction setOperatorActionStatus(OperatorActionStatusEnum value) {
         this.operatorActionStatus = value;
+        return this;
     }
 
     /**
@@ -159,8 +161,9 @@ public abstract class OperatorAction
      *     {@link Boolean }
      *     
      */
-    public void setProvisional(Boolean value) {
+    public OperatorAction setProvisional(Boolean value) {
         this.provisional = value;
+        return this;
     }
 
     /**
@@ -183,8 +186,9 @@ public abstract class OperatorAction
      *     {@link ExtensionType }
      *     
      */
-    public void setOperatorActionExtension(ExtensionType value) {
+    public OperatorAction setOperatorActionExtension(ExtensionType value) {
         this.operatorActionExtension = value;
+        return this;
     }
 
 }

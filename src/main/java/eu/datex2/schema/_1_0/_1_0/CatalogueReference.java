@@ -91,8 +91,9 @@ public class CatalogueReference {
      *     {@link String }
      *     
      */
-    public void setKeyCatalogueReference(String value) {
+    public CatalogueReference setKeyCatalogueReference(String value) {
         this.keyCatalogueReference = value;
+        return this;
     }
 
     /**
@@ -115,8 +116,9 @@ public class CatalogueReference {
      *     {@link ExtensionType }
      *     
      */
-    public void setCatalogueReferenceExtension(ExtensionType value) {
+    public CatalogueReference setCatalogueReferenceExtension(ExtensionType value) {
         this.catalogueReferenceExtension = value;
+        return this;
     }
 
 }

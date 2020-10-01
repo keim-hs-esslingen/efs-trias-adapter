@@ -95,8 +95,9 @@ public class TPEGILCPointDescriptor
      *     {@link TPEGLoc03ILCPointDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegDescriptorType(TPEGLoc03ILCPointDescriptorSubtypeEnum value) {
+    public TPEGILCPointDescriptor setTpegDescriptorType(TPEGLoc03ILCPointDescriptorSubtypeEnum value) {
         this.tpegDescriptorType = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class TPEGILCPointDescriptor
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegilcpointDescriptorExtension(ExtensionType value) {
+    public TPEGILCPointDescriptor setTpegilcpointDescriptorExtension(ExtensionType value) {
         this.tpegilcpointDescriptorExtension = value;
+        return this;
     }
 
 }

@@ -178,8 +178,9 @@ public abstract class SituationRecord {
      *     {@link String }
      *     
      */
-    public void setSituationRecordCreationReference(String value) {
+    public SituationRecord setSituationRecordCreationReference(String value) {
         this.situationRecordCreationReference = value;
+        return this;
     }
 
     /**
@@ -202,8 +203,9 @@ public abstract class SituationRecord {
      *     {@link DateTime }
      *     
      */
-    public void setSituationRecordCreationTime(DateTime value) {
+    public SituationRecord setSituationRecordCreationTime(DateTime value) {
         this.situationRecordCreationTime = value;
+        return this;
     }
 
     /**
@@ -226,8 +228,9 @@ public abstract class SituationRecord {
      *     {@link DateTime }
      *     
      */
-    public void setSituationRecordObservationTime(DateTime value) {
+    public SituationRecord setSituationRecordObservationTime(DateTime value) {
         this.situationRecordObservationTime = value;
+        return this;
     }
 
     /**
@@ -250,8 +253,9 @@ public abstract class SituationRecord {
      *     {@link BigInteger }
      *     
      */
-    public void setSituationRecordVersion(BigInteger value) {
+    public SituationRecord setSituationRecordVersion(BigInteger value) {
         this.situationRecordVersion = value;
+        return this;
     }
 
     /**
@@ -274,8 +278,9 @@ public abstract class SituationRecord {
      *     {@link DateTime }
      *     
      */
-    public void setSituationRecordVersionTime(DateTime value) {
+    public SituationRecord setSituationRecordVersionTime(DateTime value) {
         this.situationRecordVersionTime = value;
+        return this;
     }
 
     /**
@@ -298,8 +303,9 @@ public abstract class SituationRecord {
      *     {@link DateTime }
      *     
      */
-    public void setSituationRecordFirstSupplierVersionTime(DateTime value) {
+    public SituationRecord setSituationRecordFirstSupplierVersionTime(DateTime value) {
         this.situationRecordFirstSupplierVersionTime = value;
+        return this;
     }
 
     /**
@@ -322,8 +328,9 @@ public abstract class SituationRecord {
      *     {@link InformationUsageEnum }
      *     
      */
-    public void setInformationUsageOverride(InformationUsageEnum value) {
+    public SituationRecord setInformationUsageOverride(InformationUsageEnum value) {
         this.informationUsageOverride = value;
+        return this;
     }
 
     /**
@@ -346,8 +353,9 @@ public abstract class SituationRecord {
      *     {@link ProbabilityOfOccurrenceEnum }
      *     
      */
-    public void setProbabilityOfOccurrence(ProbabilityOfOccurrenceEnum value) {
+    public SituationRecord setProbabilityOfOccurrence(ProbabilityOfOccurrenceEnum value) {
         this.probabilityOfOccurrence = value;
+        return this;
     }
 
     /**
@@ -370,8 +378,9 @@ public abstract class SituationRecord {
      *     {@link SourceInformation }
      *     
      */
-    public void setSourceInformation(SourceInformation value) {
+    public SituationRecord setSourceInformation(SourceInformation value) {
         this.sourceInformation = value;
+        return this;
     }
 
     /**
@@ -394,8 +403,9 @@ public abstract class SituationRecord {
      *     {@link Validity }
      *     
      */
-    public void setValidity(Validity value) {
+    public SituationRecord setValidity(Validity value) {
         this.validity = value;
+        return this;
     }
 
     /**
@@ -418,8 +428,9 @@ public abstract class SituationRecord {
      *     {@link Impact }
      *     
      */
-    public void setImpact(Impact value) {
+    public SituationRecord setImpact(Impact value) {
         this.impact = value;
+        return this;
     }
 
     /**
@@ -442,8 +453,9 @@ public abstract class SituationRecord {
      *     {@link Cause }
      *     
      */
-    public void setCause(Cause value) {
+    public SituationRecord setCause(Cause value) {
         this.cause = value;
+        return this;
     }
 
     /**
@@ -553,8 +565,9 @@ public abstract class SituationRecord {
      *     {@link GroupOfLocations }
      *     
      */
-    public void setGroupOfLocations(GroupOfLocations value) {
+    public SituationRecord setGroupOfLocations(GroupOfLocations value) {
         this.groupOfLocations = value;
+        return this;
     }
 
     /**
@@ -577,8 +590,9 @@ public abstract class SituationRecord {
      *     {@link Management }
      *     
      */
-    public void setManagement(Management value) {
+    public SituationRecord setManagement(Management value) {
         this.management = value;
+        return this;
     }
 
     /**
@@ -601,8 +615,9 @@ public abstract class SituationRecord {
      *     {@link ExtensionType }
      *     
      */
-    public void setSituationRecordExtension(ExtensionType value) {
+    public SituationRecord setSituationRecordExtension(ExtensionType value) {
         this.situationRecordExtension = value;
+        return this;
     }
 
     /**
@@ -625,8 +640,9 @@ public abstract class SituationRecord {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public SituationRecord setId(String value) {
         this.id = value;
+        return this;
     }
 
 }

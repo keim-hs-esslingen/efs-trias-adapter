@@ -40,16 +40,16 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import uk.org.siri.siri.CheckStatusRequestStructure;
-import uk.org.siri.siri.CheckStatusResponseStructure;
-import uk.org.siri.siri.DataReadyRequestStructure;
-import uk.org.siri.siri.DataReadyResponseStructure;
-import uk.org.siri.siri.DataReceivedResponseStructure;
-import uk.org.siri.siri.DataSupplyRequestStructure;
-import uk.org.siri.siri.HeartbeatNotificationStructure;
-import uk.org.siri.siri.SubscriptionResponseStructure;
-import uk.org.siri.siri.TerminateSubscriptionRequestStructure;
-import uk.org.siri.siri.TerminateSubscriptionResponseStructure;
+import uk.org.siri.siri.CheckStatusRequest;
+import uk.org.siri.siri.CheckStatusResponse;
+import uk.org.siri.siri.DataReadyRequest;
+import uk.org.siri.siri.DataReadyResponse;
+import uk.org.siri.siri.DataReceivedResponse;
+import uk.org.siri.siri.DataSupplyRequest;
+import uk.org.siri.siri.HeartbeatNotification;
+import uk.org.siri.siri.SubscriptionResponse;
+import uk.org.siri.siri.TerminateSubscriptionRequest;
+import uk.org.siri.siri.TerminateSubscriptionResponse;
 
 
 /**
@@ -95,31 +95,31 @@ import uk.org.siri.siri.TerminateSubscriptionResponseStructure;
 public class Trias {
 
     @XmlElement(name = "ServiceRequest", namespace = "http://www.vdv.de/trias")
-    protected ServiceRequestStructure serviceRequest;
+    protected ServiceRequest serviceRequest;
     @XmlElement(name = "SubscriptionRequest", namespace = "http://www.vdv.de/trias")
-    protected SubscriptionRequestStructure subscriptionRequest;
+    protected SubscriptionRequest subscriptionRequest;
     @XmlElement(name = "TerminateSubscriptionRequest", namespace = "http://www.vdv.de/trias")
-    protected TerminateSubscriptionRequestStructure terminateSubscriptionRequest;
+    protected TerminateSubscriptionRequest terminateSubscriptionRequest;
     @XmlElement(name = "DataReadyNotification", namespace = "http://www.siri.org.uk/siri")
-    protected DataReadyRequestStructure dataReadyNotification;
+    protected DataReadyRequest dataReadyNotification;
     @XmlElement(name = "DataSupplyRequest", namespace = "http://www.siri.org.uk/siri")
-    protected DataSupplyRequestStructure dataSupplyRequest;
+    protected DataSupplyRequest dataSupplyRequest;
     @XmlElement(name = "CheckStatusRequest", namespace = "http://www.siri.org.uk/siri")
-    protected CheckStatusRequestStructure checkStatusRequest;
+    protected CheckStatusRequest checkStatusRequest;
     @XmlElement(name = "HeartbeatNotification", namespace = "http://www.siri.org.uk/siri")
-    protected HeartbeatNotificationStructure heartbeatNotification;
+    protected HeartbeatNotification heartbeatNotification;
     @XmlElement(name = "SubscriptionResponse", namespace = "http://www.siri.org.uk/siri")
-    protected SubscriptionResponseStructure subscriptionResponse;
+    protected SubscriptionResponse subscriptionResponse;
     @XmlElement(name = "TerminateSubscriptionResponse", namespace = "http://www.siri.org.uk/siri")
-    protected TerminateSubscriptionResponseStructure terminateSubscriptionResponse;
+    protected TerminateSubscriptionResponse terminateSubscriptionResponse;
     @XmlElement(name = "ServiceDelivery", namespace = "http://www.vdv.de/trias")
-    protected ServiceDeliveryStructure serviceDelivery;
+    protected ServiceDelivery serviceDelivery;
     @XmlElement(name = "DataReadyAcknowledgement", namespace = "http://www.vdv.de/trias")
-    protected DataReadyResponseStructure dataReadyAcknowledgement;
+    protected DataReadyResponse dataReadyAcknowledgement;
     @XmlElement(name = "DataReceivedAcknowledgement", namespace = "http://www.vdv.de/trias")
-    protected DataReceivedResponseStructure dataReceivedAcknowledgement;
+    protected DataReceivedResponse dataReceivedAcknowledgement;
     @XmlElement(name = "CheckStatusResponse", namespace = "http://www.siri.org.uk/siri")
-    protected CheckStatusResponseStructure checkStatusResponse;
+    protected CheckStatusResponse checkStatusResponse;
     @XmlElement(name = "Extension", namespace = "http://www.vdv.de/trias")
     protected Object extension;
     @XmlAttribute(name = "version", required = true)
@@ -132,10 +132,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link ServiceRequestStructure }
+     *     {@link ServiceRequest }
      *     
      */
-    public ServiceRequestStructure getServiceRequest() {
+    public ServiceRequest getServiceRequest() {
         return serviceRequest;
     }
 
@@ -144,11 +144,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceRequestStructure }
+     *     {@link ServiceRequest }
      *     
      */
-    public void setServiceRequest(ServiceRequestStructure value) {
+    public Trias setServiceRequest(ServiceRequest value) {
         this.serviceRequest = value;
+        return this;
     }
 
     /**
@@ -156,10 +157,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link SubscriptionRequestStructure }
+     *     {@link SubscriptionRequest }
      *     
      */
-    public SubscriptionRequestStructure getSubscriptionRequest() {
+    public SubscriptionRequest getSubscriptionRequest() {
         return subscriptionRequest;
     }
 
@@ -168,11 +169,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link SubscriptionRequestStructure }
+     *     {@link SubscriptionRequest }
      *     
      */
-    public void setSubscriptionRequest(SubscriptionRequestStructure value) {
+    public Trias setSubscriptionRequest(SubscriptionRequest value) {
         this.subscriptionRequest = value;
+        return this;
     }
 
     /**
@@ -180,10 +182,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link TerminateSubscriptionRequestStructure }
+     *     {@link TerminateSubscriptionRequest }
      *     
      */
-    public TerminateSubscriptionRequestStructure getTerminateSubscriptionRequest() {
+    public TerminateSubscriptionRequest getTerminateSubscriptionRequest() {
         return terminateSubscriptionRequest;
     }
 
@@ -192,11 +194,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link TerminateSubscriptionRequestStructure }
+     *     {@link TerminateSubscriptionRequest }
      *     
      */
-    public void setTerminateSubscriptionRequest(TerminateSubscriptionRequestStructure value) {
+    public Trias setTerminateSubscriptionRequest(TerminateSubscriptionRequest value) {
         this.terminateSubscriptionRequest = value;
+        return this;
     }
 
     /**
@@ -204,10 +207,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link DataReadyRequestStructure }
+     *     {@link DataReadyRequest }
      *     
      */
-    public DataReadyRequestStructure getDataReadyNotification() {
+    public DataReadyRequest getDataReadyNotification() {
         return dataReadyNotification;
     }
 
@@ -216,11 +219,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link DataReadyRequestStructure }
+     *     {@link DataReadyRequest }
      *     
      */
-    public void setDataReadyNotification(DataReadyRequestStructure value) {
+    public Trias setDataReadyNotification(DataReadyRequest value) {
         this.dataReadyNotification = value;
+        return this;
     }
 
     /**
@@ -228,10 +232,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link DataSupplyRequestStructure }
+     *     {@link DataSupplyRequest }
      *     
      */
-    public DataSupplyRequestStructure getDataSupplyRequest() {
+    public DataSupplyRequest getDataSupplyRequest() {
         return dataSupplyRequest;
     }
 
@@ -240,11 +244,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link DataSupplyRequestStructure }
+     *     {@link DataSupplyRequest }
      *     
      */
-    public void setDataSupplyRequest(DataSupplyRequestStructure value) {
+    public Trias setDataSupplyRequest(DataSupplyRequest value) {
         this.dataSupplyRequest = value;
+        return this;
     }
 
     /**
@@ -252,10 +257,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link CheckStatusRequestStructure }
+     *     {@link CheckStatusRequest }
      *     
      */
-    public CheckStatusRequestStructure getCheckStatusRequest() {
+    public CheckStatusRequest getCheckStatusRequest() {
         return checkStatusRequest;
     }
 
@@ -264,11 +269,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link CheckStatusRequestStructure }
+     *     {@link CheckStatusRequest }
      *     
      */
-    public void setCheckStatusRequest(CheckStatusRequestStructure value) {
+    public Trias setCheckStatusRequest(CheckStatusRequest value) {
         this.checkStatusRequest = value;
+        return this;
     }
 
     /**
@@ -276,10 +282,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link HeartbeatNotificationStructure }
+     *     {@link HeartbeatNotification }
      *     
      */
-    public HeartbeatNotificationStructure getHeartbeatNotification() {
+    public HeartbeatNotification getHeartbeatNotification() {
         return heartbeatNotification;
     }
 
@@ -288,11 +294,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link HeartbeatNotificationStructure }
+     *     {@link HeartbeatNotification }
      *     
      */
-    public void setHeartbeatNotification(HeartbeatNotificationStructure value) {
+    public Trias setHeartbeatNotification(HeartbeatNotification value) {
         this.heartbeatNotification = value;
+        return this;
     }
 
     /**
@@ -300,10 +307,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link SubscriptionResponseStructure }
+     *     {@link SubscriptionResponse }
      *     
      */
-    public SubscriptionResponseStructure getSubscriptionResponse() {
+    public SubscriptionResponse getSubscriptionResponse() {
         return subscriptionResponse;
     }
 
@@ -312,11 +319,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link SubscriptionResponseStructure }
+     *     {@link SubscriptionResponse }
      *     
      */
-    public void setSubscriptionResponse(SubscriptionResponseStructure value) {
+    public Trias setSubscriptionResponse(SubscriptionResponse value) {
         this.subscriptionResponse = value;
+        return this;
     }
 
     /**
@@ -324,10 +332,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link TerminateSubscriptionResponseStructure }
+     *     {@link TerminateSubscriptionResponse }
      *     
      */
-    public TerminateSubscriptionResponseStructure getTerminateSubscriptionResponse() {
+    public TerminateSubscriptionResponse getTerminateSubscriptionResponse() {
         return terminateSubscriptionResponse;
     }
 
@@ -336,11 +344,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link TerminateSubscriptionResponseStructure }
+     *     {@link TerminateSubscriptionResponse }
      *     
      */
-    public void setTerminateSubscriptionResponse(TerminateSubscriptionResponseStructure value) {
+    public Trias setTerminateSubscriptionResponse(TerminateSubscriptionResponse value) {
         this.terminateSubscriptionResponse = value;
+        return this;
     }
 
     /**
@@ -348,10 +357,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link ServiceDeliveryStructure }
+     *     {@link ServiceDelivery }
      *     
      */
-    public ServiceDeliveryStructure getServiceDelivery() {
+    public ServiceDelivery getServiceDelivery() {
         return serviceDelivery;
     }
 
@@ -360,11 +369,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceDeliveryStructure }
+     *     {@link ServiceDelivery }
      *     
      */
-    public void setServiceDelivery(ServiceDeliveryStructure value) {
+    public Trias setServiceDelivery(ServiceDelivery value) {
         this.serviceDelivery = value;
+        return this;
     }
 
     /**
@@ -372,10 +382,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link DataReadyResponseStructure }
+     *     {@link DataReadyResponse }
      *     
      */
-    public DataReadyResponseStructure getDataReadyAcknowledgement() {
+    public DataReadyResponse getDataReadyAcknowledgement() {
         return dataReadyAcknowledgement;
     }
 
@@ -384,11 +394,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link DataReadyResponseStructure }
+     *     {@link DataReadyResponse }
      *     
      */
-    public void setDataReadyAcknowledgement(DataReadyResponseStructure value) {
+    public Trias setDataReadyAcknowledgement(DataReadyResponse value) {
         this.dataReadyAcknowledgement = value;
+        return this;
     }
 
     /**
@@ -396,10 +407,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link DataReceivedResponseStructure }
+     *     {@link DataReceivedResponse }
      *     
      */
-    public DataReceivedResponseStructure getDataReceivedAcknowledgement() {
+    public DataReceivedResponse getDataReceivedAcknowledgement() {
         return dataReceivedAcknowledgement;
     }
 
@@ -408,11 +419,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link DataReceivedResponseStructure }
+     *     {@link DataReceivedResponse }
      *     
      */
-    public void setDataReceivedAcknowledgement(DataReceivedResponseStructure value) {
+    public Trias setDataReceivedAcknowledgement(DataReceivedResponse value) {
         this.dataReceivedAcknowledgement = value;
+        return this;
     }
 
     /**
@@ -420,10 +432,10 @@ public class Trias {
      * 
      * @return
      *     possible object is
-     *     {@link CheckStatusResponseStructure }
+     *     {@link CheckStatusResponse }
      *     
      */
-    public CheckStatusResponseStructure getCheckStatusResponse() {
+    public CheckStatusResponse getCheckStatusResponse() {
         return checkStatusResponse;
     }
 
@@ -432,11 +444,12 @@ public class Trias {
      * 
      * @param value
      *     allowed object is
-     *     {@link CheckStatusResponseStructure }
+     *     {@link CheckStatusResponse }
      *     
      */
-    public void setCheckStatusResponse(CheckStatusResponseStructure value) {
+    public Trias setCheckStatusResponse(CheckStatusResponse value) {
         this.checkStatusResponse = value;
+        return this;
     }
 
     /**
@@ -459,8 +472,9 @@ public class Trias {
      *     {@link Object }
      *     
      */
-    public void setExtension(Object value) {
+    public Trias setExtension(Object value) {
         this.extension = value;
+        return this;
     }
 
     /**
@@ -487,8 +501,9 @@ public class Trias {
      *     {@link String }
      *     
      */
-    public void setVersion(String value) {
+    public Trias setVersion(String value) {
         this.version = value;
+        return this;
     }
 
 }

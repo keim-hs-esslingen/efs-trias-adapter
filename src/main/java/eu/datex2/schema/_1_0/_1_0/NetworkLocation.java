@@ -102,8 +102,9 @@ public abstract class NetworkLocation
      *     {@link SupplementaryPositionalDescription }
      *     
      */
-    public void setSupplementaryPositionalDescription(SupplementaryPositionalDescription value) {
+    public NetworkLocation setSupplementaryPositionalDescription(SupplementaryPositionalDescription value) {
         this.supplementaryPositionalDescription = value;
+        return this;
     }
 
     /**
@@ -126,8 +127,9 @@ public abstract class NetworkLocation
      *     {@link Destination }
      *     
      */
-    public void setDestination(Destination value) {
+    public NetworkLocation setDestination(Destination value) {
         this.destination = value;
+        return this;
     }
 
     /**
@@ -150,8 +152,9 @@ public abstract class NetworkLocation
      *     {@link ExtensionType }
      *     
      */
-    public void setNetworkLocationExtension(ExtensionType value) {
+    public NetworkLocation setNetworkLocationExtension(ExtensionType value) {
         this.networkLocationExtension = value;
+        return this;
     }
 
 }

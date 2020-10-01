@@ -99,8 +99,9 @@ public class FilterReference {
      *     {@link Boolean }
      *     
      */
-    public void setDeleteFilter(Boolean value) {
+    public FilterReference setDeleteFilter(Boolean value) {
         this.deleteFilter = value;
+        return this;
     }
 
     /**
@@ -123,8 +124,9 @@ public class FilterReference {
      *     {@link Boolean }
      *     
      */
-    public void setFilterOperationApproved(Boolean value) {
+    public FilterReference setFilterOperationApproved(Boolean value) {
         this.filterOperationApproved = value;
+        return this;
     }
 
     /**
@@ -147,8 +149,9 @@ public class FilterReference {
      *     {@link String }
      *     
      */
-    public void setKeyFilterReference(String value) {
+    public FilterReference setKeyFilterReference(String value) {
         this.keyFilterReference = value;
+        return this;
     }
 
     /**
@@ -171,8 +174,9 @@ public class FilterReference {
      *     {@link ExtensionType }
      *     
      */
-    public void setFilterReferenceExtension(ExtensionType value) {
+    public FilterReference setFilterReferenceExtension(ExtensionType value) {
         this.filterReferenceExtension = value;
+        return this;
     }
 
 }

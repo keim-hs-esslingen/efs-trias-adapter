@@ -97,8 +97,9 @@ public class TrafficSpeed
      *     {@link Float }
      *     
      */
-    public void setAverageVehicleSpeed(Float value) {
+    public TrafficSpeed setAverageVehicleSpeed(Float value) {
         this.averageVehicleSpeed = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class TrafficSpeed
      *     {@link SpeedPercentile }
      *     
      */
-    public void setSpeedPercentile(SpeedPercentile value) {
+    public TrafficSpeed setSpeedPercentile(SpeedPercentile value) {
         this.speedPercentile = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class TrafficSpeed
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficSpeedExtension(ExtensionType value) {
+    public TrafficSpeed setTrafficSpeedExtension(ExtensionType value) {
         this.trafficSpeedExtension = value;
+        return this;
     }
 
 }

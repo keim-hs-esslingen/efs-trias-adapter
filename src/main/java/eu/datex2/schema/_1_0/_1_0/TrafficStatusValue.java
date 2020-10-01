@@ -100,8 +100,9 @@ public class TrafficStatusValue
      *     {@link TrafficStatusEnum }
      *     
      */
-    public void setTrafficStatus(TrafficStatusEnum value) {
+    public TrafficStatusValue setTrafficStatus(TrafficStatusEnum value) {
         this.trafficStatus = value;
+        return this;
     }
 
     /**
@@ -124,8 +125,9 @@ public class TrafficStatusValue
      *     {@link TrafficTrendTypeEnum }
      *     
      */
-    public void setTrafficTrendType(TrafficTrendTypeEnum value) {
+    public TrafficStatusValue setTrafficTrendType(TrafficTrendTypeEnum value) {
         this.trafficTrendType = value;
+        return this;
     }
 
     /**
@@ -148,8 +150,9 @@ public class TrafficStatusValue
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficStatusValueExtension(ExtensionType value) {
+    public TrafficStatusValue setTrafficStatusValueExtension(ExtensionType value) {
         this.trafficStatusValueExtension = value;
+        return this;
     }
 
 }

@@ -99,8 +99,9 @@ public class VehicleAndTrafficTypeAdvice
      *     {@link TrafficDestinationTypeEnum }
      *     
      */
-    public void setForTrafficOfType(TrafficDestinationTypeEnum value) {
+    public VehicleAndTrafficTypeAdvice setForTrafficOfType(TrafficDestinationTypeEnum value) {
         this.forTrafficOfType = value;
+        return this;
     }
 
     /**
@@ -123,8 +124,9 @@ public class VehicleAndTrafficTypeAdvice
      *     {@link VehicleCharacteristics }
      *     
      */
-    public void setForVehiclesWithCharacteristicsOf(VehicleCharacteristics value) {
+    public VehicleAndTrafficTypeAdvice setForVehiclesWithCharacteristicsOf(VehicleCharacteristics value) {
         this.forVehiclesWithCharacteristicsOf = value;
+        return this;
     }
 
     /**
@@ -147,8 +149,9 @@ public class VehicleAndTrafficTypeAdvice
      *     {@link ExtensionType }
      *     
      */
-    public void setVehicleAndTrafficTypeAdviceExtension(ExtensionType value) {
+    public VehicleAndTrafficTypeAdvice setVehicleAndTrafficTypeAdviceExtension(ExtensionType value) {
         this.vehicleAndTrafficTypeAdviceExtension = value;
+        return this;
     }
 
 }

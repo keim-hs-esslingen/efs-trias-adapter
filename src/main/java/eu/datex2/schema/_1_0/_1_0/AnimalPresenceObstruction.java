@@ -99,8 +99,9 @@ public class AnimalPresenceObstruction
      *     {@link Boolean }
      *     
      */
-    public void setAlive(Boolean value) {
+    public AnimalPresenceObstruction setAlive(Boolean value) {
         this.alive = value;
+        return this;
     }
 
     /**
@@ -123,8 +124,9 @@ public class AnimalPresenceObstruction
      *     {@link AnimalPresenceTypeEnum }
      *     
      */
-    public void setAnimalPresenceType(AnimalPresenceTypeEnum value) {
+    public AnimalPresenceObstruction setAnimalPresenceType(AnimalPresenceTypeEnum value) {
         this.animalPresenceType = value;
+        return this;
     }
 
     /**
@@ -147,8 +149,9 @@ public class AnimalPresenceObstruction
      *     {@link ExtensionType }
      *     
      */
-    public void setAnimalPresenceObstructionExtension(ExtensionType value) {
+    public AnimalPresenceObstruction setAnimalPresenceObstructionExtension(ExtensionType value) {
         this.animalPresenceObstructionExtension = value;
+        return this;
     }
 
 }

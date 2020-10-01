@@ -130,8 +130,9 @@ public class WeatherRelatedRoadConditions
      *     {@link RoadSurfaceConditionMeasurements }
      *     
      */
-    public void setRoadSurfaceConditionMeasurements(RoadSurfaceConditionMeasurements value) {
+    public WeatherRelatedRoadConditions setRoadSurfaceConditionMeasurements(RoadSurfaceConditionMeasurements value) {
         this.roadSurfaceConditionMeasurements = value;
+        return this;
     }
 
     /**
@@ -154,8 +155,9 @@ public class WeatherRelatedRoadConditions
      *     {@link ExtensionType }
      *     
      */
-    public void setWeatherRelatedRoadConditionsExtension(ExtensionType value) {
+    public WeatherRelatedRoadConditions setWeatherRelatedRoadConditionsExtension(ExtensionType value) {
         this.weatherRelatedRoadConditionsExtension = value;
+        return this;
     }
 
 }

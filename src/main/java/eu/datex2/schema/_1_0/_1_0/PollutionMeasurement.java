@@ -89,8 +89,9 @@ public class PollutionMeasurement {
      * Sets the value of the pollutantConcentration property.
      * 
      */
-    public void setPollutantConcentration(float value) {
+    public PollutionMeasurement setPollutantConcentration(float value) {
         this.pollutantConcentration = value;
+        return this;
     }
 
     /**
@@ -113,8 +114,9 @@ public class PollutionMeasurement {
      *     {@link PollutantTypeEnum }
      *     
      */
-    public void setPollutantType(PollutantTypeEnum value) {
+    public PollutionMeasurement setPollutantType(PollutantTypeEnum value) {
         this.pollutantType = value;
+        return this;
     }
 
     /**
@@ -137,8 +139,9 @@ public class PollutionMeasurement {
      *     {@link ExtensionType }
      *     
      */
-    public void setPollutionMeasurementExtension(ExtensionType value) {
+    public PollutionMeasurement setPollutionMeasurementExtension(ExtensionType value) {
         this.pollutionMeasurementExtension = value;
+        return this;
     }
 
 }

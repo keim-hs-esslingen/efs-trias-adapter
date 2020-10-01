@@ -105,8 +105,9 @@ public class Point
      *     {@link TPEGPointLocation }
      *     
      */
-    public void setTpegpointLocation(TPEGPointLocation value) {
+    public Point setTpegpointLocation(TPEGPointLocation value) {
         this.tpegpointLocation = value;
+        return this;
     }
 
     /**
@@ -129,8 +130,9 @@ public class Point
      *     {@link AlertCPoint }
      *     
      */
-    public void setAlertCPoint(AlertCPoint value) {
+    public Point setAlertCPoint(AlertCPoint value) {
         this.alertCPoint = value;
+        return this;
     }
 
     /**
@@ -153,8 +155,9 @@ public class Point
      *     {@link ReferencePoint }
      *     
      */
-    public void setReferencePoint(ReferencePoint value) {
+    public Point setReferencePoint(ReferencePoint value) {
         this.referencePoint = value;
+        return this;
     }
 
     /**
@@ -177,8 +180,9 @@ public class Point
      *     {@link PointByCoordinates }
      *     
      */
-    public void setPointByCoordinates(PointByCoordinates value) {
+    public Point setPointByCoordinates(PointByCoordinates value) {
         this.pointByCoordinates = value;
+        return this;
     }
 
     /**
@@ -201,8 +205,9 @@ public class Point
      *     {@link ExtensionType }
      *     
      */
-    public void setPointExtension(ExtensionType value) {
+    public Point setPointExtension(ExtensionType value) {
         this.pointExtension = value;
+        return this;
     }
 
 }

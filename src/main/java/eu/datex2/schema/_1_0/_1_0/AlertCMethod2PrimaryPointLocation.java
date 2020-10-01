@@ -91,8 +91,9 @@ public class AlertCMethod2PrimaryPointLocation {
      *     {@link AlertCLocation }
      *     
      */
-    public void setAlertCLocation(AlertCLocation value) {
+    public AlertCMethod2PrimaryPointLocation setAlertCLocation(AlertCLocation value) {
         this.alertCLocation = value;
+        return this;
     }
 
     /**
@@ -115,8 +116,9 @@ public class AlertCMethod2PrimaryPointLocation {
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod2PrimaryPointLocationExtension(ExtensionType value) {
+    public AlertCMethod2PrimaryPointLocation setAlertCMethod2PrimaryPointLocationExtension(ExtensionType value) {
         this.alertCMethod2PrimaryPointLocationExtension = value;
+        return this;
     }
 
 }

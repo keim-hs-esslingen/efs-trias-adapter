@@ -171,8 +171,9 @@ public abstract class BasicDataValue {
      *     {@link Float }
      *     
      */
-    public void setAccuracy(Float value) {
+    public BasicDataValue setAccuracy(Float value) {
         this.accuracy = value;
+        return this;
     }
 
     /**
@@ -195,8 +196,9 @@ public abstract class BasicDataValue {
      *     {@link ComputationMethodEnum }
      *     
      */
-    public void setComputationalMethod(ComputationMethodEnum value) {
+    public BasicDataValue setComputationalMethod(ComputationMethodEnum value) {
         this.computationalMethod = value;
+        return this;
     }
 
     /**
@@ -219,8 +221,9 @@ public abstract class BasicDataValue {
      *     {@link Boolean }
      *     
      */
-    public void setFault(Boolean value) {
+    public BasicDataValue setFault(Boolean value) {
         this.fault = value;
+        return this;
     }
 
     /**
@@ -267,8 +270,9 @@ public abstract class BasicDataValue {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfIncompleteInputs(BigInteger value) {
+    public BasicDataValue setNumberOfIncompleteInputs(BigInteger value) {
         this.numberOfIncompleteInputs = value;
+        return this;
     }
 
     /**
@@ -291,8 +295,9 @@ public abstract class BasicDataValue {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfInputValuesUsed(BigInteger value) {
+    public BasicDataValue setNumberOfInputValuesUsed(BigInteger value) {
         this.numberOfInputValuesUsed = value;
+        return this;
     }
 
     /**
@@ -315,8 +320,9 @@ public abstract class BasicDataValue {
      *     {@link Float }
      *     
      */
-    public void setPeriod(Float value) {
+    public BasicDataValue setPeriod(Float value) {
         this.period = value;
+        return this;
     }
 
     /**
@@ -339,8 +345,9 @@ public abstract class BasicDataValue {
      *     {@link Float }
      *     
      */
-    public void setSmoothingFactor(Float value) {
+    public BasicDataValue setSmoothingFactor(Float value) {
         this.smoothingFactor = value;
+        return this;
     }
 
     /**
@@ -363,8 +370,9 @@ public abstract class BasicDataValue {
      *     {@link Float }
      *     
      */
-    public void setStandardDeviation(Float value) {
+    public BasicDataValue setStandardDeviation(Float value) {
         this.standardDeviation = value;
+        return this;
     }
 
     /**
@@ -387,8 +395,9 @@ public abstract class BasicDataValue {
      *     {@link Float }
      *     
      */
-    public void setSupplierCalculatedDataQuality(Float value) {
+    public BasicDataValue setSupplierCalculatedDataQuality(Float value) {
         this.supplierCalculatedDataQuality = value;
+        return this;
     }
 
     /**
@@ -411,8 +420,9 @@ public abstract class BasicDataValue {
      *     {@link DateTime }
      *     
      */
-    public void setTime(DateTime value) {
+    public BasicDataValue setTime(DateTime value) {
         this.time = value;
+        return this;
     }
 
     /**
@@ -435,8 +445,9 @@ public abstract class BasicDataValue {
      *     {@link GroupOfLocations }
      *     
      */
-    public void setAffectedLocation(GroupOfLocations value) {
+    public BasicDataValue setAffectedLocation(GroupOfLocations value) {
         this.affectedLocation = value;
+        return this;
     }
 
     /**
@@ -459,8 +470,9 @@ public abstract class BasicDataValue {
      *     {@link ExtensionType }
      *     
      */
-    public void setBasicDataValueExtension(ExtensionType value) {
+    public BasicDataValue setBasicDataValueExtension(ExtensionType value) {
         this.basicDataValueExtension = value;
+        return this;
     }
 
 

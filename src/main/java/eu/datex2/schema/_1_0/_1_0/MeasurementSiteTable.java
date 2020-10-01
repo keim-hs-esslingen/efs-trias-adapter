@@ -114,8 +114,9 @@ public class MeasurementSiteTable {
      *     {@link String }
      *     
      */
-    public void setMeasurementSiteTableReference(String value) {
+    public MeasurementSiteTable setMeasurementSiteTableReference(String value) {
         this.measurementSiteTableReference = value;
+        return this;
     }
 
     /**
@@ -138,8 +139,9 @@ public class MeasurementSiteTable {
      *     {@link BigInteger }
      *     
      */
-    public void setMeasurementSiteTableVersion(BigInteger value) {
+    public MeasurementSiteTable setMeasurementSiteTableVersion(BigInteger value) {
         this.measurementSiteTableVersion = value;
+        return this;
     }
 
     /**
@@ -191,8 +193,9 @@ public class MeasurementSiteTable {
      *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementSiteTableExtension(ExtensionType value) {
+    public MeasurementSiteTable setMeasurementSiteTableExtension(ExtensionType value) {
         this.measurementSiteTableExtension = value;
+        return this;
     }
 
     /**
@@ -215,8 +218,9 @@ public class MeasurementSiteTable {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public MeasurementSiteTable setId(String value) {
         this.id = value;
+        return this;
     }
 
 }

@@ -100,8 +100,9 @@ public class TrafficConcentration
      *     {@link BigInteger }
      *     
      */
-    public void setConcentration(BigInteger value) {
+    public TrafficConcentration setConcentration(BigInteger value) {
         this.concentration = value;
+        return this;
     }
 
     /**
@@ -124,8 +125,9 @@ public class TrafficConcentration
      *     {@link Float }
      *     
      */
-    public void setOccupancy(Float value) {
+    public TrafficConcentration setOccupancy(Float value) {
         this.occupancy = value;
+        return this;
     }
 
     /**
@@ -148,8 +150,9 @@ public class TrafficConcentration
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficConcentrationExtension(ExtensionType value) {
+    public TrafficConcentration setTrafficConcentrationExtension(ExtensionType value) {
         this.trafficConcentrationExtension = value;
+        return this;
     }
 
 }

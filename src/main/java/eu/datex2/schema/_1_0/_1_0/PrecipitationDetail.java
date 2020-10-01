@@ -101,8 +101,9 @@ public class PrecipitationDetail {
      *     {@link Float }
      *     
      */
-    public void setDepositionDepth(Float value) {
+    public PrecipitationDetail setDepositionDepth(Float value) {
         this.depositionDepth = value;
+        return this;
     }
 
     /**
@@ -125,8 +126,9 @@ public class PrecipitationDetail {
      *     {@link Float }
      *     
      */
-    public void setPrecipitationIntensity(Float value) {
+    public PrecipitationDetail setPrecipitationIntensity(Float value) {
         this.precipitationIntensity = value;
+        return this;
     }
 
     /**
@@ -149,8 +151,9 @@ public class PrecipitationDetail {
      *     {@link PrecipitationTypeEnum }
      *     
      */
-    public void setPrecipitationType(PrecipitationTypeEnum value) {
+    public PrecipitationDetail setPrecipitationType(PrecipitationTypeEnum value) {
         this.precipitationType = value;
+        return this;
     }
 
     /**
@@ -173,8 +176,9 @@ public class PrecipitationDetail {
      *     {@link ExtensionType }
      *     
      */
-    public void setPrecipitationDetailExtension(ExtensionType value) {
+    public PrecipitationDetail setPrecipitationDetailExtension(ExtensionType value) {
         this.precipitationDetailExtension = value;
+        return this;
     }
 
 }

@@ -101,8 +101,9 @@ public class IndividualVehicleMeasurements
      *     {@link VehicleSpeed }
      *     
      */
-    public void setVehicleSpeed(VehicleSpeed value) {
+    public IndividualVehicleMeasurements setVehicleSpeed(VehicleSpeed value) {
         this.vehicleSpeed = value;
+        return this;
     }
 
     /**
@@ -125,8 +126,9 @@ public class IndividualVehicleMeasurements
      *     {@link VehicleDetectionTime }
      *     
      */
-    public void setVehicleDetectionTime(VehicleDetectionTime value) {
+    public IndividualVehicleMeasurements setVehicleDetectionTime(VehicleDetectionTime value) {
         this.vehicleDetectionTime = value;
+        return this;
     }
 
     /**
@@ -149,8 +151,9 @@ public class IndividualVehicleMeasurements
      *     {@link VehicleHeadway }
      *     
      */
-    public void setVehicleHeadway(VehicleHeadway value) {
+    public IndividualVehicleMeasurements setVehicleHeadway(VehicleHeadway value) {
         this.vehicleHeadway = value;
+        return this;
     }
 
     /**
@@ -173,8 +176,9 @@ public class IndividualVehicleMeasurements
      *     {@link ExtensionType }
      *     
      */
-    public void setIndividualVehicleMeasurementsExtension(ExtensionType value) {
+    public IndividualVehicleMeasurements setIndividualVehicleMeasurementsExtension(ExtensionType value) {
         this.individualVehicleMeasurementsExtension = value;
+        return this;
     }
 
 }

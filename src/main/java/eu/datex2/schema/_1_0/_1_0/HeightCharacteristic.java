@@ -97,8 +97,9 @@ public class HeightCharacteristic {
      *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public HeightCharacteristic setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
+        return this;
     }
 
     /**
@@ -113,8 +114,9 @@ public class HeightCharacteristic {
      * Sets the value of the vehicleHeight property.
      * 
      */
-    public void setVehicleHeight(float value) {
+    public HeightCharacteristic setVehicleHeight(float value) {
         this.vehicleHeight = value;
+        return this;
     }
 
     /**
@@ -137,8 +139,9 @@ public class HeightCharacteristic {
      *     {@link ExtensionType }
      *     
      */
-    public void setHeightCharacteristicExtension(ExtensionType value) {
+    public HeightCharacteristic setHeightCharacteristicExtension(ExtensionType value) {
         this.heightCharacteristicExtension = value;
+        return this;
     }
 
 }

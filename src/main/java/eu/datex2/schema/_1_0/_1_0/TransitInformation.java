@@ -206,8 +206,9 @@ public class TransitInformation
      *     {@link String }
      *     
      */
-    public void setJourneyReference(String value) {
+    public TransitInformation setJourneyReference(String value) {
         this.journeyReference = value;
+        return this;
     }
 
     /**
@@ -230,8 +231,9 @@ public class TransitInformation
      *     {@link TransitServiceInformationEnum }
      *     
      */
-    public void setTransitServiceInformation(TransitServiceInformationEnum value) {
+    public TransitInformation setTransitServiceInformation(TransitServiceInformationEnum value) {
         this.transitServiceInformation = value;
+        return this;
     }
 
     /**
@@ -254,8 +256,9 @@ public class TransitInformation
      *     {@link TransitServiceTypeEnum }
      *     
      */
-    public void setTransitServiceType(TransitServiceTypeEnum value) {
+    public TransitInformation setTransitServiceType(TransitServiceTypeEnum value) {
         this.transitServiceType = value;
+        return this;
     }
 
     /**
@@ -278,8 +281,9 @@ public class TransitInformation
      *     {@link DateTime }
      *     
      */
-    public void setScheduledDepartureTime(DateTime value) {
+    public TransitInformation setScheduledDepartureTime(DateTime value) {
         this.scheduledDepartureTime = value;
+        return this;
     }
 
     /**
@@ -302,8 +306,9 @@ public class TransitInformation
      *     {@link ExtensionType }
      *     
      */
-    public void setTransitInformationExtension(ExtensionType value) {
+    public TransitInformation setTransitInformationExtension(ExtensionType value) {
         this.transitInformationExtension = value;
+        return this;
     }
 
 

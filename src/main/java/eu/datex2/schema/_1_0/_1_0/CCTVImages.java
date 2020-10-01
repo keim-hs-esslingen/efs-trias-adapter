@@ -122,8 +122,9 @@ public class CCTVImages {
      *     {@link ExtensionType }
      *     
      */
-    public void setCctvimagesExtension(ExtensionType value) {
+    public CCTVImages setCctvimagesExtension(ExtensionType value) {
         this.cctvimagesExtension = value;
+        return this;
     }
 
 }

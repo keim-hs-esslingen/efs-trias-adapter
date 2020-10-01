@@ -94,8 +94,9 @@ public class Visibility {
      *     {@link BigInteger }
      *     
      */
-    public void setVisibilityValue(BigInteger value) {
+    public Visibility setVisibilityValue(BigInteger value) {
         this.visibilityValue = value;
+        return this;
     }
 
     /**
@@ -118,8 +119,9 @@ public class Visibility {
      *     {@link ExtensionType }
      *     
      */
-    public void setVisibilityExtension(ExtensionType value) {
+    public Visibility setVisibilityExtension(ExtensionType value) {
         this.visibilityExtension = value;
+        return this;
     }
 
 }

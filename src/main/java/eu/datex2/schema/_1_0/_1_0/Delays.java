@@ -102,8 +102,9 @@ public class Delays {
      *     {@link DelayCodeEnum }
      *     
      */
-    public void setDelayCoded(DelayCodeEnum value) {
+    public Delays setDelayCoded(DelayCodeEnum value) {
         this.delayCoded = value;
+        return this;
     }
 
     /**
@@ -126,8 +127,9 @@ public class Delays {
      *     {@link DelaysTypeEnum }
      *     
      */
-    public void setDelaysType(DelaysTypeEnum value) {
+    public Delays setDelaysType(DelaysTypeEnum value) {
         this.delaysType = value;
+        return this;
     }
 
     /**
@@ -150,8 +152,9 @@ public class Delays {
      *     {@link Float }
      *     
      */
-    public void setDelayTimeValue(Float value) {
+    public Delays setDelayTimeValue(Float value) {
         this.delayTimeValue = value;
+        return this;
     }
 
     /**
@@ -174,8 +177,9 @@ public class Delays {
      *     {@link ExtensionType }
      *     
      */
-    public void setDelaysExtension(ExtensionType value) {
+    public Delays setDelaysExtension(ExtensionType value) {
         this.delaysExtension = value;
+        return this;
     }
 
 }

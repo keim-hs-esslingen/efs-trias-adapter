@@ -93,8 +93,9 @@ public class PointDestination
      *     {@link Point }
      *     
      */
-    public void setPoint(Point value) {
+    public PointDestination setPoint(Point value) {
         this.point = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class PointDestination
      *     {@link ExtensionType }
      *     
      */
-    public void setPointDestinationExtension(ExtensionType value) {
+    public PointDestination setPointDestinationExtension(ExtensionType value) {
         this.pointDestinationExtension = value;
+        return this;
     }
 
 }

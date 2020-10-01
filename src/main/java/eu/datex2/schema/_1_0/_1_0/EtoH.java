@@ -108,8 +108,9 @@ public abstract class EtoH {
      *     {@link EnvironmentalObstructionTypeEnum }
      *     
      */
-    public void setEnvironmentalObstructionTypeEnum(EnvironmentalObstructionTypeEnum value) {
+    public EtoH setEnvironmentalObstructionTypeEnum(EnvironmentalObstructionTypeEnum value) {
         this.environmentalObstructionTypeEnum = value;
+        return this;
     }
 
     /**
@@ -132,8 +133,9 @@ public abstract class EtoH {
      *     {@link EffectOnRoadLayoutEnum }
      *     
      */
-    public void setEffectOnRoadLayoutEnum(EffectOnRoadLayoutEnum value) {
+    public EtoH setEffectOnRoadLayoutEnum(EffectOnRoadLayoutEnum value) {
         this.effectOnRoadLayoutEnum = value;
+        return this;
     }
 
     /**
@@ -156,8 +158,9 @@ public abstract class EtoH {
      *     {@link ExtensionType }
      *     
      */
-    public void setEtoHExtension(ExtensionType value) {
+    public EtoH setEtoHExtension(ExtensionType value) {
         this.etoHExtension = value;
+        return this;
     }
 
     /**
@@ -180,8 +183,9 @@ public abstract class EtoH {
      *     {@link FuelTypeEnum }
      *     
      */
-    public void setFuelTypeEnum(FuelTypeEnum value) {
+    public EtoH setFuelTypeEnum(FuelTypeEnum value) {
         this.fuelTypeEnum = value;
+        return this;
     }
 
     /**
@@ -204,8 +208,9 @@ public abstract class EtoH {
      *     {@link EquipmentDamageTypeEnum }
      *     
      */
-    public void setEquipmentDamageTypeEnum(EquipmentDamageTypeEnum value) {
+    public EtoH setEquipmentDamageTypeEnum(EquipmentDamageTypeEnum value) {
         this.equipmentDamageTypeEnum = value;
+        return this;
     }
 
 }

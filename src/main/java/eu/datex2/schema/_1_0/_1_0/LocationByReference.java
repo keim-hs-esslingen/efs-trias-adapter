@@ -93,8 +93,9 @@ public class LocationByReference
      *     {@link String }
      *     
      */
-    public void setPredefinedLocationReference(String value) {
+    public LocationByReference setPredefinedLocationReference(String value) {
         this.predefinedLocationReference = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class LocationByReference
      *     {@link ExtensionType }
      *     
      */
-    public void setLocationByReferenceExtension(ExtensionType value) {
+    public LocationByReference setLocationByReferenceExtension(ExtensionType value) {
         this.locationByReferenceExtension = value;
+        return this;
     }
 
 }

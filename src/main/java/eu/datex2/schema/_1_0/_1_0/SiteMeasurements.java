@@ -110,8 +110,9 @@ public class SiteMeasurements {
      *     {@link String }
      *     
      */
-    public void setMeasurementSiteReference(String value) {
+    public SiteMeasurements setMeasurementSiteReference(String value) {
         this.measurementSiteReference = value;
+        return this;
     }
 
     /**
@@ -134,8 +135,9 @@ public class SiteMeasurements {
      *     {@link DateTime }
      *     
      */
-    public void setMeasurementTimeDefault(DateTime value) {
+    public SiteMeasurements setMeasurementTimeDefault(DateTime value) {
         this.measurementTimeDefault = value;
+        return this;
     }
 
     /**
@@ -187,8 +189,9 @@ public class SiteMeasurements {
      *     {@link ExtensionType }
      *     
      */
-    public void setSiteMeasurementsExtension(ExtensionType value) {
+    public SiteMeasurements setSiteMeasurementsExtension(ExtensionType value) {
         this.siteMeasurementsExtension = value;
+        return this;
     }
 
 

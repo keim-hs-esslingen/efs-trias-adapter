@@ -115,8 +115,9 @@ public class ElaboratedDataPublication
      *     {@link Boolean }
      *     
      */
-    public void setForecastDefault(Boolean value) {
+    public ElaboratedDataPublication setForecastDefault(Boolean value) {
         this.forecastDefault = value;
+        return this;
     }
 
     /**
@@ -139,8 +140,9 @@ public class ElaboratedDataPublication
      *     {@link Float }
      *     
      */
-    public void setPeriodDefault(Float value) {
+    public ElaboratedDataPublication setPeriodDefault(Float value) {
         this.periodDefault = value;
+        return this;
     }
 
     /**
@@ -163,8 +165,9 @@ public class ElaboratedDataPublication
      *     {@link DateTime }
      *     
      */
-    public void setTimeDefault(DateTime value) {
+    public ElaboratedDataPublication setTimeDefault(DateTime value) {
         this.timeDefault = value;
+        return this;
     }
 
     /**
@@ -187,8 +190,9 @@ public class ElaboratedDataPublication
      *     {@link HeaderInformation }
      *     
      */
-    public void setHeaderInformation(HeaderInformation value) {
+    public ElaboratedDataPublication setHeaderInformation(HeaderInformation value) {
         this.headerInformation = value;
+        return this;
     }
 
     /**
@@ -211,8 +215,9 @@ public class ElaboratedDataPublication
      *     {@link ReferenceSettings }
      *     
      */
-    public void setReferenceSettings(ReferenceSettings value) {
+    public ElaboratedDataPublication setReferenceSettings(ReferenceSettings value) {
         this.referenceSettings = value;
+        return this;
     }
 
     /**
@@ -264,8 +269,9 @@ public class ElaboratedDataPublication
      *     {@link ExtensionType }
      *     
      */
-    public void setElaboratedDataPublicationExtension(ExtensionType value) {
+    public ElaboratedDataPublication setElaboratedDataPublicationExtension(ExtensionType value) {
         this.elaboratedDataPublicationExtension = value;
+        return this;
     }
 
 }

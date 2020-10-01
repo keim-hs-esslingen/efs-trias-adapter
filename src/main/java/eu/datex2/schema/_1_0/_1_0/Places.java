@@ -95,8 +95,9 @@ public class Places
      *     {@link PlacesAdviceEnum }
      *     
      */
-    public void setPlacesAdvice(PlacesAdviceEnum value) {
+    public Places setPlacesAdvice(PlacesAdviceEnum value) {
         this.placesAdvice = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class Places
      *     {@link ExtensionType }
      *     
      */
-    public void setPlacesExtension(ExtensionType value) {
+    public Places setPlacesExtension(ExtensionType value) {
         this.placesExtension = value;
+        return this;
     }
 
 }

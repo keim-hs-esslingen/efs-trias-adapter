@@ -127,8 +127,9 @@ public class MaintenanceWorks
      *     {@link ExtensionType }
      *     
      */
-    public void setMaintenanceWorksExtension(ExtensionType value) {
+    public MaintenanceWorks setMaintenanceWorksExtension(ExtensionType value) {
         this.maintenanceWorksExtension = value;
+        return this;
     }
 
 }

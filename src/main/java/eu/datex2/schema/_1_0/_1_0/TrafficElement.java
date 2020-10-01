@@ -98,8 +98,9 @@ public abstract class TrafficElement
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficElementExtension(ExtensionType value) {
+    public TrafficElement setTrafficElementExtension(ExtensionType value) {
         this.trafficElementExtension = value;
+        return this;
     }
 
 }

@@ -97,8 +97,9 @@ public class WidthCharacteristic {
      *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public WidthCharacteristic setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
+        return this;
     }
 
     /**
@@ -113,8 +114,9 @@ public class WidthCharacteristic {
      * Sets the value of the vehicleWidth property.
      * 
      */
-    public void setVehicleWidth(float value) {
+    public WidthCharacteristic setVehicleWidth(float value) {
         this.vehicleWidth = value;
+        return this;
     }
 
     /**
@@ -137,8 +139,9 @@ public class WidthCharacteristic {
      *     {@link ExtensionType }
      *     
      */
-    public void setWidthCharacteristicExtension(ExtensionType value) {
+    public WidthCharacteristic setWidthCharacteristicExtension(ExtensionType value) {
         this.widthCharacteristicExtension = value;
+        return this;
     }
 
 }

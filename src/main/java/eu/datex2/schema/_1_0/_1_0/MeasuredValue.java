@@ -152,8 +152,9 @@ public class MeasuredValue {
      *     {@link LocationCharacteristicsOverride }
      *     
      */
-    public void setLocationCharacteristicsOverride(LocationCharacteristicsOverride value) {
+    public MeasuredValue setLocationCharacteristicsOverride(LocationCharacteristicsOverride value) {
         this.locationCharacteristicsOverride = value;
+        return this;
     }
 
     /**
@@ -176,8 +177,9 @@ public class MeasuredValue {
      *     {@link BasicDataValue }
      *     
      */
-    public void setBasicDataValue(BasicDataValue value) {
+    public MeasuredValue setBasicDataValue(BasicDataValue value) {
         this.basicDataValue = value;
+        return this;
     }
 
     /**
@@ -200,8 +202,9 @@ public class MeasuredValue {
      *     {@link ExtensionType }
      *     
      */
-    public void setMeasuredValueExtension(ExtensionType value) {
+    public MeasuredValue setMeasuredValueExtension(ExtensionType value) {
         this.measuredValueExtension = value;
+        return this;
     }
 
 

@@ -101,8 +101,9 @@ public class VehicleObstruction
      *     {@link VehicleObstructionTypeEnum }
      *     
      */
-    public void setVehicleObstructionType(VehicleObstructionTypeEnum value) {
+    public VehicleObstruction setVehicleObstructionType(VehicleObstructionTypeEnum value) {
         this.vehicleObstructionType = value;
+        return this;
     }
 
     /**
@@ -154,8 +155,9 @@ public class VehicleObstruction
      *     {@link ExtensionType }
      *     
      */
-    public void setVehicleObstructionExtension(ExtensionType value) {
+    public VehicleObstruction setVehicleObstructionExtension(ExtensionType value) {
         this.vehicleObstructionExtension = value;
+        return this;
     }
 
 }

@@ -185,8 +185,9 @@ public class MeasurementSiteRecord {
      *     {@link ComputationMethodEnum }
      *     
      */
-    public void setComputationMethod(ComputationMethodEnum value) {
+    public MeasurementSiteRecord setComputationMethod(ComputationMethodEnum value) {
         this.computationMethod = value;
+        return this;
     }
 
     /**
@@ -209,8 +210,9 @@ public class MeasurementSiteRecord {
      *     {@link String }
      *     
      */
-    public void setMeasurementEquipmentReference(String value) {
+    public MeasurementSiteRecord setMeasurementEquipmentReference(String value) {
         this.measurementEquipmentReference = value;
+        return this;
     }
 
     /**
@@ -281,8 +283,9 @@ public class MeasurementSiteRecord {
      *     {@link BigInteger }
      *     
      */
-    public void setMeasurementSiteNumberOfLanes(BigInteger value) {
+    public MeasurementSiteRecord setMeasurementSiteNumberOfLanes(BigInteger value) {
         this.measurementSiteNumberOfLanes = value;
+        return this;
     }
 
     /**
@@ -305,8 +308,9 @@ public class MeasurementSiteRecord {
      *     {@link String }
      *     
      */
-    public void setMeasurementSiteReference(String value) {
+    public MeasurementSiteRecord setMeasurementSiteReference(String value) {
         this.measurementSiteReference = value;
+        return this;
     }
 
     /**
@@ -329,8 +333,9 @@ public class MeasurementSiteRecord {
      *     {@link DirectionEnum }
      *     
      */
-    public void setMeasurementSide(DirectionEnum value) {
+    public MeasurementSiteRecord setMeasurementSide(DirectionEnum value) {
         this.measurementSide = value;
+        return this;
     }
 
     /**
@@ -382,8 +387,9 @@ public class MeasurementSiteRecord {
      *     {@link Location }
      *     
      */
-    public void setMeasurementSiteLocation(Location value) {
+    public MeasurementSiteRecord setMeasurementSiteLocation(Location value) {
         this.measurementSiteLocation = value;
+        return this;
     }
 
     /**
@@ -406,8 +412,9 @@ public class MeasurementSiteRecord {
      *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementSiteRecordExtension(ExtensionType value) {
+    public MeasurementSiteRecord setMeasurementSiteRecordExtension(ExtensionType value) {
         this.measurementSiteRecordExtension = value;
+        return this;
     }
 
     /**
@@ -430,8 +437,9 @@ public class MeasurementSiteRecord {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public MeasurementSiteRecord setId(String value) {
         this.id = value;
+        return this;
     }
 
 

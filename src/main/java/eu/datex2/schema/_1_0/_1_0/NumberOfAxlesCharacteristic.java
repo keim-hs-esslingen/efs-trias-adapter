@@ -99,8 +99,9 @@ public class NumberOfAxlesCharacteristic {
      *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public NumberOfAxlesCharacteristic setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
+        return this;
     }
 
     /**
@@ -123,8 +124,9 @@ public class NumberOfAxlesCharacteristic {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfAxles(BigInteger value) {
+    public NumberOfAxlesCharacteristic setNumberOfAxles(BigInteger value) {
         this.numberOfAxles = value;
+        return this;
     }
 
     /**
@@ -147,8 +149,9 @@ public class NumberOfAxlesCharacteristic {
      *     {@link ExtensionType }
      *     
      */
-    public void setNumberOfAxlesCharacteristicExtension(ExtensionType value) {
+    public NumberOfAxlesCharacteristic setNumberOfAxlesCharacteristicExtension(ExtensionType value) {
         this.numberOfAxlesCharacteristicExtension = value;
+        return this;
     }
 
 }

@@ -101,8 +101,9 @@ public class Linear
      *     {@link TPEGLinearLocation }
      *     
      */
-    public void setTpeglinearLocation(TPEGLinearLocation value) {
+    public Linear setTpeglinearLocation(TPEGLinearLocation value) {
         this.tpeglinearLocation = value;
+        return this;
     }
 
     /**
@@ -125,8 +126,9 @@ public class Linear
      *     {@link AlertCLinear }
      *     
      */
-    public void setAlertCLinear(AlertCLinear value) {
+    public Linear setAlertCLinear(AlertCLinear value) {
         this.alertCLinear = value;
+        return this;
     }
 
     /**
@@ -149,8 +151,9 @@ public class Linear
      *     {@link ReferencePointLinear }
      *     
      */
-    public void setReferencePointLinear(ReferencePointLinear value) {
+    public Linear setReferencePointLinear(ReferencePointLinear value) {
         this.referencePointLinear = value;
+        return this;
     }
 
     /**
@@ -173,8 +176,9 @@ public class Linear
      *     {@link ExtensionType }
      *     
      */
-    public void setLinearExtension(ExtensionType value) {
+    public Linear setLinearExtension(ExtensionType value) {
         this.linearExtension = value;
+        return this;
     }
 
 }

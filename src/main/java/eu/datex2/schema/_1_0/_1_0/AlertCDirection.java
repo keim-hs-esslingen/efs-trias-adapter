@@ -125,8 +125,9 @@ public class AlertCDirection {
      *     {@link AlertCDirectionEnum }
      *     
      */
-    public void setAlertCDirectionCoded(AlertCDirectionEnum value) {
+    public AlertCDirection setAlertCDirectionCoded(AlertCDirectionEnum value) {
         this.alertCDirectionCoded = value;
+        return this;
     }
 
     /**
@@ -173,8 +174,9 @@ public class AlertCDirection {
      *     {@link Boolean }
      *     
      */
-    public void setAlertCDirectionSense(Boolean value) {
+    public AlertCDirection setAlertCDirectionSense(Boolean value) {
         this.alertCDirectionSense = value;
+        return this;
     }
 
     /**
@@ -197,8 +199,9 @@ public class AlertCDirection {
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCDirectionExtension(ExtensionType value) {
+    public AlertCDirection setAlertCDirectionExtension(ExtensionType value) {
         this.alertCDirectionExtension = value;
+        return this;
     }
 
 

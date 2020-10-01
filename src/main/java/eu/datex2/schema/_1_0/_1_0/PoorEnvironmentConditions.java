@@ -117,8 +117,9 @@ public class PoorEnvironmentConditions
      *     {@link PoorEnvironmentTypeEnum }
      *     
      */
-    public void setPoorEnvironmentType(PoorEnvironmentTypeEnum value) {
+    public PoorEnvironmentConditions setPoorEnvironmentType(PoorEnvironmentTypeEnum value) {
         this.poorEnvironmentType = value;
+        return this;
     }
 
     /**
@@ -141,8 +142,9 @@ public class PoorEnvironmentConditions
      *     {@link PrecipitationDetail }
      *     
      */
-    public void setPrecipitationDetail(PrecipitationDetail value) {
+    public PoorEnvironmentConditions setPrecipitationDetail(PrecipitationDetail value) {
         this.precipitationDetail = value;
+        return this;
     }
 
     /**
@@ -165,8 +167,9 @@ public class PoorEnvironmentConditions
      *     {@link Visibility }
      *     
      */
-    public void setVisibility(Visibility value) {
+    public PoorEnvironmentConditions setVisibility(Visibility value) {
         this.visibility = value;
+        return this;
     }
 
     /**
@@ -218,8 +221,9 @@ public class PoorEnvironmentConditions
      *     {@link Temperature }
      *     
      */
-    public void setTemperature(Temperature value) {
+    public PoorEnvironmentConditions setTemperature(Temperature value) {
         this.temperature = value;
+        return this;
     }
 
     /**
@@ -242,8 +246,9 @@ public class PoorEnvironmentConditions
      *     {@link Wind }
      *     
      */
-    public void setWind(Wind value) {
+    public PoorEnvironmentConditions setWind(Wind value) {
         this.wind = value;
+        return this;
     }
 
     /**
@@ -266,8 +271,9 @@ public class PoorEnvironmentConditions
      *     {@link ExtensionType }
      *     
      */
-    public void setPoorEnvironmentConditionsExtension(ExtensionType value) {
+    public PoorEnvironmentConditions setPoorEnvironmentConditionsExtension(ExtensionType value) {
         this.poorEnvironmentConditionsExtension = value;
+        return this;
     }
 
 }

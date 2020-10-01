@@ -105,8 +105,9 @@ public class MatrixSignSetting
      *     {@link String }
      *     
      */
-    public void setAspectDisplayed(String value) {
+    public MatrixSignSetting setAspectDisplayed(String value) {
         this.aspectDisplayed = value;
+        return this;
     }
 
     /**
@@ -158,8 +159,9 @@ public class MatrixSignSetting
      *     {@link String }
      *     
      */
-    public void setMatrixIdentifier(String value) {
+    public MatrixSignSetting setMatrixIdentifier(String value) {
         this.matrixIdentifier = value;
+        return this;
     }
 
     /**
@@ -182,8 +184,9 @@ public class MatrixSignSetting
      *     {@link ExtensionType }
      *     
      */
-    public void setMatrixSignSettingExtension(ExtensionType value) {
+    public MatrixSignSetting setMatrixSignSettingExtension(ExtensionType value) {
         this.matrixSignSettingExtension = value;
+        return this;
     }
 
 }

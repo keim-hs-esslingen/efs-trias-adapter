@@ -99,8 +99,9 @@ public class D2LogicalModel {
      *     {@link Exchange }
      *     
      */
-    public void setExchange(Exchange value) {
+    public D2LogicalModel setExchange(Exchange value) {
         this.exchange = value;
+        return this;
     }
 
     /**
@@ -123,8 +124,9 @@ public class D2LogicalModel {
      *     {@link PayloadPublication }
      *     
      */
-    public void setPayloadPublication(PayloadPublication value) {
+    public D2LogicalModel setPayloadPublication(PayloadPublication value) {
         this.payloadPublication = value;
+        return this;
     }
 
     /**
@@ -147,8 +149,9 @@ public class D2LogicalModel {
      *     {@link ExtensionType }
      *     
      */
-    public void setD2LogicalModelExtension(ExtensionType value) {
+    public D2LogicalModel setD2LogicalModelExtension(ExtensionType value) {
         this.d2LogicalModelExtension = value;
+        return this;
     }
 
     /**
@@ -175,8 +178,9 @@ public class D2LogicalModel {
      *     {@link String }
      *     
      */
-    public void setModelBaseVersion(String value) {
+    public D2LogicalModel setModelBaseVersion(String value) {
         this.modelBaseVersion = value;
+        return this;
     }
 
 }

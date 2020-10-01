@@ -147,8 +147,9 @@ public class NonManagedCause
      *     {@link CauseTypeEnum }
      *     
      */
-    public void setCauseType(CauseTypeEnum value) {
+    public NonManagedCause setCauseType(CauseTypeEnum value) {
         this.causeType = value;
+        return this;
     }
 
     /**
@@ -171,8 +172,9 @@ public class NonManagedCause
      *     {@link ExtensionType }
      *     
      */
-    public void setNonManagedCauseExtension(ExtensionType value) {
+    public NonManagedCause setNonManagedCauseExtension(ExtensionType value) {
         this.nonManagedCauseExtension = value;
+        return this;
     }
 
 

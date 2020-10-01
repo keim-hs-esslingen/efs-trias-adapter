@@ -159,8 +159,9 @@ public class GroupOfLocations {
      *     {@link ExtensionType }
      *     
      */
-    public void setGroupOfLocationsExtension(ExtensionType value) {
+    public GroupOfLocations setGroupOfLocationsExtension(ExtensionType value) {
         this.groupOfLocationsExtension = value;
+        return this;
     }
 
 }

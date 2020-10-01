@@ -87,8 +87,9 @@ public class SpeedPercentile {
      * Sets the value of the threshold property.
      * 
      */
-    public void setThreshold(float value) {
+    public SpeedPercentile setThreshold(float value) {
         this.threshold = value;
+        return this;
     }
 
     /**
@@ -103,8 +104,9 @@ public class SpeedPercentile {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(float value) {
+    public SpeedPercentile setValue(float value) {
         this.value = value;
+        return this;
     }
 
     /**
@@ -127,8 +129,9 @@ public class SpeedPercentile {
      *     {@link ExtensionType }
      *     
      */
-    public void setSpeedPercentileExtension(ExtensionType value) {
+    public SpeedPercentile setSpeedPercentileExtension(ExtensionType value) {
         this.speedPercentileExtension = value;
+        return this;
     }
 
 }

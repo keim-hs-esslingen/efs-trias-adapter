@@ -94,8 +94,9 @@ public class OffsetDistance {
      *     {@link BigInteger }
      *     
      */
-    public void setOffsetDistance(BigInteger value) {
+    public OffsetDistance setOffsetDistance(BigInteger value) {
         this.offsetDistance = value;
+        return this;
     }
 
     /**
@@ -118,8 +119,9 @@ public class OffsetDistance {
      *     {@link ExtensionType }
      *     
      */
-    public void setOffsetDistanceExtension(ExtensionType value) {
+    public OffsetDistance setOffsetDistanceExtension(ExtensionType value) {
         this.offsetDistanceExtension = value;
+        return this;
     }
 
 }

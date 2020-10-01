@@ -99,8 +99,9 @@ public class EnvironmentalObstruction
      *     {@link Float }
      *     
      */
-    public void setDepth(Float value) {
+    public EnvironmentalObstruction setDepth(Float value) {
         this.depth = value;
+        return this;
     }
 
     /**
@@ -123,8 +124,9 @@ public class EnvironmentalObstruction
      *     {@link EnvironmentalObstructionTypeEnum }
      *     
      */
-    public void setEnvironmentalObstructionType(EnvironmentalObstructionTypeEnum value) {
+    public EnvironmentalObstruction setEnvironmentalObstructionType(EnvironmentalObstructionTypeEnum value) {
         this.environmentalObstructionType = value;
+        return this;
     }
 
     /**
@@ -147,8 +149,9 @@ public class EnvironmentalObstruction
      *     {@link ExtensionType }
      *     
      */
-    public void setEnvironmentalObstructionExtension(ExtensionType value) {
+    public EnvironmentalObstruction setEnvironmentalObstructionExtension(ExtensionType value) {
         this.environmentalObstructionExtension = value;
+        return this;
     }
 
 }

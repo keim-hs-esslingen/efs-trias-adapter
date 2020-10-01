@@ -104,8 +104,9 @@ public abstract class AlertCPoint {
      *     {@link String }
      *     
      */
-    public void setAlertCLocationCountryCode(String value) {
+    public AlertCPoint setAlertCLocationCountryCode(String value) {
         this.alertCLocationCountryCode = value;
+        return this;
     }
 
     /**
@@ -128,8 +129,9 @@ public abstract class AlertCPoint {
      *     {@link String }
      *     
      */
-    public void setAlertCLocationTableNumber(String value) {
+    public AlertCPoint setAlertCLocationTableNumber(String value) {
         this.alertCLocationTableNumber = value;
+        return this;
     }
 
     /**
@@ -152,8 +154,9 @@ public abstract class AlertCPoint {
      *     {@link String }
      *     
      */
-    public void setAlertCLocationTableVersion(String value) {
+    public AlertCPoint setAlertCLocationTableVersion(String value) {
         this.alertCLocationTableVersion = value;
+        return this;
     }
 
     /**
@@ -176,8 +179,9 @@ public abstract class AlertCPoint {
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCPointExtension(ExtensionType value) {
+    public AlertCPoint setAlertCPointExtension(ExtensionType value) {
         this.alertCPointExtension = value;
+        return this;
     }
 
 }

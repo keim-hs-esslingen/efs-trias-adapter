@@ -94,8 +94,9 @@ public abstract class RoadConditions
      *     {@link ExtensionType }
      *     
      */
-    public void setRoadConditionsExtension(ExtensionType value) {
+    public RoadConditions setRoadConditionsExtension(ExtensionType value) {
         this.roadConditionsExtension = value;
+        return this;
     }
 
 }

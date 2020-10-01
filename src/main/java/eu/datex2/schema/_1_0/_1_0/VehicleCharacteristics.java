@@ -139,8 +139,9 @@ public class VehicleCharacteristics {
      *     {@link FuelTypeEnum }
      *     
      */
-    public void setFuelType(FuelTypeEnum value) {
+    public VehicleCharacteristics setFuelType(FuelTypeEnum value) {
         this.fuelType = value;
+        return this;
     }
 
     /**
@@ -163,8 +164,9 @@ public class VehicleCharacteristics {
      *     {@link LoadTypeEnum }
      *     
      */
-    public void setLoadType(LoadTypeEnum value) {
+    public VehicleCharacteristics setLoadType(LoadTypeEnum value) {
         this.loadType = value;
+        return this;
     }
 
     /**
@@ -187,8 +189,9 @@ public class VehicleCharacteristics {
      *     {@link VehicleEquipmentEnum }
      *     
      */
-    public void setVehicleEquipment(VehicleEquipmentEnum value) {
+    public VehicleCharacteristics setVehicleEquipment(VehicleEquipmentEnum value) {
         this.vehicleEquipment = value;
+        return this;
     }
 
     /**
@@ -240,8 +243,9 @@ public class VehicleCharacteristics {
      *     {@link VehicleUsageEnum }
      *     
      */
-    public void setVehicleUsage(VehicleUsageEnum value) {
+    public VehicleCharacteristics setVehicleUsage(VehicleUsageEnum value) {
         this.vehicleUsage = value;
+        return this;
     }
 
     /**
@@ -438,8 +442,9 @@ public class VehicleCharacteristics {
      *     {@link ExtensionType }
      *     
      */
-    public void setVehicleCharacteristicsExtension(ExtensionType value) {
+    public VehicleCharacteristics setVehicleCharacteristicsExtension(ExtensionType value) {
         this.vehicleCharacteristicsExtension = value;
+        return this;
     }
 
 }

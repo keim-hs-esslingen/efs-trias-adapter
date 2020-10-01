@@ -65,11 +65,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 @XmlRootElement(name = "FacilityMonitoringPermissions", namespace = "http://www.siri.org.uk/siri")
 public class FacilityMonitoringPermissions
-    extends PermissionsStructure
+    extends Permissions
 {
 
     @XmlElement(name = "FacilityMonitoringPermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<FacilityMonitoringServicePermissionStructure> facilityMonitoringPermission;
+    protected List<FacilityMonitoringServicePermission> facilityMonitoringPermission;
 
     /**
      * Gets the value of the facilityMonitoringPermission property.
@@ -89,13 +89,13 @@ public class FacilityMonitoringPermissions
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link FacilityMonitoringServicePermissionStructure }
+     * {@link FacilityMonitoringServicePermission }
      * 
      * 
      */
-    public List<FacilityMonitoringServicePermissionStructure> getFacilityMonitoringPermission() {
+    public List<FacilityMonitoringServicePermission> getFacilityMonitoringPermission() {
         if (facilityMonitoringPermission == null) {
-            facilityMonitoringPermission = new ArrayList<FacilityMonitoringServicePermissionStructure>();
+            facilityMonitoringPermission = new ArrayList<FacilityMonitoringServicePermission>();
         }
         return this.facilityMonitoringPermission;
     }

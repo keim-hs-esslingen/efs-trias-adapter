@@ -73,11 +73,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ValidityConditionStructure }
+     * Create an instance of {@link ValidityCondition }
      * 
      */
-    public ValidityConditionStructure createValidityConditionStructure() {
-        return new ValidityConditionStructure();
+    public ValidityCondition createValidityConditionStructure() {
+        return new ValidityCondition();
     }
 
     /**
@@ -89,83 +89,83 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LinkProjectionStructure }
+     * Create an instance of {@link LinkProjection }
      * 
      */
-    public LinkProjectionStructure createLinkProjectionStructure() {
-        return new LinkProjectionStructure();
+    public LinkProjection createLinkProjectionStructure() {
+        return new LinkProjection();
     }
 
     /**
-     * Create an instance of {@link LocalServiceStructure }
+     * Create an instance of {@link LocalService }
      * 
      */
-    public LocalServiceStructure createLocalServiceStructure() {
-        return new LocalServiceStructure();
+    public LocalService createLocalServiceStructure() {
+        return new LocalService();
     }
 
     /**
-     * Create an instance of {@link ZoneProjectionStructure }
+     * Create an instance of {@link ZoneProjection }
      * 
      */
-    public ZoneProjectionStructure createZoneProjectionStructure() {
-        return new ZoneProjectionStructure();
+    public ZoneProjection createZoneProjectionStructure() {
+        return new ZoneProjection();
     }
 
     /**
-     * Create an instance of {@link PathJunctionRefStructure }
+     * Create an instance of {@link PathJunctionRef }
      * 
      */
-    public PathJunctionRefStructure createPathJunctionRefStructure() {
-        return new PathJunctionRefStructure();
+    public PathJunctionRef createPathJunctionRefStructure() {
+        return new PathJunctionRef();
     }
 
     /**
-     * Create an instance of {@link StopPlaceRefStructure }
+     * Create an instance of {@link StopPlaceRef }
      * 
      */
-    public StopPlaceRefStructure createStopPlaceRefStructure() {
-        return new StopPlaceRefStructure();
+    public StopPlaceRef createStopPlaceRefStructure() {
+        return new StopPlaceRef();
     }
 
     /**
-     * Create an instance of {@link AccessLinkRefStructure }
+     * Create an instance of {@link AccessLinkRef }
      * 
      */
-    public AccessLinkRefStructure createAccessLinkRefStructure() {
-        return new AccessLinkRefStructure();
+    public AccessLinkRef createAccessLinkRefStructure() {
+        return new AccessLinkRef();
     }
 
     /**
-     * Create an instance of {@link NavigationPathRefStructure }
+     * Create an instance of {@link NavigationPathRef }
      * 
      */
-    public NavigationPathRefStructure createNavigationPathRefStructure() {
-        return new NavigationPathRefStructure();
+    public NavigationPathRef createNavigationPathRefStructure() {
+        return new NavigationPathRef();
     }
 
     /**
-     * Create an instance of {@link InfoLinkStructure }
+     * Create an instance of {@link InfoLink }
      * 
      */
-    public InfoLinkStructure createInfoLinkStructure() {
-        return new InfoLinkStructure();
+    public InfoLink createInfoLinkStructure() {
+        return new InfoLink();
     }
 
     /**
-     * Create an instance of {@link PointProjectionStructure }
+     * Create an instance of {@link PointProjection }
      * 
      */
-    public PointProjectionStructure createPointProjectionStructure() {
-        return new PointProjectionStructure();
+    public PointProjection createPointProjectionStructure() {
+        return new PointProjection();
     }
 
     /**
-     * Create an instance of {@link PlaceEquipmentStructure }
+     * Create an instance of {@link PlaceEquipment }
      * 
      */
-    public PlaceEquipmentStructure createPlaceEquipmentStructure() {
-        return new PlaceEquipmentStructure();
+    public PlaceEquipment createPlaceEquipmentStructure() {
+        return new PlaceEquipment();
     }
 
     /**
@@ -177,267 +177,267 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StopPlaceSpaceRefStructure }
+     * Create an instance of {@link StopPlaceSpaceRef }
      * 
      */
-    public StopPlaceSpaceRefStructure createStopPlaceSpaceRefStructure() {
-        return new StopPlaceSpaceRefStructure();
+    public StopPlaceSpaceRef createStopPlaceSpaceRefStructure() {
+        return new StopPlaceSpaceRef();
     }
 
     /**
-     * Create an instance of {@link StopPlaceComponentRefStructure }
+     * Create an instance of {@link StopPlaceComponentRef }
      * 
      */
-    public StopPlaceComponentRefStructure createStopPlaceComponentRefStructure() {
-        return new StopPlaceComponentRefStructure();
+    public StopPlaceComponentRef createStopPlaceComponentRefStructure() {
+        return new StopPlaceComponentRef();
     }
 
     /**
-     * Create an instance of {@link TimebandStructure }
+     * Create an instance of {@link Timeband }
      * 
      */
-    public TimebandStructure createTimebandStructure() {
-        return new TimebandStructure();
+    public Timeband createTimebandStructure() {
+        return new Timeband();
     }
 
     /**
-     * Create an instance of {@link AliasStructure }
+     * Create an instance of {@link Alias }
      * 
      */
-    public AliasStructure createAliasStructure() {
-        return new AliasStructure();
+    public Alias createAliasStructure() {
+        return new Alias();
     }
 
     /**
-     * Create an instance of {@link CountryRefStructure }
+     * Create an instance of {@link CountryRef }
      * 
      */
-    public CountryRefStructure createCountryRefStructure() {
-        return new CountryRefStructure();
+    public CountryRef createCountryRefStructure() {
+        return new CountryRef();
     }
 
     /**
-     * Create an instance of {@link RegionRefStructure }
+     * Create an instance of {@link RegionRef }
      * 
      */
-    public RegionRefStructure createRegionRefStructure() {
-        return new RegionRefStructure();
+    public RegionRef createRegionRefStructure() {
+        return new RegionRef();
     }
 
     /**
-     * Create an instance of {@link FeatureIdRefStructure }
+     * Create an instance of {@link FeatureIdRef }
      * 
      */
-    public FeatureIdRefStructure createFeatureIdRefStructure() {
-        return new FeatureIdRefStructure();
+    public FeatureIdRef createFeatureIdRefStructure() {
+        return new FeatureIdRef();
     }
 
     /**
-     * Create an instance of {@link VehicleStoppingPositionRefStructure }
+     * Create an instance of {@link VehicleStoppingPositionRef }
      * 
      */
-    public VehicleStoppingPositionRefStructure createVehicleStoppingPositionRefStructure() {
-        return new VehicleStoppingPositionRefStructure();
+    public VehicleStoppingPositionRef createVehicleStoppingPositionRefStructure() {
+        return new VehicleStoppingPositionRef();
     }
 
     /**
-     * Create an instance of {@link AuthorityRefStructure }
+     * Create an instance of {@link AuthorityRef }
      * 
      */
-    public AuthorityRefStructure createAuthorityRefStructure() {
-        return new AuthorityRefStructure();
+    public AuthorityRef createAuthorityRefStructure() {
+        return new AuthorityRef();
     }
 
     /**
-     * Create an instance of {@link StopPathLinkRefStructure }
+     * Create an instance of {@link StopPathLinkRef }
      * 
      */
-    public StopPathLinkRefStructure createStopPathLinkRefStructure() {
-        return new StopPathLinkRefStructure();
+    public StopPathLinkRef createStopPathLinkRefStructure() {
+        return new StopPathLinkRef();
     }
 
     /**
-     * Create an instance of {@link AdministrativeAreaRefStructure }
+     * Create an instance of {@link AdministrativeAreaRef }
      * 
      */
-    public AdministrativeAreaRefStructure createAdministrativeAreaRefStructure() {
-        return new AdministrativeAreaRefStructure();
+    public AdministrativeAreaRef createAdministrativeAreaRefStructure() {
+        return new AdministrativeAreaRef();
     }
 
     /**
-     * Create an instance of {@link InfoLinksStructure }
+     * Create an instance of {@link InfoLinks }
      * 
      */
-    public InfoLinksStructure createInfoLinksStructure() {
-        return new InfoLinksStructure();
+    public InfoLinks createInfoLinksStructure() {
+        return new InfoLinks();
     }
 
     /**
-     * Create an instance of {@link AdministratorVersionedRefStructure }
+     * Create an instance of {@link AdministratorVersionedRef }
      * 
      */
-    public AdministratorVersionedRefStructure createAdministratorVersionedRefStructure() {
-        return new AdministratorVersionedRefStructure();
+    public AdministratorVersionedRef createAdministratorVersionedRefStructure() {
+        return new AdministratorVersionedRef();
     }
 
     /**
-     * Create an instance of {@link CheckPointStructure }
+     * Create an instance of {@link CheckPoint }
      * 
      */
-    public CheckPointStructure createCheckPointStructure() {
-        return new CheckPointStructure();
+    public CheckPoint createCheckPointStructure() {
+        return new CheckPoint();
     }
 
     /**
-     * Create an instance of {@link HalfOpenTimeRangeStructure }
+     * Create an instance of {@link HalfOpenTimeRange }
      * 
      */
-    public HalfOpenTimeRangeStructure createHalfOpenTimeRangeStructure() {
-        return new HalfOpenTimeRangeStructure();
+    public HalfOpenTimeRange createHalfOpenTimeRangeStructure() {
+        return new HalfOpenTimeRange();
     }
 
     /**
-     * Create an instance of {@link QuayRefStructure }
+     * Create an instance of {@link QuayRef }
      * 
      */
-    public QuayRefStructure createQuayRefStructure() {
-        return new QuayRefStructure();
+    public QuayRef createQuayRefStructure() {
+        return new QuayRef();
     }
 
     /**
-     * Create an instance of {@link AccessSpaceRefStructure }
+     * Create an instance of {@link AccessSpaceRef }
      * 
      */
-    public AccessSpaceRefStructure createAccessSpaceRefStructure() {
-        return new AccessSpaceRefStructure();
+    public AccessSpaceRef createAccessSpaceRefStructure() {
+        return new AccessSpaceRef();
     }
 
     /**
-     * Create an instance of {@link StopPlaceRefsStructure }
+     * Create an instance of {@link StopPlaceRefs }
      * 
      */
-    public StopPlaceRefsStructure createStopPlaceRefsStructure() {
-        return new StopPlaceRefsStructure();
+    public StopPlaceRefs createStopPlaceRefsStructure() {
+        return new StopPlaceRefs();
     }
 
     /**
-     * Create an instance of {@link CheckPointRefStructure }
+     * Create an instance of {@link CheckPointRef }
      * 
      */
-    public CheckPointRefStructure createCheckPointRefStructure() {
-        return new CheckPointRefStructure();
+    public CheckPointRef createCheckPointRefStructure() {
+        return new CheckPointRef();
     }
 
     /**
-     * Create an instance of {@link AdministratorRefStructure }
+     * Create an instance of {@link AdministratorRef }
      * 
      */
-    public AdministratorRefStructure createAdministratorRefStructure() {
-        return new AdministratorRefStructure();
+    public AdministratorRef createAdministratorRefStructure() {
+        return new AdministratorRef();
     }
 
     /**
-     * Create an instance of {@link NamespaceTypeRefStructure }
+     * Create an instance of {@link NamespaceTypeRef }
      * 
      */
-    public NamespaceTypeRefStructure createNamespaceTypeRefStructure() {
-        return new NamespaceTypeRefStructure();
+    public NamespaceTypeRef createNamespaceTypeRefStructure() {
+        return new NamespaceTypeRef();
     }
 
     /**
-     * Create an instance of {@link EquipmentTypeRefStructure }
+     * Create an instance of {@link EquipmentTypeRef }
      * 
      */
-    public EquipmentTypeRefStructure createEquipmentTypeRefStructure() {
-        return new EquipmentTypeRefStructure();
+    public EquipmentTypeRef createEquipmentTypeRefStructure() {
+        return new EquipmentTypeRef();
     }
 
     /**
-     * Create an instance of {@link AccessPathLinkRefStructure }
+     * Create an instance of {@link AccessPathLinkRef }
      * 
      */
-    public AccessPathLinkRefStructure createAccessPathLinkRefStructure() {
-        return new AccessPathLinkRefStructure();
+    public AccessPathLinkRef createAccessPathLinkRefStructure() {
+        return new AccessPathLinkRef();
     }
 
     /**
-     * Create an instance of {@link EquipmentRefStructure }
+     * Create an instance of {@link EquipmentRef }
      * 
      */
-    public EquipmentRefStructure createEquipmentRefStructure() {
-        return new EquipmentRefStructure();
+    public EquipmentRef createEquipmentRefStructure() {
+        return new EquipmentRef();
     }
 
     /**
-     * Create an instance of {@link AdministrativeAreaVersionedRefStructure }
+     * Create an instance of {@link AdministrativeAreaVersionedRef }
      * 
      */
-    public AdministrativeAreaVersionedRefStructure createAdministrativeAreaVersionedRefStructure() {
-        return new AdministrativeAreaVersionedRefStructure();
+    public AdministrativeAreaVersionedRef createAdministrativeAreaVersionedRefStructure() {
+        return new AdministrativeAreaVersionedRef();
     }
 
     /**
-     * Create an instance of {@link FeatureRefStructure }
+     * Create an instance of {@link FeatureRef }
      * 
      */
-    public FeatureRefStructure createFeatureRefStructure() {
-        return new FeatureRefStructure();
+    public FeatureRef createFeatureRefStructure() {
+        return new FeatureRef();
     }
 
     /**
-     * Create an instance of {@link StopPlaceEntranceRefStructure }
+     * Create an instance of {@link StopPlaceEntranceRef }
      * 
      */
-    public StopPlaceEntranceRefStructure createStopPlaceEntranceRefStructure() {
-        return new StopPlaceEntranceRefStructure();
+    public StopPlaceEntranceRef createStopPlaceEntranceRefStructure() {
+        return new StopPlaceEntranceRef();
     }
 
     /**
-     * Create an instance of {@link BoardingPositionRefStructure }
+     * Create an instance of {@link BoardingPositionRef }
      * 
      */
-    public BoardingPositionRefStructure createBoardingPositionRefStructure() {
-        return new BoardingPositionRefStructure();
+    public BoardingPositionRef createBoardingPositionRefStructure() {
+        return new BoardingPositionRef();
     }
 
     /**
-     * Create an instance of {@link ValidityConditionsStructure }
+     * Create an instance of {@link ValidityConditions }
      * 
      */
-    public ValidityConditionsStructure createValidityConditionsStructure() {
-        return new ValidityConditionsStructure();
+    public ValidityConditions createValidityConditionsStructure() {
+        return new ValidityConditions();
     }
 
     /**
-     * Create an instance of {@link VehicleStoppingPlaceRefStructure }
+     * Create an instance of {@link VehicleStoppingPlaceRef }
      * 
      */
-    public VehicleStoppingPlaceRefStructure createVehicleStoppingPlaceRefStructure() {
-        return new VehicleStoppingPlaceRefStructure();
+    public VehicleStoppingPlaceRef createVehicleStoppingPlaceRefStructure() {
+        return new VehicleStoppingPlaceRef();
     }
 
     /**
-     * Create an instance of {@link AdministrativeAreaRefsStructure }
+     * Create an instance of {@link AdministrativeAreaRefs }
      * 
      */
-    public AdministrativeAreaRefsStructure createAdministrativeAreaRefsStructure() {
-        return new AdministrativeAreaRefsStructure();
+    public AdministrativeAreaRefs createAdministrativeAreaRefsStructure() {
+        return new AdministrativeAreaRefs();
     }
 
     /**
-     * Create an instance of {@link LevelRefStructure }
+     * Create an instance of {@link LevelRef }
      * 
      */
-    public LevelRefStructure createLevelRefStructure() {
-        return new LevelRefStructure();
+    public LevelRef createLevelRefStructure() {
+        return new LevelRef();
     }
 
     /**
-     * Create an instance of {@link ValidityConditionStructure.Timebands }
+     * Create an instance of {@link ValidityCondition.Timebands }
      * 
      */
-    public ValidityConditionStructure.Timebands createValidityConditionStructureTimebands() {
-        return new ValidityConditionStructure.Timebands();
+    public ValidityCondition.Timebands createValidityConditionStructureTimebands() {
+        return new ValidityCondition.Timebands();
     }
 
     /**
@@ -449,117 +449,117 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LinkProjectionStructure.Line }
+     * Create an instance of {@link LinkProjection.Line }
      * 
      */
-    public LinkProjectionStructure.Line createLinkProjectionStructureLine() {
-        return new LinkProjectionStructure.Line();
+    public LinkProjection.Line createLinkProjectionStructureLine() {
+        return new LinkProjection.Line();
     }
 
     /**
-     * Create an instance of {@link LocalServiceStructure.FeatureRefs }
+     * Create an instance of {@link LocalService.FeatureRefs }
      * 
      */
-    public LocalServiceStructure.FeatureRefs createLocalServiceStructureFeatureRefs() {
-        return new LocalServiceStructure.FeatureRefs();
+    public LocalService.FeatureRefs createLocalServiceStructureFeatureRefs() {
+        return new LocalService.FeatureRefs();
     }
 
     /**
-     * Create an instance of {@link ZoneProjectionStructure.Boundary }
+     * Create an instance of {@link ZoneProjection.Boundary }
      * 
      */
-    public ZoneProjectionStructure.Boundary createZoneProjectionStructureBoundary() {
-        return new ZoneProjectionStructure.Boundary();
+    public ZoneProjection.Boundary createZoneProjectionStructureBoundary() {
+        return new ZoneProjection.Boundary();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PointProjectionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PointProjection }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "PointProjection")
-    public JAXBElement<PointProjectionStructure> createPointProjection(PointProjectionStructure value) {
-        return new JAXBElement<PointProjectionStructure>(_PointProjection_QNAME, PointProjectionStructure.class, null, value);
+    public JAXBElement<PointProjection> createPointProjection(PointProjection value) {
+        return new JAXBElement<PointProjection>(_PointProjection_QNAME, PointProjection.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PathJunctionRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PathJunctionRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "PathJunctionRef")
-    public JAXBElement<PathJunctionRefStructure> createPathJunctionRef(PathJunctionRefStructure value) {
-        return new JAXBElement<PathJunctionRefStructure>(_PathJunctionRef_QNAME, PathJunctionRefStructure.class, null, value);
+    public JAXBElement<PathJunctionRef> createPathJunctionRef(PathJunctionRef value) {
+        return new JAXBElement<PathJunctionRef>(_PathJunctionRef_QNAME, PathJunctionRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AccessLinkRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AccessLinkRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "AccessLinkRef")
-    public JAXBElement<AccessLinkRefStructure> createAccessLinkRef(AccessLinkRefStructure value) {
-        return new JAXBElement<AccessLinkRefStructure>(_AccessLinkRef_QNAME, AccessLinkRefStructure.class, null, value);
+    public JAXBElement<AccessLinkRef> createAccessLinkRef(AccessLinkRef value) {
+        return new JAXBElement<AccessLinkRef>(_AccessLinkRef_QNAME, AccessLinkRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NavigationPathRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NavigationPathRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "NavigationPathRef")
-    public JAXBElement<NavigationPathRefStructure> createNavigationPathRef(NavigationPathRefStructure value) {
-        return new JAXBElement<NavigationPathRefStructure>(_NavigationPathRef_QNAME, NavigationPathRefStructure.class, null, value);
+    public JAXBElement<NavigationPathRef> createNavigationPathRef(NavigationPathRef value) {
+        return new JAXBElement<NavigationPathRef>(_NavigationPathRef_QNAME, NavigationPathRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PlaceEquipmentStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PlaceEquipment }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "OtherPlaceEquipment")
-    public JAXBElement<PlaceEquipmentStructure> createOtherPlaceEquipment(PlaceEquipmentStructure value) {
-        return new JAXBElement<PlaceEquipmentStructure>(_OtherPlaceEquipment_QNAME, PlaceEquipmentStructure.class, null, value);
+    public JAXBElement<PlaceEquipment> createOtherPlaceEquipment(PlaceEquipment value) {
+        return new JAXBElement<PlaceEquipment>(_OtherPlaceEquipment_QNAME, PlaceEquipment.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ZoneProjectionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ZoneProjection }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "ZoneProjection")
-    public JAXBElement<ZoneProjectionStructure> createZoneProjection(ZoneProjectionStructure value) {
-        return new JAXBElement<ZoneProjectionStructure>(_ZoneProjection_QNAME, ZoneProjectionStructure.class, null, value);
+    public JAXBElement<ZoneProjection> createZoneProjection(ZoneProjection value) {
+        return new JAXBElement<ZoneProjection>(_ZoneProjection_QNAME, ZoneProjection.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InfoLinkStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InfoLink }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "InfoLink")
-    public JAXBElement<InfoLinkStructure> createInfoLink(InfoLinkStructure value) {
-        return new JAXBElement<InfoLinkStructure>(_InfoLink_QNAME, InfoLinkStructure.class, null, value);
+    public JAXBElement<InfoLink> createInfoLink(InfoLink value) {
+        return new JAXBElement<InfoLink>(_InfoLink_QNAME, InfoLink.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LocalServiceStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LocalService }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "LocalService")
-    public JAXBElement<LocalServiceStructure> createLocalService(LocalServiceStructure value) {
-        return new JAXBElement<LocalServiceStructure>(_LocalService_QNAME, LocalServiceStructure.class, null, value);
+    public JAXBElement<LocalService> createLocalService(LocalService value) {
+        return new JAXBElement<LocalService>(_LocalService_QNAME, LocalService.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LinkProjectionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LinkProjection }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "LinkProjection")
-    public JAXBElement<LinkProjectionStructure> createLinkProjection(LinkProjectionStructure value) {
-        return new JAXBElement<LinkProjectionStructure>(_LinkProjection_QNAME, LinkProjectionStructure.class, null, value);
+    public JAXBElement<LinkProjection> createLinkProjection(LinkProjection value) {
+        return new JAXBElement<LinkProjection>(_LinkProjection_QNAME, LinkProjection.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopPlaceRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopPlaceRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/ifopt", name = "StopPlaceRef")
-    public JAXBElement<StopPlaceRefStructure> createStopPlaceRef(StopPlaceRefStructure value) {
-        return new JAXBElement<StopPlaceRefStructure>(_StopPlaceRef_QNAME, StopPlaceRefStructure.class, null, value);
+    public JAXBElement<StopPlaceRef> createStopPlaceRef(StopPlaceRef value) {
+        return new JAXBElement<StopPlaceRef>(_StopPlaceRef_QNAME, StopPlaceRef.class, null, value);
     }
 
 }

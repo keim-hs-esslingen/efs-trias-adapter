@@ -97,8 +97,9 @@ public class ReferenceSettings {
      *     {@link String }
      *     
      */
-    public void setLocationSetReference(String value) {
+    public ReferenceSettings setLocationSetReference(String value) {
         this.locationSetReference = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class ReferenceSettings {
      *     {@link TrafficStatusEnum }
      *     
      */
-    public void setTrafficStatusDefault(TrafficStatusEnum value) {
+    public ReferenceSettings setTrafficStatusDefault(TrafficStatusEnum value) {
         this.trafficStatusDefault = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class ReferenceSettings {
      *     {@link ExtensionType }
      *     
      */
-    public void setReferenceSettingsExtension(ExtensionType value) {
+    public ReferenceSettings setReferenceSettingsExtension(ExtensionType value) {
         this.referenceSettingsExtension = value;
+        return this;
     }
 
 }

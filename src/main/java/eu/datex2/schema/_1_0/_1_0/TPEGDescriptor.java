@@ -145,8 +145,9 @@ public abstract class TPEGDescriptor {
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegdescriptorExtension(ExtensionType value) {
+    public TPEGDescriptor setTpegdescriptorExtension(ExtensionType value) {
         this.tpegdescriptorExtension = value;
+        return this;
     }
 
 

@@ -98,8 +98,9 @@ public abstract class TPEGPointLocation {
      *     {@link TPEGLoc02DirectionTypeEnum }
      *     
      */
-    public void setTpegDirection(TPEGLoc02DirectionTypeEnum value) {
+    public TPEGPointLocation setTpegDirection(TPEGLoc02DirectionTypeEnum value) {
         this.tpegDirection = value;
+        return this;
     }
 
     /**
@@ -122,8 +123,9 @@ public abstract class TPEGPointLocation {
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegpointLocationExtension(ExtensionType value) {
+    public TPEGPointLocation setTpegpointLocationExtension(ExtensionType value) {
         this.tpegpointLocationExtension = value;
+        return this;
     }
 
 }

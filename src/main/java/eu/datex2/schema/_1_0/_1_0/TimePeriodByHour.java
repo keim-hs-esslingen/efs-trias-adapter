@@ -97,8 +97,9 @@ public class TimePeriodByHour
      *     {@link Time }
      *     
      */
-    public void setStartTimeOfPeriod(Time value) {
+    public TimePeriodByHour setStartTimeOfPeriod(Time value) {
         this.startTimeOfPeriod = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class TimePeriodByHour
      *     {@link Time }
      *     
      */
-    public void setEndTimeOfPeriod(Time value) {
+    public TimePeriodByHour setEndTimeOfPeriod(Time value) {
         this.endTimeOfPeriod = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class TimePeriodByHour
      *     {@link ExtensionType }
      *     
      */
-    public void setTimePeriodByHourExtension(ExtensionType value) {
+    public TimePeriodByHour setTimePeriodByHourExtension(ExtensionType value) {
         this.timePeriodByHourExtension = value;
+        return this;
     }
 
 }

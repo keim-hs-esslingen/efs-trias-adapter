@@ -238,8 +238,9 @@ public abstract class StoZ {
      *     {@link WinterEquipmentAdviceEnum }
      *     
      */
-    public void setWinterEquipmentAdviceEnum(WinterEquipmentAdviceEnum value) {
+    public StoZ setWinterEquipmentAdviceEnum(WinterEquipmentAdviceEnum value) {
         this.winterEquipmentAdviceEnum = value;
+        return this;
     }
 
     /**
@@ -262,8 +263,9 @@ public abstract class StoZ {
      *     {@link VehicleEquipmentEnum }
      *     
      */
-    public void setVehicleEquipmentEnum(VehicleEquipmentEnum value) {
+    public StoZ setVehicleEquipmentEnum(VehicleEquipmentEnum value) {
         this.vehicleEquipmentEnum = value;
+        return this;
     }
 
     /**
@@ -286,8 +288,9 @@ public abstract class StoZ {
      *     {@link SourceTypeEnum }
      *     
      */
-    public void setSourceTypeEnum(SourceTypeEnum value) {
+    public StoZ setSourceTypeEnum(SourceTypeEnum value) {
         this.sourceTypeEnum = value;
+        return this;
     }
 
     /**
@@ -310,8 +313,9 @@ public abstract class StoZ {
      *     {@link TrafficStatusEnum }
      *     
      */
-    public void setTrafficStatusEnum(TrafficStatusEnum value) {
+    public StoZ setTrafficStatusEnum(TrafficStatusEnum value) {
         this.trafficStatusEnum = value;
+        return this;
     }
 
     /**
@@ -334,8 +338,9 @@ public abstract class StoZ {
      *     {@link UrgencyEnum }
      *     
      */
-    public void setUrgencyEnum(UrgencyEnum value) {
+    public StoZ setUrgencyEnum(UrgencyEnum value) {
         this.urgencyEnum = value;
+        return this;
     }
 
     /**
@@ -358,8 +363,9 @@ public abstract class StoZ {
      *     {@link TrafficDestinationTypeEnum }
      *     
      */
-    public void setTrafficDestinationTypeEnum(TrafficDestinationTypeEnum value) {
+    public StoZ setTrafficDestinationTypeEnum(TrafficDestinationTypeEnum value) {
         this.trafficDestinationTypeEnum = value;
+        return this;
     }
 
     /**
@@ -382,8 +388,9 @@ public abstract class StoZ {
      *     {@link SpeedAdviceEnum }
      *     
      */
-    public void setSpeedAdviceEnum(SpeedAdviceEnum value) {
+    public StoZ setSpeedAdviceEnum(SpeedAdviceEnum value) {
         this.speedAdviceEnum = value;
+        return this;
     }
 
     /**
@@ -406,8 +413,9 @@ public abstract class StoZ {
      *     {@link TransitServiceInformationEnum }
      *     
      */
-    public void setTransitServiceInformationEnum(TransitServiceInformationEnum value) {
+    public StoZ setTransitServiceInformationEnum(TransitServiceInformationEnum value) {
         this.transitServiceInformationEnum = value;
+        return this;
     }
 
     /**
@@ -430,8 +438,9 @@ public abstract class StoZ {
      *     {@link WarningAdviceEnum }
      *     
      */
-    public void setWarningAdviceEnum(WarningAdviceEnum value) {
+    public StoZ setWarningAdviceEnum(WarningAdviceEnum value) {
         this.warningAdviceEnum = value;
+        return this;
     }
 
     /**
@@ -454,8 +463,9 @@ public abstract class StoZ {
      *     {@link TrafficControlTypeEnum }
      *     
      */
-    public void setTrafficControlTypeEnum(TrafficControlTypeEnum value) {
+    public StoZ setTrafficControlTypeEnum(TrafficControlTypeEnum value) {
         this.trafficControlTypeEnum = value;
+        return this;
     }
 
     /**
@@ -478,8 +488,9 @@ public abstract class StoZ {
      *     {@link VehicleTypeEnum }
      *     
      */
-    public void setVehicleTypeEnum(VehicleTypeEnum value) {
+    public StoZ setVehicleTypeEnum(VehicleTypeEnum value) {
         this.vehicleTypeEnum = value;
+        return this;
     }
 
     /**
@@ -502,8 +513,9 @@ public abstract class StoZ {
      *     {@link VehicleObstructionTypeEnum }
      *     
      */
-    public void setVehicleObstructionTypeEnum(VehicleObstructionTypeEnum value) {
+    public StoZ setVehicleObstructionTypeEnum(VehicleObstructionTypeEnum value) {
         this.vehicleObstructionTypeEnum = value;
+        return this;
     }
 
     /**
@@ -526,8 +538,9 @@ public abstract class StoZ {
      *     {@link VMSFaultEnum }
      *     
      */
-    public void setVmsfaultEnum(VMSFaultEnum value) {
+    public StoZ setVmsfaultEnum(VMSFaultEnum value) {
         this.vmsfaultEnum = value;
+        return this;
     }
 
     /**
@@ -550,8 +563,9 @@ public abstract class StoZ {
      *     {@link WeatherRelatedRoadConditionTypeEnum }
      *     
      */
-    public void setWeatherRelatedRoadConditionTypeEnum(WeatherRelatedRoadConditionTypeEnum value) {
+    public StoZ setWeatherRelatedRoadConditionTypeEnum(WeatherRelatedRoadConditionTypeEnum value) {
         this.weatherRelatedRoadConditionTypeEnum = value;
+        return this;
     }
 
     /**
@@ -574,8 +588,9 @@ public abstract class StoZ {
      *     {@link SubjectTypeOfWorksEnum }
      *     
      */
-    public void setSubjectTypeOfWorksEnum(SubjectTypeOfWorksEnum value) {
+    public StoZ setSubjectTypeOfWorksEnum(SubjectTypeOfWorksEnum value) {
         this.subjectTypeOfWorksEnum = value;
+        return this;
     }
 
     /**
@@ -598,8 +613,9 @@ public abstract class StoZ {
      *     {@link WinterEquipmentRequirementEnum }
      *     
      */
-    public void setWinterEquipmentRequirementEnum(WinterEquipmentRequirementEnum value) {
+    public StoZ setWinterEquipmentRequirementEnum(WinterEquipmentRequirementEnum value) {
         this.winterEquipmentRequirementEnum = value;
+        return this;
     }
 
     /**
@@ -622,8 +638,9 @@ public abstract class StoZ {
      *     {@link VehicleStatusEnum }
      *     
      */
-    public void setVehicleStatusEnum(VehicleStatusEnum value) {
+    public StoZ setVehicleStatusEnum(VehicleStatusEnum value) {
         this.vehicleStatusEnum = value;
+        return this;
     }
 
     /**
@@ -646,8 +663,9 @@ public abstract class StoZ {
      *     {@link VehicleUsageEnum }
      *     
      */
-    public void setVehicleUsageEnum(VehicleUsageEnum value) {
+    public StoZ setVehicleUsageEnum(VehicleUsageEnum value) {
         this.vehicleUsageEnum = value;
+        return this;
     }
 
     /**
@@ -670,8 +688,9 @@ public abstract class StoZ {
      *     {@link TravelTimeTypeEnum }
      *     
      */
-    public void setTravelTimeTypeEnum(TravelTimeTypeEnum value) {
+    public StoZ setTravelTimeTypeEnum(TravelTimeTypeEnum value) {
         this.travelTimeTypeEnum = value;
+        return this;
     }
 
     /**
@@ -694,8 +713,9 @@ public abstract class StoZ {
      *     {@link ServiceDisruptionTypeEnum }
      *     
      */
-    public void setServiceDisruptionTypeEnum(ServiceDisruptionTypeEnum value) {
+    public StoZ setServiceDisruptionTypeEnum(ServiceDisruptionTypeEnum value) {
         this.serviceDisruptionTypeEnum = value;
+        return this;
     }
 
     /**
@@ -718,8 +738,9 @@ public abstract class StoZ {
      *     {@link TransitServiceTypeEnum }
      *     
      */
-    public void setTransitServiceTypeEnum(TransitServiceTypeEnum value) {
+    public StoZ setTransitServiceTypeEnum(TransitServiceTypeEnum value) {
         this.transitServiceTypeEnum = value;
+        return this;
     }
 
     /**
@@ -742,8 +763,9 @@ public abstract class StoZ {
      *     {@link TrafficRestrictionTypeEnum }
      *     
      */
-    public void setTrafficRestrictionTypeEnum(TrafficRestrictionTypeEnum value) {
+    public StoZ setTrafficRestrictionTypeEnum(TrafficRestrictionTypeEnum value) {
         this.trafficRestrictionTypeEnum = value;
+        return this;
     }
 
     /**
@@ -766,8 +788,9 @@ public abstract class StoZ {
      *     {@link ValidityStatusEnum }
      *     
      */
-    public void setValidityStatusEnum(ValidityStatusEnum value) {
+    public StoZ setValidityStatusEnum(ValidityStatusEnum value) {
         this.validityStatusEnum = value;
+        return this;
     }
 
     /**
@@ -790,8 +813,9 @@ public abstract class StoZ {
      *     {@link TrafficControlEquipmentTypeEnum }
      *     
      */
-    public void setTrafficControlEquipmentTypeEnum(TrafficControlEquipmentTypeEnum value) {
+    public StoZ setTrafficControlEquipmentTypeEnum(TrafficControlEquipmentTypeEnum value) {
         this.trafficControlEquipmentTypeEnum = value;
+        return this;
     }
 
     /**
@@ -814,8 +838,9 @@ public abstract class StoZ {
      *     {@link TrafficControlOptionsEnum }
      *     
      */
-    public void setTrafficControlOptionsEnum(TrafficControlOptionsEnum value) {
+    public StoZ setTrafficControlOptionsEnum(TrafficControlOptionsEnum value) {
         this.trafficControlOptionsEnum = value;
+        return this;
     }
 
     /**
@@ -838,8 +863,9 @@ public abstract class StoZ {
      *     {@link ValueCompareOperatorEnum }
      *     
      */
-    public void setValueCompareOperatorEnum(ValueCompareOperatorEnum value) {
+    public StoZ setValueCompareOperatorEnum(ValueCompareOperatorEnum value) {
         this.valueCompareOperatorEnum = value;
+        return this;
     }
 
     /**
@@ -862,8 +888,9 @@ public abstract class StoZ {
      *     {@link ExtensionType }
      *     
      */
-    public void setStoZExtension(ExtensionType value) {
+    public StoZ setStoZExtension(ExtensionType value) {
         this.stoZExtension = value;
+        return this;
     }
 
     /**
@@ -886,8 +913,9 @@ public abstract class StoZ {
      *     {@link TravelTimeTrendTypeEnum }
      *     
      */
-    public void setTravelTimeTrendTypeEnum(TravelTimeTrendTypeEnum value) {
+    public StoZ setTravelTimeTrendTypeEnum(TravelTimeTrendTypeEnum value) {
         this.travelTimeTrendTypeEnum = value;
+        return this;
     }
 
     /**
@@ -910,8 +938,9 @@ public abstract class StoZ {
      *     {@link VMSTypeEnum }
      *     
      */
-    public void setVmstypeEnum(VMSTypeEnum value) {
+    public StoZ setVmstypeEnum(VMSTypeEnum value) {
         this.vmstypeEnum = value;
+        return this;
     }
 
     /**
@@ -934,8 +963,9 @@ public abstract class StoZ {
      *     {@link TrafficTrendTypeEnum }
      *     
      */
-    public void setTrafficTrendTypeEnum(TrafficTrendTypeEnum value) {
+    public StoZ setTrafficTrendTypeEnum(TrafficTrendTypeEnum value) {
         this.trafficTrendTypeEnum = value;
+        return this;
     }
 
     /**
@@ -958,8 +988,9 @@ public abstract class StoZ {
      *     {@link WeekOfMonthEnum }
      *     
      */
-    public void setWeekOfMonthEnum(WeekOfMonthEnum value) {
+    public StoZ setWeekOfMonthEnum(WeekOfMonthEnum value) {
         this.weekOfMonthEnum = value;
+        return this;
     }
 
 }

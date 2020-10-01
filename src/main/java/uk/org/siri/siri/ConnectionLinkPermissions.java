@@ -71,7 +71,7 @@ public class ConnectionLinkPermissions {
     @XmlElement(name = "AllowAll", namespace = "http://www.siri.org.uk/siri")
     protected Boolean allowAll;
     @XmlElement(name = "ConnectionLinkPermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<ConnectionLinkPermissionStructure> connectionLinkPermission;
+    protected List<ConnectionLinkPermission> connectionLinkPermission;
 
     /**
      * Gets the value of the allowAll property.
@@ -93,8 +93,9 @@ public class ConnectionLinkPermissions {
      *     {@link Boolean }
      *     
      */
-    public void setAllowAll(Boolean value) {
+    public ConnectionLinkPermissions setAllowAll(Boolean value) {
         this.allowAll = value;
+        return this;
     }
 
     /**
@@ -115,13 +116,13 @@ public class ConnectionLinkPermissions {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ConnectionLinkPermissionStructure }
+     * {@link ConnectionLinkPermission }
      * 
      * 
      */
-    public List<ConnectionLinkPermissionStructure> getConnectionLinkPermission() {
+    public List<ConnectionLinkPermission> getConnectionLinkPermission() {
         if (connectionLinkPermission == null) {
-            connectionLinkPermission = new ArrayList<ConnectionLinkPermissionStructure>();
+            connectionLinkPermission = new ArrayList<ConnectionLinkPermission>();
         }
         return this.connectionLinkPermission;
     }

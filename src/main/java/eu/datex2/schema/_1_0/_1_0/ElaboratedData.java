@@ -114,8 +114,9 @@ public class ElaboratedData {
      *     {@link Boolean }
      *     
      */
-    public void setForecast(Boolean value) {
+    public ElaboratedData setForecast(Boolean value) {
         this.forecast = value;
+        return this;
     }
 
     /**
@@ -138,8 +139,9 @@ public class ElaboratedData {
      *     {@link SourceInformation }
      *     
      */
-    public void setSourceInformation(SourceInformation value) {
+    public ElaboratedData setSourceInformation(SourceInformation value) {
         this.sourceInformation = value;
+        return this;
     }
 
     /**
@@ -162,8 +164,9 @@ public class ElaboratedData {
      *     {@link Validity }
      *     
      */
-    public void setValidity(Validity value) {
+    public ElaboratedData setValidity(Validity value) {
         this.validity = value;
+        return this;
     }
 
     /**
@@ -186,8 +189,9 @@ public class ElaboratedData {
      *     {@link BasicDataValue }
      *     
      */
-    public void setBasicDataValue(BasicDataValue value) {
+    public ElaboratedData setBasicDataValue(BasicDataValue value) {
         this.basicDataValue = value;
+        return this;
     }
 
     /**
@@ -210,8 +214,9 @@ public class ElaboratedData {
      *     {@link ExtensionType }
      *     
      */
-    public void setElaboratedDataExtension(ExtensionType value) {
+    public ElaboratedData setElaboratedDataExtension(ExtensionType value) {
         this.elaboratedDataExtension = value;
+        return this;
     }
 
     /**
@@ -234,8 +239,9 @@ public class ElaboratedData {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public ElaboratedData setId(String value) {
         this.id = value;
+        return this;
     }
 
 }

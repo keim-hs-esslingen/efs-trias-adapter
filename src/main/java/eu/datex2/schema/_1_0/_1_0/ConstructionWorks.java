@@ -95,8 +95,9 @@ public class ConstructionWorks
      *     {@link ConstructionWorkTypeEnum }
      *     
      */
-    public void setConstructionWorkType(ConstructionWorkTypeEnum value) {
+    public ConstructionWorks setConstructionWorkType(ConstructionWorkTypeEnum value) {
         this.constructionWorkType = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class ConstructionWorks
      *     {@link ExtensionType }
      *     
      */
-    public void setConstructionWorksExtension(ExtensionType value) {
+    public ConstructionWorks setConstructionWorksExtension(ExtensionType value) {
         this.constructionWorksExtension = value;
+        return this;
     }
 
 }

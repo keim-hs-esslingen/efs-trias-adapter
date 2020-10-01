@@ -208,8 +208,9 @@ public abstract class AtoD {
      *     {@link DayGroupEnum }
      *     
      */
-    public void setDayGroupEnum(DayGroupEnum value) {
+    public AtoD setDayGroupEnum(DayGroupEnum value) {
         this.dayGroupEnum = value;
+        return this;
     }
 
     /**
@@ -232,8 +233,9 @@ public abstract class AtoD {
      *     {@link ComputationMethodEnum }
      *     
      */
-    public void setComputationMethodEnum(ComputationMethodEnum value) {
+    public AtoD setComputationMethodEnum(ComputationMethodEnum value) {
         this.computationMethodEnum = value;
+        return this;
     }
 
     /**
@@ -256,8 +258,9 @@ public abstract class AtoD {
      *     {@link ExtensionType }
      *     
      */
-    public void setAtoDExtension(ExtensionType value) {
+    public AtoD setAtoDExtension(ExtensionType value) {
         this.atoDExtension = value;
+        return this;
     }
 
     /**
@@ -280,8 +283,9 @@ public abstract class AtoD {
      *     {@link CarParkConfigurationEnum }
      *     
      */
-    public void setCarParkConfigurationEnum(CarParkConfigurationEnum value) {
+    public AtoD setCarParkConfigurationEnum(CarParkConfigurationEnum value) {
         this.carParkConfigurationEnum = value;
+        return this;
     }
 
     /**
@@ -304,8 +308,9 @@ public abstract class AtoD {
      *     {@link AuthorityOperationTypeEnum }
      *     
      */
-    public void setAuthorityOperationTypeEnum(AuthorityOperationTypeEnum value) {
+    public AtoD setAuthorityOperationTypeEnum(AuthorityOperationTypeEnum value) {
         this.authorityOperationTypeEnum = value;
+        return this;
     }
 
     /**
@@ -328,8 +333,9 @@ public abstract class AtoD {
      *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperatorEnum(ComparisonOperatorEnum value) {
+    public AtoD setComparisonOperatorEnum(ComparisonOperatorEnum value) {
         this.comparisonOperatorEnum = value;
+        return this;
     }
 
     /**
@@ -352,8 +358,9 @@ public abstract class AtoD {
      *     {@link DataClassEnum }
      *     
      */
-    public void setDataClassEnum(DataClassEnum value) {
+    public AtoD setDataClassEnum(DataClassEnum value) {
         this.dataClassEnum = value;
+        return this;
     }
 
     /**
@@ -376,8 +383,9 @@ public abstract class AtoD {
      *     {@link AbnormalTrafficTypeEnum }
      *     
      */
-    public void setAbnormalTrafficTypeEnum(AbnormalTrafficTypeEnum value) {
+    public AtoD setAbnormalTrafficTypeEnum(AbnormalTrafficTypeEnum value) {
         this.abnormalTrafficTypeEnum = value;
+        return this;
     }
 
     /**
@@ -400,8 +408,9 @@ public abstract class AtoD {
      *     {@link DelaysTypeEnum }
      *     
      */
-    public void setDelaysTypeEnum(DelaysTypeEnum value) {
+    public AtoD setDelaysTypeEnum(DelaysTypeEnum value) {
         this.delaysTypeEnum = value;
+        return this;
     }
 
     /**
@@ -424,8 +433,9 @@ public abstract class AtoD {
      *     {@link DiversionAdviceEnum }
      *     
      */
-    public void setDiversionAdviceEnum(DiversionAdviceEnum value) {
+    public AtoD setDiversionAdviceEnum(DiversionAdviceEnum value) {
         this.diversionAdviceEnum = value;
+        return this;
     }
 
     /**
@@ -448,8 +458,9 @@ public abstract class AtoD {
      *     {@link ConfidentialityValueEnum }
      *     
      */
-    public void setConfidentialityValueEnum(ConfidentialityValueEnum value) {
+    public AtoD setConfidentialityValueEnum(ConfidentialityValueEnum value) {
         this.confidentialityValueEnum = value;
+        return this;
     }
 
     /**
@@ -472,8 +483,9 @@ public abstract class AtoD {
      *     {@link CountryEnum }
      *     
      */
-    public void setCountryEnum(CountryEnum value) {
+    public AtoD setCountryEnum(CountryEnum value) {
         this.countryEnum = value;
+        return this;
     }
 
     /**
@@ -496,8 +508,9 @@ public abstract class AtoD {
      *     {@link DatexPictogramEnum }
      *     
      */
-    public void setDatexPictogramEnum(DatexPictogramEnum value) {
+    public AtoD setDatexPictogramEnum(DatexPictogramEnum value) {
         this.datexPictogramEnum = value;
+        return this;
     }
 
     /**
@@ -520,8 +533,9 @@ public abstract class AtoD {
      *     {@link CarParkStatusEnum }
      *     
      */
-    public void setCarParkStatusEnum(CarParkStatusEnum value) {
+    public AtoD setCarParkStatusEnum(CarParkStatusEnum value) {
         this.carParkStatusEnum = value;
+        return this;
     }
 
     /**
@@ -544,8 +558,9 @@ public abstract class AtoD {
      *     {@link AnimalPresenceTypeEnum }
      *     
      */
-    public void setAnimalPresenceTypeEnum(AnimalPresenceTypeEnum value) {
+    public AtoD setAnimalPresenceTypeEnum(AnimalPresenceTypeEnum value) {
         this.animalPresenceTypeEnum = value;
+        return this;
     }
 
     /**
@@ -568,8 +583,9 @@ public abstract class AtoD {
      *     {@link DisturbanceActivityTypeEnum }
      *     
      */
-    public void setDisturbanceActivityTypeEnum(DisturbanceActivityTypeEnum value) {
+    public AtoD setDisturbanceActivityTypeEnum(DisturbanceActivityTypeEnum value) {
         this.disturbanceActivityTypeEnum = value;
+        return this;
     }
 
     /**
@@ -592,8 +608,9 @@ public abstract class AtoD {
      *     {@link ConstructionWorkTypeEnum }
      *     
      */
-    public void setConstructionWorkTypeEnum(ConstructionWorkTypeEnum value) {
+    public AtoD setConstructionWorkTypeEnum(ConstructionWorkTypeEnum value) {
         this.constructionWorkTypeEnum = value;
+        return this;
     }
 
     /**
@@ -616,8 +633,9 @@ public abstract class AtoD {
      *     {@link DelayCodeEnum }
      *     
      */
-    public void setDelayCodeEnum(DelayCodeEnum value) {
+    public AtoD setDelayCodeEnum(DelayCodeEnum value) {
         this.delayCodeEnum = value;
+        return this;
     }
 
     /**
@@ -640,8 +658,9 @@ public abstract class AtoD {
      *     {@link DayEnum }
      *     
      */
-    public void setDayEnum(DayEnum value) {
+    public AtoD setDayEnum(DayEnum value) {
         this.dayEnum = value;
+        return this;
     }
 
     /**
@@ -664,8 +683,9 @@ public abstract class AtoD {
      *     {@link CauseTypeEnum }
      *     
      */
-    public void setCauseTypeEnum(CauseTypeEnum value) {
+    public AtoD setCauseTypeEnum(CauseTypeEnum value) {
         this.causeTypeEnum = value;
+        return this;
     }
 
     /**
@@ -688,8 +708,9 @@ public abstract class AtoD {
      *     {@link AccidentTypeEnum }
      *     
      */
-    public void setAccidentTypeEnum(AccidentTypeEnum value) {
+    public AtoD setAccidentTypeEnum(AccidentTypeEnum value) {
         this.accidentTypeEnum = value;
+        return this;
     }
 
     /**
@@ -712,8 +733,9 @@ public abstract class AtoD {
      *     {@link DangerousGoodRegulationsEnum }
      *     
      */
-    public void setDangerousGoodRegulationsEnum(DangerousGoodRegulationsEnum value) {
+    public AtoD setDangerousGoodRegulationsEnum(DangerousGoodRegulationsEnum value) {
         this.dangerousGoodRegulationsEnum = value;
+        return this;
     }
 
     /**
@@ -736,8 +758,9 @@ public abstract class AtoD {
      *     {@link AreaOfInterestEnum }
      *     
      */
-    public void setAreaOfInterestEnum(AreaOfInterestEnum value) {
+    public AtoD setAreaOfInterestEnum(AreaOfInterestEnum value) {
         this.areaOfInterestEnum = value;
+        return this;
     }
 
     /**
@@ -760,8 +783,9 @@ public abstract class AtoD {
      *     {@link AccidentCauseEnum }
      *     
      */
-    public void setAccidentCauseEnum(AccidentCauseEnum value) {
+    public AtoD setAccidentCauseEnum(AccidentCauseEnum value) {
         this.accidentCauseEnum = value;
+        return this;
     }
 
     /**
@@ -784,8 +808,9 @@ public abstract class AtoD {
      *     {@link DrivingConditionTypeEnum }
      *     
      */
-    public void setDrivingConditionTypeEnum(DrivingConditionTypeEnum value) {
+    public AtoD setDrivingConditionTypeEnum(DrivingConditionTypeEnum value) {
         this.drivingConditionTypeEnum = value;
+        return this;
     }
 
 }

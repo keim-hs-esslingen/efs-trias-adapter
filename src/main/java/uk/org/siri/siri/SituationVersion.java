@@ -85,8 +85,9 @@ public class SituationVersion {
      *     {@link BigInteger }
      *     
      */
-    public void setValue(BigInteger value) {
+    public SituationVersion setValue(BigInteger value) {
         this.value = value;
+        return this;
     }
 
 }

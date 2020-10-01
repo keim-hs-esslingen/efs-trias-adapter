@@ -193,8 +193,9 @@ public abstract class NtoR {
      *     {@link PrecipitationTypeEnum }
      *     
      */
-    public void setPrecipitationTypeEnum(PrecipitationTypeEnum value) {
+    public NtoR setPrecipitationTypeEnum(PrecipitationTypeEnum value) {
         this.precipitationTypeEnum = value;
+        return this;
     }
 
     /**
@@ -217,8 +218,9 @@ public abstract class NtoR {
      *     {@link PoorRoadInfrastructureEnum }
      *     
      */
-    public void setPoorRoadInfrastructureEnum(PoorRoadInfrastructureEnum value) {
+    public NtoR setPoorRoadInfrastructureEnum(PoorRoadInfrastructureEnum value) {
         this.poorRoadInfrastructureEnum = value;
+        return this;
     }
 
     /**
@@ -241,8 +243,9 @@ public abstract class NtoR {
      *     {@link RoadMaintenanceTypeEnum }
      *     
      */
-    public void setRoadMaintenanceTypeEnum(RoadMaintenanceTypeEnum value) {
+    public NtoR setRoadMaintenanceTypeEnum(RoadMaintenanceTypeEnum value) {
         this.roadMaintenanceTypeEnum = value;
+        return this;
     }
 
     /**
@@ -265,8 +268,9 @@ public abstract class NtoR {
      *     {@link ExtensionType }
      *     
      */
-    public void setNtoRExtension(ExtensionType value) {
+    public NtoR setNtoRExtension(ExtensionType value) {
         this.ntoRExtension = value;
+        return this;
     }
 
     /**
@@ -289,8 +293,9 @@ public abstract class NtoR {
      *     {@link RoadsideAssistanceTypeEnum }
      *     
      */
-    public void setRoadsideAssistanceTypeEnum(RoadsideAssistanceTypeEnum value) {
+    public NtoR setRoadsideAssistanceTypeEnum(RoadsideAssistanceTypeEnum value) {
         this.roadsideAssistanceTypeEnum = value;
+        return this;
     }
 
     /**
@@ -313,8 +318,9 @@ public abstract class NtoR {
      *     {@link PublicEventTypeEnum }
      *     
      */
-    public void setPublicEventTypeEnum(PublicEventTypeEnum value) {
+    public NtoR setPublicEventTypeEnum(PublicEventTypeEnum value) {
         this.publicEventTypeEnum = value;
+        return this;
     }
 
     /**
@@ -337,8 +343,9 @@ public abstract class NtoR {
      *     {@link RoadworksScaleEnum }
      *     
      */
-    public void setRoadworksScaleEnum(RoadworksScaleEnum value) {
+    public NtoR setRoadworksScaleEnum(RoadworksScaleEnum value) {
         this.roadworksScaleEnum = value;
+        return this;
     }
 
     /**
@@ -361,8 +368,9 @@ public abstract class NtoR {
      *     {@link OperatorActionStatusEnum }
      *     
      */
-    public void setOperatorActionStatusEnum(OperatorActionStatusEnum value) {
+    public NtoR setOperatorActionStatusEnum(OperatorActionStatusEnum value) {
         this.operatorActionStatusEnum = value;
+        return this;
     }
 
     /**
@@ -385,8 +393,9 @@ public abstract class NtoR {
      *     {@link OverallImpactEnum }
      *     
      */
-    public void setOverallImpactEnum(OverallImpactEnum value) {
+    public NtoR setOverallImpactEnum(OverallImpactEnum value) {
         this.overallImpactEnum = value;
+        return this;
     }
 
     /**
@@ -409,8 +418,9 @@ public abstract class NtoR {
      *     {@link ProbabilityOfOccurrenceEnum }
      *     
      */
-    public void setProbabilityOfOccurrenceEnum(ProbabilityOfOccurrenceEnum value) {
+    public NtoR setProbabilityOfOccurrenceEnum(ProbabilityOfOccurrenceEnum value) {
         this.probabilityOfOccurrenceEnum = value;
+        return this;
     }
 
     /**
@@ -433,8 +443,9 @@ public abstract class NtoR {
      *     {@link NetworkManagementTypeEnum }
      *     
      */
-    public void setNetworkManagementTypeEnum(NetworkManagementTypeEnum value) {
+    public NtoR setNetworkManagementTypeEnum(NetworkManagementTypeEnum value) {
         this.networkManagementTypeEnum = value;
+        return this;
     }
 
     /**
@@ -457,8 +468,9 @@ public abstract class NtoR {
      *     {@link PeriodByPhaseOfDayEnum }
      *     
      */
-    public void setPeriodByPhaseOfDayEnum(PeriodByPhaseOfDayEnum value) {
+    public NtoR setPeriodByPhaseOfDayEnum(PeriodByPhaseOfDayEnum value) {
         this.periodByPhaseOfDayEnum = value;
+        return this;
     }
 
     /**
@@ -481,8 +493,9 @@ public abstract class NtoR {
      *     {@link PlacesAdviceEnum }
      *     
      */
-    public void setPlacesAdviceEnum(PlacesAdviceEnum value) {
+    public NtoR setPlacesAdviceEnum(PlacesAdviceEnum value) {
         this.placesAdviceEnum = value;
+        return this;
     }
 
     /**
@@ -505,8 +518,9 @@ public abstract class NtoR {
      *     {@link RoadworksDurationEnum }
      *     
      */
-    public void setRoadworksDurationEnum(RoadworksDurationEnum value) {
+    public NtoR setRoadworksDurationEnum(RoadworksDurationEnum value) {
         this.roadworksDurationEnum = value;
+        return this;
     }
 
     /**
@@ -529,8 +543,9 @@ public abstract class NtoR {
      *     {@link RelativeTrafficFlowEnum }
      *     
      */
-    public void setRelativeTrafficFlowEnum(RelativeTrafficFlowEnum value) {
+    public NtoR setRelativeTrafficFlowEnum(RelativeTrafficFlowEnum value) {
         this.relativeTrafficFlowEnum = value;
+        return this;
     }
 
     /**
@@ -553,8 +568,9 @@ public abstract class NtoR {
      *     {@link ObstructionTypeEnum }
      *     
      */
-    public void setObstructionTypeEnum(ObstructionTypeEnum value) {
+    public NtoR setObstructionTypeEnum(ObstructionTypeEnum value) {
         this.obstructionTypeEnum = value;
+        return this;
     }
 
     /**
@@ -577,8 +593,9 @@ public abstract class NtoR {
      *     {@link ReroutingTypeEnum }
      *     
      */
-    public void setReroutingTypeEnum(ReroutingTypeEnum value) {
+    public NtoR setReroutingTypeEnum(ReroutingTypeEnum value) {
         this.reroutingTypeEnum = value;
+        return this;
     }
 
     /**
@@ -601,8 +618,9 @@ public abstract class NtoR {
      *     {@link PoorEnvironmentTypeEnum }
      *     
      */
-    public void setPoorEnvironmentTypeEnum(PoorEnvironmentTypeEnum value) {
+    public NtoR setPoorEnvironmentTypeEnum(PoorEnvironmentTypeEnum value) {
         this.poorEnvironmentTypeEnum = value;
+        return this;
     }
 
     /**
@@ -625,8 +643,9 @@ public abstract class NtoR {
      *     {@link PersonCategoryEnum }
      *     
      */
-    public void setPersonCategoryEnum(PersonCategoryEnum value) {
+    public NtoR setPersonCategoryEnum(PersonCategoryEnum value) {
         this.personCategoryEnum = value;
+        return this;
     }
 
     /**
@@ -649,8 +668,9 @@ public abstract class NtoR {
      *     {@link PollutantTypeEnum }
      *     
      */
-    public void setPollutantTypeEnum(PollutantTypeEnum value) {
+    public NtoR setPollutantTypeEnum(PollutantTypeEnum value) {
         this.pollutantTypeEnum = value;
+        return this;
     }
 
     /**
@@ -673,8 +693,9 @@ public abstract class NtoR {
      *     {@link OperatorActionOriginEnum }
      *     
      */
-    public void setOperatorActionOriginEnum(OperatorActionOriginEnum value) {
+    public NtoR setOperatorActionOriginEnum(OperatorActionOriginEnum value) {
         this.operatorActionOriginEnum = value;
+        return this;
     }
 
     /**
@@ -697,8 +718,9 @@ public abstract class NtoR {
      *     {@link NonWeatherRelatedRoadConditionTypeEnum }
      *     
      */
-    public void setNonWeatherRelatedRoadConditionTypeEnum(NonWeatherRelatedRoadConditionTypeEnum value) {
+    public NtoR setNonWeatherRelatedRoadConditionTypeEnum(NonWeatherRelatedRoadConditionTypeEnum value) {
         this.nonWeatherRelatedRoadConditionTypeEnum = value;
+        return this;
     }
 
 }

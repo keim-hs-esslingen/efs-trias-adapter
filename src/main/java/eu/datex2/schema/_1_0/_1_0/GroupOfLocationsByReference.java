@@ -93,8 +93,9 @@ public class GroupOfLocationsByReference
      *     {@link String }
      *     
      */
-    public void setPredefinedLocationSetReference(String value) {
+    public GroupOfLocationsByReference setPredefinedLocationSetReference(String value) {
         this.predefinedLocationSetReference = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class GroupOfLocationsByReference
      *     {@link ExtensionType }
      *     
      */
-    public void setGroupOfLocationsByReferenceExtension(ExtensionType value) {
+    public GroupOfLocationsByReference setGroupOfLocationsByReferenceExtension(ExtensionType value) {
         this.groupOfLocationsByReferenceExtension = value;
+        return this;
     }
 
 }

@@ -71,7 +71,7 @@ public class LinePermissions {
     @XmlElement(name = "AllowAll", namespace = "http://www.siri.org.uk/siri")
     protected Boolean allowAll;
     @XmlElement(name = "LinePermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<LinePermissionStructure> linePermission;
+    protected List<LinePermission> linePermission;
 
     /**
      * Gets the value of the allowAll property.
@@ -93,8 +93,9 @@ public class LinePermissions {
      *     {@link Boolean }
      *     
      */
-    public void setAllowAll(Boolean value) {
+    public LinePermissions setAllowAll(Boolean value) {
         this.allowAll = value;
+        return this;
     }
 
     /**
@@ -115,13 +116,13 @@ public class LinePermissions {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link LinePermissionStructure }
+     * {@link LinePermission }
      * 
      * 
      */
-    public List<LinePermissionStructure> getLinePermission() {
+    public List<LinePermission> getLinePermission() {
         if (linePermission == null) {
-            linePermission = new ArrayList<LinePermissionStructure>();
+            linePermission = new ArrayList<LinePermission>();
         }
         return this.linePermission;
     }

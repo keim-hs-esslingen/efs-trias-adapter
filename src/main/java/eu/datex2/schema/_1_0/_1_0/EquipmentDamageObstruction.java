@@ -95,8 +95,9 @@ public class EquipmentDamageObstruction
      *     {@link EquipmentDamageTypeEnum }
      *     
      */
-    public void setEquipmentDamageType(EquipmentDamageTypeEnum value) {
+    public EquipmentDamageObstruction setEquipmentDamageType(EquipmentDamageTypeEnum value) {
         this.equipmentDamageType = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class EquipmentDamageObstruction
      *     {@link ExtensionType }
      *     
      */
-    public void setEquipmentDamageObstructionExtension(ExtensionType value) {
+    public EquipmentDamageObstruction setEquipmentDamageObstructionExtension(ExtensionType value) {
         this.equipmentDamageObstructionExtension = value;
+        return this;
     }
 
 }

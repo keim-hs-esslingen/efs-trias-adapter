@@ -111,8 +111,9 @@ public class VehicleDetectionTime {
      *     {@link DateTime }
      *     
      */
-    public void setArrivalTime(DateTime value) {
+    public VehicleDetectionTime setArrivalTime(DateTime value) {
         this.arrivalTime = value;
+        return this;
     }
 
     /**
@@ -135,8 +136,9 @@ public class VehicleDetectionTime {
      *     {@link DateTime }
      *     
      */
-    public void setExitTime(DateTime value) {
+    public VehicleDetectionTime setExitTime(DateTime value) {
         this.exitTime = value;
+        return this;
     }
 
     /**
@@ -159,8 +161,9 @@ public class VehicleDetectionTime {
      *     {@link DateTime }
      *     
      */
-    public void setPassageTime(DateTime value) {
+    public VehicleDetectionTime setPassageTime(DateTime value) {
         this.passageTime = value;
+        return this;
     }
 
     /**
@@ -183,8 +186,9 @@ public class VehicleDetectionTime {
      *     {@link DateTime }
      *     
      */
-    public void setPresenceTime(DateTime value) {
+    public VehicleDetectionTime setPresenceTime(DateTime value) {
         this.presenceTime = value;
+        return this;
     }
 
     /**
@@ -207,8 +211,9 @@ public class VehicleDetectionTime {
      *     {@link Float }
      *     
      */
-    public void setTimeGap(Float value) {
+    public VehicleDetectionTime setTimeGap(Float value) {
         this.timeGap = value;
+        return this;
     }
 
     /**
@@ -231,8 +236,9 @@ public class VehicleDetectionTime {
      *     {@link Float }
      *     
      */
-    public void setTimeHeadway(Float value) {
+    public VehicleDetectionTime setTimeHeadway(Float value) {
         this.timeHeadway = value;
+        return this;
     }
 
     /**
@@ -255,8 +261,9 @@ public class VehicleDetectionTime {
      *     {@link ExtensionType }
      *     
      */
-    public void setVehicleDetectionTimeExtension(ExtensionType value) {
+    public VehicleDetectionTime setVehicleDetectionTimeExtension(ExtensionType value) {
         this.vehicleDetectionTimeExtension = value;
+        return this;
     }
 
 }

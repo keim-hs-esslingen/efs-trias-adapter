@@ -98,8 +98,9 @@ public class PointByCoordinates {
      *     {@link BigInteger }
      *     
      */
-    public void setBearing(BigInteger value) {
+    public PointByCoordinates setBearing(BigInteger value) {
         this.bearing = value;
+        return this;
     }
 
     /**
@@ -122,8 +123,9 @@ public class PointByCoordinates {
      *     {@link PointCoordinates }
      *     
      */
-    public void setPointCoordinates(PointCoordinates value) {
+    public PointByCoordinates setPointCoordinates(PointCoordinates value) {
         this.pointCoordinates = value;
+        return this;
     }
 
     /**
@@ -146,8 +148,9 @@ public class PointByCoordinates {
      *     {@link ExtensionType }
      *     
      */
-    public void setPointByCoordinatesExtension(ExtensionType value) {
+    public PointByCoordinates setPointByCoordinatesExtension(ExtensionType value) {
         this.pointByCoordinatesExtension = value;
+        return this;
     }
 
 }

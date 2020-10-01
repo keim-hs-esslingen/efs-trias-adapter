@@ -192,8 +192,9 @@ public class DayWeekMonth {
      *     {@link ExtensionType }
      *     
      */
-    public void setDayWeekMonthExtension(ExtensionType value) {
+    public DayWeekMonth setDayWeekMonthExtension(ExtensionType value) {
         this.dayWeekMonthExtension = value;
+        return this;
     }
 
 }

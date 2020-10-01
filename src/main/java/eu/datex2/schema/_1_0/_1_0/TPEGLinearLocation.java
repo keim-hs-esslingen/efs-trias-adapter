@@ -106,8 +106,9 @@ public class TPEGLinearLocation {
      *     {@link TPEGLoc02DirectionTypeEnum }
      *     
      */
-    public void setTpegDirection(TPEGLoc02DirectionTypeEnum value) {
+    public TPEGLinearLocation setTpegDirection(TPEGLoc02DirectionTypeEnum value) {
         this.tpegDirection = value;
+        return this;
     }
 
     /**
@@ -130,8 +131,9 @@ public class TPEGLinearLocation {
      *     {@link TPEGLoc01LinearLocationSubtypeEnum }
      *     
      */
-    public void setTpegLocationType(TPEGLoc01LinearLocationSubtypeEnum value) {
+    public TPEGLinearLocation setTpegLocationType(TPEGLoc01LinearLocationSubtypeEnum value) {
         this.tpegLocationType = value;
+        return this;
     }
 
     /**
@@ -154,8 +156,9 @@ public class TPEGLinearLocation {
      *     {@link TPEGPoint }
      *     
      */
-    public void setTo(TPEGPoint value) {
+    public TPEGLinearLocation setTo(TPEGPoint value) {
         this.to = value;
+        return this;
     }
 
     /**
@@ -178,8 +181,9 @@ public class TPEGLinearLocation {
      *     {@link TPEGPoint }
      *     
      */
-    public void setFrom(TPEGPoint value) {
+    public TPEGLinearLocation setFrom(TPEGPoint value) {
         this.from = value;
+        return this;
     }
 
     /**
@@ -202,8 +206,9 @@ public class TPEGLinearLocation {
      *     {@link ExtensionType }
      *     
      */
-    public void setTpeglinearLocationExtension(ExtensionType value) {
+    public TPEGLinearLocation setTpeglinearLocationExtension(ExtensionType value) {
         this.tpeglinearLocationExtension = value;
+        return this;
     }
 
 }

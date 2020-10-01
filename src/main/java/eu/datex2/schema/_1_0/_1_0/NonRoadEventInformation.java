@@ -95,8 +95,9 @@ public abstract class NonRoadEventInformation
      *     {@link ExtensionType }
      *     
      */
-    public void setNonRoadEventInformationExtension(ExtensionType value) {
+    public NonRoadEventInformation setNonRoadEventInformationExtension(ExtensionType value) {
         this.nonRoadEventInformationExtension = value;
+        return this;
     }
 
 }

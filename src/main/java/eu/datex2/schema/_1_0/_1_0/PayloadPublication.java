@@ -117,8 +117,9 @@ public abstract class PayloadPublication {
      *     {@link String }
      *     
      */
-    public void setFeedType(String value) {
+    public PayloadPublication setFeedType(String value) {
         this.feedType = value;
+        return this;
     }
 
     /**
@@ -141,8 +142,9 @@ public abstract class PayloadPublication {
      *     {@link DateTime }
      *     
      */
-    public void setPublicationTime(DateTime value) {
+    public PayloadPublication setPublicationTime(DateTime value) {
         this.publicationTime = value;
+        return this;
     }
 
     /**
@@ -165,8 +167,9 @@ public abstract class PayloadPublication {
      *     {@link InternationalIdentifier }
      *     
      */
-    public void setPublicationCreator(InternationalIdentifier value) {
+    public PayloadPublication setPublicationCreator(InternationalIdentifier value) {
         this.publicationCreator = value;
+        return this;
     }
 
     /**
@@ -189,8 +192,9 @@ public abstract class PayloadPublication {
      *     {@link ExtensionType }
      *     
      */
-    public void setPayloadPublicationExtension(ExtensionType value) {
+    public PayloadPublication setPayloadPublicationExtension(ExtensionType value) {
         this.payloadPublicationExtension = value;
+        return this;
     }
 
     /**
@@ -213,8 +217,9 @@ public abstract class PayloadPublication {
      *     {@link String }
      *     
      */
-    public void setLang(String value) {
+    public PayloadPublication setLang(String value) {
         this.lang = value;
+        return this;
     }
 
 }

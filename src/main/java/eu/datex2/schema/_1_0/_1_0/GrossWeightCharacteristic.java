@@ -97,8 +97,9 @@ public class GrossWeightCharacteristic {
      *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public GrossWeightCharacteristic setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
+        return this;
     }
 
     /**
@@ -113,8 +114,9 @@ public class GrossWeightCharacteristic {
      * Sets the value of the grossVehicleWeight property.
      * 
      */
-    public void setGrossVehicleWeight(float value) {
+    public GrossWeightCharacteristic setGrossVehicleWeight(float value) {
         this.grossVehicleWeight = value;
+        return this;
     }
 
     /**
@@ -137,8 +139,9 @@ public class GrossWeightCharacteristic {
      *     {@link ExtensionType }
      *     
      */
-    public void setGrossWeightCharacteristicExtension(ExtensionType value) {
+    public GrossWeightCharacteristic setGrossWeightCharacteristicExtension(ExtensionType value) {
         this.grossWeightCharacteristicExtension = value;
+        return this;
     }
 
 }

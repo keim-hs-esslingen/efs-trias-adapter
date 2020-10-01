@@ -71,7 +71,7 @@ public class OperatorPermissions {
     @XmlElement(name = "AllowAll", namespace = "http://www.siri.org.uk/siri")
     protected Boolean allowAll;
     @XmlElement(name = "OperatorPermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<OperatorPermissionStructure> operatorPermission;
+    protected List<OperatorPermission> operatorPermission;
 
     /**
      * Gets the value of the allowAll property.
@@ -93,8 +93,9 @@ public class OperatorPermissions {
      *     {@link Boolean }
      *     
      */
-    public void setAllowAll(Boolean value) {
+    public OperatorPermissions setAllowAll(Boolean value) {
         this.allowAll = value;
+        return this;
     }
 
     /**
@@ -115,13 +116,13 @@ public class OperatorPermissions {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link OperatorPermissionStructure }
+     * {@link OperatorPermission }
      * 
      * 
      */
-    public List<OperatorPermissionStructure> getOperatorPermission() {
+    public List<OperatorPermission> getOperatorPermission() {
         if (operatorPermission == null) {
-            operatorPermission = new ArrayList<OperatorPermissionStructure>();
+            operatorPermission = new ArrayList<OperatorPermission>();
         }
         return this.operatorPermission;
     }

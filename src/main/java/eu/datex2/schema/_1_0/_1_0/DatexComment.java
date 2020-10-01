@@ -144,8 +144,9 @@ public class DatexComment {
      *     {@link DateTime }
      *     
      */
-    public void setCommentDateTime(DateTime value) {
+    public DatexComment setCommentDateTime(DateTime value) {
         this.commentDateTime = value;
+        return this;
     }
 
     /**
@@ -168,8 +169,9 @@ public class DatexComment {
      *     {@link ExtensionType }
      *     
      */
-    public void setCommentExtension(ExtensionType value) {
+    public DatexComment setCommentExtension(ExtensionType value) {
         this.commentExtension = value;
+        return this;
     }
 
 

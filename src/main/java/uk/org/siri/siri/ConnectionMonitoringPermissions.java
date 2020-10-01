@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.XmlType;
 public class ConnectionMonitoringPermissions {
 
     @XmlElement(name = "ConnectionMonitoringPermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<ConnectionServicePermissionStructure> connectionMonitoringPermission;
+    protected List<ConnectionServicePermission> connectionMonitoringPermission;
 
     /**
      * Gets the value of the connectionMonitoringPermission property.
@@ -87,13 +87,13 @@ public class ConnectionMonitoringPermissions {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ConnectionServicePermissionStructure }
+     * {@link ConnectionServicePermission }
      * 
      * 
      */
-    public List<ConnectionServicePermissionStructure> getConnectionMonitoringPermission() {
+    public List<ConnectionServicePermission> getConnectionMonitoringPermission() {
         if (connectionMonitoringPermission == null) {
-            connectionMonitoringPermission = new ArrayList<ConnectionServicePermissionStructure>();
+            connectionMonitoringPermission = new ArrayList<ConnectionServicePermission>();
         }
         return this.connectionMonitoringPermission;
     }

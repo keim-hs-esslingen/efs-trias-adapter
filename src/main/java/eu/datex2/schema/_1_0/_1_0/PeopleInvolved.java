@@ -109,8 +109,9 @@ public class PeopleInvolved {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfPeople(BigInteger value) {
+    public PeopleInvolved setNumberOfPeople(BigInteger value) {
         this.numberOfPeople = value;
+        return this;
     }
 
     /**
@@ -133,8 +134,9 @@ public class PeopleInvolved {
      *     {@link InjuryStatusTypeEnum }
      *     
      */
-    public void setInjuryStatus(InjuryStatusTypeEnum value) {
+    public PeopleInvolved setInjuryStatus(InjuryStatusTypeEnum value) {
         this.injuryStatus = value;
+        return this;
     }
 
     /**
@@ -157,8 +159,9 @@ public class PeopleInvolved {
      *     {@link InvolvementRolesEnum }
      *     
      */
-    public void setInvolvementRole(InvolvementRolesEnum value) {
+    public PeopleInvolved setInvolvementRole(InvolvementRolesEnum value) {
         this.involvementRole = value;
+        return this;
     }
 
     /**
@@ -181,8 +184,9 @@ public class PeopleInvolved {
      *     {@link PersonCategoryEnum }
      *     
      */
-    public void setTypeOfPeopleInvolved(PersonCategoryEnum value) {
+    public PeopleInvolved setTypeOfPeopleInvolved(PersonCategoryEnum value) {
         this.typeOfPeopleInvolved = value;
+        return this;
     }
 
     /**
@@ -205,8 +209,9 @@ public class PeopleInvolved {
      *     {@link ExtensionType }
      *     
      */
-    public void setPeopleInvolvedExtension(ExtensionType value) {
+    public PeopleInvolved setPeopleInvolvedExtension(ExtensionType value) {
         this.peopleInvolvedExtension = value;
+        return this;
     }
 
 }

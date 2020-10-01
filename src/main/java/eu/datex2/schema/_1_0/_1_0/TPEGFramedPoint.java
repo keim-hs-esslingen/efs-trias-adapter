@@ -107,8 +107,9 @@ public class TPEGFramedPoint
      *     {@link TPEGLoc01FramedPointLocationSubtypeEnum }
      *     
      */
-    public void setTpegLocationType(TPEGLoc01FramedPointLocationSubtypeEnum value) {
+    public TPEGFramedPoint setTpegLocationType(TPEGLoc01FramedPointLocationSubtypeEnum value) {
         this.tpegLocationType = value;
+        return this;
     }
 
     /**
@@ -131,8 +132,9 @@ public class TPEGFramedPoint
      *     {@link TPEGNonJunctionPoint }
      *     
      */
-    public void setFramedPoint(TPEGNonJunctionPoint value) {
+    public TPEGFramedPoint setFramedPoint(TPEGNonJunctionPoint value) {
         this.framedPoint = value;
+        return this;
     }
 
     /**
@@ -155,8 +157,9 @@ public class TPEGFramedPoint
      *     {@link TPEGPoint }
      *     
      */
-    public void setTo(TPEGPoint value) {
+    public TPEGFramedPoint setTo(TPEGPoint value) {
         this.to = value;
+        return this;
     }
 
     /**
@@ -179,8 +182,9 @@ public class TPEGFramedPoint
      *     {@link TPEGPoint }
      *     
      */
-    public void setFrom(TPEGPoint value) {
+    public TPEGFramedPoint setFrom(TPEGPoint value) {
         this.from = value;
+        return this;
     }
 
     /**
@@ -203,8 +207,9 @@ public class TPEGFramedPoint
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegframedPointExtension(ExtensionType value) {
+    public TPEGFramedPoint setTpegframedPointExtension(ExtensionType value) {
         this.tpegframedPointExtension = value;
+        return this;
     }
 
 }

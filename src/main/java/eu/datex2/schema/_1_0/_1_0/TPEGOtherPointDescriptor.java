@@ -95,8 +95,9 @@ public class TPEGOtherPointDescriptor
      *     {@link TPEGLoc03OtherPointDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegDescriptorType(TPEGLoc03OtherPointDescriptorSubtypeEnum value) {
+    public TPEGOtherPointDescriptor setTpegDescriptorType(TPEGLoc03OtherPointDescriptorSubtypeEnum value) {
         this.tpegDescriptorType = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class TPEGOtherPointDescriptor
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegotherPointDescriptorExtension(ExtensionType value) {
+    public TPEGOtherPointDescriptor setTpegotherPointDescriptorExtension(ExtensionType value) {
         this.tpegotherPointDescriptorExtension = value;
+        return this;
     }
 
 }

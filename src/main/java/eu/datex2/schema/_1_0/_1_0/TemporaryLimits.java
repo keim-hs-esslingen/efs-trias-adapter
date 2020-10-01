@@ -93,8 +93,9 @@ public class TemporaryLimits
      *     {@link Float }
      *     
      */
-    public void setTemporarySpeedLimit(Float value) {
+    public TemporaryLimits setTemporarySpeedLimit(Float value) {
         this.temporarySpeedLimit = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class TemporaryLimits
      *     {@link ExtensionType }
      *     
      */
-    public void setTemporaryLimitsExtension(ExtensionType value) {
+    public TemporaryLimits setTemporaryLimitsExtension(ExtensionType value) {
         this.temporaryLimitsExtension = value;
+        return this;
     }
 
 }

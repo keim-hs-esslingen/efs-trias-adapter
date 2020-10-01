@@ -133,8 +133,9 @@ public class Subscription {
      *     {@link Boolean }
      *     
      */
-    public void setDeleteSubscription(Boolean value) {
+    public Subscription setDeleteSubscription(Boolean value) {
         this.deleteSubscription = value;
+        return this;
     }
 
     /**
@@ -157,8 +158,9 @@ public class Subscription {
      *     {@link Float }
      *     
      */
-    public void setDeliveryInterval(Float value) {
+    public Subscription setDeliveryInterval(Float value) {
         this.deliveryInterval = value;
+        return this;
     }
 
     /**
@@ -181,8 +183,9 @@ public class Subscription {
      *     {@link OperatingModeEnum }
      *     
      */
-    public void setOperatingMode(OperatingModeEnum value) {
+    public Subscription setOperatingMode(OperatingModeEnum value) {
         this.operatingMode = value;
+        return this;
     }
 
     /**
@@ -205,8 +208,9 @@ public class Subscription {
      *     {@link DateTime }
      *     
      */
-    public void setSubscriptionStartTime(DateTime value) {
+    public Subscription setSubscriptionStartTime(DateTime value) {
         this.subscriptionStartTime = value;
+        return this;
     }
 
     /**
@@ -229,8 +233,9 @@ public class Subscription {
      *     {@link SubscriptionStateEnum }
      *     
      */
-    public void setSubscriptionState(SubscriptionStateEnum value) {
+    public Subscription setSubscriptionState(SubscriptionStateEnum value) {
         this.subscriptionState = value;
+        return this;
     }
 
     /**
@@ -253,8 +258,9 @@ public class Subscription {
      *     {@link DateTime }
      *     
      */
-    public void setSubscriptionStopTime(DateTime value) {
+    public Subscription setSubscriptionStopTime(DateTime value) {
         this.subscriptionStopTime = value;
+        return this;
     }
 
     /**
@@ -277,8 +283,9 @@ public class Subscription {
      *     {@link UpdateMethodEnum }
      *     
      */
-    public void setUpdateMethod(UpdateMethodEnum value) {
+    public Subscription setUpdateMethod(UpdateMethodEnum value) {
         this.updateMethod = value;
+        return this;
     }
 
     /**
@@ -330,8 +337,9 @@ public class Subscription {
      *     {@link FilterReference }
      *     
      */
-    public void setFilterReference(FilterReference value) {
+    public Subscription setFilterReference(FilterReference value) {
         this.filterReference = value;
+        return this;
     }
 
     /**
@@ -354,8 +362,9 @@ public class Subscription {
      *     {@link CatalogueReference }
      *     
      */
-    public void setCatalogueReference(CatalogueReference value) {
+    public Subscription setCatalogueReference(CatalogueReference value) {
         this.catalogueReference = value;
+        return this;
     }
 
     /**
@@ -378,8 +387,9 @@ public class Subscription {
      *     {@link ExtensionType }
      *     
      */
-    public void setSubscriptionExtension(ExtensionType value) {
+    public Subscription setSubscriptionExtension(ExtensionType value) {
         this.subscriptionExtension = value;
+        return this;
     }
 
 }

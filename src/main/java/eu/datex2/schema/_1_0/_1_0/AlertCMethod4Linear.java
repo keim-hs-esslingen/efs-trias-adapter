@@ -101,8 +101,9 @@ public class AlertCMethod4Linear
      *     {@link AlertCDirection }
      *     
      */
-    public void setAlertCDirection(AlertCDirection value) {
+    public AlertCMethod4Linear setAlertCDirection(AlertCDirection value) {
         this.alertCDirection = value;
+        return this;
     }
 
     /**
@@ -125,8 +126,9 @@ public class AlertCMethod4Linear
      *     {@link AlertCMethod4PrimaryPointLocation }
      *     
      */
-    public void setAlertCMethod4PrimaryPointLocation(AlertCMethod4PrimaryPointLocation value) {
+    public AlertCMethod4Linear setAlertCMethod4PrimaryPointLocation(AlertCMethod4PrimaryPointLocation value) {
         this.alertCMethod4PrimaryPointLocation = value;
+        return this;
     }
 
     /**
@@ -149,8 +151,9 @@ public class AlertCMethod4Linear
      *     {@link AlertCMethod4SecondaryPointLocation }
      *     
      */
-    public void setAlertCMethod4SecondaryPointLocation(AlertCMethod4SecondaryPointLocation value) {
+    public AlertCMethod4Linear setAlertCMethod4SecondaryPointLocation(AlertCMethod4SecondaryPointLocation value) {
         this.alertCMethod4SecondaryPointLocation = value;
+        return this;
     }
 
     /**
@@ -173,8 +176,9 @@ public class AlertCMethod4Linear
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod4LinearExtension(ExtensionType value) {
+    public AlertCMethod4Linear setAlertCMethod4LinearExtension(ExtensionType value) {
         this.alertCMethod4LinearExtension = value;
+        return this;
     }
 
 }

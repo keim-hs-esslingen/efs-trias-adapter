@@ -97,8 +97,9 @@ public class LengthCharacteristic {
      *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public LengthCharacteristic setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
+        return this;
     }
 
     /**
@@ -113,8 +114,9 @@ public class LengthCharacteristic {
      * Sets the value of the vehicleLength property.
      * 
      */
-    public void setVehicleLength(float value) {
+    public LengthCharacteristic setVehicleLength(float value) {
         this.vehicleLength = value;
+        return this;
     }
 
     /**
@@ -137,8 +139,9 @@ public class LengthCharacteristic {
      *     {@link ExtensionType }
      *     
      */
-    public void setLengthCharacteristicExtension(ExtensionType value) {
+    public LengthCharacteristic setLengthCharacteristicExtension(ExtensionType value) {
         this.lengthCharacteristicExtension = value;
+        return this;
     }
 
 }

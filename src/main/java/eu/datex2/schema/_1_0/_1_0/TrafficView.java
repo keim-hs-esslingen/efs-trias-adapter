@@ -112,8 +112,9 @@ public class TrafficView {
      *     {@link DateTime }
      *     
      */
-    public void setTrafficViewTime(DateTime value) {
+    public TrafficView setTrafficViewTime(DateTime value) {
         this.trafficViewTime = value;
+        return this;
     }
 
     /**
@@ -136,8 +137,9 @@ public class TrafficView {
      *     {@link String }
      *     
      */
-    public void setPredefinedLocationSetReference(String value) {
+    public TrafficView setPredefinedLocationSetReference(String value) {
         this.predefinedLocationSetReference = value;
+        return this;
     }
 
     /**
@@ -189,8 +191,9 @@ public class TrafficView {
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficViewExtension(ExtensionType value) {
+    public TrafficView setTrafficViewExtension(ExtensionType value) {
         this.trafficViewExtension = value;
+        return this;
     }
 
     /**
@@ -213,8 +216,9 @@ public class TrafficView {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public TrafficView setId(String value) {
         this.id = value;
+        return this;
     }
 
 }

@@ -91,8 +91,9 @@ public class ReferencePointSecondaryLocation {
      *     {@link ReferencePoint }
      *     
      */
-    public void setReferencePoint(ReferencePoint value) {
+    public ReferencePointSecondaryLocation setReferencePoint(ReferencePoint value) {
         this.referencePoint = value;
+        return this;
     }
 
     /**
@@ -115,8 +116,9 @@ public class ReferencePointSecondaryLocation {
      *     {@link ExtensionType }
      *     
      */
-    public void setReferencePointSecondaryLocationExtension(ExtensionType value) {
+    public ReferencePointSecondaryLocation setReferencePointSecondaryLocationExtension(ExtensionType value) {
         this.referencePointSecondaryLocationExtension = value;
+        return this;
     }
 
 }

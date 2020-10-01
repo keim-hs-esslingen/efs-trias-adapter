@@ -93,8 +93,9 @@ public class Mobility {
      *     {@link MobilityEnum }
      *     
      */
-    public void setMobilityType(MobilityEnum value) {
+    public Mobility setMobilityType(MobilityEnum value) {
         this.mobilityType = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class Mobility {
      *     {@link ExtensionType }
      *     
      */
-    public void setMobilityExtension(ExtensionType value) {
+    public Mobility setMobilityExtension(ExtensionType value) {
         this.mobilityExtension = value;
+        return this;
     }
 
 }

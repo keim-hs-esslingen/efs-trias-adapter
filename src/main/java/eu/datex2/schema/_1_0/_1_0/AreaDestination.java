@@ -93,8 +93,9 @@ public class AreaDestination
      *     {@link Area }
      *     
      */
-    public void setArea(Area value) {
+    public AreaDestination setArea(Area value) {
         this.area = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class AreaDestination
      *     {@link ExtensionType }
      *     
      */
-    public void setAreaDestinationExtension(ExtensionType value) {
+    public AreaDestination setAreaDestinationExtension(ExtensionType value) {
         this.areaDestinationExtension = value;
+        return this;
     }
 
 }

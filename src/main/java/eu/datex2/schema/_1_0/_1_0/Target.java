@@ -95,8 +95,9 @@ public class Target {
      *     {@link String }
      *     
      */
-    public void setAddress(String value) {
+    public Target setAddress(String value) {
         this.address = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class Target {
      *     {@link String }
      *     
      */
-    public void setProtocol(String value) {
+    public Target setProtocol(String value) {
         this.protocol = value;
+        return this;
     }
 
     /**
@@ -143,8 +145,9 @@ public class Target {
      *     {@link ExtensionType }
      *     
      */
-    public void setTargetExtension(ExtensionType value) {
+    public Target setTargetExtension(ExtensionType value) {
         this.targetExtension = value;
+        return this;
     }
 
 }

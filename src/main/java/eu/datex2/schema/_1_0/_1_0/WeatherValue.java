@@ -98,8 +98,9 @@ public abstract class WeatherValue
      *     {@link ExtensionType }
      *     
      */
-    public void setWeatherValueExtension(ExtensionType value) {
+    public WeatherValue setWeatherValueExtension(ExtensionType value) {
         this.weatherValueExtension = value;
+        return this;
     }
 
 }

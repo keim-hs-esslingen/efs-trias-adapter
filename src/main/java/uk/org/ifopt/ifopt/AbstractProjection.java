@@ -74,9 +74,9 @@ import javax.xml.bind.annotation.XmlType;
     "features"
 })
 @XmlSeeAlso({
-    ZoneProjectionStructure.class,
-    PointProjectionStructure.class,
-    LinkProjectionStructure.class
+    ZoneProjection.class,
+    PointProjection.class,
+    LinkProjection.class
 })
 public class AbstractProjection {
 
@@ -134,7 +134,7 @@ public class AbstractProjection {
     public static class Features {
 
         @XmlElement(name = "GisFeatureRef", namespace = "http://www.ifopt.org.uk/ifopt", required = true)
-        protected List<FeatureRefStructure> gisFeatureRef;
+        protected List<FeatureRef> gisFeatureRef;
 
         /**
          * Gets the value of the gisFeatureRef property.
@@ -154,13 +154,13 @@ public class AbstractProjection {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link FeatureRefStructure }
+         * {@link FeatureRef }
          * 
          * 
          */
-        public List<FeatureRefStructure> getGisFeatureRef() {
+        public List<FeatureRef> getGisFeatureRef() {
             if (gisFeatureRef == null) {
-                gisFeatureRef = new ArrayList<FeatureRefStructure>();
+                gisFeatureRef = new ArrayList<FeatureRef>();
             }
             return this.gisFeatureRef;
         }

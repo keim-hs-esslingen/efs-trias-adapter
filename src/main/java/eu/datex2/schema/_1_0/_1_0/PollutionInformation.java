@@ -124,8 +124,9 @@ public class PollutionInformation
      *     {@link ExtensionType }
      *     
      */
-    public void setPollutionInformationExtension(ExtensionType value) {
+    public PollutionInformation setPollutionInformationExtension(ExtensionType value) {
         this.pollutionInformationExtension = value;
+        return this;
     }
 
 }

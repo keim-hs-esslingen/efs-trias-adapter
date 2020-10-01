@@ -97,8 +97,9 @@ public class InternationalIdentifier {
      *     {@link CountryEnum }
      *     
      */
-    public void setCountry(CountryEnum value) {
+    public InternationalIdentifier setCountry(CountryEnum value) {
         this.country = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class InternationalIdentifier {
      *     {@link String }
      *     
      */
-    public void setNationalIdentifier(String value) {
+    public InternationalIdentifier setNationalIdentifier(String value) {
         this.nationalIdentifier = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class InternationalIdentifier {
      *     {@link ExtensionType }
      *     
      */
-    public void setInternationalIdentifierExtension(ExtensionType value) {
+    public InternationalIdentifier setInternationalIdentifierExtension(ExtensionType value) {
         this.internationalIdentifierExtension = value;
+        return this;
     }
 
 }

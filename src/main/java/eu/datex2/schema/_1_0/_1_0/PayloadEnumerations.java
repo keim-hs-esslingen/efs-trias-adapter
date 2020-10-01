@@ -91,8 +91,9 @@ public abstract class PayloadEnumerations {
      *     {@link LocationEnumerations }
      *     
      */
-    public void setLocationEnumerations(LocationEnumerations value) {
+    public PayloadEnumerations setLocationEnumerations(LocationEnumerations value) {
         this.locationEnumerations = value;
+        return this;
     }
 
     /**
@@ -115,8 +116,9 @@ public abstract class PayloadEnumerations {
      *     {@link ExtensionType }
      *     
      */
-    public void setPayloadEnumerationsExtension(ExtensionType value) {
+    public PayloadEnumerations setPayloadEnumerationsExtension(ExtensionType value) {
         this.payloadEnumerationsExtension = value;
+        return this;
     }
 
 }

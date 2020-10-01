@@ -95,8 +95,9 @@ public class VehicleHeadway {
      *     {@link Float }
      *     
      */
-    public void setDistanceGap(Float value) {
+    public VehicleHeadway setDistanceGap(Float value) {
         this.distanceGap = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class VehicleHeadway {
      *     {@link Float }
      *     
      */
-    public void setDistanceHeadway(Float value) {
+    public VehicleHeadway setDistanceHeadway(Float value) {
         this.distanceHeadway = value;
+        return this;
     }
 
     /**
@@ -143,8 +145,9 @@ public class VehicleHeadway {
      *     {@link ExtensionType }
      *     
      */
-    public void setVehicleHeadwayExtension(ExtensionType value) {
+    public VehicleHeadway setVehicleHeadwayExtension(ExtensionType value) {
         this.vehicleHeadwayExtension = value;
+        return this;
     }
 
 }

@@ -138,8 +138,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc03ILCPointDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegloc03ILCPointDescriptorSubtypeEnum(TPEGLoc03ILCPointDescriptorSubtypeEnum value) {
+    public TPEGEnumerations setTpegloc03ILCPointDescriptorSubtypeEnum(TPEGLoc03ILCPointDescriptorSubtypeEnum value) {
         this.tpegloc03ILCPointDescriptorSubtypeEnum = value;
+        return this;
     }
 
     /**
@@ -162,8 +163,9 @@ public abstract class TPEGEnumerations {
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegenumerationsExtension(ExtensionType value) {
+    public TPEGEnumerations setTpegenumerationsExtension(ExtensionType value) {
         this.tpegenumerationsExtension = value;
+        return this;
     }
 
     /**
@@ -186,8 +188,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc02DirectionTypeEnum }
      *     
      */
-    public void setTpegloc02DirectionTypeEnum(TPEGLoc02DirectionTypeEnum value) {
+    public TPEGEnumerations setTpegloc02DirectionTypeEnum(TPEGLoc02DirectionTypeEnum value) {
         this.tpegloc02DirectionTypeEnum = value;
+        return this;
     }
 
     /**
@@ -210,8 +213,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc01LinearLocationSubtypeEnum }
      *     
      */
-    public void setTpegloc01LinearLocationSubtypeEnum(TPEGLoc01LinearLocationSubtypeEnum value) {
+    public TPEGEnumerations setTpegloc01LinearLocationSubtypeEnum(TPEGLoc01LinearLocationSubtypeEnum value) {
         this.tpegloc01LinearLocationSubtypeEnum = value;
+        return this;
     }
 
     /**
@@ -234,8 +238,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc01AreaLocationSubtypeEnum }
      *     
      */
-    public void setTpegloc01AreaLocationSubtypeEnum(TPEGLoc01AreaLocationSubtypeEnum value) {
+    public TPEGEnumerations setTpegloc01AreaLocationSubtypeEnum(TPEGLoc01AreaLocationSubtypeEnum value) {
         this.tpegloc01AreaLocationSubtypeEnum = value;
+        return this;
     }
 
     /**
@@ -258,8 +263,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc01FramedPointLocationSubtypeEnum }
      *     
      */
-    public void setTpegloc01FramedPointLocationSubtypeEnum(TPEGLoc01FramedPointLocationSubtypeEnum value) {
+    public TPEGEnumerations setTpegloc01FramedPointLocationSubtypeEnum(TPEGLoc01FramedPointLocationSubtypeEnum value) {
         this.tpegloc01FramedPointLocationSubtypeEnum = value;
+        return this;
     }
 
     /**
@@ -282,8 +288,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc03OtherPointDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegloc03OtherPointDescriptorSubtypeEnum(TPEGLoc03OtherPointDescriptorSubtypeEnum value) {
+    public TPEGEnumerations setTpegloc03OtherPointDescriptorSubtypeEnum(TPEGLoc03OtherPointDescriptorSubtypeEnum value) {
         this.tpegloc03OtherPointDescriptorSubtypeEnum = value;
+        return this;
     }
 
     /**
@@ -306,8 +313,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc01SimplePointLocationSubtypeEnum }
      *     
      */
-    public void setTpegloc01SimplePointLocationSubtypeEnum(TPEGLoc01SimplePointLocationSubtypeEnum value) {
+    public TPEGEnumerations setTpegloc01SimplePointLocationSubtypeEnum(TPEGLoc01SimplePointLocationSubtypeEnum value) {
         this.tpegloc01SimplePointLocationSubtypeEnum = value;
+        return this;
     }
 
     /**
@@ -330,8 +338,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc04HeightTypeEnum }
      *     
      */
-    public void setTpegloc04HeightTypeEnum(TPEGLoc04HeightTypeEnum value) {
+    public TPEGEnumerations setTpegloc04HeightTypeEnum(TPEGLoc04HeightTypeEnum value) {
         this.tpegloc04HeightTypeEnum = value;
+        return this;
     }
 
     /**
@@ -354,8 +363,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc03JunctionPointDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegloc03JunctionPointDescriptorSubtypeEnum(TPEGLoc03JunctionPointDescriptorSubtypeEnum value) {
+    public TPEGEnumerations setTpegloc03JunctionPointDescriptorSubtypeEnum(TPEGLoc03JunctionPointDescriptorSubtypeEnum value) {
         this.tpegloc03JunctionPointDescriptorSubtypeEnum = value;
+        return this;
     }
 
     /**
@@ -378,8 +388,9 @@ public abstract class TPEGEnumerations {
      *     {@link TPEGLoc03AreaDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegloc03AreaDescriptorSubtypeEnum(TPEGLoc03AreaDescriptorSubtypeEnum value) {
+    public TPEGEnumerations setTpegloc03AreaDescriptorSubtypeEnum(TPEGLoc03AreaDescriptorSubtypeEnum value) {
         this.tpegloc03AreaDescriptorSubtypeEnum = value;
+        return this;
     }
 
 }

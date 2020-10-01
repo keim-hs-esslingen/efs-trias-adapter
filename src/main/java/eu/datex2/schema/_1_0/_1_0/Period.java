@@ -132,8 +132,9 @@ public class Period {
      *     {@link DateTime }
      *     
      */
-    public void setStartOfPeriod(DateTime value) {
+    public Period setStartOfPeriod(DateTime value) {
         this.startOfPeriod = value;
+        return this;
     }
 
     /**
@@ -156,8 +157,9 @@ public class Period {
      *     {@link DateTime }
      *     
      */
-    public void setEndOfPeriod(DateTime value) {
+    public Period setEndOfPeriod(DateTime value) {
         this.endOfPeriod = value;
+        return this;
     }
 
     /**
@@ -262,8 +264,9 @@ public class Period {
      *     {@link ExtensionType }
      *     
      */
-    public void setPeriodExtension(ExtensionType value) {
+    public Period setPeriodExtension(ExtensionType value) {
         this.periodExtension = value;
+        return this;
     }
 
 

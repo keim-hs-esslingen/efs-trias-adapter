@@ -107,8 +107,9 @@ public class TPEGJunction
      *     {@link PointCoordinates }
      *     
      */
-    public void setPointCoordinates(PointCoordinates value) {
+    public TPEGJunction setPointCoordinates(PointCoordinates value) {
         this.pointCoordinates = value;
+        return this;
     }
 
     /**
@@ -131,8 +132,9 @@ public class TPEGJunction
      *     {@link TPEGJunctionPointDescriptor }
      *     
      */
-    public void setName(TPEGJunctionPointDescriptor value) {
+    public TPEGJunction setName(TPEGJunctionPointDescriptor value) {
         this.name = value;
+        return this;
     }
 
     /**
@@ -213,8 +215,9 @@ public class TPEGJunction
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegjunctionExtension(ExtensionType value) {
+    public TPEGJunction setTpegjunctionExtension(ExtensionType value) {
         this.tpegjunctionExtension = value;
+        return this;
     }
 
 }

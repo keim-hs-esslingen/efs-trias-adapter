@@ -93,8 +93,9 @@ public class ManagedCause
      *     {@link String }
      *     
      */
-    public void setManagedCause(String value) {
+    public ManagedCause setManagedCause(String value) {
         this.managedCause = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class ManagedCause
      *     {@link ExtensionType }
      *     
      */
-    public void setManagedCauseExtension(ExtensionType value) {
+    public ManagedCause setManagedCauseExtension(ExtensionType value) {
         this.managedCauseExtension = value;
+        return this;
     }
 
 }

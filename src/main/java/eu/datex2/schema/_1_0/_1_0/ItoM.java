@@ -153,8 +153,9 @@ public abstract class ItoM {
      *     {@link ExtensionType }
      *     
      */
-    public void setItoMExtension(ExtensionType value) {
+    public ItoM setItoMExtension(ExtensionType value) {
         this.itoMExtension = value;
+        return this;
     }
 
     /**
@@ -177,8 +178,9 @@ public abstract class ItoM {
      *     {@link InstructionsEnum }
      *     
      */
-    public void setInstructionsEnum(InstructionsEnum value) {
+    public ItoM setInstructionsEnum(InstructionsEnum value) {
         this.instructionsEnum = value;
+        return this;
     }
 
     /**
@@ -201,8 +203,9 @@ public abstract class ItoM {
      *     {@link InjuryStatusTypeEnum }
      *     
      */
-    public void setInjuryStatusTypeEnum(InjuryStatusTypeEnum value) {
+    public ItoM setInjuryStatusTypeEnum(InjuryStatusTypeEnum value) {
         this.injuryStatusTypeEnum = value;
+        return this;
     }
 
     /**
@@ -225,8 +228,9 @@ public abstract class ItoM {
      *     {@link LoadTypeEnum }
      *     
      */
-    public void setLoadTypeEnum(LoadTypeEnum value) {
+    public ItoM setLoadTypeEnum(LoadTypeEnum value) {
         this.loadTypeEnum = value;
+        return this;
     }
 
     /**
@@ -249,8 +253,9 @@ public abstract class ItoM {
      *     {@link MobilityEnum }
      *     
      */
-    public void setMobilityEnum(MobilityEnum value) {
+    public ItoM setMobilityEnum(MobilityEnum value) {
         this.mobilityEnum = value;
+        return this;
     }
 
     /**
@@ -273,8 +278,9 @@ public abstract class ItoM {
      *     {@link MaintenanceVehicleActionsEnum }
      *     
      */
-    public void setMaintenanceVehicleActionsEnum(MaintenanceVehicleActionsEnum value) {
+    public ItoM setMaintenanceVehicleActionsEnum(MaintenanceVehicleActionsEnum value) {
         this.maintenanceVehicleActionsEnum = value;
+        return this;
     }
 
     /**
@@ -297,8 +303,9 @@ public abstract class ItoM {
      *     {@link MatrixFaultEnum }
      *     
      */
-    public void setMatrixFaultEnum(MatrixFaultEnum value) {
+    public ItoM setMatrixFaultEnum(MatrixFaultEnum value) {
         this.matrixFaultEnum = value;
+        return this;
     }
 
     /**
@@ -321,8 +328,9 @@ public abstract class ItoM {
      *     {@link InformationStatusEnum }
      *     
      */
-    public void setInformationStatusEnum(InformationStatusEnum value) {
+    public ItoM setInformationStatusEnum(InformationStatusEnum value) {
         this.informationStatusEnum = value;
+        return this;
     }
 
     /**
@@ -345,8 +353,9 @@ public abstract class ItoM {
      *     {@link InvolvementRolesEnum }
      *     
      */
-    public void setInvolvementRolesEnum(InvolvementRolesEnum value) {
+    public ItoM setInvolvementRolesEnum(InvolvementRolesEnum value) {
         this.involvementRolesEnum = value;
+        return this;
     }
 
     /**
@@ -369,8 +378,9 @@ public abstract class ItoM {
      *     {@link LaneUsageEnum }
      *     
      */
-    public void setLaneUsageEnum(LaneUsageEnum value) {
+    public ItoM setLaneUsageEnum(LaneUsageEnum value) {
         this.laneUsageEnum = value;
+        return this;
     }
 
     /**
@@ -393,8 +403,9 @@ public abstract class ItoM {
      *     {@link InformationUsageEnum }
      *     
      */
-    public void setInformationUsageEnum(InformationUsageEnum value) {
+    public ItoM setInformationUsageEnum(InformationUsageEnum value) {
         this.informationUsageEnum = value;
+        return this;
     }
 
     /**
@@ -417,8 +428,9 @@ public abstract class ItoM {
      *     {@link MeasuredOrDerivedDataTypeEnum }
      *     
      */
-    public void setMeasuredOrDerivedDataTypeEnum(MeasuredOrDerivedDataTypeEnum value) {
+    public ItoM setMeasuredOrDerivedDataTypeEnum(MeasuredOrDerivedDataTypeEnum value) {
         this.measuredOrDerivedDataTypeEnum = value;
+        return this;
     }
 
     /**
@@ -441,8 +453,9 @@ public abstract class ItoM {
      *     {@link LogicalOperatorEnum }
      *     
      */
-    public void setLogicalOperatorEnum(LogicalOperatorEnum value) {
+    public ItoM setLogicalOperatorEnum(LogicalOperatorEnum value) {
         this.logicalOperatorEnum = value;
+        return this;
     }
 
     /**
@@ -465,8 +478,9 @@ public abstract class ItoM {
      *     {@link MonthOfYearEnum }
      *     
      */
-    public void setMonthOfYearEnum(MonthOfYearEnum value) {
+    public ItoM setMonthOfYearEnum(MonthOfYearEnum value) {
         this.monthOfYearEnum = value;
+        return this;
     }
 
 }

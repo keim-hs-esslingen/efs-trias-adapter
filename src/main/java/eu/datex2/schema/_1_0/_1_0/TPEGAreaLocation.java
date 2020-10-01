@@ -102,8 +102,9 @@ public abstract class TPEGAreaLocation {
      *     {@link TPEGLoc01AreaLocationSubtypeEnum }
      *     
      */
-    public void setTpegLocationType(TPEGLoc01AreaLocationSubtypeEnum value) {
+    public TPEGAreaLocation setTpegLocationType(TPEGLoc01AreaLocationSubtypeEnum value) {
         this.tpegLocationType = value;
+        return this;
     }
 
     /**
@@ -126,8 +127,9 @@ public abstract class TPEGAreaLocation {
      *     {@link TPEGHeight }
      *     
      */
-    public void setTpegheight(TPEGHeight value) {
+    public TPEGAreaLocation setTpegheight(TPEGHeight value) {
         this.tpegheight = value;
+        return this;
     }
 
     /**
@@ -150,8 +152,9 @@ public abstract class TPEGAreaLocation {
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegareaLocationExtension(ExtensionType value) {
+    public TPEGAreaLocation setTpegareaLocationExtension(ExtensionType value) {
         this.tpegareaLocationExtension = value;
+        return this;
     }
 
 }

@@ -103,8 +103,9 @@ public class AlertCArea {
      *     {@link String }
      *     
      */
-    public void setAlertCLocationCountryCode(String value) {
+    public AlertCArea setAlertCLocationCountryCode(String value) {
         this.alertCLocationCountryCode = value;
+        return this;
     }
 
     /**
@@ -127,8 +128,9 @@ public class AlertCArea {
      *     {@link String }
      *     
      */
-    public void setAlertCLocationTableNumber(String value) {
+    public AlertCArea setAlertCLocationTableNumber(String value) {
         this.alertCLocationTableNumber = value;
+        return this;
     }
 
     /**
@@ -151,8 +153,9 @@ public class AlertCArea {
      *     {@link String }
      *     
      */
-    public void setAlertCLocationTableVersion(String value) {
+    public AlertCArea setAlertCLocationTableVersion(String value) {
         this.alertCLocationTableVersion = value;
+        return this;
     }
 
     /**
@@ -175,8 +178,9 @@ public class AlertCArea {
      *     {@link AlertCLocation }
      *     
      */
-    public void setAreaLocation(AlertCLocation value) {
+    public AlertCArea setAreaLocation(AlertCLocation value) {
         this.areaLocation = value;
+        return this;
     }
 
     /**
@@ -199,8 +203,9 @@ public class AlertCArea {
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCAreaExtension(ExtensionType value) {
+    public AlertCArea setAlertCAreaExtension(ExtensionType value) {
         this.alertCAreaExtension = value;
+        return this;
     }
 
 }

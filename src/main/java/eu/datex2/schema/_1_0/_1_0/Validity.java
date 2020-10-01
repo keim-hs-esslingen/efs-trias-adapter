@@ -97,8 +97,9 @@ public class Validity {
      *     {@link ValidityStatusEnum }
      *     
      */
-    public void setValidityStatus(ValidityStatusEnum value) {
+    public Validity setValidityStatus(ValidityStatusEnum value) {
         this.validityStatus = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class Validity {
      *     {@link OverallPeriod }
      *     
      */
-    public void setValidityTimeSpecification(OverallPeriod value) {
+    public Validity setValidityTimeSpecification(OverallPeriod value) {
         this.validityTimeSpecification = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class Validity {
      *     {@link ExtensionType }
      *     
      */
-    public void setValidityExtension(ExtensionType value) {
+    public Validity setValidityExtension(ExtensionType value) {
         this.validityExtension = value;
+        return this;
     }
 
 }

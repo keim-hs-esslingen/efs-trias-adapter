@@ -118,8 +118,9 @@ public class MeasurementSpecificCharacteristics {
      *     {@link Float }
      *     
      */
-    public void setAccuracy(Float value) {
+    public MeasurementSpecificCharacteristics setAccuracy(Float value) {
         this.accuracy = value;
+        return this;
     }
 
     /**
@@ -142,8 +143,9 @@ public class MeasurementSpecificCharacteristics {
      *     {@link Float }
      *     
      */
-    public void setPeriod(Float value) {
+    public MeasurementSpecificCharacteristics setPeriod(Float value) {
         this.period = value;
+        return this;
     }
 
     /**
@@ -166,8 +168,9 @@ public class MeasurementSpecificCharacteristics {
      *     {@link Float }
      *     
      */
-    public void setSmoothingFactor(Float value) {
+    public MeasurementSpecificCharacteristics setSmoothingFactor(Float value) {
         this.smoothingFactor = value;
+        return this;
     }
 
     /**
@@ -190,8 +193,9 @@ public class MeasurementSpecificCharacteristics {
      *     {@link LanesEnum }
      *     
      */
-    public void setSpecificLane(LanesEnum value) {
+    public MeasurementSpecificCharacteristics setSpecificLane(LanesEnum value) {
         this.specificLane = value;
+        return this;
     }
 
     /**
@@ -214,8 +218,9 @@ public class MeasurementSpecificCharacteristics {
      *     {@link MeasuredOrDerivedDataTypeEnum }
      *     
      */
-    public void setSpecificMeasurementValueType(MeasuredOrDerivedDataTypeEnum value) {
+    public MeasurementSpecificCharacteristics setSpecificMeasurementValueType(MeasuredOrDerivedDataTypeEnum value) {
         this.specificMeasurementValueType = value;
+        return this;
     }
 
     /**
@@ -238,8 +243,9 @@ public class MeasurementSpecificCharacteristics {
      *     {@link VehicleCharacteristics }
      *     
      */
-    public void setSpecificVehicleCharacteristics(VehicleCharacteristics value) {
+    public MeasurementSpecificCharacteristics setSpecificVehicleCharacteristics(VehicleCharacteristics value) {
         this.specificVehicleCharacteristics = value;
+        return this;
     }
 
     /**
@@ -262,8 +268,9 @@ public class MeasurementSpecificCharacteristics {
      *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementSpecificCharacteristicsExtension(ExtensionType value) {
+    public MeasurementSpecificCharacteristics setMeasurementSpecificCharacteristicsExtension(ExtensionType value) {
         this.measurementSpecificCharacteristicsExtension = value;
+        return this;
     }
 
 }

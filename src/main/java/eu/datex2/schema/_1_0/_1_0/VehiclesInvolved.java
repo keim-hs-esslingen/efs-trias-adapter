@@ -109,8 +109,9 @@ public class VehiclesInvolved {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfVehicles(BigInteger value) {
+    public VehiclesInvolved setNumberOfVehicles(BigInteger value) {
         this.numberOfVehicles = value;
+        return this;
     }
 
     /**
@@ -133,8 +134,9 @@ public class VehiclesInvolved {
      *     {@link VehicleStatusEnum }
      *     
      */
-    public void setVehicleStatus(VehicleStatusEnum value) {
+    public VehiclesInvolved setVehicleStatus(VehicleStatusEnum value) {
         this.vehicleStatus = value;
+        return this;
     }
 
     /**
@@ -157,8 +159,9 @@ public class VehiclesInvolved {
      *     {@link VehicleTypeEnum }
      *     
      */
-    public void setVehicleType(VehicleTypeEnum value) {
+    public VehiclesInvolved setVehicleType(VehicleTypeEnum value) {
         this.vehicleType = value;
+        return this;
     }
 
     /**
@@ -181,8 +184,9 @@ public class VehiclesInvolved {
      *     {@link VehicleUsageEnum }
      *     
      */
-    public void setVehicleUsage(VehicleUsageEnum value) {
+    public VehiclesInvolved setVehicleUsage(VehicleUsageEnum value) {
         this.vehicleUsage = value;
+        return this;
     }
 
     /**
@@ -205,8 +209,9 @@ public class VehiclesInvolved {
      *     {@link ExtensionType }
      *     
      */
-    public void setVehiclesInvolvedExtension(ExtensionType value) {
+    public VehiclesInvolved setVehiclesInvolvedExtension(ExtensionType value) {
         this.vehiclesInvolvedExtension = value;
+        return this;
     }
 
 }

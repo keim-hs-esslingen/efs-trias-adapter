@@ -88,8 +88,9 @@ public class DateTime {
      *     {@link String }
      *     
      */
-    public void setValue(ZonedDateTime value) {
+    public DateTime setValue(ZonedDateTime value) {
         this.value = value;
+        return this;
     }
 
 }

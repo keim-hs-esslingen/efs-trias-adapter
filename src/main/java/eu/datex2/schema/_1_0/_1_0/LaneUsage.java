@@ -95,8 +95,9 @@ public class LaneUsage
      *     {@link LaneUsageEnum }
      *     
      */
-    public void setLaneUsageAdvice(LaneUsageEnum value) {
+    public LaneUsage setLaneUsageAdvice(LaneUsageEnum value) {
         this.laneUsageAdvice = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class LaneUsage
      *     {@link ExtensionType }
      *     
      */
-    public void setLaneUsageExtension(ExtensionType value) {
+    public LaneUsage setLaneUsageExtension(ExtensionType value) {
         this.laneUsageExtension = value;
+        return this;
     }
 
 }

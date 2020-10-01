@@ -116,8 +116,9 @@ public class AbnormalTraffic
      *     {@link AbnormalTrafficTypeEnum }
      *     
      */
-    public void setAbnormalTrafficType(AbnormalTrafficTypeEnum value) {
+    public AbnormalTraffic setAbnormalTrafficType(AbnormalTrafficTypeEnum value) {
         this.abnormalTrafficType = value;
+        return this;
     }
 
     /**
@@ -140,8 +141,9 @@ public class AbnormalTraffic
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfVehiclesWaiting(BigInteger value) {
+    public AbnormalTraffic setNumberOfVehiclesWaiting(BigInteger value) {
         this.numberOfVehiclesWaiting = value;
+        return this;
     }
 
     /**
@@ -164,8 +166,9 @@ public class AbnormalTraffic
      *     {@link BigInteger }
      *     
      */
-    public void setQueueLength(BigInteger value) {
+    public AbnormalTraffic setQueueLength(BigInteger value) {
         this.queueLength = value;
+        return this;
     }
 
     /**
@@ -188,8 +191,9 @@ public class AbnormalTraffic
      *     {@link RelativeTrafficFlowEnum }
      *     
      */
-    public void setRelativeTrafficFlow(RelativeTrafficFlowEnum value) {
+    public AbnormalTraffic setRelativeTrafficFlow(RelativeTrafficFlowEnum value) {
         this.relativeTrafficFlow = value;
+        return this;
     }
 
     /**
@@ -212,8 +216,9 @@ public class AbnormalTraffic
      *     {@link TrafficTrendTypeEnum }
      *     
      */
-    public void setTrafficTrendType(TrafficTrendTypeEnum value) {
+    public AbnormalTraffic setTrafficTrendType(TrafficTrendTypeEnum value) {
         this.trafficTrendType = value;
+        return this;
     }
 
     /**
@@ -236,8 +241,9 @@ public class AbnormalTraffic
      *     {@link ExtensionType }
      *     
      */
-    public void setAbnormalTrafficExtension(ExtensionType value) {
+    public AbnormalTraffic setAbnormalTrafficExtension(ExtensionType value) {
         this.abnormalTrafficExtension = value;
+        return this;
     }
 
 }

@@ -95,8 +95,9 @@ public class TPEGJunctionPointDescriptor
      *     {@link TPEGLoc03JunctionPointDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegDescriptorType(TPEGLoc03JunctionPointDescriptorSubtypeEnum value) {
+    public TPEGJunctionPointDescriptor setTpegDescriptorType(TPEGLoc03JunctionPointDescriptorSubtypeEnum value) {
         this.tpegDescriptorType = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class TPEGJunctionPointDescriptor
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegjunctionPointDescriptorExtension(ExtensionType value) {
+    public TPEGJunctionPointDescriptor setTpegjunctionPointDescriptorExtension(ExtensionType value) {
         this.tpegjunctionPointDescriptorExtension = value;
+        return this;
     }
 
 }

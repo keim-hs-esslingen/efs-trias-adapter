@@ -121,8 +121,9 @@ public class VariableMessageSignSetting
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfCharacters(BigInteger value) {
+    public VariableMessageSignSetting setNumberOfCharacters(BigInteger value) {
         this.numberOfCharacters = value;
+        return this;
     }
 
     /**
@@ -145,8 +146,9 @@ public class VariableMessageSignSetting
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfRows(BigInteger value) {
+    public VariableMessageSignSetting setNumberOfRows(BigInteger value) {
         this.numberOfRows = value;
+        return this;
     }
 
     /**
@@ -198,8 +200,9 @@ public class VariableMessageSignSetting
      *     {@link String }
      *     
      */
-    public void setVmsIdentifier(String value) {
+    public VariableMessageSignSetting setVmsIdentifier(String value) {
         this.vmsIdentifier = value;
+        return this;
     }
 
     /**
@@ -251,8 +254,9 @@ public class VariableMessageSignSetting
      *     {@link VMSTypeEnum }
      *     
      */
-    public void setVmsType(VMSTypeEnum value) {
+    public VariableMessageSignSetting setVmsType(VMSTypeEnum value) {
         this.vmsType = value;
+        return this;
     }
 
     /**
@@ -275,8 +279,9 @@ public class VariableMessageSignSetting
      *     {@link ExtensionType }
      *     
      */
-    public void setVariableMessageSignSettingExtension(ExtensionType value) {
+    public VariableMessageSignSetting setVariableMessageSignSettingExtension(ExtensionType value) {
         this.variableMessageSignSettingExtension = value;
+        return this;
     }
 
 }

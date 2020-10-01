@@ -105,8 +105,9 @@ public class OverallPeriod {
      *     {@link DateTime }
      *     
      */
-    public void setOverallStartTime(DateTime value) {
+    public OverallPeriod setOverallStartTime(DateTime value) {
         this.overallStartTime = value;
+        return this;
     }
 
     /**
@@ -129,8 +130,9 @@ public class OverallPeriod {
      *     {@link DateTime }
      *     
      */
-    public void setOverallEndTime(DateTime value) {
+    public OverallPeriod setOverallEndTime(DateTime value) {
         this.overallEndTime = value;
+        return this;
     }
 
     /**
@@ -211,8 +213,9 @@ public class OverallPeriod {
      *     {@link ExtensionType }
      *     
      */
-    public void setOverallPeriodExtension(ExtensionType value) {
+    public OverallPeriod setOverallPeriodExtension(ExtensionType value) {
         this.overallPeriodExtension = value;
+        return this;
     }
 
 }

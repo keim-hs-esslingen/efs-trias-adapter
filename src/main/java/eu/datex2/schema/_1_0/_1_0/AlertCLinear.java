@@ -105,8 +105,9 @@ public abstract class AlertCLinear {
      *     {@link String }
      *     
      */
-    public void setAlertCLocationCountryCode(String value) {
+    public AlertCLinear setAlertCLocationCountryCode(String value) {
         this.alertCLocationCountryCode = value;
+        return this;
     }
 
     /**
@@ -129,8 +130,9 @@ public abstract class AlertCLinear {
      *     {@link String }
      *     
      */
-    public void setAlertCLocationTableNumber(String value) {
+    public AlertCLinear setAlertCLocationTableNumber(String value) {
         this.alertCLocationTableNumber = value;
+        return this;
     }
 
     /**
@@ -153,8 +155,9 @@ public abstract class AlertCLinear {
      *     {@link String }
      *     
      */
-    public void setAlertCLocationTableVersion(String value) {
+    public AlertCLinear setAlertCLocationTableVersion(String value) {
         this.alertCLocationTableVersion = value;
+        return this;
     }
 
     /**
@@ -177,8 +180,9 @@ public abstract class AlertCLinear {
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCLinearExtension(ExtensionType value) {
+    public AlertCLinear setAlertCLinearExtension(ExtensionType value) {
         this.alertCLinearExtension = value;
+        return this;
     }
 
 }

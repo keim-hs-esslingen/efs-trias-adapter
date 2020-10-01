@@ -87,8 +87,9 @@ public class FilterExitManagement {
      * Sets the value of the filterEnd property.
      * 
      */
-    public void setFilterEnd(boolean value) {
+    public FilterExitManagement setFilterEnd(boolean value) {
         this.filterEnd = value;
+        return this;
     }
 
     /**
@@ -103,8 +104,9 @@ public class FilterExitManagement {
      * Sets the value of the filterOutOfRange property.
      * 
      */
-    public void setFilterOutOfRange(boolean value) {
+    public FilterExitManagement setFilterOutOfRange(boolean value) {
         this.filterOutOfRange = value;
+        return this;
     }
 
     /**
@@ -127,8 +129,9 @@ public class FilterExitManagement {
      *     {@link ExtensionType }
      *     
      */
-    public void setFilterExitManagementExtension(ExtensionType value) {
+    public FilterExitManagement setFilterExitManagementExtension(ExtensionType value) {
         this.filterExitManagementExtension = value;
+        return this;
     }
 
 }

@@ -95,8 +95,9 @@ public class WinterDriving
      *     {@link WinterEquipmentAdviceEnum }
      *     
      */
-    public void setWinterDrivingAdvice(WinterEquipmentAdviceEnum value) {
+    public WinterDriving setWinterDrivingAdvice(WinterEquipmentAdviceEnum value) {
         this.winterDrivingAdvice = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class WinterDriving
      *     {@link ExtensionType }
      *     
      */
-    public void setWinterDrivingExtension(ExtensionType value) {
+    public WinterDriving setWinterDrivingExtension(ExtensionType value) {
         this.winterDrivingExtension = value;
+        return this;
     }
 
 }

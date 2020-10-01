@@ -95,8 +95,9 @@ public class Diversion
      *     {@link DiversionAdviceEnum }
      *     
      */
-    public void setDiversionAdvice(DiversionAdviceEnum value) {
+    public Diversion setDiversionAdvice(DiversionAdviceEnum value) {
         this.diversionAdvice = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class Diversion
      *     {@link ExtensionType }
      *     
      */
-    public void setDiversionExtension(ExtensionType value) {
+    public Diversion setDiversionExtension(ExtensionType value) {
         this.diversionExtension = value;
+        return this;
     }
 
 }

@@ -99,8 +99,9 @@ public class TPEGSimplePoint
      *     {@link TPEGLoc01SimplePointLocationSubtypeEnum }
      *     
      */
-    public void setTpegLocationType(TPEGLoc01SimplePointLocationSubtypeEnum value) {
+    public TPEGSimplePoint setTpegLocationType(TPEGLoc01SimplePointLocationSubtypeEnum value) {
         this.tpegLocationType = value;
+        return this;
     }
 
     /**
@@ -123,8 +124,9 @@ public class TPEGSimplePoint
      *     {@link TPEGPoint }
      *     
      */
-    public void setPoint(TPEGPoint value) {
+    public TPEGSimplePoint setPoint(TPEGPoint value) {
         this.point = value;
+        return this;
     }
 
     /**
@@ -147,8 +149,9 @@ public class TPEGSimplePoint
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegsimplePointExtension(ExtensionType value) {
+    public TPEGSimplePoint setTpegsimplePointExtension(ExtensionType value) {
         this.tpegsimplePointExtension = value;
+        return this;
     }
 
 }

@@ -95,8 +95,9 @@ public class Speeds
      *     {@link SpeedAdviceEnum }
      *     
      */
-    public void setSpeedAdvice(SpeedAdviceEnum value) {
+    public Speeds setSpeedAdvice(SpeedAdviceEnum value) {
         this.speedAdvice = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class Speeds
      *     {@link ExtensionType }
      *     
      */
-    public void setSpeedsExtension(ExtensionType value) {
+    public Speeds setSpeedsExtension(ExtensionType value) {
         this.speedsExtension = value;
+        return this;
     }
 
 }

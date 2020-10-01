@@ -95,8 +95,9 @@ public class TPEGAreaDescriptor
      *     {@link TPEGLoc03AreaDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegDescriptorType(TPEGLoc03AreaDescriptorSubtypeEnum value) {
+    public TPEGAreaDescriptor setTpegDescriptorType(TPEGLoc03AreaDescriptorSubtypeEnum value) {
         this.tpegDescriptorType = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class TPEGAreaDescriptor
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegareaDescriptorExtension(ExtensionType value) {
+    public TPEGAreaDescriptor setTpegareaDescriptorExtension(ExtensionType value) {
         this.tpegareaDescriptorExtension = value;
+        return this;
     }
 
 }

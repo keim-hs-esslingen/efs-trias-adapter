@@ -97,8 +97,9 @@ public class TPEGHeight {
      *     {@link Float }
      *     
      */
-    public void setHeight(Float value) {
+    public TPEGHeight setHeight(Float value) {
         this.height = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class TPEGHeight {
      *     {@link TPEGLoc04HeightTypeEnum }
      *     
      */
-    public void setHeightType(TPEGLoc04HeightTypeEnum value) {
+    public TPEGHeight setHeightType(TPEGLoc04HeightTypeEnum value) {
         this.heightType = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class TPEGHeight {
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegheightExtension(ExtensionType value) {
+    public TPEGHeight setTpegheightExtension(ExtensionType value) {
         this.tpegheightExtension = value;
+        return this;
     }
 
 }

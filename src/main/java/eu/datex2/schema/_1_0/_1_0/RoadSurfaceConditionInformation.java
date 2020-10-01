@@ -93,8 +93,9 @@ public class RoadSurfaceConditionInformation
      *     {@link RoadSurfaceConditionMeasurements }
      *     
      */
-    public void setRoadSurfaceConditionMeasurements(RoadSurfaceConditionMeasurements value) {
+    public RoadSurfaceConditionInformation setRoadSurfaceConditionMeasurements(RoadSurfaceConditionMeasurements value) {
         this.roadSurfaceConditionMeasurements = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class RoadSurfaceConditionInformation
      *     {@link ExtensionType }
      *     
      */
-    public void setRoadSurfaceConditionInformationExtension(ExtensionType value) {
+    public RoadSurfaceConditionInformation setRoadSurfaceConditionInformationExtension(ExtensionType value) {
         this.roadSurfaceConditionInformationExtension = value;
+        return this;
     }
 
 }

@@ -105,61 +105,61 @@ public class Siri {
     @XmlElement(name = "SubscriptionRequest", namespace = "http://www.siri.org.uk/siri")
     protected SubscriptionRequest subscriptionRequest;
     @XmlElement(name = "TerminateSubscriptionRequest", namespace = "http://www.siri.org.uk/siri")
-    protected TerminateSubscriptionRequestStructure terminateSubscriptionRequest;
+    protected TerminateSubscriptionRequest terminateSubscriptionRequest;
     @XmlElement(name = "DataReadyNotification", namespace = "http://www.siri.org.uk/siri")
-    protected DataReadyRequestStructure dataReadyNotification;
+    protected DataReadyRequest dataReadyNotification;
     @XmlElement(name = "DataSupplyRequest", namespace = "http://www.siri.org.uk/siri")
-    protected DataSupplyRequestStructure dataSupplyRequest;
+    protected DataSupplyRequest dataSupplyRequest;
     @XmlElement(name = "CheckStatusRequest", namespace = "http://www.siri.org.uk/siri")
-    protected CheckStatusRequestStructure checkStatusRequest;
+    protected CheckStatusRequest checkStatusRequest;
     @XmlElement(name = "HeartbeatNotification", namespace = "http://www.siri.org.uk/siri")
-    protected HeartbeatNotificationStructure heartbeatNotification;
+    protected HeartbeatNotification heartbeatNotification;
     @XmlElement(name = "CapabilitiesRequest", namespace = "http://www.siri.org.uk/siri")
-    protected CapabilitiesRequestStructure capabilitiesRequest;
+    protected CapabilitiesRequest capabilitiesRequest;
     @XmlElement(name = "StopPointsRequest", namespace = "http://www.siri.org.uk/siri")
     protected StopPointsRequest stopPointsRequest;
     @XmlElement(name = "LinesRequest", namespace = "http://www.siri.org.uk/siri")
-    protected LinesDiscoveryRequestStructure linesRequest;
+    protected LinesDiscoveryRequest linesRequest;
     @XmlElement(name = "ServiceFeaturesRequest", namespace = "http://www.siri.org.uk/siri")
-    protected ServiceFeaturesDiscoveryRequestStructure serviceFeaturesRequest;
+    protected ServiceFeaturesDiscoveryRequest serviceFeaturesRequest;
     @XmlElement(name = "ProductCategoriesRequest", namespace = "http://www.siri.org.uk/siri")
-    protected ProductCategoriesDiscoveryRequestStructure productCategoriesRequest;
+    protected ProductCategoriesDiscoveryRequest productCategoriesRequest;
     @XmlElement(name = "VehicleFeaturesRequest", namespace = "http://www.siri.org.uk/siri")
-    protected VehicleFeaturesDiscoveryRequestStructure vehicleFeaturesRequest;
+    protected VehicleFeaturesDiscoveryRequest vehicleFeaturesRequest;
     @XmlElement(name = "InfoChannelRequest", namespace = "http://www.siri.org.uk/siri")
-    protected InfoChannelDiscoveryRequestStructure infoChannelRequest;
+    protected InfoChannelDiscoveryRequest infoChannelRequest;
     @XmlElement(name = "FacilityRequest", namespace = "http://www.siri.org.uk/siri")
-    protected FacilityRequestStructure facilityRequest;
+    protected FacilityRequest facilityRequest;
     @XmlElement(name = "SubscriptionResponse", namespace = "http://www.siri.org.uk/siri")
-    protected SubscriptionResponseStructure subscriptionResponse;
+    protected SubscriptionResponse subscriptionResponse;
     @XmlElement(name = "TerminateSubscriptionResponse", namespace = "http://www.siri.org.uk/siri")
-    protected TerminateSubscriptionResponseStructure terminateSubscriptionResponse;
+    protected TerminateSubscriptionResponse terminateSubscriptionResponse;
     @XmlElement(name = "DataReadyAcknowledgement", namespace = "http://www.siri.org.uk/siri")
-    protected DataReadyResponseStructure dataReadyAcknowledgement;
+    protected DataReadyResponse dataReadyAcknowledgement;
     @XmlElement(name = "ServiceDelivery", namespace = "http://www.siri.org.uk/siri")
     protected ServiceDelivery serviceDelivery;
     @XmlElement(name = "DataReceivedAcknowledgement", namespace = "http://www.siri.org.uk/siri")
-    protected DataReceivedResponseStructure dataReceivedAcknowledgement;
+    protected DataReceivedResponse dataReceivedAcknowledgement;
     @XmlElement(name = "CheckStatusResponse", namespace = "http://www.siri.org.uk/siri")
-    protected CheckStatusResponseStructure checkStatusResponse;
+    protected CheckStatusResponse checkStatusResponse;
     @XmlElement(name = "CapabilitiesResponse", namespace = "http://www.siri.org.uk/siri")
-    protected CapabilitiesResponseStructure capabilitiesResponse;
+    protected CapabilitiesResponse capabilitiesResponse;
     @XmlElement(name = "StopPointsDelivery", namespace = "http://www.siri.org.uk/siri")
-    protected StopPointsDeliveryStructure stopPointsDelivery;
+    protected StopPointsDelivery stopPointsDelivery;
     @XmlElement(name = "LinesDelivery", namespace = "http://www.siri.org.uk/siri")
-    protected LinesDeliveryStructure linesDelivery;
+    protected LinesDelivery linesDelivery;
     @XmlElement(name = "ProductCategoriesDelivery", namespace = "http://www.siri.org.uk/siri")
-    protected ProductCategoriesDeliveryStructure productCategoriesDelivery;
+    protected ProductCategoriesDelivery productCategoriesDelivery;
     @XmlElement(name = "ServiceFeaturesDelivery", namespace = "http://www.siri.org.uk/siri")
-    protected ServiceFeaturesDeliveryStructure serviceFeaturesDelivery;
+    protected ServiceFeaturesDelivery serviceFeaturesDelivery;
     @XmlElement(name = "VehicleFeaturesDelivery", namespace = "http://www.siri.org.uk/siri")
-    protected VehicleFeaturesDeliveryStructure vehicleFeaturesDelivery;
+    protected VehicleFeaturesDelivery vehicleFeaturesDelivery;
     @XmlElement(name = "InfoChannelDelivery", namespace = "http://www.siri.org.uk/siri")
-    protected InfoChannelDeliveryStructure infoChannelDelivery;
+    protected InfoChannelDelivery infoChannelDelivery;
     @XmlElement(name = "FacilityDelivery", namespace = "http://www.siri.org.uk/siri")
-    protected FacilityDeliveryStructure facilityDelivery;
+    protected FacilityDelivery facilityDelivery;
     @XmlElement(name = "Extensions", namespace = "http://www.siri.org.uk/siri")
-    protected ExtensionsStructure extensions;
+    protected Extensions extensions;
     @XmlAttribute(name = "version", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NMTOKEN")
@@ -185,8 +185,9 @@ public class Siri {
      *     {@link ServiceRequest }
      *     
      */
-    public void setServiceRequest(ServiceRequest value) {
+    public Siri setServiceRequest(ServiceRequest value) {
         this.serviceRequest = value;
+        return this;
     }
 
     /**
@@ -209,8 +210,9 @@ public class Siri {
      *     {@link SubscriptionRequest }
      *     
      */
-    public void setSubscriptionRequest(SubscriptionRequest value) {
+    public Siri setSubscriptionRequest(SubscriptionRequest value) {
         this.subscriptionRequest = value;
+        return this;
     }
 
     /**
@@ -218,10 +220,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link TerminateSubscriptionRequestStructure }
+     *     {@link TerminateSubscriptionRequest }
      *     
      */
-    public TerminateSubscriptionRequestStructure getTerminateSubscriptionRequest() {
+    public TerminateSubscriptionRequest getTerminateSubscriptionRequest() {
         return terminateSubscriptionRequest;
     }
 
@@ -230,11 +232,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link TerminateSubscriptionRequestStructure }
+     *     {@link TerminateSubscriptionRequest }
      *     
      */
-    public void setTerminateSubscriptionRequest(TerminateSubscriptionRequestStructure value) {
+    public Siri setTerminateSubscriptionRequest(TerminateSubscriptionRequest value) {
         this.terminateSubscriptionRequest = value;
+        return this;
     }
 
     /**
@@ -242,10 +245,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link DataReadyRequestStructure }
+     *     {@link DataReadyRequest }
      *     
      */
-    public DataReadyRequestStructure getDataReadyNotification() {
+    public DataReadyRequest getDataReadyNotification() {
         return dataReadyNotification;
     }
 
@@ -254,11 +257,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link DataReadyRequestStructure }
+     *     {@link DataReadyRequest }
      *     
      */
-    public void setDataReadyNotification(DataReadyRequestStructure value) {
+    public Siri setDataReadyNotification(DataReadyRequest value) {
         this.dataReadyNotification = value;
+        return this;
     }
 
     /**
@@ -266,10 +270,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link DataSupplyRequestStructure }
+     *     {@link DataSupplyRequest }
      *     
      */
-    public DataSupplyRequestStructure getDataSupplyRequest() {
+    public DataSupplyRequest getDataSupplyRequest() {
         return dataSupplyRequest;
     }
 
@@ -278,11 +282,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link DataSupplyRequestStructure }
+     *     {@link DataSupplyRequest }
      *     
      */
-    public void setDataSupplyRequest(DataSupplyRequestStructure value) {
+    public Siri setDataSupplyRequest(DataSupplyRequest value) {
         this.dataSupplyRequest = value;
+        return this;
     }
 
     /**
@@ -290,10 +295,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link CheckStatusRequestStructure }
+     *     {@link CheckStatusRequest }
      *     
      */
-    public CheckStatusRequestStructure getCheckStatusRequest() {
+    public CheckStatusRequest getCheckStatusRequest() {
         return checkStatusRequest;
     }
 
@@ -302,11 +307,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link CheckStatusRequestStructure }
+     *     {@link CheckStatusRequest }
      *     
      */
-    public void setCheckStatusRequest(CheckStatusRequestStructure value) {
+    public Siri setCheckStatusRequest(CheckStatusRequest value) {
         this.checkStatusRequest = value;
+        return this;
     }
 
     /**
@@ -314,10 +320,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link HeartbeatNotificationStructure }
+     *     {@link HeartbeatNotification }
      *     
      */
-    public HeartbeatNotificationStructure getHeartbeatNotification() {
+    public HeartbeatNotification getHeartbeatNotification() {
         return heartbeatNotification;
     }
 
@@ -326,11 +332,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link HeartbeatNotificationStructure }
+     *     {@link HeartbeatNotification }
      *     
      */
-    public void setHeartbeatNotification(HeartbeatNotificationStructure value) {
+    public Siri setHeartbeatNotification(HeartbeatNotification value) {
         this.heartbeatNotification = value;
+        return this;
     }
 
     /**
@@ -338,10 +345,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link CapabilitiesRequestStructure }
+     *     {@link CapabilitiesRequest }
      *     
      */
-    public CapabilitiesRequestStructure getCapabilitiesRequest() {
+    public CapabilitiesRequest getCapabilitiesRequest() {
         return capabilitiesRequest;
     }
 
@@ -350,11 +357,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link CapabilitiesRequestStructure }
+     *     {@link CapabilitiesRequest }
      *     
      */
-    public void setCapabilitiesRequest(CapabilitiesRequestStructure value) {
+    public Siri setCapabilitiesRequest(CapabilitiesRequest value) {
         this.capabilitiesRequest = value;
+        return this;
     }
 
     /**
@@ -377,8 +385,9 @@ public class Siri {
      *     {@link StopPointsRequest }
      *     
      */
-    public void setStopPointsRequest(StopPointsRequest value) {
+    public Siri setStopPointsRequest(StopPointsRequest value) {
         this.stopPointsRequest = value;
+        return this;
     }
 
     /**
@@ -386,10 +395,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link LinesDiscoveryRequestStructure }
+     *     {@link LinesDiscoveryRequest }
      *     
      */
-    public LinesDiscoveryRequestStructure getLinesRequest() {
+    public LinesDiscoveryRequest getLinesRequest() {
         return linesRequest;
     }
 
@@ -398,11 +407,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link LinesDiscoveryRequestStructure }
+     *     {@link LinesDiscoveryRequest }
      *     
      */
-    public void setLinesRequest(LinesDiscoveryRequestStructure value) {
+    public Siri setLinesRequest(LinesDiscoveryRequest value) {
         this.linesRequest = value;
+        return this;
     }
 
     /**
@@ -410,10 +420,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link ServiceFeaturesDiscoveryRequestStructure }
+     *     {@link ServiceFeaturesDiscoveryRequest }
      *     
      */
-    public ServiceFeaturesDiscoveryRequestStructure getServiceFeaturesRequest() {
+    public ServiceFeaturesDiscoveryRequest getServiceFeaturesRequest() {
         return serviceFeaturesRequest;
     }
 
@@ -422,11 +432,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceFeaturesDiscoveryRequestStructure }
+     *     {@link ServiceFeaturesDiscoveryRequest }
      *     
      */
-    public void setServiceFeaturesRequest(ServiceFeaturesDiscoveryRequestStructure value) {
+    public Siri setServiceFeaturesRequest(ServiceFeaturesDiscoveryRequest value) {
         this.serviceFeaturesRequest = value;
+        return this;
     }
 
     /**
@@ -434,10 +445,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link ProductCategoriesDiscoveryRequestStructure }
+     *     {@link ProductCategoriesDiscoveryRequest }
      *     
      */
-    public ProductCategoriesDiscoveryRequestStructure getProductCategoriesRequest() {
+    public ProductCategoriesDiscoveryRequest getProductCategoriesRequest() {
         return productCategoriesRequest;
     }
 
@@ -446,11 +457,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link ProductCategoriesDiscoveryRequestStructure }
+     *     {@link ProductCategoriesDiscoveryRequest }
      *     
      */
-    public void setProductCategoriesRequest(ProductCategoriesDiscoveryRequestStructure value) {
+    public Siri setProductCategoriesRequest(ProductCategoriesDiscoveryRequest value) {
         this.productCategoriesRequest = value;
+        return this;
     }
 
     /**
@@ -458,10 +470,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link VehicleFeaturesDiscoveryRequestStructure }
+     *     {@link VehicleFeaturesDiscoveryRequest }
      *     
      */
-    public VehicleFeaturesDiscoveryRequestStructure getVehicleFeaturesRequest() {
+    public VehicleFeaturesDiscoveryRequest getVehicleFeaturesRequest() {
         return vehicleFeaturesRequest;
     }
 
@@ -470,11 +482,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link VehicleFeaturesDiscoveryRequestStructure }
+     *     {@link VehicleFeaturesDiscoveryRequest }
      *     
      */
-    public void setVehicleFeaturesRequest(VehicleFeaturesDiscoveryRequestStructure value) {
+    public Siri setVehicleFeaturesRequest(VehicleFeaturesDiscoveryRequest value) {
         this.vehicleFeaturesRequest = value;
+        return this;
     }
 
     /**
@@ -482,10 +495,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link InfoChannelDiscoveryRequestStructure }
+     *     {@link InfoChannelDiscoveryRequest }
      *     
      */
-    public InfoChannelDiscoveryRequestStructure getInfoChannelRequest() {
+    public InfoChannelDiscoveryRequest getInfoChannelRequest() {
         return infoChannelRequest;
     }
 
@@ -494,11 +507,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link InfoChannelDiscoveryRequestStructure }
+     *     {@link InfoChannelDiscoveryRequest }
      *     
      */
-    public void setInfoChannelRequest(InfoChannelDiscoveryRequestStructure value) {
+    public Siri setInfoChannelRequest(InfoChannelDiscoveryRequest value) {
         this.infoChannelRequest = value;
+        return this;
     }
 
     /**
@@ -506,10 +520,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link FacilityRequestStructure }
+     *     {@link FacilityRequest }
      *     
      */
-    public FacilityRequestStructure getFacilityRequest() {
+    public FacilityRequest getFacilityRequest() {
         return facilityRequest;
     }
 
@@ -518,11 +532,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link FacilityRequestStructure }
+     *     {@link FacilityRequest }
      *     
      */
-    public void setFacilityRequest(FacilityRequestStructure value) {
+    public Siri setFacilityRequest(FacilityRequest value) {
         this.facilityRequest = value;
+        return this;
     }
 
     /**
@@ -530,10 +545,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link SubscriptionResponseStructure }
+     *     {@link SubscriptionResponse }
      *     
      */
-    public SubscriptionResponseStructure getSubscriptionResponse() {
+    public SubscriptionResponse getSubscriptionResponse() {
         return subscriptionResponse;
     }
 
@@ -542,11 +557,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link SubscriptionResponseStructure }
+     *     {@link SubscriptionResponse }
      *     
      */
-    public void setSubscriptionResponse(SubscriptionResponseStructure value) {
+    public Siri setSubscriptionResponse(SubscriptionResponse value) {
         this.subscriptionResponse = value;
+        return this;
     }
 
     /**
@@ -554,10 +570,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link TerminateSubscriptionResponseStructure }
+     *     {@link TerminateSubscriptionResponse }
      *     
      */
-    public TerminateSubscriptionResponseStructure getTerminateSubscriptionResponse() {
+    public TerminateSubscriptionResponse getTerminateSubscriptionResponse() {
         return terminateSubscriptionResponse;
     }
 
@@ -566,11 +582,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link TerminateSubscriptionResponseStructure }
+     *     {@link TerminateSubscriptionResponse }
      *     
      */
-    public void setTerminateSubscriptionResponse(TerminateSubscriptionResponseStructure value) {
+    public Siri setTerminateSubscriptionResponse(TerminateSubscriptionResponse value) {
         this.terminateSubscriptionResponse = value;
+        return this;
     }
 
     /**
@@ -578,10 +595,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link DataReadyResponseStructure }
+     *     {@link DataReadyResponse }
      *     
      */
-    public DataReadyResponseStructure getDataReadyAcknowledgement() {
+    public DataReadyResponse getDataReadyAcknowledgement() {
         return dataReadyAcknowledgement;
     }
 
@@ -590,11 +607,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link DataReadyResponseStructure }
+     *     {@link DataReadyResponse }
      *     
      */
-    public void setDataReadyAcknowledgement(DataReadyResponseStructure value) {
+    public Siri setDataReadyAcknowledgement(DataReadyResponse value) {
         this.dataReadyAcknowledgement = value;
+        return this;
     }
 
     /**
@@ -617,8 +635,9 @@ public class Siri {
      *     {@link ServiceDelivery }
      *     
      */
-    public void setServiceDelivery(ServiceDelivery value) {
+    public Siri setServiceDelivery(ServiceDelivery value) {
         this.serviceDelivery = value;
+        return this;
     }
 
     /**
@@ -626,10 +645,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link DataReceivedResponseStructure }
+     *     {@link DataReceivedResponse }
      *     
      */
-    public DataReceivedResponseStructure getDataReceivedAcknowledgement() {
+    public DataReceivedResponse getDataReceivedAcknowledgement() {
         return dataReceivedAcknowledgement;
     }
 
@@ -638,11 +657,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link DataReceivedResponseStructure }
+     *     {@link DataReceivedResponse }
      *     
      */
-    public void setDataReceivedAcknowledgement(DataReceivedResponseStructure value) {
+    public Siri setDataReceivedAcknowledgement(DataReceivedResponse value) {
         this.dataReceivedAcknowledgement = value;
+        return this;
     }
 
     /**
@@ -650,10 +670,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link CheckStatusResponseStructure }
+     *     {@link CheckStatusResponse }
      *     
      */
-    public CheckStatusResponseStructure getCheckStatusResponse() {
+    public CheckStatusResponse getCheckStatusResponse() {
         return checkStatusResponse;
     }
 
@@ -662,11 +682,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link CheckStatusResponseStructure }
+     *     {@link CheckStatusResponse }
      *     
      */
-    public void setCheckStatusResponse(CheckStatusResponseStructure value) {
+    public Siri setCheckStatusResponse(CheckStatusResponse value) {
         this.checkStatusResponse = value;
+        return this;
     }
 
     /**
@@ -674,10 +695,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link CapabilitiesResponseStructure }
+     *     {@link CapabilitiesResponse }
      *     
      */
-    public CapabilitiesResponseStructure getCapabilitiesResponse() {
+    public CapabilitiesResponse getCapabilitiesResponse() {
         return capabilitiesResponse;
     }
 
@@ -686,11 +707,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link CapabilitiesResponseStructure }
+     *     {@link CapabilitiesResponse }
      *     
      */
-    public void setCapabilitiesResponse(CapabilitiesResponseStructure value) {
+    public Siri setCapabilitiesResponse(CapabilitiesResponse value) {
         this.capabilitiesResponse = value;
+        return this;
     }
 
     /**
@@ -698,10 +720,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link StopPointsDeliveryStructure }
+     *     {@link StopPointsDelivery }
      *     
      */
-    public StopPointsDeliveryStructure getStopPointsDelivery() {
+    public StopPointsDelivery getStopPointsDelivery() {
         return stopPointsDelivery;
     }
 
@@ -710,11 +732,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link StopPointsDeliveryStructure }
+     *     {@link StopPointsDelivery }
      *     
      */
-    public void setStopPointsDelivery(StopPointsDeliveryStructure value) {
+    public Siri setStopPointsDelivery(StopPointsDelivery value) {
         this.stopPointsDelivery = value;
+        return this;
     }
 
     /**
@@ -722,10 +745,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link LinesDeliveryStructure }
+     *     {@link LinesDelivery }
      *     
      */
-    public LinesDeliveryStructure getLinesDelivery() {
+    public LinesDelivery getLinesDelivery() {
         return linesDelivery;
     }
 
@@ -734,11 +757,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link LinesDeliveryStructure }
+     *     {@link LinesDelivery }
      *     
      */
-    public void setLinesDelivery(LinesDeliveryStructure value) {
+    public Siri setLinesDelivery(LinesDelivery value) {
         this.linesDelivery = value;
+        return this;
     }
 
     /**
@@ -746,10 +770,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link ProductCategoriesDeliveryStructure }
+     *     {@link ProductCategoriesDelivery }
      *     
      */
-    public ProductCategoriesDeliveryStructure getProductCategoriesDelivery() {
+    public ProductCategoriesDelivery getProductCategoriesDelivery() {
         return productCategoriesDelivery;
     }
 
@@ -758,11 +782,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link ProductCategoriesDeliveryStructure }
+     *     {@link ProductCategoriesDelivery }
      *     
      */
-    public void setProductCategoriesDelivery(ProductCategoriesDeliveryStructure value) {
+    public Siri setProductCategoriesDelivery(ProductCategoriesDelivery value) {
         this.productCategoriesDelivery = value;
+        return this;
     }
 
     /**
@@ -770,10 +795,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link ServiceFeaturesDeliveryStructure }
+     *     {@link ServiceFeaturesDelivery }
      *     
      */
-    public ServiceFeaturesDeliveryStructure getServiceFeaturesDelivery() {
+    public ServiceFeaturesDelivery getServiceFeaturesDelivery() {
         return serviceFeaturesDelivery;
     }
 
@@ -782,11 +807,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceFeaturesDeliveryStructure }
+     *     {@link ServiceFeaturesDelivery }
      *     
      */
-    public void setServiceFeaturesDelivery(ServiceFeaturesDeliveryStructure value) {
+    public Siri setServiceFeaturesDelivery(ServiceFeaturesDelivery value) {
         this.serviceFeaturesDelivery = value;
+        return this;
     }
 
     /**
@@ -794,10 +820,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link VehicleFeaturesDeliveryStructure }
+     *     {@link VehicleFeaturesDelivery }
      *     
      */
-    public VehicleFeaturesDeliveryStructure getVehicleFeaturesDelivery() {
+    public VehicleFeaturesDelivery getVehicleFeaturesDelivery() {
         return vehicleFeaturesDelivery;
     }
 
@@ -806,11 +832,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link VehicleFeaturesDeliveryStructure }
+     *     {@link VehicleFeaturesDelivery }
      *     
      */
-    public void setVehicleFeaturesDelivery(VehicleFeaturesDeliveryStructure value) {
+    public Siri setVehicleFeaturesDelivery(VehicleFeaturesDelivery value) {
         this.vehicleFeaturesDelivery = value;
+        return this;
     }
 
     /**
@@ -818,10 +845,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link InfoChannelDeliveryStructure }
+     *     {@link InfoChannelDelivery }
      *     
      */
-    public InfoChannelDeliveryStructure getInfoChannelDelivery() {
+    public InfoChannelDelivery getInfoChannelDelivery() {
         return infoChannelDelivery;
     }
 
@@ -830,11 +857,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link InfoChannelDeliveryStructure }
+     *     {@link InfoChannelDelivery }
      *     
      */
-    public void setInfoChannelDelivery(InfoChannelDeliveryStructure value) {
+    public Siri setInfoChannelDelivery(InfoChannelDelivery value) {
         this.infoChannelDelivery = value;
+        return this;
     }
 
     /**
@@ -842,10 +870,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link FacilityDeliveryStructure }
+     *     {@link FacilityDelivery }
      *     
      */
-    public FacilityDeliveryStructure getFacilityDelivery() {
+    public FacilityDelivery getFacilityDelivery() {
         return facilityDelivery;
     }
 
@@ -854,11 +882,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link FacilityDeliveryStructure }
+     *     {@link FacilityDelivery }
      *     
      */
-    public void setFacilityDelivery(FacilityDeliveryStructure value) {
+    public Siri setFacilityDelivery(FacilityDelivery value) {
         this.facilityDelivery = value;
+        return this;
     }
 
     /**
@@ -866,10 +895,10 @@ public class Siri {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionsStructure }
+     *     {@link Extensions }
      *     
      */
-    public ExtensionsStructure getExtensions() {
+    public Extensions getExtensions() {
         return extensions;
     }
 
@@ -878,11 +907,12 @@ public class Siri {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionsStructure }
+     *     {@link Extensions }
      *     
      */
-    public void setExtensions(ExtensionsStructure value) {
+    public Siri setExtensions(Extensions value) {
         this.extensions = value;
+        return this;
     }
 
     /**
@@ -909,8 +939,9 @@ public class Siri {
      *     {@link String }
      *     
      */
-    public void setVersion(String value) {
+    public Siri setVersion(String value) {
         this.version = value;
+        return this;
     }
 
 }

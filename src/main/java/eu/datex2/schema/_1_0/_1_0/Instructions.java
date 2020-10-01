@@ -95,8 +95,9 @@ public class Instructions
      *     {@link InstructionsEnum }
      *     
      */
-    public void setInstruction(InstructionsEnum value) {
+    public Instructions setInstruction(InstructionsEnum value) {
         this.instruction = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class Instructions
      *     {@link ExtensionType }
      *     
      */
-    public void setInstructionsExtension(ExtensionType value) {
+    public Instructions setInstructionsExtension(ExtensionType value) {
         this.instructionsExtension = value;
+        return this;
     }
 
 }

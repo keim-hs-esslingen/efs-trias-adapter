@@ -124,8 +124,9 @@ public class TPEGNamedOnlyArea
      *     {@link ExtensionType }
      *     
      */
-    public void setTpegnamedOnlyAreaExtension(ExtensionType value) {
+    public TPEGNamedOnlyArea setTpegnamedOnlyAreaExtension(ExtensionType value) {
         this.tpegnamedOnlyAreaExtension = value;
+        return this;
     }
 
 }

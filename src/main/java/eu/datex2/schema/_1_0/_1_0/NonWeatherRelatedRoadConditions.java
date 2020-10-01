@@ -126,8 +126,9 @@ public class NonWeatherRelatedRoadConditions
      *     {@link ExtensionType }
      *     
      */
-    public void setNonWeatherRelatedRoadConditionsExtension(ExtensionType value) {
+    public NonWeatherRelatedRoadConditions setNonWeatherRelatedRoadConditionsExtension(ExtensionType value) {
         this.nonWeatherRelatedRoadConditionsExtension = value;
+        return this;
     }
 
 }

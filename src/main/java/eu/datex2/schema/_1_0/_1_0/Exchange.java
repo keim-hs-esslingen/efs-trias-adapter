@@ -154,8 +154,9 @@ public class Exchange {
      *     {@link ChangedFlagEnum }
      *     
      */
-    public void setChangedFlag(ChangedFlagEnum value) {
+    public Exchange setChangedFlag(ChangedFlagEnum value) {
         this.changedFlag = value;
+        return this;
     }
 
     /**
@@ -178,8 +179,9 @@ public class Exchange {
      *     {@link String }
      *     
      */
-    public void setClientIdentification(String value) {
+    public Exchange setClientIdentification(String value) {
         this.clientIdentification = value;
+        return this;
     }
 
     /**
@@ -202,8 +204,9 @@ public class Exchange {
      *     {@link Boolean }
      *     
      */
-    public void setDeliveryBreak(Boolean value) {
+    public Exchange setDeliveryBreak(Boolean value) {
         this.deliveryBreak = value;
+        return this;
     }
 
     /**
@@ -226,8 +229,9 @@ public class Exchange {
      *     {@link DenyReasonEnum }
      *     
      */
-    public void setDenyReason(DenyReasonEnum value) {
+    public Exchange setDenyReason(DenyReasonEnum value) {
         this.denyReason = value;
+        return this;
     }
 
     /**
@@ -250,8 +254,9 @@ public class Exchange {
      *     {@link DateTime }
      *     
      */
-    public void setHistoricalStartDate(DateTime value) {
+    public Exchange setHistoricalStartDate(DateTime value) {
         this.historicalStartDate = value;
+        return this;
     }
 
     /**
@@ -274,8 +279,9 @@ public class Exchange {
      *     {@link DateTime }
      *     
      */
-    public void setHistoricalStopDate(DateTime value) {
+    public Exchange setHistoricalStopDate(DateTime value) {
         this.historicalStopDate = value;
+        return this;
     }
 
     /**
@@ -298,8 +304,9 @@ public class Exchange {
      *     {@link Boolean }
      *     
      */
-    public void setKeepAlive(Boolean value) {
+    public Exchange setKeepAlive(Boolean value) {
         this.keepAlive = value;
+        return this;
     }
 
     /**
@@ -322,8 +329,9 @@ public class Exchange {
      *     {@link RequestTypeEnum }
      *     
      */
-    public void setRequestType(RequestTypeEnum value) {
+    public Exchange setRequestType(RequestTypeEnum value) {
         this.requestType = value;
+        return this;
     }
 
     /**
@@ -346,8 +354,9 @@ public class Exchange {
      *     {@link ResponseEnum }
      *     
      */
-    public void setResponse(ResponseEnum value) {
+    public Exchange setResponse(ResponseEnum value) {
         this.response = value;
+        return this;
     }
 
     /**
@@ -370,8 +379,9 @@ public class Exchange {
      *     {@link String }
      *     
      */
-    public void setSubscriptionReference(String value) {
+    public Exchange setSubscriptionReference(String value) {
         this.subscriptionReference = value;
+        return this;
     }
 
     /**
@@ -394,8 +404,9 @@ public class Exchange {
      *     {@link InternationalIdentifier }
      *     
      */
-    public void setSupplierIdentification(InternationalIdentifier value) {
+    public Exchange setSupplierIdentification(InternationalIdentifier value) {
         this.supplierIdentification = value;
+        return this;
     }
 
     /**
@@ -418,8 +429,9 @@ public class Exchange {
      *     {@link Target }
      *     
      */
-    public void setTarget(Target value) {
+    public Exchange setTarget(Target value) {
         this.target = value;
+        return this;
     }
 
     /**
@@ -442,8 +454,9 @@ public class Exchange {
      *     {@link Subscription }
      *     
      */
-    public void setSubscription(Subscription value) {
+    public Exchange setSubscription(Subscription value) {
         this.subscription = value;
+        return this;
     }
 
     /**
@@ -524,8 +537,9 @@ public class Exchange {
      *     {@link ExtensionType }
      *     
      */
-    public void setExchangeExtension(ExtensionType value) {
+    public Exchange setExchangeExtension(ExtensionType value) {
         this.exchangeExtension = value;
+        return this;
     }
 
 }

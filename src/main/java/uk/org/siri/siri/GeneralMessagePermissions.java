@@ -65,11 +65,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 @XmlRootElement(name = "GeneralMessagePermissions", namespace = "http://www.siri.org.uk/siri")
 public class GeneralMessagePermissions
-    extends PermissionsStructure
+    extends Permissions
 {
 
     @XmlElement(name = "GeneralMessagePermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<GeneralMessageServicePermissionStructure> generalMessagePermission;
+    protected List<GeneralMessageServicePermission> generalMessagePermission;
 
     /**
      * Gets the value of the generalMessagePermission property.
@@ -89,13 +89,13 @@ public class GeneralMessagePermissions
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link GeneralMessageServicePermissionStructure }
+     * {@link GeneralMessageServicePermission }
      * 
      * 
      */
-    public List<GeneralMessageServicePermissionStructure> getGeneralMessagePermission() {
+    public List<GeneralMessageServicePermission> getGeneralMessagePermission() {
         if (generalMessagePermission == null) {
-            generalMessagePermission = new ArrayList<GeneralMessageServicePermissionStructure>();
+            generalMessagePermission = new ArrayList<GeneralMessageServicePermission>();
         }
         return this.generalMessagePermission;
     }

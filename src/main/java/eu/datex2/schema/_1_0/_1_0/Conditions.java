@@ -100,8 +100,9 @@ public class Conditions
      *     {@link DrivingConditionTypeEnum }
      *     
      */
-    public void setDrivingConditionType(DrivingConditionTypeEnum value) {
+    public Conditions setDrivingConditionType(DrivingConditionTypeEnum value) {
         this.drivingConditionType = value;
+        return this;
     }
 
     /**
@@ -124,8 +125,9 @@ public class Conditions
      *     {@link ExtensionType }
      *     
      */
-    public void setConditionsExtension(ExtensionType value) {
+    public Conditions setConditionsExtension(ExtensionType value) {
         this.conditionsExtension = value;
+        return this;
     }
 
 }

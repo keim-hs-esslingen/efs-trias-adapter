@@ -112,8 +112,9 @@ public class Wind {
      *     {@link Float }
      *     
      */
-    public void setMaximumWindSpeed(Float value) {
+    public Wind setMaximumWindSpeed(Float value) {
         this.maximumWindSpeed = value;
+        return this;
     }
 
     /**
@@ -136,8 +137,9 @@ public class Wind {
      *     {@link BigInteger }
      *     
      */
-    public void setWindDirectionBearing(BigInteger value) {
+    public Wind setWindDirectionBearing(BigInteger value) {
         this.windDirectionBearing = value;
+        return this;
     }
 
     /**
@@ -160,8 +162,9 @@ public class Wind {
      *     {@link DirectionCompassEnum }
      *     
      */
-    public void setWindDirectionCompass(DirectionCompassEnum value) {
+    public Wind setWindDirectionCompass(DirectionCompassEnum value) {
         this.windDirectionCompass = value;
+        return this;
     }
 
     /**
@@ -184,8 +187,9 @@ public class Wind {
      *     {@link BigInteger }
      *     
      */
-    public void setWindMeasurementHeight(BigInteger value) {
+    public Wind setWindMeasurementHeight(BigInteger value) {
         this.windMeasurementHeight = value;
+        return this;
     }
 
     /**
@@ -208,8 +212,9 @@ public class Wind {
      *     {@link Float }
      *     
      */
-    public void setWindSpeed(Float value) {
+    public Wind setWindSpeed(Float value) {
         this.windSpeed = value;
+        return this;
     }
 
     /**
@@ -232,8 +237,9 @@ public class Wind {
      *     {@link ExtensionType }
      *     
      */
-    public void setWindExtension(ExtensionType value) {
+    public Wind setWindExtension(ExtensionType value) {
         this.windExtension = value;
+        return this;
     }
 
 }

@@ -128,8 +128,9 @@ public abstract class ExchangeEnumerations {
      *     {@link ExtensionType }
      *     
      */
-    public void setExchangeEnumerationsExtension(ExtensionType value) {
+    public ExchangeEnumerations setExchangeEnumerationsExtension(ExtensionType value) {
         this.exchangeEnumerationsExtension = value;
+        return this;
     }
 
     /**
@@ -152,8 +153,9 @@ public abstract class ExchangeEnumerations {
      *     {@link DenyReasonEnum }
      *     
      */
-    public void setDenyReasonEnum(DenyReasonEnum value) {
+    public ExchangeEnumerations setDenyReasonEnum(DenyReasonEnum value) {
         this.denyReasonEnum = value;
+        return this;
     }
 
     /**
@@ -176,8 +178,9 @@ public abstract class ExchangeEnumerations {
      *     {@link SubscriptionStateEnum }
      *     
      */
-    public void setSubscriptionStateEnum(SubscriptionStateEnum value) {
+    public ExchangeEnumerations setSubscriptionStateEnum(SubscriptionStateEnum value) {
         this.subscriptionStateEnum = value;
+        return this;
     }
 
     /**
@@ -200,8 +203,9 @@ public abstract class ExchangeEnumerations {
      *     {@link RequestTypeEnum }
      *     
      */
-    public void setRequestTypeEnum(RequestTypeEnum value) {
+    public ExchangeEnumerations setRequestTypeEnum(RequestTypeEnum value) {
         this.requestTypeEnum = value;
+        return this;
     }
 
     /**
@@ -224,8 +228,9 @@ public abstract class ExchangeEnumerations {
      *     {@link ChangedFlagEnum }
      *     
      */
-    public void setChangedFlagEnum(ChangedFlagEnum value) {
+    public ExchangeEnumerations setChangedFlagEnum(ChangedFlagEnum value) {
         this.changedFlagEnum = value;
+        return this;
     }
 
     /**
@@ -248,8 +253,9 @@ public abstract class ExchangeEnumerations {
      *     {@link CompressionMethodEnum }
      *     
      */
-    public void setCompressionMethodEnum(CompressionMethodEnum value) {
+    public ExchangeEnumerations setCompressionMethodEnum(CompressionMethodEnum value) {
         this.compressionMethodEnum = value;
+        return this;
     }
 
     /**
@@ -272,8 +278,9 @@ public abstract class ExchangeEnumerations {
      *     {@link UpdateMethodEnum }
      *     
      */
-    public void setUpdateMethodEnum(UpdateMethodEnum value) {
+    public ExchangeEnumerations setUpdateMethodEnum(UpdateMethodEnum value) {
         this.updateMethodEnum = value;
+        return this;
     }
 
     /**
@@ -296,8 +303,9 @@ public abstract class ExchangeEnumerations {
      *     {@link ResponseEnum }
      *     
      */
-    public void setResponseEnum(ResponseEnum value) {
+    public ExchangeEnumerations setResponseEnum(ResponseEnum value) {
         this.responseEnum = value;
+        return this;
     }
 
     /**
@@ -320,8 +328,9 @@ public abstract class ExchangeEnumerations {
      *     {@link OperatingModeEnum }
      *     
      */
-    public void setOperatingModeEnum(OperatingModeEnum value) {
+    public ExchangeEnumerations setOperatingModeEnum(OperatingModeEnum value) {
         this.operatingModeEnum = value;
+        return this;
     }
 
 }

@@ -161,8 +161,9 @@ public abstract class Roadworks
      *     {@link RoadworksDurationEnum }
      *     
      */
-    public void setRoadworksDuration(RoadworksDurationEnum value) {
+    public Roadworks setRoadworksDuration(RoadworksDurationEnum value) {
         this.roadworksDuration = value;
+        return this;
     }
 
     /**
@@ -185,8 +186,9 @@ public abstract class Roadworks
      *     {@link RoadworksScaleEnum }
      *     
      */
-    public void setRoadworksScale(RoadworksScaleEnum value) {
+    public Roadworks setRoadworksScale(RoadworksScaleEnum value) {
         this.roadworksScale = value;
+        return this;
     }
 
     /**
@@ -209,8 +211,9 @@ public abstract class Roadworks
      *     {@link Boolean }
      *     
      */
-    public void setUnderTraffic(Boolean value) {
+    public Roadworks setUnderTraffic(Boolean value) {
         this.underTraffic = value;
+        return this;
     }
 
     /**
@@ -233,8 +236,9 @@ public abstract class Roadworks
      *     {@link Boolean }
      *     
      */
-    public void setUrgentRoadworks(Boolean value) {
+    public Roadworks setUrgentRoadworks(Boolean value) {
         this.urgentRoadworks = value;
+        return this;
     }
 
     /**
@@ -257,8 +261,9 @@ public abstract class Roadworks
      *     {@link Mobility }
      *     
      */
-    public void setMobility(Mobility value) {
+    public Roadworks setMobility(Mobility value) {
         this.mobility = value;
+        return this;
     }
 
     /**
@@ -281,8 +286,9 @@ public abstract class Roadworks
      *     {@link SubjectTypeOfWorks }
      *     
      */
-    public void setSubjectTypeOfWorks(SubjectTypeOfWorks value) {
+    public Roadworks setSubjectTypeOfWorks(SubjectTypeOfWorks value) {
         this.subjectTypeOfWorks = value;
+        return this;
     }
 
     /**
@@ -305,8 +311,9 @@ public abstract class Roadworks
      *     {@link AssociatedMaintenanceVehicles }
      *     
      */
-    public void setAssociatedMaintenanceVehicles(AssociatedMaintenanceVehicles value) {
+    public Roadworks setAssociatedMaintenanceVehicles(AssociatedMaintenanceVehicles value) {
         this.associatedMaintenanceVehicles = value;
+        return this;
     }
 
     /**
@@ -329,8 +336,9 @@ public abstract class Roadworks
      *     {@link ExtensionType }
      *     
      */
-    public void setRoadworksExtension(ExtensionType value) {
+    public Roadworks setRoadworksExtension(ExtensionType value) {
         this.roadworksExtension = value;
+        return this;
     }
 
 }

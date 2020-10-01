@@ -99,8 +99,9 @@ public class MalfunctioningTrafficControls {
      *     {@link TrafficControlEquipmentTypeEnum }
      *     
      */
-    public void setMalfunctioningTrafficControlEquipmentType(TrafficControlEquipmentTypeEnum value) {
+    public MalfunctioningTrafficControls setMalfunctioningTrafficControlEquipmentType(TrafficControlEquipmentTypeEnum value) {
         this.malfunctioningTrafficControlEquipmentType = value;
+        return this;
     }
 
     /**
@@ -123,8 +124,9 @@ public class MalfunctioningTrafficControls {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfMalfunctioningTrafficControlEquipments(BigInteger value) {
+    public MalfunctioningTrafficControls setNumberOfMalfunctioningTrafficControlEquipments(BigInteger value) {
         this.numberOfMalfunctioningTrafficControlEquipments = value;
+        return this;
     }
 
     /**
@@ -147,8 +149,9 @@ public class MalfunctioningTrafficControls {
      *     {@link ExtensionType }
      *     
      */
-    public void setMalfunctioningTrafficControlsExtension(ExtensionType value) {
+    public MalfunctioningTrafficControls setMalfunctioningTrafficControlsExtension(ExtensionType value) {
         this.malfunctioningTrafficControlsExtension = value;
+        return this;
     }
 
 }

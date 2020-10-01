@@ -97,8 +97,9 @@ public class AlertCLinearByCode
      *     {@link AlertCDirection }
      *     
      */
-    public void setAlertCDirection(AlertCDirection value) {
+    public AlertCLinearByCode setAlertCDirection(AlertCDirection value) {
         this.alertCDirection = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class AlertCLinearByCode
      *     {@link AlertCLocation }
      *     
      */
-    public void setLocationCodeForLinearLocation(AlertCLocation value) {
+    public AlertCLinearByCode setLocationCodeForLinearLocation(AlertCLocation value) {
         this.locationCodeForLinearLocation = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class AlertCLinearByCode
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCLinearByCodeExtension(ExtensionType value) {
+    public AlertCLinearByCode setAlertCLinearByCodeExtension(ExtensionType value) {
         this.alertCLinearByCodeExtension = value;
+        return this;
     }
 
 }

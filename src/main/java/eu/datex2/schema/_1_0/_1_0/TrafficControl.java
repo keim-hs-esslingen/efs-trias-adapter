@@ -103,8 +103,9 @@ public class TrafficControl {
      *     {@link TrafficControlOptionsEnum }
      *     
      */
-    public void setTrafficControlOptions(TrafficControlOptionsEnum value) {
+    public TrafficControl setTrafficControlOptions(TrafficControlOptionsEnum value) {
         this.trafficControlOptions = value;
+        return this;
     }
 
     /**
@@ -127,8 +128,9 @@ public class TrafficControl {
      *     {@link TrafficControlTypeEnum }
      *     
      */
-    public void setTrafficControlType(TrafficControlTypeEnum value) {
+    public TrafficControl setTrafficControlType(TrafficControlTypeEnum value) {
         this.trafficControlType = value;
+        return this;
     }
 
     /**
@@ -151,8 +153,9 @@ public class TrafficControl {
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficControlExtension(ExtensionType value) {
+    public TrafficControl setTrafficControlExtension(ExtensionType value) {
         this.trafficControlExtension = value;
+        return this;
     }
 
 }

@@ -101,8 +101,9 @@ public class Impact {
      *     {@link TrafficStatusEnum }
      *     
      */
-    public void setImpactOnTraffic(TrafficStatusEnum value) {
+    public Impact setImpactOnTraffic(TrafficStatusEnum value) {
         this.impactOnTraffic = value;
+        return this;
     }
 
     /**
@@ -125,8 +126,9 @@ public class Impact {
      *     {@link ImpactDetails }
      *     
      */
-    public void setImpactDetails(ImpactDetails value) {
+    public Impact setImpactDetails(ImpactDetails value) {
         this.impactDetails = value;
+        return this;
     }
 
     /**
@@ -149,8 +151,9 @@ public class Impact {
      *     {@link Delays }
      *     
      */
-    public void setDelays(Delays value) {
+    public Impact setDelays(Delays value) {
         this.delays = value;
+        return this;
     }
 
     /**
@@ -173,8 +176,9 @@ public class Impact {
      *     {@link ExtensionType }
      *     
      */
-    public void setImpactExtension(ExtensionType value) {
+    public Impact setImpactExtension(ExtensionType value) {
         this.impactExtension = value;
+        return this;
     }
 
 }

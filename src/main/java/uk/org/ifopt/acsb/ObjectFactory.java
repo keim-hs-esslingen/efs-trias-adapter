@@ -70,138 +70,138 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AccessibilityAssessmentStructure }
+     * Create an instance of {@link AccessibilityAssessment }
      * 
      */
-    public AccessibilityAssessmentStructure createAccessibilityAssessmentStructure() {
-        return new AccessibilityAssessmentStructure();
+    public AccessibilityAssessment createAccessibilityAssessmentStructure() {
+        return new AccessibilityAssessment();
     }
 
     /**
-     * Create an instance of {@link AccessibilityStructure }
+     * Create an instance of {@link Accessibility }
      * 
      */
-    public AccessibilityStructure createAccessibilityStructure() {
-        return new AccessibilityStructure();
+    public Accessibility createAccessibilityStructure() {
+        return new Accessibility();
     }
 
     /**
-     * Create an instance of {@link UserNeedStructure }
+     * Create an instance of {@link UserNeed }
      * 
      */
-    public UserNeedStructure createUserNeedStructure() {
-        return new UserNeedStructure();
+    public UserNeed createUserNeedStructure() {
+        return new UserNeed();
     }
 
     /**
-     * Create an instance of {@link LimitationRefStructure }
+     * Create an instance of {@link LimitationRef }
      * 
      */
-    public LimitationRefStructure createLimitationRefStructure() {
-        return new LimitationRefStructure();
+    public LimitationRef createLimitationRefStructure() {
+        return new LimitationRef();
     }
 
     /**
-     * Create an instance of {@link AccessibilityLimitationStructure }
+     * Create an instance of {@link AccessibilityLimitation }
      * 
      */
-    public AccessibilityLimitationStructure createAccessibilityLimitationStructure() {
-        return new AccessibilityLimitationStructure();
+    public AccessibilityLimitation createAccessibilityLimitationStructure() {
+        return new AccessibilityLimitation();
     }
 
     /**
-     * Create an instance of {@link PassengerAccessibilityNeedsStructure }
+     * Create an instance of {@link PassengerAccessibilityNeeds }
      * 
      */
-    public PassengerAccessibilityNeedsStructure createPassengerAccessibilityNeedsStructure() {
-        return new PassengerAccessibilityNeedsStructure();
+    public PassengerAccessibilityNeeds createPassengerAccessibilityNeedsStructure() {
+        return new PassengerAccessibilityNeeds();
     }
 
     /**
-     * Create an instance of {@link SuitabilityStructure }
+     * Create an instance of {@link Suitability }
      * 
      */
-    public SuitabilityStructure createSuitabilityStructure() {
-        return new SuitabilityStructure();
+    public Suitability createSuitabilityStructure() {
+        return new Suitability();
     }
 
     /**
-     * Create an instance of {@link AccessibilityAssessmentStructure.Limitations }
+     * Create an instance of {@link AccessibilityAssessment.Limitations }
      * 
      */
-    public AccessibilityAssessmentStructure.Limitations createAccessibilityAssessmentStructureLimitations() {
-        return new AccessibilityAssessmentStructure.Limitations();
+    public AccessibilityAssessment.Limitations createAccessibilityAssessmentStructureLimitations() {
+        return new AccessibilityAssessment.Limitations();
     }
 
     /**
-     * Create an instance of {@link AccessibilityAssessmentStructure.Suitabilities }
+     * Create an instance of {@link AccessibilityAssessment.Suitabilities }
      * 
      */
-    public AccessibilityAssessmentStructure.Suitabilities createAccessibilityAssessmentStructureSuitabilities() {
-        return new AccessibilityAssessmentStructure.Suitabilities();
+    public AccessibilityAssessment.Suitabilities createAccessibilityAssessmentStructureSuitabilities() {
+        return new AccessibilityAssessment.Suitabilities();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AccessibilityStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Accessibility }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/acsb", name = "EscalatorFreeAccess", defaultValue = "unknown")
-    public JAXBElement<AccessibilityStructure> createEscalatorFreeAccess(AccessibilityStructure value) {
-        return new JAXBElement<AccessibilityStructure>(_EscalatorFreeAccess_QNAME, AccessibilityStructure.class, null, value);
+    public JAXBElement<Accessibility> createEscalatorFreeAccess(Accessibility value) {
+        return new JAXBElement<Accessibility>(_EscalatorFreeAccess_QNAME, Accessibility.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AccessibilityStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Accessibility }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/acsb", name = "GuideDogAccess", defaultValue = "unknown")
-    public JAXBElement<AccessibilityStructure> createGuideDogAccess(AccessibilityStructure value) {
-        return new JAXBElement<AccessibilityStructure>(_GuideDogAccess_QNAME, AccessibilityStructure.class, null, value);
+    public JAXBElement<Accessibility> createGuideDogAccess(Accessibility value) {
+        return new JAXBElement<Accessibility>(_GuideDogAccess_QNAME, Accessibility.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AccessibilityStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Accessibility }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/acsb", name = "AudibleSignalsAvailable", defaultValue = "false")
-    public JAXBElement<AccessibilityStructure> createAudibleSignalsAvailable(AccessibilityStructure value) {
-        return new JAXBElement<AccessibilityStructure>(_AudibleSignalsAvailable_QNAME, AccessibilityStructure.class, null, value);
+    public JAXBElement<Accessibility> createAudibleSignalsAvailable(Accessibility value) {
+        return new JAXBElement<Accessibility>(_AudibleSignalsAvailable_QNAME, Accessibility.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AccessibilityStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Accessibility }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/acsb", name = "WheelchairAccess", defaultValue = "false")
-    public JAXBElement<AccessibilityStructure> createWheelchairAccess(AccessibilityStructure value) {
-        return new JAXBElement<AccessibilityStructure>(_WheelchairAccess_QNAME, AccessibilityStructure.class, null, value);
+    public JAXBElement<Accessibility> createWheelchairAccess(Accessibility value) {
+        return new JAXBElement<Accessibility>(_WheelchairAccess_QNAME, Accessibility.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AccessibilityStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Accessibility }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/acsb", name = "StepFreeAccess", defaultValue = "unknown")
-    public JAXBElement<AccessibilityStructure> createStepFreeAccess(AccessibilityStructure value) {
-        return new JAXBElement<AccessibilityStructure>(_StepFreeAccess_QNAME, AccessibilityStructure.class, null, value);
+    public JAXBElement<Accessibility> createStepFreeAccess(Accessibility value) {
+        return new JAXBElement<Accessibility>(_StepFreeAccess_QNAME, Accessibility.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AccessibilityStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Accessibility }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/acsb", name = "VisualSignsAvailable", defaultValue = "unknown")
-    public JAXBElement<AccessibilityStructure> createVisualSignsAvailable(AccessibilityStructure value) {
-        return new JAXBElement<AccessibilityStructure>(_VisualSignsAvailable_QNAME, AccessibilityStructure.class, null, value);
+    public JAXBElement<Accessibility> createVisualSignsAvailable(Accessibility value) {
+        return new JAXBElement<Accessibility>(_VisualSignsAvailable_QNAME, Accessibility.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AccessibilityStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Accessibility }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.ifopt.org.uk/acsb", name = "LiftFreeAccess", defaultValue = "unknown")
-    public JAXBElement<AccessibilityStructure> createLiftFreeAccess(AccessibilityStructure value) {
-        return new JAXBElement<AccessibilityStructure>(_LiftFreeAccess_QNAME, AccessibilityStructure.class, null, value);
+    public JAXBElement<Accessibility> createLiftFreeAccess(Accessibility value) {
+        return new JAXBElement<Accessibility>(_LiftFreeAccess_QNAME, Accessibility.class, null, value);
     }
 
 }

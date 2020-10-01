@@ -91,8 +91,9 @@ public class ManagementDescriptiveData {
      *     {@link String }
      *     
      */
-    public void setMessageChain(String value) {
+    public ManagementDescriptiveData setMessageChain(String value) {
         this.messageChain = value;
+        return this;
     }
 
     /**
@@ -115,8 +116,9 @@ public class ManagementDescriptiveData {
      *     {@link ExtensionType }
      *     
      */
-    public void setManagementDescriptiveDataExtension(ExtensionType value) {
+    public ManagementDescriptiveData setManagementDescriptiveDataExtension(ExtensionType value) {
         this.managementDescriptiveDataExtension = value;
+        return this;
     }
 
 }

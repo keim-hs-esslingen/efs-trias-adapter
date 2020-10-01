@@ -103,8 +103,9 @@ public class MeasuredDataPublication
      *     {@link String }
      *     
      */
-    public void setMeasurementSiteTableReference(String value) {
+    public MeasuredDataPublication setMeasurementSiteTableReference(String value) {
         this.measurementSiteTableReference = value;
+        return this;
     }
 
     /**
@@ -127,8 +128,9 @@ public class MeasuredDataPublication
      *     {@link HeaderInformation }
      *     
      */
-    public void setHeaderInformation(HeaderInformation value) {
+    public MeasuredDataPublication setHeaderInformation(HeaderInformation value) {
         this.headerInformation = value;
+        return this;
     }
 
     /**
@@ -180,8 +182,9 @@ public class MeasuredDataPublication
      *     {@link ExtensionType }
      *     
      */
-    public void setMeasuredDataPublicationExtension(ExtensionType value) {
+    public MeasuredDataPublication setMeasuredDataPublicationExtension(ExtensionType value) {
         this.measuredDataPublicationExtension = value;
+        return this;
     }
 
 }

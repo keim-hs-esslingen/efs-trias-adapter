@@ -101,8 +101,9 @@ public class PoorRoadInfrastructure
      *     {@link PoorRoadInfrastructureEnum }
      *     
      */
-    public void setPoorRoadInfrastructureType(PoorRoadInfrastructureEnum value) {
+    public PoorRoadInfrastructure setPoorRoadInfrastructureType(PoorRoadInfrastructureEnum value) {
         this.poorRoadInfrastructureType = value;
+        return this;
     }
 
     /**
@@ -154,8 +155,9 @@ public class PoorRoadInfrastructure
      *     {@link ExtensionType }
      *     
      */
-    public void setPoorRoadInfrastructureExtension(ExtensionType value) {
+    public PoorRoadInfrastructure setPoorRoadInfrastructureExtension(ExtensionType value) {
         this.poorRoadInfrastructureExtension = value;
+        return this;
     }
 
 }

@@ -97,8 +97,9 @@ public class TrafficHeadway
      *     {@link Float }
      *     
      */
-    public void setAverageDistanceHeadway(Float value) {
+    public TrafficHeadway setAverageDistanceHeadway(Float value) {
         this.averageDistanceHeadway = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class TrafficHeadway
      *     {@link Float }
      *     
      */
-    public void setAverageTimeHeadway(Float value) {
+    public TrafficHeadway setAverageTimeHeadway(Float value) {
         this.averageTimeHeadway = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class TrafficHeadway
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficHeadwayExtension(ExtensionType value) {
+    public TrafficHeadway setTrafficHeadwayExtension(ExtensionType value) {
         this.trafficHeadwayExtension = value;
+        return this;
     }
 
 }

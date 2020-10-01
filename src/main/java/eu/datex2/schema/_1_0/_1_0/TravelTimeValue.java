@@ -123,8 +123,9 @@ public class TravelTimeValue
      *     {@link Float }
      *     
      */
-    public void setTravelTime(Float value) {
+    public TravelTimeValue setTravelTime(Float value) {
         this.travelTime = value;
+        return this;
     }
 
     /**
@@ -147,8 +148,9 @@ public class TravelTimeValue
      *     {@link TravelTimeTrendTypeEnum }
      *     
      */
-    public void setTravelTimeTrendType(TravelTimeTrendTypeEnum value) {
+    public TravelTimeValue setTravelTimeTrendType(TravelTimeTrendTypeEnum value) {
         this.travelTimeTrendType = value;
+        return this;
     }
 
     /**
@@ -171,8 +173,9 @@ public class TravelTimeValue
      *     {@link TravelTimeTypeEnum }
      *     
      */
-    public void setTravelTimeType(TravelTimeTypeEnum value) {
+    public TravelTimeValue setTravelTimeType(TravelTimeTypeEnum value) {
         this.travelTimeType = value;
+        return this;
     }
 
     /**
@@ -195,8 +198,9 @@ public class TravelTimeValue
      *     {@link Float }
      *     
      */
-    public void setFreeFlowSpeed(Float value) {
+    public TravelTimeValue setFreeFlowSpeed(Float value) {
         this.freeFlowSpeed = value;
+        return this;
     }
 
     /**
@@ -219,8 +223,9 @@ public class TravelTimeValue
      *     {@link Float }
      *     
      */
-    public void setFreeFlowTravelTime(Float value) {
+    public TravelTimeValue setFreeFlowTravelTime(Float value) {
         this.freeFlowTravelTime = value;
+        return this;
     }
 
     /**
@@ -243,8 +248,9 @@ public class TravelTimeValue
      *     {@link Float }
      *     
      */
-    public void setNormallyExpectedTravelTime(Float value) {
+    public TravelTimeValue setNormallyExpectedTravelTime(Float value) {
         this.normallyExpectedTravelTime = value;
+        return this;
     }
 
     /**
@@ -296,8 +302,9 @@ public class TravelTimeValue
      *     {@link ExtensionType }
      *     
      */
-    public void setTravelTimeValueExtension(ExtensionType value) {
+    public TravelTimeValue setTravelTimeValueExtension(ExtensionType value) {
         this.travelTimeValueExtension = value;
+        return this;
     }
 
 }

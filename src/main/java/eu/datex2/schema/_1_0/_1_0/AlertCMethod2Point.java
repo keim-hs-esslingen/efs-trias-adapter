@@ -97,8 +97,9 @@ public class AlertCMethod2Point
      *     {@link AlertCDirection }
      *     
      */
-    public void setAlertCDirection(AlertCDirection value) {
+    public AlertCMethod2Point setAlertCDirection(AlertCDirection value) {
         this.alertCDirection = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class AlertCMethod2Point
      *     {@link AlertCMethod2PrimaryPointLocation }
      *     
      */
-    public void setAlertCMethod2PrimaryPointLocation(AlertCMethod2PrimaryPointLocation value) {
+    public AlertCMethod2Point setAlertCMethod2PrimaryPointLocation(AlertCMethod2PrimaryPointLocation value) {
         this.alertCMethod2PrimaryPointLocation = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class AlertCMethod2Point
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod2PointExtension(ExtensionType value) {
+    public AlertCMethod2Point setAlertCMethod2PointExtension(ExtensionType value) {
         this.alertCMethod2PointExtension = value;
+        return this;
     }
 
 }

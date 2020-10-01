@@ -65,11 +65,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 @XmlRootElement(name = "EstimatedTimetablePermissions", namespace = "http://www.siri.org.uk/siri")
 public class EstimatedTimetablePermissions
-    extends PermissionsStructure
+    extends Permissions
 {
 
     @XmlElement(name = "EstimatedTimetablePermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<ConnectionServicePermissionStructure> estimatedTimetablePermission;
+    protected List<ConnectionServicePermission> estimatedTimetablePermission;
 
     /**
      * Gets the value of the estimatedTimetablePermission property.
@@ -89,13 +89,13 @@ public class EstimatedTimetablePermissions
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ConnectionServicePermissionStructure }
+     * {@link ConnectionServicePermission }
      * 
      * 
      */
-    public List<ConnectionServicePermissionStructure> getEstimatedTimetablePermission() {
+    public List<ConnectionServicePermission> getEstimatedTimetablePermission() {
         if (estimatedTimetablePermission == null) {
-            estimatedTimetablePermission = new ArrayList<ConnectionServicePermissionStructure>();
+            estimatedTimetablePermission = new ArrayList<ConnectionServicePermission>();
         }
         return this.estimatedTimetablePermission;
     }

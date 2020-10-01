@@ -65,11 +65,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 @XmlRootElement(name = "SituationExchangePermissions", namespace = "http://www.siri.org.uk/siri")
 public class SituationExchangePermissions
-    extends PermissionsStructure
+    extends Permissions
 {
 
     @XmlElement(name = "SituationExchangePermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<SituationExchangeServicePermissionStructure> situationExchangePermission;
+    protected List<SituationExchangeServicePermission> situationExchangePermission;
 
     /**
      * Gets the value of the situationExchangePermission property.
@@ -89,13 +89,13 @@ public class SituationExchangePermissions
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link SituationExchangeServicePermissionStructure }
+     * {@link SituationExchangeServicePermission }
      * 
      * 
      */
-    public List<SituationExchangeServicePermissionStructure> getSituationExchangePermission() {
+    public List<SituationExchangeServicePermission> getSituationExchangePermission() {
         if (situationExchangePermission == null) {
-            situationExchangePermission = new ArrayList<SituationExchangeServicePermissionStructure>();
+            situationExchangePermission = new ArrayList<SituationExchangeServicePermission>();
         }
         return this.situationExchangePermission;
     }

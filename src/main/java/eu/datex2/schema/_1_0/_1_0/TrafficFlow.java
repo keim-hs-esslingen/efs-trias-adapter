@@ -110,8 +110,9 @@ public class TrafficFlow
      *     {@link BigInteger }
      *     
      */
-    public void setAxleFlow(BigInteger value) {
+    public TrafficFlow setAxleFlow(BigInteger value) {
         this.axleFlow = value;
+        return this;
     }
 
     /**
@@ -134,8 +135,9 @@ public class TrafficFlow
      *     {@link BigInteger }
      *     
      */
-    public void setPCUFlow(BigInteger value) {
+    public TrafficFlow setPCUFlow(BigInteger value) {
         this.pcuFlow = value;
+        return this;
     }
 
     /**
@@ -158,8 +160,9 @@ public class TrafficFlow
      *     {@link Float }
      *     
      */
-    public void setPercentageLongVehicles(Float value) {
+    public TrafficFlow setPercentageLongVehicles(Float value) {
         this.percentageLongVehicles = value;
+        return this;
     }
 
     /**
@@ -182,8 +185,9 @@ public class TrafficFlow
      *     {@link BigInteger }
      *     
      */
-    public void setVehicleFlow(BigInteger value) {
+    public TrafficFlow setVehicleFlow(BigInteger value) {
         this.vehicleFlow = value;
+        return this;
     }
 
     /**
@@ -206,8 +210,9 @@ public class TrafficFlow
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficFlowExtension(ExtensionType value) {
+    public TrafficFlow setTrafficFlowExtension(ExtensionType value) {
         this.trafficFlowExtension = value;
+        return this;
     }
 
 }

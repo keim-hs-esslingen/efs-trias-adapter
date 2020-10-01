@@ -117,8 +117,9 @@ public class Situation {
      *     {@link OverallImpactEnum }
      *     
      */
-    public void setOverallImpact(OverallImpactEnum value) {
+    public Situation setOverallImpact(OverallImpactEnum value) {
         this.overallImpact = value;
+        return this;
     }
 
     /**
@@ -170,8 +171,9 @@ public class Situation {
      *     {@link HeaderInformation }
      *     
      */
-    public void setHeaderInformation(HeaderInformation value) {
+    public Situation setHeaderInformation(HeaderInformation value) {
         this.headerInformation = value;
+        return this;
     }
 
     /**
@@ -223,8 +225,9 @@ public class Situation {
      *     {@link ExtensionType }
      *     
      */
-    public void setSituationExtension(ExtensionType value) {
+    public Situation setSituationExtension(ExtensionType value) {
         this.situationExtension = value;
+        return this;
     }
 
     /**
@@ -247,8 +250,9 @@ public class Situation {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public Situation setId(String value) {
         this.id = value;
+        return this;
     }
 
 }

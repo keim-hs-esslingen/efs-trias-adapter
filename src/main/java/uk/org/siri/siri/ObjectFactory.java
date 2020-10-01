@@ -327,539 +327,539 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ServiceDeliveryStructure }
+     * Create an instance of {@link ServiceDelivery }
      * 
      */
-    public ServiceDeliveryStructure createServiceDeliveryStructure() {
-        return new ServiceDeliveryStructure();
+    public ServiceDelivery createServiceDeliveryStructure() {
+        return new ServiceDelivery();
     }
 
     /**
-     * Create an instance of {@link AbstractPermissionStructure }
+     * Create an instance of {@link AbstractPermission }
      * 
      */
-    public AbstractPermissionStructure createAbstractPermissionStructure() {
-        return new AbstractPermissionStructure();
+    public AbstractPermission createAbstractPermissionStructure() {
+        return new AbstractPermission();
     }
 
     /**
-     * Create an instance of {@link AffectedModesStructure }
+     * Create an instance of {@link AffectedModes }
      * 
      */
-    public AffectedModesStructure createAffectedModesStructure() {
-        return new AffectedModesStructure();
+    public AffectedModes createAffectedModesStructure() {
+        return new AffectedModes();
     }
 
     /**
-     * Create an instance of {@link PtConsequenceStructure }
+     * Create an instance of {@link PtConsequence }
      * 
      */
-    public PtConsequenceStructure createPtConsequenceStructure() {
-        return new PtConsequenceStructure();
+    public PtConsequence createPtConsequenceStructure() {
+        return new PtConsequence();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringFilterStructure }
+     * Create an instance of {@link StopMonitoringFilter }
      * 
      */
-    public StopMonitoringFilterStructure createStopMonitoringFilterStructure() {
-        return new StopMonitoringFilterStructure();
+    public StopMonitoringFilter createStopMonitoringFilterStructure() {
+        return new StopMonitoringFilter();
     }
 
     /**
-     * Create an instance of {@link AnnotatedStopPointStructure }
+     * Create an instance of {@link AnnotatedStopPoint }
      * 
      */
-    public AnnotatedStopPointStructure createAnnotatedStopPointStructure() {
-        return new AnnotatedStopPointStructure();
+    public AnnotatedStopPoint createAnnotatedStopPointStructure() {
+        return new AnnotatedStopPoint();
     }
 
     /**
-     * Create an instance of {@link EquipmentAvailabilityStructure }
+     * Create an instance of {@link EquipmentAvailability }
      * 
      */
-    public EquipmentAvailabilityStructure createEquipmentAvailabilityStructure() {
-        return new EquipmentAvailabilityStructure();
+    public EquipmentAvailability createEquipmentAvailabilityStructure() {
+        return new EquipmentAvailability();
     }
 
     /**
-     * Create an instance of {@link AffectedStopPlaceStructure }
+     * Create an instance of {@link AffectedStopPlace }
      * 
      */
-    public AffectedStopPlaceStructure createAffectedStopPlaceStructure() {
-        return new AffectedStopPlaceStructure();
+    public AffectedStopPlace createAffectedStopPlaceStructure() {
+        return new AffectedStopPlace();
     }
 
     /**
-     * Create an instance of {@link AffectedStopPointStructure }
+     * Create an instance of {@link AffectedStopPoint }
      * 
      */
-    public AffectedStopPointStructure createAffectedStopPointStructure() {
-        return new AffectedStopPointStructure();
+    public AffectedStopPoint createAffectedStopPointStructure() {
+        return new AffectedStopPoint();
     }
 
     /**
-     * Create an instance of {@link PushedActionStructure }
+     * Create an instance of {@link PushedAction }
      * 
      */
-    public PushedActionStructure createPushedActionStructure() {
-        return new PushedActionStructure();
+    public PushedAction createPushedActionStructure() {
+        return new PushedAction();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringServiceCapabilitiesStructure }
+     * Create an instance of {@link ConnectionMonitoringServiceCapabilities }
      * 
      */
-    public ConnectionMonitoringServiceCapabilitiesStructure createConnectionMonitoringServiceCapabilitiesStructure() {
-        return new ConnectionMonitoringServiceCapabilitiesStructure();
+    public ConnectionMonitoringServiceCapabilities createConnectionMonitoringServiceCapabilitiesStructure() {
+        return new ConnectionMonitoringServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link FacilityStructure }
+     * Create an instance of {@link Facility }
      * 
      */
-    public FacilityStructure createFacilityStructure() {
-        return new FacilityStructure();
+    public Facility createFacilityStructure() {
+        return new Facility();
     }
 
     /**
-     * Create an instance of {@link CheckStatusResponseBodyStructure }
+     * Create an instance of {@link CheckStatusResponseBody }
      * 
      */
-    public CheckStatusResponseBodyStructure createCheckStatusResponseBodyStructure() {
-        return new CheckStatusResponseBodyStructure();
+    public CheckStatusResponseBody createCheckStatusResponseBodyStructure() {
+        return new CheckStatusResponseBody();
     }
 
     /**
-     * Create an instance of {@link VehicleActivityStructure }
+     * Create an instance of {@link VehicleActivity }
      * 
      */
-    public VehicleActivityStructure createVehicleActivityStructure() {
-        return new VehicleActivityStructure();
+    public VehicleActivity createVehicleActivityStructure() {
+        return new VehicleActivity();
     }
 
     /**
-     * Create an instance of {@link AffectedLineStructure }
+     * Create an instance of {@link AffectedLine }
      * 
      */
-    public AffectedLineStructure createAffectedLineStructure() {
-        return new AffectedLineStructure();
+    public AffectedLine createAffectedLineStructure() {
+        return new AffectedLine();
     }
 
     /**
-     * Create an instance of {@link CapabilityGeneralInteractionStructure }
+     * Create an instance of {@link CapabilityGeneralInteraction }
      * 
      */
-    public CapabilityGeneralInteractionStructure createCapabilityGeneralInteractionStructure() {
-        return new CapabilityGeneralInteractionStructure();
+    public CapabilityGeneralInteraction createCapabilityGeneralInteractionStructure() {
+        return new CapabilityGeneralInteraction();
     }
 
     /**
-     * Create an instance of {@link AffectedRouteStructure }
+     * Create an instance of {@link AffectedRoute }
      * 
      */
-    public AffectedRouteStructure createAffectedRouteStructure() {
-        return new AffectedRouteStructure();
+    public AffectedRoute createAffectedRouteStructure() {
+        return new AffectedRoute();
     }
 
     /**
-     * Create an instance of {@link AffectedVehicleJourneyStructure }
+     * Create an instance of {@link AffectedVehicleJourney }
      * 
      */
-    public AffectedVehicleJourneyStructure createAffectedVehicleJourneyStructure() {
-        return new AffectedVehicleJourneyStructure();
+    public AffectedVehicleJourney createAffectedVehicleJourneyStructure() {
+        return new AffectedVehicleJourney();
     }
 
     /**
-     * Create an instance of {@link AnnotatedLineStructure }
+     * Create an instance of {@link AnnotatedLine }
      * 
      */
-    public AnnotatedLineStructure createAnnotatedLineStructure() {
-        return new AnnotatedLineStructure();
+    public AnnotatedLine createAnnotatedLineStructure() {
+        return new AnnotatedLine();
     }
 
     /**
-     * Create an instance of {@link AffectsScopeStructure }
+     * Create an instance of {@link AffectsScope }
      * 
      */
-    public AffectsScopeStructure createAffectsScopeStructure() {
-        return new AffectsScopeStructure();
+    public AffectsScope createAffectsScopeStructure() {
+        return new AffectsScope();
     }
 
     /**
-     * Create an instance of {@link AffectsScopeStructure.Networks }
+     * Create an instance of {@link AffectsScope.Networks }
      * 
      */
-    public AffectsScopeStructure.Networks createAffectsScopeStructureNetworks() {
-        return new AffectsScopeStructure.Networks();
+    public AffectsScope.Networks createAffectsScopeStructureNetworks() {
+        return new AffectsScope.Networks();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableServiceCapabilitiesStructure }
+     * Create an instance of {@link EstimatedTimetableServiceCapabilities }
      * 
      */
-    public EstimatedTimetableServiceCapabilitiesStructure createEstimatedTimetableServiceCapabilitiesStructure() {
-        return new EstimatedTimetableServiceCapabilitiesStructure();
+    public EstimatedTimetableServiceCapabilities createEstimatedTimetableServiceCapabilitiesStructure() {
+        return new EstimatedTimetableServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageServiceCapabilitiesStructure }
+     * Create an instance of {@link GeneralMessageServiceCapabilities }
      * 
      */
-    public GeneralMessageServiceCapabilitiesStructure createGeneralMessageServiceCapabilitiesStructure() {
-        return new GeneralMessageServiceCapabilitiesStructure();
+    public GeneralMessageServiceCapabilities createGeneralMessageServiceCapabilitiesStructure() {
+        return new GeneralMessageServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageServicePermissionStructure }
+     * Create an instance of {@link GeneralMessageServicePermission }
      * 
      */
-    public GeneralMessageServicePermissionStructure createGeneralMessageServicePermissionStructure() {
-        return new GeneralMessageServicePermissionStructure();
+    public GeneralMessageServicePermission createGeneralMessageServicePermissionStructure() {
+        return new GeneralMessageServicePermission();
     }
 
     /**
-     * Create an instance of {@link PtSituationElementStructure }
+     * Create an instance of {@link PtSituationElement }
      * 
      */
-    public PtSituationElementStructure createPtSituationElementStructure() {
-        return new PtSituationElementStructure();
+    public PtSituationElement createPtSituationElementStructure() {
+        return new PtSituationElement();
     }
 
     /**
-     * Create an instance of {@link PtSituationElementStructure.Images }
+     * Create an instance of {@link PtSituationElement.Images }
      * 
      */
-    public PtSituationElementStructure.Images createPtSituationElementStructureImages() {
-        return new PtSituationElementStructure.Images();
+    public PtSituationElement.Images createPtSituationElementStructureImages() {
+        return new PtSituationElement.Images();
     }
 
     /**
-     * Create an instance of {@link PtSituationElementStructure.SecondaryReasons }
+     * Create an instance of {@link PtSituationElement.SecondaryReasons }
      * 
      */
-    public PtSituationElementStructure.SecondaryReasons createPtSituationElementStructureSecondaryReasons() {
-        return new PtSituationElementStructure.SecondaryReasons();
+    public PtSituationElement.SecondaryReasons createPtSituationElementStructureSecondaryReasons() {
+        return new PtSituationElement.SecondaryReasons();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringServiceCapabilitiesStructure }
+     * Create an instance of {@link FacilityMonitoringServiceCapabilities }
      * 
      */
-    public FacilityMonitoringServiceCapabilitiesStructure createFacilityMonitoringServiceCapabilitiesStructure() {
-        return new FacilityMonitoringServiceCapabilitiesStructure();
+    public FacilityMonitoringServiceCapabilities createFacilityMonitoringServiceCapabilitiesStructure() {
+        return new FacilityMonitoringServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableServiceCapabilitiesStructure }
+     * Create an instance of {@link ConnectionTimetableServiceCapabilities }
      * 
      */
-    public ConnectionTimetableServiceCapabilitiesStructure createConnectionTimetableServiceCapabilitiesStructure() {
-        return new ConnectionTimetableServiceCapabilitiesStructure();
+    public ConnectionTimetableServiceCapabilities createConnectionTimetableServiceCapabilitiesStructure() {
+        return new ConnectionTimetableServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link DatedVehicleJourneyStructure }
+     * Create an instance of {@link DatedVehicleJourney }
      * 
      */
-    public DatedVehicleJourneyStructure createDatedVehicleJourneyStructure() {
-        return new DatedVehicleJourneyStructure();
+    public DatedVehicleJourney createDatedVehicleJourneyStructure() {
+        return new DatedVehicleJourney();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringServicePermissionStructure }
+     * Create an instance of {@link VehicleMonitoringServicePermission }
      * 
      */
-    public VehicleMonitoringServicePermissionStructure createVehicleMonitoringServicePermissionStructure() {
-        return new VehicleMonitoringServicePermissionStructure();
+    public VehicleMonitoringServicePermission createVehicleMonitoringServicePermissionStructure() {
+        return new VehicleMonitoringServicePermission();
     }
 
     /**
-     * Create an instance of {@link StopTimetableServiceCapabilitiesStructure }
+     * Create an instance of {@link StopTimetableServiceCapabilities }
      * 
      */
-    public StopTimetableServiceCapabilitiesStructure createStopTimetableServiceCapabilitiesStructure() {
-        return new StopTimetableServiceCapabilitiesStructure();
+    public StopTimetableServiceCapabilities createStopTimetableServiceCapabilitiesStructure() {
+        return new StopTimetableServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringServiceCapabilitiesStructure }
+     * Create an instance of {@link VehicleMonitoringServiceCapabilities }
      * 
      */
-    public VehicleMonitoringServiceCapabilitiesStructure createVehicleMonitoringServiceCapabilitiesStructure() {
-        return new VehicleMonitoringServiceCapabilitiesStructure();
+    public VehicleMonitoringServiceCapabilities createVehicleMonitoringServiceCapabilitiesStructure() {
+        return new VehicleMonitoringServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringServicePermissionStructure }
+     * Create an instance of {@link StopMonitoringServicePermission }
      * 
      */
-    public StopMonitoringServicePermissionStructure createStopMonitoringServicePermissionStructure() {
-        return new StopMonitoringServicePermissionStructure();
+    public StopMonitoringServicePermission createStopMonitoringServicePermissionStructure() {
+        return new StopMonitoringServicePermission();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableServiceCapabilitiesStructure }
+     * Create an instance of {@link ProductionTimetableServiceCapabilities }
      * 
      */
-    public ProductionTimetableServiceCapabilitiesStructure createProductionTimetableServiceCapabilitiesStructure() {
-        return new ProductionTimetableServiceCapabilitiesStructure();
+    public ProductionTimetableServiceCapabilities createProductionTimetableServiceCapabilitiesStructure() {
+        return new ProductionTimetableServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeServiceCapabilitiesStructure }
+     * Create an instance of {@link SituationExchangeServiceCapabilities }
      * 
      */
-    public SituationExchangeServiceCapabilitiesStructure createSituationExchangeServiceCapabilitiesStructure() {
-        return new SituationExchangeServiceCapabilitiesStructure();
+    public SituationExchangeServiceCapabilities createSituationExchangeServiceCapabilitiesStructure() {
+        return new SituationExchangeServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableCapabilitiesResponseStructure }
+     * Create an instance of {@link ConnectionTimetableCapabilitiesResponse }
      * 
      */
-    public ConnectionTimetableCapabilitiesResponseStructure createConnectionTimetableCapabilitiesResponseStructure() {
-        return new ConnectionTimetableCapabilitiesResponseStructure();
+    public ConnectionTimetableCapabilitiesResponse createConnectionTimetableCapabilitiesResponseStructure() {
+        return new ConnectionTimetableCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeRequestStructure }
+     * Create an instance of {@link SituationExchangeRequest }
      * 
      */
-    public SituationExchangeRequestStructure createSituationExchangeRequestStructure() {
-        return new SituationExchangeRequestStructure();
+    public SituationExchangeRequest createSituationExchangeRequestStructure() {
+        return new SituationExchangeRequest();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableRequestStructure }
+     * Create an instance of {@link EstimatedTimetableRequest }
      * 
      */
-    public EstimatedTimetableRequestStructure createEstimatedTimetableRequestStructure() {
-        return new EstimatedTimetableRequestStructure();
+    public EstimatedTimetableRequest createEstimatedTimetableRequestStructure() {
+        return new EstimatedTimetableRequest();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableRequestStructure }
+     * Create an instance of {@link ProductionTimetableRequest }
      * 
      */
-    public ProductionTimetableRequestStructure createProductionTimetableRequestStructure() {
-        return new ProductionTimetableRequestStructure();
+    public ProductionTimetableRequest createProductionTimetableRequestStructure() {
+        return new ProductionTimetableRequest();
     }
 
     /**
-     * Create an instance of {@link EstimatedVehicleJourneyStructure }
+     * Create an instance of {@link EstimatedVehicleJourney }
      * 
      */
-    public EstimatedVehicleJourneyStructure createEstimatedVehicleJourneyStructure() {
-        return new EstimatedVehicleJourneyStructure();
+    public EstimatedVehicleJourney createEstimatedVehicleJourneyStructure() {
+        return new EstimatedVehicleJourney();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringServiceCapabilitiesStructure }
+     * Create an instance of {@link StopMonitoringServiceCapabilities }
      * 
      */
-    public StopMonitoringServiceCapabilitiesStructure createStopMonitoringServiceCapabilitiesStructure() {
-        return new StopMonitoringServiceCapabilitiesStructure();
+    public StopMonitoringServiceCapabilities createStopMonitoringServiceCapabilitiesStructure() {
+        return new StopMonitoringServiceCapabilities();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeDeliveryStructure }
+     * Create an instance of {@link SituationExchangeDelivery }
      * 
      */
-    public SituationExchangeDeliveryStructure createSituationExchangeDeliveryStructure() {
-        return new SituationExchangeDeliveryStructure();
+    public SituationExchangeDelivery createSituationExchangeDeliveryStructure() {
+        return new SituationExchangeDelivery();
     }
 
     /**
-     * Create an instance of {@link DataReceivedResponseStructure }
+     * Create an instance of {@link DataReceivedResponse }
      * 
      */
-    public DataReceivedResponseStructure createDataReceivedResponseStructure() {
-        return new DataReceivedResponseStructure();
+    public DataReceivedResponse createDataReceivedResponseStructure() {
+        return new DataReceivedResponse();
     }
 
     /**
-     * Create an instance of {@link DataReadyResponseStructure }
+     * Create an instance of {@link DataReadyResponse }
      * 
      */
-    public DataReadyResponseStructure createDataReadyResponseStructure() {
-        return new DataReadyResponseStructure();
+    public DataReadyResponse createDataReadyResponseStructure() {
+        return new DataReadyResponse();
     }
 
     /**
-     * Create an instance of {@link TerminateSubscriptionResponseStructure }
+     * Create an instance of {@link TerminateSubscriptionResponse }
      * 
      */
-    public TerminateSubscriptionResponseStructure createTerminateSubscriptionResponseStructure() {
-        return new TerminateSubscriptionResponseStructure();
+    public TerminateSubscriptionResponse createTerminateSubscriptionResponseStructure() {
+        return new TerminateSubscriptionResponse();
     }
 
     /**
-     * Create an instance of {@link TerminateSubscriptionResponseStructure.TerminationResponseStatus }
+     * Create an instance of {@link TerminateSubscriptionResponse.TerminationResponseStatus }
      * 
      */
-    public TerminateSubscriptionResponseStructure.TerminationResponseStatus createTerminateSubscriptionResponseStructureTerminationResponseStatus() {
-        return new TerminateSubscriptionResponseStructure.TerminationResponseStatus();
+    public TerminateSubscriptionResponse.TerminationResponseStatus createTerminateSubscriptionResponseStructureTerminationResponseStatus() {
+        return new TerminateSubscriptionResponse.TerminationResponseStatus();
     }
 
     /**
-     * Create an instance of {@link TerminateSubscriptionRequestStructure }
+     * Create an instance of {@link TerminateSubscriptionRequest }
      * 
      */
-    public TerminateSubscriptionRequestStructure createTerminateSubscriptionRequestStructure() {
-        return new TerminateSubscriptionRequestStructure();
+    public TerminateSubscriptionRequest createTerminateSubscriptionRequestStructure() {
+        return new TerminateSubscriptionRequest();
     }
 
     /**
-     * Create an instance of {@link DataReadyRequestStructure }
+     * Create an instance of {@link DataReadyRequest }
      * 
      */
-    public DataReadyRequestStructure createDataReadyRequestStructure() {
-        return new DataReadyRequestStructure();
+    public DataReadyRequest createDataReadyRequestStructure() {
+        return new DataReadyRequest();
     }
 
     /**
-     * Create an instance of {@link ProducerRequestEndpointStructure }
+     * Create an instance of {@link ProducerRequestEndpoint }
      * 
      */
-    public ProducerRequestEndpointStructure createProducerRequestEndpointStructure() {
-        return new ProducerRequestEndpointStructure();
+    public ProducerRequestEndpoint createProducerRequestEndpointStructure() {
+        return new ProducerRequestEndpoint();
     }
 
     /**
-     * Create an instance of {@link DataSupplyRequestStructure }
+     * Create an instance of {@link DataSupplyRequest }
      * 
      */
-    public DataSupplyRequestStructure createDataSupplyRequestStructure() {
-        return new DataSupplyRequestStructure();
+    public DataSupplyRequest createDataSupplyRequestStructure() {
+        return new DataSupplyRequest();
     }
 
     /**
-     * Create an instance of {@link CheckStatusRequestStructure }
+     * Create an instance of {@link CheckStatusRequest }
      * 
      */
-    public CheckStatusRequestStructure createCheckStatusRequestStructure() {
-        return new CheckStatusRequestStructure();
+    public CheckStatusRequest createCheckStatusRequestStructure() {
+        return new CheckStatusRequest();
     }
 
     /**
-     * Create an instance of {@link RequestStructure }
+     * Create an instance of {@link Request }
      * 
      */
-    public RequestStructure createRequestStructure() {
-        return new RequestStructure();
+    public Request createRequestStructure() {
+        return new Request();
     }
 
     /**
-     * Create an instance of {@link HeartbeatNotificationStructure }
+     * Create an instance of {@link HeartbeatNotification }
      * 
      */
-    public HeartbeatNotificationStructure createHeartbeatNotificationStructure() {
-        return new HeartbeatNotificationStructure();
+    public HeartbeatNotification createHeartbeatNotificationStructure() {
+        return new HeartbeatNotification();
     }
 
     /**
-     * Create an instance of {@link SubscriptionResponseStructure }
+     * Create an instance of {@link SubscriptionResponse }
      * 
      */
-    public SubscriptionResponseStructure createSubscriptionResponseStructure() {
-        return new SubscriptionResponseStructure();
+    public SubscriptionResponse createSubscriptionResponseStructure() {
+        return new SubscriptionResponse();
     }
 
     /**
-     * Create an instance of {@link CheckStatusResponseStructure }
+     * Create an instance of {@link CheckStatusResponse }
      * 
      */
-    public CheckStatusResponseStructure createCheckStatusResponseStructure() {
-        return new CheckStatusResponseStructure();
+    public CheckStatusResponse createCheckStatusResponseStructure() {
+        return new CheckStatusResponse();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringDeliveryStructure }
+     * Create an instance of {@link FacilityMonitoringDelivery }
      * 
      */
-    public FacilityMonitoringDeliveryStructure createFacilityMonitoringDeliveryStructure() {
-        return new FacilityMonitoringDeliveryStructure();
+    public FacilityMonitoringDelivery createFacilityMonitoringDeliveryStructure() {
+        return new FacilityMonitoringDelivery();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeSubscriptionStructure }
+     * Create an instance of {@link SituationExchangeSubscription }
      * 
      */
-    public SituationExchangeSubscriptionStructure createSituationExchangeSubscriptionStructure() {
-        return new SituationExchangeSubscriptionStructure();
+    public SituationExchangeSubscription createSituationExchangeSubscriptionStructure() {
+        return new SituationExchangeSubscription();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringSubscriptionStructure }
+     * Create an instance of {@link FacilityMonitoringSubscription }
      * 
      */
-    public FacilityMonitoringSubscriptionStructure createFacilityMonitoringSubscriptionStructure() {
-        return new FacilityMonitoringSubscriptionStructure();
+    public FacilityMonitoringSubscription createFacilityMonitoringSubscriptionStructure() {
+        return new FacilityMonitoringSubscription();
     }
 
     /**
-     * Create an instance of {@link ServiceCapabilitiesRequestStructure }
+     * Create an instance of {@link ServiceCapabilitiesRequest }
      * 
      */
-    public ServiceCapabilitiesRequestStructure createServiceCapabilitiesRequestStructure() {
-        return new ServiceCapabilitiesRequestStructure();
+    public ServiceCapabilitiesRequest createServiceCapabilitiesRequestStructure() {
+        return new ServiceCapabilitiesRequest();
     }
 
     /**
-     * Create an instance of {@link FacilityDeliveryStructure }
+     * Create an instance of {@link FacilityDelivery }
      * 
      */
-    public FacilityDeliveryStructure createFacilityDeliveryStructure() {
-        return new FacilityDeliveryStructure();
+    public FacilityDelivery createFacilityDeliveryStructure() {
+        return new FacilityDelivery();
     }
 
     /**
-     * Create an instance of {@link AbstractDiscoveryDeliveryStructure }
+     * Create an instance of {@link AbstractDiscoveryDelivery }
      * 
      */
-    public AbstractDiscoveryDeliveryStructure createAbstractDiscoveryDeliveryStructure() {
-        return new AbstractDiscoveryDeliveryStructure();
+    public AbstractDiscoveryDelivery createAbstractDiscoveryDeliveryStructure() {
+        return new AbstractDiscoveryDelivery();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringDistributorDeliveryStructure }
+     * Create an instance of {@link ConnectionMonitoringDistributorDelivery }
      * 
      */
-    public ConnectionMonitoringDistributorDeliveryStructure createConnectionMonitoringDistributorDeliveryStructure() {
-        return new ConnectionMonitoringDistributorDeliveryStructure();
+    public ConnectionMonitoringDistributorDelivery createConnectionMonitoringDistributorDeliveryStructure() {
+        return new ConnectionMonitoringDistributorDelivery();
     }
 
     /**
-     * Create an instance of {@link AbstractServiceDeliveryStructure }
+     * Create an instance of {@link AbstractServiceDelivery }
      * 
      */
-    public AbstractServiceDeliveryStructure createAbstractServiceDeliveryStructure() {
-        return new AbstractServiceDeliveryStructure();
+    public AbstractServiceDelivery createAbstractServiceDeliveryStructure() {
+        return new AbstractServiceDelivery();
     }
 
     /**
-     * Create an instance of {@link AllowedResourceUsageExceededErrorStructure }
+     * Create an instance of {@link AllowedResourceUsageExceededError }
      * 
      */
-    public AllowedResourceUsageExceededErrorStructure createAllowedResourceUsageExceededErrorStructure() {
-        return new AllowedResourceUsageExceededErrorStructure();
+    public AllowedResourceUsageExceededError createAllowedResourceUsageExceededErrorStructure() {
+        return new AllowedResourceUsageExceededError();
     }
 
     /**
-     * Create an instance of {@link ErrorCodeStructure }
+     * Create an instance of {@link ErrorCode }
      * 
      */
-    public ErrorCodeStructure createErrorCodeStructure() {
-        return new ErrorCodeStructure();
+    public ErrorCode createErrorCodeStructure() {
+        return new ErrorCode();
     }
 
     /**
-     * Create an instance of {@link FeatureRefStructure }
+     * Create an instance of {@link FeatureRef }
      * 
      */
-    public FeatureRefStructure createFeatureRefStructure() {
-        return new FeatureRefStructure();
+    public FeatureRef createFeatureRefStructure() {
+        return new FeatureRef();
     }
 
     /**
@@ -871,59 +871,59 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PublishToAlertsActionStructure }
+     * Create an instance of {@link PublishToAlertsAction }
      * 
      */
-    public PublishToAlertsActionStructure createPublishToAlertsActionStructure() {
-        return new PublishToAlertsActionStructure();
+    public PublishToAlertsAction createPublishToAlertsActionStructure() {
+        return new PublishToAlertsAction();
     }
 
     /**
-     * Create an instance of {@link NaturalLanguagePlaceNameStructure }
+     * Create an instance of {@link NaturalLanguagePlaceName }
      * 
      */
-    public NaturalLanguagePlaceNameStructure createNaturalLanguagePlaceNameStructure() {
-        return new NaturalLanguagePlaceNameStructure();
+    public NaturalLanguagePlaceName createNaturalLanguagePlaceNameStructure() {
+        return new NaturalLanguagePlaceName();
     }
 
     /**
-     * Create an instance of {@link LineRefStructure }
+     * Create an instance of {@link LineRef }
      * 
      */
-    public LineRefStructure createLineRefStructure() {
-        return new LineRefStructure();
+    public LineRef createLineRefStructure() {
+        return new LineRef();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableDeliveryStructure }
+     * Create an instance of {@link EstimatedTimetableDelivery }
      * 
      */
-    public EstimatedTimetableDeliveryStructure createEstimatedTimetableDeliveryStructure() {
-        return new EstimatedTimetableDeliveryStructure();
+    public EstimatedTimetableDelivery createEstimatedTimetableDeliveryStructure() {
+        return new EstimatedTimetableDelivery();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableSubscriptionStructure }
+     * Create an instance of {@link ConnectionTimetableSubscription }
      * 
      */
-    public ConnectionTimetableSubscriptionStructure createConnectionTimetableSubscriptionStructure() {
-        return new ConnectionTimetableSubscriptionStructure();
+    public ConnectionTimetableSubscription createConnectionTimetableSubscriptionStructure() {
+        return new ConnectionTimetableSubscription();
     }
 
     /**
-     * Create an instance of {@link NaturalLanguageStringStructure }
+     * Create an instance of {@link NaturalLanguageString }
      * 
      */
-    public NaturalLanguageStringStructure createNaturalLanguageStringStructure() {
-        return new NaturalLanguageStringStructure();
+    public NaturalLanguageString createNaturalLanguageStringStructure() {
+        return new NaturalLanguageString();
     }
 
     /**
-     * Create an instance of {@link CapabilitiesRequestStructure }
+     * Create an instance of {@link CapabilitiesRequest }
      * 
      */
-    public CapabilitiesRequestStructure createCapabilitiesRequestStructure() {
-        return new CapabilitiesRequestStructure();
+    public CapabilitiesRequest createCapabilitiesRequestStructure() {
+        return new CapabilitiesRequest();
     }
 
     /**
@@ -935,51 +935,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CapabilityNotSupportedErrorStructure }
+     * Create an instance of {@link CapabilityNotSupportedError }
      * 
      */
-    public CapabilityNotSupportedErrorStructure createCapabilityNotSupportedErrorStructure() {
-        return new CapabilityNotSupportedErrorStructure();
+    public CapabilityNotSupportedError createCapabilityNotSupportedErrorStructure() {
+        return new CapabilityNotSupportedError();
     }
 
     /**
-     * Create an instance of {@link AccessNotAllowedErrorStructure }
+     * Create an instance of {@link AccessNotAllowedError }
      * 
      */
-    public AccessNotAllowedErrorStructure createAccessNotAllowedErrorStructure() {
-        return new AccessNotAllowedErrorStructure();
+    public AccessNotAllowedError createAccessNotAllowedErrorStructure() {
+        return new AccessNotAllowedError();
     }
 
     /**
-     * Create an instance of {@link NoInfoForTopicErrorStructure }
+     * Create an instance of {@link NoInfoForTopicError }
      * 
      */
-    public NoInfoForTopicErrorStructure createNoInfoForTopicErrorStructure() {
-        return new NoInfoForTopicErrorStructure();
+    public NoInfoForTopicError createNoInfoForTopicErrorStructure() {
+        return new NoInfoForTopicError();
     }
 
     /**
-     * Create an instance of {@link UnknownSubscriptionErrorStructure }
+     * Create an instance of {@link UnknownSubscriptionError }
      * 
      */
-    public UnknownSubscriptionErrorStructure createUnknownSubscriptionErrorStructure() {
-        return new UnknownSubscriptionErrorStructure();
+    public UnknownSubscriptionError createUnknownSubscriptionErrorStructure() {
+        return new UnknownSubscriptionError();
     }
 
     /**
-     * Create an instance of {@link OtherErrorStructure }
+     * Create an instance of {@link OtherError }
      * 
      */
-    public OtherErrorStructure createOtherErrorStructure() {
-        return new OtherErrorStructure();
+    public OtherError createOtherErrorStructure() {
+        return new OtherError();
     }
 
     /**
-     * Create an instance of {@link DatedVehicleJourneyRefStructure }
+     * Create an instance of {@link DatedVehicleJourneyRef }
      * 
      */
-    public DatedVehicleJourneyRefStructure createDatedVehicleJourneyRefStructure() {
-        return new DatedVehicleJourneyRefStructure();
+    public DatedVehicleJourneyRef createDatedVehicleJourneyRefStructure() {
+        return new DatedVehicleJourneyRef();
     }
 
     /**
@@ -991,107 +991,107 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ServiceRequestStructure }
+     * Create an instance of {@link ServiceRequest }
      * 
      */
-    public ServiceRequestStructure createServiceRequestStructure() {
-        return new ServiceRequestStructure();
+    public ServiceRequest createServiceRequestStructure() {
+        return new ServiceRequest();
     }
 
     /**
-     * Create an instance of {@link ContextualisedRequestStructure }
+     * Create an instance of {@link ContextualisedRequest }
      * 
      */
-    public ContextualisedRequestStructure createContextualisedRequestStructure() {
-        return new ContextualisedRequestStructure();
+    public ContextualisedRequest createContextualisedRequestStructure() {
+        return new ContextualisedRequest();
     }
 
     /**
-     * Create an instance of {@link ServiceRequestContextStructure }
+     * Create an instance of {@link ServiceRequestContext }
      * 
      */
-    public ServiceRequestContextStructure createServiceRequestContextStructure() {
-        return new ServiceRequestContextStructure();
+    public ServiceRequestContext createServiceRequestContextStructure() {
+        return new ServiceRequestContext();
     }
 
     /**
-     * Create an instance of {@link ParticipantRefStructure }
+     * Create an instance of {@link ParticipantRef }
      * 
      */
-    public ParticipantRefStructure createParticipantRefStructure() {
-        return new ParticipantRefStructure();
+    public ParticipantRef createParticipantRefStructure() {
+        return new ParticipantRef();
     }
 
     /**
-     * Create an instance of {@link MessageQualifierStructure }
+     * Create an instance of {@link MessageQualifier }
      * 
      */
-    public MessageQualifierStructure createMessageQualifierStructure() {
-        return new MessageQualifierStructure();
+    public MessageQualifier createMessageQualifierStructure() {
+        return new MessageQualifier();
     }
 
     /**
-     * Create an instance of {@link StopTimetableRequestStructure }
+     * Create an instance of {@link StopTimetableRequest }
      * 
      */
-    public StopTimetableRequestStructure createStopTimetableRequestStructure() {
-        return new StopTimetableRequestStructure();
+    public StopTimetableRequest createStopTimetableRequestStructure() {
+        return new StopTimetableRequest();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringMultipleRequestStructure }
+     * Create an instance of {@link StopMonitoringMultipleRequest }
      * 
      */
-    public StopMonitoringMultipleRequestStructure createStopMonitoringMultipleRequestStructure() {
-        return new StopMonitoringMultipleRequestStructure();
+    public StopMonitoringMultipleRequest createStopMonitoringMultipleRequestStructure() {
+        return new StopMonitoringMultipleRequest();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringRequestStructure }
+     * Create an instance of {@link StopMonitoringRequest }
      * 
      */
-    public StopMonitoringRequestStructure createStopMonitoringRequestStructure() {
-        return new StopMonitoringRequestStructure();
+    public StopMonitoringRequest createStopMonitoringRequestStructure() {
+        return new StopMonitoringRequest();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringRequestStructure }
+     * Create an instance of {@link VehicleMonitoringRequest }
      * 
      */
-    public VehicleMonitoringRequestStructure createVehicleMonitoringRequestStructure() {
-        return new VehicleMonitoringRequestStructure();
+    public VehicleMonitoringRequest createVehicleMonitoringRequestStructure() {
+        return new VehicleMonitoringRequest();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableRequestStructure }
+     * Create an instance of {@link ConnectionTimetableRequest }
      * 
      */
-    public ConnectionTimetableRequestStructure createConnectionTimetableRequestStructure() {
-        return new ConnectionTimetableRequestStructure();
+    public ConnectionTimetableRequest createConnectionTimetableRequestStructure() {
+        return new ConnectionTimetableRequest();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringRequestStructure }
+     * Create an instance of {@link ConnectionMonitoringRequest }
      * 
      */
-    public ConnectionMonitoringRequestStructure createConnectionMonitoringRequestStructure() {
-        return new ConnectionMonitoringRequestStructure();
+    public ConnectionMonitoringRequest createConnectionMonitoringRequestStructure() {
+        return new ConnectionMonitoringRequest();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageRequestStructure }
+     * Create an instance of {@link GeneralMessageRequest }
      * 
      */
-    public GeneralMessageRequestStructure createGeneralMessageRequestStructure() {
-        return new GeneralMessageRequestStructure();
+    public GeneralMessageRequest createGeneralMessageRequestStructure() {
+        return new GeneralMessageRequest();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringRequestStructure }
+     * Create an instance of {@link FacilityMonitoringRequest }
      * 
      */
-    public FacilityMonitoringRequestStructure createFacilityMonitoringRequestStructure() {
-        return new FacilityMonitoringRequestStructure();
+    public FacilityMonitoringRequest createFacilityMonitoringRequestStructure() {
+        return new FacilityMonitoringRequest();
     }
 
     /**
@@ -1103,35 +1103,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PermissionsStructure }
+     * Create an instance of {@link Permissions }
      * 
      */
-    public PermissionsStructure createPermissionsStructure() {
-        return new PermissionsStructure();
+    public Permissions createPermissionsStructure() {
+        return new Permissions();
     }
 
     /**
-     * Create an instance of {@link VersionRefStructure }
+     * Create an instance of {@link VersionRef }
      * 
      */
-    public VersionRefStructure createVersionRefStructure() {
-        return new VersionRefStructure();
+    public VersionRef createVersionRefStructure() {
+        return new VersionRef();
     }
 
     /**
-     * Create an instance of {@link ConnectionServicePermissionStructure }
+     * Create an instance of {@link ConnectionServicePermission }
      * 
      */
-    public ConnectionServicePermissionStructure createConnectionServicePermissionStructure() {
-        return new ConnectionServicePermissionStructure();
+    public ConnectionServicePermission createConnectionServicePermissionStructure() {
+        return new ConnectionServicePermission();
     }
 
     /**
-     * Create an instance of {@link EntryQualifierStructure }
+     * Create an instance of {@link EntryQualifier }
      * 
      */
-    public EntryQualifierStructure createEntryQualifierStructure() {
-        return new EntryQualifierStructure();
+    public EntryQualifier createEntryQualifierStructure() {
+        return new EntryQualifier();
     }
 
     /**
@@ -1143,19 +1143,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ConnectionLinkPermissionStructure }
+     * Create an instance of {@link ConnectionLinkPermission }
      * 
      */
-    public ConnectionLinkPermissionStructure createConnectionLinkPermissionStructure() {
-        return new ConnectionLinkPermissionStructure();
+    public ConnectionLinkPermission createConnectionLinkPermissionStructure() {
+        return new ConnectionLinkPermission();
     }
 
     /**
-     * Create an instance of {@link TimetabledFeederArrivalCancellationStructure }
+     * Create an instance of {@link TimetabledFeederArrivalCancellation }
      * 
      */
-    public TimetabledFeederArrivalCancellationStructure createTimetabledFeederArrivalCancellationStructure() {
-        return new TimetabledFeederArrivalCancellationStructure();
+    public TimetabledFeederArrivalCancellation createTimetabledFeederArrivalCancellationStructure() {
+        return new TimetabledFeederArrivalCancellation();
     }
 
     /**
@@ -1167,163 +1167,163 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ManualActionStructure }
+     * Create an instance of {@link ManualAction }
      * 
      */
-    public ManualActionStructure createManualActionStructure() {
-        return new ManualActionStructure();
+    public ManualAction createManualActionStructure() {
+        return new ManualAction();
     }
 
     /**
-     * Create an instance of {@link ParameterisedActionStructure }
+     * Create an instance of {@link ParameterisedAction }
      * 
      */
-    public ParameterisedActionStructure createParameterisedActionStructure() {
-        return new ParameterisedActionStructure();
+    public ParameterisedAction createParameterisedActionStructure() {
+        return new ParameterisedAction();
     }
 
     /**
-     * Create an instance of {@link SimpleActionStructure }
+     * Create an instance of {@link SimpleAction }
      * 
      */
-    public SimpleActionStructure createSimpleActionStructure() {
-        return new SimpleActionStructure();
+    public SimpleAction createSimpleActionStructure() {
+        return new SimpleAction();
     }
 
     /**
-     * Create an instance of {@link ActionDataStructure }
+     * Create an instance of {@link ActionData }
      * 
      */
-    public ActionDataStructure createActionDataStructure() {
-        return new ActionDataStructure();
+    public ActionData createActionDataStructure() {
+        return new ActionData();
     }
 
     /**
-     * Create an instance of {@link JourneyPatternRefStructure }
+     * Create an instance of {@link JourneyPatternRef }
      * 
      */
-    public JourneyPatternRefStructure createJourneyPatternRefStructure() {
-        return new JourneyPatternRefStructure();
+    public JourneyPatternRef createJourneyPatternRefStructure() {
+        return new JourneyPatternRef();
     }
 
     /**
-     * Create an instance of {@link ProductCategoriesDeliveryStructure }
+     * Create an instance of {@link ProductCategoriesDelivery }
      * 
      */
-    public ProductCategoriesDeliveryStructure createProductCategoriesDeliveryStructure() {
-        return new ProductCategoriesDeliveryStructure();
+    public ProductCategoriesDelivery createProductCategoriesDeliveryStructure() {
+        return new ProductCategoriesDelivery();
     }
 
     /**
-     * Create an instance of {@link LinesDeliveryStructure }
+     * Create an instance of {@link LinesDelivery }
      * 
      */
-    public LinesDeliveryStructure createLinesDeliveryStructure() {
-        return new LinesDeliveryStructure();
+    public LinesDelivery createLinesDeliveryStructure() {
+        return new LinesDelivery();
     }
 
     /**
-     * Create an instance of {@link NotifyBySmsActionStructure }
+     * Create an instance of {@link NotifyBySmsAction }
      * 
      */
-    public NotifyBySmsActionStructure createNotifyBySmsActionStructure() {
-        return new NotifyBySmsActionStructure();
+    public NotifyBySmsAction createNotifyBySmsActionStructure() {
+        return new NotifyBySmsAction();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageDeliveryStructure }
+     * Create an instance of {@link GeneralMessageDelivery }
      * 
      */
-    public GeneralMessageDeliveryStructure createGeneralMessageDeliveryStructure() {
-        return new GeneralMessageDeliveryStructure();
+    public GeneralMessageDelivery createGeneralMessageDeliveryStructure() {
+        return new GeneralMessageDelivery();
     }
 
     /**
-     * Create an instance of {@link VehicleFeaturesStructure }
+     * Create an instance of {@link VehicleFeatures }
      * 
      */
-    public VehicleFeaturesStructure createVehicleFeaturesStructure() {
-        return new VehicleFeaturesStructure();
+    public VehicleFeatures createVehicleFeaturesStructure() {
+        return new VehicleFeatures();
     }
 
     /**
-     * Create an instance of {@link AbstractServiceCapabilitiesResponseStructure }
+     * Create an instance of {@link AbstractServiceCapabilitiesResponse }
      * 
      */
-    public AbstractServiceCapabilitiesResponseStructure createAbstractServiceCapabilitiesResponseStructure() {
-        return new AbstractServiceCapabilitiesResponseStructure();
+    public AbstractServiceCapabilitiesResponse createAbstractServiceCapabilitiesResponseStructure() {
+        return new AbstractServiceCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link ServiceFeaturesDeliveryStructure }
+     * Create an instance of {@link ServiceFeaturesDelivery }
      * 
      */
-    public ServiceFeaturesDeliveryStructure createServiceFeaturesDeliveryStructure() {
-        return new ServiceFeaturesDeliveryStructure();
+    public ServiceFeaturesDelivery createServiceFeaturesDeliveryStructure() {
+        return new ServiceFeaturesDelivery();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringDeliveryStructure }
+     * Create an instance of {@link VehicleMonitoringDelivery }
      * 
      */
-    public VehicleMonitoringDeliveryStructure createVehicleMonitoringDeliveryStructure() {
-        return new VehicleMonitoringDeliveryStructure();
+    public VehicleMonitoringDelivery createVehicleMonitoringDeliveryStructure() {
+        return new VehicleMonitoringDelivery();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringCapabilitiesResponseStructure }
+     * Create an instance of {@link ConnectionMonitoringCapabilitiesResponse }
      * 
      */
-    public ConnectionMonitoringCapabilitiesResponseStructure createConnectionMonitoringCapabilitiesResponseStructure() {
-        return new ConnectionMonitoringCapabilitiesResponseStructure();
+    public ConnectionMonitoringCapabilitiesResponse createConnectionMonitoringCapabilitiesResponseStructure() {
+        return new ConnectionMonitoringCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link StopPointRefStructure }
+     * Create an instance of {@link StopPointRef }
      * 
      */
-    public StopPointRefStructure createStopPointRefStructure() {
-        return new StopPointRefStructure();
+    public StopPointRef createStopPointRefStructure() {
+        return new StopPointRef();
     }
 
     /**
-     * Create an instance of {@link DatedTimetableVersionFrameStructure }
+     * Create an instance of {@link DatedTimetableVersionFrame }
      * 
      */
-    public DatedTimetableVersionFrameStructure createDatedTimetableVersionFrameStructure() {
-        return new DatedTimetableVersionFrameStructure();
+    public DatedTimetableVersionFrame createDatedTimetableVersionFrameStructure() {
+        return new DatedTimetableVersionFrame();
     }
 
     /**
-     * Create an instance of {@link ProductCategoriesDiscoveryRequestStructure }
+     * Create an instance of {@link ProductCategoriesDiscoveryRequest }
      * 
      */
-    public ProductCategoriesDiscoveryRequestStructure createProductCategoriesDiscoveryRequestStructure() {
-        return new ProductCategoriesDiscoveryRequestStructure();
+    public ProductCategoriesDiscoveryRequest createProductCategoriesDiscoveryRequestStructure() {
+        return new ProductCategoriesDiscoveryRequest();
     }
 
     /**
-     * Create an instance of {@link BeyondDataHorizonErrorStructure }
+     * Create an instance of {@link BeyondDataHorizonError }
      * 
      */
-    public BeyondDataHorizonErrorStructure createBeyondDataHorizonErrorStructure() {
-        return new BeyondDataHorizonErrorStructure();
+    public BeyondDataHorizonError createBeyondDataHorizonErrorStructure() {
+        return new BeyondDataHorizonError();
     }
 
     /**
-     * Create an instance of {@link VehicleFeaturesDeliveryStructure }
+     * Create an instance of {@link VehicleFeaturesDelivery }
      * 
      */
-    public VehicleFeaturesDeliveryStructure createVehicleFeaturesDeliveryStructure() {
-        return new VehicleFeaturesDeliveryStructure();
+    public VehicleFeaturesDelivery createVehicleFeaturesDeliveryStructure() {
+        return new VehicleFeaturesDelivery();
     }
 
     /**
-     * Create an instance of {@link InfoMessageStructure }
+     * Create an instance of {@link InfoMessage }
      * 
      */
-    public InfoMessageStructure createInfoMessageStructure() {
-        return new InfoMessageStructure();
+    public InfoMessage createInfoMessageStructure() {
+        return new InfoMessage();
     }
 
     /**
@@ -1343,27 +1343,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StopTimetableSubscriptionStructure }
+     * Create an instance of {@link StopTimetableSubscription }
      * 
      */
-    public StopTimetableSubscriptionStructure createStopTimetableSubscriptionStructure() {
-        return new StopTimetableSubscriptionStructure();
+    public StopTimetableSubscription createStopTimetableSubscriptionStructure() {
+        return new StopTimetableSubscription();
     }
 
     /**
-     * Create an instance of {@link NotifyByPagerActionStructure }
+     * Create an instance of {@link NotifyByPagerAction }
      * 
      */
-    public NotifyByPagerActionStructure createNotifyByPagerActionStructure() {
-        return new NotifyByPagerActionStructure();
+    public NotifyByPagerAction createNotifyByPagerActionStructure() {
+        return new NotifyByPagerAction();
     }
 
     /**
-     * Create an instance of {@link InfoChannelDeliveryStructure }
+     * Create an instance of {@link InfoChannelDelivery }
      * 
      */
-    public InfoChannelDeliveryStructure createInfoChannelDeliveryStructure() {
-        return new InfoChannelDeliveryStructure();
+    public InfoChannelDelivery createInfoChannelDeliveryStructure() {
+        return new InfoChannelDelivery();
     }
 
     /**
@@ -1375,11 +1375,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LinePermissionStructure }
+     * Create an instance of {@link LinePermission }
      * 
      */
-    public LinePermissionStructure createLinePermissionStructure() {
-        return new LinePermissionStructure();
+    public LinePermission createLinePermissionStructure() {
+        return new LinePermission();
     }
 
     /**
@@ -1391,155 +1391,155 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ProducerResponseStructure }
+     * Create an instance of {@link ProducerResponse }
      * 
      */
-    public ProducerResponseStructure createProducerResponseStructure() {
-        return new ProducerResponseStructure();
+    public ProducerResponse createProducerResponseStructure() {
+        return new ProducerResponse();
     }
 
     /**
-     * Create an instance of {@link MessageRefStructure }
+     * Create an instance of {@link MessageRef }
      * 
      */
-    public MessageRefStructure createMessageRefStructure() {
-        return new MessageRefStructure();
+    public MessageRef createMessageRefStructure() {
+        return new MessageRef();
     }
 
     /**
-     * Create an instance of {@link ServiceDeliveryStructure.ErrorCondition }
+     * Create an instance of {@link ServiceDelivery.ErrorCondition }
      * 
      */
-    public ServiceDeliveryStructure.ErrorCondition createServiceDeliveryStructureErrorCondition() {
-        return new ServiceDeliveryStructure.ErrorCondition();
+    public ServiceDelivery.ErrorCondition createServiceDeliveryStructureErrorCondition() {
+        return new ServiceDelivery.ErrorCondition();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableDeliveryStructure }
+     * Create an instance of {@link ProductionTimetableDelivery }
      * 
      */
-    public ProductionTimetableDeliveryStructure createProductionTimetableDeliveryStructure() {
-        return new ProductionTimetableDeliveryStructure();
+    public ProductionTimetableDelivery createProductionTimetableDeliveryStructure() {
+        return new ProductionTimetableDelivery();
     }
 
     /**
-     * Create an instance of {@link StopTimetableDeliveryStructure }
+     * Create an instance of {@link StopTimetableDelivery }
      * 
      */
-    public StopTimetableDeliveryStructure createStopTimetableDeliveryStructure() {
-        return new StopTimetableDeliveryStructure();
+    public StopTimetableDelivery createStopTimetableDeliveryStructure() {
+        return new StopTimetableDelivery();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringDeliveryStructure }
+     * Create an instance of {@link StopMonitoringDelivery }
      * 
      */
-    public StopMonitoringDeliveryStructure createStopMonitoringDeliveryStructure() {
-        return new StopMonitoringDeliveryStructure();
+    public StopMonitoringDelivery createStopMonitoringDeliveryStructure() {
+        return new StopMonitoringDelivery();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableDeliveryStructure }
+     * Create an instance of {@link ConnectionTimetableDelivery }
      * 
      */
-    public ConnectionTimetableDeliveryStructure createConnectionTimetableDeliveryStructure() {
-        return new ConnectionTimetableDeliveryStructure();
+    public ConnectionTimetableDelivery createConnectionTimetableDeliveryStructure() {
+        return new ConnectionTimetableDelivery();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringFeederDeliveryStructure }
+     * Create an instance of {@link ConnectionMonitoringFeederDelivery }
      * 
      */
-    public ConnectionMonitoringFeederDeliveryStructure createConnectionMonitoringFeederDeliveryStructure() {
-        return new ConnectionMonitoringFeederDeliveryStructure();
+    public ConnectionMonitoringFeederDelivery createConnectionMonitoringFeederDeliveryStructure() {
+        return new ConnectionMonitoringFeederDelivery();
     }
 
     /**
-     * Create an instance of {@link SituationRefStructure }
+     * Create an instance of {@link SituationRef }
      * 
      */
-    public SituationRefStructure createSituationRefStructure() {
-        return new SituationRefStructure();
+    public SituationRef createSituationRefStructure() {
+        return new SituationRef();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringSubscriptionStructure }
+     * Create an instance of {@link VehicleMonitoringSubscription }
      * 
      */
-    public VehicleMonitoringSubscriptionStructure createVehicleMonitoringSubscriptionStructure() {
-        return new VehicleMonitoringSubscriptionStructure();
+    public VehicleMonitoringSubscription createVehicleMonitoringSubscriptionStructure() {
+        return new VehicleMonitoringSubscription();
     }
 
     /**
-     * Create an instance of {@link PublishToMobileActionStructure }
+     * Create an instance of {@link PublishToMobileAction }
      * 
      */
-    public PublishToMobileActionStructure createPublishToMobileActionStructure() {
-        return new PublishToMobileActionStructure();
+    public PublishToMobileAction createPublishToMobileActionStructure() {
+        return new PublishToMobileAction();
     }
 
     /**
-     * Create an instance of {@link ServiceFeatureStructure }
+     * Create an instance of {@link ServiceFeature }
      * 
      */
-    public ServiceFeatureStructure createServiceFeatureStructure() {
-        return new ServiceFeatureStructure();
+    public ServiceFeature createServiceFeatureStructure() {
+        return new ServiceFeature();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringSubscriptionStructure }
+     * Create an instance of {@link StopMonitoringSubscription }
      * 
      */
-    public StopMonitoringSubscriptionStructure createStopMonitoringSubscriptionStructure() {
-        return new StopMonitoringSubscriptionStructure();
+    public StopMonitoringSubscription createStopMonitoringSubscriptionStructure() {
+        return new StopMonitoringSubscription();
     }
 
     /**
-     * Create an instance of {@link InfoMessageCancellationStructure }
+     * Create an instance of {@link InfoMessageCancellation }
      * 
      */
-    public InfoMessageCancellationStructure createInfoMessageCancellationStructure() {
-        return new InfoMessageCancellationStructure();
+    public InfoMessageCancellation createInfoMessageCancellationStructure() {
+        return new InfoMessageCancellation();
     }
 
     /**
-     * Create an instance of {@link ExtensionsStructure }
+     * Create an instance of {@link Extensions }
      * 
      */
-    public ExtensionsStructure createExtensionsStructure() {
-        return new ExtensionsStructure();
+    public Extensions createExtensionsStructure() {
+        return new Extensions();
     }
 
     /**
-     * Create an instance of {@link ServiceDeliveryErrorConditionStructure }
+     * Create an instance of {@link ServiceDeliveryErrorCondition }
      * 
      */
-    public ServiceDeliveryErrorConditionStructure createServiceDeliveryErrorConditionStructure() {
-        return new ServiceDeliveryErrorConditionStructure();
+    public ServiceDeliveryErrorCondition createServiceDeliveryErrorConditionStructure() {
+        return new ServiceDeliveryErrorCondition();
     }
 
     /**
-     * Create an instance of {@link RoadSituationElementStructure }
+     * Create an instance of {@link RoadSituationElement }
      * 
      */
-    public RoadSituationElementStructure createRoadSituationElementStructure() {
-        return new RoadSituationElementStructure();
+    public RoadSituationElement createRoadSituationElementStructure() {
+        return new RoadSituationElement();
     }
 
     /**
-     * Create an instance of {@link CapabilitiesResponseStructure }
+     * Create an instance of {@link CapabilitiesResponse }
      * 
      */
-    public CapabilitiesResponseStructure createCapabilitiesResponseStructure() {
-        return new CapabilitiesResponseStructure();
+    public CapabilitiesResponse createCapabilitiesResponseStructure() {
+        return new CapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringSubscriptionRequestStructure }
+     * Create an instance of {@link ConnectionMonitoringSubscriptionRequest }
      * 
      */
-    public ConnectionMonitoringSubscriptionRequestStructure createConnectionMonitoringSubscriptionRequestStructure() {
-        return new ConnectionMonitoringSubscriptionRequestStructure();
+    public ConnectionMonitoringSubscriptionRequest createConnectionMonitoringSubscriptionRequestStructure() {
+        return new ConnectionMonitoringSubscriptionRequest();
     }
 
     /**
@@ -1551,51 +1551,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link VehicleFeaturesDiscoveryRequestStructure }
+     * Create an instance of {@link VehicleFeaturesDiscoveryRequest }
      * 
      */
-    public VehicleFeaturesDiscoveryRequestStructure createVehicleFeaturesDiscoveryRequestStructure() {
-        return new VehicleFeaturesDiscoveryRequestStructure();
+    public VehicleFeaturesDiscoveryRequest createVehicleFeaturesDiscoveryRequestStructure() {
+        return new VehicleFeaturesDiscoveryRequest();
     }
 
     /**
-     * Create an instance of {@link ConnectionLinkRefStructure }
+     * Create an instance of {@link ConnectionLinkRef }
      * 
      */
-    public ConnectionLinkRefStructure createConnectionLinkRefStructure() {
-        return new ConnectionLinkRefStructure();
+    public ConnectionLinkRef createConnectionLinkRefStructure() {
+        return new ConnectionLinkRef();
     }
 
     /**
-     * Create an instance of {@link JourneyPlaceRefStructure }
+     * Create an instance of {@link JourneyPlaceRef }
      * 
      */
-    public JourneyPlaceRefStructure createJourneyPlaceRefStructure() {
-        return new JourneyPlaceRefStructure();
+    public JourneyPlaceRef createJourneyPlaceRefStructure() {
+        return new JourneyPlaceRef();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableCapabilitiesResponseStructure }
+     * Create an instance of {@link EstimatedTimetableCapabilitiesResponse }
      * 
      */
-    public EstimatedTimetableCapabilitiesResponseStructure createEstimatedTimetableCapabilitiesResponseStructure() {
-        return new EstimatedTimetableCapabilitiesResponseStructure();
+    public EstimatedTimetableCapabilitiesResponse createEstimatedTimetableCapabilitiesResponseStructure() {
+        return new EstimatedTimetableCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringCapabilitiesResponseStructure }
+     * Create an instance of {@link StopMonitoringCapabilitiesResponse }
      * 
      */
-    public StopMonitoringCapabilitiesResponseStructure createStopMonitoringCapabilitiesResponseStructure() {
-        return new StopMonitoringCapabilitiesResponseStructure();
+    public StopMonitoringCapabilitiesResponse createStopMonitoringCapabilitiesResponseStructure() {
+        return new StopMonitoringCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link TimetabledFeederArrivalStructure }
+     * Create an instance of {@link TimetabledFeederArrival }
      * 
      */
-    public TimetabledFeederArrivalStructure createTimetabledFeederArrivalStructure() {
-        return new TimetabledFeederArrivalStructure();
+    public TimetabledFeederArrival createTimetabledFeederArrivalStructure() {
+        return new TimetabledFeederArrival();
     }
 
     /**
@@ -1607,11 +1607,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringServicePermissionStructure }
+     * Create an instance of {@link FacilityMonitoringServicePermission }
      * 
      */
-    public FacilityMonitoringServicePermissionStructure createFacilityMonitoringServicePermissionStructure() {
-        return new FacilityMonitoringServicePermissionStructure();
+    public FacilityMonitoringServicePermission createFacilityMonitoringServicePermissionStructure() {
+        return new FacilityMonitoringServicePermission();
     }
 
     /**
@@ -1639,35 +1639,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubscriptionRequestStructure }
+     * Create an instance of {@link SubscriptionRequest }
      * 
      */
-    public SubscriptionRequestStructure createSubscriptionRequestStructure() {
-        return new SubscriptionRequestStructure();
+    public SubscriptionRequest createSubscriptionRequestStructure() {
+        return new SubscriptionRequest();
     }
 
     /**
-     * Create an instance of {@link SubscriptionContextStructure }
+     * Create an instance of {@link SubscriptionContext }
      * 
      */
-    public SubscriptionContextStructure createSubscriptionContextStructure() {
-        return new SubscriptionContextStructure();
+    public SubscriptionContext createSubscriptionContextStructure() {
+        return new SubscriptionContext();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableSubscriptionStructure }
+     * Create an instance of {@link EstimatedTimetableSubscription }
      * 
      */
-    public EstimatedTimetableSubscriptionStructure createEstimatedTimetableSubscriptionStructure() {
-        return new EstimatedTimetableSubscriptionStructure();
+    public EstimatedTimetableSubscription createEstimatedTimetableSubscriptionStructure() {
+        return new EstimatedTimetableSubscription();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageSubscriptionStructure }
+     * Create an instance of {@link GeneralMessageSubscription }
      * 
      */
-    public GeneralMessageSubscriptionStructure createGeneralMessageSubscriptionStructure() {
-        return new GeneralMessageSubscriptionStructure();
+    public GeneralMessageSubscription createGeneralMessageSubscriptionStructure() {
+        return new GeneralMessageSubscription();
     }
 
     /**
@@ -1679,115 +1679,115 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LinesDiscoveryRequestStructure }
+     * Create an instance of {@link LinesDiscoveryRequest }
      * 
      */
-    public LinesDiscoveryRequestStructure createLinesDiscoveryRequestStructure() {
-        return new LinesDiscoveryRequestStructure();
+    public LinesDiscoveryRequest createLinesDiscoveryRequestStructure() {
+        return new LinesDiscoveryRequest();
     }
 
     /**
-     * Create an instance of {@link ServiceFeaturesDiscoveryRequestStructure }
+     * Create an instance of {@link ServiceFeaturesDiscoveryRequest }
      * 
      */
-    public ServiceFeaturesDiscoveryRequestStructure createServiceFeaturesDiscoveryRequestStructure() {
-        return new ServiceFeaturesDiscoveryRequestStructure();
+    public ServiceFeaturesDiscoveryRequest createServiceFeaturesDiscoveryRequestStructure() {
+        return new ServiceFeaturesDiscoveryRequest();
     }
 
     /**
-     * Create an instance of {@link InfoChannelDiscoveryRequestStructure }
+     * Create an instance of {@link InfoChannelDiscoveryRequest }
      * 
      */
-    public InfoChannelDiscoveryRequestStructure createInfoChannelDiscoveryRequestStructure() {
-        return new InfoChannelDiscoveryRequestStructure();
+    public InfoChannelDiscoveryRequest createInfoChannelDiscoveryRequestStructure() {
+        return new InfoChannelDiscoveryRequest();
     }
 
     /**
-     * Create an instance of {@link FacilityRequestStructure }
+     * Create an instance of {@link FacilityRequest }
      * 
      */
-    public FacilityRequestStructure createFacilityRequestStructure() {
-        return new FacilityRequestStructure();
+    public FacilityRequest createFacilityRequestStructure() {
+        return new FacilityRequest();
     }
 
     /**
-     * Create an instance of {@link StopPointsDeliveryStructure }
+     * Create an instance of {@link StopPointsDelivery }
      * 
      */
-    public StopPointsDeliveryStructure createStopPointsDeliveryStructure() {
-        return new StopPointsDeliveryStructure();
+    public StopPointsDelivery createStopPointsDeliveryStructure() {
+        return new StopPointsDelivery();
     }
 
     /**
-     * Create an instance of {@link DatedCallStructure }
+     * Create an instance of {@link DatedCall }
      * 
      */
-    public DatedCallStructure createDatedCallStructure() {
-        return new DatedCallStructure();
+    public DatedCall createDatedCallStructure() {
+        return new DatedCall();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringCapabilitiesResponseStructure }
+     * Create an instance of {@link FacilityMonitoringCapabilitiesResponse }
      * 
      */
-    public FacilityMonitoringCapabilitiesResponseStructure createFacilityMonitoringCapabilitiesResponseStructure() {
-        return new FacilityMonitoringCapabilitiesResponseStructure();
+    public FacilityMonitoringCapabilitiesResponse createFacilityMonitoringCapabilitiesResponseStructure() {
+        return new FacilityMonitoringCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link SituationFullRefStructure }
+     * Create an instance of {@link SituationFullRef }
      * 
      */
-    public SituationFullRefStructure createSituationFullRefStructure() {
-        return new SituationFullRefStructure();
+    public SituationFullRef createSituationFullRefStructure() {
+        return new SituationFullRef();
     }
 
     /**
-     * Create an instance of {@link ServiceFeatureRefStructure }
+     * Create an instance of {@link ServiceFeatureRef }
      * 
      */
-    public ServiceFeatureRefStructure createServiceFeatureRefStructure() {
-        return new ServiceFeatureRefStructure();
+    public ServiceFeatureRef createServiceFeatureRefStructure() {
+        return new ServiceFeatureRef();
     }
 
     /**
-     * Create an instance of {@link InterchangeRefStructure }
+     * Create an instance of {@link InterchangeRef }
      * 
      */
-    public InterchangeRefStructure createInterchangeRefStructure() {
-        return new InterchangeRefStructure();
+    public InterchangeRef createInterchangeRefStructure() {
+        return new InterchangeRef();
     }
 
     /**
-     * Create an instance of {@link EstimatedCallStructure }
+     * Create an instance of {@link EstimatedCall }
      * 
      */
-    public EstimatedCallStructure createEstimatedCallStructure() {
-        return new EstimatedCallStructure();
+    public EstimatedCall createEstimatedCallStructure() {
+        return new EstimatedCall();
     }
 
     /**
-     * Create an instance of {@link VehicleRefStructure }
+     * Create an instance of {@link VehicleRef }
      * 
      */
-    public VehicleRefStructure createVehicleRefStructure() {
-        return new VehicleRefStructure();
+    public VehicleRef createVehicleRefStructure() {
+        return new VehicleRef();
     }
 
     /**
-     * Create an instance of {@link DirectionStructure }
+     * Create an instance of {@link Direction }
      * 
      */
-    public DirectionStructure createDirectionStructure() {
-        return new DirectionStructure();
+    public Direction createDirectionStructure() {
+        return new Direction();
     }
 
     /**
-     * Create an instance of {@link PublishToWebActionStructure }
+     * Create an instance of {@link PublishToWebAction }
      * 
      */
-    public PublishToWebActionStructure createPublishToWebActionStructure() {
-        return new PublishToWebActionStructure();
+    public PublishToWebAction createPublishToWebActionStructure() {
+        return new PublishToWebAction();
     }
 
     /**
@@ -1799,59 +1799,59 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PublishToTvActionStructure }
+     * Create an instance of {@link PublishToTvAction }
      * 
      */
-    public PublishToTvActionStructure createPublishToTvActionStructure() {
-        return new PublishToTvActionStructure();
+    public PublishToTvAction createPublishToTvActionStructure() {
+        return new PublishToTvAction();
     }
 
     /**
-     * Create an instance of {@link StopTimetableCapabilitiesResponseStructure }
+     * Create an instance of {@link StopTimetableCapabilitiesResponse }
      * 
      */
-    public StopTimetableCapabilitiesResponseStructure createStopTimetableCapabilitiesResponseStructure() {
-        return new StopTimetableCapabilitiesResponseStructure();
+    public StopTimetableCapabilitiesResponse createStopTimetableCapabilitiesResponseStructure() {
+        return new StopTimetableCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringCapabilitiesResponseStructure }
+     * Create an instance of {@link VehicleMonitoringCapabilitiesResponse }
      * 
      */
-    public VehicleMonitoringCapabilitiesResponseStructure createVehicleMonitoringCapabilitiesResponseStructure() {
-        return new VehicleMonitoringCapabilitiesResponseStructure();
+    public VehicleMonitoringCapabilitiesResponse createVehicleMonitoringCapabilitiesResponseStructure() {
+        return new VehicleMonitoringCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link ErrorConditionStructure }
+     * Create an instance of {@link ErrorCondition }
      * 
      */
-    public ErrorConditionStructure createErrorConditionStructure() {
-        return new ErrorConditionStructure();
+    public ErrorCondition createErrorConditionStructure() {
+        return new ErrorCondition();
     }
 
     /**
-     * Create an instance of {@link SituationSimpleRefStructure }
+     * Create an instance of {@link SituationSimpleRef }
      * 
      */
-    public SituationSimpleRefStructure createSituationSimpleRefStructure() {
-        return new SituationSimpleRefStructure();
+    public SituationSimpleRef createSituationSimpleRefStructure() {
+        return new SituationSimpleRef();
     }
 
     /**
-     * Create an instance of {@link FacilityConditionStructure }
+     * Create an instance of {@link FacilityCondition }
      * 
      */
-    public FacilityConditionStructure createFacilityConditionStructure() {
-        return new FacilityConditionStructure();
+    public FacilityCondition createFacilityConditionStructure() {
+        return new FacilityCondition();
     }
 
     /**
-     * Create an instance of {@link DestinationRefStructure }
+     * Create an instance of {@link DestinationRef }
      * 
      */
-    public DestinationRefStructure createDestinationRefStructure() {
-        return new DestinationRefStructure();
+    public DestinationRef createDestinationRefStructure() {
+        return new DestinationRef();
     }
 
     /**
@@ -1863,67 +1863,67 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SituationExchangeServicePermissionStructure }
+     * Create an instance of {@link SituationExchangeServicePermission }
      * 
      */
-    public SituationExchangeServicePermissionStructure createSituationExchangeServicePermissionStructure() {
-        return new SituationExchangeServicePermissionStructure();
+    public SituationExchangeServicePermission createSituationExchangeServicePermissionStructure() {
+        return new SituationExchangeServicePermission();
     }
 
     /**
-     * Create an instance of {@link ServiceNotAvailableErrorStructure }
+     * Create an instance of {@link ServiceNotAvailableError }
      * 
      */
-    public ServiceNotAvailableErrorStructure createServiceNotAvailableErrorStructure() {
-        return new ServiceNotAvailableErrorStructure();
+    public ServiceNotAvailableError createServiceNotAvailableErrorStructure() {
+        return new ServiceNotAvailableError();
     }
 
     /**
-     * Create an instance of {@link InfoChannelStructure }
+     * Create an instance of {@link InfoChannel }
      * 
      */
-    public InfoChannelStructure createInfoChannelStructure() {
-        return new InfoChannelStructure();
+    public InfoChannel createInfoChannelStructure() {
+        return new InfoChannel();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableCapabilitiesResponseStructure }
+     * Create an instance of {@link ProductionTimetableCapabilitiesResponse }
      * 
      */
-    public ProductionTimetableCapabilitiesResponseStructure createProductionTimetableCapabilitiesResponseStructure() {
-        return new ProductionTimetableCapabilitiesResponseStructure();
+    public ProductionTimetableCapabilitiesResponse createProductionTimetableCapabilitiesResponseStructure() {
+        return new ProductionTimetableCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link StatusResponseStructure }
+     * Create an instance of {@link StatusResponse }
      * 
      */
-    public StatusResponseStructure createStatusResponseStructure() {
-        return new StatusResponseStructure();
+    public StatusResponse createStatusResponseStructure() {
+        return new StatusResponse();
     }
 
     /**
-     * Create an instance of {@link VehicleJourneyRefStructure }
+     * Create an instance of {@link VehicleJourneyRef }
      * 
      */
-    public VehicleJourneyRefStructure createVehicleJourneyRefStructure() {
-        return new VehicleJourneyRefStructure();
+    public VehicleJourneyRef createVehicleJourneyRefStructure() {
+        return new VehicleJourneyRef();
     }
 
     /**
-     * Create an instance of {@link AnnotatedDestinationStructure }
+     * Create an instance of {@link AnnotatedDestination }
      * 
      */
-    public AnnotatedDestinationStructure createAnnotatedDestinationStructure() {
-        return new AnnotatedDestinationStructure();
+    public AnnotatedDestination createAnnotatedDestinationStructure() {
+        return new AnnotatedDestination();
     }
 
     /**
-     * Create an instance of {@link FacilityRefStructure }
+     * Create an instance of {@link FacilityRef }
      * 
      */
-    public FacilityRefStructure createFacilityRefStructure() {
-        return new FacilityRefStructure();
+    public FacilityRef createFacilityRefStructure() {
+        return new FacilityRef();
     }
 
     /**
@@ -1935,11 +1935,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OperatorPermissionStructure }
+     * Create an instance of {@link OperatorPermission }
      * 
      */
-    public OperatorPermissionStructure createOperatorPermissionStructure() {
-        return new OperatorPermissionStructure();
+    public OperatorPermission createOperatorPermissionStructure() {
+        return new OperatorPermission();
     }
 
     /**
@@ -1959,547 +1959,547 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PublishToDisplayActionStructure }
+     * Create an instance of {@link PublishToDisplayAction }
      * 
      */
-    public PublishToDisplayActionStructure createPublishToDisplayActionStructure() {
-        return new PublishToDisplayActionStructure();
+    public PublishToDisplayAction createPublishToDisplayActionStructure() {
+        return new PublishToDisplayAction();
     }
 
     /**
-     * Create an instance of {@link TargetedCallStructure }
+     * Create an instance of {@link TargetedCall }
      * 
      */
-    public TargetedCallStructure createTargetedCallStructure() {
-        return new TargetedCallStructure();
+    public TargetedCall createTargetedCallStructure() {
+        return new TargetedCall();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeCapabilitiesResponseStructure }
+     * Create an instance of {@link SituationExchangeCapabilitiesResponse }
      * 
      */
-    public SituationExchangeCapabilitiesResponseStructure createSituationExchangeCapabilitiesResponseStructure() {
-        return new SituationExchangeCapabilitiesResponseStructure();
+    public SituationExchangeCapabilitiesResponse createSituationExchangeCapabilitiesResponseStructure() {
+        return new SituationExchangeCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link UnknownSubscriberErrorStructure }
+     * Create an instance of {@link UnknownSubscriberError }
      * 
      */
-    public UnknownSubscriberErrorStructure createUnknownSubscriberErrorStructure() {
-        return new UnknownSubscriberErrorStructure();
+    public UnknownSubscriberError createUnknownSubscriberErrorStructure() {
+        return new UnknownSubscriberError();
     }
 
     /**
-     * Create an instance of {@link FacilityChangeStructure }
+     * Create an instance of {@link FacilityChange }
      * 
      */
-    public FacilityChangeStructure createFacilityChangeStructure() {
-        return new FacilityChangeStructure();
+    public FacilityChange createFacilityChangeStructure() {
+        return new FacilityChange();
     }
 
     /**
-     * Create an instance of {@link NotifyByEmailActionStructure }
+     * Create an instance of {@link NotifyByEmailAction }
      * 
      */
-    public NotifyByEmailActionStructure createNotifyByEmailActionStructure() {
-        return new NotifyByEmailActionStructure();
+    public NotifyByEmailAction createNotifyByEmailActionStructure() {
+        return new NotifyByEmailAction();
     }
 
     /**
-     * Create an instance of {@link NotifyUserActionStructure }
+     * Create an instance of {@link NotifyUserAction }
      * 
      */
-    public NotifyUserActionStructure createNotifyUserActionStructure() {
-        return new NotifyUserActionStructure();
+    public NotifyUserAction createNotifyUserActionStructure() {
+        return new NotifyUserAction();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageCapabilitiesResponseStructure }
+     * Create an instance of {@link GeneralMessageCapabilitiesResponse }
      * 
      */
-    public GeneralMessageCapabilitiesResponseStructure createGeneralMessageCapabilitiesResponseStructure() {
-        return new GeneralMessageCapabilitiesResponseStructure();
+    public GeneralMessageCapabilitiesResponse createGeneralMessageCapabilitiesResponseStructure() {
+        return new GeneralMessageCapabilitiesResponse();
     }
 
     /**
-     * Create an instance of {@link LineDirectionStructure }
+     * Create an instance of {@link LineDirection }
      * 
      */
-    public LineDirectionStructure createLineDirectionStructure() {
-        return new LineDirectionStructure();
+    public LineDirection createLineDirectionStructure() {
+        return new LineDirection();
     }
 
     /**
-     * Create an instance of {@link ContextualisedConnectionLinkStructure }
+     * Create an instance of {@link ContextualisedConnectionLink }
      * 
      */
-    public ContextualisedConnectionLinkStructure createContextualisedConnectionLinkStructure() {
-        return new ContextualisedConnectionLinkStructure();
+    public ContextualisedConnectionLink createContextualisedConnectionLinkStructure() {
+        return new ContextualisedConnectionLink();
     }
 
     /**
-     * Create an instance of {@link BlockingStructure }
+     * Create an instance of {@link Blocking }
      * 
      */
-    public BlockingStructure createBlockingStructure() {
-        return new BlockingStructure();
+    public Blocking createBlockingStructure() {
+        return new Blocking();
     }
 
     /**
-     * Create an instance of {@link ConnectionCapabilityAccessControlStructure }
+     * Create an instance of {@link ConnectionCapabilityAccessControl }
      * 
      */
-    public ConnectionCapabilityAccessControlStructure createConnectionCapabilityAccessControlStructure() {
-        return new ConnectionCapabilityAccessControlStructure();
+    public ConnectionCapabilityAccessControl createConnectionCapabilityAccessControlStructure() {
+        return new ConnectionCapabilityAccessControl();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringDeliveriesStructure }
+     * Create an instance of {@link StopMonitoringDeliveries }
      * 
      */
-    public StopMonitoringDeliveriesStructure createStopMonitoringDeliveriesStructure() {
-        return new StopMonitoringDeliveriesStructure();
+    public StopMonitoringDeliveries createStopMonitoringDeliveriesStructure() {
+        return new StopMonitoringDeliveries();
     }
 
     /**
-     * Create an instance of {@link ConsumerResponseEndpointStructure }
+     * Create an instance of {@link ConsumerResponseEndpoint }
      * 
      */
-    public ConsumerResponseEndpointStructure createConsumerResponseEndpointStructure() {
-        return new ConsumerResponseEndpointStructure();
+    public ConsumerResponseEndpoint createConsumerResponseEndpointStructure() {
+        return new ConsumerResponseEndpoint();
     }
 
     /**
-     * Create an instance of {@link ConsumerRequestEndpointStructure }
+     * Create an instance of {@link ConsumerRequestEndpoint }
      * 
      */
-    public ConsumerRequestEndpointStructure createConsumerRequestEndpointStructure() {
-        return new ConsumerRequestEndpointStructure();
+    public ConsumerRequestEndpoint createConsumerRequestEndpointStructure() {
+        return new ConsumerRequestEndpoint();
     }
 
     /**
-     * Create an instance of {@link ProgressBetweenStopsStructure }
+     * Create an instance of {@link ProgressBetweenStops }
      * 
      */
-    public ProgressBetweenStopsStructure createProgressBetweenStopsStructure() {
-        return new ProgressBetweenStopsStructure();
+    public ProgressBetweenStops createProgressBetweenStopsStructure() {
+        return new ProgressBetweenStops();
     }
 
     /**
-     * Create an instance of {@link MonitoredVehicleJourneyStructure }
+     * Create an instance of {@link MonitoredVehicleJourney }
      * 
      */
-    public MonitoredVehicleJourneyStructure createMonitoredVehicleJourneyStructure() {
-        return new MonitoredVehicleJourneyStructure();
+    public MonitoredVehicleJourney createMonitoredVehicleJourneyStructure() {
+        return new MonitoredVehicleJourney();
     }
 
     /**
-     * Create an instance of {@link ClosedTimeRangeStructure }
+     * Create an instance of {@link ClosedTimeRange }
      * 
      */
-    public ClosedTimeRangeStructure createClosedTimeRangeStructure() {
-        return new ClosedTimeRangeStructure();
+    public ClosedTimeRange createClosedTimeRangeStructure() {
+        return new ClosedTimeRange();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageCapabilityAccessControlStructure }
+     * Create an instance of {@link GeneralMessageCapabilityAccessControl }
      * 
      */
-    public GeneralMessageCapabilityAccessControlStructure createGeneralMessageCapabilityAccessControlStructure() {
-        return new GeneralMessageCapabilityAccessControlStructure();
+    public GeneralMessageCapabilityAccessControl createGeneralMessageCapabilityAccessControlStructure() {
+        return new GeneralMessageCapabilityAccessControl();
     }
 
     /**
-     * Create an instance of {@link TimetabledStopVisitCancellationStructure }
+     * Create an instance of {@link TimetabledStopVisitCancellation }
      * 
      */
-    public TimetabledStopVisitCancellationStructure createTimetabledStopVisitCancellationStructure() {
-        return new TimetabledStopVisitCancellationStructure();
+    public TimetabledStopVisitCancellation createTimetabledStopVisitCancellationStructure() {
+        return new TimetabledStopVisitCancellation();
     }
 
     /**
-     * Create an instance of {@link AffectedStopPlaceElementStructure }
+     * Create an instance of {@link AffectedStopPlaceElement }
      * 
      */
-    public AffectedStopPlaceElementStructure createAffectedStopPlaceElementStructure() {
-        return new AffectedStopPlaceElementStructure();
+    public AffectedStopPlaceElement createAffectedStopPlaceElementStructure() {
+        return new AffectedStopPlaceElement();
     }
 
     /**
-     * Create an instance of {@link DataSupplyRequestBodyStructure }
+     * Create an instance of {@link DataSupplyRequestBody }
      * 
      */
-    public DataSupplyRequestBodyStructure createDataSupplyRequestBodyStructure() {
-        return new DataSupplyRequestBodyStructure();
+    public DataSupplyRequestBody createDataSupplyRequestBodyStructure() {
+        return new DataSupplyRequestBody();
     }
 
     /**
-     * Create an instance of {@link BlockRefStructure }
+     * Create an instance of {@link BlockRef }
      * 
      */
-    public BlockRefStructure createBlockRefStructure() {
-        return new BlockRefStructure();
+    public BlockRef createBlockRefStructure() {
+        return new BlockRef();
     }
 
     /**
-     * Create an instance of {@link AbstractReferencingItemStructure }
+     * Create an instance of {@link AbstractReferencingItem }
      * 
      */
-    public AbstractReferencingItemStructure createAbstractReferencingItemStructure() {
-        return new AbstractReferencingItemStructure();
+    public AbstractReferencingItem createAbstractReferencingItemStructure() {
+        return new AbstractReferencingItem();
     }
 
     /**
-     * Create an instance of {@link AbstractItemStructure }
+     * Create an instance of {@link AbstractItem }
      * 
      */
-    public AbstractItemStructure createAbstractItemStructure() {
-        return new AbstractItemStructure();
+    public AbstractItem createAbstractItemStructure() {
+        return new AbstractItem();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringDeliveriesStructure }
+     * Create an instance of {@link VehicleMonitoringDeliveries }
      * 
      */
-    public VehicleMonitoringDeliveriesStructure createVehicleMonitoringDeliveriesStructure() {
-        return new VehicleMonitoringDeliveriesStructure();
+    public VehicleMonitoringDeliveries createVehicleMonitoringDeliveriesStructure() {
+        return new VehicleMonitoringDeliveries();
     }
 
     /**
-     * Create an instance of {@link DatedVehicleJourneyIndirectRefStructure }
+     * Create an instance of {@link DatedVehicleJourneyIndirectRef }
      * 
      */
-    public DatedVehicleJourneyIndirectRefStructure createDatedVehicleJourneyIndirectRefStructure() {
-        return new DatedVehicleJourneyIndirectRefStructure();
+    public DatedVehicleJourneyIndirectRef createDatedVehicleJourneyIndirectRefStructure() {
+        return new DatedVehicleJourneyIndirectRef();
     }
 
     /**
-     * Create an instance of {@link RouteRefStructure }
+     * Create an instance of {@link RouteRef }
      * 
      */
-    public RouteRefStructure createRouteRefStructure() {
-        return new RouteRefStructure();
+    public RouteRef createRouteRefStructure() {
+        return new RouteRef();
     }
 
     /**
-     * Create an instance of {@link CapabilitySubscriptionPolicyStructure }
+     * Create an instance of {@link CapabilitySubscriptionPolicy }
      * 
      */
-    public CapabilitySubscriptionPolicyStructure createCapabilitySubscriptionPolicyStructure() {
-        return new CapabilitySubscriptionPolicyStructure();
+    public CapabilitySubscriptionPolicy createCapabilitySubscriptionPolicyStructure() {
+        return new CapabilitySubscriptionPolicy();
     }
 
     /**
-     * Create an instance of {@link SubscriptionFilterRefStructure }
+     * Create an instance of {@link SubscriptionFilterRef }
      * 
      */
-    public SubscriptionFilterRefStructure createSubscriptionFilterRefStructure() {
-        return new SubscriptionFilterRefStructure();
+    public SubscriptionFilterRef createSubscriptionFilterRefStructure() {
+        return new SubscriptionFilterRef();
     }
 
     /**
-     * Create an instance of {@link ClosedTimestampRangeStructure }
+     * Create an instance of {@link ClosedTimestampRange }
      * 
      */
-    public ClosedTimestampRangeStructure createClosedTimestampRangeStructure() {
-        return new ClosedTimestampRangeStructure();
+    public ClosedTimestampRange createClosedTimestampRangeStructure() {
+        return new ClosedTimestampRange();
     }
 
     /**
-     * Create an instance of {@link RoadFilterStructure }
+     * Create an instance of {@link RoadFilter }
      * 
      */
-    public RoadFilterStructure createRoadFilterStructure() {
-        return new RoadFilterStructure();
+    public RoadFilter createRoadFilterStructure() {
+        return new RoadFilter();
     }
 
     /**
-     * Create an instance of {@link WaitProlongedDepartureStructure }
+     * Create an instance of {@link WaitProlongedDeparture }
      * 
      */
-    public WaitProlongedDepartureStructure createWaitProlongedDepartureStructure() {
-        return new WaitProlongedDepartureStructure();
+    public WaitProlongedDeparture createWaitProlongedDepartureStructure() {
+        return new WaitProlongedDeparture();
     }
 
     /**
-     * Create an instance of {@link BoardingStructure }
+     * Create an instance of {@link Boarding }
      * 
      */
-    public BoardingStructure createBoardingStructure() {
-        return new BoardingStructure();
+    public Boarding createBoardingStructure() {
+        return new Boarding();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeDeliveriesStructure }
+     * Create an instance of {@link SituationExchangeDeliveries }
      * 
      */
-    public SituationExchangeDeliveriesStructure createSituationExchangeDeliveriesStructure() {
-        return new SituationExchangeDeliveriesStructure();
+    public SituationExchangeDeliveries createSituationExchangeDeliveriesStructure() {
+        return new SituationExchangeDeliveries();
     }
 
     /**
-     * Create an instance of {@link ConnectingTimeFilterStructure }
+     * Create an instance of {@link ConnectingTimeFilter }
      * 
      */
-    public ConnectingTimeFilterStructure createConnectingTimeFilterStructure() {
-        return new ConnectingTimeFilterStructure();
+    public ConnectingTimeFilter createConnectingTimeFilterStructure() {
+        return new ConnectingTimeFilter();
     }
 
     /**
-     * Create an instance of {@link ZoneRefStructure }
+     * Create an instance of {@link ZoneRef }
      * 
      */
-    public ZoneRefStructure createZoneRefStructure() {
-        return new ZoneRefStructure();
+    public ZoneRef createZoneRefStructure() {
+        return new ZoneRef();
     }
 
     /**
-     * Create an instance of {@link OnwardCallsStructure }
+     * Create an instance of {@link OnwardCalls }
      * 
      */
-    public OnwardCallsStructure createOnwardCallsStructure() {
-        return new OnwardCallsStructure();
+    public OnwardCalls createOnwardCallsStructure() {
+        return new OnwardCalls();
     }
 
     /**
-     * Create an instance of {@link PtAdviceStructure }
+     * Create an instance of {@link PtAdvice }
      * 
      */
-    public PtAdviceStructure createPtAdviceStructure() {
-        return new PtAdviceStructure();
+    public PtAdvice createPtAdviceStructure() {
+        return new PtAdvice();
     }
 
     /**
-     * Create an instance of {@link AffectedRoadsStructure }
+     * Create an instance of {@link AffectedRoads }
      * 
      */
-    public AffectedRoadsStructure createAffectedRoadsStructure() {
-        return new AffectedRoadsStructure();
+    public AffectedRoads createAffectedRoadsStructure() {
+        return new AffectedRoads();
     }
 
     /**
-     * Create an instance of {@link TrainBlockPartStructure }
+     * Create an instance of {@link TrainBlockPart }
      * 
      */
-    public TrainBlockPartStructure createTrainBlockPartStructure() {
-        return new TrainBlockPartStructure();
+    public TrainBlockPart createTrainBlockPartStructure() {
+        return new TrainBlockPart();
     }
 
     /**
-     * Create an instance of {@link MonitoredFeederArrivalStructure }
+     * Create an instance of {@link MonitoredFeederArrival }
      * 
      */
-    public MonitoredFeederArrivalStructure createMonitoredFeederArrivalStructure() {
-        return new MonitoredFeederArrivalStructure();
+    public MonitoredFeederArrival createMonitoredFeederArrivalStructure() {
+        return new MonitoredFeederArrival();
     }
 
     /**
-     * Create an instance of {@link InfoChannelPermissionStructure }
+     * Create an instance of {@link InfoChannelPermission }
      * 
      */
-    public InfoChannelPermissionStructure createInfoChannelPermissionStructure() {
-        return new InfoChannelPermissionStructure();
+    public InfoChannelPermission createInfoChannelPermissionStructure() {
+        return new InfoChannelPermission();
     }
 
     /**
-     * Create an instance of {@link AbstractNotificationStructure }
+     * Create an instance of {@link AbstractNotification }
      * 
      */
-    public AbstractNotificationStructure createAbstractNotificationStructure() {
-        return new AbstractNotificationStructure();
+    public AbstractNotification createAbstractNotificationStructure() {
+        return new AbstractNotification();
     }
 
     /**
-     * Create an instance of {@link InfoMessageRefStructure }
+     * Create an instance of {@link InfoMessageRef }
      * 
      */
-    public InfoMessageRefStructure createInfoMessageRefStructure() {
-        return new InfoMessageRefStructure();
+    public InfoMessageRef createInfoMessageRefStructure() {
+        return new InfoMessageRef();
     }
 
     /**
-     * Create an instance of {@link DestinationStructure }
+     * Create an instance of {@link Destination }
      * 
      */
-    public DestinationStructure createDestinationStructure() {
-        return new DestinationStructure();
+    public Destination createDestinationStructure() {
+        return new Destination();
     }
 
     /**
-     * Create an instance of {@link TargetedInterchangeStructure }
+     * Create an instance of {@link TargetedInterchange }
      * 
      */
-    public TargetedInterchangeStructure createTargetedInterchangeStructure() {
-        return new TargetedInterchangeStructure();
+    public TargetedInterchange createTargetedInterchangeStructure() {
+        return new TargetedInterchange();
     }
 
     /**
-     * Create an instance of {@link ClearDownRefStructure }
+     * Create an instance of {@link ClearDownRef }
      * 
      */
-    public ClearDownRefStructure createClearDownRefStructure() {
-        return new ClearDownRefStructure();
+    public ClearDownRef createClearDownRefStructure() {
+        return new ClearDownRef();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringDeliveriesStructure }
+     * Create an instance of {@link ConnectionMonitoringDeliveries }
      * 
      */
-    public ConnectionMonitoringDeliveriesStructure createConnectionMonitoringDeliveriesStructure() {
-        return new ConnectionMonitoringDeliveriesStructure();
+    public ConnectionMonitoringDeliveries createConnectionMonitoringDeliveriesStructure() {
+        return new ConnectionMonitoringDeliveries();
     }
 
     /**
-     * Create an instance of {@link SubscriptionResponseBodyStructure }
+     * Create an instance of {@link SubscriptionResponseBody }
      * 
      */
-    public SubscriptionResponseBodyStructure createSubscriptionResponseBodyStructure() {
-        return new SubscriptionResponseBodyStructure();
+    public SubscriptionResponseBody createSubscriptionResponseBodyStructure() {
+        return new SubscriptionResponseBody();
     }
 
     /**
-     * Create an instance of {@link TransportDescriptionStructure }
+     * Create an instance of {@link TransportDescription }
      * 
      */
-    public TransportDescriptionStructure createTransportDescriptionStructure() {
-        return new TransportDescriptionStructure();
+    public TransportDescription createTransportDescriptionStructure() {
+        return new TransportDescription();
     }
 
     /**
-     * Create an instance of {@link MobilityDisruptionStructure }
+     * Create an instance of {@link MobilityDisruption }
      * 
      */
-    public MobilityDisruptionStructure createMobilityDisruptionStructure() {
-        return new MobilityDisruptionStructure();
+    public MobilityDisruption createMobilityDisruptionStructure() {
+        return new MobilityDisruption();
     }
 
     /**
-     * Create an instance of {@link InfoLinkStructure }
+     * Create an instance of {@link InfoLink }
      * 
      */
-    public InfoLinkStructure createInfoLinkStructure() {
-        return new InfoLinkStructure();
+    public InfoLink createInfoLinkStructure() {
+        return new InfoLink();
     }
 
     /**
-     * Create an instance of {@link ServiceDeliveryBodyStructure }
+     * Create an instance of {@link ServiceDeliveryBody }
      * 
      */
-    public ServiceDeliveryBodyStructure createServiceDeliveryBodyStructure() {
-        return new ServiceDeliveryBodyStructure();
+    public ServiceDeliveryBody createServiceDeliveryBodyStructure() {
+        return new ServiceDeliveryBody();
     }
 
     /**
-     * Create an instance of {@link StopLineNoticeStructure }
+     * Create an instance of {@link StopLineNotice }
      * 
      */
-    public StopLineNoticeStructure createStopLineNoticeStructure() {
-        return new StopLineNoticeStructure();
+    public StopLineNotice createStopLineNoticeStructure() {
+        return new StopLineNotice();
     }
 
     /**
-     * Create an instance of {@link AbstractCapabilitiesStructure }
+     * Create an instance of {@link AbstractCapabilities }
      * 
      */
-    public AbstractCapabilitiesStructure createAbstractCapabilitiesStructure() {
-        return new AbstractCapabilitiesStructure();
+    public AbstractCapabilities createAbstractCapabilitiesStructure() {
+        return new AbstractCapabilities();
     }
 
     /**
-     * Create an instance of {@link TimetabledStopVisitStructure }
+     * Create an instance of {@link TimetabledStopVisit }
      * 
      */
-    public TimetabledStopVisitStructure createTimetabledStopVisitStructure() {
-        return new TimetabledStopVisitStructure();
+    public TimetabledStopVisit createTimetabledStopVisitStructure() {
+        return new TimetabledStopVisit();
     }
 
     /**
-     * Create an instance of {@link AbstractIdentifiedItemStructure }
+     * Create an instance of {@link AbstractIdentifiedItem }
      * 
      */
-    public AbstractIdentifiedItemStructure createAbstractIdentifiedItemStructure() {
-        return new AbstractIdentifiedItemStructure();
+    public AbstractIdentifiedItem createAbstractIdentifiedItemStructure() {
+        return new AbstractIdentifiedItem();
     }
 
     /**
-     * Create an instance of {@link SubscriptionQualifierStructure }
+     * Create an instance of {@link SubscriptionQualifier }
      * 
      */
-    public SubscriptionQualifierStructure createSubscriptionQualifierStructure() {
-        return new SubscriptionQualifierStructure();
+    public SubscriptionQualifier createSubscriptionQualifierStructure() {
+        return new SubscriptionQualifier();
     }
 
     /**
-     * Create an instance of {@link CourseOfJourneyStructure }
+     * Create an instance of {@link CourseOfJourney }
      * 
      */
-    public CourseOfJourneyStructure createCourseOfJourneyStructure() {
-        return new CourseOfJourneyStructure();
+    public CourseOfJourney createCourseOfJourneyStructure() {
+        return new CourseOfJourney();
     }
 
     /**
-     * Create an instance of {@link ContextStructure }
+     * Create an instance of {@link Context }
      * 
      */
-    public ContextStructure createContextStructure() {
-        return new ContextStructure();
+    public Context createContextStructure() {
+        return new Context();
     }
 
     /**
-     * Create an instance of {@link DirectionRefStructure }
+     * Create an instance of {@link DirectionRef }
      * 
      */
-    public DirectionRefStructure createDirectionRefStructure() {
-        return new DirectionRefStructure();
+    public DirectionRef createDirectionRefStructure() {
+        return new DirectionRef();
     }
 
     /**
-     * Create an instance of {@link ProducerResponseEndpointStructure }
+     * Create an instance of {@link ProducerResponseEndpoint }
      * 
      */
-    public ProducerResponseEndpointStructure createProducerResponseEndpointStructure() {
-        return new ProducerResponseEndpointStructure();
+    public ProducerResponseEndpoint createProducerResponseEndpointStructure() {
+        return new ProducerResponseEndpoint();
     }
 
     /**
-     * Create an instance of {@link ProductCategoryStructure }
+     * Create an instance of {@link ProductCategory }
      * 
      */
-    public ProductCategoryStructure createProductCategoryStructure() {
-        return new ProductCategoryStructure();
+    public ProductCategory createProductCategoryStructure() {
+        return new ProductCategory();
     }
 
     /**
-     * Create an instance of {@link AbstractCallStructure }
+     * Create an instance of {@link AbstractCall }
      * 
      */
-    public AbstractCallStructure createAbstractCallStructure() {
-        return new AbstractCallStructure();
+    public AbstractCall createAbstractCallStructure() {
+        return new AbstractCall();
     }
 
     /**
-     * Create an instance of {@link AffectedOperatorStructure }
+     * Create an instance of {@link AffectedOperator }
      * 
      */
-    public AffectedOperatorStructure createAffectedOperatorStructure() {
-        return new AffectedOperatorStructure();
+    public AffectedOperator createAffectedOperatorStructure() {
+        return new AffectedOperator();
     }
 
     /**
-     * Create an instance of {@link TrainPartRefStructure }
+     * Create an instance of {@link TrainPartRef }
      * 
      */
-    public TrainPartRefStructure createTrainPartRefStructure() {
-        return new TrainPartRefStructure();
+    public TrainPartRef createTrainPartRefStructure() {
+        return new TrainPartRef();
     }
 
     /**
-     * Create an instance of {@link MonitoredFeederArrivalCancellationStructure }
+     * Create an instance of {@link MonitoredFeederArrivalCancellation }
      * 
      */
-    public MonitoredFeederArrivalCancellationStructure createMonitoredFeederArrivalCancellationStructure() {
-        return new MonitoredFeederArrivalCancellationStructure();
+    public MonitoredFeederArrivalCancellation createMonitoredFeederArrivalCancellationStructure() {
+        return new MonitoredFeederArrivalCancellation();
     }
 
     /**
@@ -2511,1437 +2511,1437 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HalfOpenTimeRangeStructure }
+     * Create an instance of {@link HalfOpenTimeRange }
      * 
      */
-    public HalfOpenTimeRangeStructure createHalfOpenTimeRangeStructure() {
-        return new HalfOpenTimeRangeStructure();
+    public HalfOpenTimeRange createHalfOpenTimeRangeStructure() {
+        return new HalfOpenTimeRange();
     }
 
     /**
-     * Create an instance of {@link VehicleFeatureRefStructure }
+     * Create an instance of {@link VehicleFeatureRef }
      * 
      */
-    public VehicleFeatureRefStructure createVehicleFeatureRefStructure() {
-        return new VehicleFeatureRefStructure();
+    public VehicleFeatureRef createVehicleFeatureRefStructure() {
+        return new VehicleFeatureRef();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringDeliveriesStructure }
+     * Create an instance of {@link FacilityMonitoringDeliveries }
      * 
      */
-    public FacilityMonitoringDeliveriesStructure createFacilityMonitoringDeliveriesStructure() {
-        return new FacilityMonitoringDeliveriesStructure();
+    public FacilityMonitoringDeliveries createFacilityMonitoringDeliveriesStructure() {
+        return new FacilityMonitoringDeliveries();
     }
 
     /**
-     * Create an instance of {@link AbstractTopicPermissionStructure }
+     * Create an instance of {@link AbstractTopicPermission }
      * 
      */
-    public AbstractTopicPermissionStructure createAbstractTopicPermissionStructure() {
-        return new AbstractTopicPermissionStructure();
+    public AbstractTopicPermission createAbstractTopicPermissionStructure() {
+        return new AbstractTopicPermission();
     }
 
     /**
-     * Create an instance of {@link RouteLinkRefStructure }
+     * Create an instance of {@link RouteLinkRef }
      * 
      */
-    public RouteLinkRefStructure createRouteLinkRefStructure() {
-        return new RouteLinkRefStructure();
+    public RouteLinkRef createRouteLinkRefStructure() {
+        return new RouteLinkRef();
     }
 
     /**
-     * Create an instance of {@link AffectedPathLinkStructure }
+     * Create an instance of {@link AffectedPathLink }
      * 
      */
-    public AffectedPathLinkStructure createAffectedPathLinkStructure() {
-        return new AffectedPathLinkStructure();
+    public AffectedPathLink createAffectedPathLinkStructure() {
+        return new AffectedPathLink();
     }
 
     /**
-     * Create an instance of {@link MonitoringInformationStructure }
+     * Create an instance of {@link MonitoringInformation }
      * 
      */
-    public MonitoringInformationStructure createMonitoringInformationStructure() {
-        return new MonitoringInformationStructure();
+    public MonitoringInformation createMonitoringInformationStructure() {
+        return new MonitoringInformation();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageDeliveriesStructure }
+     * Create an instance of {@link GeneralMessageDeliveries }
      * 
      */
-    public GeneralMessageDeliveriesStructure createGeneralMessageDeliveriesStructure() {
-        return new GeneralMessageDeliveriesStructure();
+    public GeneralMessageDeliveries createGeneralMessageDeliveriesStructure() {
+        return new GeneralMessageDeliveries();
     }
 
     /**
-     * Create an instance of {@link ErrorDescriptionStructure }
+     * Create an instance of {@link ErrorDescription }
      * 
      */
-    public ErrorDescriptionStructure createErrorDescriptionStructure() {
-        return new ErrorDescriptionStructure();
+    public ErrorDescription createErrorDescriptionStructure() {
+        return new ErrorDescription();
     }
 
     /**
-     * Create an instance of {@link MonitoringRefStructure }
+     * Create an instance of {@link MonitoringRef }
      * 
      */
-    public MonitoringRefStructure createMonitoringRefStructure() {
-        return new MonitoringRefStructure();
+    public MonitoringRef createMonitoringRefStructure() {
+        return new MonitoringRef();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableDeliveriesStructure }
+     * Create an instance of {@link ProductionTimetableDeliveries }
      * 
      */
-    public ProductionTimetableDeliveriesStructure createProductionTimetableDeliveriesStructure() {
-        return new ProductionTimetableDeliveriesStructure();
+    public ProductionTimetableDeliveries createProductionTimetableDeliveriesStructure() {
+        return new ProductionTimetableDeliveries();
     }
 
     /**
-     * Create an instance of {@link HalfOpenTimestampRangeStructure }
+     * Create an instance of {@link HalfOpenTimestampRange }
      * 
      */
-    public HalfOpenTimestampRangeStructure createHalfOpenTimestampRangeStructure() {
-        return new HalfOpenTimestampRangeStructure();
+    public HalfOpenTimestampRange createHalfOpenTimestampRangeStructure() {
+        return new HalfOpenTimestampRange();
     }
 
     /**
-     * Create an instance of {@link PreviousCallStructure }
+     * Create an instance of {@link PreviousCall }
      * 
      */
-    public PreviousCallStructure createPreviousCallStructure() {
-        return new PreviousCallStructure();
+    public PreviousCall createPreviousCallStructure() {
+        return new PreviousCall();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableDeliveriesStructure }
+     * Create an instance of {@link EstimatedTimetableDeliveries }
      * 
      */
-    public EstimatedTimetableDeliveriesStructure createEstimatedTimetableDeliveriesStructure() {
-        return new EstimatedTimetableDeliveriesStructure();
+    public EstimatedTimetableDeliveries createEstimatedTimetableDeliveriesStructure() {
+        return new EstimatedTimetableDeliveries();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableCapabilityRequestPolicyStructure }
+     * Create an instance of {@link EstimatedTimetableCapabilityRequestPolicy }
      * 
      */
-    public EstimatedTimetableCapabilityRequestPolicyStructure createEstimatedTimetableCapabilityRequestPolicyStructure() {
-        return new EstimatedTimetableCapabilityRequestPolicyStructure();
+    public EstimatedTimetableCapabilityRequestPolicy createEstimatedTimetableCapabilityRequestPolicyStructure() {
+        return new EstimatedTimetableCapabilityRequestPolicy();
     }
 
     /**
-     * Create an instance of {@link AbstractMonitoredCallStructure }
+     * Create an instance of {@link AbstractMonitoredCall }
      * 
      */
-    public AbstractMonitoredCallStructure createAbstractMonitoredCallStructure() {
-        return new AbstractMonitoredCallStructure();
+    public AbstractMonitoredCall createAbstractMonitoredCallStructure() {
+        return new AbstractMonitoredCall();
     }
 
     /**
-     * Create an instance of {@link ResponseEndpointStructure }
+     * Create an instance of {@link ResponseEndpoint }
      * 
      */
-    public ResponseEndpointStructure createResponseEndpointStructure() {
-        return new ResponseEndpointStructure();
+    public ResponseEndpoint createResponseEndpointStructure() {
+        return new ResponseEndpoint();
     }
 
     /**
-     * Create an instance of {@link AffectedConnectionLinkStructure }
+     * Create an instance of {@link AffectedConnectionLink }
      * 
      */
-    public AffectedConnectionLinkStructure createAffectedConnectionLinkStructure() {
-        return new AffectedConnectionLinkStructure();
+    public AffectedConnectionLink createAffectedConnectionLinkStructure() {
+        return new AffectedConnectionLink();
     }
 
     /**
-     * Create an instance of {@link AffectedRoadStructure }
+     * Create an instance of {@link AffectedRoad }
      * 
      */
-    public AffectedRoadStructure createAffectedRoadStructure() {
-        return new AffectedRoadStructure();
+    public AffectedRoad createAffectedRoadStructure() {
+        return new AffectedRoad();
     }
 
     /**
-     * Create an instance of {@link FacilityStatusStructure }
+     * Create an instance of {@link FacilityStatus }
      * 
      */
-    public FacilityStatusStructure createFacilityStatusStructure() {
-        return new FacilityStatusStructure();
+    public FacilityStatus createFacilityStatusStructure() {
+        return new FacilityStatus();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringCapabilityRequestPolicyStructure }
+     * Create an instance of {@link VehicleMonitoringCapabilityRequestPolicy }
      * 
      */
-    public VehicleMonitoringCapabilityRequestPolicyStructure createVehicleMonitoringCapabilityRequestPolicyStructure() {
-        return new VehicleMonitoringCapabilityRequestPolicyStructure();
+    public VehicleMonitoringCapabilityRequestPolicy createVehicleMonitoringCapabilityRequestPolicyStructure() {
+        return new VehicleMonitoringCapabilityRequestPolicy();
     }
 
     /**
-     * Create an instance of {@link AffectedSectionStructure }
+     * Create an instance of {@link AffectedSection }
      * 
      */
-    public AffectedSectionStructure createAffectedSectionStructure() {
-        return new AffectedSectionStructure();
+    public AffectedSection createAffectedSectionStructure() {
+        return new AffectedSection();
     }
 
     /**
-     * Create an instance of {@link TargetedVehicleJourneyStructure }
+     * Create an instance of {@link TargetedVehicleJourney }
      * 
      */
-    public TargetedVehicleJourneyStructure createTargetedVehicleJourneyStructure() {
-        return new TargetedVehicleJourneyStructure();
+    public TargetedVehicleJourney createTargetedVehicleJourneyStructure() {
+        return new TargetedVehicleJourney();
     }
 
     /**
-     * Create an instance of {@link SectionRefStructure }
+     * Create an instance of {@link SectionRef }
      * 
      */
-    public SectionRefStructure createSectionRefStructure() {
-        return new SectionRefStructure();
+    public SectionRef createSectionRefStructure() {
+        return new SectionRef();
     }
 
     /**
-     * Create an instance of {@link AffectedInterchangeStructure }
+     * Create an instance of {@link AffectedInterchange }
      * 
      */
-    public AffectedInterchangeStructure createAffectedInterchangeStructure() {
-        return new AffectedInterchangeStructure();
+    public AffectedInterchange createAffectedInterchangeStructure() {
+        return new AffectedInterchange();
     }
 
     /**
-     * Create an instance of {@link CoordinatesStructure }
+     * Create an instance of {@link Coordinates }
      * 
      */
-    public CoordinatesStructure createCoordinatesStructure() {
-        return new CoordinatesStructure();
+    public Coordinates createCoordinatesStructure() {
+        return new Coordinates();
     }
 
     /**
-     * Create an instance of {@link NetworkRefStructure }
+     * Create an instance of {@link NetworkRef }
      * 
      */
-    public NetworkRefStructure createNetworkRefStructure() {
-        return new NetworkRefStructure();
+    public NetworkRef createNetworkRefStructure() {
+        return new NetworkRef();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableDeliveriesStructure }
+     * Create an instance of {@link ConnectionTimetableDeliveries }
      * 
      */
-    public ConnectionTimetableDeliveriesStructure createConnectionTimetableDeliveriesStructure() {
-        return new ConnectionTimetableDeliveriesStructure();
+    public ConnectionTimetableDeliveries createConnectionTimetableDeliveriesStructure() {
+        return new ConnectionTimetableDeliveries();
     }
 
     /**
-     * Create an instance of {@link StopMonitorPermissionStructure }
+     * Create an instance of {@link StopMonitorPermission }
      * 
      */
-    public StopMonitorPermissionStructure createStopMonitorPermissionStructure() {
-        return new StopMonitorPermissionStructure();
+    public StopMonitorPermission createStopMonitorPermissionStructure() {
+        return new StopMonitorPermission();
     }
 
     /**
-     * Create an instance of {@link CasualtiesStructure }
+     * Create an instance of {@link Casualties }
      * 
      */
-    public CasualtiesStructure createCasualtiesStructure() {
-        return new CasualtiesStructure();
+    public Casualties createCasualtiesStructure() {
+        return new Casualties();
     }
 
     /**
-     * Create an instance of {@link ItemRefStructure }
+     * Create an instance of {@link ItemRef }
      * 
      */
-    public ItemRefStructure createItemRefStructure() {
-        return new ItemRefStructure();
+    public ItemRef createItemRefStructure() {
+        return new ItemRef();
     }
 
     /**
-     * Create an instance of {@link AnnotatedFacilityStructure }
+     * Create an instance of {@link AnnotatedFacility }
      * 
      */
-    public AnnotatedFacilityStructure createAnnotatedFacilityStructure() {
-        return new AnnotatedFacilityStructure();
+    public AnnotatedFacility createAnnotatedFacilityStructure() {
+        return new AnnotatedFacility();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableCapabilityRequestPolicyStructure }
+     * Create an instance of {@link ConnectionTimetableCapabilityRequestPolicy }
      * 
      */
-    public ConnectionTimetableCapabilityRequestPolicyStructure createConnectionTimetableCapabilityRequestPolicyStructure() {
-        return new ConnectionTimetableCapabilityRequestPolicyStructure();
+    public ConnectionTimetableCapabilityRequestPolicy createConnectionTimetableCapabilityRequestPolicyStructure() {
+        return new ConnectionTimetableCapabilityRequestPolicy();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableSubscriptionStructure }
+     * Create an instance of {@link ProductionTimetableSubscription }
      * 
      */
-    public ProductionTimetableSubscriptionStructure createProductionTimetableSubscriptionStructure() {
-        return new ProductionTimetableSubscriptionStructure();
+    public ProductionTimetableSubscription createProductionTimetableSubscriptionStructure() {
+        return new ProductionTimetableSubscription();
     }
 
     /**
-     * Create an instance of {@link EasementsStructure }
+     * Create an instance of {@link Easements }
      * 
      */
-    public EasementsStructure createEasementsStructure() {
-        return new EasementsStructure();
+    public Easements createEasementsStructure() {
+        return new Easements();
     }
 
     /**
-     * Create an instance of {@link OperationalUnitRefStructure }
+     * Create an instance of {@link OperationalUnitRef }
      * 
      */
-    public OperationalUnitRefStructure createOperationalUnitRefStructure() {
-        return new OperationalUnitRefStructure();
+    public OperationalUnitRef createOperationalUnitRefStructure() {
+        return new OperationalUnitRef();
     }
 
     /**
-     * Create an instance of {@link AllFacilitiesFeatureStructure }
+     * Create an instance of {@link AllFacilitiesFeature }
      * 
      */
-    public AllFacilitiesFeatureStructure createAllFacilitiesFeatureStructure() {
-        return new AllFacilitiesFeatureStructure();
+    public AllFacilitiesFeature createAllFacilitiesFeatureStructure() {
+        return new AllFacilitiesFeature();
     }
 
     /**
-     * Create an instance of {@link AffectedCallStructure }
+     * Create an instance of {@link AffectedCall }
      * 
      */
-    public AffectedCallStructure createAffectedCallStructure() {
-        return new AffectedCallStructure();
+    public AffectedCall createAffectedCallStructure() {
+        return new AffectedCall();
     }
 
     /**
-     * Create an instance of {@link DelaysStructure }
+     * Create an instance of {@link Delays }
      * 
      */
-    public DelaysStructure createDelaysStructure() {
-        return new DelaysStructure();
+    public Delays createDelaysStructure() {
+        return new Delays();
     }
 
     /**
-     * Create an instance of {@link ActionsStructure }
+     * Create an instance of {@link Actions }
      * 
      */
-    public ActionsStructure createActionsStructure() {
-        return new ActionsStructure();
+    public Actions createActionsStructure() {
+        return new Actions();
     }
 
     /**
-     * Create an instance of {@link ReferencesStructure }
+     * Create an instance of {@link References }
      * 
      */
-    public ReferencesStructure createReferencesStructure() {
-        return new ReferencesStructure();
+    public References createReferencesStructure() {
+        return new References();
     }
 
     /**
-     * Create an instance of {@link PtConsequencesStructure }
+     * Create an instance of {@link PtConsequences }
      * 
      */
-    public PtConsequencesStructure createPtConsequencesStructure() {
-        return new PtConsequencesStructure();
+    public PtConsequences createPtConsequencesStructure() {
+        return new PtConsequences();
     }
 
     /**
-     * Create an instance of {@link AffectedPlaceStructure }
+     * Create an instance of {@link AffectedPlace }
      * 
      */
-    public AffectedPlaceStructure createAffectedPlaceStructure() {
-        return new AffectedPlaceStructure();
+    public AffectedPlace createAffectedPlaceStructure() {
+        return new AffectedPlace();
     }
 
     /**
-     * Create an instance of {@link StopTimetableDeliveriesStructure }
+     * Create an instance of {@link StopTimetableDeliveries }
      * 
      */
-    public StopTimetableDeliveriesStructure createStopTimetableDeliveriesStructure() {
-        return new StopTimetableDeliveriesStructure();
+    public StopTimetableDeliveries createStopTimetableDeliveriesStructure() {
+        return new StopTimetableDeliveries();
     }
 
     /**
-     * Create an instance of {@link AbstractDistributorItemStructure }
+     * Create an instance of {@link AbstractDistributorItem }
      * 
      */
-    public AbstractDistributorItemStructure createAbstractDistributorItemStructure() {
-        return new AbstractDistributorItemStructure();
+    public AbstractDistributorItem createAbstractDistributorItemStructure() {
+        return new AbstractDistributorItem();
     }
 
     /**
-     * Create an instance of {@link EstimatedVersionFrameStructure }
+     * Create an instance of {@link EstimatedVersionFrame }
      * 
      */
-    public EstimatedVersionFrameStructure createEstimatedVersionFrameStructure() {
-        return new EstimatedVersionFrameStructure();
+    public EstimatedVersionFrame createEstimatedVersionFrameStructure() {
+        return new EstimatedVersionFrame();
     }
 
     /**
-     * Create an instance of {@link LocationStructure }
+     * Create an instance of {@link Location }
      * 
      */
-    public LocationStructure createLocationStructure() {
-        return new LocationStructure();
+    public Location createLocationStructure() {
+        return new Location();
     }
 
     /**
-     * Create an instance of {@link OnwardCallStructure }
+     * Create an instance of {@link OnwardCall }
      * 
      */
-    public OnwardCallStructure createOnwardCallStructure() {
-        return new OnwardCallStructure();
+    public OnwardCall createOnwardCallStructure() {
+        return new OnwardCall();
     }
 
     /**
-     * Create an instance of {@link MonitoredStopVisitCancellationStructure }
+     * Create an instance of {@link MonitoredStopVisitCancellation }
      * 
      */
-    public MonitoredStopVisitCancellationStructure createMonitoredStopVisitCancellationStructure() {
-        return new MonitoredStopVisitCancellationStructure();
+    public MonitoredStopVisitCancellation createMonitoredStopVisitCancellationStructure() {
+        return new MonitoredStopVisitCancellation();
     }
 
     /**
-     * Create an instance of {@link InterchangeJourneyStructure }
+     * Create an instance of {@link InterchangeJourney }
      * 
      */
-    public InterchangeJourneyStructure createInterchangeJourneyStructure() {
-        return new InterchangeJourneyStructure();
+    public InterchangeJourney createInterchangeJourneyStructure() {
+        return new InterchangeJourney();
     }
 
     /**
-     * Create an instance of {@link FramedVehicleJourneyRefStructure }
+     * Create an instance of {@link FramedVehicleJourneyRef }
      * 
      */
-    public FramedVehicleJourneyRefStructure createFramedVehicleJourneyRefStructure() {
-        return new FramedVehicleJourneyRefStructure();
+    public FramedVehicleJourneyRef createFramedVehicleJourneyRefStructure() {
+        return new FramedVehicleJourneyRef();
     }
 
     /**
-     * Create an instance of {@link AbstractFeederItemStructure }
+     * Create an instance of {@link AbstractFeederItem }
      * 
      */
-    public AbstractFeederItemStructure createAbstractFeederItemStructure() {
-        return new AbstractFeederItemStructure();
+    public AbstractFeederItem createAbstractFeederItemStructure() {
+        return new AbstractFeederItem();
     }
 
     /**
-     * Create an instance of {@link MonitoringValidityConditionStructure }
+     * Create an instance of {@link MonitoringValidityCondition }
      * 
      */
-    public MonitoringValidityConditionStructure createMonitoringValidityConditionStructure() {
-        return new MonitoringValidityConditionStructure();
+    public MonitoringValidityCondition createMonitoringValidityConditionStructure() {
+        return new MonitoringValidityCondition();
     }
 
     /**
-     * Create an instance of {@link AnnotatedDirectionStructure }
+     * Create an instance of {@link AnnotatedDirection }
      * 
      */
-    public AnnotatedDirectionStructure createAnnotatedDirectionStructure() {
-        return new AnnotatedDirectionStructure();
+    public AnnotatedDirection createAnnotatedDirectionStructure() {
+        return new AnnotatedDirection();
     }
 
     /**
-     * Create an instance of {@link StoppingPositionChangedDepartureStructure }
+     * Create an instance of {@link StoppingPositionChangedDeparture }
      * 
      */
-    public StoppingPositionChangedDepartureStructure createStoppingPositionChangedDepartureStructure() {
-        return new StoppingPositionChangedDepartureStructure();
+    public StoppingPositionChangedDeparture createStoppingPositionChangedDepartureStructure() {
+        return new StoppingPositionChangedDeparture();
     }
 
     /**
-     * Create an instance of {@link DataNameSpacesStructure }
+     * Create an instance of {@link DataNameSpaces }
      * 
      */
-    public DataNameSpacesStructure createDataNameSpacesStructure() {
-        return new DataNameSpacesStructure();
+    public DataNameSpaces createDataNameSpacesStructure() {
+        return new DataNameSpaces();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringRefStructure }
+     * Create an instance of {@link VehicleMonitoringRef }
      * 
      */
-    public VehicleMonitoringRefStructure createVehicleMonitoringRefStructure() {
-        return new VehicleMonitoringRefStructure();
+    public VehicleMonitoringRef createVehicleMonitoringRefStructure() {
+        return new VehicleMonitoringRef();
     }
 
     /**
-     * Create an instance of {@link DistributorDepartureCancellationStructure }
+     * Create an instance of {@link DistributorDepartureCancellation }
      * 
      */
-    public DistributorDepartureCancellationStructure createDistributorDepartureCancellationStructure() {
-        return new DistributorDepartureCancellationStructure();
+    public DistributorDepartureCancellation createDistributorDepartureCancellationStructure() {
+        return new DistributorDepartureCancellation();
     }
 
     /**
-     * Create an instance of {@link CapabilityAccessControlStructure }
+     * Create an instance of {@link CapabilityAccessControl }
      * 
      */
-    public CapabilityAccessControlStructure createCapabilityAccessControlStructure() {
-        return new CapabilityAccessControlStructure();
+    public CapabilityAccessControl createCapabilityAccessControlStructure() {
+        return new CapabilityAccessControl();
     }
 
     /**
-     * Create an instance of {@link MonitoredStopVisitStructure }
+     * Create an instance of {@link MonitoredStopVisit }
      * 
      */
-    public MonitoredStopVisitStructure createMonitoredStopVisitStructure() {
-        return new MonitoredStopVisitStructure();
+    public MonitoredStopVisit createMonitoredStopVisitStructure() {
+        return new MonitoredStopVisit();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringCapabilityRequestPolicyStructure }
+     * Create an instance of {@link ConnectionMonitoringCapabilityRequestPolicy }
      * 
      */
-    public ConnectionMonitoringCapabilityRequestPolicyStructure createConnectionMonitoringCapabilityRequestPolicyStructure() {
-        return new ConnectionMonitoringCapabilityRequestPolicyStructure();
+    public ConnectionMonitoringCapabilityRequestPolicy createConnectionMonitoringCapabilityRequestPolicyStructure() {
+        return new ConnectionMonitoringCapabilityRequestPolicy();
     }
 
     /**
-     * Create an instance of {@link TerminateSubscriptionRequestBodyStructure }
+     * Create an instance of {@link TerminateSubscriptionRequestBody }
      * 
      */
-    public TerminateSubscriptionRequestBodyStructure createTerminateSubscriptionRequestBodyStructure() {
-        return new TerminateSubscriptionRequestBodyStructure();
+    public TerminateSubscriptionRequestBody createTerminateSubscriptionRequestBodyStructure() {
+        return new TerminateSubscriptionRequestBody();
     }
 
     /**
-     * Create an instance of {@link SubscriptionFilterStructure }
+     * Create an instance of {@link SubscriptionFilter }
      * 
      */
-    public SubscriptionFilterStructure createSubscriptionFilterStructure() {
-        return new SubscriptionFilterStructure();
+    public SubscriptionFilter createSubscriptionFilterStructure() {
+        return new SubscriptionFilter();
     }
 
     /**
-     * Create an instance of {@link PlaceNameStructure }
+     * Create an instance of {@link PlaceName }
      * 
      */
-    public PlaceNameStructure createPlaceNameStructure() {
-        return new PlaceNameStructure();
+    public PlaceName createPlaceNameStructure() {
+        return new PlaceName();
     }
 
     /**
-     * Create an instance of {@link AbstractSituationElementStructure }
+     * Create an instance of {@link AbstractSituationElement }
      * 
      */
-    public AbstractSituationElementStructure createAbstractSituationElementStructure() {
-        return new AbstractSituationElementStructure();
+    public AbstractSituationElement createAbstractSituationElementStructure() {
+        return new AbstractSituationElement();
     }
 
     /**
-     * Create an instance of {@link SituationSourceStructure }
+     * Create an instance of {@link SituationSource }
      * 
      */
-    public SituationSourceStructure createSituationSourceStructure() {
-        return new SituationSourceStructure();
+    public SituationSource createSituationSourceStructure() {
+        return new SituationSource();
     }
 
     /**
-     * Create an instance of {@link SiriSubscriptionRequestStructure }
+     * Create an instance of {@link SiriSubscriptionRequest }
      * 
      */
-    public SiriSubscriptionRequestStructure createSiriSubscriptionRequestStructure() {
-        return new SiriSubscriptionRequestStructure();
+    public SiriSubscriptionRequest createSiriSubscriptionRequestStructure() {
+        return new SiriSubscriptionRequest();
     }
 
     /**
-     * Create an instance of {@link NetworkStructure }
+     * Create an instance of {@link Network }
      * 
      */
-    public NetworkStructure createNetworkStructure() {
-        return new NetworkStructure();
+    public Network createNetworkStructure() {
+        return new Network();
     }
 
     /**
-     * Create an instance of {@link DataFrameRefStructure }
+     * Create an instance of {@link DataFrameRef }
      * 
      */
-    public DataFrameRefStructure createDataFrameRefStructure() {
-        return new DataFrameRefStructure();
+    public DataFrameRef createDataFrameRefStructure() {
+        return new DataFrameRef();
     }
 
     /**
-     * Create an instance of {@link DefaultedTextStructure }
+     * Create an instance of {@link DefaultedText }
      * 
      */
-    public DefaultedTextStructure createDefaultedTextStructure() {
-        return new DefaultedTextStructure();
+    public DefaultedText createDefaultedTextStructure() {
+        return new DefaultedText();
     }
 
     /**
-     * Create an instance of {@link ImageStructure }
+     * Create an instance of {@link Image }
      * 
      */
-    public ImageStructure createImageStructure() {
-        return new ImageStructure();
+    public Image createImageStructure() {
+        return new Image();
     }
 
     /**
-     * Create an instance of {@link NoteStructure }
+     * Create an instance of {@link Note }
      * 
      */
-    public NoteStructure createNoteStructure() {
-        return new NoteStructure();
+    public Note createNoteStructure() {
+        return new Note();
     }
 
     /**
-     * Create an instance of {@link AffectedNetworkStructure }
+     * Create an instance of {@link AffectedNetwork }
      * 
      */
-    public AffectedNetworkStructure createAffectedNetworkStructure() {
-        return new AffectedNetworkStructure();
+    public AffectedNetwork createAffectedNetworkStructure() {
+        return new AffectedNetwork();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitorPermissionStructure }
+     * Create an instance of {@link VehicleMonitorPermission }
      * 
      */
-    public VehicleMonitorPermissionStructure createVehicleMonitorPermissionStructure() {
-        return new VehicleMonitorPermissionStructure();
+    public VehicleMonitorPermission createVehicleMonitorPermissionStructure() {
+        return new VehicleMonitorPermission();
     }
 
     /**
-     * Create an instance of {@link SiriServiceDeliveryStructure }
+     * Create an instance of {@link SiriServiceDelivery }
      * 
      */
-    public SiriServiceDeliveryStructure createSiriServiceDeliveryStructure() {
-        return new SiriServiceDeliveryStructure();
+    public SiriServiceDelivery createSiriServiceDeliveryStructure() {
+        return new SiriServiceDelivery();
     }
 
     /**
-     * Create an instance of {@link InfoChannelRefStructure }
+     * Create an instance of {@link InfoChannelRef }
      * 
      */
-    public InfoChannelRefStructure createInfoChannelRefStructure() {
-        return new InfoChannelRefStructure();
+    public InfoChannelRef createInfoChannelRefStructure() {
+        return new InfoChannelRef();
     }
 
     /**
-     * Create an instance of {@link StopLineNoticeCancellationStructure }
+     * Create an instance of {@link StopLineNoticeCancellation }
      * 
      */
-    public StopLineNoticeCancellationStructure createStopLineNoticeCancellationStructure() {
-        return new StopLineNoticeCancellationStructure();
+    public StopLineNoticeCancellation createStopLineNoticeCancellationStructure() {
+        return new StopLineNoticeCancellation();
     }
 
     /**
-     * Create an instance of {@link PreviousCallsStructure }
+     * Create an instance of {@link PreviousCalls }
      * 
      */
-    public PreviousCallsStructure createPreviousCallsStructure() {
-        return new PreviousCallsStructure();
+    public PreviousCalls createPreviousCallsStructure() {
+        return new PreviousCalls();
     }
 
     /**
-     * Create an instance of {@link CapabilityRequestPolicyStructure }
+     * Create an instance of {@link CapabilityRequestPolicy }
      * 
      */
-    public CapabilityRequestPolicyStructure createCapabilityRequestPolicyStructure() {
-        return new CapabilityRequestPolicyStructure();
+    public CapabilityRequestPolicy createCapabilityRequestPolicyStructure() {
+        return new CapabilityRequestPolicy();
     }
 
     /**
-     * Create an instance of {@link CapabilityRefStructure }
+     * Create an instance of {@link CapabilityRef }
      * 
      */
-    public CapabilityRefStructure createCapabilityRefStructure() {
-        return new CapabilityRefStructure();
+    public CapabilityRef createCapabilityRefStructure() {
+        return new CapabilityRef();
     }
 
     /**
-     * Create an instance of {@link RelatedSituationStructure }
+     * Create an instance of {@link RelatedSituation }
      * 
      */
-    public RelatedSituationStructure createRelatedSituationStructure() {
-        return new RelatedSituationStructure();
+    public RelatedSituation createRelatedSituationStructure() {
+        return new RelatedSituation();
     }
 
     /**
-     * Create an instance of {@link SituationSharedRefStructure }
+     * Create an instance of {@link SituationSharedRef }
      * 
      */
-    public SituationSharedRefStructure createSituationSharedRefStructure() {
-        return new SituationSharedRefStructure();
+    public SituationSharedRef createSituationSharedRefStructure() {
+        return new SituationSharedRef();
     }
 
     /**
-     * Create an instance of {@link OperatorRefStructure }
+     * Create an instance of {@link OperatorRef }
      * 
      */
-    public OperatorRefStructure createOperatorRefStructure() {
-        return new OperatorRefStructure();
+    public OperatorRef createOperatorRefStructure() {
+        return new OperatorRef();
     }
 
     /**
-     * Create an instance of {@link NetworkContextStructure }
+     * Create an instance of {@link NetworkContext }
      * 
      */
-    public NetworkContextStructure createNetworkContextStructure() {
-        return new NetworkContextStructure();
+    public NetworkContext createNetworkContextStructure() {
+        return new NetworkContext();
     }
 
     /**
-     * Create an instance of {@link ModesStructure }
+     * Create an instance of {@link Modes }
      * 
      */
-    public ModesStructure createModesStructure() {
-        return new ModesStructure();
+    public Modes createModesStructure() {
+        return new Modes();
     }
 
     /**
-     * Create an instance of {@link AffectedStopPlaceComponentStructure }
+     * Create an instance of {@link AffectedStopPlaceComponent }
      * 
      */
-    public AffectedStopPlaceComponentStructure createAffectedStopPlaceComponentStructure() {
-        return new AffectedStopPlaceComponentStructure();
+    public AffectedStopPlaceComponent createAffectedStopPlaceComponentStructure() {
+        return new AffectedStopPlaceComponent();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableCapabilityRequestPolicyStructure }
+     * Create an instance of {@link ProductionTimetableCapabilityRequestPolicy }
      * 
      */
-    public ProductionTimetableCapabilityRequestPolicyStructure createProductionTimetableCapabilityRequestPolicyStructure() {
-        return new ProductionTimetableCapabilityRequestPolicyStructure();
+    public ProductionTimetableCapabilityRequestPolicy createProductionTimetableCapabilityRequestPolicyStructure() {
+        return new ProductionTimetableCapabilityRequestPolicy();
     }
 
     /**
-     * Create an instance of {@link OrganisationRefStructure }
+     * Create an instance of {@link OrganisationRef }
      * 
      */
-    public OrganisationRefStructure createOrganisationRefStructure() {
-        return new OrganisationRefStructure();
+    public OrganisationRef createOrganisationRefStructure() {
+        return new OrganisationRef();
     }
 
     /**
-     * Create an instance of {@link RemedyStructure }
+     * Create an instance of {@link Remedy }
      * 
      */
-    public RemedyStructure createRemedyStructure() {
-        return new RemedyStructure();
+    public Remedy createRemedyStructure() {
+        return new Remedy();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringCapabilityRequestPolicyStructure }
+     * Create an instance of {@link StopMonitoringCapabilityRequestPolicy }
      * 
      */
-    public StopMonitoringCapabilityRequestPolicyStructure createStopMonitoringCapabilityRequestPolicyStructure() {
-        return new StopMonitoringCapabilityRequestPolicyStructure();
+    public StopMonitoringCapabilityRequestPolicy createStopMonitoringCapabilityRequestPolicyStructure() {
+        return new StopMonitoringCapabilityRequestPolicy();
     }
 
     /**
-     * Create an instance of {@link OffsetStructure }
+     * Create an instance of {@link Offset }
      * 
      */
-    public OffsetStructure createOffsetStructure() {
-        return new OffsetStructure();
+    public Offset createOffsetStructure() {
+        return new Offset();
     }
 
     /**
-     * Create an instance of {@link MonitoringCapabilityAccessControlStructure }
+     * Create an instance of {@link MonitoringCapabilityAccessControl }
      * 
      */
-    public MonitoringCapabilityAccessControlStructure createMonitoringCapabilityAccessControlStructure() {
-        return new MonitoringCapabilityAccessControlStructure();
+    public MonitoringCapabilityAccessControl createMonitoringCapabilityAccessControlStructure() {
+        return new MonitoringCapabilityAccessControl();
     }
 
     /**
-     * Create an instance of {@link StopPointsDiscoveryRequestStructure }
+     * Create an instance of {@link StopPointsDiscoveryRequest }
      * 
      */
-    public StopPointsDiscoveryRequestStructure createStopPointsDiscoveryRequestStructure() {
-        return new StopPointsDiscoveryRequestStructure();
+    public StopPointsDiscoveryRequest createStopPointsDiscoveryRequestStructure() {
+        return new StopPointsDiscoveryRequest();
     }
 
     /**
-     * Create an instance of {@link FacilityLocationStructure }
+     * Create an instance of {@link FacilityLocation }
      * 
      */
-    public FacilityLocationStructure createFacilityLocationStructure() {
-        return new FacilityLocationStructure();
+    public FacilityLocation createFacilityLocationStructure() {
+        return new FacilityLocation();
     }
 
     /**
-     * Create an instance of {@link AdviceRefStructure }
+     * Create an instance of {@link AdviceRef }
      * 
      */
-    public AdviceRefStructure createAdviceRefStructure() {
-        return new AdviceRefStructure();
+    public AdviceRef createAdviceRefStructure() {
+        return new AdviceRef();
     }
 
     /**
-     * Create an instance of {@link MonitoredCallStructure }
+     * Create an instance of {@link MonitoredCall }
      * 
      */
-    public MonitoredCallStructure createMonitoredCallStructure() {
-        return new MonitoredCallStructure();
+    public MonitoredCall createMonitoredCallStructure() {
+        return new MonitoredCall();
     }
 
     /**
-     * Create an instance of {@link VehicleActivityCancellationStructure }
+     * Create an instance of {@link VehicleActivityCancellation }
      * 
      */
-    public VehicleActivityCancellationStructure createVehicleActivityCancellationStructure() {
-        return new VehicleActivityCancellationStructure();
+    public VehicleActivityCancellation createVehicleActivityCancellationStructure() {
+        return new VehicleActivityCancellation();
     }
 
     /**
-     * Create an instance of {@link ProductCategoryRefStructure }
+     * Create an instance of {@link ProductCategoryRef }
      * 
      */
-    public ProductCategoryRefStructure createProductCategoryRefStructure() {
-        return new ProductCategoryRefStructure();
+    public ProductCategoryRef createProductCategoryRefStructure() {
+        return new ProductCategoryRef();
     }
 
     /**
-     * Create an instance of {@link ConnectingJourneyFilterStructure }
+     * Create an instance of {@link ConnectingJourneyFilter }
      * 
      */
-    public ConnectingJourneyFilterStructure createConnectingJourneyFilterStructure() {
-        return new ConnectingJourneyFilterStructure();
+    public ConnectingJourneyFilter createConnectingJourneyFilterStructure() {
+        return new ConnectingJourneyFilter();
     }
 
     /**
-     * Create an instance of {@link SituationElementStructure }
+     * Create an instance of {@link SituationElement }
      * 
      */
-    public SituationElementStructure createSituationElementStructure() {
-        return new SituationElementStructure();
+    public SituationElement createSituationElementStructure() {
+        return new SituationElement();
     }
 
     /**
-     * Create an instance of {@link AccessibilityNeedsFilterStructure }
+     * Create an instance of {@link AccessibilityNeedsFilter }
      * 
      */
-    public AccessibilityNeedsFilterStructure createAccessibilityNeedsFilterStructure() {
-        return new AccessibilityNeedsFilterStructure();
+    public AccessibilityNeedsFilter createAccessibilityNeedsFilterStructure() {
+        return new AccessibilityNeedsFilter();
     }
 
     /**
-     * Create an instance of {@link AbstractPermissionStructure.GeneralCapabilities }
+     * Create an instance of {@link AbstractPermission.GeneralCapabilities }
      * 
      */
-    public AbstractPermissionStructure.GeneralCapabilities createAbstractPermissionStructureGeneralCapabilities() {
-        return new AbstractPermissionStructure.GeneralCapabilities();
+    public AbstractPermission.GeneralCapabilities createAbstractPermissionStructureGeneralCapabilities() {
+        return new AbstractPermission.GeneralCapabilities();
     }
 
     /**
-     * Create an instance of {@link AffectedModesStructure.Mode }
+     * Create an instance of {@link AffectedModes.Mode }
      * 
      */
-    public AffectedModesStructure.Mode createAffectedModesStructureMode() {
-        return new AffectedModesStructure.Mode();
+    public AffectedModes.Mode createAffectedModesStructureMode() {
+        return new AffectedModes.Mode();
     }
 
     /**
-     * Create an instance of {@link PtConsequenceStructure.Suitabilities }
+     * Create an instance of {@link PtConsequence.Suitabilities }
      * 
      */
-    public PtConsequenceStructure.Suitabilities createPtConsequenceStructureSuitabilities() {
-        return new PtConsequenceStructure.Suitabilities();
+    public PtConsequence.Suitabilities createPtConsequenceStructureSuitabilities() {
+        return new PtConsequence.Suitabilities();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringFilterStructure.MaximumNumberOfCalls }
+     * Create an instance of {@link StopMonitoringFilter.MaximumNumberOfCalls }
      * 
      */
-    public StopMonitoringFilterStructure.MaximumNumberOfCalls createStopMonitoringFilterStructureMaximumNumberOfCalls() {
-        return new StopMonitoringFilterStructure.MaximumNumberOfCalls();
+    public StopMonitoringFilter.MaximumNumberOfCalls createStopMonitoringFilterStructureMaximumNumberOfCalls() {
+        return new StopMonitoringFilter.MaximumNumberOfCalls();
     }
 
     /**
-     * Create an instance of {@link AnnotatedStopPointStructure.Features }
+     * Create an instance of {@link AnnotatedStopPoint.Features }
      * 
      */
-    public AnnotatedStopPointStructure.Features createAnnotatedStopPointStructureFeatures() {
-        return new AnnotatedStopPointStructure.Features();
+    public AnnotatedStopPoint.Features createAnnotatedStopPointStructureFeatures() {
+        return new AnnotatedStopPoint.Features();
     }
 
     /**
-     * Create an instance of {@link AnnotatedStopPointStructure.Lines }
+     * Create an instance of {@link AnnotatedStopPoint.Lines }
      * 
      */
-    public AnnotatedStopPointStructure.Lines createAnnotatedStopPointStructureLines() {
-        return new AnnotatedStopPointStructure.Lines();
+    public AnnotatedStopPoint.Lines createAnnotatedStopPointStructureLines() {
+        return new AnnotatedStopPoint.Lines();
     }
 
     /**
-     * Create an instance of {@link EquipmentAvailabilityStructure.EquipmentFeatures }
+     * Create an instance of {@link EquipmentAvailability.EquipmentFeatures }
      * 
      */
-    public EquipmentAvailabilityStructure.EquipmentFeatures createEquipmentAvailabilityStructureEquipmentFeatures() {
-        return new EquipmentAvailabilityStructure.EquipmentFeatures();
+    public EquipmentAvailability.EquipmentFeatures createEquipmentAvailabilityStructureEquipmentFeatures() {
+        return new EquipmentAvailability.EquipmentFeatures();
     }
 
     /**
-     * Create an instance of {@link AffectedStopPlaceStructure.AffectedComponents }
+     * Create an instance of {@link AffectedStopPlace.AffectedComponents }
      * 
      */
-    public AffectedStopPlaceStructure.AffectedComponents createAffectedStopPlaceStructureAffectedComponents() {
-        return new AffectedStopPlaceStructure.AffectedComponents();
+    public AffectedStopPlace.AffectedComponents createAffectedStopPlaceStructureAffectedComponents() {
+        return new AffectedStopPlace.AffectedComponents();
     }
 
     /**
-     * Create an instance of {@link AffectedStopPlaceStructure.AffectedNavigationPaths }
+     * Create an instance of {@link AffectedStopPlace.AffectedNavigationPaths }
      * 
      */
-    public AffectedStopPlaceStructure.AffectedNavigationPaths createAffectedStopPlaceStructureAffectedNavigationPaths() {
-        return new AffectedStopPlaceStructure.AffectedNavigationPaths();
+    public AffectedStopPlace.AffectedNavigationPaths createAffectedStopPlaceStructureAffectedNavigationPaths() {
+        return new AffectedStopPlace.AffectedNavigationPaths();
     }
 
     /**
-     * Create an instance of {@link AffectedStopPointStructure.ConnectionLinks }
+     * Create an instance of {@link AffectedStopPoint.ConnectionLinks }
      * 
      */
-    public AffectedStopPointStructure.ConnectionLinks createAffectedStopPointStructureConnectionLinks() {
-        return new AffectedStopPointStructure.ConnectionLinks();
+    public AffectedStopPoint.ConnectionLinks createAffectedStopPointStructureConnectionLinks() {
+        return new AffectedStopPoint.ConnectionLinks();
     }
 
     /**
-     * Create an instance of {@link PushedActionStructure.BeforeNotices }
+     * Create an instance of {@link PushedAction.BeforeNotices }
      * 
      */
-    public PushedActionStructure.BeforeNotices createPushedActionStructureBeforeNotices() {
-        return new PushedActionStructure.BeforeNotices();
+    public PushedAction.BeforeNotices createPushedActionStructureBeforeNotices() {
+        return new PushedAction.BeforeNotices();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link ConnectionMonitoringServiceCapabilities.TopicFiltering }
      * 
      */
-    public ConnectionMonitoringServiceCapabilitiesStructure.TopicFiltering createConnectionMonitoringServiceCapabilitiesStructureTopicFiltering() {
-        return new ConnectionMonitoringServiceCapabilitiesStructure.TopicFiltering();
+    public ConnectionMonitoringServiceCapabilities.TopicFiltering createConnectionMonitoringServiceCapabilitiesStructureTopicFiltering() {
+        return new ConnectionMonitoringServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link ConnectionMonitoringServiceCapabilitiesStructure.RequestPolicy }
+     * Create an instance of {@link ConnectionMonitoringServiceCapabilities.RequestPolicy }
      * 
      */
-    public ConnectionMonitoringServiceCapabilitiesStructure.RequestPolicy createConnectionMonitoringServiceCapabilitiesStructureRequestPolicy() {
-        return new ConnectionMonitoringServiceCapabilitiesStructure.RequestPolicy();
+    public ConnectionMonitoringServiceCapabilities.RequestPolicy createConnectionMonitoringServiceCapabilitiesStructureRequestPolicy() {
+        return new ConnectionMonitoringServiceCapabilities.RequestPolicy();
     }
 
     /**
-     * Create an instance of {@link FacilityStructure.Features }
+     * Create an instance of {@link Facility.Features }
      * 
      */
-    public FacilityStructure.Features createFacilityStructureFeatures() {
-        return new FacilityStructure.Features();
+    public Facility.Features createFacilityStructureFeatures() {
+        return new Facility.Features();
     }
 
     /**
-     * Create an instance of {@link FacilityStructure.Limitations }
+     * Create an instance of {@link Facility.Limitations }
      * 
      */
-    public FacilityStructure.Limitations createFacilityStructureLimitations() {
-        return new FacilityStructure.Limitations();
+    public Facility.Limitations createFacilityStructureLimitations() {
+        return new Facility.Limitations();
     }
 
     /**
-     * Create an instance of {@link FacilityStructure.Suitabilities }
+     * Create an instance of {@link Facility.Suitabilities }
      * 
      */
-    public FacilityStructure.Suitabilities createFacilityStructureSuitabilities() {
-        return new FacilityStructure.Suitabilities();
+    public Facility.Suitabilities createFacilityStructureSuitabilities() {
+        return new Facility.Suitabilities();
     }
 
     /**
-     * Create an instance of {@link CheckStatusResponseBodyStructure.ErrorCondition }
+     * Create an instance of {@link CheckStatusResponseBody.ErrorCondition }
      * 
      */
-    public CheckStatusResponseBodyStructure.ErrorCondition createCheckStatusResponseBodyStructureErrorCondition() {
-        return new CheckStatusResponseBodyStructure.ErrorCondition();
+    public CheckStatusResponseBody.ErrorCondition createCheckStatusResponseBodyStructureErrorCondition() {
+        return new CheckStatusResponseBody.ErrorCondition();
     }
 
     /**
-     * Create an instance of {@link VehicleActivityStructure.MonitoredVehicleJourney }
+     * Create an instance of {@link VehicleActivity.MonitoredVehicleJourney }
      * 
      */
-    public VehicleActivityStructure.MonitoredVehicleJourney createVehicleActivityStructureMonitoredVehicleJourney() {
-        return new VehicleActivityStructure.MonitoredVehicleJourney();
+    public VehicleActivity.MonitoredVehicleJourney createVehicleActivityStructureMonitoredVehicleJourney() {
+        return new VehicleActivity.MonitoredVehicleJourney();
     }
 
     /**
-     * Create an instance of {@link AffectedLineStructure.Routes }
+     * Create an instance of {@link AffectedLine.Routes }
      * 
      */
-    public AffectedLineStructure.Routes createAffectedLineStructureRoutes() {
-        return new AffectedLineStructure.Routes();
+    public AffectedLine.Routes createAffectedLineStructureRoutes() {
+        return new AffectedLine.Routes();
     }
 
     /**
-     * Create an instance of {@link AffectedLineStructure.Sections }
+     * Create an instance of {@link AffectedLine.Sections }
      * 
      */
-    public AffectedLineStructure.Sections createAffectedLineStructureSections() {
-        return new AffectedLineStructure.Sections();
+    public AffectedLine.Sections createAffectedLineStructureSections() {
+        return new AffectedLine.Sections();
     }
 
     /**
-     * Create an instance of {@link CapabilityGeneralInteractionStructure.Interaction }
+     * Create an instance of {@link CapabilityGeneralInteraction.Interaction }
      * 
      */
-    public CapabilityGeneralInteractionStructure.Interaction createCapabilityGeneralInteractionStructureInteraction() {
-        return new CapabilityGeneralInteractionStructure.Interaction();
+    public CapabilityGeneralInteraction.Interaction createCapabilityGeneralInteractionStructureInteraction() {
+        return new CapabilityGeneralInteraction.Interaction();
     }
 
     /**
-     * Create an instance of {@link CapabilityGeneralInteractionStructure.Delivery }
+     * Create an instance of {@link CapabilityGeneralInteraction.Delivery }
      * 
      */
-    public CapabilityGeneralInteractionStructure.Delivery createCapabilityGeneralInteractionStructureDelivery() {
-        return new CapabilityGeneralInteractionStructure.Delivery();
+    public CapabilityGeneralInteraction.Delivery createCapabilityGeneralInteractionStructureDelivery() {
+        return new CapabilityGeneralInteraction.Delivery();
     }
 
     /**
-     * Create an instance of {@link AffectedRouteStructure.Sections }
+     * Create an instance of {@link AffectedRoute.Sections }
      * 
      */
-    public AffectedRouteStructure.Sections createAffectedRouteStructureSections() {
-        return new AffectedRouteStructure.Sections();
+    public AffectedRoute.Sections createAffectedRouteStructureSections() {
+        return new AffectedRoute.Sections();
     }
 
     /**
-     * Create an instance of {@link AffectedRouteStructure.RouteLinks }
+     * Create an instance of {@link AffectedRoute.RouteLinks }
      * 
      */
-    public AffectedRouteStructure.RouteLinks createAffectedRouteStructureRouteLinks() {
-        return new AffectedRouteStructure.RouteLinks();
+    public AffectedRoute.RouteLinks createAffectedRouteStructureRouteLinks() {
+        return new AffectedRoute.RouteLinks();
     }
 
     /**
-     * Create an instance of {@link AffectedVehicleJourneyStructure.Calls }
+     * Create an instance of {@link AffectedVehicleJourney.Calls }
      * 
      */
-    public AffectedVehicleJourneyStructure.Calls createAffectedVehicleJourneyStructureCalls() {
-        return new AffectedVehicleJourneyStructure.Calls();
+    public AffectedVehicleJourney.Calls createAffectedVehicleJourneyStructureCalls() {
+        return new AffectedVehicleJourney.Calls();
     }
 
     /**
-     * Create an instance of {@link AnnotatedLineStructure.Destinations }
+     * Create an instance of {@link AnnotatedLine.Destinations }
      * 
      */
-    public AnnotatedLineStructure.Destinations createAnnotatedLineStructureDestinations() {
-        return new AnnotatedLineStructure.Destinations();
+    public AnnotatedLine.Destinations createAnnotatedLineStructureDestinations() {
+        return new AnnotatedLine.Destinations();
     }
 
     /**
-     * Create an instance of {@link AnnotatedLineStructure.Directions }
+     * Create an instance of {@link AnnotatedLine.Directions }
      * 
      */
-    public AnnotatedLineStructure.Directions createAnnotatedLineStructureDirections() {
-        return new AnnotatedLineStructure.Directions();
+    public AnnotatedLine.Directions createAnnotatedLineStructureDirections() {
+        return new AnnotatedLine.Directions();
     }
 
     /**
-     * Create an instance of {@link AffectsScopeStructure.Operators }
+     * Create an instance of {@link AffectsScope.Operators }
      * 
      */
-    public AffectsScopeStructure.Operators createAffectsScopeStructureOperators() {
-        return new AffectsScopeStructure.Operators();
+    public AffectsScope.Operators createAffectsScopeStructureOperators() {
+        return new AffectsScope.Operators();
     }
 
     /**
-     * Create an instance of {@link AffectsScopeStructure.StopPoints }
+     * Create an instance of {@link AffectsScope.StopPoints }
      * 
      */
-    public AffectsScopeStructure.StopPoints createAffectsScopeStructureStopPoints() {
-        return new AffectsScopeStructure.StopPoints();
+    public AffectsScope.StopPoints createAffectsScopeStructureStopPoints() {
+        return new AffectsScope.StopPoints();
     }
 
     /**
-     * Create an instance of {@link AffectsScopeStructure.StopPlaces }
+     * Create an instance of {@link AffectsScope.StopPlaces }
      * 
      */
-    public AffectsScopeStructure.StopPlaces createAffectsScopeStructureStopPlaces() {
-        return new AffectsScopeStructure.StopPlaces();
+    public AffectsScope.StopPlaces createAffectsScopeStructureStopPlaces() {
+        return new AffectsScope.StopPlaces();
     }
 
     /**
-     * Create an instance of {@link AffectsScopeStructure.Places }
+     * Create an instance of {@link AffectsScope.Places }
      * 
      */
-    public AffectsScopeStructure.Places createAffectsScopeStructurePlaces() {
-        return new AffectsScopeStructure.Places();
+    public AffectsScope.Places createAffectsScopeStructurePlaces() {
+        return new AffectsScope.Places();
     }
 
     /**
-     * Create an instance of {@link AffectsScopeStructure.VehicleJourneys }
+     * Create an instance of {@link AffectsScope.VehicleJourneys }
      * 
      */
-    public AffectsScopeStructure.VehicleJourneys createAffectsScopeStructureVehicleJourneys() {
-        return new AffectsScopeStructure.VehicleJourneys();
+    public AffectsScope.VehicleJourneys createAffectsScopeStructureVehicleJourneys() {
+        return new AffectsScope.VehicleJourneys();
     }
 
     /**
-     * Create an instance of {@link AffectsScopeStructure.Networks.AffectedNetwork }
+     * Create an instance of {@link AffectsScope.Networks.AffectedNetwork }
      * 
      */
-    public AffectsScopeStructure.Networks.AffectedNetwork createAffectsScopeStructureNetworksAffectedNetwork() {
-        return new AffectsScopeStructure.Networks.AffectedNetwork();
+    public AffectsScope.Networks.AffectedNetwork createAffectsScopeStructureNetworksAffectedNetwork() {
+        return new AffectsScope.Networks.AffectedNetwork();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link EstimatedTimetableServiceCapabilities.TopicFiltering }
      * 
      */
-    public EstimatedTimetableServiceCapabilitiesStructure.TopicFiltering createEstimatedTimetableServiceCapabilitiesStructureTopicFiltering() {
-        return new EstimatedTimetableServiceCapabilitiesStructure.TopicFiltering();
+    public EstimatedTimetableServiceCapabilities.TopicFiltering createEstimatedTimetableServiceCapabilitiesStructureTopicFiltering() {
+        return new EstimatedTimetableServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableServiceCapabilitiesStructure.RequestPolicy }
+     * Create an instance of {@link EstimatedTimetableServiceCapabilities.RequestPolicy }
      * 
      */
-    public EstimatedTimetableServiceCapabilitiesStructure.RequestPolicy createEstimatedTimetableServiceCapabilitiesStructureRequestPolicy() {
-        return new EstimatedTimetableServiceCapabilitiesStructure.RequestPolicy();
+    public EstimatedTimetableServiceCapabilities.RequestPolicy createEstimatedTimetableServiceCapabilitiesStructureRequestPolicy() {
+        return new EstimatedTimetableServiceCapabilities.RequestPolicy();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link GeneralMessageServiceCapabilities.TopicFiltering }
      * 
      */
-    public GeneralMessageServiceCapabilitiesStructure.TopicFiltering createGeneralMessageServiceCapabilitiesStructureTopicFiltering() {
-        return new GeneralMessageServiceCapabilitiesStructure.TopicFiltering();
+    public GeneralMessageServiceCapabilities.TopicFiltering createGeneralMessageServiceCapabilitiesStructureTopicFiltering() {
+        return new GeneralMessageServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link GeneralMessageServicePermissionStructure.InfoChannelPermissions }
+     * Create an instance of {@link GeneralMessageServicePermission.InfoChannelPermissions }
      * 
      */
-    public GeneralMessageServicePermissionStructure.InfoChannelPermissions createGeneralMessageServicePermissionStructureInfoChannelPermissions() {
-        return new GeneralMessageServicePermissionStructure.InfoChannelPermissions();
+    public GeneralMessageServicePermission.InfoChannelPermissions createGeneralMessageServicePermissionStructureInfoChannelPermissions() {
+        return new GeneralMessageServicePermission.InfoChannelPermissions();
     }
 
     /**
-     * Create an instance of {@link PtSituationElementStructure.ValidityPeriod }
+     * Create an instance of {@link PtSituationElement.ValidityPeriod }
      * 
      */
-    public PtSituationElementStructure.ValidityPeriod createPtSituationElementStructureValidityPeriod() {
-        return new PtSituationElementStructure.ValidityPeriod();
+    public PtSituationElement.ValidityPeriod createPtSituationElementStructureValidityPeriod() {
+        return new PtSituationElement.ValidityPeriod();
     }
 
     /**
-     * Create an instance of {@link PtSituationElementStructure.Repetitions }
+     * Create an instance of {@link PtSituationElement.Repetitions }
      * 
      */
-    public PtSituationElementStructure.Repetitions createPtSituationElementStructureRepetitions() {
-        return new PtSituationElementStructure.Repetitions();
+    public PtSituationElement.Repetitions createPtSituationElementStructureRepetitions() {
+        return new PtSituationElement.Repetitions();
     }
 
     /**
-     * Create an instance of {@link PtSituationElementStructure.InfoLinks }
+     * Create an instance of {@link PtSituationElement.InfoLinks }
      * 
      */
-    public PtSituationElementStructure.InfoLinks createPtSituationElementStructureInfoLinks() {
-        return new PtSituationElementStructure.InfoLinks();
+    public PtSituationElement.InfoLinks createPtSituationElementStructureInfoLinks() {
+        return new PtSituationElement.InfoLinks();
     }
 
     /**
-     * Create an instance of {@link PtSituationElementStructure.Images.Image }
+     * Create an instance of {@link PtSituationElement.Images.Image }
      * 
      */
-    public PtSituationElementStructure.Images.Image createPtSituationElementStructureImagesImage() {
-        return new PtSituationElementStructure.Images.Image();
+    public PtSituationElement.Images.Image createPtSituationElementStructureImagesImage() {
+        return new PtSituationElement.Images.Image();
     }
 
     /**
-     * Create an instance of {@link PtSituationElementStructure.SecondaryReasons.Reason }
+     * Create an instance of {@link PtSituationElement.SecondaryReasons.Reason }
      * 
      */
-    public PtSituationElementStructure.SecondaryReasons.Reason createPtSituationElementStructureSecondaryReasonsReason() {
-        return new PtSituationElementStructure.SecondaryReasons.Reason();
+    public PtSituationElement.SecondaryReasons.Reason createPtSituationElementStructureSecondaryReasonsReason() {
+        return new PtSituationElement.SecondaryReasons.Reason();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link FacilityMonitoringServiceCapabilities.TopicFiltering }
      * 
      */
-    public FacilityMonitoringServiceCapabilitiesStructure.TopicFiltering createFacilityMonitoringServiceCapabilitiesStructureTopicFiltering() {
-        return new FacilityMonitoringServiceCapabilitiesStructure.TopicFiltering();
+    public FacilityMonitoringServiceCapabilities.TopicFiltering createFacilityMonitoringServiceCapabilitiesStructureTopicFiltering() {
+        return new FacilityMonitoringServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringServiceCapabilitiesStructure.RequestPolicy }
+     * Create an instance of {@link FacilityMonitoringServiceCapabilities.RequestPolicy }
      * 
      */
-    public FacilityMonitoringServiceCapabilitiesStructure.RequestPolicy createFacilityMonitoringServiceCapabilitiesStructureRequestPolicy() {
-        return new FacilityMonitoringServiceCapabilitiesStructure.RequestPolicy();
+    public FacilityMonitoringServiceCapabilities.RequestPolicy createFacilityMonitoringServiceCapabilitiesStructureRequestPolicy() {
+        return new FacilityMonitoringServiceCapabilities.RequestPolicy();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringServiceCapabilitiesStructure.AccessControl }
+     * Create an instance of {@link FacilityMonitoringServiceCapabilities.AccessControl }
      * 
      */
-    public FacilityMonitoringServiceCapabilitiesStructure.AccessControl createFacilityMonitoringServiceCapabilitiesStructureAccessControl() {
-        return new FacilityMonitoringServiceCapabilitiesStructure.AccessControl();
+    public FacilityMonitoringServiceCapabilities.AccessControl createFacilityMonitoringServiceCapabilitiesStructureAccessControl() {
+        return new FacilityMonitoringServiceCapabilities.AccessControl();
     }
 
     /**
-     * Create an instance of {@link FacilityMonitoringServiceCapabilitiesStructure.ResponseFeatures }
+     * Create an instance of {@link FacilityMonitoringServiceCapabilities.ResponseFeatures }
      * 
      */
-    public FacilityMonitoringServiceCapabilitiesStructure.ResponseFeatures createFacilityMonitoringServiceCapabilitiesStructureResponseFeatures() {
-        return new FacilityMonitoringServiceCapabilitiesStructure.ResponseFeatures();
+    public FacilityMonitoringServiceCapabilities.ResponseFeatures createFacilityMonitoringServiceCapabilitiesStructureResponseFeatures() {
+        return new FacilityMonitoringServiceCapabilities.ResponseFeatures();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link ConnectionTimetableServiceCapabilities.TopicFiltering }
      * 
      */
-    public ConnectionTimetableServiceCapabilitiesStructure.TopicFiltering createConnectionTimetableServiceCapabilitiesStructureTopicFiltering() {
-        return new ConnectionTimetableServiceCapabilitiesStructure.TopicFiltering();
+    public ConnectionTimetableServiceCapabilities.TopicFiltering createConnectionTimetableServiceCapabilitiesStructureTopicFiltering() {
+        return new ConnectionTimetableServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableServiceCapabilitiesStructure.RequestPolicy }
+     * Create an instance of {@link ConnectionTimetableServiceCapabilities.RequestPolicy }
      * 
      */
-    public ConnectionTimetableServiceCapabilitiesStructure.RequestPolicy createConnectionTimetableServiceCapabilitiesStructureRequestPolicy() {
-        return new ConnectionTimetableServiceCapabilitiesStructure.RequestPolicy();
+    public ConnectionTimetableServiceCapabilities.RequestPolicy createConnectionTimetableServiceCapabilitiesStructureRequestPolicy() {
+        return new ConnectionTimetableServiceCapabilities.RequestPolicy();
     }
 
     /**
-     * Create an instance of {@link DatedVehicleJourneyStructure.DatedCalls }
+     * Create an instance of {@link DatedVehicleJourney.DatedCalls }
      * 
      */
-    public DatedVehicleJourneyStructure.DatedCalls createDatedVehicleJourneyStructureDatedCalls() {
-        return new DatedVehicleJourneyStructure.DatedCalls();
+    public DatedVehicleJourney.DatedCalls createDatedVehicleJourneyStructureDatedCalls() {
+        return new DatedVehicleJourney.DatedCalls();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringServicePermissionStructure.VehicleMonitoringPermissions }
+     * Create an instance of {@link VehicleMonitoringServicePermission.VehicleMonitoringPermissions }
      * 
      */
-    public VehicleMonitoringServicePermissionStructure.VehicleMonitoringPermissions createVehicleMonitoringServicePermissionStructureVehicleMonitoringPermissions() {
-        return new VehicleMonitoringServicePermissionStructure.VehicleMonitoringPermissions();
+    public VehicleMonitoringServicePermission.VehicleMonitoringPermissions createVehicleMonitoringServicePermissionStructureVehicleMonitoringPermissions() {
+        return new VehicleMonitoringServicePermission.VehicleMonitoringPermissions();
     }
 
     /**
-     * Create an instance of {@link StopTimetableServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link StopTimetableServiceCapabilities.TopicFiltering }
      * 
      */
-    public StopTimetableServiceCapabilitiesStructure.TopicFiltering createStopTimetableServiceCapabilitiesStructureTopicFiltering() {
-        return new StopTimetableServiceCapabilitiesStructure.TopicFiltering();
+    public StopTimetableServiceCapabilities.TopicFiltering createStopTimetableServiceCapabilitiesStructureTopicFiltering() {
+        return new StopTimetableServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link StopTimetableServiceCapabilitiesStructure.AccessControl }
+     * Create an instance of {@link StopTimetableServiceCapabilities.AccessControl }
      * 
      */
-    public StopTimetableServiceCapabilitiesStructure.AccessControl createStopTimetableServiceCapabilitiesStructureAccessControl() {
-        return new StopTimetableServiceCapabilitiesStructure.AccessControl();
+    public StopTimetableServiceCapabilities.AccessControl createStopTimetableServiceCapabilitiesStructureAccessControl() {
+        return new StopTimetableServiceCapabilities.AccessControl();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link VehicleMonitoringServiceCapabilities.TopicFiltering }
      * 
      */
-    public VehicleMonitoringServiceCapabilitiesStructure.TopicFiltering createVehicleMonitoringServiceCapabilitiesStructureTopicFiltering() {
-        return new VehicleMonitoringServiceCapabilitiesStructure.TopicFiltering();
+    public VehicleMonitoringServiceCapabilities.TopicFiltering createVehicleMonitoringServiceCapabilitiesStructureTopicFiltering() {
+        return new VehicleMonitoringServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringServiceCapabilitiesStructure.RequestPolicy }
+     * Create an instance of {@link VehicleMonitoringServiceCapabilities.RequestPolicy }
      * 
      */
-    public VehicleMonitoringServiceCapabilitiesStructure.RequestPolicy createVehicleMonitoringServiceCapabilitiesStructureRequestPolicy() {
-        return new VehicleMonitoringServiceCapabilitiesStructure.RequestPolicy();
+    public VehicleMonitoringServiceCapabilities.RequestPolicy createVehicleMonitoringServiceCapabilitiesStructureRequestPolicy() {
+        return new VehicleMonitoringServiceCapabilities.RequestPolicy();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringServiceCapabilitiesStructure.AccessControl }
+     * Create an instance of {@link VehicleMonitoringServiceCapabilities.AccessControl }
      * 
      */
-    public VehicleMonitoringServiceCapabilitiesStructure.AccessControl createVehicleMonitoringServiceCapabilitiesStructureAccessControl() {
-        return new VehicleMonitoringServiceCapabilitiesStructure.AccessControl();
+    public VehicleMonitoringServiceCapabilities.AccessControl createVehicleMonitoringServiceCapabilitiesStructureAccessControl() {
+        return new VehicleMonitoringServiceCapabilities.AccessControl();
     }
 
     /**
-     * Create an instance of {@link VehicleMonitoringServiceCapabilitiesStructure.ResponseFeatures }
+     * Create an instance of {@link VehicleMonitoringServiceCapabilities.ResponseFeatures }
      * 
      */
-    public VehicleMonitoringServiceCapabilitiesStructure.ResponseFeatures createVehicleMonitoringServiceCapabilitiesStructureResponseFeatures() {
-        return new VehicleMonitoringServiceCapabilitiesStructure.ResponseFeatures();
+    public VehicleMonitoringServiceCapabilities.ResponseFeatures createVehicleMonitoringServiceCapabilitiesStructureResponseFeatures() {
+        return new VehicleMonitoringServiceCapabilities.ResponseFeatures();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringServicePermissionStructure.StopMonitorPermissions }
+     * Create an instance of {@link StopMonitoringServicePermission.StopMonitorPermissions }
      * 
      */
-    public StopMonitoringServicePermissionStructure.StopMonitorPermissions createStopMonitoringServicePermissionStructureStopMonitorPermissions() {
-        return new StopMonitoringServicePermissionStructure.StopMonitorPermissions();
+    public StopMonitoringServicePermission.StopMonitorPermissions createStopMonitoringServicePermissionStructureStopMonitorPermissions() {
+        return new StopMonitoringServicePermission.StopMonitorPermissions();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link ProductionTimetableServiceCapabilities.TopicFiltering }
      * 
      */
-    public ProductionTimetableServiceCapabilitiesStructure.TopicFiltering createProductionTimetableServiceCapabilitiesStructureTopicFiltering() {
-        return new ProductionTimetableServiceCapabilitiesStructure.TopicFiltering();
+    public ProductionTimetableServiceCapabilities.TopicFiltering createProductionTimetableServiceCapabilitiesStructureTopicFiltering() {
+        return new ProductionTimetableServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableServiceCapabilitiesStructure.RequestPolicy }
+     * Create an instance of {@link ProductionTimetableServiceCapabilities.RequestPolicy }
      * 
      */
-    public ProductionTimetableServiceCapabilitiesStructure.RequestPolicy createProductionTimetableServiceCapabilitiesStructureRequestPolicy() {
-        return new ProductionTimetableServiceCapabilitiesStructure.RequestPolicy();
+    public ProductionTimetableServiceCapabilities.RequestPolicy createProductionTimetableServiceCapabilitiesStructureRequestPolicy() {
+        return new ProductionTimetableServiceCapabilities.RequestPolicy();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableServiceCapabilitiesStructure.SubscriptionPolicy }
+     * Create an instance of {@link ProductionTimetableServiceCapabilities.SubscriptionPolicy }
      * 
      */
-    public ProductionTimetableServiceCapabilitiesStructure.SubscriptionPolicy createProductionTimetableServiceCapabilitiesStructureSubscriptionPolicy() {
-        return new ProductionTimetableServiceCapabilitiesStructure.SubscriptionPolicy();
+    public ProductionTimetableServiceCapabilities.SubscriptionPolicy createProductionTimetableServiceCapabilitiesStructureSubscriptionPolicy() {
+        return new ProductionTimetableServiceCapabilities.SubscriptionPolicy();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link SituationExchangeServiceCapabilities.TopicFiltering }
      * 
      */
-    public SituationExchangeServiceCapabilitiesStructure.TopicFiltering createSituationExchangeServiceCapabilitiesStructureTopicFiltering() {
-        return new SituationExchangeServiceCapabilitiesStructure.TopicFiltering();
+    public SituationExchangeServiceCapabilities.TopicFiltering createSituationExchangeServiceCapabilitiesStructureTopicFiltering() {
+        return new SituationExchangeServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeServiceCapabilitiesStructure.RequestPolicy }
+     * Create an instance of {@link SituationExchangeServiceCapabilities.RequestPolicy }
      * 
      */
-    public SituationExchangeServiceCapabilitiesStructure.RequestPolicy createSituationExchangeServiceCapabilitiesStructureRequestPolicy() {
-        return new SituationExchangeServiceCapabilitiesStructure.RequestPolicy();
+    public SituationExchangeServiceCapabilities.RequestPolicy createSituationExchangeServiceCapabilitiesStructureRequestPolicy() {
+        return new SituationExchangeServiceCapabilities.RequestPolicy();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeServiceCapabilitiesStructure.AccessControl }
+     * Create an instance of {@link SituationExchangeServiceCapabilities.AccessControl }
      * 
      */
-    public SituationExchangeServiceCapabilitiesStructure.AccessControl createSituationExchangeServiceCapabilitiesStructureAccessControl() {
-        return new SituationExchangeServiceCapabilitiesStructure.AccessControl();
+    public SituationExchangeServiceCapabilities.AccessControl createSituationExchangeServiceCapabilitiesStructureAccessControl() {
+        return new SituationExchangeServiceCapabilities.AccessControl();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeServiceCapabilitiesStructure.ResponseFeatures }
+     * Create an instance of {@link SituationExchangeServiceCapabilities.ResponseFeatures }
      * 
      */
-    public SituationExchangeServiceCapabilitiesStructure.ResponseFeatures createSituationExchangeServiceCapabilitiesStructureResponseFeatures() {
-        return new SituationExchangeServiceCapabilitiesStructure.ResponseFeatures();
+    public SituationExchangeServiceCapabilities.ResponseFeatures createSituationExchangeServiceCapabilitiesStructureResponseFeatures() {
+        return new SituationExchangeServiceCapabilities.ResponseFeatures();
     }
 
     /**
-     * Create an instance of {@link ConnectionTimetableCapabilitiesResponseStructure.ConnectionTimetablePermissions }
+     * Create an instance of {@link ConnectionTimetableCapabilitiesResponse.ConnectionTimetablePermissions }
      * 
      */
-    public ConnectionTimetableCapabilitiesResponseStructure.ConnectionTimetablePermissions createConnectionTimetableCapabilitiesResponseStructureConnectionTimetablePermissions() {
-        return new ConnectionTimetableCapabilitiesResponseStructure.ConnectionTimetablePermissions();
+    public ConnectionTimetableCapabilitiesResponse.ConnectionTimetablePermissions createConnectionTimetableCapabilitiesResponseStructureConnectionTimetablePermissions() {
+        return new ConnectionTimetableCapabilitiesResponse.ConnectionTimetablePermissions();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeRequestStructure.SituationRoadFilter }
+     * Create an instance of {@link SituationExchangeRequest.SituationRoadFilter }
      * 
      */
-    public SituationExchangeRequestStructure.SituationRoadFilter createSituationExchangeRequestStructureSituationRoadFilter() {
-        return new SituationExchangeRequestStructure.SituationRoadFilter();
+    public SituationExchangeRequest.SituationRoadFilter createSituationExchangeRequestStructureSituationRoadFilter() {
+        return new SituationExchangeRequest.SituationRoadFilter();
     }
 
     /**
-     * Create an instance of {@link EstimatedTimetableRequestStructure.Lines }
+     * Create an instance of {@link EstimatedTimetableRequest.Lines }
      * 
      */
-    public EstimatedTimetableRequestStructure.Lines createEstimatedTimetableRequestStructureLines() {
-        return new EstimatedTimetableRequestStructure.Lines();
+    public EstimatedTimetableRequest.Lines createEstimatedTimetableRequestStructureLines() {
+        return new EstimatedTimetableRequest.Lines();
     }
 
     /**
-     * Create an instance of {@link ProductionTimetableRequestStructure.Lines }
+     * Create an instance of {@link ProductionTimetableRequest.Lines }
      * 
      */
-    public ProductionTimetableRequestStructure.Lines createProductionTimetableRequestStructureLines() {
-        return new ProductionTimetableRequestStructure.Lines();
+    public ProductionTimetableRequest.Lines createProductionTimetableRequestStructureLines() {
+        return new ProductionTimetableRequest.Lines();
     }
 
     /**
-     * Create an instance of {@link EstimatedVehicleJourneyStructure.EstimatedCalls }
+     * Create an instance of {@link EstimatedVehicleJourney.EstimatedCalls }
      * 
      */
-    public EstimatedVehicleJourneyStructure.EstimatedCalls createEstimatedVehicleJourneyStructureEstimatedCalls() {
-        return new EstimatedVehicleJourneyStructure.EstimatedCalls();
+    public EstimatedVehicleJourney.EstimatedCalls createEstimatedVehicleJourneyStructureEstimatedCalls() {
+        return new EstimatedVehicleJourney.EstimatedCalls();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringServiceCapabilitiesStructure.TopicFiltering }
+     * Create an instance of {@link StopMonitoringServiceCapabilities.TopicFiltering }
      * 
      */
-    public StopMonitoringServiceCapabilitiesStructure.TopicFiltering createStopMonitoringServiceCapabilitiesStructureTopicFiltering() {
-        return new StopMonitoringServiceCapabilitiesStructure.TopicFiltering();
+    public StopMonitoringServiceCapabilities.TopicFiltering createStopMonitoringServiceCapabilitiesStructureTopicFiltering() {
+        return new StopMonitoringServiceCapabilities.TopicFiltering();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringServiceCapabilitiesStructure.RequestPolicy }
+     * Create an instance of {@link StopMonitoringServiceCapabilities.RequestPolicy }
      * 
      */
-    public StopMonitoringServiceCapabilitiesStructure.RequestPolicy createStopMonitoringServiceCapabilitiesStructureRequestPolicy() {
-        return new StopMonitoringServiceCapabilitiesStructure.RequestPolicy();
+    public StopMonitoringServiceCapabilities.RequestPolicy createStopMonitoringServiceCapabilitiesStructureRequestPolicy() {
+        return new StopMonitoringServiceCapabilities.RequestPolicy();
     }
 
     /**
-     * Create an instance of {@link StopMonitoringServiceCapabilitiesStructure.ResponseFeatures }
+     * Create an instance of {@link StopMonitoringServiceCapabilities.ResponseFeatures }
      * 
      */
-    public StopMonitoringServiceCapabilitiesStructure.ResponseFeatures createStopMonitoringServiceCapabilitiesStructureResponseFeatures() {
-        return new StopMonitoringServiceCapabilitiesStructure.ResponseFeatures();
+    public StopMonitoringServiceCapabilities.ResponseFeatures createStopMonitoringServiceCapabilitiesStructureResponseFeatures() {
+        return new StopMonitoringServiceCapabilities.ResponseFeatures();
     }
 
     /**
-     * Create an instance of {@link SituationExchangeDeliveryStructure.Situations }
+     * Create an instance of {@link SituationExchangeDelivery.Situations }
      * 
      */
-    public SituationExchangeDeliveryStructure.Situations createSituationExchangeDeliveryStructureSituations() {
-        return new SituationExchangeDeliveryStructure.Situations();
+    public SituationExchangeDelivery.Situations createSituationExchangeDeliveryStructureSituations() {
+        return new SituationExchangeDelivery.Situations();
     }
 
     /**
-     * Create an instance of {@link DataReceivedResponseStructure.ErrorCondition }
+     * Create an instance of {@link DataReceivedResponse.ErrorCondition }
      * 
      */
-    public DataReceivedResponseStructure.ErrorCondition createDataReceivedResponseStructureErrorCondition() {
-        return new DataReceivedResponseStructure.ErrorCondition();
+    public DataReceivedResponse.ErrorCondition createDataReceivedResponseStructureErrorCondition() {
+        return new DataReceivedResponse.ErrorCondition();
     }
 
     /**
-     * Create an instance of {@link DataReadyResponseStructure.ErrorCondition }
+     * Create an instance of {@link DataReadyResponse.ErrorCondition }
      * 
      */
-    public DataReadyResponseStructure.ErrorCondition createDataReadyResponseStructureErrorCondition() {
-        return new DataReadyResponseStructure.ErrorCondition();
+    public DataReadyResponse.ErrorCondition createDataReadyResponseStructureErrorCondition() {
+        return new DataReadyResponse.ErrorCondition();
     }
 
     /**
-     * Create an instance of {@link TerminateSubscriptionResponseStructure.TerminationResponseStatus.ErrorCondition }
+     * Create an instance of {@link TerminateSubscriptionResponse.TerminationResponseStatus.ErrorCondition }
      * 
      */
-    public TerminateSubscriptionResponseStructure.TerminationResponseStatus.ErrorCondition createTerminateSubscriptionResponseStructureTerminationResponseStatusErrorCondition() {
-        return new TerminateSubscriptionResponseStructure.TerminationResponseStatus.ErrorCondition();
+    public TerminateSubscriptionResponse.TerminationResponseStatus.ErrorCondition createTerminateSubscriptionResponseStructureTerminationResponseStatusErrorCondition() {
+        return new TerminateSubscriptionResponse.TerminationResponseStatus.ErrorCondition();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationExchangeCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesRequest")
-    public JAXBElement<ServiceCapabilitiesRequestStructure> createSituationExchangeCapabilitiesRequest(ServiceCapabilitiesRequestStructure value) {
-        return new JAXBElement<ServiceCapabilitiesRequestStructure>(_SituationExchangeCapabilitiesRequest_QNAME, ServiceCapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<ServiceCapabilitiesRequest> createSituationExchangeCapabilitiesRequest(ServiceCapabilitiesRequest value) {
+        return new JAXBElement<ServiceCapabilitiesRequest>(_SituationExchangeCapabilitiesRequest_QNAME, ServiceCapabilitiesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryDelivery")
-    public JAXBElement<FacilityDeliveryStructure> createFacilityDelivery(FacilityDeliveryStructure value) {
-        return new JAXBElement<FacilityDeliveryStructure>(_FacilityDelivery_QNAME, FacilityDeliveryStructure.class, null, value);
+    public JAXBElement<FacilityDelivery> createFacilityDelivery(FacilityDelivery value) {
+        return new JAXBElement<FacilityDelivery>(_FacilityDelivery_QNAME, FacilityDelivery.class, null, value);
     }
 
     /**
@@ -3954,21 +3954,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringDistributorDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringDistributorDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionMonitoringDistributorDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<ConnectionMonitoringDistributorDeliveryStructure> createConnectionMonitoringDistributorDelivery(ConnectionMonitoringDistributorDeliveryStructure value) {
-        return new JAXBElement<ConnectionMonitoringDistributorDeliveryStructure>(_ConnectionMonitoringDistributorDelivery_QNAME, ConnectionMonitoringDistributorDeliveryStructure.class, null, value);
+    public JAXBElement<ConnectionMonitoringDistributorDelivery> createConnectionMonitoringDistributorDelivery(ConnectionMonitoringDistributorDelivery value) {
+        return new JAXBElement<ConnectionMonitoringDistributorDelivery>(_ConnectionMonitoringDistributorDelivery_QNAME, ConnectionMonitoringDistributorDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FeatureRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FeatureRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FeatureRef")
-    public JAXBElement<FeatureRefStructure> createFeatureRef(FeatureRefStructure value) {
-        return new JAXBElement<FeatureRefStructure>(_FeatureRef_QNAME, FeatureRefStructure.class, null, value);
+    public JAXBElement<FeatureRef> createFeatureRef(FeatureRef value) {
+        return new JAXBElement<FeatureRef>(_FeatureRef_QNAME, FeatureRef.class, null, value);
     }
 
     /**
@@ -3981,12 +3981,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AllowedResourceUsageExceededErrorStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AllowedResourceUsageExceededError }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AllowedResourceUsageExceededError", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ErrorCode")
-    public JAXBElement<AllowedResourceUsageExceededErrorStructure> createAllowedResourceUsageExceededError(AllowedResourceUsageExceededErrorStructure value) {
-        return new JAXBElement<AllowedResourceUsageExceededErrorStructure>(_AllowedResourceUsageExceededError_QNAME, AllowedResourceUsageExceededErrorStructure.class, null, value);
+    public JAXBElement<AllowedResourceUsageExceededError> createAllowedResourceUsageExceededError(AllowedResourceUsageExceededError value) {
+        return new JAXBElement<AllowedResourceUsageExceededError>(_AllowedResourceUsageExceededError_QNAME, AllowedResourceUsageExceededError.class, null, value);
     }
 
     /**
@@ -4008,12 +4008,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToAlertsActionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToAlertsAction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "PublishToAlertsAction")
-    public JAXBElement<PublishToAlertsActionStructure> createPublishToAlertsAction(PublishToAlertsActionStructure value) {
-        return new JAXBElement<PublishToAlertsActionStructure>(_PublishToAlertsAction_QNAME, PublishToAlertsActionStructure.class, null, value);
+    public JAXBElement<PublishToAlertsAction> createPublishToAlertsAction(PublishToAlertsAction value) {
+        return new JAXBElement<PublishToAlertsAction>(_PublishToAlertsAction_QNAME, PublishToAlertsAction.class, null, value);
     }
 
     /**
@@ -4036,30 +4036,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguagePlaceNameStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguagePlaceName }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DestinationName")
-    public JAXBElement<NaturalLanguagePlaceNameStructure> createDestinationName(NaturalLanguagePlaceNameStructure value) {
-        return new JAXBElement<NaturalLanguagePlaceNameStructure>(_DestinationName_QNAME, NaturalLanguagePlaceNameStructure.class, null, value);
+    public JAXBElement<NaturalLanguagePlaceName> createDestinationName(NaturalLanguagePlaceName value) {
+        return new JAXBElement<NaturalLanguagePlaceName>(_DestinationName_QNAME, NaturalLanguagePlaceName.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionTimetableSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<ConnectionTimetableSubscriptionStructure> createConnectionTimetableSubscriptionRequest(ConnectionTimetableSubscriptionStructure value) {
-        return new JAXBElement<ConnectionTimetableSubscriptionStructure>(_ConnectionTimetableSubscriptionRequest_QNAME, ConnectionTimetableSubscriptionStructure.class, null, value);
+    public JAXBElement<ConnectionTimetableSubscription> createConnectionTimetableSubscriptionRequest(ConnectionTimetableSubscription value) {
+        return new JAXBElement<ConnectionTimetableSubscription>(_ConnectionTimetableSubscriptionRequest_QNAME, ConnectionTimetableSubscription.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CheckStatusRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CheckStatusRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "CheckStatusRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractTrackedRequest")
-    public JAXBElement<CheckStatusRequestStructure> createCheckStatusRequest(CheckStatusRequestStructure value) {
-        return new JAXBElement<CheckStatusRequestStructure>(_CheckStatusRequest_QNAME, CheckStatusRequestStructure.class, null, value);
+    public JAXBElement<CheckStatusRequest> createCheckStatusRequest(CheckStatusRequest value) {
+        return new JAXBElement<CheckStatusRequest>(_CheckStatusRequest_QNAME, CheckStatusRequest.class, null, value);
     }
 
     /**
@@ -4072,39 +4072,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LineRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LineRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "LineRef")
-    public JAXBElement<LineRefStructure> createLineRef(LineRefStructure value) {
-        return new JAXBElement<LineRefStructure>(_LineRef_QNAME, LineRefStructure.class, null, value);
+    public JAXBElement<LineRef> createLineRef(LineRef value) {
+        return new JAXBElement<LineRef>(_LineRef_QNAME, LineRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "EstimatedTimetableDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<EstimatedTimetableDeliveryStructure> createEstimatedTimetableDelivery(EstimatedTimetableDeliveryStructure value) {
-        return new JAXBElement<EstimatedTimetableDeliveryStructure>(_EstimatedTimetableDelivery_QNAME, EstimatedTimetableDeliveryStructure.class, null, value);
+    public JAXBElement<EstimatedTimetableDelivery> createEstimatedTimetableDelivery(EstimatedTimetableDelivery value) {
+        return new JAXBElement<EstimatedTimetableDelivery>(_EstimatedTimetableDelivery_QNAME, EstimatedTimetableDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedVehicleJourneyStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedVehicleJourney }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "EstimatedVehicleJourney")
-    public JAXBElement<EstimatedVehicleJourneyStructure> createEstimatedVehicleJourney(EstimatedVehicleJourneyStructure value) {
-        return new JAXBElement<EstimatedVehicleJourneyStructure>(_EstimatedVehicleJourney_QNAME, EstimatedVehicleJourneyStructure.class, null, value);
+    public JAXBElement<EstimatedVehicleJourney> createEstimatedVehicleJourney(EstimatedVehicleJourney value) {
+        return new JAXBElement<EstimatedVehicleJourney>(_EstimatedVehicleJourney_QNAME, EstimatedVehicleJourney.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopMonitoringServiceCapabilities")
-    public JAXBElement<StopMonitoringServiceCapabilitiesStructure> createStopMonitoringServiceCapabilities(StopMonitoringServiceCapabilitiesStructure value) {
-        return new JAXBElement<StopMonitoringServiceCapabilitiesStructure>(_StopMonitoringServiceCapabilities_QNAME, StopMonitoringServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<StopMonitoringServiceCapabilities> createStopMonitoringServiceCapabilities(StopMonitoringServiceCapabilities value) {
+        return new JAXBElement<StopMonitoringServiceCapabilities>(_StopMonitoringServiceCapabilities_QNAME, StopMonitoringServiceCapabilities.class, null, value);
     }
 
     /**
@@ -4117,39 +4117,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageStringStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageString }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "JourneyNote")
-    public JAXBElement<NaturalLanguageStringStructure> createJourneyNote(NaturalLanguageStringStructure value) {
-        return new JAXBElement<NaturalLanguageStringStructure>(_JourneyNote_QNAME, NaturalLanguageStringStructure.class, null, value);
+    public JAXBElement<NaturalLanguageString> createJourneyNote(NaturalLanguageString value) {
+        return new JAXBElement<NaturalLanguageString>(_JourneyNote_QNAME, NaturalLanguageString.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageStringStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageString }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ArrivalPlatformName")
-    public JAXBElement<NaturalLanguageStringStructure> createArrivalPlatformName(NaturalLanguageStringStructure value) {
-        return new JAXBElement<NaturalLanguageStringStructure>(_ArrivalPlatformName_QNAME, NaturalLanguageStringStructure.class, null, value);
+    public JAXBElement<NaturalLanguageString> createArrivalPlatformName(NaturalLanguageString value) {
+        return new JAXBElement<NaturalLanguageString>(_ArrivalPlatformName_QNAME, NaturalLanguageString.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "CapabilitiesRequest")
-    public JAXBElement<CapabilitiesRequestStructure> createCapabilitiesRequest(CapabilitiesRequestStructure value) {
-        return new JAXBElement<CapabilitiesRequestStructure>(_CapabilitiesRequest_QNAME, CapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<CapabilitiesRequest> createCapabilitiesRequest(CapabilitiesRequest value) {
+        return new JAXBElement<CapabilitiesRequest>(_CapabilitiesRequest_QNAME, CapabilitiesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DatedVehicleJourneyRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DatedVehicleJourneyRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DatedVehicleJourneyRef")
-    public JAXBElement<DatedVehicleJourneyRefStructure> createDatedVehicleJourneyRef(DatedVehicleJourneyRefStructure value) {
-        return new JAXBElement<DatedVehicleJourneyRefStructure>(_DatedVehicleJourneyRef_QNAME, DatedVehicleJourneyRefStructure.class, null, value);
+    public JAXBElement<DatedVehicleJourneyRef> createDatedVehicleJourneyRef(DatedVehicleJourneyRef value) {
+        return new JAXBElement<DatedVehicleJourneyRef>(_DatedVehicleJourneyRef_QNAME, DatedVehicleJourneyRef.class, null, value);
     }
 
     /**
@@ -4162,84 +4162,84 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopTimetableCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesRequest")
-    public JAXBElement<ServiceCapabilitiesRequestStructure> createStopTimetableCapabilitiesRequest(ServiceCapabilitiesRequestStructure value) {
-        return new JAXBElement<ServiceCapabilitiesRequestStructure>(_StopTimetableCapabilitiesRequest_QNAME, ServiceCapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<ServiceCapabilitiesRequest> createStopTimetableCapabilitiesRequest(ServiceCapabilitiesRequest value) {
+        return new JAXBElement<ServiceCapabilitiesRequest>(_StopTimetableCapabilitiesRequest_QNAME, ServiceCapabilitiesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EntryQualifierStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EntryQualifier }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationNumber")
-    public JAXBElement<EntryQualifierStructure> createSituationNumber(EntryQualifierStructure value) {
-        return new JAXBElement<EntryQualifierStructure>(_SituationNumber_QNAME, EntryQualifierStructure.class, null, value);
+    public JAXBElement<EntryQualifier> createSituationNumber(EntryQualifier value) {
+        return new JAXBElement<EntryQualifier>(_SituationNumber_QNAME, EntryQualifier.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ProducerRequestEndpointStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProducerRequestEndpoint }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ProducerRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractRequest")
-    public JAXBElement<ProducerRequestEndpointStructure> createProducerRequest(ProducerRequestEndpointStructure value) {
-        return new JAXBElement<ProducerRequestEndpointStructure>(_ProducerRequest_QNAME, ProducerRequestEndpointStructure.class, null, value);
+    public JAXBElement<ProducerRequestEndpoint> createProducerRequest(ProducerRequestEndpoint value) {
+        return new JAXBElement<ProducerRequestEndpoint>(_ProducerRequest_QNAME, ProducerRequestEndpoint.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TerminateSubscriptionRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TerminateSubscriptionRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "TerminateSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractTrackedRequest")
-    public JAXBElement<TerminateSubscriptionRequestStructure> createTerminateSubscriptionRequest(TerminateSubscriptionRequestStructure value) {
-        return new JAXBElement<TerminateSubscriptionRequestStructure>(_TerminateSubscriptionRequest_QNAME, TerminateSubscriptionRequestStructure.class, null, value);
+    public JAXBElement<TerminateSubscriptionRequest> createTerminateSubscriptionRequest(TerminateSubscriptionRequest value) {
+        return new JAXBElement<TerminateSubscriptionRequest>(_TerminateSubscriptionRequest_QNAME, TerminateSubscriptionRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "GeneralMessageRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<GeneralMessageRequestStructure> createGeneralMessageRequest(GeneralMessageRequestStructure value) {
-        return new JAXBElement<GeneralMessageRequestStructure>(_GeneralMessageRequest_QNAME, GeneralMessageRequestStructure.class, null, value);
+    public JAXBElement<GeneralMessageRequest> createGeneralMessageRequest(GeneralMessageRequest value) {
+        return new JAXBElement<GeneralMessageRequest>(_GeneralMessageRequest_QNAME, GeneralMessageRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractRequest")
-    public JAXBElement<AbstractRequestStructure> createAbstractRequest(AbstractRequestStructure value) {
-        return new JAXBElement<AbstractRequestStructure>(_AbstractRequest_QNAME, AbstractRequestStructure.class, null, value);
+    public JAXBElement<AbstractRequest> createAbstractRequest(AbstractRequest value) {
+        return new JAXBElement<AbstractRequest>(_AbstractRequest_QNAME, AbstractRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TimetabledFeederArrivalCancellationStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TimetabledFeederArrivalCancellation }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "TimetabledFeederArrivalCancellation")
-    public JAXBElement<TimetabledFeederArrivalCancellationStructure> createTimetabledFeederArrivalCancellation(TimetabledFeederArrivalCancellationStructure value) {
-        return new JAXBElement<TimetabledFeederArrivalCancellationStructure>(_TimetabledFeederArrivalCancellation_QNAME, TimetabledFeederArrivalCancellationStructure.class, null, value);
+    public JAXBElement<TimetabledFeederArrivalCancellation> createTimetabledFeederArrivalCancellation(TimetabledFeederArrivalCancellation value) {
+        return new JAXBElement<TimetabledFeederArrivalCancellation>(_TimetabledFeederArrivalCancellation_QNAME, TimetabledFeederArrivalCancellation.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link JourneyPatternRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link JourneyPatternRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "JourneyPatternRef")
-    public JAXBElement<JourneyPatternRefStructure> createJourneyPatternRef(JourneyPatternRefStructure value) {
-        return new JAXBElement<JourneyPatternRefStructure>(_JourneyPatternRef_QNAME, JourneyPatternRefStructure.class, null, value);
+    public JAXBElement<JourneyPatternRef> createJourneyPatternRef(JourneyPatternRef value) {
+        return new JAXBElement<JourneyPatternRef>(_JourneyPatternRef_QNAME, JourneyPatternRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CapabilityNotSupportedErrorStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CapabilityNotSupportedError }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "CapabilityNotSupportedError", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ErrorCode")
-    public JAXBElement<CapabilityNotSupportedErrorStructure> createCapabilityNotSupportedError(CapabilityNotSupportedErrorStructure value) {
-        return new JAXBElement<CapabilityNotSupportedErrorStructure>(_CapabilityNotSupportedError_QNAME, CapabilityNotSupportedErrorStructure.class, null, value);
+    public JAXBElement<CapabilityNotSupportedError> createCapabilityNotSupportedError(CapabilityNotSupportedError value) {
+        return new JAXBElement<CapabilityNotSupportedError>(_CapabilityNotSupportedError_QNAME, CapabilityNotSupportedError.class, null, value);
     }
 
     /**
@@ -4261,12 +4261,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ProductCategoriesDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProductCategoriesDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ProductCategoriesDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryDelivery")
-    public JAXBElement<ProductCategoriesDeliveryStructure> createProductCategoriesDelivery(ProductCategoriesDeliveryStructure value) {
-        return new JAXBElement<ProductCategoriesDeliveryStructure>(_ProductCategoriesDelivery_QNAME, ProductCategoriesDeliveryStructure.class, null, value);
+    public JAXBElement<ProductCategoriesDelivery> createProductCategoriesDelivery(ProductCategoriesDelivery value) {
+        return new JAXBElement<ProductCategoriesDelivery>(_ProductCategoriesDelivery_QNAME, ProductCategoriesDelivery.class, null, value);
     }
 
     /**
@@ -4288,21 +4288,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LinesDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LinesDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "LinesDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryDelivery")
-    public JAXBElement<LinesDeliveryStructure> createLinesDelivery(LinesDeliveryStructure value) {
-        return new JAXBElement<LinesDeliveryStructure>(_LinesDelivery_QNAME, LinesDeliveryStructure.class, null, value);
+    public JAXBElement<LinesDelivery> createLinesDelivery(LinesDelivery value) {
+        return new JAXBElement<LinesDelivery>(_LinesDelivery_QNAME, LinesDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityMonitoringDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<FacilityMonitoringDeliveryStructure> createFacilityMonitoringDelivery(FacilityMonitoringDeliveryStructure value) {
-        return new JAXBElement<FacilityMonitoringDeliveryStructure>(_FacilityMonitoringDelivery_QNAME, FacilityMonitoringDeliveryStructure.class, null, value);
+    public JAXBElement<FacilityMonitoringDelivery> createFacilityMonitoringDelivery(FacilityMonitoringDelivery value) {
+        return new JAXBElement<FacilityMonitoringDelivery>(_FacilityMonitoringDelivery_QNAME, FacilityMonitoringDelivery.class, null, value);
     }
 
     /**
@@ -4316,75 +4316,75 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NotifyBySmsActionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NotifyBySmsAction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "NotifyBySmsAction")
-    public JAXBElement<NotifyBySmsActionStructure> createNotifyBySmsAction(NotifyBySmsActionStructure value) {
-        return new JAXBElement<NotifyBySmsActionStructure>(_NotifyBySmsAction_QNAME, NotifyBySmsActionStructure.class, null, value);
+    public JAXBElement<NotifyBySmsAction> createNotifyBySmsAction(NotifyBySmsAction value) {
+        return new JAXBElement<NotifyBySmsAction>(_NotifyBySmsAction_QNAME, NotifyBySmsAction.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Response }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractResponse")
-    public JAXBElement<ResponseStructure> createAbstractResponse(ResponseStructure value) {
-        return new JAXBElement<ResponseStructure>(_AbstractResponse_QNAME, ResponseStructure.class, null, value);
+    public JAXBElement<Response> createAbstractResponse(Response value) {
+        return new JAXBElement<Response>(_AbstractResponse_QNAME, Response.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleFeaturesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleFeatures }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleFeature")
-    public JAXBElement<VehicleFeaturesStructure> createVehicleFeature(VehicleFeaturesStructure value) {
-        return new JAXBElement<VehicleFeaturesStructure>(_VehicleFeature_QNAME, VehicleFeaturesStructure.class, null, value);
+    public JAXBElement<VehicleFeatures> createVehicleFeature(VehicleFeatures value) {
+        return new JAXBElement<VehicleFeatures>(_VehicleFeature_QNAME, VehicleFeatures.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "GeneralMessageDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<GeneralMessageDeliveryStructure> createGeneralMessageDelivery(GeneralMessageDeliveryStructure value) {
-        return new JAXBElement<GeneralMessageDeliveryStructure>(_GeneralMessageDelivery_QNAME, GeneralMessageDeliveryStructure.class, null, value);
+    public JAXBElement<GeneralMessageDelivery> createGeneralMessageDelivery(GeneralMessageDelivery value) {
+        return new JAXBElement<GeneralMessageDelivery>(_GeneralMessageDelivery_QNAME, GeneralMessageDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionTimetableCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<ConnectionTimetableCapabilitiesResponseStructure> createConnectionTimetableCapabilitiesResponse(ConnectionTimetableCapabilitiesResponseStructure value) {
-        return new JAXBElement<ConnectionTimetableCapabilitiesResponseStructure>(_ConnectionTimetableCapabilitiesResponse_QNAME, ConnectionTimetableCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<ConnectionTimetableCapabilitiesResponse> createConnectionTimetableCapabilitiesResponse(ConnectionTimetableCapabilitiesResponse value) {
+        return new JAXBElement<ConnectionTimetableCapabilitiesResponse>(_ConnectionTimetableCapabilitiesResponse_QNAME, ConnectionTimetableCapabilitiesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceFeaturesDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceFeaturesDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ServiceFeaturesDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryDelivery")
-    public JAXBElement<ServiceFeaturesDeliveryStructure> createServiceFeaturesDelivery(ServiceFeaturesDeliveryStructure value) {
-        return new JAXBElement<ServiceFeaturesDeliveryStructure>(_ServiceFeaturesDelivery_QNAME, ServiceFeaturesDeliveryStructure.class, null, value);
+    public JAXBElement<ServiceFeaturesDelivery> createServiceFeaturesDelivery(ServiceFeaturesDelivery value) {
+        return new JAXBElement<ServiceFeaturesDelivery>(_ServiceFeaturesDelivery_QNAME, ServiceFeaturesDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguagePlaceNameStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguagePlaceName }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "OriginName")
-    public JAXBElement<NaturalLanguagePlaceNameStructure> createOriginName(NaturalLanguagePlaceNameStructure value) {
-        return new JAXBElement<NaturalLanguagePlaceNameStructure>(_OriginName_QNAME, NaturalLanguagePlaceNameStructure.class, null, value);
+    public JAXBElement<NaturalLanguagePlaceName> createOriginName(NaturalLanguagePlaceName value) {
+        return new JAXBElement<NaturalLanguagePlaceName>(_OriginName_QNAME, NaturalLanguagePlaceName.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationExchangeServiceCapabilities")
-    public JAXBElement<SituationExchangeServiceCapabilitiesStructure> createSituationExchangeServiceCapabilities(SituationExchangeServiceCapabilitiesStructure value) {
-        return new JAXBElement<SituationExchangeServiceCapabilitiesStructure>(_SituationExchangeServiceCapabilities_QNAME, SituationExchangeServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<SituationExchangeServiceCapabilities> createSituationExchangeServiceCapabilities(SituationExchangeServiceCapabilities value) {
+        return new JAXBElement<SituationExchangeServiceCapabilities>(_SituationExchangeServiceCapabilities_QNAME, SituationExchangeServiceCapabilities.class, null, value);
     }
 
     /**
@@ -4398,12 +4398,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleMonitoringDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<VehicleMonitoringDeliveryStructure> createVehicleMonitoringDelivery(VehicleMonitoringDeliveryStructure value) {
-        return new JAXBElement<VehicleMonitoringDeliveryStructure>(_VehicleMonitoringDelivery_QNAME, VehicleMonitoringDeliveryStructure.class, null, value);
+    public JAXBElement<VehicleMonitoringDelivery> createVehicleMonitoringDelivery(VehicleMonitoringDelivery value) {
+        return new JAXBElement<VehicleMonitoringDelivery>(_VehicleMonitoringDelivery_QNAME, VehicleMonitoringDelivery.class, null, value);
     }
 
     /**
@@ -4416,57 +4416,57 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherErrorStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherError }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "OtherError", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ErrorCode")
-    public JAXBElement<OtherErrorStructure> createOtherError(OtherErrorStructure value) {
-        return new JAXBElement<OtherErrorStructure>(_OtherError_QNAME, OtherErrorStructure.class, null, value);
+    public JAXBElement<OtherError> createOtherError(OtherError value) {
+        return new JAXBElement<OtherError>(_OtherError_QNAME, OtherError.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "EstimatedTimetableRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<EstimatedTimetableRequestStructure> createEstimatedTimetableRequest(EstimatedTimetableRequestStructure value) {
-        return new JAXBElement<EstimatedTimetableRequestStructure>(_EstimatedTimetableRequest_QNAME, EstimatedTimetableRequestStructure.class, null, value);
+    public JAXBElement<EstimatedTimetableRequest> createEstimatedTimetableRequest(EstimatedTimetableRequest value) {
+        return new JAXBElement<EstimatedTimetableRequest>(_EstimatedTimetableRequest_QNAME, EstimatedTimetableRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ProductionTimetableServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProductionTimetableServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ProductionTimetableServiceCapabilities")
-    public JAXBElement<ProductionTimetableServiceCapabilitiesStructure> createProductionTimetableServiceCapabilities(ProductionTimetableServiceCapabilitiesStructure value) {
-        return new JAXBElement<ProductionTimetableServiceCapabilitiesStructure>(_ProductionTimetableServiceCapabilities_QNAME, ProductionTimetableServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<ProductionTimetableServiceCapabilities> createProductionTimetableServiceCapabilities(ProductionTimetableServiceCapabilities value) {
+        return new JAXBElement<ProductionTimetableServiceCapabilities>(_ProductionTimetableServiceCapabilities_QNAME, ProductionTimetableServiceCapabilities.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionMonitoringCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<ConnectionMonitoringCapabilitiesResponseStructure> createConnectionMonitoringCapabilitiesResponse(ConnectionMonitoringCapabilitiesResponseStructure value) {
-        return new JAXBElement<ConnectionMonitoringCapabilitiesResponseStructure>(_ConnectionMonitoringCapabilitiesResponse_QNAME, ConnectionMonitoringCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<ConnectionMonitoringCapabilitiesResponse> createConnectionMonitoringCapabilitiesResponse(ConnectionMonitoringCapabilitiesResponse value) {
+        return new JAXBElement<ConnectionMonitoringCapabilitiesResponse>(_ConnectionMonitoringCapabilitiesResponse_QNAME, ConnectionMonitoringCapabilitiesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DatedTimetableVersionFrameStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DatedTimetableVersionFrame }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DatedTimetableVersionFrame")
-    public JAXBElement<DatedTimetableVersionFrameStructure> createDatedTimetableVersionFrame(DatedTimetableVersionFrameStructure value) {
-        return new JAXBElement<DatedTimetableVersionFrameStructure>(_DatedTimetableVersionFrame_QNAME, DatedTimetableVersionFrameStructure.class, null, value);
+    public JAXBElement<DatedTimetableVersionFrame> createDatedTimetableVersionFrame(DatedTimetableVersionFrame value) {
+        return new JAXBElement<DatedTimetableVersionFrame>(_DatedTimetableVersionFrame_QNAME, DatedTimetableVersionFrame.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopPointRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopPointRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopPointRef")
-    public JAXBElement<StopPointRefStructure> createStopPointRef(StopPointRefStructure value) {
-        return new JAXBElement<StopPointRefStructure>(_StopPointRef_QNAME, StopPointRefStructure.class, null, value);
+    public JAXBElement<StopPointRef> createStopPointRef(StopPointRef value) {
+        return new JAXBElement<StopPointRef>(_StopPointRef_QNAME, StopPointRef.class, null, value);
     }
 
     /**
@@ -4488,12 +4488,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DataReceivedResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DataReceivedResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DataReceivedAcknowledgement", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractResponse")
-    public JAXBElement<DataReceivedResponseStructure> createDataReceivedAcknowledgement(DataReceivedResponseStructure value) {
-        return new JAXBElement<DataReceivedResponseStructure>(_DataReceivedAcknowledgement_QNAME, DataReceivedResponseStructure.class, null, value);
+    public JAXBElement<DataReceivedResponse> createDataReceivedAcknowledgement(DataReceivedResponse value) {
+        return new JAXBElement<DataReceivedResponse>(_DataReceivedAcknowledgement_QNAME, DataReceivedResponse.class, null, value);
     }
 
     /**
@@ -4506,12 +4506,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ProductCategoriesDiscoveryRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProductCategoriesDiscoveryRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ProductCategoriesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryRequest")
-    public JAXBElement<ProductCategoriesDiscoveryRequestStructure> createProductCategoriesRequest(ProductCategoriesDiscoveryRequestStructure value) {
-        return new JAXBElement<ProductCategoriesDiscoveryRequestStructure>(_ProductCategoriesRequest_QNAME, ProductCategoriesDiscoveryRequestStructure.class, null, value);
+    public JAXBElement<ProductCategoriesDiscoveryRequest> createProductCategoriesRequest(ProductCategoriesDiscoveryRequest value) {
+        return new JAXBElement<ProductCategoriesDiscoveryRequest>(_ProductCategoriesRequest_QNAME, ProductCategoriesDiscoveryRequest.class, null, value);
     }
 
     /**
@@ -4533,12 +4533,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractDiscoveryRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractDiscoveryRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractDiscoveryRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractTrackedRequest")
-    public JAXBElement<AbstractDiscoveryRequestStructure> createAbstractDiscoveryRequest(AbstractDiscoveryRequestStructure value) {
-        return new JAXBElement<AbstractDiscoveryRequestStructure>(_AbstractDiscoveryRequest_QNAME, AbstractDiscoveryRequestStructure.class, null, value);
+    public JAXBElement<AbstractDiscoveryRequest> createAbstractDiscoveryRequest(AbstractDiscoveryRequest value) {
+        return new JAXBElement<AbstractDiscoveryRequest>(_AbstractDiscoveryRequest_QNAME, AbstractDiscoveryRequest.class, null, value);
     }
 
     /**
@@ -4551,12 +4551,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleFeaturesDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleFeaturesDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleFeaturesDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryDelivery")
-    public JAXBElement<VehicleFeaturesDeliveryStructure> createVehicleFeaturesDelivery(VehicleFeaturesDeliveryStructure value) {
-        return new JAXBElement<VehicleFeaturesDeliveryStructure>(_VehicleFeaturesDelivery_QNAME, VehicleFeaturesDeliveryStructure.class, null, value);
+    public JAXBElement<VehicleFeaturesDelivery> createVehicleFeaturesDelivery(VehicleFeaturesDelivery value) {
+        return new JAXBElement<VehicleFeaturesDelivery>(_VehicleFeaturesDelivery_QNAME, VehicleFeaturesDelivery.class, null, value);
     }
 
     /**
@@ -4570,12 +4570,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BeyondDataHorizonErrorStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link BeyondDataHorizonError }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "BeyondDataHorizon", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ErrorCode")
-    public JAXBElement<BeyondDataHorizonErrorStructure> createBeyondDataHorizon(BeyondDataHorizonErrorStructure value) {
-        return new JAXBElement<BeyondDataHorizonErrorStructure>(_BeyondDataHorizon_QNAME, BeyondDataHorizonErrorStructure.class, null, value);
+    public JAXBElement<BeyondDataHorizonError> createBeyondDataHorizon(BeyondDataHorizonError value) {
+        return new JAXBElement<BeyondDataHorizonError>(_BeyondDataHorizon_QNAME, BeyondDataHorizonError.class, null, value);
     }
 
     /**
@@ -4588,12 +4588,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InfoMessageStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InfoMessage }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "GeneralMessage")
-    public JAXBElement<InfoMessageStructure> createGeneralMessage(InfoMessageStructure value) {
-        return new JAXBElement<InfoMessageStructure>(_GeneralMessage_QNAME, InfoMessageStructure.class, null, value);
+    public JAXBElement<InfoMessage> createGeneralMessage(InfoMessage value) {
+        return new JAXBElement<InfoMessage>(_GeneralMessage_QNAME, InfoMessage.class, null, value);
     }
 
     /**
@@ -4624,12 +4624,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubscriptionResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubscriptionResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SubscriptionResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractResponse")
-    public JAXBElement<SubscriptionResponseStructure> createSubscriptionResponse(SubscriptionResponseStructure value) {
-        return new JAXBElement<SubscriptionResponseStructure>(_SubscriptionResponse_QNAME, SubscriptionResponseStructure.class, null, value);
+    public JAXBElement<SubscriptionResponse> createSubscriptionResponse(SubscriptionResponse value) {
+        return new JAXBElement<SubscriptionResponse>(_SubscriptionResponse_QNAME, SubscriptionResponse.class, null, value);
     }
 
     /**
@@ -4688,30 +4688,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopTimetableSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<StopTimetableSubscriptionStructure> createStopTimetableSubscriptionRequest(StopTimetableSubscriptionStructure value) {
-        return new JAXBElement<StopTimetableSubscriptionStructure>(_StopTimetableSubscriptionRequest_QNAME, StopTimetableSubscriptionStructure.class, null, value);
+    public JAXBElement<StopTimetableSubscription> createStopTimetableSubscriptionRequest(StopTimetableSubscription value) {
+        return new JAXBElement<StopTimetableSubscription>(_StopTimetableSubscriptionRequest_QNAME, StopTimetableSubscription.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageStringStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageString }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "PublishedLineName")
-    public JAXBElement<NaturalLanguageStringStructure> createPublishedLineName(NaturalLanguageStringStructure value) {
-        return new JAXBElement<NaturalLanguageStringStructure>(_PublishedLineName_QNAME, NaturalLanguageStringStructure.class, null, value);
+    public JAXBElement<NaturalLanguageString> createPublishedLineName(NaturalLanguageString value) {
+        return new JAXBElement<NaturalLanguageString>(_PublishedLineName_QNAME, NaturalLanguageString.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NotifyByPagerActionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NotifyByPagerAction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "NotifyByPagerAction")
-    public JAXBElement<NotifyByPagerActionStructure> createNotifyByPagerAction(NotifyByPagerActionStructure value) {
-        return new JAXBElement<NotifyByPagerActionStructure>(_NotifyByPagerAction_QNAME, NotifyByPagerActionStructure.class, null, value);
+    public JAXBElement<NotifyByPagerAction> createNotifyByPagerAction(NotifyByPagerAction value) {
+        return new JAXBElement<NotifyByPagerAction>(_NotifyByPagerAction_QNAME, NotifyByPagerAction.class, null, value);
     }
 
     /**
@@ -4725,12 +4725,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleMonitoringServiceCapabilities")
-    public JAXBElement<VehicleMonitoringServiceCapabilitiesStructure> createVehicleMonitoringServiceCapabilities(VehicleMonitoringServiceCapabilitiesStructure value) {
-        return new JAXBElement<VehicleMonitoringServiceCapabilitiesStructure>(_VehicleMonitoringServiceCapabilities_QNAME, VehicleMonitoringServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<VehicleMonitoringServiceCapabilities> createVehicleMonitoringServiceCapabilities(VehicleMonitoringServiceCapabilities value) {
+        return new JAXBElement<VehicleMonitoringServiceCapabilities>(_VehicleMonitoringServiceCapabilities_QNAME, VehicleMonitoringServiceCapabilities.class, null, value);
     }
 
     /**
@@ -4743,39 +4743,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InfoChannelDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InfoChannelDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "InfoChannelDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryDelivery")
-    public JAXBElement<InfoChannelDeliveryStructure> createInfoChannelDelivery(InfoChannelDeliveryStructure value) {
-        return new JAXBElement<InfoChannelDeliveryStructure>(_InfoChannelDelivery_QNAME, InfoChannelDeliveryStructure.class, null, value);
+    public JAXBElement<InfoChannelDelivery> createInfoChannelDelivery(InfoChannelDelivery value) {
+        return new JAXBElement<InfoChannelDelivery>(_InfoChannelDelivery_QNAME, InfoChannelDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractFunctionalServiceRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractFunctionalServiceRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractFunctionalServiceRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractServiceRequest")
-    public JAXBElement<AbstractFunctionalServiceRequestStructure> createAbstractFunctionalServiceRequest(AbstractFunctionalServiceRequestStructure value) {
-        return new JAXBElement<AbstractFunctionalServiceRequestStructure>(_AbstractFunctionalServiceRequest_QNAME, AbstractFunctionalServiceRequestStructure.class, null, value);
+    public JAXBElement<AbstractFunctionalServiceRequest> createAbstractFunctionalServiceRequest(AbstractFunctionalServiceRequest value) {
+        return new JAXBElement<AbstractFunctionalServiceRequest>(_AbstractFunctionalServiceRequest_QNAME, AbstractFunctionalServiceRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopMonitoringCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesRequest")
-    public JAXBElement<ServiceCapabilitiesRequestStructure> createStopMonitoringCapabilitiesRequest(ServiceCapabilitiesRequestStructure value) {
-        return new JAXBElement<ServiceCapabilitiesRequestStructure>(_StopMonitoringCapabilitiesRequest_QNAME, ServiceCapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<ServiceCapabilitiesRequest> createStopMonitoringCapabilitiesRequest(ServiceCapabilitiesRequest value) {
+        return new JAXBElement<ServiceCapabilitiesRequest>(_StopMonitoringCapabilitiesRequest_QNAME, ServiceCapabilitiesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationExchangeDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<SituationExchangeDeliveryStructure> createSituationExchangeDelivery(SituationExchangeDeliveryStructure value) {
-        return new JAXBElement<SituationExchangeDeliveryStructure>(_SituationExchangeDelivery_QNAME, SituationExchangeDeliveryStructure.class, null, value);
+    public JAXBElement<SituationExchangeDelivery> createSituationExchangeDelivery(SituationExchangeDelivery value) {
+        return new JAXBElement<SituationExchangeDelivery>(_SituationExchangeDelivery_QNAME, SituationExchangeDelivery.class, null, value);
     }
 
     /**
@@ -4788,39 +4788,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationRef")
-    public JAXBElement<SituationRefStructure> createSituationRef(SituationRefStructure value) {
-        return new JAXBElement<SituationRefStructure>(_SituationRef_QNAME, SituationRefStructure.class, null, value);
+    public JAXBElement<SituationRef> createSituationRef(SituationRef value) {
+        return new JAXBElement<SituationRef>(_SituationRef_QNAME, SituationRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToMobileActionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToMobileAction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "PublishToMobileAction")
-    public JAXBElement<PublishToMobileActionStructure> createPublishToMobileAction(PublishToMobileActionStructure value) {
-        return new JAXBElement<PublishToMobileActionStructure>(_PublishToMobileAction_QNAME, PublishToMobileActionStructure.class, null, value);
+    public JAXBElement<PublishToMobileAction> createPublishToMobileAction(PublishToMobileAction value) {
+        return new JAXBElement<PublishToMobileAction>(_PublishToMobileAction_QNAME, PublishToMobileAction.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleMonitoringSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<VehicleMonitoringSubscriptionStructure> createVehicleMonitoringSubscriptionRequest(VehicleMonitoringSubscriptionStructure value) {
-        return new JAXBElement<VehicleMonitoringSubscriptionStructure>(_VehicleMonitoringSubscriptionRequest_QNAME, VehicleMonitoringSubscriptionStructure.class, null, value);
+    public JAXBElement<VehicleMonitoringSubscription> createVehicleMonitoringSubscriptionRequest(VehicleMonitoringSubscription value) {
+        return new JAXBElement<VehicleMonitoringSubscription>(_VehicleMonitoringSubscriptionRequest_QNAME, VehicleMonitoringSubscription.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopTimetableRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<StopTimetableRequestStructure> createStopTimetableRequest(StopTimetableRequestStructure value) {
-        return new JAXBElement<StopTimetableRequestStructure>(_StopTimetableRequest_QNAME, StopTimetableRequestStructure.class, null, value);
+    public JAXBElement<StopTimetableRequest> createStopTimetableRequest(StopTimetableRequest value) {
+        return new JAXBElement<StopTimetableRequest>(_StopTimetableRequest_QNAME, StopTimetableRequest.class, null, value);
     }
 
     /**
@@ -4833,66 +4833,66 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InfoMessageCancellationStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InfoMessageCancellation }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "GeneralMessageCancellation")
-    public JAXBElement<InfoMessageCancellationStructure> createGeneralMessageCancellation(InfoMessageCancellationStructure value) {
-        return new JAXBElement<InfoMessageCancellationStructure>(_GeneralMessageCancellation_QNAME, InfoMessageCancellationStructure.class, null, value);
+    public JAXBElement<InfoMessageCancellation> createGeneralMessageCancellation(InfoMessageCancellation value) {
+        return new JAXBElement<InfoMessageCancellation>(_GeneralMessageCancellation_QNAME, InfoMessageCancellation.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopMonitoringSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<StopMonitoringSubscriptionStructure> createStopMonitoringSubscriptionRequest(StopMonitoringSubscriptionStructure value) {
-        return new JAXBElement<StopMonitoringSubscriptionStructure>(_StopMonitoringSubscriptionRequest_QNAME, StopMonitoringSubscriptionStructure.class, null, value);
+    public JAXBElement<StopMonitoringSubscription> createStopMonitoringSubscriptionRequest(StopMonitoringSubscription value) {
+        return new JAXBElement<StopMonitoringSubscription>(_StopMonitoringSubscriptionRequest_QNAME, StopMonitoringSubscription.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceFeatureStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceFeature }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ServiceFeature")
-    public JAXBElement<ServiceFeatureStructure> createServiceFeature(ServiceFeatureStructure value) {
-        return new JAXBElement<ServiceFeatureStructure>(_ServiceFeature_QNAME, ServiceFeatureStructure.class, null, value);
+    public JAXBElement<ServiceFeature> createServiceFeature(ServiceFeature value) {
+        return new JAXBElement<ServiceFeature>(_ServiceFeature_QNAME, ServiceFeature.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ExtensionsStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Extensions }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "Extensions")
-    public JAXBElement<ExtensionsStructure> createExtensions(ExtensionsStructure value) {
-        return new JAXBElement<ExtensionsStructure>(_Extensions_QNAME, ExtensionsStructure.class, null, value);
+    public JAXBElement<Extensions> createExtensions(Extensions value) {
+        return new JAXBElement<Extensions>(_Extensions_QNAME, Extensions.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageStringStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageString }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopPointName")
-    public JAXBElement<NaturalLanguageStringStructure> createStopPointName(NaturalLanguageStringStructure value) {
-        return new JAXBElement<NaturalLanguageStringStructure>(_StopPointName_QNAME, NaturalLanguageStringStructure.class, null, value);
+    public JAXBElement<NaturalLanguageString> createStopPointName(NaturalLanguageString value) {
+        return new JAXBElement<NaturalLanguageString>(_StopPointName_QNAME, NaturalLanguageString.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TerminateSubscriptionResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TerminateSubscriptionResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "TerminateSubscriptionResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractResponse")
-    public JAXBElement<TerminateSubscriptionResponseStructure> createTerminateSubscriptionResponse(TerminateSubscriptionResponseStructure value) {
-        return new JAXBElement<TerminateSubscriptionResponseStructure>(_TerminateSubscriptionResponse_QNAME, TerminateSubscriptionResponseStructure.class, null, value);
+    public JAXBElement<TerminateSubscriptionResponse> createTerminateSubscriptionResponse(TerminateSubscriptionResponse value) {
+        return new JAXBElement<TerminateSubscriptionResponse>(_TerminateSubscriptionResponse_QNAME, TerminateSubscriptionResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringFeederDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringFeederDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionMonitoringFeederDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<ConnectionMonitoringFeederDeliveryStructure> createConnectionMonitoringFeederDelivery(ConnectionMonitoringFeederDeliveryStructure value) {
-        return new JAXBElement<ConnectionMonitoringFeederDeliveryStructure>(_ConnectionMonitoringFeederDelivery_QNAME, ConnectionMonitoringFeederDeliveryStructure.class, null, value);
+    public JAXBElement<ConnectionMonitoringFeederDelivery> createConnectionMonitoringFeederDelivery(ConnectionMonitoringFeederDelivery value) {
+        return new JAXBElement<ConnectionMonitoringFeederDelivery>(_ConnectionMonitoringFeederDelivery_QNAME, ConnectionMonitoringFeederDelivery.class, null, value);
     }
 
     /**
@@ -4914,30 +4914,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopTimetableServiceCapabilities")
-    public JAXBElement<StopTimetableServiceCapabilitiesStructure> createStopTimetableServiceCapabilities(StopTimetableServiceCapabilitiesStructure value) {
-        return new JAXBElement<StopTimetableServiceCapabilitiesStructure>(_StopTimetableServiceCapabilities_QNAME, StopTimetableServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<StopTimetableServiceCapabilities> createStopTimetableServiceCapabilities(StopTimetableServiceCapabilities value) {
+        return new JAXBElement<StopTimetableServiceCapabilities>(_StopTimetableServiceCapabilities_QNAME, StopTimetableServiceCapabilities.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceDeliveryErrorConditionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceDeliveryErrorCondition }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ServiceDeliveryErrorConditionElement")
-    public JAXBElement<ServiceDeliveryErrorConditionStructure> createServiceDeliveryErrorConditionElement(ServiceDeliveryErrorConditionStructure value) {
-        return new JAXBElement<ServiceDeliveryErrorConditionStructure>(_ServiceDeliveryErrorConditionElement_QNAME, ServiceDeliveryErrorConditionStructure.class, null, value);
+    public JAXBElement<ServiceDeliveryErrorCondition> createServiceDeliveryErrorConditionElement(ServiceDeliveryErrorCondition value) {
+        return new JAXBElement<ServiceDeliveryErrorCondition>(_ServiceDeliveryErrorConditionElement_QNAME, ServiceDeliveryErrorCondition.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionTimetableDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<ConnectionTimetableDeliveryStructure> createConnectionTimetableDelivery(ConnectionTimetableDeliveryStructure value) {
-        return new JAXBElement<ConnectionTimetableDeliveryStructure>(_ConnectionTimetableDelivery_QNAME, ConnectionTimetableDeliveryStructure.class, null, value);
+    public JAXBElement<ConnectionTimetableDelivery> createConnectionTimetableDelivery(ConnectionTimetableDelivery value) {
+        return new JAXBElement<ConnectionTimetableDelivery>(_ConnectionTimetableDelivery_QNAME, ConnectionTimetableDelivery.class, null, value);
     }
 
     /**
@@ -4959,12 +4959,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RoadSituationElementStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RoadSituationElement }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "RoadSituationElement")
-    public JAXBElement<RoadSituationElementStructure> createRoadSituationElement(RoadSituationElementStructure value) {
-        return new JAXBElement<RoadSituationElementStructure>(_RoadSituationElement_QNAME, RoadSituationElementStructure.class, null, value);
+    public JAXBElement<RoadSituationElement> createRoadSituationElement(RoadSituationElement value) {
+        return new JAXBElement<RoadSituationElement>(_RoadSituationElement_QNAME, RoadSituationElement.class, null, value);
     }
 
     /**
@@ -4986,30 +4986,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringSubscriptionRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringSubscriptionRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionMonitoringSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<ConnectionMonitoringSubscriptionRequestStructure> createConnectionMonitoringSubscriptionRequest(ConnectionMonitoringSubscriptionRequestStructure value) {
-        return new JAXBElement<ConnectionMonitoringSubscriptionRequestStructure>(_ConnectionMonitoringSubscriptionRequest_QNAME, ConnectionMonitoringSubscriptionRequestStructure.class, null, value);
+    public JAXBElement<ConnectionMonitoringSubscriptionRequest> createConnectionMonitoringSubscriptionRequest(ConnectionMonitoringSubscriptionRequest value) {
+        return new JAXBElement<ConnectionMonitoringSubscriptionRequest>(_ConnectionMonitoringSubscriptionRequest_QNAME, ConnectionMonitoringSubscriptionRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionTimetableRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<ConnectionTimetableRequestStructure> createConnectionTimetableRequest(ConnectionTimetableRequestStructure value) {
-        return new JAXBElement<ConnectionTimetableRequestStructure>(_ConnectionTimetableRequest_QNAME, ConnectionTimetableRequestStructure.class, null, value);
+    public JAXBElement<ConnectionTimetableRequest> createConnectionTimetableRequest(ConnectionTimetableRequest value) {
+        return new JAXBElement<ConnectionTimetableRequest>(_ConnectionTimetableRequest_QNAME, ConnectionTimetableRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "CapabilitiesResponse")
-    public JAXBElement<CapabilitiesResponseStructure> createCapabilitiesResponse(CapabilitiesResponseStructure value) {
-        return new JAXBElement<CapabilitiesResponseStructure>(_CapabilitiesResponse_QNAME, CapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<CapabilitiesResponse> createCapabilitiesResponse(CapabilitiesResponse value) {
+        return new JAXBElement<CapabilitiesResponse>(_CapabilitiesResponse_QNAME, CapabilitiesResponse.class, null, value);
     }
 
     /**
@@ -5022,30 +5022,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AccessNotAllowedErrorStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AccessNotAllowedError }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AccessNotAllowedError", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ErrorCode")
-    public JAXBElement<AccessNotAllowedErrorStructure> createAccessNotAllowedError(AccessNotAllowedErrorStructure value) {
-        return new JAXBElement<AccessNotAllowedErrorStructure>(_AccessNotAllowedError_QNAME, AccessNotAllowedErrorStructure.class, null, value);
+    public JAXBElement<AccessNotAllowedError> createAccessNotAllowedError(AccessNotAllowedError value) {
+        return new JAXBElement<AccessNotAllowedError>(_AccessNotAllowedError_QNAME, AccessNotAllowedError.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleMonitoringCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesRequest")
-    public JAXBElement<ServiceCapabilitiesRequestStructure> createVehicleMonitoringCapabilitiesRequest(ServiceCapabilitiesRequestStructure value) {
-        return new JAXBElement<ServiceCapabilitiesRequestStructure>(_VehicleMonitoringCapabilitiesRequest_QNAME, ServiceCapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<ServiceCapabilitiesRequest> createVehicleMonitoringCapabilitiesRequest(ServiceCapabilitiesRequest value) {
+        return new JAXBElement<ServiceCapabilitiesRequest>(_VehicleMonitoringCapabilitiesRequest_QNAME, ServiceCapabilitiesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleFeaturesDiscoveryRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleFeaturesDiscoveryRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleFeaturesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryRequest")
-    public JAXBElement<VehicleFeaturesDiscoveryRequestStructure> createVehicleFeaturesRequest(VehicleFeaturesDiscoveryRequestStructure value) {
-        return new JAXBElement<VehicleFeaturesDiscoveryRequestStructure>(_VehicleFeaturesRequest_QNAME, VehicleFeaturesDiscoveryRequestStructure.class, null, value);
+    public JAXBElement<VehicleFeaturesDiscoveryRequest> createVehicleFeaturesRequest(VehicleFeaturesDiscoveryRequest value) {
+        return new JAXBElement<VehicleFeaturesDiscoveryRequest>(_VehicleFeaturesRequest_QNAME, VehicleFeaturesDiscoveryRequest.class, null, value);
     }
 
     /**
@@ -5058,93 +5058,93 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ErrorCodeStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ErrorCode }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ErrorCode")
-    public JAXBElement<ErrorCodeStructure> createErrorCode(ErrorCodeStructure value) {
-        return new JAXBElement<ErrorCodeStructure>(_ErrorCode_QNAME, ErrorCodeStructure.class, null, value);
+    public JAXBElement<ErrorCode> createErrorCode(ErrorCode value) {
+        return new JAXBElement<ErrorCode>(_ErrorCode_QNAME, ErrorCode.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityMonitoringRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<FacilityMonitoringRequestStructure> createFacilityMonitoringRequest(FacilityMonitoringRequestStructure value) {
-        return new JAXBElement<FacilityMonitoringRequestStructure>(_FacilityMonitoringRequest_QNAME, FacilityMonitoringRequestStructure.class, null, value);
+    public JAXBElement<FacilityMonitoringRequest> createFacilityMonitoringRequest(FacilityMonitoringRequest value) {
+        return new JAXBElement<FacilityMonitoringRequest>(_FacilityMonitoringRequest_QNAME, FacilityMonitoringRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionMonitoringCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesRequest")
-    public JAXBElement<ServiceCapabilitiesRequestStructure> createConnectionMonitoringCapabilitiesRequest(ServiceCapabilitiesRequestStructure value) {
-        return new JAXBElement<ServiceCapabilitiesRequestStructure>(_ConnectionMonitoringCapabilitiesRequest_QNAME, ServiceCapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<ServiceCapabilitiesRequest> createConnectionMonitoringCapabilitiesRequest(ServiceCapabilitiesRequest value) {
+        return new JAXBElement<ServiceCapabilitiesRequest>(_ConnectionMonitoringCapabilitiesRequest_QNAME, ServiceCapabilitiesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionLinkRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionLinkRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionLinkRef")
-    public JAXBElement<ConnectionLinkRefStructure> createConnectionLinkRef(ConnectionLinkRefStructure value) {
-        return new JAXBElement<ConnectionLinkRefStructure>(_ConnectionLinkRef_QNAME, ConnectionLinkRefStructure.class, null, value);
+    public JAXBElement<ConnectionLinkRef> createConnectionLinkRef(ConnectionLinkRef value) {
+        return new JAXBElement<ConnectionLinkRef>(_ConnectionLinkRef_QNAME, ConnectionLinkRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ParticipantRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ParticipantRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "RequestorRef")
-    public JAXBElement<ParticipantRefStructure> createRequestorRef(ParticipantRefStructure value) {
-        return new JAXBElement<ParticipantRefStructure>(_RequestorRef_QNAME, ParticipantRefStructure.class, null, value);
+    public JAXBElement<ParticipantRef> createRequestorRef(ParticipantRef value) {
+        return new JAXBElement<ParticipantRef>(_RequestorRef_QNAME, ParticipantRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "EstimatedTimetableCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<EstimatedTimetableCapabilitiesResponseStructure> createEstimatedTimetableCapabilitiesResponse(EstimatedTimetableCapabilitiesResponseStructure value) {
-        return new JAXBElement<EstimatedTimetableCapabilitiesResponseStructure>(_EstimatedTimetableCapabilitiesResponse_QNAME, EstimatedTimetableCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<EstimatedTimetableCapabilitiesResponse> createEstimatedTimetableCapabilitiesResponse(EstimatedTimetableCapabilitiesResponse value) {
+        return new JAXBElement<EstimatedTimetableCapabilitiesResponse>(_EstimatedTimetableCapabilitiesResponse_QNAME, EstimatedTimetableCapabilitiesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopMonitoringCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<StopMonitoringCapabilitiesResponseStructure> createStopMonitoringCapabilitiesResponse(StopMonitoringCapabilitiesResponseStructure value) {
-        return new JAXBElement<StopMonitoringCapabilitiesResponseStructure>(_StopMonitoringCapabilitiesResponse_QNAME, StopMonitoringCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<StopMonitoringCapabilitiesResponse> createStopMonitoringCapabilitiesResponse(StopMonitoringCapabilitiesResponse value) {
+        return new JAXBElement<StopMonitoringCapabilitiesResponse>(_StopMonitoringCapabilitiesResponse_QNAME, StopMonitoringCapabilitiesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link JourneyPlaceRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link JourneyPlaceRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "OriginRef")
-    public JAXBElement<JourneyPlaceRefStructure> createOriginRef(JourneyPlaceRefStructure value) {
-        return new JAXBElement<JourneyPlaceRefStructure>(_OriginRef_QNAME, JourneyPlaceRefStructure.class, null, value);
+    public JAXBElement<JourneyPlaceRef> createOriginRef(JourneyPlaceRef value) {
+        return new JAXBElement<JourneyPlaceRef>(_OriginRef_QNAME, JourneyPlaceRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityMonitoringCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesRequest")
-    public JAXBElement<ServiceCapabilitiesRequestStructure> createFacilityMonitoringCapabilitiesRequest(ServiceCapabilitiesRequestStructure value) {
-        return new JAXBElement<ServiceCapabilitiesRequestStructure>(_FacilityMonitoringCapabilitiesRequest_QNAME, ServiceCapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<ServiceCapabilitiesRequest> createFacilityMonitoringCapabilitiesRequest(ServiceCapabilitiesRequest value) {
+        return new JAXBElement<ServiceCapabilitiesRequest>(_FacilityMonitoringCapabilitiesRequest_QNAME, ServiceCapabilitiesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TimetabledFeederArrivalStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TimetabledFeederArrival }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "TimetabledFeederArrival")
-    public JAXBElement<TimetabledFeederArrivalStructure> createTimetabledFeederArrival(TimetabledFeederArrivalStructure value) {
-        return new JAXBElement<TimetabledFeederArrivalStructure>(_TimetabledFeederArrival_QNAME, TimetabledFeederArrivalStructure.class, null, value);
+    public JAXBElement<TimetabledFeederArrival> createTimetabledFeederArrival(TimetabledFeederArrival value) {
+        return new JAXBElement<TimetabledFeederArrival>(_TimetabledFeederArrival_QNAME, TimetabledFeederArrival.class, null, value);
     }
 
     /**
@@ -5167,21 +5167,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "EstimatedTimetableCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesRequest")
-    public JAXBElement<ServiceCapabilitiesRequestStructure> createEstimatedTimetableCapabilitiesRequest(ServiceCapabilitiesRequestStructure value) {
-        return new JAXBElement<ServiceCapabilitiesRequestStructure>(_EstimatedTimetableCapabilitiesRequest_QNAME, ServiceCapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<ServiceCapabilitiesRequest> createEstimatedTimetableCapabilitiesRequest(ServiceCapabilitiesRequest value) {
+        return new JAXBElement<ServiceCapabilitiesRequest>(_EstimatedTimetableCapabilitiesRequest_QNAME, ServiceCapabilitiesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopPointsDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopPointsDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopPointsDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryDelivery")
-    public JAXBElement<StopPointsDeliveryStructure> createStopPointsDelivery(StopPointsDeliveryStructure value) {
-        return new JAXBElement<StopPointsDeliveryStructure>(_StopPointsDelivery_QNAME, StopPointsDeliveryStructure.class, null, value);
+    public JAXBElement<StopPointsDelivery> createStopPointsDelivery(StopPointsDelivery value) {
+        return new JAXBElement<StopPointsDelivery>(_StopPointsDelivery_QNAME, StopPointsDelivery.class, null, value);
     }
 
     /**
@@ -5212,21 +5212,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityMonitoringCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<FacilityMonitoringCapabilitiesResponseStructure> createFacilityMonitoringCapabilitiesResponse(FacilityMonitoringCapabilitiesResponseStructure value) {
-        return new JAXBElement<FacilityMonitoringCapabilitiesResponseStructure>(_FacilityMonitoringCapabilitiesResponse_QNAME, FacilityMonitoringCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<FacilityMonitoringCapabilitiesResponse> createFacilityMonitoringCapabilitiesResponse(FacilityMonitoringCapabilitiesResponse value) {
+        return new JAXBElement<FacilityMonitoringCapabilitiesResponse>(_FacilityMonitoringCapabilitiesResponse_QNAME, FacilityMonitoringCapabilitiesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DatedCallStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DatedCall }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DatedCall")
-    public JAXBElement<DatedCallStructure> createDatedCall(DatedCallStructure value) {
-        return new JAXBElement<DatedCallStructure>(_DatedCall_QNAME, DatedCallStructure.class, null, value);
+    public JAXBElement<DatedCall> createDatedCall(DatedCall value) {
+        return new JAXBElement<DatedCall>(_DatedCall_QNAME, DatedCall.class, null, value);
     }
 
     /**
@@ -5239,12 +5239,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceFeatureRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceFeatureRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ServiceFeatureRef")
-    public JAXBElement<ServiceFeatureRefStructure> createServiceFeatureRef(ServiceFeatureRefStructure value) {
-        return new JAXBElement<ServiceFeatureRefStructure>(_ServiceFeatureRef_QNAME, ServiceFeatureRefStructure.class, null, value);
+    public JAXBElement<ServiceFeatureRef> createServiceFeatureRef(ServiceFeatureRef value) {
+        return new JAXBElement<ServiceFeatureRef>(_ServiceFeatureRef_QNAME, ServiceFeatureRef.class, null, value);
     }
 
     /**
@@ -5257,30 +5257,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationFullRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationFullRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationFullRef")
-    public JAXBElement<SituationFullRefStructure> createSituationFullRef(SituationFullRefStructure value) {
-        return new JAXBElement<SituationFullRefStructure>(_SituationFullRef_QNAME, SituationFullRefStructure.class, null, value);
+    public JAXBElement<SituationFullRef> createSituationFullRef(SituationFullRef value) {
+        return new JAXBElement<SituationFullRef>(_SituationFullRef_QNAME, SituationFullRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionMonitoringRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionMonitoringRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<ConnectionMonitoringRequestStructure> createConnectionMonitoringRequest(ConnectionMonitoringRequestStructure value) {
-        return new JAXBElement<ConnectionMonitoringRequestStructure>(_ConnectionMonitoringRequest_QNAME, ConnectionMonitoringRequestStructure.class, null, value);
+    public JAXBElement<ConnectionMonitoringRequest> createConnectionMonitoringRequest(ConnectionMonitoringRequest value) {
+        return new JAXBElement<ConnectionMonitoringRequest>(_ConnectionMonitoringRequest_QNAME, ConnectionMonitoringRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "GeneralMessageCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesRequest")
-    public JAXBElement<ServiceCapabilitiesRequestStructure> createGeneralMessageCapabilitiesRequest(ServiceCapabilitiesRequestStructure value) {
-        return new JAXBElement<ServiceCapabilitiesRequestStructure>(_GeneralMessageCapabilitiesRequest_QNAME, ServiceCapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<ServiceCapabilitiesRequest> createGeneralMessageCapabilitiesRequest(ServiceCapabilitiesRequest value) {
+        return new JAXBElement<ServiceCapabilitiesRequest>(_GeneralMessageCapabilitiesRequest_QNAME, ServiceCapabilitiesRequest.class, null, value);
     }
 
     /**
@@ -5302,21 +5302,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InterchangeRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InterchangeRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "InterchangeRef")
-    public JAXBElement<InterchangeRefStructure> createInterchangeRef(InterchangeRefStructure value) {
-        return new JAXBElement<InterchangeRefStructure>(_InterchangeRef_QNAME, InterchangeRefStructure.class, null, value);
+    public JAXBElement<InterchangeRef> createInterchangeRef(InterchangeRef value) {
+        return new JAXBElement<InterchangeRef>(_InterchangeRef_QNAME, InterchangeRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationExchangeRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<SituationExchangeRequestStructure> createSituationExchangeRequest(SituationExchangeRequestStructure value) {
-        return new JAXBElement<SituationExchangeRequestStructure>(_SituationExchangeRequest_QNAME, SituationExchangeRequestStructure.class, null, value);
+    public JAXBElement<SituationExchangeRequest> createSituationExchangeRequest(SituationExchangeRequest value) {
+        return new JAXBElement<SituationExchangeRequest>(_SituationExchangeRequest_QNAME, SituationExchangeRequest.class, null, value);
     }
 
     /**
@@ -5329,48 +5329,48 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedCallStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedCall }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "EstimatedCall")
-    public JAXBElement<EstimatedCallStructure> createEstimatedCall(EstimatedCallStructure value) {
-        return new JAXBElement<EstimatedCallStructure>(_EstimatedCall_QNAME, EstimatedCallStructure.class, null, value);
+    public JAXBElement<EstimatedCall> createEstimatedCall(EstimatedCall value) {
+        return new JAXBElement<EstimatedCall>(_EstimatedCall_QNAME, EstimatedCall.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageStringStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageString }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "RouteName")
-    public JAXBElement<NaturalLanguageStringStructure> createRouteName(NaturalLanguageStringStructure value) {
-        return new JAXBElement<NaturalLanguageStringStructure>(_RouteName_QNAME, NaturalLanguageStringStructure.class, null, value);
+    public JAXBElement<NaturalLanguageString> createRouteName(NaturalLanguageString value) {
+        return new JAXBElement<NaturalLanguageString>(_RouteName_QNAME, NaturalLanguageString.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopMonitoringRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<StopMonitoringRequestStructure> createStopMonitoringRequest(StopMonitoringRequestStructure value) {
-        return new JAXBElement<StopMonitoringRequestStructure>(_StopMonitoringRequest_QNAME, StopMonitoringRequestStructure.class, null, value);
+    public JAXBElement<StopMonitoringRequest> createStopMonitoringRequest(StopMonitoringRequest value) {
+        return new JAXBElement<StopMonitoringRequest>(_StopMonitoringRequest_QNAME, StopMonitoringRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleRef")
-    public JAXBElement<VehicleRefStructure> createVehicleRef(VehicleRefStructure value) {
-        return new JAXBElement<VehicleRefStructure>(_VehicleRef_QNAME, VehicleRefStructure.class, null, value);
+    public JAXBElement<VehicleRef> createVehicleRef(VehicleRef value) {
+        return new JAXBElement<VehicleRef>(_VehicleRef_QNAME, VehicleRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DatedVehicleJourneyStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DatedVehicleJourney }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DatedVehicleJourney")
-    public JAXBElement<DatedVehicleJourneyStructure> createDatedVehicleJourney(DatedVehicleJourneyStructure value) {
-        return new JAXBElement<DatedVehicleJourneyStructure>(_DatedVehicleJourney_QNAME, DatedVehicleJourneyStructure.class, null, value);
+    public JAXBElement<DatedVehicleJourney> createDatedVehicleJourney(DatedVehicleJourney value) {
+        return new JAXBElement<DatedVehicleJourney>(_DatedVehicleJourney_QNAME, DatedVehicleJourney.class, null, value);
     }
 
     /**
@@ -5383,21 +5383,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Request }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractTrackedRequest")
-    public JAXBElement<RequestStructure> createAbstractTrackedRequest(RequestStructure value) {
-        return new JAXBElement<RequestStructure>(_AbstractTrackedRequest_QNAME, RequestStructure.class, null, value);
+    public JAXBElement<Request> createAbstractTrackedRequest(Request value) {
+        return new JAXBElement<Request>(_AbstractTrackedRequest_QNAME, Request.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageStringStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguageString }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DeparturePlatformName")
-    public JAXBElement<NaturalLanguageStringStructure> createDeparturePlatformName(NaturalLanguageStringStructure value) {
-        return new JAXBElement<NaturalLanguageStringStructure>(_DeparturePlatformName_QNAME, NaturalLanguageStringStructure.class, null, value);
+    public JAXBElement<NaturalLanguageString> createDeparturePlatformName(NaturalLanguageString value) {
+        return new JAXBElement<NaturalLanguageString>(_DeparturePlatformName_QNAME, NaturalLanguageString.class, null, value);
     }
 
     /**
@@ -5428,12 +5428,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionMonitoringServiceCapabilities")
-    public JAXBElement<ConnectionTimetableServiceCapabilitiesStructure> createConnectionMonitoringServiceCapabilities(ConnectionTimetableServiceCapabilitiesStructure value) {
-        return new JAXBElement<ConnectionTimetableServiceCapabilitiesStructure>(_ConnectionMonitoringServiceCapabilities_QNAME, ConnectionTimetableServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<ConnectionTimetableServiceCapabilities> createConnectionMonitoringServiceCapabilities(ConnectionTimetableServiceCapabilities value) {
+        return new JAXBElement<ConnectionTimetableServiceCapabilities>(_ConnectionMonitoringServiceCapabilities_QNAME, ConnectionTimetableServiceCapabilities.class, null, value);
     }
 
     /**
@@ -5446,39 +5446,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CheckStatusResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CheckStatusResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "CheckStatusResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractResponse")
-    public JAXBElement<CheckStatusResponseStructure> createCheckStatusResponse(CheckStatusResponseStructure value) {
-        return new JAXBElement<CheckStatusResponseStructure>(_CheckStatusResponse_QNAME, CheckStatusResponseStructure.class, null, value);
+    public JAXBElement<CheckStatusResponse> createCheckStatusResponse(CheckStatusResponse value) {
+        return new JAXBElement<CheckStatusResponse>(_CheckStatusResponse_QNAME, CheckStatusResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DirectionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Direction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "Direction")
-    public JAXBElement<DirectionStructure> createDirection(DirectionStructure value) {
-        return new JAXBElement<DirectionStructure>(_Direction_QNAME, DirectionStructure.class, null, value);
+    public JAXBElement<Direction> createDirection(Direction value) {
+        return new JAXBElement<Direction>(_Direction_QNAME, Direction.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToWebActionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToWebAction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "PublishToWebAction")
-    public JAXBElement<PublishToWebActionStructure> createPublishToWebAction(PublishToWebActionStructure value) {
-        return new JAXBElement<PublishToWebActionStructure>(_PublishToWebAction_QNAME, PublishToWebActionStructure.class, null, value);
+    public JAXBElement<PublishToWebAction> createPublishToWebAction(PublishToWebAction value) {
+        return new JAXBElement<PublishToWebAction>(_PublishToWebAction_QNAME, PublishToWebAction.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractServiceRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractServiceRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractServiceRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractRequest")
-    public JAXBElement<AbstractServiceRequestStructure> createAbstractServiceRequest(AbstractServiceRequestStructure value) {
-        return new JAXBElement<AbstractServiceRequestStructure>(_AbstractServiceRequest_QNAME, AbstractServiceRequestStructure.class, null, value);
+    public JAXBElement<AbstractServiceRequest> createAbstractServiceRequest(AbstractServiceRequest value) {
+        return new JAXBElement<AbstractServiceRequest>(_AbstractServiceRequest_QNAME, AbstractServiceRequest.class, null, value);
     }
 
     /**
@@ -5491,12 +5491,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleMonitoringCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<VehicleMonitoringCapabilitiesResponseStructure> createVehicleMonitoringCapabilitiesResponse(VehicleMonitoringCapabilitiesResponseStructure value) {
-        return new JAXBElement<VehicleMonitoringCapabilitiesResponseStructure>(_VehicleMonitoringCapabilitiesResponse_QNAME, VehicleMonitoringCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<VehicleMonitoringCapabilitiesResponse> createVehicleMonitoringCapabilitiesResponse(VehicleMonitoringCapabilitiesResponse value) {
+        return new JAXBElement<VehicleMonitoringCapabilitiesResponse>(_VehicleMonitoringCapabilitiesResponse_QNAME, VehicleMonitoringCapabilitiesResponse.class, null, value);
     }
 
     /**
@@ -5510,21 +5510,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopTimetableCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<StopTimetableCapabilitiesResponseStructure> createStopTimetableCapabilitiesResponse(StopTimetableCapabilitiesResponseStructure value) {
-        return new JAXBElement<StopTimetableCapabilitiesResponseStructure>(_StopTimetableCapabilitiesResponse_QNAME, StopTimetableCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<StopTimetableCapabilitiesResponse> createStopTimetableCapabilitiesResponse(StopTimetableCapabilitiesResponse value) {
+        return new JAXBElement<StopTimetableCapabilitiesResponse>(_StopTimetableCapabilitiesResponse_QNAME, StopTimetableCapabilitiesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToTvActionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToTvAction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "PublishToTvAction")
-    public JAXBElement<PublishToTvActionStructure> createPublishToTvAction(PublishToTvActionStructure value) {
-        return new JAXBElement<PublishToTvActionStructure>(_PublishToTvAction_QNAME, PublishToTvActionStructure.class, null, value);
+    public JAXBElement<PublishToTvAction> createPublishToTvAction(PublishToTvAction value) {
+        return new JAXBElement<PublishToTvAction>(_PublishToTvAction_QNAME, PublishToTvAction.class, null, value);
     }
 
     /**
@@ -5537,21 +5537,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ErrorConditionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ErrorCondition }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ErrorConditionElement")
-    public JAXBElement<ErrorConditionStructure> createErrorConditionElement(ErrorConditionStructure value) {
-        return new JAXBElement<ErrorConditionStructure>(_ErrorConditionElement_QNAME, ErrorConditionStructure.class, null, value);
+    public JAXBElement<ErrorCondition> createErrorConditionElement(ErrorCondition value) {
+        return new JAXBElement<ErrorCondition>(_ErrorConditionElement_QNAME, ErrorCondition.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationSimpleRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationSimpleRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationSimpleRef")
-    public JAXBElement<SituationSimpleRefStructure> createSituationSimpleRef(SituationSimpleRefStructure value) {
-        return new JAXBElement<SituationSimpleRefStructure>(_SituationSimpleRef_QNAME, SituationSimpleRefStructure.class, null, value);
+    public JAXBElement<SituationSimpleRef> createSituationSimpleRef(SituationSimpleRef value) {
+        return new JAXBElement<SituationSimpleRef>(_SituationSimpleRef_QNAME, SituationSimpleRef.class, null, value);
     }
 
     /**
@@ -5564,30 +5564,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryRequest")
-    public JAXBElement<FacilityRequestStructure> createFacilityRequest(FacilityRequestStructure value) {
-        return new JAXBElement<FacilityRequestStructure>(_FacilityRequest_QNAME, FacilityRequestStructure.class, null, value);
+    public JAXBElement<FacilityRequest> createFacilityRequest(FacilityRequest value) {
+        return new JAXBElement<FacilityRequest>(_FacilityRequest_QNAME, FacilityRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityConditionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityCondition }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityConditionElement")
-    public JAXBElement<FacilityConditionStructure> createFacilityConditionElement(FacilityConditionStructure value) {
-        return new JAXBElement<FacilityConditionStructure>(_FacilityConditionElement_QNAME, FacilityConditionStructure.class, null, value);
+    public JAXBElement<FacilityCondition> createFacilityConditionElement(FacilityCondition value) {
+        return new JAXBElement<FacilityCondition>(_FacilityConditionElement_QNAME, FacilityCondition.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityMonitoringServiceCapabilities")
-    public JAXBElement<FacilityMonitoringServiceCapabilitiesStructure> createFacilityMonitoringServiceCapabilities(FacilityMonitoringServiceCapabilitiesStructure value) {
-        return new JAXBElement<FacilityMonitoringServiceCapabilitiesStructure>(_FacilityMonitoringServiceCapabilities_QNAME, FacilityMonitoringServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<FacilityMonitoringServiceCapabilities> createFacilityMonitoringServiceCapabilities(FacilityMonitoringServiceCapabilities value) {
+        return new JAXBElement<FacilityMonitoringServiceCapabilities>(_FacilityMonitoringServiceCapabilities_QNAME, FacilityMonitoringServiceCapabilities.class, null, value);
     }
 
     /**
@@ -5609,30 +5609,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopTimetableDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopTimetableDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<StopTimetableDeliveryStructure> createStopTimetableDelivery(StopTimetableDeliveryStructure value) {
-        return new JAXBElement<StopTimetableDeliveryStructure>(_StopTimetableDelivery_QNAME, StopTimetableDeliveryStructure.class, null, value);
+    public JAXBElement<StopTimetableDelivery> createStopTimetableDelivery(StopTimetableDelivery value) {
+        return new JAXBElement<StopTimetableDelivery>(_StopTimetableDelivery_QNAME, StopTimetableDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link JourneyPlaceRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link JourneyPlaceRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ViaRef")
-    public JAXBElement<JourneyPlaceRefStructure> createViaRef(JourneyPlaceRefStructure value) {
-        return new JAXBElement<JourneyPlaceRefStructure>(_ViaRef_QNAME, JourneyPlaceRefStructure.class, null, value);
+    public JAXBElement<JourneyPlaceRef> createViaRef(JourneyPlaceRef value) {
+        return new JAXBElement<JourneyPlaceRef>(_ViaRef_QNAME, JourneyPlaceRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LinesDiscoveryRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LinesDiscoveryRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "LinesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryRequest")
-    public JAXBElement<LinesDiscoveryRequestStructure> createLinesRequest(LinesDiscoveryRequestStructure value) {
-        return new JAXBElement<LinesDiscoveryRequestStructure>(_LinesRequest_QNAME, LinesDiscoveryRequestStructure.class, null, value);
+    public JAXBElement<LinesDiscoveryRequest> createLinesRequest(LinesDiscoveryRequest value) {
+        return new JAXBElement<LinesDiscoveryRequest>(_LinesRequest_QNAME, LinesDiscoveryRequest.class, null, value);
     }
 
     /**
@@ -5663,21 +5663,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DestinationRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DestinationRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DestinationRef")
-    public JAXBElement<DestinationRefStructure> createDestinationRef(DestinationRefStructure value) {
-        return new JAXBElement<DestinationRefStructure>(_DestinationRef_QNAME, DestinationRefStructure.class, null, value);
+    public JAXBElement<DestinationRef> createDestinationRef(DestinationRef value) {
+        return new JAXBElement<DestinationRef>(_DestinationRef_QNAME, DestinationRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DataSupplyRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DataSupplyRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DataSupplyRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractRequest")
-    public JAXBElement<DataSupplyRequestStructure> createDataSupplyRequest(DataSupplyRequestStructure value) {
-        return new JAXBElement<DataSupplyRequestStructure>(_DataSupplyRequest_QNAME, DataSupplyRequestStructure.class, null, value);
+    public JAXBElement<DataSupplyRequest> createDataSupplyRequest(DataSupplyRequest value) {
+        return new JAXBElement<DataSupplyRequest>(_DataSupplyRequest_QNAME, DataSupplyRequest.class, null, value);
     }
 
     /**
@@ -5727,48 +5727,48 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationExchangeSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<SituationExchangeSubscriptionStructure> createSituationExchangeSubscriptionRequest(SituationExchangeSubscriptionStructure value) {
-        return new JAXBElement<SituationExchangeSubscriptionStructure>(_SituationExchangeSubscriptionRequest_QNAME, SituationExchangeSubscriptionStructure.class, null, value);
+    public JAXBElement<SituationExchangeSubscription> createSituationExchangeSubscriptionRequest(SituationExchangeSubscription value) {
+        return new JAXBElement<SituationExchangeSubscription>(_SituationExchangeSubscriptionRequest_QNAME, SituationExchangeSubscription.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceNotAvailableErrorStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceNotAvailableError }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ServiceNotAvailableError", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ErrorCode")
-    public JAXBElement<ServiceNotAvailableErrorStructure> createServiceNotAvailableError(ServiceNotAvailableErrorStructure value) {
-        return new JAXBElement<ServiceNotAvailableErrorStructure>(_ServiceNotAvailableError_QNAME, ServiceNotAvailableErrorStructure.class, null, value);
+    public JAXBElement<ServiceNotAvailableError> createServiceNotAvailableError(ServiceNotAvailableError value) {
+        return new JAXBElement<ServiceNotAvailableError>(_ServiceNotAvailableError_QNAME, ServiceNotAvailableError.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ProductionTimetableRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProductionTimetableRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ProductionTimetableRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<ProductionTimetableRequestStructure> createProductionTimetableRequest(ProductionTimetableRequestStructure value) {
-        return new JAXBElement<ProductionTimetableRequestStructure>(_ProductionTimetableRequest_QNAME, ProductionTimetableRequestStructure.class, null, value);
+    public JAXBElement<ProductionTimetableRequest> createProductionTimetableRequest(ProductionTimetableRequest value) {
+        return new JAXBElement<ProductionTimetableRequest>(_ProductionTimetableRequest_QNAME, ProductionTimetableRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringMultipleRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringMultipleRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopMonitoringMultipleRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<StopMonitoringMultipleRequestStructure> createStopMonitoringMultipleRequest(StopMonitoringMultipleRequestStructure value) {
-        return new JAXBElement<StopMonitoringMultipleRequestStructure>(_StopMonitoringMultipleRequest_QNAME, StopMonitoringMultipleRequestStructure.class, null, value);
+    public JAXBElement<StopMonitoringMultipleRequest> createStopMonitoringMultipleRequest(StopMonitoringMultipleRequest value) {
+        return new JAXBElement<StopMonitoringMultipleRequest>(_StopMonitoringMultipleRequest_QNAME, StopMonitoringMultipleRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityMonitoringSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<FacilityMonitoringSubscriptionStructure> createFacilityMonitoringSubscriptionRequest(FacilityMonitoringSubscriptionStructure value) {
-        return new JAXBElement<FacilityMonitoringSubscriptionStructure>(_FacilityMonitoringSubscriptionRequest_QNAME, FacilityMonitoringSubscriptionStructure.class, null, value);
+    public JAXBElement<FacilityMonitoringSubscription> createFacilityMonitoringSubscriptionRequest(FacilityMonitoringSubscription value) {
+        return new JAXBElement<FacilityMonitoringSubscription>(_FacilityMonitoringSubscriptionRequest_QNAME, FacilityMonitoringSubscription.class, null, value);
     }
 
     /**
@@ -5781,21 +5781,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HeartbeatNotificationStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link HeartbeatNotification }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "HeartbeatNotification", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ProducerRequest")
-    public JAXBElement<HeartbeatNotificationStructure> createHeartbeatNotification(HeartbeatNotificationStructure value) {
-        return new JAXBElement<HeartbeatNotificationStructure>(_HeartbeatNotification_QNAME, HeartbeatNotificationStructure.class, null, value);
+    public JAXBElement<HeartbeatNotification> createHeartbeatNotification(HeartbeatNotification value) {
+        return new JAXBElement<HeartbeatNotification>(_HeartbeatNotification_QNAME, HeartbeatNotification.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractServiceCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractServiceCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractFunctionalServiceCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractResponse")
-    public JAXBElement<AbstractServiceCapabilitiesResponseStructure> createAbstractFunctionalServiceCapabilitiesResponse(AbstractServiceCapabilitiesResponseStructure value) {
-        return new JAXBElement<AbstractServiceCapabilitiesResponseStructure>(_AbstractFunctionalServiceCapabilitiesResponse_QNAME, AbstractServiceCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<AbstractServiceCapabilitiesResponse> createAbstractFunctionalServiceCapabilitiesResponse(AbstractServiceCapabilitiesResponse value) {
+        return new JAXBElement<AbstractServiceCapabilitiesResponse>(_AbstractFunctionalServiceCapabilitiesResponse_QNAME, AbstractServiceCapabilitiesResponse.class, null, value);
     }
 
     /**
@@ -5809,30 +5809,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceCapabilitiesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionTimetableCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesRequest")
-    public JAXBElement<ServiceCapabilitiesRequestStructure> createConnectionTimetableCapabilitiesRequest(ServiceCapabilitiesRequestStructure value) {
-        return new JAXBElement<ServiceCapabilitiesRequestStructure>(_ConnectionTimetableCapabilitiesRequest_QNAME, ServiceCapabilitiesRequestStructure.class, null, value);
+    public JAXBElement<ServiceCapabilitiesRequest> createConnectionTimetableCapabilitiesRequest(ServiceCapabilitiesRequest value) {
+        return new JAXBElement<ServiceCapabilitiesRequest>(_ConnectionTimetableCapabilitiesRequest_QNAME, ServiceCapabilitiesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "EstimatedTimetableSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<EstimatedTimetableSubscriptionStructure> createEstimatedTimetableSubscriptionRequest(EstimatedTimetableSubscriptionStructure value) {
-        return new JAXBElement<EstimatedTimetableSubscriptionStructure>(_EstimatedTimetableSubscriptionRequest_QNAME, EstimatedTimetableSubscriptionStructure.class, null, value);
+    public JAXBElement<EstimatedTimetableSubscription> createEstimatedTimetableSubscriptionRequest(EstimatedTimetableSubscription value) {
+        return new JAXBElement<EstimatedTimetableSubscription>(_EstimatedTimetableSubscriptionRequest_QNAME, EstimatedTimetableSubscription.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguagePlaceNameStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NaturalLanguagePlaceName }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ViaName")
-    public JAXBElement<NaturalLanguagePlaceNameStructure> createViaName(NaturalLanguagePlaceNameStructure value) {
-        return new JAXBElement<NaturalLanguagePlaceNameStructure>(_ViaName_QNAME, NaturalLanguagePlaceNameStructure.class, null, value);
+    public JAXBElement<NaturalLanguagePlaceName> createViaName(NaturalLanguagePlaceName value) {
+        return new JAXBElement<NaturalLanguagePlaceName>(_ViaName_QNAME, NaturalLanguagePlaceName.class, null, value);
     }
 
     /**
@@ -5845,12 +5845,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UnknownSubscriptionErrorStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UnknownSubscriptionError }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "UnknownSubscriptionError", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ErrorCode")
-    public JAXBElement<UnknownSubscriptionErrorStructure> createUnknownSubscriptionError(UnknownSubscriptionErrorStructure value) {
-        return new JAXBElement<UnknownSubscriptionErrorStructure>(_UnknownSubscriptionError_QNAME, UnknownSubscriptionErrorStructure.class, null, value);
+    public JAXBElement<UnknownSubscriptionError> createUnknownSubscriptionError(UnknownSubscriptionError value) {
+        return new JAXBElement<UnknownSubscriptionError>(_UnknownSubscriptionError_QNAME, UnknownSubscriptionError.class, null, value);
     }
 
     /**
@@ -5863,21 +5863,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InfoChannelStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InfoChannel }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "InfoChannel")
-    public JAXBElement<InfoChannelStructure> createInfoChannel(InfoChannelStructure value) {
-        return new JAXBElement<InfoChannelStructure>(_InfoChannel_QNAME, InfoChannelStructure.class, null, value);
+    public JAXBElement<InfoChannel> createInfoChannel(InfoChannel value) {
+        return new JAXBElement<InfoChannel>(_InfoChannel_QNAME, InfoChannel.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "GeneralMessageSubscriptionRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<GeneralMessageSubscriptionStructure> createGeneralMessageSubscriptionRequest(GeneralMessageSubscriptionStructure value) {
-        return new JAXBElement<GeneralMessageSubscriptionStructure>(_GeneralMessageSubscriptionRequest_QNAME, GeneralMessageSubscriptionStructure.class, null, value);
+    public JAXBElement<GeneralMessageSubscription> createGeneralMessageSubscriptionRequest(GeneralMessageSubscription value) {
+        return new JAXBElement<GeneralMessageSubscription>(_GeneralMessageSubscriptionRequest_QNAME, GeneralMessageSubscription.class, null, value);
     }
 
     /**
@@ -5890,12 +5890,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ProductionTimetableCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProductionTimetableCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ProductionTimetableCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<ProductionTimetableCapabilitiesResponseStructure> createProductionTimetableCapabilitiesResponse(ProductionTimetableCapabilitiesResponseStructure value) {
-        return new JAXBElement<ProductionTimetableCapabilitiesResponseStructure>(_ProductionTimetableCapabilitiesResponse_QNAME, ProductionTimetableCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<ProductionTimetableCapabilitiesResponse> createProductionTimetableCapabilitiesResponse(ProductionTimetableCapabilitiesResponse value) {
+        return new JAXBElement<ProductionTimetableCapabilitiesResponse>(_ProductionTimetableCapabilitiesResponse_QNAME, ProductionTimetableCapabilitiesResponse.class, null, value);
     }
 
     /**
@@ -5908,21 +5908,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ProductionTimetableDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProductionTimetableDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ProductionTimetableDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<ProductionTimetableDeliveryStructure> createProductionTimetableDelivery(ProductionTimetableDeliveryStructure value) {
-        return new JAXBElement<ProductionTimetableDeliveryStructure>(_ProductionTimetableDelivery_QNAME, ProductionTimetableDeliveryStructure.class, null, value);
+    public JAXBElement<ProductionTimetableDelivery> createProductionTimetableDelivery(ProductionTimetableDelivery value) {
+        return new JAXBElement<ProductionTimetableDelivery>(_ProductionTimetableDelivery_QNAME, ProductionTimetableDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InfoChannelDiscoveryRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InfoChannelDiscoveryRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "InfoChannelRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryRequest")
-    public JAXBElement<InfoChannelDiscoveryRequestStructure> createInfoChannelRequest(InfoChannelDiscoveryRequestStructure value) {
-        return new JAXBElement<InfoChannelDiscoveryRequestStructure>(_InfoChannelRequest_QNAME, InfoChannelDiscoveryRequestStructure.class, null, value);
+    public JAXBElement<InfoChannelDiscoveryRequest> createInfoChannelRequest(InfoChannelDiscoveryRequest value) {
+        return new JAXBElement<InfoChannelDiscoveryRequest>(_InfoChannelRequest_QNAME, InfoChannelDiscoveryRequest.class, null, value);
     }
 
     /**
@@ -5935,39 +5935,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DataReadyResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DataReadyResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DataReadyAcknowledgement", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractResponse")
-    public JAXBElement<DataReadyResponseStructure> createDataReadyAcknowledgement(DataReadyResponseStructure value) {
-        return new JAXBElement<DataReadyResponseStructure>(_DataReadyAcknowledgement_QNAME, DataReadyResponseStructure.class, null, value);
+    public JAXBElement<DataReadyResponse> createDataReadyAcknowledgement(DataReadyResponse value) {
+        return new JAXBElement<DataReadyResponse>(_DataReadyAcknowledgement_QNAME, DataReadyResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PtSituationElementStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PtSituationElement }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "PtSituationElement")
-    public JAXBElement<PtSituationElementStructure> createPtSituationElement(PtSituationElementStructure value) {
-        return new JAXBElement<PtSituationElementStructure>(_PtSituationElement_QNAME, PtSituationElementStructure.class, null, value);
+    public JAXBElement<PtSituationElement> createPtSituationElement(PtSituationElement value) {
+        return new JAXBElement<PtSituationElement>(_PtSituationElement_QNAME, PtSituationElement.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StatusResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StatusResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ResponseStatus")
-    public JAXBElement<StatusResponseStructure> createResponseStatus(StatusResponseStructure value) {
-        return new JAXBElement<StatusResponseStructure>(_ResponseStatus_QNAME, StatusResponseStructure.class, null, value);
+    public JAXBElement<StatusResponse> createResponseStatus(StatusResponse value) {
+        return new JAXBElement<StatusResponse>(_ResponseStatus_QNAME, StatusResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionTimetableServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ConnectionTimetableServiceCapabilities")
-    public JAXBElement<ConnectionTimetableServiceCapabilitiesStructure> createConnectionTimetableServiceCapabilities(ConnectionTimetableServiceCapabilitiesStructure value) {
-        return new JAXBElement<ConnectionTimetableServiceCapabilitiesStructure>(_ConnectionTimetableServiceCapabilities_QNAME, ConnectionTimetableServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<ConnectionTimetableServiceCapabilities> createConnectionTimetableServiceCapabilities(ConnectionTimetableServiceCapabilities value) {
+        return new JAXBElement<ConnectionTimetableServiceCapabilities>(_ConnectionTimetableServiceCapabilities_QNAME, ConnectionTimetableServiceCapabilities.class, null, value);
     }
 
     /**
@@ -5980,12 +5980,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleJourneyRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleJourneyRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleJourneyRef")
-    public JAXBElement<VehicleJourneyRefStructure> createVehicleJourneyRef(VehicleJourneyRefStructure value) {
-        return new JAXBElement<VehicleJourneyRefStructure>(_VehicleJourneyRef_QNAME, VehicleJourneyRefStructure.class, null, value);
+    public JAXBElement<VehicleJourneyRef> createVehicleJourneyRef(VehicleJourneyRef value) {
+        return new JAXBElement<VehicleJourneyRef>(_VehicleJourneyRef_QNAME, VehicleJourneyRef.class, null, value);
     }
 
     /**
@@ -5998,30 +5998,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AnnotatedDestinationStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AnnotatedDestination }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "Destination")
-    public JAXBElement<AnnotatedDestinationStructure> createDestination(AnnotatedDestinationStructure value) {
-        return new JAXBElement<AnnotatedDestinationStructure>(_Destination_QNAME, AnnotatedDestinationStructure.class, null, value);
+    public JAXBElement<AnnotatedDestination> createDestination(AnnotatedDestination value) {
+        return new JAXBElement<AnnotatedDestination>(_Destination_QNAME, AnnotatedDestination.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityRef")
-    public JAXBElement<FacilityRefStructure> createFacilityRef(FacilityRefStructure value) {
-        return new JAXBElement<FacilityRefStructure>(_FacilityRef_QNAME, FacilityRefStructure.class, null, value);
+    public JAXBElement<FacilityRef> createFacilityRef(FacilityRef value) {
+        return new JAXBElement<FacilityRef>(_FacilityRef_QNAME, FacilityRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopMonitoringDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "StopMonitoringDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceDelivery")
-    public JAXBElement<StopMonitoringDeliveryStructure> createStopMonitoringDelivery(StopMonitoringDeliveryStructure value) {
-        return new JAXBElement<StopMonitoringDeliveryStructure>(_StopMonitoringDelivery_QNAME, StopMonitoringDeliveryStructure.class, null, value);
+    public JAXBElement<StopMonitoringDelivery> createStopMonitoringDelivery(StopMonitoringDelivery value) {
+        return new JAXBElement<StopMonitoringDelivery>(_StopMonitoringDelivery_QNAME, StopMonitoringDelivery.class, null, value);
     }
 
     /**
@@ -6034,30 +6034,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleMonitoringRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "VehicleMonitoringRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceRequest")
-    public JAXBElement<VehicleMonitoringRequestStructure> createVehicleMonitoringRequest(VehicleMonitoringRequestStructure value) {
-        return new JAXBElement<VehicleMonitoringRequestStructure>(_VehicleMonitoringRequest_QNAME, VehicleMonitoringRequestStructure.class, null, value);
+    public JAXBElement<VehicleMonitoringRequest> createVehicleMonitoringRequest(VehicleMonitoringRequest value) {
+        return new JAXBElement<VehicleMonitoringRequest>(_VehicleMonitoringRequest_QNAME, VehicleMonitoringRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceFeaturesDiscoveryRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceFeaturesDiscoveryRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "ServiceFeaturesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractDiscoveryRequest")
-    public JAXBElement<ServiceFeaturesDiscoveryRequestStructure> createServiceFeaturesRequest(ServiceFeaturesDiscoveryRequestStructure value) {
-        return new JAXBElement<ServiceFeaturesDiscoveryRequestStructure>(_ServiceFeaturesRequest_QNAME, ServiceFeaturesDiscoveryRequestStructure.class, null, value);
+    public JAXBElement<ServiceFeaturesDiscoveryRequest> createServiceFeaturesRequest(ServiceFeaturesDiscoveryRequest value) {
+        return new JAXBElement<ServiceFeaturesDiscoveryRequest>(_ServiceFeaturesRequest_QNAME, ServiceFeaturesDiscoveryRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "GeneralMessageServiceCapabilities")
-    public JAXBElement<GeneralMessageServiceCapabilitiesStructure> createGeneralMessageServiceCapabilities(GeneralMessageServiceCapabilitiesStructure value) {
-        return new JAXBElement<GeneralMessageServiceCapabilitiesStructure>(_GeneralMessageServiceCapabilities_QNAME, GeneralMessageServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<GeneralMessageServiceCapabilities> createGeneralMessageServiceCapabilities(GeneralMessageServiceCapabilities value) {
+        return new JAXBElement<GeneralMessageServiceCapabilities>(_GeneralMessageServiceCapabilities_QNAME, GeneralMessageServiceCapabilities.class, null, value);
     }
 
     /**
@@ -6070,12 +6070,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DataReadyRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DataReadyRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "DataReadyNotification", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ProducerRequest")
-    public JAXBElement<DataReadyRequestStructure> createDataReadyNotification(DataReadyRequestStructure value) {
-        return new JAXBElement<DataReadyRequestStructure>(_DataReadyNotification_QNAME, DataReadyRequestStructure.class, null, value);
+    public JAXBElement<DataReadyRequest> createDataReadyNotification(DataReadyRequest value) {
+        return new JAXBElement<DataReadyRequest>(_DataReadyNotification_QNAME, DataReadyRequest.class, null, value);
     }
 
     /**
@@ -6088,21 +6088,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToDisplayActionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PublishToDisplayAction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "PublishToDisplayAction")
-    public JAXBElement<PublishToDisplayActionStructure> createPublishToDisplayAction(PublishToDisplayActionStructure value) {
-        return new JAXBElement<PublishToDisplayActionStructure>(_PublishToDisplayAction_QNAME, PublishToDisplayActionStructure.class, null, value);
+    public JAXBElement<PublishToDisplayAction> createPublishToDisplayAction(PublishToDisplayAction value) {
+        return new JAXBElement<PublishToDisplayAction>(_PublishToDisplayAction_QNAME, PublishToDisplayAction.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractFunctionalServiceSubscriptionRequest")
-    public JAXBElement<AbstractSubscriptionStructure> createAbstractFunctionalServiceSubscriptionRequest(AbstractSubscriptionStructure value) {
-        return new JAXBElement<AbstractSubscriptionStructure>(_AbstractFunctionalServiceSubscriptionRequest_QNAME, AbstractSubscriptionStructure.class, null, value);
+    public JAXBElement<AbstractSubscription> createAbstractFunctionalServiceSubscriptionRequest(AbstractSubscription value) {
+        return new JAXBElement<AbstractSubscription>(_AbstractFunctionalServiceSubscriptionRequest_QNAME, AbstractSubscription.class, null, value);
     }
 
     /**
@@ -6115,30 +6115,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractServiceRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractServiceRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractFunctionalServiceCapabilitiesRequest", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractServiceRequest")
-    public JAXBElement<AbstractServiceRequestStructure> createAbstractFunctionalServiceCapabilitiesRequest(AbstractServiceRequestStructure value) {
-        return new JAXBElement<AbstractServiceRequestStructure>(_AbstractFunctionalServiceCapabilitiesRequest_QNAME, AbstractServiceRequestStructure.class, null, value);
+    public JAXBElement<AbstractServiceRequest> createAbstractFunctionalServiceCapabilitiesRequest(AbstractServiceRequest value) {
+        return new JAXBElement<AbstractServiceRequest>(_AbstractFunctionalServiceCapabilitiesRequest_QNAME, AbstractServiceRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TargetedCallStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TargetedCall }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "TargetedCall")
-    public JAXBElement<TargetedCallStructure> createTargetedCall(TargetedCallStructure value) {
-        return new JAXBElement<TargetedCallStructure>(_TargetedCall_QNAME, TargetedCallStructure.class, null, value);
+    public JAXBElement<TargetedCall> createTargetedCall(TargetedCall value) {
+        return new JAXBElement<TargetedCall>(_TargetedCall_QNAME, TargetedCall.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractServiceDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractServiceDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractFunctionalServiceDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractResponse")
-    public JAXBElement<AbstractServiceDeliveryStructure> createAbstractFunctionalServiceDelivery(AbstractServiceDeliveryStructure value) {
-        return new JAXBElement<AbstractServiceDeliveryStructure>(_AbstractFunctionalServiceDelivery_QNAME, AbstractServiceDeliveryStructure.class, null, value);
+    public JAXBElement<AbstractServiceDelivery> createAbstractFunctionalServiceDelivery(AbstractServiceDelivery value) {
+        return new JAXBElement<AbstractServiceDelivery>(_AbstractFunctionalServiceDelivery_QNAME, AbstractServiceDelivery.class, null, value);
     }
 
     /**
@@ -6151,66 +6151,66 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "SituationExchangeCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<SituationExchangeCapabilitiesResponseStructure> createSituationExchangeCapabilitiesResponse(SituationExchangeCapabilitiesResponseStructure value) {
-        return new JAXBElement<SituationExchangeCapabilitiesResponseStructure>(_SituationExchangeCapabilitiesResponse_QNAME, SituationExchangeCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<SituationExchangeCapabilitiesResponse> createSituationExchangeCapabilitiesResponse(SituationExchangeCapabilitiesResponse value) {
+        return new JAXBElement<SituationExchangeCapabilitiesResponse>(_SituationExchangeCapabilitiesResponse_QNAME, SituationExchangeCapabilitiesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NoInfoForTopicErrorStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NoInfoForTopicError }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "NoInfoForTopicError", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ErrorCode")
-    public JAXBElement<NoInfoForTopicErrorStructure> createNoInfoForTopicError(NoInfoForTopicErrorStructure value) {
-        return new JAXBElement<NoInfoForTopicErrorStructure>(_NoInfoForTopicError_QNAME, NoInfoForTopicErrorStructure.class, null, value);
+    public JAXBElement<NoInfoForTopicError> createNoInfoForTopicError(NoInfoForTopicError value) {
+        return new JAXBElement<NoInfoForTopicError>(_NoInfoForTopicError_QNAME, NoInfoForTopicError.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UnknownSubscriberErrorStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UnknownSubscriberError }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "UnknownSubscriberError", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "ErrorCode")
-    public JAXBElement<UnknownSubscriberErrorStructure> createUnknownSubscriberError(UnknownSubscriberErrorStructure value) {
-        return new JAXBElement<UnknownSubscriberErrorStructure>(_UnknownSubscriberError_QNAME, UnknownSubscriberErrorStructure.class, null, value);
+    public JAXBElement<UnknownSubscriberError> createUnknownSubscriberError(UnknownSubscriberError value) {
+        return new JAXBElement<UnknownSubscriberError>(_UnknownSubscriberError_QNAME, UnknownSubscriberError.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NotifyUserActionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NotifyUserAction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "NotifyUserAction")
-    public JAXBElement<NotifyUserActionStructure> createNotifyUserAction(NotifyUserActionStructure value) {
-        return new JAXBElement<NotifyUserActionStructure>(_NotifyUserAction_QNAME, NotifyUserActionStructure.class, null, value);
+    public JAXBElement<NotifyUserAction> createNotifyUserAction(NotifyUserAction value) {
+        return new JAXBElement<NotifyUserAction>(_NotifyUserAction_QNAME, NotifyUserAction.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityChangeStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityChange }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "FacilityChangeElement")
-    public JAXBElement<FacilityChangeStructure> createFacilityChangeElement(FacilityChangeStructure value) {
-        return new JAXBElement<FacilityChangeStructure>(_FacilityChangeElement_QNAME, FacilityChangeStructure.class, null, value);
+    public JAXBElement<FacilityChange> createFacilityChangeElement(FacilityChange value) {
+        return new JAXBElement<FacilityChange>(_FacilityChangeElement_QNAME, FacilityChange.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NotifyByEmailActionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NotifyByEmailAction }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "NotifyByEmailAction")
-    public JAXBElement<NotifyByEmailActionStructure> createNotifyByEmailAction(NotifyByEmailActionStructure value) {
-        return new JAXBElement<NotifyByEmailActionStructure>(_NotifyByEmailAction_QNAME, NotifyByEmailActionStructure.class, null, value);
+    public JAXBElement<NotifyByEmailAction> createNotifyByEmailAction(NotifyByEmailAction value) {
+        return new JAXBElement<NotifyByEmailAction>(_NotifyByEmailAction_QNAME, NotifyByEmailAction.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableServiceCapabilitiesStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EstimatedTimetableServiceCapabilities }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "EstimatedTimetableServiceCapabilities")
-    public JAXBElement<EstimatedTimetableServiceCapabilitiesStructure> createEstimatedTimetableServiceCapabilities(EstimatedTimetableServiceCapabilitiesStructure value) {
-        return new JAXBElement<EstimatedTimetableServiceCapabilitiesStructure>(_EstimatedTimetableServiceCapabilities_QNAME, EstimatedTimetableServiceCapabilitiesStructure.class, null, value);
+    public JAXBElement<EstimatedTimetableServiceCapabilities> createEstimatedTimetableServiceCapabilities(EstimatedTimetableServiceCapabilities value) {
+        return new JAXBElement<EstimatedTimetableServiceCapabilities>(_EstimatedTimetableServiceCapabilities_QNAME, EstimatedTimetableServiceCapabilities.class, null, value);
     }
 
     /**
@@ -6232,12 +6232,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageCapabilitiesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GeneralMessageCapabilitiesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "GeneralMessageCapabilitiesResponse", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractFunctionalServiceCapabilitiesResponse")
-    public JAXBElement<GeneralMessageCapabilitiesResponseStructure> createGeneralMessageCapabilitiesResponse(GeneralMessageCapabilitiesResponseStructure value) {
-        return new JAXBElement<GeneralMessageCapabilitiesResponseStructure>(_GeneralMessageCapabilitiesResponse_QNAME, GeneralMessageCapabilitiesResponseStructure.class, null, value);
+    public JAXBElement<GeneralMessageCapabilitiesResponse> createGeneralMessageCapabilitiesResponse(GeneralMessageCapabilitiesResponse value) {
+        return new JAXBElement<GeneralMessageCapabilitiesResponse>(_GeneralMessageCapabilitiesResponse_QNAME, GeneralMessageCapabilitiesResponse.class, null, value);
     }
 
     /**
@@ -6250,12 +6250,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractDiscoveryDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractDiscoveryDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.siri.org.uk/siri", name = "AbstractDiscoveryDelivery", substitutionHeadNamespace = "http://www.siri.org.uk/siri", substitutionHeadName = "AbstractResponse")
-    public JAXBElement<AbstractDiscoveryDeliveryStructure> createAbstractDiscoveryDelivery(AbstractDiscoveryDeliveryStructure value) {
-        return new JAXBElement<AbstractDiscoveryDeliveryStructure>(_AbstractDiscoveryDelivery_QNAME, AbstractDiscoveryDeliveryStructure.class, null, value);
+    public JAXBElement<AbstractDiscoveryDelivery> createAbstractDiscoveryDelivery(AbstractDiscoveryDelivery value) {
+        return new JAXBElement<AbstractDiscoveryDelivery>(_AbstractDiscoveryDelivery_QNAME, AbstractDiscoveryDelivery.class, null, value);
     }
 
 }

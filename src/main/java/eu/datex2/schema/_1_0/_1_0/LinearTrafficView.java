@@ -108,8 +108,9 @@ public class LinearTrafficView {
      *     {@link String }
      *     
      */
-    public void setLinearPredefinedLocationReference(String value) {
+    public LinearTrafficView setLinearPredefinedLocationReference(String value) {
         this.linearPredefinedLocationReference = value;
+        return this;
     }
 
     /**
@@ -161,8 +162,9 @@ public class LinearTrafficView {
      *     {@link ExtensionType }
      *     
      */
-    public void setLinearTrafficViewExtension(ExtensionType value) {
+    public LinearTrafficView setLinearTrafficViewExtension(ExtensionType value) {
         this.linearTrafficViewExtension = value;
+        return this;
     }
 
     /**
@@ -185,8 +187,9 @@ public class LinearTrafficView {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public LinearTrafficView setId(String value) {
         this.id = value;
+        return this;
     }
 
 }

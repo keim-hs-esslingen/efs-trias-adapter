@@ -95,8 +95,9 @@ public class RoadsideAssistance
      *     {@link RoadsideAssistanceTypeEnum }
      *     
      */
-    public void setRoadsideAssistanceType(RoadsideAssistanceTypeEnum value) {
+    public RoadsideAssistance setRoadsideAssistanceType(RoadsideAssistanceTypeEnum value) {
         this.roadsideAssistanceType = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class RoadsideAssistance
      *     {@link ExtensionType }
      *     
      */
-    public void setRoadsideAssistanceExtension(ExtensionType value) {
+    public RoadsideAssistance setRoadsideAssistanceExtension(ExtensionType value) {
         this.roadsideAssistanceExtension = value;
+        return this;
     }
 
 }

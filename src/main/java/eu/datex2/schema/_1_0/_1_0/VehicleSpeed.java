@@ -83,8 +83,9 @@ public class VehicleSpeed {
      * Sets the value of the individualVehicleSpeed property.
      * 
      */
-    public void setIndividualVehicleSpeed(float value) {
+    public VehicleSpeed setIndividualVehicleSpeed(float value) {
         this.individualVehicleSpeed = value;
+        return this;
     }
 
     /**
@@ -107,8 +108,9 @@ public class VehicleSpeed {
      *     {@link ExtensionType }
      *     
      */
-    public void setVehicleSpeedExtension(ExtensionType value) {
+    public VehicleSpeed setVehicleSpeedExtension(ExtensionType value) {
         this.vehicleSpeedExtension = value;
+        return this;
     }
 
 }

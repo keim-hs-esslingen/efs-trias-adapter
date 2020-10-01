@@ -65,11 +65,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 @XmlRootElement(name = "ProductionTimetablePermissions", namespace = "http://www.siri.org.uk/siri")
 public class ProductionTimetablePermissions
-    extends PermissionsStructure
+    extends Permissions
 {
 
     @XmlElement(name = "ProductionTimetablePermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<ConnectionServicePermissionStructure> productionTimetablePermission;
+    protected List<ConnectionServicePermission> productionTimetablePermission;
 
     /**
      * Gets the value of the productionTimetablePermission property.
@@ -89,13 +89,13 @@ public class ProductionTimetablePermissions
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ConnectionServicePermissionStructure }
+     * {@link ConnectionServicePermission }
      * 
      * 
      */
-    public List<ConnectionServicePermissionStructure> getProductionTimetablePermission() {
+    public List<ConnectionServicePermission> getProductionTimetablePermission() {
         if (productionTimetablePermission == null) {
-            productionTimetablePermission = new ArrayList<ConnectionServicePermissionStructure>();
+            productionTimetablePermission = new ArrayList<ConnectionServicePermission>();
         }
         return this.productionTimetablePermission;
     }

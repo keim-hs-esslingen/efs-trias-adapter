@@ -95,8 +95,9 @@ public class ReferencePointLinear {
      *     {@link ReferencePointPrimaryLocation }
      *     
      */
-    public void setReferencePointPrimaryLocation(ReferencePointPrimaryLocation value) {
+    public ReferencePointLinear setReferencePointPrimaryLocation(ReferencePointPrimaryLocation value) {
         this.referencePointPrimaryLocation = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class ReferencePointLinear {
      *     {@link ReferencePointSecondaryLocation }
      *     
      */
-    public void setReferencePointSecondaryLocation(ReferencePointSecondaryLocation value) {
+    public ReferencePointLinear setReferencePointSecondaryLocation(ReferencePointSecondaryLocation value) {
         this.referencePointSecondaryLocation = value;
+        return this;
     }
 
     /**
@@ -143,8 +145,9 @@ public class ReferencePointLinear {
      *     {@link ExtensionType }
      *     
      */
-    public void setReferencePointLinearExtension(ExtensionType value) {
+    public ReferencePointLinear setReferencePointLinearExtension(ExtensionType value) {
         this.referencePointLinearExtension = value;
+        return this;
     }
 
 }

@@ -102,8 +102,9 @@ public class AssociatedMaintenanceVehicles {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfMaintenanceVehicles(BigInteger value) {
+    public AssociatedMaintenanceVehicles setNumberOfMaintenanceVehicles(BigInteger value) {
         this.numberOfMaintenanceVehicles = value;
+        return this;
     }
 
     /**
@@ -155,8 +156,9 @@ public class AssociatedMaintenanceVehicles {
      *     {@link ExtensionType }
      *     
      */
-    public void setAssociatedMaintenanceVehiclesExtension(ExtensionType value) {
+    public AssociatedMaintenanceVehicles setAssociatedMaintenanceVehiclesExtension(ExtensionType value) {
         this.associatedMaintenanceVehiclesExtension = value;
+        return this;
     }
 
 }

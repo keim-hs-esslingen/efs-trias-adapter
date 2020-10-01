@@ -195,8 +195,9 @@ public abstract class SignSetting
      *     {@link String }
      *     
      */
-    public void setPictogramList(String value) {
+    public SignSetting setPictogramList(String value) {
         this.pictogramList = value;
+        return this;
     }
 
     /**
@@ -296,8 +297,9 @@ public abstract class SignSetting
      *     {@link String }
      *     
      */
-    public void setSignAddress(String value) {
+    public SignSetting setSignAddress(String value) {
         this.signAddress = value;
+        return this;
     }
 
     /**
@@ -320,8 +322,9 @@ public abstract class SignSetting
      *     {@link DateTime }
      *     
      */
-    public void setTimeLastSet(DateTime value) {
+    public SignSetting setTimeLastSet(DateTime value) {
         this.timeLastSet = value;
+        return this;
     }
 
     /**
@@ -344,8 +347,9 @@ public abstract class SignSetting
      *     {@link ExtensionType }
      *     
      */
-    public void setSignSettingExtension(ExtensionType value) {
+    public SignSetting setSignSettingExtension(ExtensionType value) {
         this.signSettingExtension = value;
+        return this;
     }
 
 

@@ -223,8 +223,9 @@ public class Vehicle {
      *     {@link String }
      *     
      */
-    public void setVehicleIdentifier(String value) {
+    public Vehicle setVehicleIdentifier(String value) {
         this.vehicleIdentifier = value;
+        return this;
     }
 
     /**
@@ -247,8 +248,9 @@ public class Vehicle {
      *     {@link String }
      *     
      */
-    public void setVehicleManufacturer(String value) {
+    public Vehicle setVehicleManufacturer(String value) {
         this.vehicleManufacturer = value;
+        return this;
     }
 
     /**
@@ -271,8 +273,9 @@ public class Vehicle {
      *     {@link String }
      *     
      */
-    public void setVehicleModel(String value) {
+    public Vehicle setVehicleModel(String value) {
         this.vehicleModel = value;
+        return this;
     }
 
     /**
@@ -295,8 +298,9 @@ public class Vehicle {
      *     {@link String }
      *     
      */
-    public void setVehicleRegistrationPlateIdentifier(String value) {
+    public Vehicle setVehicleRegistrationPlateIdentifier(String value) {
         this.vehicleRegistrationPlateIdentifier = value;
+        return this;
     }
 
     /**
@@ -319,8 +323,9 @@ public class Vehicle {
      *     {@link VehicleStatusEnum }
      *     
      */
-    public void setVehicleStatus(VehicleStatusEnum value) {
+    public Vehicle setVehicleStatus(VehicleStatusEnum value) {
         this.vehicleStatus = value;
+        return this;
     }
 
     /**
@@ -343,8 +348,9 @@ public class Vehicle {
      *     {@link VehicleCharacteristics }
      *     
      */
-    public void setVehicleCharacteristics(VehicleCharacteristics value) {
+    public Vehicle setVehicleCharacteristics(VehicleCharacteristics value) {
         this.vehicleCharacteristics = value;
+        return this;
     }
 
     /**
@@ -425,8 +431,9 @@ public class Vehicle {
      *     {@link HazardousMaterials }
      *     
      */
-    public void setHazardousGoodsAssociatedWithVehicle(HazardousMaterials value) {
+    public Vehicle setHazardousGoodsAssociatedWithVehicle(HazardousMaterials value) {
         this.hazardousGoodsAssociatedWithVehicle = value;
+        return this;
     }
 
     /**
@@ -449,8 +456,9 @@ public class Vehicle {
      *     {@link ExtensionType }
      *     
      */
-    public void setVehicleExtension(ExtensionType value) {
+    public Vehicle setVehicleExtension(ExtensionType value) {
         this.vehicleExtension = value;
+        return this;
     }
 
 

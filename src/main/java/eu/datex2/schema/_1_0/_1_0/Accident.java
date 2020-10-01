@@ -114,8 +114,9 @@ public class Accident
      *     {@link AccidentCauseEnum }
      *     
      */
-    public void setAccidentCause(AccidentCauseEnum value) {
+    public Accident setAccidentCause(AccidentCauseEnum value) {
         this.accidentCause = value;
+        return this;
     }
 
     /**
@@ -254,8 +255,9 @@ public class Accident
      *     {@link ExtensionType }
      *     
      */
-    public void setAccidentExtension(ExtensionType value) {
+    public Accident setAccidentExtension(ExtensionType value) {
         this.accidentExtension = value;
+        return this;
     }
 
 }

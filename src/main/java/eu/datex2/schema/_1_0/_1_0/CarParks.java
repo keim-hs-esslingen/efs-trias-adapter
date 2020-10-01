@@ -138,8 +138,9 @@ public class CarParks
      *     {@link CarParkConfigurationEnum }
      *     
      */
-    public void setCarParkConfiguration(CarParkConfigurationEnum value) {
+    public CarParks setCarParkConfiguration(CarParkConfigurationEnum value) {
         this.carParkConfiguration = value;
+        return this;
     }
 
     /**
@@ -162,8 +163,9 @@ public class CarParks
      *     {@link String }
      *     
      */
-    public void setCarParkIdentity(String value) {
+    public CarParks setCarParkIdentity(String value) {
         this.carParkIdentity = value;
+        return this;
     }
 
     /**
@@ -186,8 +188,9 @@ public class CarParks
      *     {@link Float }
      *     
      */
-    public void setCarParkOccupancy(Float value) {
+    public CarParks setCarParkOccupancy(Float value) {
         this.carParkOccupancy = value;
+        return this;
     }
 
     /**
@@ -210,8 +213,9 @@ public class CarParks
      *     {@link CarParkStatusEnum }
      *     
      */
-    public void setCarParkStatus(CarParkStatusEnum value) {
+    public CarParks setCarParkStatus(CarParkStatusEnum value) {
         this.carParkStatus = value;
+        return this;
     }
 
     /**
@@ -234,8 +238,9 @@ public class CarParks
      *     {@link BigInteger }
      *     
      */
-    public void setExitRate(BigInteger value) {
+    public CarParks setExitRate(BigInteger value) {
         this.exitRate = value;
+        return this;
     }
 
     /**
@@ -258,8 +263,9 @@ public class CarParks
      *     {@link BigInteger }
      *     
      */
-    public void setFillRate(BigInteger value) {
+    public CarParks setFillRate(BigInteger value) {
         this.fillRate = value;
+        return this;
     }
 
     /**
@@ -282,8 +288,9 @@ public class CarParks
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfVacantParkingSpaces(BigInteger value) {
+    public CarParks setNumberOfVacantParkingSpaces(BigInteger value) {
         this.numberOfVacantParkingSpaces = value;
+        return this;
     }
 
     /**
@@ -306,8 +313,9 @@ public class CarParks
      *     {@link BigInteger }
      *     
      */
-    public void setOccupiedSpaces(BigInteger value) {
+    public CarParks setOccupiedSpaces(BigInteger value) {
         this.occupiedSpaces = value;
+        return this;
     }
 
     /**
@@ -330,8 +338,9 @@ public class CarParks
      *     {@link Time }
      *     
      */
-    public void setQueueingTime(Time value) {
+    public CarParks setQueueingTime(Time value) {
         this.queueingTime = value;
+        return this;
     }
 
     /**
@@ -354,8 +363,9 @@ public class CarParks
      *     {@link BigInteger }
      *     
      */
-    public void setTotalCapacity(BigInteger value) {
+    public CarParks setTotalCapacity(BigInteger value) {
         this.totalCapacity = value;
+        return this;
     }
 
     /**
@@ -378,8 +388,9 @@ public class CarParks
      *     {@link ExtensionType }
      *     
      */
-    public void setCarParksExtension(ExtensionType value) {
+    public CarParks setCarParksExtension(ExtensionType value) {
         this.carParksExtension = value;
+        return this;
     }
 
 }

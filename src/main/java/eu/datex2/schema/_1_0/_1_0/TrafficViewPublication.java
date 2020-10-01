@@ -99,8 +99,9 @@ public class TrafficViewPublication
      *     {@link HeaderInformation }
      *     
      */
-    public void setHeaderInformation(HeaderInformation value) {
+    public TrafficViewPublication setHeaderInformation(HeaderInformation value) {
         this.headerInformation = value;
+        return this;
     }
 
     /**
@@ -152,8 +153,9 @@ public class TrafficViewPublication
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficViewPublicationExtension(ExtensionType value) {
+    public TrafficViewPublication setTrafficViewPublicationExtension(ExtensionType value) {
         this.trafficViewPublicationExtension = value;
+        return this;
     }
 
 }

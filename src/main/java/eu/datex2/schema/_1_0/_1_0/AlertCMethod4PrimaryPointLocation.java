@@ -95,8 +95,9 @@ public class AlertCMethod4PrimaryPointLocation {
      *     {@link AlertCLocation }
      *     
      */
-    public void setAlertCLocation(AlertCLocation value) {
+    public AlertCMethod4PrimaryPointLocation setAlertCLocation(AlertCLocation value) {
         this.alertCLocation = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class AlertCMethod4PrimaryPointLocation {
      *     {@link OffsetDistance }
      *     
      */
-    public void setOffsetDistance(OffsetDistance value) {
+    public AlertCMethod4PrimaryPointLocation setOffsetDistance(OffsetDistance value) {
         this.offsetDistance = value;
+        return this;
     }
 
     /**
@@ -143,8 +145,9 @@ public class AlertCMethod4PrimaryPointLocation {
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod4PrimaryPointLocationExtension(ExtensionType value) {
+    public AlertCMethod4PrimaryPointLocation setAlertCMethod4PrimaryPointLocationExtension(ExtensionType value) {
         this.alertCMethod4PrimaryPointLocationExtension = value;
+        return this;
     }
 
 }

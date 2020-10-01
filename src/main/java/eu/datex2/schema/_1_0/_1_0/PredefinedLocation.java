@@ -151,8 +151,9 @@ public class PredefinedLocation {
      *     {@link Location }
      *     
      */
-    public void setPredefinedLocation(Location value) {
+    public PredefinedLocation setPredefinedLocation(Location value) {
         this.predefinedLocation = value;
+        return this;
     }
 
     /**
@@ -175,8 +176,9 @@ public class PredefinedLocation {
      *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedLocationExtension(ExtensionType value) {
+    public PredefinedLocation setPredefinedLocationExtension(ExtensionType value) {
         this.predefinedLocationExtension = value;
+        return this;
     }
 
     /**
@@ -199,8 +201,9 @@ public class PredefinedLocation {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public PredefinedLocation setId(String value) {
         this.id = value;
+        return this;
     }
 
 

@@ -109,8 +109,9 @@ public class NetworkManagement
      *     {@link NetworkManagementTypeEnum }
      *     
      */
-    public void setNetworkManagementType(NetworkManagementTypeEnum value) {
+    public NetworkManagement setNetworkManagementType(NetworkManagementTypeEnum value) {
         this.networkManagementType = value;
+        return this;
     }
 
     /**
@@ -162,8 +163,9 @@ public class NetworkManagement
      *     {@link Restriction }
      *     
      */
-    public void setRestriction(Restriction value) {
+    public NetworkManagement setRestriction(Restriction value) {
         this.restriction = value;
+        return this;
     }
 
     /**
@@ -186,8 +188,9 @@ public class NetworkManagement
      *     {@link TrafficControl }
      *     
      */
-    public void setTrafficControl(TrafficControl value) {
+    public NetworkManagement setTrafficControl(TrafficControl value) {
         this.trafficControl = value;
+        return this;
     }
 
     /**
@@ -210,8 +213,9 @@ public class NetworkManagement
      *     {@link ExtensionType }
      *     
      */
-    public void setNetworkManagementExtension(ExtensionType value) {
+    public NetworkManagement setNetworkManagementExtension(ExtensionType value) {
         this.networkManagementExtension = value;
+        return this;
     }
 
 }

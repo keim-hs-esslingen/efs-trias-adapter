@@ -97,8 +97,9 @@ public class HeaviestAxleWeightCharacteristic {
      *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public HeaviestAxleWeightCharacteristic setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
+        return this;
     }
 
     /**
@@ -113,8 +114,9 @@ public class HeaviestAxleWeightCharacteristic {
      * Sets the value of the heaviestAxleWeight property.
      * 
      */
-    public void setHeaviestAxleWeight(float value) {
+    public HeaviestAxleWeightCharacteristic setHeaviestAxleWeight(float value) {
         this.heaviestAxleWeight = value;
+        return this;
     }
 
     /**
@@ -137,8 +139,9 @@ public class HeaviestAxleWeightCharacteristic {
      *     {@link ExtensionType }
      *     
      */
-    public void setHeaviestAxleWeightCharacteristicExtension(ExtensionType value) {
+    public HeaviestAxleWeightCharacteristic setHeaviestAxleWeightCharacteristicExtension(ExtensionType value) {
         this.heaviestAxleWeightCharacteristicExtension = value;
+        return this;
     }
 
 }

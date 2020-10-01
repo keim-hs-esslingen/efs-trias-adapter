@@ -99,8 +99,9 @@ public class MeasurementSiteTablePublication
      *     {@link HeaderInformation }
      *     
      */
-    public void setHeaderInformation(HeaderInformation value) {
+    public MeasurementSiteTablePublication setHeaderInformation(HeaderInformation value) {
         this.headerInformation = value;
+        return this;
     }
 
     /**
@@ -152,8 +153,9 @@ public class MeasurementSiteTablePublication
      *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementSiteTablePublicationExtension(ExtensionType value) {
+    public MeasurementSiteTablePublication setMeasurementSiteTablePublicationExtension(ExtensionType value) {
         this.measurementSiteTablePublicationExtension = value;
+        return this;
     }
 
 }

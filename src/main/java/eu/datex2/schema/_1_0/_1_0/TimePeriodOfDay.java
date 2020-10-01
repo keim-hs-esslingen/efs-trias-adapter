@@ -92,8 +92,9 @@ public abstract class TimePeriodOfDay {
      *     {@link ExtensionType }
      *     
      */
-    public void setTimePeriodOfDayExtension(ExtensionType value) {
+    public TimePeriodOfDay setTimePeriodOfDayExtension(ExtensionType value) {
         this.timePeriodOfDayExtension = value;
+        return this;
     }
 
 }

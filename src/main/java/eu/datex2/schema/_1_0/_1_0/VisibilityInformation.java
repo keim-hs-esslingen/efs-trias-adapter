@@ -93,8 +93,9 @@ public class VisibilityInformation
      *     {@link Visibility }
      *     
      */
-    public void setVisibility(Visibility value) {
+    public VisibilityInformation setVisibility(Visibility value) {
         this.visibility = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class VisibilityInformation
      *     {@link ExtensionType }
      *     
      */
-    public void setVisibilityInformationExtension(ExtensionType value) {
+    public VisibilityInformation setVisibilityInformationExtension(ExtensionType value) {
         this.visibilityInformationExtension = value;
+        return this;
     }
 
 }

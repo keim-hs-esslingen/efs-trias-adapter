@@ -180,8 +180,9 @@ public class PredefinedLocationSet {
      *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedLocationSetExtension(ExtensionType value) {
+    public PredefinedLocationSet setPredefinedLocationSetExtension(ExtensionType value) {
         this.predefinedLocationSetExtension = value;
+        return this;
     }
 
     /**
@@ -204,8 +205,9 @@ public class PredefinedLocationSet {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public PredefinedLocationSet setId(String value) {
         this.id = value;
+        return this;
     }
 
 

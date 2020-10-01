@@ -198,8 +198,9 @@ public class Activities
      *     {@link Mobility }
      *     
      */
-    public void setMobilityOfActivities(Mobility value) {
+    public Activities setMobilityOfActivities(Mobility value) {
         this.mobilityOfActivities = value;
+        return this;
     }
 
     /**
@@ -222,8 +223,9 @@ public class Activities
      *     {@link ExtensionType }
      *     
      */
-    public void setActivitiesExtension(ExtensionType value) {
+    public Activities setActivitiesExtension(ExtensionType value) {
         this.activitiesExtension = value;
+        return this;
     }
 
 }

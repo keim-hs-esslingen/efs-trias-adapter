@@ -87,8 +87,9 @@ public class PointCoordinates {
      * Sets the value of the latitude property.
      * 
      */
-    public void setLatitude(float value) {
+    public PointCoordinates setLatitude(float value) {
         this.latitude = value;
+        return this;
     }
 
     /**
@@ -103,8 +104,9 @@ public class PointCoordinates {
      * Sets the value of the longitude property.
      * 
      */
-    public void setLongitude(float value) {
+    public PointCoordinates setLongitude(float value) {
         this.longitude = value;
+        return this;
     }
 
     /**
@@ -127,8 +129,9 @@ public class PointCoordinates {
      *     {@link ExtensionType }
      *     
      */
-    public void setPointCoordinatesExtension(ExtensionType value) {
+    public PointCoordinates setPointCoordinatesExtension(ExtensionType value) {
         this.pointCoordinatesExtension = value;
+        return this;
     }
 
 }

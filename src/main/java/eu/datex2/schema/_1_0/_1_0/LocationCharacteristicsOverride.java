@@ -97,8 +97,9 @@ public class LocationCharacteristicsOverride {
      *     {@link LanesEnum }
      *     
      */
-    public void setMeasurementLanesOverride(LanesEnum value) {
+    public LocationCharacteristicsOverride setMeasurementLanesOverride(LanesEnum value) {
         this.measurementLanesOverride = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class LocationCharacteristicsOverride {
      *     {@link Boolean }
      *     
      */
-    public void setReversedFlow(Boolean value) {
+    public LocationCharacteristicsOverride setReversedFlow(Boolean value) {
         this.reversedFlow = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class LocationCharacteristicsOverride {
      *     {@link ExtensionType }
      *     
      */
-    public void setLocationCharacteristicsOverrideExtension(ExtensionType value) {
+    public LocationCharacteristicsOverride setLocationCharacteristicsOverrideExtension(ExtensionType value) {
         this.locationCharacteristicsOverrideExtension = value;
+        return this;
     }
 
 }

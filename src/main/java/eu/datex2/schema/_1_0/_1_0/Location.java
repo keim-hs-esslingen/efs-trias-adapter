@@ -93,8 +93,9 @@ public abstract class Location {
      *     {@link ExtensionType }
      *     
      */
-    public void setLocationExtension(ExtensionType value) {
+    public Location setLocationExtension(ExtensionType value) {
         this.locationExtension = value;
+        return this;
     }
 
 }

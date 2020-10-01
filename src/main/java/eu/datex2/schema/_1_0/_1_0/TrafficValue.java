@@ -101,8 +101,9 @@ public abstract class TrafficValue
      *     {@link VehicleCharacteristics }
      *     
      */
-    public void setVehicleCharacteristics(VehicleCharacteristics value) {
+    public TrafficValue setVehicleCharacteristics(VehicleCharacteristics value) {
         this.vehicleCharacteristics = value;
+        return this;
     }
 
     /**
@@ -125,8 +126,9 @@ public abstract class TrafficValue
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficValueExtension(ExtensionType value) {
+    public TrafficValue setTrafficValueExtension(ExtensionType value) {
         this.trafficValueExtension = value;
+        return this;
     }
 
 }

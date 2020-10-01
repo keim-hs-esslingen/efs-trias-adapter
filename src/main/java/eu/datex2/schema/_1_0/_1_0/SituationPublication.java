@@ -124,8 +124,9 @@ public class SituationPublication
      *     {@link ExtensionType }
      *     
      */
-    public void setSituationPublicationExtension(ExtensionType value) {
+    public SituationPublication setSituationPublicationExtension(ExtensionType value) {
         this.situationPublicationExtension = value;
+        return this;
     }
 
 }

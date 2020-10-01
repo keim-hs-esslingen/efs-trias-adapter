@@ -93,8 +93,9 @@ public class WindInformation
      *     {@link Wind }
      *     
      */
-    public void setWind(Wind value) {
+    public WindInformation setWind(Wind value) {
         this.wind = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class WindInformation
      *     {@link ExtensionType }
      *     
      */
-    public void setWindInformationExtension(ExtensionType value) {
+    public WindInformation setWindInformationExtension(ExtensionType value) {
         this.windInformationExtension = value;
+        return this;
     }
 
 }

@@ -115,8 +115,9 @@ public class HeaderInformation {
      *     {@link AreaOfInterestEnum }
      *     
      */
-    public void setAreaOfInterest(AreaOfInterestEnum value) {
+    public HeaderInformation setAreaOfInterest(AreaOfInterestEnum value) {
         this.areaOfInterest = value;
+        return this;
     }
 
     /**
@@ -139,8 +140,9 @@ public class HeaderInformation {
      *     {@link ConfidentialityValueEnum }
      *     
      */
-    public void setConfidentiality(ConfidentialityValueEnum value) {
+    public HeaderInformation setConfidentiality(ConfidentialityValueEnum value) {
         this.confidentiality = value;
+        return this;
     }
 
     /**
@@ -192,8 +194,9 @@ public class HeaderInformation {
      *     {@link InformationStatusEnum }
      *     
      */
-    public void setInformationStatus(InformationStatusEnum value) {
+    public HeaderInformation setInformationStatus(InformationStatusEnum value) {
         this.informationStatus = value;
+        return this;
     }
 
     /**
@@ -216,8 +219,9 @@ public class HeaderInformation {
      *     {@link UrgencyEnum }
      *     
      */
-    public void setUrgency(UrgencyEnum value) {
+    public HeaderInformation setUrgency(UrgencyEnum value) {
         this.urgency = value;
+        return this;
     }
 
     /**
@@ -240,8 +244,9 @@ public class HeaderInformation {
      *     {@link ExtensionType }
      *     
      */
-    public void setHeaderInformationExtension(ExtensionType value) {
+    public HeaderInformation setHeaderInformationExtension(ExtensionType value) {
         this.headerInformationExtension = value;
+        return this;
     }
 
 }

@@ -99,8 +99,9 @@ public class PredefinedLocationsPublication
      *     {@link HeaderInformation }
      *     
      */
-    public void setHeaderInformation(HeaderInformation value) {
+    public PredefinedLocationsPublication setHeaderInformation(HeaderInformation value) {
         this.headerInformation = value;
+        return this;
     }
 
     /**
@@ -152,8 +153,9 @@ public class PredefinedLocationsPublication
      *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedLocationsPublicationExtension(ExtensionType value) {
+    public PredefinedLocationsPublication setPredefinedLocationsPublicationExtension(ExtensionType value) {
         this.predefinedLocationsPublicationExtension = value;
+        return this;
     }
 
 }

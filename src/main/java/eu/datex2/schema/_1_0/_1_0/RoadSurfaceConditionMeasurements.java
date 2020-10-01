@@ -111,8 +111,9 @@ public class RoadSurfaceConditionMeasurements {
      *     {@link Float }
      *     
      */
-    public void setDeIcingApplicationRate(Float value) {
+    public RoadSurfaceConditionMeasurements setDeIcingApplicationRate(Float value) {
         this.deIcingApplicationRate = value;
+        return this;
     }
 
     /**
@@ -135,8 +136,9 @@ public class RoadSurfaceConditionMeasurements {
      *     {@link Float }
      *     
      */
-    public void setDeIcingConcentration(Float value) {
+    public RoadSurfaceConditionMeasurements setDeIcingConcentration(Float value) {
         this.deIcingConcentration = value;
+        return this;
     }
 
     /**
@@ -159,8 +161,9 @@ public class RoadSurfaceConditionMeasurements {
      *     {@link Float }
      *     
      */
-    public void setDepthOfSnow(Float value) {
+    public RoadSurfaceConditionMeasurements setDepthOfSnow(Float value) {
         this.depthOfSnow = value;
+        return this;
     }
 
     /**
@@ -183,8 +186,9 @@ public class RoadSurfaceConditionMeasurements {
      *     {@link Float }
      *     
      */
-    public void setProtectionTemperature(Float value) {
+    public RoadSurfaceConditionMeasurements setProtectionTemperature(Float value) {
         this.protectionTemperature = value;
+        return this;
     }
 
     /**
@@ -207,8 +211,9 @@ public class RoadSurfaceConditionMeasurements {
      *     {@link Float }
      *     
      */
-    public void setRoadSurfaceTemperature(Float value) {
+    public RoadSurfaceConditionMeasurements setRoadSurfaceTemperature(Float value) {
         this.roadSurfaceTemperature = value;
+        return this;
     }
 
     /**
@@ -231,8 +236,9 @@ public class RoadSurfaceConditionMeasurements {
      *     {@link Float }
      *     
      */
-    public void setWaterFilmThickness(Float value) {
+    public RoadSurfaceConditionMeasurements setWaterFilmThickness(Float value) {
         this.waterFilmThickness = value;
+        return this;
     }
 
     /**
@@ -255,8 +261,9 @@ public class RoadSurfaceConditionMeasurements {
      *     {@link ExtensionType }
      *     
      */
-    public void setRoadSurfaceConditionMeasurementsExtension(ExtensionType value) {
+    public RoadSurfaceConditionMeasurements setRoadSurfaceConditionMeasurementsExtension(ExtensionType value) {
         this.roadSurfaceConditionMeasurementsExtension = value;
+        return this;
     }
 
 }

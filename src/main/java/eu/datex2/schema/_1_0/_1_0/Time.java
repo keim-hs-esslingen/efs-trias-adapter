@@ -88,8 +88,9 @@ public class Time {
      *     {@link String }
      *     
      */
-    public void setValue(OffsetTime value) {
+    public Time setValue(OffsetTime value) {
         this.value = value;
+        return this;
     }
 
 }

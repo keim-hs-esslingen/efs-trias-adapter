@@ -35,13 +35,13 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
-import uk.org.siri.siri.DataReadyResponseStructure;
-import uk.org.siri.siri.DataReceivedResponseStructure;
-import uk.org.siri.siri.FacilityMonitoringDeliveryStructure;
-import uk.org.siri.siri.FacilityMonitoringSubscriptionStructure;
-import uk.org.siri.siri.SituationExchangeDeliveryStructure;
-import uk.org.siri.siri.SituationExchangeSubscriptionStructure;
-import uk.org.siri.siri.TerminateSubscriptionRequestStructure;
+import uk.org.siri.siri.DataReadyResponse;
+import uk.org.siri.siri.DataReceivedResponse;
+import uk.org.siri.siri.FacilityMonitoringDelivery;
+import uk.org.siri.siri.FacilityMonitoringSubscription;
+import uk.org.siri.siri.SituationExchangeDelivery;
+import uk.org.siri.siri.SituationExchangeSubscription;
+import uk.org.siri.siri.TerminateSubscriptionRequest;
 
 
 /**
@@ -176,163 +176,163 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AbstractResponseContextStructure }
+     * Create an instance of {@link AbstractResponseContext }
      * 
      */
-    public AbstractResponseContextStructure createAbstractResponseContextStructure() {
-        return new AbstractResponseContextStructure();
+    public AbstractResponseContext createAbstractResponseContextStructure() {
+        return new AbstractResponseContext();
     }
 
     /**
-     * Create an instance of {@link TrackSectionStructure }
+     * Create an instance of {@link TrackSection }
      * 
      */
-    public TrackSectionStructure createTrackSectionStructure() {
-        return new TrackSectionStructure();
+    public TrackSection createTrackSectionStructure() {
+        return new TrackSection();
     }
 
     /**
-     * Create an instance of {@link LocalityStructure }
+     * Create an instance of {@link Locality }
      * 
      */
-    public LocalityStructure createLocalityStructure() {
-        return new LocalityStructure();
+    public Locality createLocalityStructure() {
+        return new Locality();
     }
 
     /**
-     * Create an instance of {@link JourneyRefStructure }
+     * Create an instance of {@link JourneyRef }
      * 
      */
-    public JourneyRefStructure createJourneyRefStructure() {
-        return new JourneyRefStructure();
+    public JourneyRef createJourneyRefStructure() {
+        return new JourneyRef();
     }
 
     /**
-     * Create an instance of {@link StopEventRefineResponseStructure }
+     * Create an instance of {@link StopEventRefineResponse }
      * 
      */
-    public StopEventRefineResponseStructure createStopEventRefineResponseStructure() {
-        return new StopEventRefineResponseStructure();
+    public StopEventRefineResponse createStopEventRefineResponseStructure() {
+        return new StopEventRefineResponse();
     }
 
     /**
-     * Create an instance of {@link VehicleDataRequestStructure }
+     * Create an instance of {@link VehicleDataRequest }
      * 
      */
-    public VehicleDataRequestStructure createVehicleDataRequestStructure() {
-        return new VehicleDataRequestStructure();
+    public VehicleDataRequest createVehicleDataRequestStructure() {
+        return new VehicleDataRequest();
     }
 
     /**
-     * Create an instance of {@link FaresResponseStructure }
+     * Create an instance of {@link FaresResponse }
      * 
      */
-    public FaresResponseStructure createFaresResponseStructure() {
-        return new FaresResponseStructure();
+    public FaresResponse createFaresResponseStructure() {
+        return new FaresResponse();
     }
 
     /**
-     * Create an instance of {@link StopRequestResponseStructure }
+     * Create an instance of {@link StopRequestResponse }
      * 
      */
-    public StopRequestResponseStructure createStopRequestResponseStructure() {
-        return new StopRequestResponseStructure();
+    public StopRequestResponse createStopRequestResponseStructure() {
+        return new StopRequestResponse();
     }
 
     /**
-     * Create an instance of {@link ConnectionDemandDeleteResponseStructure }
+     * Create an instance of {@link ConnectionDemandDeleteResponse }
      * 
      */
-    public ConnectionDemandDeleteResponseStructure createConnectionDemandDeleteResponseStructure() {
-        return new ConnectionDemandDeleteResponseStructure();
+    public ConnectionDemandDeleteResponse createConnectionDemandDeleteResponseStructure() {
+        return new ConnectionDemandDeleteResponse();
     }
 
     /**
-     * Create an instance of {@link PersonalisationDeleteValueResponseStructure }
+     * Create an instance of {@link PersonalisationDeleteValueResponse }
      * 
      */
-    public PersonalisationDeleteValueResponseStructure createPersonalisationDeleteValueResponseStructure() {
-        return new PersonalisationDeleteValueResponseStructure();
+    public PersonalisationDeleteValueResponse createPersonalisationDeleteValueResponseStructure() {
+        return new PersonalisationDeleteValueResponse();
     }
 
     /**
-     * Create an instance of {@link TripInfoRequestStructure }
+     * Create an instance of {@link TripInfoRequest }
      * 
      */
-    public TripInfoRequestStructure createTripInfoRequestStructure() {
-        return new TripInfoRequestStructure();
+    public TripInfoRequest createTripInfoRequestStructure() {
+        return new TripInfoRequest();
     }
 
     /**
-     * Create an instance of {@link PersonalisationRetrieveValueRequestStructure }
+     * Create an instance of {@link PersonalisationRetrieveValueRequest }
      * 
      */
-    public PersonalisationRetrieveValueRequestStructure createPersonalisationRetrieveValueRequestStructure() {
-        return new PersonalisationRetrieveValueRequestStructure();
+    public PersonalisationRetrieveValueRequest createPersonalisationRetrieveValueRequestStructure() {
+        return new PersonalisationRetrieveValueRequest();
     }
 
     /**
-     * Create an instance of {@link MapServiceRequestStructure }
+     * Create an instance of {@link MapServiceRequest }
      * 
      */
-    public MapServiceRequestStructure createMapServiceRequestStructure() {
-        return new MapServiceRequestStructure();
+    public MapServiceRequest createMapServiceRequestStructure() {
+        return new MapServiceRequest();
     }
 
     /**
-     * Create an instance of {@link LineRefStructure }
+     * Create an instance of {@link LineRef }
      * 
      */
-    public LineRefStructure createLineRefStructure() {
-        return new LineRefStructure();
+    public LineRef createLineRefStructure() {
+        return new LineRef();
     }
 
     /**
-     * Create an instance of {@link StopEventResponseStructure }
+     * Create an instance of {@link StopEventResponse }
      * 
      */
-    public StopEventResponseStructure createStopEventResponseStructure() {
-        return new StopEventResponseStructure();
+    public StopEventResponse createStopEventResponseStructure() {
+        return new StopEventResponse();
     }
 
     /**
-     * Create an instance of {@link SituationFullRefStructure }
+     * Create an instance of {@link SituationFullRef }
      * 
      */
-    public SituationFullRefStructure createSituationFullRefStructure() {
-        return new SituationFullRefStructure();
+    public SituationFullRef createSituationFullRefStructure() {
+        return new SituationFullRef();
     }
 
     /**
-     * Create an instance of {@link BookingInfoRequestStructure }
+     * Create an instance of {@link BookingInfoRequest }
      * 
      */
-    public BookingInfoRequestStructure createBookingInfoRequestStructure() {
-        return new BookingInfoRequestStructure();
+    public BookingInfoRequest createBookingInfoRequestStructure() {
+        return new BookingInfoRequest();
     }
 
     /**
-     * Create an instance of {@link FacilityStatusReportResponseStructure }
+     * Create an instance of {@link FacilityStatusReportResponse }
      * 
      */
-    public FacilityStatusReportResponseStructure createFacilityStatusReportResponseStructure() {
-        return new FacilityStatusReportResponseStructure();
+    public FacilityStatusReportResponse createFacilityStatusReportResponseStructure() {
+        return new FacilityStatusReportResponse();
     }
 
     /**
-     * Create an instance of {@link ConnectionStatusRequestStructure }
+     * Create an instance of {@link ConnectionStatusRequest }
      * 
      */
-    public ConnectionStatusRequestStructure createConnectionStatusRequestStructure() {
-        return new ConnectionStatusRequestStructure();
+    public ConnectionStatusRequest createConnectionStatusRequestStructure() {
+        return new ConnectionStatusRequest();
     }
 
     /**
-     * Create an instance of {@link GeoCoordinatesResponseStructure }
+     * Create an instance of {@link GeoCoordinatesResponse }
      * 
      */
-    public GeoCoordinatesResponseStructure createGeoCoordinatesResponseStructure() {
-        return new GeoCoordinatesResponseStructure();
+    public GeoCoordinatesResponse createGeoCoordinatesResponseStructure() {
+        return new GeoCoordinatesResponse();
     }
 
     /**
@@ -344,1908 +344,1908 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ServiceRequestStructure }
+     * Create an instance of {@link ServiceRequest }
      * 
      */
-    public ServiceRequestStructure createServiceRequestStructure() {
-        return new ServiceRequestStructure();
+    public ServiceRequest createServiceRequestStructure() {
+        return new ServiceRequest();
     }
 
     /**
-     * Create an instance of {@link SubscriptionRequestStructure }
+     * Create an instance of {@link SubscriptionRequest }
      * 
      */
-    public SubscriptionRequestStructure createSubscriptionRequestStructure() {
-        return new SubscriptionRequestStructure();
+    public SubscriptionRequest createSubscriptionRequestStructure() {
+        return new SubscriptionRequest();
     }
 
     /**
-     * Create an instance of {@link ServiceDeliveryStructure }
+     * Create an instance of {@link ServiceDelivery }
      * 
      */
-    public ServiceDeliveryStructure createServiceDeliveryStructure() {
-        return new ServiceDeliveryStructure();
+    public ServiceDelivery createServiceDeliveryStructure() {
+        return new ServiceDelivery();
     }
 
     /**
-     * Create an instance of {@link ConnectionProtectionSubscriptionRequestStructure }
+     * Create an instance of {@link ConnectionProtectionSubscriptionRequest }
      * 
      */
-    public ConnectionProtectionSubscriptionRequestStructure createConnectionProtectionSubscriptionRequestStructure() {
-        return new ConnectionProtectionSubscriptionRequestStructure();
+    public ConnectionProtectionSubscriptionRequest createConnectionProtectionSubscriptionRequestStructure() {
+        return new ConnectionProtectionSubscriptionRequest();
     }
 
     /**
-     * Create an instance of {@link IndividualRouteRequestStructure }
+     * Create an instance of {@link IndividualRouteRequest }
      * 
      */
-    public IndividualRouteRequestStructure createIndividualRouteRequestStructure() {
-        return new IndividualRouteRequestStructure();
+    public IndividualRouteRequest createIndividualRouteRequestStructure() {
+        return new IndividualRouteRequest();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterResponseStructure }
+     * Create an instance of {@link ServiceRegisterResponse }
      * 
      */
-    public ServiceRegisterResponseStructure createServiceRegisterResponseStructure() {
-        return new ServiceRegisterResponseStructure();
+    public ServiceRegisterResponse createServiceRegisterResponseStructure() {
+        return new ServiceRegisterResponse();
     }
 
     /**
-     * Create an instance of {@link ConnectionReportResponseStructure }
+     * Create an instance of {@link ConnectionReportResponse }
      * 
      */
-    public ConnectionReportResponseStructure createConnectionReportResponseStructure() {
-        return new ConnectionReportResponseStructure();
+    public ConnectionReportResponse createConnectionReportResponseStructure() {
+        return new ConnectionReportResponse();
     }
 
     /**
-     * Create an instance of {@link PointOfInterestRefStructure }
+     * Create an instance of {@link PointOfInterestRef }
      * 
      */
-    public PointOfInterestRefStructure createPointOfInterestRefStructure() {
-        return new PointOfInterestRefStructure();
+    public PointOfInterestRef createPointOfInterestRefStructure() {
+        return new PointOfInterestRef();
     }
 
     /**
-     * Create an instance of {@link PersonalisationSaveValueRequestStructure }
+     * Create an instance of {@link PersonalisationSaveValueRequest }
      * 
      */
-    public PersonalisationSaveValueRequestStructure createPersonalisationSaveValueRequestStructure() {
-        return new PersonalisationSaveValueRequestStructure();
+    public PersonalisationSaveValueRequest createPersonalisationSaveValueRequestStructure() {
+        return new PersonalisationSaveValueRequest();
     }
 
     /**
-     * Create an instance of {@link PersonalisationRetrieveValueResponseStructure }
+     * Create an instance of {@link PersonalisationRetrieveValueResponse }
      * 
      */
-    public PersonalisationRetrieveValueResponseStructure createPersonalisationRetrieveValueResponseStructure() {
-        return new PersonalisationRetrieveValueResponseStructure();
+    public PersonalisationRetrieveValueResponse createPersonalisationRetrieveValueResponseStructure() {
+        return new PersonalisationRetrieveValueResponse();
     }
 
     /**
-     * Create an instance of {@link IndividualRouteResponseStructure }
+     * Create an instance of {@link IndividualRouteResponse }
      * 
      */
-    public IndividualRouteResponseStructure createIndividualRouteResponseStructure() {
-        return new IndividualRouteResponseStructure();
+    public IndividualRouteResponse createIndividualRouteResponseStructure() {
+        return new IndividualRouteResponse();
     }
 
     /**
-     * Create an instance of {@link VehicleRefStructure }
+     * Create an instance of {@link VehicleRef }
      * 
      */
-    public VehicleRefStructure createVehicleRefStructure() {
-        return new VehicleRefStructure();
+    public VehicleRef createVehicleRefStructure() {
+        return new VehicleRef();
     }
 
     /**
-     * Create an instance of {@link ConnectionReportRequestStructure }
+     * Create an instance of {@link ConnectionReportRequest }
      * 
      */
-    public ConnectionReportRequestStructure createConnectionReportRequestStructure() {
-        return new ConnectionReportRequestStructure();
+    public ConnectionReportRequest createConnectionReportRequestStructure() {
+        return new ConnectionReportRequest();
     }
 
     /**
-     * Create an instance of {@link PersonalisationSaveValueResponseStructure }
+     * Create an instance of {@link PersonalisationSaveValueResponse }
      * 
      */
-    public PersonalisationSaveValueResponseStructure createPersonalisationSaveValueResponseStructure() {
-        return new PersonalisationSaveValueResponseStructure();
+    public PersonalisationSaveValueResponse createPersonalisationSaveValueResponseStructure() {
+        return new PersonalisationSaveValueResponse();
     }
 
     /**
-     * Create an instance of {@link RefineRequestStructure }
+     * Create an instance of {@link RefineRequest }
      * 
      */
-    public RefineRequestStructure createRefineRequestStructure() {
-        return new RefineRequestStructure();
+    public RefineRequest createRefineRequestStructure() {
+        return new RefineRequest();
     }
 
     /**
-     * Create an instance of {@link TripRequestStructure }
+     * Create an instance of {@link TripRequest }
      * 
      */
-    public TripRequestStructure createTripRequestStructure() {
-        return new TripRequestStructure();
+    public TripRequest createTripRequestStructure() {
+        return new TripRequest();
     }
 
     /**
-     * Create an instance of {@link OperatorRefStructure }
+     * Create an instance of {@link OperatorRef }
      * 
      */
-    public OperatorRefStructure createOperatorRefStructure() {
-        return new OperatorRefStructure();
+    public OperatorRef createOperatorRefStructure() {
+        return new OperatorRef();
     }
 
     /**
-     * Create an instance of {@link FacilityResponseStructure }
+     * Create an instance of {@link FacilityResponse }
      * 
      */
-    public FacilityResponseStructure createFacilityResponseStructure() {
-        return new FacilityResponseStructure();
+    public FacilityResponse createFacilityResponseStructure() {
+        return new FacilityResponse();
     }
 
     /**
-     * Create an instance of {@link FareZoneRefStructure }
+     * Create an instance of {@link FareZoneRef }
      * 
      */
-    public FareZoneRefStructure createFareZoneRefStructure() {
-        return new FareZoneRefStructure();
+    public FareZoneRef createFareZoneRefStructure() {
+        return new FareZoneRef();
     }
 
     /**
-     * Create an instance of {@link ConnectionDemandDeleteRequestStructure }
+     * Create an instance of {@link ConnectionDemandDeleteRequest }
      * 
      */
-    public ConnectionDemandDeleteRequestStructure createConnectionDemandDeleteRequestStructure() {
-        return new ConnectionDemandDeleteRequestStructure();
+    public ConnectionDemandDeleteRequest createConnectionDemandDeleteRequestStructure() {
+        return new ConnectionDemandDeleteRequest();
     }
 
     /**
-     * Create an instance of {@link OperatingDayRefStructure }
+     * Create an instance of {@link OperatingDayRef }
      * 
      */
-    public OperatingDayRefStructure createOperatingDayRefStructure() {
-        return new OperatingDayRefStructure();
+    public OperatingDayRef createOperatingDayRefStructure() {
+        return new OperatingDayRef();
     }
 
     /**
-     * Create an instance of {@link TripResponseStructure }
+     * Create an instance of {@link TripResponse }
      * 
      */
-    public TripResponseStructure createTripResponseStructure() {
-        return new TripResponseStructure();
+    public TripResponse createTripResponseStructure() {
+        return new TripResponse();
     }
 
     /**
-     * Create an instance of {@link IndividualRouteRefineResponseStructure }
+     * Create an instance of {@link IndividualRouteRefineResponse }
      * 
      */
-    public IndividualRouteRefineResponseStructure createIndividualRouteRefineResponseStructure() {
-        return new IndividualRouteRefineResponseStructure();
+    public IndividualRouteRefineResponse createIndividualRouteRefineResponseStructure() {
+        return new IndividualRouteRefineResponse();
     }
 
     /**
-     * Create an instance of {@link GeoCoordinatesRequestStructure }
+     * Create an instance of {@link GeoCoordinatesRequest }
      * 
      */
-    public GeoCoordinatesRequestStructure createGeoCoordinatesRequestStructure() {
-        return new GeoCoordinatesRequestStructure();
+    public GeoCoordinatesRequest createGeoCoordinatesRequestStructure() {
+        return new GeoCoordinatesRequest();
     }
 
     /**
-     * Create an instance of {@link ImageCoordinatesResponseStructure }
+     * Create an instance of {@link ImageCoordinatesResponse }
      * 
      */
-    public ImageCoordinatesResponseStructure createImageCoordinatesResponseStructure() {
-        return new ImageCoordinatesResponseStructure();
+    public ImageCoordinatesResponse createImageCoordinatesResponseStructure() {
+        return new ImageCoordinatesResponse();
     }
 
     /**
-     * Create an instance of {@link VehicleDataResponseStructure }
+     * Create an instance of {@link VehicleDataResponse }
      * 
      */
-    public VehicleDataResponseStructure createVehicleDataResponseStructure() {
-        return new VehicleDataResponseStructure();
+    public VehicleDataResponse createVehicleDataResponseStructure() {
+        return new VehicleDataResponse();
     }
 
     /**
-     * Create an instance of {@link ConnectionStatusNotificationStructure }
+     * Create an instance of {@link ConnectionStatusNotification }
      * 
      */
-    public ConnectionStatusNotificationStructure createConnectionStatusNotificationStructure() {
-        return new ConnectionStatusNotificationStructure();
+    public ConnectionStatusNotification createConnectionStatusNotificationStructure() {
+        return new ConnectionStatusNotification();
     }
 
     /**
-     * Create an instance of {@link FacilityRequestStructure }
+     * Create an instance of {@link FacilityRequest }
      * 
      */
-    public FacilityRequestStructure createFacilityRequestStructure() {
-        return new FacilityRequestStructure();
+    public FacilityRequest createFacilityRequestStructure() {
+        return new FacilityRequest();
     }
 
     /**
-     * Create an instance of {@link ConnectionDemandRequestStructure }
+     * Create an instance of {@link ConnectionDemandRequest }
      * 
      */
-    public ConnectionDemandRequestStructure createConnectionDemandRequestStructure() {
-        return new ConnectionDemandRequestStructure();
+    public ConnectionDemandRequest createConnectionDemandRequestStructure() {
+        return new ConnectionDemandRequest();
     }
 
     /**
-     * Create an instance of {@link TripInfoRefineResponseStructure }
+     * Create an instance of {@link TripInfoRefineResponse }
      * 
      */
-    public TripInfoRefineResponseStructure createTripInfoRefineResponseStructure() {
-        return new TripInfoRefineResponseStructure();
+    public TripInfoRefineResponse createTripInfoRefineResponseStructure() {
+        return new TripInfoRefineResponse();
     }
 
     /**
-     * Create an instance of {@link PersonalisationEnumerateValuesResponseStructure }
+     * Create an instance of {@link PersonalisationEnumerateValuesResponse }
      * 
      */
-    public PersonalisationEnumerateValuesResponseStructure createPersonalisationEnumerateValuesResponseStructure() {
-        return new PersonalisationEnumerateValuesResponseStructure();
+    public PersonalisationEnumerateValuesResponse createPersonalisationEnumerateValuesResponseStructure() {
+        return new PersonalisationEnumerateValuesResponse();
     }
 
     /**
-     * Create an instance of {@link FaresRequestStructure }
+     * Create an instance of {@link FaresRequest }
      * 
      */
-    public FaresRequestStructure createFaresRequestStructure() {
-        return new FaresRequestStructure();
+    public FaresRequest createFaresRequestStructure() {
+        return new FaresRequest();
     }
 
     /**
-     * Create an instance of {@link PersonalisationEnumerateValuesRequestStructure }
+     * Create an instance of {@link PersonalisationEnumerateValuesRequest }
      * 
      */
-    public PersonalisationEnumerateValuesRequestStructure createPersonalisationEnumerateValuesRequestStructure() {
-        return new PersonalisationEnumerateValuesRequestStructure();
+    public PersonalisationEnumerateValuesRequest createPersonalisationEnumerateValuesRequestStructure() {
+        return new PersonalisationEnumerateValuesRequest();
     }
 
     /**
-     * Create an instance of {@link LocalityRefStructure }
+     * Create an instance of {@link LocalityRef }
      * 
      */
-    public LocalityRefStructure createLocalityRefStructure() {
-        return new LocalityRefStructure();
+    public LocalityRef createLocalityRefStructure() {
+        return new LocalityRef();
     }
 
     /**
-     * Create an instance of {@link StopPointRefStructure }
+     * Create an instance of {@link StopPointRef }
      * 
      */
-    public StopPointRefStructure createStopPointRefStructure() {
-        return new StopPointRefStructure();
+    public StopPointRef createStopPointRefStructure() {
+        return new StopPointRef();
     }
 
     /**
-     * Create an instance of {@link TripMonitoringSubscriptionRequestStructure }
+     * Create an instance of {@link TripMonitoringSubscriptionRequest }
      * 
      */
-    public TripMonitoringSubscriptionRequestStructure createTripMonitoringSubscriptionRequestStructure() {
-        return new TripMonitoringSubscriptionRequestStructure();
+    public TripMonitoringSubscriptionRequest createTripMonitoringSubscriptionRequestStructure() {
+        return new TripMonitoringSubscriptionRequest();
     }
 
     /**
-     * Create an instance of {@link LocationInformationRequestStructure }
+     * Create an instance of {@link LocationInformationRequest }
      * 
      */
-    public LocationInformationRequestStructure createLocationInformationRequestStructure() {
-        return new LocationInformationRequestStructure();
+    public LocationInformationRequest createLocationInformationRequestStructure() {
+        return new LocationInformationRequest();
     }
 
     /**
-     * Create an instance of {@link MapServiceResponseStructure }
+     * Create an instance of {@link MapServiceResponse }
      * 
      */
-    public MapServiceResponseStructure createMapServiceResponseStructure() {
-        return new MapServiceResponseStructure();
+    public MapServiceResponse createMapServiceResponseStructure() {
+        return new MapServiceResponse();
     }
 
     /**
-     * Create an instance of {@link InfrastructureFacilityStructure }
+     * Create an instance of {@link InfrastructureFacility }
      * 
      */
-    public InfrastructureFacilityStructure createInfrastructureFacilityStructure() {
-        return new InfrastructureFacilityStructure();
+    public InfrastructureFacility createInfrastructureFacilityStructure() {
+        return new InfrastructureFacility();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterRequestStructure }
+     * Create an instance of {@link ServiceRegisterRequest }
      * 
      */
-    public ServiceRegisterRequestStructure createServiceRegisterRequestStructure() {
-        return new ServiceRegisterRequestStructure();
+    public ServiceRegisterRequest createServiceRegisterRequestStructure() {
+        return new ServiceRegisterRequest();
     }
 
     /**
-     * Create an instance of {@link RefineResponseStructure }
+     * Create an instance of {@link RefineResponse }
      * 
      */
-    public RefineResponseStructure createRefineResponseStructure() {
-        return new RefineResponseStructure();
+    public RefineResponse createRefineResponseStructure() {
+        return new RefineResponse();
     }
 
     /**
-     * Create an instance of {@link LocationInformationRefineResponseStructure }
+     * Create an instance of {@link LocationInformationRefineResponse }
      * 
      */
-    public LocationInformationRefineResponseStructure createLocationInformationRefineResponseStructure() {
-        return new LocationInformationRefineResponseStructure();
+    public LocationInformationRefineResponse createLocationInformationRefineResponseStructure() {
+        return new LocationInformationRefineResponse();
     }
 
     /**
-     * Create an instance of {@link PersonalisationDeleteValueRequestStructure }
+     * Create an instance of {@link PersonalisationDeleteValueRequest }
      * 
      */
-    public PersonalisationDeleteValueRequestStructure createPersonalisationDeleteValueRequestStructure() {
-        return new PersonalisationDeleteValueRequestStructure();
+    public PersonalisationDeleteValueRequest createPersonalisationDeleteValueRequestStructure() {
+        return new PersonalisationDeleteValueRequest();
     }
 
     /**
-     * Create an instance of {@link LocationInformationResponseStructure }
+     * Create an instance of {@link LocationInformationResponse }
      * 
      */
-    public LocationInformationResponseStructure createLocationInformationResponseStructure() {
-        return new LocationInformationResponseStructure();
+    public LocationInformationResponse createLocationInformationResponseStructure() {
+        return new LocationInformationResponse();
     }
 
     /**
-     * Create an instance of {@link PositioningRequestStructure }
+     * Create an instance of {@link PositioningRequest }
      * 
      */
-    public PositioningRequestStructure createPositioningRequestStructure() {
-        return new PositioningRequestStructure();
+    public PositioningRequest createPositioningRequestStructure() {
+        return new PositioningRequest();
     }
 
     /**
-     * Create an instance of {@link ParticipantRefStructure }
+     * Create an instance of {@link ParticipantRef }
      * 
      */
-    public ParticipantRefStructure createParticipantRefStructure() {
-        return new ParticipantRefStructure();
+    public ParticipantRef createParticipantRefStructure() {
+        return new ParticipantRef();
     }
 
     /**
-     * Create an instance of {@link StopEventRequestStructure }
+     * Create an instance of {@link StopEventRequest }
      * 
      */
-    public StopEventRequestStructure createStopEventRequestStructure() {
-        return new StopEventRequestStructure();
+    public StopEventRequest createStopEventRequestStructure() {
+        return new StopEventRequest();
     }
 
     /**
-     * Create an instance of {@link ConnectionDemandResponseStructure }
+     * Create an instance of {@link ConnectionDemandResponse }
      * 
      */
-    public ConnectionDemandResponseStructure createConnectionDemandResponseStructure() {
-        return new ConnectionDemandResponseStructure();
+    public ConnectionDemandResponse createConnectionDemandResponseStructure() {
+        return new ConnectionDemandResponse();
     }
 
     /**
-     * Create an instance of {@link VehicleInteractionResponseStructure }
+     * Create an instance of {@link VehicleInteractionResponse }
      * 
      */
-    public VehicleInteractionResponseStructure createVehicleInteractionResponseStructure() {
-        return new VehicleInteractionResponseStructure();
+    public VehicleInteractionResponse createVehicleInteractionResponseStructure() {
+        return new VehicleInteractionResponse();
     }
 
     /**
-     * Create an instance of {@link TripRefineResponseStructure }
+     * Create an instance of {@link TripRefineResponse }
      * 
      */
-    public TripRefineResponseStructure createTripRefineResponseStructure() {
-        return new TripRefineResponseStructure();
+    public TripRefineResponse createTripRefineResponseStructure() {
+        return new TripRefineResponse();
     }
 
     /**
-     * Create an instance of {@link StopRequestRequestStructure }
+     * Create an instance of {@link StopRequestRequest }
      * 
      */
-    public StopRequestRequestStructure createStopRequestRequestStructure() {
-        return new StopRequestRequestStructure();
+    public StopRequestRequest createStopRequestRequestStructure() {
+        return new StopRequestRequest();
     }
 
     /**
-     * Create an instance of {@link FaresAuthorityRefStructure }
+     * Create an instance of {@link FaresAuthorityRef }
      * 
      */
-    public FaresAuthorityRefStructure createFaresAuthorityRefStructure() {
-        return new FaresAuthorityRefStructure();
+    public FaresAuthorityRef createFaresAuthorityRefStructure() {
+        return new FaresAuthorityRef();
     }
 
     /**
-     * Create an instance of {@link VehicleFacilityStructure }
+     * Create an instance of {@link VehicleFacility }
      * 
      */
-    public VehicleFacilityStructure createVehicleFacilityStructure() {
-        return new VehicleFacilityStructure();
+    public VehicleFacility createVehicleFacilityStructure() {
+        return new VehicleFacility();
     }
 
     /**
-     * Create an instance of {@link TripInfoResponseStructure }
+     * Create an instance of {@link TripInfoResponse }
      * 
      */
-    public TripInfoResponseStructure createTripInfoResponseStructure() {
-        return new TripInfoResponseStructure();
+    public TripInfoResponse createTripInfoResponseStructure() {
+        return new TripInfoResponse();
     }
 
     /**
-     * Create an instance of {@link FacilityRefStructure }
+     * Create an instance of {@link FacilityRef }
      * 
      */
-    public FacilityRefStructure createFacilityRefStructure() {
-        return new FacilityRefStructure();
+    public FacilityRef createFacilityRefStructure() {
+        return new FacilityRef();
     }
 
     /**
-     * Create an instance of {@link VehicleInteractionRequestStructure }
+     * Create an instance of {@link VehicleInteractionRequest }
      * 
      */
-    public VehicleInteractionRequestStructure createVehicleInteractionRequestStructure() {
-        return new VehicleInteractionRequestStructure();
+    public VehicleInteractionRequest createVehicleInteractionRequestStructure() {
+        return new VehicleInteractionRequest();
     }
 
     /**
-     * Create an instance of {@link ConnectionStatusResponseStructure }
+     * Create an instance of {@link ConnectionStatusResponse }
      * 
      */
-    public ConnectionStatusResponseStructure createConnectionStatusResponseStructure() {
-        return new ConnectionStatusResponseStructure();
+    public ConnectionStatusResponse createConnectionStatusResponseStructure() {
+        return new ConnectionStatusResponse();
     }
 
     /**
-     * Create an instance of {@link PersonalisationRequestStructure }
+     * Create an instance of {@link PersonalisationRequest }
      * 
      */
-    public PersonalisationRequestStructure createPersonalisationRequestStructure() {
-        return new PersonalisationRequestStructure();
+    public PersonalisationRequest createPersonalisationRequestStructure() {
+        return new PersonalisationRequest();
     }
 
     /**
-     * Create an instance of {@link ImageCoordinatesRequestStructure }
+     * Create an instance of {@link ImageCoordinatesRequest }
      * 
      */
-    public ImageCoordinatesRequestStructure createImageCoordinatesRequestStructure() {
-        return new ImageCoordinatesRequestStructure();
+    public ImageCoordinatesRequest createImageCoordinatesRequestStructure() {
+        return new ImageCoordinatesRequest();
     }
 
     /**
-     * Create an instance of {@link TravellerCardRefStructure }
+     * Create an instance of {@link TravellerCardRef }
      * 
      */
-    public TravellerCardRefStructure createTravellerCardRefStructure() {
-        return new TravellerCardRefStructure();
+    public TravellerCardRef createTravellerCardRefStructure() {
+        return new TravellerCardRef();
     }
 
     /**
-     * Create an instance of {@link BookingInfoResponseStructure }
+     * Create an instance of {@link BookingInfoResponse }
      * 
      */
-    public BookingInfoResponseStructure createBookingInfoResponseStructure() {
-        return new BookingInfoResponseStructure();
+    public BookingInfoResponse createBookingInfoResponseStructure() {
+        return new BookingInfoResponse();
     }
 
     /**
-     * Create an instance of {@link FacilityStatusReportStructure }
+     * Create an instance of {@link FacilityStatusReport }
      * 
      */
-    public FacilityStatusReportStructure createFacilityStatusReportStructure() {
-        return new FacilityStatusReportStructure();
+    public FacilityStatusReport createFacilityStatusReportStructure() {
+        return new FacilityStatusReport();
     }
 
     /**
-     * Create an instance of {@link TripMonitoringDeliveryStructure }
+     * Create an instance of {@link TripMonitoringDelivery }
      * 
      */
-    public TripMonitoringDeliveryStructure createTripMonitoringDeliveryStructure() {
-        return new TripMonitoringDeliveryStructure();
+    public TripMonitoringDelivery createTripMonitoringDeliveryStructure() {
+        return new TripMonitoringDelivery();
     }
 
     /**
-     * Create an instance of {@link AddressRefStructure }
+     * Create an instance of {@link AddressRef }
      * 
      */
-    public AddressRefStructure createAddressRefStructure() {
-        return new AddressRefStructure();
+    public AddressRef createAddressRefStructure() {
+        return new AddressRef();
     }
 
     /**
-     * Create an instance of {@link PersonalisationResponseStructure }
+     * Create an instance of {@link PersonalisationResponse }
      * 
      */
-    public PersonalisationResponseStructure createPersonalisationResponseStructure() {
-        return new PersonalisationResponseStructure();
+    public PersonalisationResponse createPersonalisationResponseStructure() {
+        return new PersonalisationResponse();
     }
 
     /**
-     * Create an instance of {@link StopPlaceRefStructure }
+     * Create an instance of {@link StopPlaceRef }
      * 
      */
-    public StopPlaceRefStructure createStopPlaceRefStructure() {
-        return new StopPlaceRefStructure();
+    public StopPlaceRef createStopPlaceRefStructure() {
+        return new StopPlaceRef();
     }
 
     /**
-     * Create an instance of {@link VehicleTypeRefStructure }
+     * Create an instance of {@link VehicleTypeRef }
      * 
      */
-    public VehicleTypeRefStructure createVehicleTypeRefStructure() {
-        return new VehicleTypeRefStructure();
+    public VehicleTypeRef createVehicleTypeRefStructure() {
+        return new VehicleTypeRef();
     }
 
     /**
-     * Create an instance of {@link ActivateOutsideSpeakerResponseStructure }
+     * Create an instance of {@link ActivateOutsideSpeakerResponse }
      * 
      */
-    public ActivateOutsideSpeakerResponseStructure createActivateOutsideSpeakerResponseStructure() {
-        return new ActivateOutsideSpeakerResponseStructure();
+    public ActivateOutsideSpeakerResponse createActivateOutsideSpeakerResponseStructure() {
+        return new ActivateOutsideSpeakerResponse();
     }
 
     /**
-     * Create an instance of {@link ActivateOutsideSpeakerRequestStructure }
+     * Create an instance of {@link ActivateOutsideSpeakerRequest }
      * 
      */
-    public ActivateOutsideSpeakerRequestStructure createActivateOutsideSpeakerRequestStructure() {
-        return new ActivateOutsideSpeakerRequestStructure();
+    public ActivateOutsideSpeakerRequest createActivateOutsideSpeakerRequestStructure() {
+        return new ActivateOutsideSpeakerRequest();
     }
 
     /**
-     * Create an instance of {@link TicketRefStructure }
+     * Create an instance of {@link TicketRef }
      * 
      */
-    public TicketRefStructure createTicketRefStructure() {
-        return new TicketRefStructure();
+    public TicketRef createTicketRefStructure() {
+        return new TicketRef();
     }
 
     /**
-     * Create an instance of {@link OwnerRefStructure }
+     * Create an instance of {@link OwnerRef }
      * 
      */
-    public OwnerRefStructure createOwnerRefStructure() {
-        return new OwnerRefStructure();
+    public OwnerRef createOwnerRefStructure() {
+        return new OwnerRef();
     }
 
     /**
-     * Create an instance of {@link PositioningResponseStructure }
+     * Create an instance of {@link PositioningResponse }
      * 
      */
-    public PositioningResponseStructure createPositioningResponseStructure() {
-        return new PositioningResponseStructure();
+    public PositioningResponse createPositioningResponseStructure() {
+        return new PositioningResponse();
     }
 
     /**
-     * Create an instance of {@link ParallelServiceStructure }
+     * Create an instance of {@link ParallelService }
      * 
      */
-    public ParallelServiceStructure createParallelServiceStructure() {
-        return new ParallelServiceStructure();
+    public ParallelService createParallelServiceStructure() {
+        return new ParallelService();
     }
 
     /**
-     * Create an instance of {@link LineDirectionStructure }
+     * Create an instance of {@link LineDirection }
      * 
      */
-    public LineDirectionStructure createLineDirectionStructure() {
-        return new LineDirectionStructure();
+    public LineDirection createLineDirectionStructure() {
+        return new LineDirection();
     }
 
     /**
-     * Create an instance of {@link RequestPayloadStructure }
+     * Create an instance of {@link RequestPayload }
      * 
      */
-    public RequestPayloadStructure createRequestPayloadStructure() {
-        return new RequestPayloadStructure();
+    public RequestPayload createRequestPayloadStructure() {
+        return new RequestPayload();
     }
 
     /**
-     * Create an instance of {@link StopPlaceStructure }
+     * Create an instance of {@link StopPlace }
      * 
      */
-    public StopPlaceStructure createStopPlaceStructure() {
-        return new StopPlaceStructure();
+    public StopPlace createStopPlaceStructure() {
+        return new StopPlace();
     }
 
     /**
-     * Create an instance of {@link NavigationSectionStructure }
+     * Create an instance of {@link NavigationSection }
      * 
      */
-    public NavigationSectionStructure createNavigationSectionStructure() {
-        return new NavigationSectionStructure();
+    public NavigationSection createNavigationSectionStructure() {
+        return new NavigationSection();
     }
 
     /**
-     * Create an instance of {@link VehicleStatusStructure }
+     * Create an instance of {@link VehicleStatus }
      * 
      */
-    public VehicleStatusStructure createVehicleStatusStructure() {
-        return new VehicleStatusStructure();
+    public VehicleStatus createVehicleStatusStructure() {
+        return new VehicleStatus();
     }
 
     /**
-     * Create an instance of {@link PrivateCodeStructure }
+     * Create an instance of {@link PrivateCode }
      * 
      */
-    public PrivateCodeStructure createPrivateCodeStructure() {
-        return new PrivateCodeStructure();
+    public PrivateCode createPrivateCodeStructure() {
+        return new PrivateCode();
     }
 
     /**
-     * Create an instance of {@link DisplayContentStructure }
+     * Create an instance of {@link DisplayContent }
      * 
      */
-    public DisplayContentStructure createDisplayContentStructure() {
-        return new DisplayContentStructure();
+    public DisplayContent createDisplayContentStructure() {
+        return new DisplayContent();
     }
 
     /**
-     * Create an instance of {@link TripInfoParamStructure }
+     * Create an instance of {@link TripInfoParam }
      * 
      */
-    public TripInfoParamStructure createTripInfoParamStructure() {
-        return new TripInfoParamStructure();
+    public TripInfoParam createTripInfoParamStructure() {
+        return new TripInfoParam();
     }
 
     /**
-     * Create an instance of {@link LocationRefStructure }
+     * Create an instance of {@link LocationRef }
      * 
      */
-    public LocationRefStructure createLocationRefStructure() {
-        return new LocationRefStructure();
+    public LocationRef createLocationRefStructure() {
+        return new LocationRef();
     }
 
     /**
-     * Create an instance of {@link IndividualRouteRefineRequestStructure }
+     * Create an instance of {@link IndividualRouteRefineRequest }
      * 
      */
-    public IndividualRouteRefineRequestStructure createIndividualRouteRefineRequestStructure() {
-        return new IndividualRouteRefineRequestStructure();
+    public IndividualRouteRefineRequest createIndividualRouteRefineRequestStructure() {
+        return new IndividualRouteRefineRequest();
     }
 
     /**
-     * Create an instance of {@link GeneralAttributeStructure }
+     * Create an instance of {@link GeneralAttribute }
      * 
      */
-    public GeneralAttributeStructure createGeneralAttributeStructure() {
-        return new GeneralAttributeStructure();
+    public GeneralAttribute createGeneralAttributeStructure() {
+        return new GeneralAttribute();
     }
 
     /**
-     * Create an instance of {@link ProgressBetweenStopsStructure }
+     * Create an instance of {@link ProgressBetweenStops }
      * 
      */
-    public ProgressBetweenStopsStructure createProgressBetweenStopsStructure() {
-        return new ProgressBetweenStopsStructure();
+    public ProgressBetweenStops createProgressBetweenStopsStructure() {
+        return new ProgressBetweenStops();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterLookupRequestStructure }
+     * Create an instance of {@link ServiceRegisterLookupRequest }
      * 
      */
-    public ServiceRegisterLookupRequestStructure createServiceRegisterLookupRequestStructure() {
-        return new ServiceRegisterLookupRequestStructure();
+    public ServiceRegisterLookupRequest createServiceRegisterLookupRequestStructure() {
+        return new ServiceRegisterLookupRequest();
     }
 
     /**
-     * Create an instance of {@link AnnouncementStructure }
+     * Create an instance of {@link Announcement }
      * 
      */
-    public AnnouncementStructure createAnnouncementStructure() {
-        return new AnnouncementStructure();
+    public Announcement createAnnouncementStructure() {
+        return new Announcement();
     }
 
     /**
-     * Create an instance of {@link FeederDistributorStructure }
+     * Create an instance of {@link FeederDistributor }
      * 
      */
-    public FeederDistributorStructure createFeederDistributorStructure() {
-        return new FeederDistributorStructure();
+    public FeederDistributor createFeederDistributorStructure() {
+        return new FeederDistributor();
     }
 
     /**
-     * Create an instance of {@link ContinuousServiceStructure }
+     * Create an instance of {@link ContinuousService }
      * 
      */
-    public ContinuousServiceStructure createContinuousServiceStructure() {
-        return new ContinuousServiceStructure();
+    public ContinuousService createContinuousServiceStructure() {
+        return new ContinuousService();
     }
 
     /**
-     * Create an instance of {@link StopEventParamStructure }
+     * Create an instance of {@link StopEventParam }
      * 
      */
-    public StopEventParamStructure createStopEventParamStructure() {
-        return new StopEventParamStructure();
+    public StopEventParam createStopEventParamStructure() {
+        return new StopEventParam();
     }
 
     /**
-     * Create an instance of {@link TripInfoResponseContextStructure }
+     * Create an instance of {@link TripInfoResponseContext }
      * 
      */
-    public TripInfoResponseContextStructure createTripInfoResponseContextStructure() {
-        return new TripInfoResponseContextStructure();
+    public TripInfoResponseContext createTripInfoResponseContextStructure() {
+        return new TripInfoResponseContext();
     }
 
     /**
-     * Create an instance of {@link ServiceSectionStructure }
+     * Create an instance of {@link ServiceSection }
      * 
      */
-    public ServiceSectionStructure createServiceSectionStructure() {
-        return new ServiceSectionStructure();
+    public ServiceSection createServiceSectionStructure() {
+        return new ServiceSection();
     }
 
     /**
-     * Create an instance of {@link BookingInfoStructure }
+     * Create an instance of {@link BookingInfo }
      * 
      */
-    public BookingInfoStructure createBookingInfoStructure() {
-        return new BookingInfoStructure();
+    public BookingInfo createBookingInfoStructure() {
+        return new BookingInfo();
     }
 
     /**
-     * Create an instance of {@link LegIntermediateStructure }
+     * Create an instance of {@link LegIntermediate }
      * 
      */
-    public LegIntermediateStructure createLegIntermediateStructure() {
-        return new LegIntermediateStructure();
+    public LegIntermediate createLegIntermediateStructure() {
+        return new LegIntermediate();
     }
 
     /**
-     * Create an instance of {@link StopSequenceStructure }
+     * Create an instance of {@link StopSequence }
      * 
      */
-    public StopSequenceStructure createStopSequenceStructure() {
-        return new StopSequenceStructure();
+    public StopSequence createStopSequenceStructure() {
+        return new StopSequence();
     }
 
     /**
-     * Create an instance of {@link StopEventResultStructure }
+     * Create an instance of {@link StopEventResult }
      * 
      */
-    public StopEventResultStructure createStopEventResultStructure() {
-        return new StopEventResultStructure();
+    public StopEventResult createStopEventResultStructure() {
+        return new StopEventResult();
     }
 
     /**
-     * Create an instance of {@link OperatorFilterStructure }
+     * Create an instance of {@link OperatorFilter }
      * 
      */
-    public OperatorFilterStructure createOperatorFilterStructure() {
-        return new OperatorFilterStructure();
+    public OperatorFilter createOperatorFilterStructure() {
+        return new OperatorFilter();
     }
 
     /**
-     * Create an instance of {@link AccessPathStructure }
+     * Create an instance of {@link AccessPath }
      * 
      */
-    public AccessPathStructure createAccessPathStructure() {
-        return new AccessPathStructure();
+    public AccessPath createAccessPathStructure() {
+        return new AccessPath();
     }
 
     /**
-     * Create an instance of {@link TriasServiceStructure }
+     * Create an instance of {@link TriasService }
      * 
      */
-    public TriasServiceStructure createTriasServiceStructure() {
-        return new TriasServiceStructure();
+    public TriasService createTriasServiceStructure() {
+        return new TriasService();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterRegisterResponseStructure }
+     * Create an instance of {@link ServiceRegisterRegisterResponse }
      * 
      */
-    public ServiceRegisterRegisterResponseStructure createServiceRegisterRegisterResponseStructure() {
-        return new ServiceRegisterRegisterResponseStructure();
+    public ServiceRegisterRegisterResponse createServiceRegisterRegisterResponseStructure() {
+        return new ServiceRegisterRegisterResponse();
     }
 
     /**
-     * Create an instance of {@link PassengerAccessibilityStructure }
+     * Create an instance of {@link PassengerAccessibility }
      * 
      */
-    public PassengerAccessibilityStructure createPassengerAccessibilityStructure() {
-        return new PassengerAccessibilityStructure();
+    public PassengerAccessibility createPassengerAccessibilityStructure() {
+        return new PassengerAccessibility();
     }
 
     /**
-     * Create an instance of {@link GeoCoordinateResultStructure }
+     * Create an instance of {@link GeoCoordinateResult }
      * 
      */
-    public GeoCoordinateResultStructure createGeoCoordinateResultStructure() {
-        return new GeoCoordinateResultStructure();
+    public GeoCoordinateResult createGeoCoordinateResultStructure() {
+        return new GeoCoordinateResult();
     }
 
     /**
-     * Create an instance of {@link CallAtStopStructure }
+     * Create an instance of {@link CallAtStop }
      * 
      */
-    public CallAtStopStructure createCallAtStopStructure() {
-        return new CallAtStopStructure();
+    public CallAtStop createCallAtStopStructure() {
+        return new CallAtStop();
     }
 
     /**
-     * Create an instance of {@link DatedJourneyStructure }
+     * Create an instance of {@link DatedJourney }
      * 
      */
-    public DatedJourneyStructure createDatedJourneyStructure() {
-        return new DatedJourneyStructure();
+    public DatedJourney createDatedJourneyStructure() {
+        return new DatedJourney();
     }
 
     /**
-     * Create an instance of {@link ServiceCallStructure }
+     * Create an instance of {@link ServiceCall }
      * 
      */
-    public ServiceCallStructure createServiceCallStructure() {
-        return new ServiceCallStructure();
+    public ServiceCall createServiceCallStructure() {
+        return new ServiceCall();
     }
 
     /**
-     * Create an instance of {@link AddressStructure }
+     * Create an instance of {@link Address }
      * 
      */
-    public AddressStructure createAddressStructure() {
-        return new AddressStructure();
+    public Address createAddressStructure() {
+        return new Address();
     }
 
     /**
-     * Create an instance of {@link MultiTripFaresResultStructure }
+     * Create an instance of {@link MultiTripFaresResult }
      * 
      */
-    public MultiTripFaresResultStructure createMultiTripFaresResultStructure() {
-        return new MultiTripFaresResultStructure();
+    public MultiTripFaresResult createMultiTripFaresResultStructure() {
+        return new MultiTripFaresResult();
     }
 
     /**
-     * Create an instance of {@link ErrorMessageStructure }
+     * Create an instance of {@link ErrorMessage }
      * 
      */
-    public ErrorMessageStructure createErrorMessageStructure() {
-        return new ErrorMessageStructure();
+    public ErrorMessage createErrorMessageStructure() {
+        return new ErrorMessage();
     }
 
     /**
-     * Create an instance of {@link LocationResultStructure }
+     * Create an instance of {@link LocationResult }
      * 
      */
-    public LocationResultStructure createLocationResultStructure() {
-        return new LocationResultStructure();
+    public LocationResult createLocationResultStructure() {
+        return new LocationResult();
     }
 
     /**
-     * Create an instance of {@link NavigationPathStructure }
+     * Create an instance of {@link NavigationPath }
      * 
      */
-    public NavigationPathStructure createNavigationPathStructure() {
-        return new NavigationPathStructure();
+    public NavigationPath createNavigationPathStructure() {
+        return new NavigationPath();
     }
 
     /**
-     * Create an instance of {@link ViaStructure }
+     * Create an instance of {@link Via }
      * 
      */
-    public ViaStructure createViaStructure() {
-        return new ViaStructure();
+    public Via createViaStructure() {
+        return new Via();
     }
 
     /**
-     * Create an instance of {@link TimedLegStructure }
+     * Create an instance of {@link TimedLeg }
      * 
      */
-    public TimedLegStructure createTimedLegStructure() {
-        return new TimedLegStructure();
+    public TimedLeg createTimedLegStructure() {
+        return new TimedLeg();
     }
 
     /**
-     * Create an instance of {@link LineDirectionFilterStructure }
+     * Create an instance of {@link LineDirectionFilter }
      * 
      */
-    public LineDirectionFilterStructure createLineDirectionFilterStructure() {
-        return new LineDirectionFilterStructure();
+    public LineDirectionFilter createLineDirectionFilterStructure() {
+        return new LineDirectionFilter();
     }
 
     /**
-     * Create an instance of {@link MapAspectStructure }
+     * Create an instance of {@link MapAspect }
      * 
      */
-    public MapAspectStructure createMapAspectStructure() {
-        return new MapAspectStructure();
+    public MapAspect createMapAspectStructure() {
+        return new MapAspect();
     }
 
     /**
-     * Create an instance of {@link InterchangeLegStructure }
+     * Create an instance of {@link InterchangeLeg }
      * 
      */
-    public InterchangeLegStructure createInterchangeLegStructure() {
-        return new InterchangeLegStructure();
+    public InterchangeLeg createInterchangeLegStructure() {
+        return new InterchangeLeg();
     }
 
     /**
-     * Create an instance of {@link LocationStructure }
+     * Create an instance of {@link Location }
      * 
      */
-    public LocationStructure createLocationStructure() {
-        return new LocationStructure();
+    public Location createLocationStructure() {
+        return new Location();
     }
 
     /**
-     * Create an instance of {@link RecommendationStructure }
+     * Create an instance of {@link Recommendation }
      * 
      */
-    public RecommendationStructure createRecommendationStructure() {
-        return new RecommendationStructure();
+    public Recommendation createRecommendationStructure() {
+        return new Recommendation();
     }
 
     /**
-     * Create an instance of {@link PointOfInterestFilterStructure }
+     * Create an instance of {@link PointOfInterestFilter }
      * 
      */
-    public PointOfInterestFilterStructure createPointOfInterestFilterStructure() {
-        return new PointOfInterestFilterStructure();
+    public PointOfInterestFilter createPointOfInterestFilterStructure() {
+        return new PointOfInterestFilter();
     }
 
     /**
-     * Create an instance of {@link TimedStopStructure }
+     * Create an instance of {@link TimedStop }
      * 
      */
-    public TimedStopStructure createTimedStopStructure() {
-        return new TimedStopStructure();
+    public TimedStop createTimedStopStructure() {
+        return new TimedStop();
     }
 
     /**
-     * Create an instance of {@link StopEventResponseContextStructure }
+     * Create an instance of {@link StopEventResponseContext }
      * 
      */
-    public StopEventResponseContextStructure createStopEventResponseContextStructure() {
-        return new StopEventResponseContextStructure();
+    public StopEventResponseContext createStopEventResponseContextStructure() {
+        return new StopEventResponseContext();
     }
 
     /**
-     * Create an instance of {@link TripLegStructure }
+     * Create an instance of {@link TripLeg }
      * 
      */
-    public TripLegStructure createTripLegStructure() {
-        return new TripLegStructure();
+    public TripLeg createTripLegStructure() {
+        return new TripLeg();
     }
 
     /**
-     * Create an instance of {@link StopInformationStructure }
+     * Create an instance of {@link StopInformation }
      * 
      */
-    public StopInformationStructure createStopInformationStructure() {
-        return new StopInformationStructure();
+    public StopInformation createStopInformationStructure() {
+        return new StopInformation();
     }
 
     /**
-     * Create an instance of {@link MapCoordinateStructure }
+     * Create an instance of {@link MapCoordinate }
      * 
      */
-    public MapCoordinateStructure createMapCoordinateStructure() {
-        return new MapCoordinateStructure();
+    public MapCoordinate createMapCoordinateStructure() {
+        return new MapCoordinate();
     }
 
     /**
-     * Create an instance of {@link StopPointStructure }
+     * Create an instance of {@link StopPoint }
      * 
      */
-    public StopPointStructure createStopPointStructure() {
-        return new StopPointStructure();
+    public StopPoint createStopPointStructure() {
+        return new StopPoint();
     }
 
     /**
-     * Create an instance of {@link IndividualRouteLocationContextStructure }
+     * Create an instance of {@link IndividualRouteLocationContext }
      * 
      */
-    public IndividualRouteLocationContextStructure createIndividualRouteLocationContextStructure() {
-        return new IndividualRouteLocationContextStructure();
+    public IndividualRouteLocationContext createIndividualRouteLocationContextStructure() {
+        return new IndividualRouteLocationContext();
     }
 
     /**
-     * Create an instance of {@link RankedPositionStructure }
+     * Create an instance of {@link RankedPosition }
      * 
      */
-    public RankedPositionStructure createRankedPositionStructure() {
-        return new RankedPositionStructure();
+    public RankedPosition createRankedPositionStructure() {
+        return new RankedPosition();
     }
 
     /**
-     * Create an instance of {@link TripFaresResultStructure }
+     * Create an instance of {@link TripFaresResult }
      * 
      */
-    public TripFaresResultStructure createTripFaresResultStructure() {
-        return new TripFaresResultStructure();
+    public TripFaresResult createTripFaresResultStructure() {
+        return new TripFaresResult();
     }
 
     /**
-     * Create an instance of {@link VehicleTypeStructure }
+     * Create an instance of {@link VehicleType }
      * 
      */
-    public VehicleTypeStructure createVehicleTypeStructure() {
-        return new VehicleTypeStructure();
+    public VehicleType createVehicleTypeStructure() {
+        return new VehicleType();
     }
 
     /**
-     * Create an instance of {@link PointOfInterestCategoryStructure }
+     * Create an instance of {@link PointOfInterestCategory }
      * 
      */
-    public PointOfInterestCategoryStructure createPointOfInterestCategoryStructure() {
-        return new PointOfInterestCategoryStructure();
+    public PointOfInterestCategory createPointOfInterestCategoryStructure() {
+        return new PointOfInterestCategory();
     }
 
     /**
-     * Create an instance of {@link CallAtNearStopStructure }
+     * Create an instance of {@link CallAtNearStop }
      * 
      */
-    public CallAtNearStopStructure createCallAtNearStopStructure() {
-        return new CallAtNearStopStructure();
+    public CallAtNearStop createCallAtNearStopStructure() {
+        return new CallAtNearStop();
     }
 
     /**
-     * Create an instance of {@link BookingInfoResultStructure }
+     * Create an instance of {@link BookingInfoResult }
      * 
      */
-    public BookingInfoResultStructure createBookingInfoResultStructure() {
-        return new BookingInfoResultStructure();
+    public BookingInfoResult createBookingInfoResultStructure() {
+        return new BookingInfoResult();
     }
 
     /**
-     * Create an instance of {@link IndividualTripRefineParamStructure }
+     * Create an instance of {@link IndividualTripRefineParam }
      * 
      */
-    public IndividualTripRefineParamStructure createIndividualTripRefineParamStructure() {
-        return new IndividualTripRefineParamStructure();
+    public IndividualTripRefineParam createIndividualTripRefineParamStructure() {
+        return new IndividualTripRefineParam();
     }
 
     /**
-     * Create an instance of {@link TripStructure }
+     * Create an instance of {@link Trip }
      * 
      */
-    public TripStructure createTripStructure() {
-        return new TripStructure();
+    public Trip createTripStructure() {
+        return new Trip();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterUnregisterResponseStructure }
+     * Create an instance of {@link ServiceRegisterUnregisterResponse }
      * 
      */
-    public ServiceRegisterUnregisterResponseStructure createServiceRegisterUnregisterResponseStructure() {
-        return new ServiceRegisterUnregisterResponseStructure();
+    public ServiceRegisterUnregisterResponse createServiceRegisterUnregisterResponseStructure() {
+        return new ServiceRegisterUnregisterResponse();
     }
 
     /**
-     * Create an instance of {@link StopFaresRequestStructure }
+     * Create an instance of {@link StopFaresRequest }
      * 
      */
-    public StopFaresRequestStructure createStopFaresRequestStructure() {
-        return new StopFaresRequestStructure();
+    public StopFaresRequest createStopFaresRequestStructure() {
+        return new StopFaresRequest();
     }
 
     /**
-     * Create an instance of {@link GeoCircleStructure }
+     * Create an instance of {@link GeoCircle }
      * 
      */
-    public GeoCircleStructure createGeoCircleStructure() {
-        return new GeoCircleStructure();
+    public GeoCircle createGeoCircleStructure() {
+        return new GeoCircle();
     }
 
     /**
-     * Create an instance of {@link FaresResultStructure }
+     * Create an instance of {@link FaresResult }
      * 
      */
-    public FaresResultStructure createFaresResultStructure() {
-        return new FaresResultStructure();
+    public FaresResult createFaresResultStructure() {
+        return new FaresResult();
     }
 
     /**
-     * Create an instance of {@link ConnectionStructure }
+     * Create an instance of {@link Connection }
      * 
      */
-    public ConnectionStructure createConnectionStructure() {
-        return new ConnectionStructure();
+    public Connection createConnectionStructure() {
+        return new Connection();
     }
 
     /**
-     * Create an instance of {@link ServiceViaPointStructure }
+     * Create an instance of {@link ServiceViaPoint }
      * 
      */
-    public ServiceViaPointStructure createServiceViaPointStructure() {
-        return new ServiceViaPointStructure();
+    public ServiceViaPoint createServiceViaPointStructure() {
+        return new ServiceViaPoint();
     }
 
     /**
-     * Create an instance of {@link ViaPointStructure }
+     * Create an instance of {@link ViaPoint }
      * 
      */
-    public ViaPointStructure createViaPointStructure() {
-        return new ViaPointStructure();
+    public ViaPoint createViaPointStructure() {
+        return new ViaPoint();
     }
 
     /**
-     * Create an instance of {@link DeliveryPayloadStructure }
+     * Create an instance of {@link DeliveryPayload }
      * 
      */
-    public DeliveryPayloadStructure createDeliveryPayloadStructure() {
-        return new DeliveryPayloadStructure();
+    public DeliveryPayload createDeliveryPayloadStructure() {
+        return new DeliveryPayload();
     }
 
     /**
-     * Create an instance of {@link TripResultStructure }
+     * Create an instance of {@link TripResult }
      * 
      */
-    public TripResultStructure createTripResultStructure() {
-        return new TripResultStructure();
+    public TripResult createTripResultStructure() {
+        return new TripResult();
     }
 
     /**
-     * Create an instance of {@link TicketStructure }
+     * Create an instance of {@link Ticket }
      * 
      */
-    public TicketStructure createTicketStructure() {
-        return new TicketStructure();
+    public Ticket createTicketStructure() {
+        return new Ticket();
     }
 
     /**
-     * Create an instance of {@link StopEventStructure }
+     * Create an instance of {@link StopEvent }
      * 
      */
-    public StopEventStructure createStopEventStructure() {
-        return new StopEventStructure();
+    public StopEvent createStopEventStructure() {
+        return new StopEvent();
     }
 
     /**
-     * Create an instance of {@link StaticFaresResultStructure }
+     * Create an instance of {@link StaticFaresResult }
      * 
      */
-    public StaticFaresResultStructure createStaticFaresResultStructure() {
-        return new StaticFaresResultStructure();
+    public StaticFaresResult createStaticFaresResultStructure() {
+        return new StaticFaresResult();
     }
 
     /**
-     * Create an instance of {@link RouteResultStructure }
+     * Create an instance of {@link RouteResult }
      * 
      */
-    public RouteResultStructure createRouteResultStructure() {
-        return new RouteResultStructure();
+    public RouteResult createRouteResultStructure() {
+        return new RouteResult();
     }
 
     /**
-     * Create an instance of {@link PointOfInterestStructure }
+     * Create an instance of {@link PointOfInterest }
      * 
      */
-    public PointOfInterestStructure createPointOfInterestStructure() {
-        return new PointOfInterestStructure();
+    public PointOfInterest createPointOfInterestStructure() {
+        return new PointOfInterest();
     }
 
     /**
-     * Create an instance of {@link SituationsStructure }
+     * Create an instance of {@link Situations }
      * 
      */
-    public SituationsStructure createSituationsStructure() {
-        return new SituationsStructure();
+    public Situations createSituationsStructure() {
+        return new Situations();
     }
 
     /**
-     * Create an instance of {@link LineInformationStructure }
+     * Create an instance of {@link LineInformation }
      * 
      */
-    public LineInformationStructure createLineInformationStructure() {
-        return new LineInformationStructure();
+    public LineInformation createLineInformationStructure() {
+        return new LineInformation();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterLookupResponseStructure }
+     * Create an instance of {@link ServiceRegisterLookupResponse }
      * 
      */
-    public ServiceRegisterLookupResponseStructure createServiceRegisterLookupResponseStructure() {
-        return new ServiceRegisterLookupResponseStructure();
+    public ServiceRegisterLookupResponse createServiceRegisterLookupResponseStructure() {
+        return new ServiceRegisterLookupResponse();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterUpdateResponseStructure }
+     * Create an instance of {@link ServiceRegisterUpdateResponse }
      * 
      */
-    public ServiceRegisterUpdateResponseStructure createServiceRegisterUpdateResponseStructure() {
-        return new ServiceRegisterUpdateResponseStructure();
+    public ServiceRegisterUpdateResponse createServiceRegisterUpdateResponseStructure() {
+        return new ServiceRegisterUpdateResponse();
     }
 
     /**
-     * Create an instance of {@link ServiceAttributeStructure }
+     * Create an instance of {@link ServiceAttribute }
      * 
      */
-    public ServiceAttributeStructure createServiceAttributeStructure() {
-        return new ServiceAttributeStructure();
+    public ServiceAttribute createServiceAttributeStructure() {
+        return new ServiceAttribute();
     }
 
     /**
-     * Create an instance of {@link DestinationStructure }
+     * Create an instance of {@link Destination }
      * 
      */
-    public DestinationStructure createDestinationStructure() {
-        return new DestinationStructure();
+    public Destination createDestinationStructure() {
+        return new Destination();
     }
 
     /**
-     * Create an instance of {@link MapSizeStructure }
+     * Create an instance of {@link MapSize }
      * 
      */
-    public MapSizeStructure createMapSizeStructure() {
-        return new MapSizeStructure();
+    public MapSize createMapSizeStructure() {
+        return new MapSize();
     }
 
     /**
-     * Create an instance of {@link FaresParamStructure }
+     * Create an instance of {@link FaresParam }
      * 
      */
-    public FaresParamStructure createFaresParamStructure() {
-        return new FaresParamStructure();
+    public FaresParam createFaresParamStructure() {
+        return new FaresParam();
     }
 
     /**
-     * Create an instance of {@link TripFaresRequestStructure }
+     * Create an instance of {@link TripFaresRequest }
      * 
      */
-    public TripFaresRequestStructure createTripFaresRequestStructure() {
-        return new TripFaresRequestStructure();
+    public TripFaresRequest createTripFaresRequestStructure() {
+        return new TripFaresRequest();
     }
 
     /**
-     * Create an instance of {@link DatedCallAtLocationStructure }
+     * Create an instance of {@link DatedCallAtLocation }
      * 
      */
-    public DatedCallAtLocationStructure createDatedCallAtLocationStructure() {
-        return new DatedCallAtLocationStructure();
+    public DatedCallAtLocation createDatedCallAtLocationStructure() {
+        return new DatedCallAtLocation();
     }
 
     /**
-     * Create an instance of {@link LegAlightStructure }
+     * Create an instance of {@link LegAlight }
      * 
      */
-    public LegAlightStructure createLegAlightStructure() {
-        return new LegAlightStructure();
+    public LegAlight createLegAlightStructure() {
+        return new LegAlight();
     }
 
     /**
-     * Create an instance of {@link TripInfoRefineParamStructure }
+     * Create an instance of {@link TripInfoRefineParam }
      * 
      */
-    public TripInfoRefineParamStructure createTripInfoRefineParamStructure() {
-        return new TripInfoRefineParamStructure();
+    public TripInfoRefineParam createTripInfoRefineParamStructure() {
+        return new TripInfoRefineParam();
     }
 
     /**
-     * Create an instance of {@link LegTrackStructure }
+     * Create an instance of {@link LegTrack }
      * 
      */
-    public LegTrackStructure createLegTrackStructure() {
-        return new LegTrackStructure();
+    public LegTrack createLegTrackStructure() {
+        return new LegTrack();
     }
 
     /**
-     * Create an instance of {@link WebLinkStructure }
+     * Create an instance of {@link WebLink }
      * 
      */
-    public WebLinkStructure createWebLinkStructure() {
-        return new WebLinkStructure();
+    public WebLink createWebLinkStructure() {
+        return new WebLink();
     }
 
     /**
-     * Create an instance of {@link GeoAreaStructure }
+     * Create an instance of {@link GeoArea }
      * 
      */
-    public GeoAreaStructure createGeoAreaStructure() {
-        return new GeoAreaStructure();
+    public GeoArea createGeoAreaStructure() {
+        return new GeoArea();
     }
 
     /**
-     * Create an instance of {@link InitialLocationInputStructure }
+     * Create an instance of {@link InitialLocationInput }
      * 
      */
-    public InitialLocationInputStructure createInitialLocationInputStructure() {
-        return new InitialLocationInputStructure();
+    public InitialLocationInput createInitialLocationInputStructure() {
+        return new InitialLocationInput();
     }
 
     /**
-     * Create an instance of {@link LocationParamStructure }
+     * Create an instance of {@link LocationParam }
      * 
      */
-    public LocationParamStructure createLocationParamStructure() {
-        return new LocationParamStructure();
+    public LocationParam createLocationParamStructure() {
+        return new LocationParam();
     }
 
     /**
-     * Create an instance of {@link GeoPositionStructure }
+     * Create an instance of {@link GeoPosition }
      * 
      */
-    public GeoPositionStructure createGeoPositionStructure() {
-        return new GeoPositionStructure();
+    public GeoPosition createGeoPositionStructure() {
+        return new GeoPosition();
     }
 
     /**
-     * Create an instance of {@link FareZoneStructure }
+     * Create an instance of {@link FareZone }
      * 
      */
-    public FareZoneStructure createFareZoneStructure() {
-        return new FareZoneStructure();
+    public FareZone createFareZoneStructure() {
+        return new FareZone();
     }
 
     /**
-     * Create an instance of {@link OsmTagStructure }
+     * Create an instance of {@link OsmTag }
      * 
      */
-    public OsmTagStructure createOsmTagStructure() {
-        return new OsmTagStructure();
+    public OsmTag createOsmTagStructure() {
+        return new OsmTag();
     }
 
     /**
-     * Create an instance of {@link StaticFaresRequestStructure }
+     * Create an instance of {@link StaticFaresRequest }
      * 
      */
-    public StaticFaresRequestStructure createStaticFaresRequestStructure() {
-        return new StaticFaresRequestStructure();
+    public StaticFaresRequest createStaticFaresRequestStructure() {
+        return new StaticFaresRequest();
     }
 
     /**
-     * Create an instance of {@link GeoRestrictionsStructure }
+     * Create an instance of {@link GeoRestrictions }
      * 
      */
-    public GeoRestrictionsStructure createGeoRestrictionsStructure() {
-        return new GeoRestrictionsStructure();
+    public GeoRestrictions createGeoRestrictionsStructure() {
+        return new GeoRestrictions();
     }
 
     /**
-     * Create an instance of {@link DirectionRefStructure }
+     * Create an instance of {@link DirectionRef }
      * 
      */
-    public DirectionRefStructure createDirectionRefStructure() {
-        return new DirectionRefStructure();
+    public DirectionRef createDirectionRefStructure() {
+        return new DirectionRef();
     }
 
     /**
-     * Create an instance of {@link WeekdayTimePeriodStructure }
+     * Create an instance of {@link WeekdayTimePeriod }
      * 
      */
-    public WeekdayTimePeriodStructure createWeekdayTimePeriodStructure() {
-        return new WeekdayTimePeriodStructure();
+    public WeekdayTimePeriod createWeekdayTimePeriodStructure() {
+        return new WeekdayTimePeriod();
     }
 
     /**
-     * Create an instance of {@link ModeStructure }
+     * Create an instance of {@link Mode }
      * 
      */
-    public ModeStructure createModeStructure() {
-        return new ModeStructure();
+    public Mode createModeStructure() {
+        return new Mode();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterParamStructure }
+     * Create an instance of {@link ServiceRegisterParam }
      * 
      */
-    public ServiceRegisterParamStructure createServiceRegisterParamStructure() {
-        return new ServiceRegisterParamStructure();
+    public ServiceRegisterParam createServiceRegisterParamStructure() {
+        return new ServiceRegisterParam();
     }
 
     /**
-     * Create an instance of {@link NoChangeAtStructure }
+     * Create an instance of {@link NoChangeAt }
      * 
      */
-    public NoChangeAtStructure createNoChangeAtStructure() {
-        return new NoChangeAtStructure();
+    public NoChangeAt createNoChangeAtStructure() {
+        return new NoChangeAt();
     }
 
     /**
-     * Create an instance of {@link MapResultStructure }
+     * Create an instance of {@link MapResult }
      * 
      */
-    public MapResultStructure createMapResultStructure() {
-        return new MapResultStructure();
+    public MapResult createMapResultStructure() {
+        return new MapResult();
     }
 
     /**
-     * Create an instance of {@link AbstractTriasResponseStructure }
+     * Create an instance of {@link AbstractTriasResponse }
      * 
      */
-    public AbstractTriasResponseStructure createAbstractTriasResponseStructure() {
-        return new AbstractTriasResponseStructure();
+    public AbstractTriasResponse createAbstractTriasResponseStructure() {
+        return new AbstractTriasResponse();
     }
 
     /**
-     * Create an instance of {@link PositioningResultStructure }
+     * Create an instance of {@link PositioningResult }
      * 
      */
-    public PositioningResultStructure createPositioningResultStructure() {
-        return new PositioningResultStructure();
+    public PositioningResult createPositioningResultStructure() {
+        return new PositioningResult();
     }
 
     /**
-     * Create an instance of {@link AbstractTriasServiceRequestStructure }
+     * Create an instance of {@link AbstractTriasServiceRequest }
      * 
      */
-    public AbstractTriasServiceRequestStructure createAbstractTriasServiceRequestStructure() {
-        return new AbstractTriasServiceRequestStructure();
+    public AbstractTriasServiceRequest createAbstractTriasServiceRequestStructure() {
+        return new AbstractTriasServiceRequest();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterUpdateRequestStructure }
+     * Create an instance of {@link ServiceRegisterUpdateRequest }
      * 
      */
-    public ServiceRegisterUpdateRequestStructure createServiceRegisterUpdateRequestStructure() {
-        return new ServiceRegisterUpdateRequestStructure();
+    public ServiceRegisterUpdateRequest createServiceRegisterUpdateRequestStructure() {
+        return new ServiceRegisterUpdateRequest();
     }
 
     /**
-     * Create an instance of {@link TripInfoRefineRequestStructure }
+     * Create an instance of {@link TripInfoRefineRequest }
      * 
      */
-    public TripInfoRefineRequestStructure createTripInfoRefineRequestStructure() {
-        return new TripInfoRefineRequestStructure();
+    public TripInfoRefineRequest createTripInfoRefineRequestStructure() {
+        return new TripInfoRefineRequest();
     }
 
     /**
-     * Create an instance of {@link ImagePointResultStructure }
+     * Create an instance of {@link ImagePointResult }
      * 
      */
-    public ImagePointResultStructure createImagePointResultStructure() {
-        return new ImagePointResultStructure();
+    public ImagePointResult createImagePointResultStructure() {
+        return new ImagePointResult();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterResultStructure }
+     * Create an instance of {@link ServiceRegisterResult }
      * 
      */
-    public ServiceRegisterResultStructure createServiceRegisterResultStructure() {
-        return new ServiceRegisterResultStructure();
+    public ServiceRegisterResult createServiceRegisterResultStructure() {
+        return new ServiceRegisterResult();
     }
 
     /**
-     * Create an instance of {@link TimedPositionStructure }
+     * Create an instance of {@link TimedPosition }
      * 
      */
-    public TimedPositionStructure createTimedPositionStructure() {
-        return new TimedPositionStructure();
+    public TimedPosition createTimedPositionStructure() {
+        return new TimedPosition();
     }
 
     /**
-     * Create an instance of {@link StopEventRefineRequestStructure }
+     * Create an instance of {@link StopEventRefineRequest }
      * 
      */
-    public StopEventRefineRequestStructure createStopEventRefineRequestStructure() {
-        return new StopEventRefineRequestStructure();
+    public StopEventRefineRequest createStopEventRefineRequestStructure() {
+        return new StopEventRefineRequest();
     }
 
     /**
-     * Create an instance of {@link TripParamStructure }
+     * Create an instance of {@link TripParam }
      * 
      */
-    public TripParamStructure createTripParamStructure() {
-        return new TripParamStructure();
+    public TripParam createTripParamStructure() {
+        return new TripParam();
     }
 
     /**
-     * Create an instance of {@link IndividualTripParamStructure }
+     * Create an instance of {@link IndividualTripParam }
      * 
      */
-    public IndividualTripParamStructure createIndividualTripParamStructure() {
-        return new IndividualTripParamStructure();
+    public IndividualTripParam createIndividualTripParamStructure() {
+        return new IndividualTripParam();
     }
 
     /**
-     * Create an instance of {@link PositioningParamStructure }
+     * Create an instance of {@link PositioningParam }
      * 
      */
-    public PositioningParamStructure createPositioningParamStructure() {
-        return new PositioningParamStructure();
+    public PositioningParam createPositioningParamStructure() {
+        return new PositioningParam();
     }
 
     /**
-     * Create an instance of {@link TripRefineRequestStructure }
+     * Create an instance of {@link TripRefineRequest }
      * 
      */
-    public TripRefineRequestStructure createTripRefineRequestStructure() {
-        return new TripRefineRequestStructure();
+    public TripRefineRequest createTripRefineRequestStructure() {
+        return new TripRefineRequest();
     }
 
     /**
-     * Create an instance of {@link IndividualTransportOptionsStructure }
+     * Create an instance of {@link IndividualTransportOptions }
      * 
      */
-    public IndividualTransportOptionsStructure createIndividualTransportOptionsStructure() {
-        return new IndividualTransportOptionsStructure();
+    public IndividualTransportOptions createIndividualTransportOptionsStructure() {
+        return new IndividualTransportOptions();
     }
 
     /**
-     * Create an instance of {@link ConnectionStatusStructure }
+     * Create an instance of {@link ConnectionStatus }
      * 
      */
-    public ConnectionStatusStructure createConnectionStatusStructure() {
-        return new ConnectionStatusStructure();
+    public ConnectionStatus createConnectionStatusStructure() {
+        return new ConnectionStatus();
     }
 
     /**
-     * Create an instance of {@link FareZoneListInAreaStructure }
+     * Create an instance of {@link FareZoneListInArea }
      * 
      */
-    public FareZoneListInAreaStructure createFareZoneListInAreaStructure() {
-        return new FareZoneListInAreaStructure();
+    public FareZoneListInArea createFareZoneListInAreaStructure() {
+        return new FareZoneListInArea();
     }
 
     /**
-     * Create an instance of {@link MultiTripFaresRequestStructure }
+     * Create an instance of {@link MultiTripFaresRequest }
      * 
      */
-    public MultiTripFaresRequestStructure createMultiTripFaresRequestStructure() {
-        return new MultiTripFaresRequestStructure();
+    public MultiTripFaresRequest createMultiTripFaresRequestStructure() {
+        return new MultiTripFaresRequest();
     }
 
     /**
-     * Create an instance of {@link StopFaresResultStructure }
+     * Create an instance of {@link StopFaresResult }
      * 
      */
-    public StopFaresResultStructure createStopFaresResultStructure() {
-        return new StopFaresResultStructure();
+    public StopFaresResult createStopFaresResultStructure() {
+        return new StopFaresResult();
     }
 
     /**
-     * Create an instance of {@link PositioningStructure }
+     * Create an instance of {@link Positioning }
      * 
      */
-    public PositioningStructure createPositioningStructure() {
-        return new PositioningStructure();
+    public Positioning createPositioningStructure() {
+        return new Positioning();
     }
 
     /**
-     * Create an instance of {@link VehiclePositionStructure }
+     * Create an instance of {@link VehiclePosition }
      * 
      */
-    public VehiclePositionStructure createVehiclePositionStructure() {
-        return new VehiclePositionStructure();
+    public VehiclePosition createVehiclePositionStructure() {
+        return new VehiclePosition();
     }
 
     /**
-     * Create an instance of {@link LocationInformationRefineRequestStructure }
+     * Create an instance of {@link LocationInformationRefineRequest }
      * 
      */
-    public LocationInformationRefineRequestStructure createLocationInformationRefineRequestStructure() {
-        return new LocationInformationRefineRequestStructure();
+    public LocationInformationRefineRequest createLocationInformationRefineRequestStructure() {
+        return new LocationInformationRefineRequest();
     }
 
     /**
-     * Create an instance of {@link FacilityResultStructure }
+     * Create an instance of {@link FacilityResult }
      * 
      */
-    public FacilityResultStructure createFacilityResultStructure() {
-        return new FacilityResultStructure();
+    public FacilityResult createFacilityResultStructure() {
+        return new FacilityResult();
     }
 
     /**
-     * Create an instance of {@link NotViaStructure }
+     * Create an instance of {@link NotVia }
      * 
      */
-    public NotViaStructure createNotViaStructure() {
-        return new NotViaStructure();
+    public NotVia createNotViaStructure() {
+        return new NotVia();
     }
 
     /**
-     * Create an instance of {@link TripRefineParamStructure }
+     * Create an instance of {@link TripRefineParam }
      * 
      */
-    public TripRefineParamStructure createTripRefineParamStructure() {
-        return new TripRefineParamStructure();
+    public TripRefineParam createTripRefineParamStructure() {
+        return new TripRefineParam();
     }
 
     /**
-     * Create an instance of {@link LegBoardStructure }
+     * Create an instance of {@link LegBoard }
      * 
      */
-    public LegBoardStructure createLegBoardStructure() {
-        return new LegBoardStructure();
+    public LegBoard createLegBoardStructure() {
+        return new LegBoard();
     }
 
     /**
-     * Create an instance of {@link AbstractTriasSubscriptionRequestStructure }
+     * Create an instance of {@link AbstractTriasSubscriptionRequest }
      * 
      */
-    public AbstractTriasSubscriptionRequestStructure createAbstractTriasSubscriptionRequestStructure() {
-        return new AbstractTriasSubscriptionRequestStructure();
+    public AbstractTriasSubscriptionRequest createAbstractTriasSubscriptionRequestStructure() {
+        return new AbstractTriasSubscriptionRequest();
     }
 
     /**
-     * Create an instance of {@link ContinuousLegStructure }
+     * Create an instance of {@link ContinuousLeg }
      * 
      */
-    public ContinuousLegStructure createContinuousLegStructure() {
-        return new ContinuousLegStructure();
+    public ContinuousLeg createContinuousLegStructure() {
+        return new ContinuousLeg();
     }
 
     /**
-     * Create an instance of {@link SharingServiceStructure }
+     * Create an instance of {@link SharingService }
      * 
      */
-    public SharingServiceStructure createSharingServiceStructure() {
-        return new SharingServiceStructure();
+    public SharingService createSharingServiceStructure() {
+        return new SharingService();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterRegisterRequestStructure }
+     * Create an instance of {@link ServiceRegisterRegisterRequest }
      * 
      */
-    public ServiceRegisterRegisterRequestStructure createServiceRegisterRegisterRequestStructure() {
-        return new ServiceRegisterRegisterRequestStructure();
+    public ServiceRegisterRegisterRequest createServiceRegisterRegisterRequestStructure() {
+        return new ServiceRegisterRegisterRequest();
     }
 
     /**
-     * Create an instance of {@link PtModeFilterStructure }
+     * Create an instance of {@link PtModeFilter }
      * 
      */
-    public PtModeFilterStructure createPtModeFilterStructure() {
-        return new PtModeFilterStructure();
+    public PtModeFilter createPtModeFilterStructure() {
+        return new PtModeFilter();
     }
 
     /**
-     * Create an instance of {@link LocationInformationRefineParamStructure }
+     * Create an instance of {@link LocationInformationRefineParam }
      * 
      */
-    public LocationInformationRefineParamStructure createLocationInformationRefineParamStructure() {
-        return new LocationInformationRefineParamStructure();
+    public LocationInformationRefineParam createLocationInformationRefineParamStructure() {
+        return new LocationInformationRefineParam();
     }
 
     /**
-     * Create an instance of {@link InternationalTextStructure }
+     * Create an instance of {@link InternationalText }
      * 
      */
-    public InternationalTextStructure createInternationalTextStructure() {
-        return new InternationalTextStructure();
+    public InternationalText createInternationalTextStructure() {
+        return new InternationalText();
     }
 
     /**
-     * Create an instance of {@link FaresPassengerStructure }
+     * Create an instance of {@link FaresPassenger }
      * 
      */
-    public FaresPassengerStructure createFaresPassengerStructure() {
-        return new FaresPassengerStructure();
+    public FaresPassenger createFaresPassengerStructure() {
+        return new FaresPassenger();
     }
 
     /**
-     * Create an instance of {@link VehicleActivityStructure }
+     * Create an instance of {@link VehicleActivity }
      * 
      */
-    public VehicleActivityStructure createVehicleActivityStructure() {
-        return new VehicleActivityStructure();
+    public VehicleActivity createVehicleActivityStructure() {
+        return new VehicleActivity();
     }
 
     /**
-     * Create an instance of {@link TripResponseContextStructure }
+     * Create an instance of {@link TripResponseContext }
      * 
      */
-    public TripResponseContextStructure createTripResponseContextStructure() {
-        return new TripResponseContextStructure();
+    public TripResponseContext createTripResponseContextStructure() {
+        return new TripResponseContext();
     }
 
     /**
-     * Create an instance of {@link DatedConnectionStructure }
+     * Create an instance of {@link DatedConnection }
      * 
      */
-    public DatedConnectionStructure createDatedConnectionStructure() {
-        return new DatedConnectionStructure();
+    public DatedConnection createDatedConnectionStructure() {
+        return new DatedConnection();
     }
 
     /**
-     * Create an instance of {@link FareZoneRefListStructure }
+     * Create an instance of {@link FareZoneRefList }
      * 
      */
-    public FareZoneRefListStructure createFareZoneRefListStructure() {
-        return new FareZoneRefListStructure();
+    public FareZoneRefList createFareZoneRefListStructure() {
+        return new FareZoneRefList();
     }
 
     /**
-     * Create an instance of {@link TripMonitoringParamStructure }
+     * Create an instance of {@link TripMonitoringParam }
      * 
      */
-    public TripMonitoringParamStructure createTripMonitoringParamStructure() {
-        return new TripMonitoringParamStructure();
+    public TripMonitoringParam createTripMonitoringParamStructure() {
+        return new TripMonitoringParam();
     }
 
     /**
-     * Create an instance of {@link GeneralizedConnectionStructure }
+     * Create an instance of {@link GeneralizedConnection }
      * 
      */
-    public GeneralizedConnectionStructure createGeneralizedConnectionStructure() {
-        return new GeneralizedConnectionStructure();
+    public GeneralizedConnection createGeneralizedConnectionStructure() {
+        return new GeneralizedConnection();
     }
 
     /**
-     * Create an instance of {@link TripTicketReferenceStructure }
+     * Create an instance of {@link TripTicketReference }
      * 
      */
-    public TripTicketReferenceStructure createTripTicketReferenceStructure() {
-        return new TripTicketReferenceStructure();
+    public TripTicketReference createTripTicketReferenceStructure() {
+        return new TripTicketReference();
     }
 
     /**
-     * Create an instance of {@link LocationContextStructure }
+     * Create an instance of {@link LocationContext }
      * 
      */
-    public LocationContextStructure createLocationContextStructure() {
-        return new LocationContextStructure();
+    public LocationContext createLocationContextStructure() {
+        return new LocationContext();
     }
 
     /**
-     * Create an instance of {@link GeoRectangleStructure }
+     * Create an instance of {@link GeoRectangle }
      * 
      */
-    public GeoRectangleStructure createGeoRectangleStructure() {
-        return new GeoRectangleStructure();
+    public GeoRectangle createGeoRectangleStructure() {
+        return new GeoRectangle();
     }
 
     /**
-     * Create an instance of {@link FacilityStatusStructure }
+     * Create an instance of {@link FacilityStatus }
      * 
      */
-    public FacilityStatusStructure createFacilityStatusStructure() {
-        return new FacilityStatusStructure();
+    public FacilityStatus createFacilityStatusStructure() {
+        return new FacilityStatus();
     }
 
     /**
-     * Create an instance of {@link FacilityStructure }
+     * Create an instance of {@link Facility }
      * 
      */
-    public FacilityStructure createFacilityStructure() {
-        return new FacilityStructure();
+    public Facility createFacilityStructure() {
+        return new Facility();
     }
 
     /**
-     * Create an instance of {@link ServiceRegisterUnregisterRequestStructure }
+     * Create an instance of {@link ServiceRegisterUnregisterRequest }
      * 
      */
-    public ServiceRegisterUnregisterRequestStructure createServiceRegisterUnregisterRequestStructure() {
-        return new ServiceRegisterUnregisterRequestStructure();
+    public ServiceRegisterUnregisterRequest createServiceRegisterUnregisterRequestStructure() {
+        return new ServiceRegisterUnregisterRequest();
     }
 
     /**
-     * Create an instance of {@link TripLocationStructure }
+     * Create an instance of {@link TripLocation }
      * 
      */
-    public TripLocationStructure createTripLocationStructure() {
-        return new TripLocationStructure();
+    public TripLocation createTripLocationStructure() {
+        return new TripLocation();
     }
 
     /**
-     * Create an instance of {@link TripInfoResultStructure }
+     * Create an instance of {@link TripInfoResult }
      * 
      */
-    public TripInfoResultStructure createTripInfoResultStructure() {
-        return new TripInfoResultStructure();
+    public TripInfoResult createTripInfoResultStructure() {
+        return new TripInfoResult();
     }
 
     /**
-     * Create an instance of {@link OperatingDaysStructure }
+     * Create an instance of {@link OperatingDays }
      * 
      */
-    public OperatingDaysStructure createOperatingDaysStructure() {
-        return new OperatingDaysStructure();
+    public OperatingDays createOperatingDaysStructure() {
+        return new OperatingDays();
     }
 
     /**
-     * Create an instance of {@link StopEventRefineParamStructure }
+     * Create an instance of {@link StopEventRefineParam }
      * 
      */
-    public StopEventRefineParamStructure createStopEventRefineParamStructure() {
-        return new StopEventRefineParamStructure();
+    public StopEventRefineParam createStopEventRefineParamStructure() {
+        return new StopEventRefineParam();
     }
 
     /**
-     * Create an instance of {@link RouteStructure }
+     * Create an instance of {@link Route }
      * 
      */
-    public RouteStructure createRouteStructure() {
-        return new RouteStructure();
+    public Route createRouteStructure() {
+        return new Route();
     }
 
     /**
-     * Create an instance of {@link AbstractResponseContextStructure.Locations }
+     * Create an instance of {@link AbstractResponseContext.Locations }
      * 
      */
-    public AbstractResponseContextStructure.Locations createAbstractResponseContextStructureLocations() {
-        return new AbstractResponseContextStructure.Locations();
+    public AbstractResponseContext.Locations createAbstractResponseContextStructureLocations() {
+        return new AbstractResponseContext.Locations();
     }
 
     /**
-     * Create an instance of {@link TrackSectionStructure.Projection }
+     * Create an instance of {@link TrackSection.Projection }
      * 
      */
-    public TrackSectionStructure.Projection createTrackSectionStructureProjection() {
-        return new TrackSectionStructure.Projection();
+    public TrackSection.Projection createTrackSectionStructureProjection() {
+        return new TrackSection.Projection();
     }
 
     /**
-     * Create an instance of {@link LocalityStructure.Area }
+     * Create an instance of {@link Locality.Area }
      * 
      */
-    public LocalityStructure.Area createLocalityStructureArea() {
-        return new LocalityStructure.Area();
+    public Locality.Area createLocalityStructureArea() {
+        return new Locality.Area();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FacilityRequest")
-    public JAXBElement<FacilityRequestStructure> createFacilityRequest(FacilityRequestStructure value) {
-        return new JAXBElement<FacilityRequestStructure>(_FacilityRequest_QNAME, FacilityRequestStructure.class, null, value);
+    public JAXBElement<FacilityRequest> createFacilityRequest(FacilityRequest value) {
+        return new JAXBElement<FacilityRequest>(_FacilityRequest_QNAME, FacilityRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionStatusNotificationStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionStatusNotification }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionStatusNotification")
-    public JAXBElement<ConnectionStatusNotificationStructure> createConnectionStatusNotification(ConnectionStatusNotificationStructure value) {
-        return new JAXBElement<ConnectionStatusNotificationStructure>(_ConnectionStatusNotification_QNAME, ConnectionStatusNotificationStructure.class, null, value);
+    public JAXBElement<ConnectionStatusNotification> createConnectionStatusNotification(ConnectionStatusNotification value) {
+        return new JAXBElement<ConnectionStatusNotification>(_ConnectionStatusNotification_QNAME, ConnectionStatusNotification.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ImageCoordinatesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ImageCoordinatesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ImageCoordinatesResponse")
-    public JAXBElement<ImageCoordinatesResponseStructure> createImageCoordinatesResponse(ImageCoordinatesResponseStructure value) {
-        return new JAXBElement<ImageCoordinatesResponseStructure>(_ImageCoordinatesResponse_QNAME, ImageCoordinatesResponseStructure.class, null, value);
+    public JAXBElement<ImageCoordinatesResponse> createImageCoordinatesResponse(ImageCoordinatesResponse value) {
+        return new JAXBElement<ImageCoordinatesResponse>(_ImageCoordinatesResponse_QNAME, ImageCoordinatesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleDataResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleDataResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "VehicleDataResponse")
-    public JAXBElement<VehicleDataResponseStructure> createVehicleDataResponse(VehicleDataResponseStructure value) {
-        return new JAXBElement<VehicleDataResponseStructure>(_VehicleDataResponse_QNAME, VehicleDataResponseStructure.class, null, value);
+    public JAXBElement<VehicleDataResponse> createVehicleDataResponse(VehicleDataResponse value) {
+        return new JAXBElement<VehicleDataResponse>(_VehicleDataResponse_QNAME, VehicleDataResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link IndividualRouteRefineResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IndividualRouteRefineResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "IndividualRouteRefineResponse")
-    public JAXBElement<IndividualRouteRefineResponseStructure> createIndividualRouteRefineResponse(IndividualRouteRefineResponseStructure value) {
-        return new JAXBElement<IndividualRouteRefineResponseStructure>(_IndividualRouteRefineResponse_QNAME, IndividualRouteRefineResponseStructure.class, null, value);
+    public JAXBElement<IndividualRouteRefineResponse> createIndividualRouteRefineResponse(IndividualRouteRefineResponse value) {
+        return new JAXBElement<IndividualRouteRefineResponse>(_IndividualRouteRefineResponse_QNAME, IndividualRouteRefineResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GeoCoordinatesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GeoCoordinatesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "GeoCoordinatesRequest")
-    public JAXBElement<GeoCoordinatesRequestStructure> createGeoCoordinatesRequest(GeoCoordinatesRequestStructure value) {
-        return new JAXBElement<GeoCoordinatesRequestStructure>(_GeoCoordinatesRequest_QNAME, GeoCoordinatesRequestStructure.class, null, value);
+    public JAXBElement<GeoCoordinatesRequest> createGeoCoordinatesRequest(GeoCoordinatesRequest value) {
+        return new JAXBElement<GeoCoordinatesRequest>(_GeoCoordinatesRequest_QNAME, GeoCoordinatesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LocalityRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LocalityRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "LocalityRef")
-    public JAXBElement<LocalityRefStructure> createLocalityRef(LocalityRefStructure value) {
-        return new JAXBElement<LocalityRefStructure>(_LocalityRef_QNAME, LocalityRefStructure.class, null, value);
+    public JAXBElement<LocalityRef> createLocalityRef(LocalityRef value) {
+        return new JAXBElement<LocalityRef>(_LocalityRef_QNAME, LocalityRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FaresRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FaresRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FaresRequest")
-    public JAXBElement<FaresRequestStructure> createFaresRequest(FaresRequestStructure value) {
-        return new JAXBElement<FaresRequestStructure>(_FaresRequest_QNAME, FaresRequestStructure.class, null, value);
+    public JAXBElement<FaresRequest> createFaresRequest(FaresRequest value) {
+        return new JAXBElement<FaresRequest>(_FaresRequest_QNAME, FaresRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TripInfoRefineResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TripInfoRefineResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TripInfoRefineResponse")
-    public JAXBElement<TripInfoRefineResponseStructure> createTripInfoRefineResponse(TripInfoRefineResponseStructure value) {
-        return new JAXBElement<TripInfoRefineResponseStructure>(_TripInfoRefineResponse_QNAME, TripInfoRefineResponseStructure.class, null, value);
+    public JAXBElement<TripInfoRefineResponse> createTripInfoRefineResponse(TripInfoRefineResponse value) {
+        return new JAXBElement<TripInfoRefineResponse>(_TripInfoRefineResponse_QNAME, TripInfoRefineResponse.class, null, value);
     }
 
     /**
@@ -2258,21 +2258,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "VehicleRef")
-    public JAXBElement<VehicleRefStructure> createVehicleRef(VehicleRefStructure value) {
-        return new JAXBElement<VehicleRefStructure>(_VehicleRef_QNAME, VehicleRefStructure.class, null, value);
+    public JAXBElement<VehicleRef> createVehicleRef(VehicleRef value) {
+        return new JAXBElement<VehicleRef>(_VehicleRef_QNAME, VehicleRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionDemandDeleteRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionDemandDeleteRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionDemandDeleteRequest")
-    public JAXBElement<ConnectionDemandDeleteRequestStructure> createConnectionDemandDeleteRequest(ConnectionDemandDeleteRequestStructure value) {
-        return new JAXBElement<ConnectionDemandDeleteRequestStructure>(_ConnectionDemandDeleteRequest_QNAME, ConnectionDemandDeleteRequestStructure.class, null, value);
+    public JAXBElement<ConnectionDemandDeleteRequest> createConnectionDemandDeleteRequest(ConnectionDemandDeleteRequest value) {
+        return new JAXBElement<ConnectionDemandDeleteRequest>(_ConnectionDemandDeleteRequest_QNAME, ConnectionDemandDeleteRequest.class, null, value);
     }
 
     /**
@@ -2285,75 +2285,75 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RefineRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RefineRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "RefineRequest")
-    public JAXBElement<RefineRequestStructure> createRefineRequest(RefineRequestStructure value) {
-        return new JAXBElement<RefineRequestStructure>(_RefineRequest_QNAME, RefineRequestStructure.class, null, value);
+    public JAXBElement<RefineRequest> createRefineRequest(RefineRequest value) {
+        return new JAXBElement<RefineRequest>(_RefineRequest_QNAME, RefineRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionProtectionSubscriptionRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionProtectionSubscriptionRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionProtectionSubscriptionRequest")
-    public JAXBElement<ConnectionProtectionSubscriptionRequestStructure> createConnectionProtectionSubscriptionRequest(ConnectionProtectionSubscriptionRequestStructure value) {
-        return new JAXBElement<ConnectionProtectionSubscriptionRequestStructure>(_ConnectionProtectionSubscriptionRequest_QNAME, ConnectionProtectionSubscriptionRequestStructure.class, null, value);
+    public JAXBElement<ConnectionProtectionSubscriptionRequest> createConnectionProtectionSubscriptionRequest(ConnectionProtectionSubscriptionRequest value) {
+        return new JAXBElement<ConnectionProtectionSubscriptionRequest>(_ConnectionProtectionSubscriptionRequest_QNAME, ConnectionProtectionSubscriptionRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link IndividualRouteRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IndividualRouteRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "IndividualRouteRequest")
-    public JAXBElement<IndividualRouteRequestStructure> createIndividualRouteRequest(IndividualRouteRequestStructure value) {
-        return new JAXBElement<IndividualRouteRequestStructure>(_IndividualRouteRequest_QNAME, IndividualRouteRequestStructure.class, null, value);
+    public JAXBElement<IndividualRouteRequest> createIndividualRouteRequest(IndividualRouteRequest value) {
+        return new JAXBElement<IndividualRouteRequest>(_IndividualRouteRequest_QNAME, IndividualRouteRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceRegisterResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceRegisterResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ServiceRegisterResponse")
-    public JAXBElement<ServiceRegisterResponseStructure> createServiceRegisterResponse(ServiceRegisterResponseStructure value) {
-        return new JAXBElement<ServiceRegisterResponseStructure>(_ServiceRegisterResponse_QNAME, ServiceRegisterResponseStructure.class, null, value);
+    public JAXBElement<ServiceRegisterResponse> createServiceRegisterResponse(ServiceRegisterResponse value) {
+        return new JAXBElement<ServiceRegisterResponse>(_ServiceRegisterResponse_QNAME, ServiceRegisterResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GeoCoordinatesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GeoCoordinatesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "GeoCoordinatesResponse")
-    public JAXBElement<GeoCoordinatesResponseStructure> createGeoCoordinatesResponse(GeoCoordinatesResponseStructure value) {
-        return new JAXBElement<GeoCoordinatesResponseStructure>(_GeoCoordinatesResponse_QNAME, GeoCoordinatesResponseStructure.class, null, value);
+    public JAXBElement<GeoCoordinatesResponse> createGeoCoordinatesResponse(GeoCoordinatesResponse value) {
+        return new JAXBElement<GeoCoordinatesResponse>(_GeoCoordinatesResponse_QNAME, GeoCoordinatesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionStatusRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionStatusRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionStatusRequest")
-    public JAXBElement<ConnectionStatusRequestStructure> createConnectionStatusRequest(ConnectionStatusRequestStructure value) {
-        return new JAXBElement<ConnectionStatusRequestStructure>(_ConnectionStatusRequest_QNAME, ConnectionStatusRequestStructure.class, null, value);
+    public JAXBElement<ConnectionStatusRequest> createConnectionStatusRequest(ConnectionStatusRequest value) {
+        return new JAXBElement<ConnectionStatusRequest>(_ConnectionStatusRequest_QNAME, ConnectionStatusRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityStatusReportResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityStatusReportResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FacilityStatusReportResponse")
-    public JAXBElement<FacilityStatusReportResponseStructure> createFacilityStatusReportResponse(FacilityStatusReportResponseStructure value) {
-        return new JAXBElement<FacilityStatusReportResponseStructure>(_FacilityStatusReportResponse_QNAME, FacilityStatusReportResponseStructure.class, null, value);
+    public JAXBElement<FacilityStatusReportResponse> createFacilityStatusReportResponse(FacilityStatusReportResponse value) {
+        return new JAXBElement<FacilityStatusReportResponse>(_FacilityStatusReportResponse_QNAME, FacilityStatusReportResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationFullRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationFullRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "SituationFullRef")
-    public JAXBElement<SituationFullRefStructure> createSituationFullRef(SituationFullRefStructure value) {
-        return new JAXBElement<SituationFullRefStructure>(_SituationFullRef_QNAME, SituationFullRefStructure.class, null, value);
+    public JAXBElement<SituationFullRef> createSituationFullRef(SituationFullRef value) {
+        return new JAXBElement<SituationFullRef>(_SituationFullRef_QNAME, SituationFullRef.class, null, value);
     }
 
     /**
@@ -2366,129 +2366,129 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationSaveValueRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationSaveValueRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationSaveValueRequest")
-    public JAXBElement<PersonalisationSaveValueRequestStructure> createPersonalisationSaveValueRequest(PersonalisationSaveValueRequestStructure value) {
-        return new JAXBElement<PersonalisationSaveValueRequestStructure>(_PersonalisationSaveValueRequest_QNAME, PersonalisationSaveValueRequestStructure.class, null, value);
+    public JAXBElement<PersonalisationSaveValueRequest> createPersonalisationSaveValueRequest(PersonalisationSaveValueRequest value) {
+        return new JAXBElement<PersonalisationSaveValueRequest>(_PersonalisationSaveValueRequest_QNAME, PersonalisationSaveValueRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationRetrieveValueResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationRetrieveValueResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationRetrieveValueResponse")
-    public JAXBElement<PersonalisationRetrieveValueResponseStructure> createPersonalisationRetrieveValueResponse(PersonalisationRetrieveValueResponseStructure value) {
-        return new JAXBElement<PersonalisationRetrieveValueResponseStructure>(_PersonalisationRetrieveValueResponse_QNAME, PersonalisationRetrieveValueResponseStructure.class, null, value);
+    public JAXBElement<PersonalisationRetrieveValueResponse> createPersonalisationRetrieveValueResponse(PersonalisationRetrieveValueResponse value) {
+        return new JAXBElement<PersonalisationRetrieveValueResponse>(_PersonalisationRetrieveValueResponse_QNAME, PersonalisationRetrieveValueResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionDemandDeleteResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionDemandDeleteResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionDemandDeleteResponse")
-    public JAXBElement<ConnectionDemandDeleteResponseStructure> createConnectionDemandDeleteResponse(ConnectionDemandDeleteResponseStructure value) {
-        return new JAXBElement<ConnectionDemandDeleteResponseStructure>(_ConnectionDemandDeleteResponse_QNAME, ConnectionDemandDeleteResponseStructure.class, null, value);
+    public JAXBElement<ConnectionDemandDeleteResponse> createConnectionDemandDeleteResponse(ConnectionDemandDeleteResponse value) {
+        return new JAXBElement<ConnectionDemandDeleteResponse>(_ConnectionDemandDeleteResponse_QNAME, ConnectionDemandDeleteResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationDeleteValueResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationDeleteValueResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationDeleteValueResponse")
-    public JAXBElement<PersonalisationDeleteValueResponseStructure> createPersonalisationDeleteValueResponse(PersonalisationDeleteValueResponseStructure value) {
-        return new JAXBElement<PersonalisationDeleteValueResponseStructure>(_PersonalisationDeleteValueResponse_QNAME, PersonalisationDeleteValueResponseStructure.class, null, value);
+    public JAXBElement<PersonalisationDeleteValueResponse> createPersonalisationDeleteValueResponse(PersonalisationDeleteValueResponse value) {
+        return new JAXBElement<PersonalisationDeleteValueResponse>(_PersonalisationDeleteValueResponse_QNAME, PersonalisationDeleteValueResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopRequestResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopRequestResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "StopRequestResponse")
-    public JAXBElement<StopRequestResponseStructure> createStopRequestResponse(StopRequestResponseStructure value) {
-        return new JAXBElement<StopRequestResponseStructure>(_StopRequestResponse_QNAME, StopRequestResponseStructure.class, null, value);
+    public JAXBElement<StopRequestResponse> createStopRequestResponse(StopRequestResponse value) {
+        return new JAXBElement<StopRequestResponse>(_StopRequestResponse_QNAME, StopRequestResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopEventRefineResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopEventRefineResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "StopEventRefineResponse")
-    public JAXBElement<StopEventRefineResponseStructure> createStopEventRefineResponse(StopEventRefineResponseStructure value) {
-        return new JAXBElement<StopEventRefineResponseStructure>(_StopEventRefineResponse_QNAME, StopEventRefineResponseStructure.class, null, value);
+    public JAXBElement<StopEventRefineResponse> createStopEventRefineResponse(StopEventRefineResponse value) {
+        return new JAXBElement<StopEventRefineResponse>(_StopEventRefineResponse_QNAME, StopEventRefineResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleDataRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleDataRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "VehicleDataRequest")
-    public JAXBElement<VehicleDataRequestStructure> createVehicleDataRequest(VehicleDataRequestStructure value) {
-        return new JAXBElement<VehicleDataRequestStructure>(_VehicleDataRequest_QNAME, VehicleDataRequestStructure.class, null, value);
+    public JAXBElement<VehicleDataRequest> createVehicleDataRequest(VehicleDataRequest value) {
+        return new JAXBElement<VehicleDataRequest>(_VehicleDataRequest_QNAME, VehicleDataRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MapServiceRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link MapServiceRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "MapServiceRequest")
-    public JAXBElement<MapServiceRequestStructure> createMapServiceRequest(MapServiceRequestStructure value) {
-        return new JAXBElement<MapServiceRequestStructure>(_MapServiceRequest_QNAME, MapServiceRequestStructure.class, null, value);
+    public JAXBElement<MapServiceRequest> createMapServiceRequest(MapServiceRequest value) {
+        return new JAXBElement<MapServiceRequest>(_MapServiceRequest_QNAME, MapServiceRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TripInfoRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TripInfoRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TripInfoRequest")
-    public JAXBElement<TripInfoRequestStructure> createTripInfoRequest(TripInfoRequestStructure value) {
-        return new JAXBElement<TripInfoRequestStructure>(_TripInfoRequest_QNAME, TripInfoRequestStructure.class, null, value);
+    public JAXBElement<TripInfoRequest> createTripInfoRequest(TripInfoRequest value) {
+        return new JAXBElement<TripInfoRequest>(_TripInfoRequest_QNAME, TripInfoRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ActivateOutsideSpeakerRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ActivateOutsideSpeakerRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ActivateOutsideSpeakerRequest")
-    public JAXBElement<ActivateOutsideSpeakerRequestStructure> createActivateOutsideSpeakerRequest(ActivateOutsideSpeakerRequestStructure value) {
-        return new JAXBElement<ActivateOutsideSpeakerRequestStructure>(_ActivateOutsideSpeakerRequest_QNAME, ActivateOutsideSpeakerRequestStructure.class, null, value);
+    public JAXBElement<ActivateOutsideSpeakerRequest> createActivateOutsideSpeakerRequest(ActivateOutsideSpeakerRequest value) {
+        return new JAXBElement<ActivateOutsideSpeakerRequest>(_ActivateOutsideSpeakerRequest_QNAME, ActivateOutsideSpeakerRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleTypeRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleTypeRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "VehicleTypeRef")
-    public JAXBElement<VehicleTypeRefStructure> createVehicleTypeRef(VehicleTypeRefStructure value) {
-        return new JAXBElement<VehicleTypeRefStructure>(_VehicleTypeRef_QNAME, VehicleTypeRefStructure.class, null, value);
+    public JAXBElement<VehicleTypeRef> createVehicleTypeRef(VehicleTypeRef value) {
+        return new JAXBElement<VehicleTypeRef>(_VehicleTypeRef_QNAME, VehicleTypeRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ActivateOutsideSpeakerResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ActivateOutsideSpeakerResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ActivateOutsideSpeakerResponse")
-    public JAXBElement<ActivateOutsideSpeakerResponseStructure> createActivateOutsideSpeakerResponse(ActivateOutsideSpeakerResponseStructure value) {
-        return new JAXBElement<ActivateOutsideSpeakerResponseStructure>(_ActivateOutsideSpeakerResponse_QNAME, ActivateOutsideSpeakerResponseStructure.class, null, value);
+    public JAXBElement<ActivateOutsideSpeakerResponse> createActivateOutsideSpeakerResponse(ActivateOutsideSpeakerResponse value) {
+        return new JAXBElement<ActivateOutsideSpeakerResponse>(_ActivateOutsideSpeakerResponse_QNAME, ActivateOutsideSpeakerResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OwnerRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OwnerRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "OwnerRef")
-    public JAXBElement<OwnerRefStructure> createOwnerRef(OwnerRefStructure value) {
-        return new JAXBElement<OwnerRefStructure>(_OwnerRef_QNAME, OwnerRefStructure.class, null, value);
+    public JAXBElement<OwnerRef> createOwnerRef(OwnerRef value) {
+        return new JAXBElement<OwnerRef>(_OwnerRef_QNAME, OwnerRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PositioningResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PositioningResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PositioningResponse")
-    public JAXBElement<PositioningResponseStructure> createPositioningResponse(PositioningResponseStructure value) {
-        return new JAXBElement<PositioningResponseStructure>(_PositioningResponse_QNAME, PositioningResponseStructure.class, null, value);
+    public JAXBElement<PositioningResponse> createPositioningResponse(PositioningResponse value) {
+        return new JAXBElement<PositioningResponse>(_PositioningResponse_QNAME, PositioningResponse.class, null, value);
     }
 
     /**
@@ -2501,21 +2501,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionStatusResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionStatusResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionStatusResponse")
-    public JAXBElement<ConnectionStatusResponseStructure> createConnectionStatusResponse(ConnectionStatusResponseStructure value) {
-        return new JAXBElement<ConnectionStatusResponseStructure>(_ConnectionStatusResponse_QNAME, ConnectionStatusResponseStructure.class, null, value);
+    public JAXBElement<ConnectionStatusResponse> createConnectionStatusResponse(ConnectionStatusResponse value) {
+        return new JAXBElement<ConnectionStatusResponse>(_ConnectionStatusResponse_QNAME, ConnectionStatusResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FacilityRef")
-    public JAXBElement<FacilityRefStructure> createFacilityRef(FacilityRefStructure value) {
-        return new JAXBElement<FacilityRefStructure>(_FacilityRef_QNAME, FacilityRefStructure.class, null, value);
+    public JAXBElement<FacilityRef> createFacilityRef(FacilityRef value) {
+        return new JAXBElement<FacilityRef>(_FacilityRef_QNAME, FacilityRef.class, null, value);
     }
 
     /**
@@ -2528,39 +2528,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BookingInfoResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link BookingInfoResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "BookingInfoResponse")
-    public JAXBElement<BookingInfoResponseStructure> createBookingInfoResponse(BookingInfoResponseStructure value) {
-        return new JAXBElement<BookingInfoResponseStructure>(_BookingInfoResponse_QNAME, BookingInfoResponseStructure.class, null, value);
+    public JAXBElement<BookingInfoResponse> createBookingInfoResponse(BookingInfoResponse value) {
+        return new JAXBElement<BookingInfoResponse>(_BookingInfoResponse_QNAME, BookingInfoResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ImageCoordinatesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ImageCoordinatesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ImageCoordinatesRequest")
-    public JAXBElement<ImageCoordinatesRequestStructure> createImageCoordinatesRequest(ImageCoordinatesRequestStructure value) {
-        return new JAXBElement<ImageCoordinatesRequestStructure>(_ImageCoordinatesRequest_QNAME, ImageCoordinatesRequestStructure.class, null, value);
+    public JAXBElement<ImageCoordinatesRequest> createImageCoordinatesRequest(ImageCoordinatesRequest value) {
+        return new JAXBElement<ImageCoordinatesRequest>(_ImageCoordinatesRequest_QNAME, ImageCoordinatesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubscriptionRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubscriptionRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "SubscriptionRequest")
-    public JAXBElement<SubscriptionRequestStructure> createSubscriptionRequest(SubscriptionRequestStructure value) {
-        return new JAXBElement<SubscriptionRequestStructure>(_SubscriptionRequest_QNAME, SubscriptionRequestStructure.class, null, value);
+    public JAXBElement<SubscriptionRequest> createSubscriptionRequest(SubscriptionRequest value) {
+        return new JAXBElement<SubscriptionRequest>(_SubscriptionRequest_QNAME, SubscriptionRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationDeleteValueRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationDeleteValueRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationDeleteValueRequest")
-    public JAXBElement<PersonalisationDeleteValueRequestStructure> createPersonalisationDeleteValueRequest(PersonalisationDeleteValueRequestStructure value) {
-        return new JAXBElement<PersonalisationDeleteValueRequestStructure>(_PersonalisationDeleteValueRequest_QNAME, PersonalisationDeleteValueRequestStructure.class, null, value);
+    public JAXBElement<PersonalisationDeleteValueRequest> createPersonalisationDeleteValueRequest(PersonalisationDeleteValueRequest value) {
+        return new JAXBElement<PersonalisationDeleteValueRequest>(_PersonalisationDeleteValueRequest_QNAME, PersonalisationDeleteValueRequest.class, null, value);
     }
 
     /**
@@ -2573,156 +2573,156 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DataReadyResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DataReadyResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "DataReadyAcknowledgement")
-    public JAXBElement<DataReadyResponseStructure> createDataReadyAcknowledgement(DataReadyResponseStructure value) {
-        return new JAXBElement<DataReadyResponseStructure>(_DataReadyAcknowledgement_QNAME, DataReadyResponseStructure.class, null, value);
+    public JAXBElement<DataReadyResponse> createDataReadyAcknowledgement(DataReadyResponse value) {
+        return new JAXBElement<DataReadyResponse>(_DataReadyAcknowledgement_QNAME, DataReadyResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleInteractionResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleInteractionResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "VehicleInteractionResponse")
-    public JAXBElement<VehicleInteractionResponseStructure> createVehicleInteractionResponse(VehicleInteractionResponseStructure value) {
-        return new JAXBElement<VehicleInteractionResponseStructure>(_VehicleInteractionResponse_QNAME, VehicleInteractionResponseStructure.class, null, value);
+    public JAXBElement<VehicleInteractionResponse> createVehicleInteractionResponse(VehicleInteractionResponse value) {
+        return new JAXBElement<VehicleInteractionResponse>(_VehicleInteractionResponse_QNAME, VehicleInteractionResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "SituationExchangeSubscriptionRequest")
-    public JAXBElement<SituationExchangeSubscriptionStructure> createSituationExchangeSubscriptionRequest(SituationExchangeSubscriptionStructure value) {
-        return new JAXBElement<SituationExchangeSubscriptionStructure>(_SituationExchangeSubscriptionRequest_QNAME, SituationExchangeSubscriptionStructure.class, null, value);
+    public JAXBElement<SituationExchangeSubscription> createSituationExchangeSubscriptionRequest(SituationExchangeSubscription value) {
+        return new JAXBElement<SituationExchangeSubscription>(_SituationExchangeSubscriptionRequest_QNAME, SituationExchangeSubscription.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TripMonitoringSubscriptionRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TripMonitoringSubscriptionRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TripMonitoringSubscriptionRequest")
-    public JAXBElement<TripMonitoringSubscriptionRequestStructure> createTripMonitoringSubscriptionRequest(TripMonitoringSubscriptionRequestStructure value) {
-        return new JAXBElement<TripMonitoringSubscriptionRequestStructure>(_TripMonitoringSubscriptionRequest_QNAME, TripMonitoringSubscriptionRequestStructure.class, null, value);
+    public JAXBElement<TripMonitoringSubscriptionRequest> createTripMonitoringSubscriptionRequest(TripMonitoringSubscriptionRequest value) {
+        return new JAXBElement<TripMonitoringSubscriptionRequest>(_TripMonitoringSubscriptionRequest_QNAME, TripMonitoringSubscriptionRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringSubscriptionStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringSubscription }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FacilityMonitoringSubscriptionRequest")
-    public JAXBElement<FacilityMonitoringSubscriptionStructure> createFacilityMonitoringSubscriptionRequest(FacilityMonitoringSubscriptionStructure value) {
-        return new JAXBElement<FacilityMonitoringSubscriptionStructure>(_FacilityMonitoringSubscriptionRequest_QNAME, FacilityMonitoringSubscriptionStructure.class, null, value);
+    public JAXBElement<FacilityMonitoringSubscription> createFacilityMonitoringSubscriptionRequest(FacilityMonitoringSubscription value) {
+        return new JAXBElement<FacilityMonitoringSubscription>(_FacilityMonitoringSubscriptionRequest_QNAME, FacilityMonitoringSubscription.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TripResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TripResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TripResponse")
-    public JAXBElement<TripResponseStructure> createTripResponse(TripResponseStructure value) {
-        return new JAXBElement<TripResponseStructure>(_TripResponse_QNAME, TripResponseStructure.class, null, value);
+    public JAXBElement<TripResponse> createTripResponse(TripResponse value) {
+        return new JAXBElement<TripResponse>(_TripResponse_QNAME, TripResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationEnumerateValuesResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationEnumerateValuesResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationEnumerateValuesResponse")
-    public JAXBElement<PersonalisationEnumerateValuesResponseStructure> createPersonalisationEnumerateValuesResponse(PersonalisationEnumerateValuesResponseStructure value) {
-        return new JAXBElement<PersonalisationEnumerateValuesResponseStructure>(_PersonalisationEnumerateValuesResponse_QNAME, PersonalisationEnumerateValuesResponseStructure.class, null, value);
+    public JAXBElement<PersonalisationEnumerateValuesResponse> createPersonalisationEnumerateValuesResponse(PersonalisationEnumerateValuesResponse value) {
+        return new JAXBElement<PersonalisationEnumerateValuesResponse>(_PersonalisationEnumerateValuesResponse_QNAME, PersonalisationEnumerateValuesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationEnumerateValuesRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationEnumerateValuesRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationEnumerateValuesRequest")
-    public JAXBElement<PersonalisationEnumerateValuesRequestStructure> createPersonalisationEnumerateValuesRequest(PersonalisationEnumerateValuesRequestStructure value) {
-        return new JAXBElement<PersonalisationEnumerateValuesRequestStructure>(_PersonalisationEnumerateValuesRequest_QNAME, PersonalisationEnumerateValuesRequestStructure.class, null, value);
+    public JAXBElement<PersonalisationEnumerateValuesRequest> createPersonalisationEnumerateValuesRequest(PersonalisationEnumerateValuesRequest value) {
+        return new JAXBElement<PersonalisationEnumerateValuesRequest>(_PersonalisationEnumerateValuesRequest_QNAME, PersonalisationEnumerateValuesRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionDemandRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionDemandRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionDemandRequest")
-    public JAXBElement<ConnectionDemandRequestStructure> createConnectionDemandRequest(ConnectionDemandRequestStructure value) {
-        return new JAXBElement<ConnectionDemandRequestStructure>(_ConnectionDemandRequest_QNAME, ConnectionDemandRequestStructure.class, null, value);
+    public JAXBElement<ConnectionDemandRequest> createConnectionDemandRequest(ConnectionDemandRequest value) {
+        return new JAXBElement<ConnectionDemandRequest>(_ConnectionDemandRequest_QNAME, ConnectionDemandRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationSaveValueResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationSaveValueResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationSaveValueResponse")
-    public JAXBElement<PersonalisationSaveValueResponseStructure> createPersonalisationSaveValueResponse(PersonalisationSaveValueResponseStructure value) {
-        return new JAXBElement<PersonalisationSaveValueResponseStructure>(_PersonalisationSaveValueResponse_QNAME, PersonalisationSaveValueResponseStructure.class, null, value);
+    public JAXBElement<PersonalisationSaveValueResponse> createPersonalisationSaveValueResponse(PersonalisationSaveValueResponse value) {
+        return new JAXBElement<PersonalisationSaveValueResponse>(_PersonalisationSaveValueResponse_QNAME, PersonalisationSaveValueResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionReportRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionReportRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionReportRequest")
-    public JAXBElement<ConnectionReportRequestStructure> createConnectionReportRequest(ConnectionReportRequestStructure value) {
-        return new JAXBElement<ConnectionReportRequestStructure>(_ConnectionReportRequest_QNAME, ConnectionReportRequestStructure.class, null, value);
+    public JAXBElement<ConnectionReportRequest> createConnectionReportRequest(ConnectionReportRequest value) {
+        return new JAXBElement<ConnectionReportRequest>(_ConnectionReportRequest_QNAME, ConnectionReportRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link IndividualRouteResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IndividualRouteResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "IndividualRouteResponse")
-    public JAXBElement<IndividualRouteResponseStructure> createIndividualRouteResponse(IndividualRouteResponseStructure value) {
-        return new JAXBElement<IndividualRouteResponseStructure>(_IndividualRouteResponse_QNAME, IndividualRouteResponseStructure.class, null, value);
+    public JAXBElement<IndividualRouteResponse> createIndividualRouteResponse(IndividualRouteResponse value) {
+        return new JAXBElement<IndividualRouteResponse>(_IndividualRouteResponse_QNAME, IndividualRouteResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TerminateSubscriptionRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TerminateSubscriptionRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TerminateSubscriptionRequest")
-    public JAXBElement<TerminateSubscriptionRequestStructure> createTerminateSubscriptionRequest(TerminateSubscriptionRequestStructure value) {
-        return new JAXBElement<TerminateSubscriptionRequestStructure>(_TerminateSubscriptionRequest_QNAME, TerminateSubscriptionRequestStructure.class, null, value);
+    public JAXBElement<TerminateSubscriptionRequest> createTerminateSubscriptionRequest(TerminateSubscriptionRequest value) {
+        return new JAXBElement<TerminateSubscriptionRequest>(_TerminateSubscriptionRequest_QNAME, TerminateSubscriptionRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FareZoneRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FareZoneRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FareZoneRef")
-    public JAXBElement<FareZoneRefStructure> createFareZoneRef(FareZoneRefStructure value) {
-        return new JAXBElement<FareZoneRefStructure>(_FareZoneRef_QNAME, FareZoneRefStructure.class, null, value);
+    public JAXBElement<FareZoneRef> createFareZoneRef(FareZoneRef value) {
+        return new JAXBElement<FareZoneRef>(_FareZoneRef_QNAME, FareZoneRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityMonitoringDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FacilityMonitoringDelivery")
-    public JAXBElement<FacilityMonitoringDeliveryStructure> createFacilityMonitoringDelivery(FacilityMonitoringDeliveryStructure value) {
-        return new JAXBElement<FacilityMonitoringDeliveryStructure>(_FacilityMonitoringDelivery_QNAME, FacilityMonitoringDeliveryStructure.class, null, value);
+    public JAXBElement<FacilityMonitoringDelivery> createFacilityMonitoringDelivery(FacilityMonitoringDelivery value) {
+        return new JAXBElement<FacilityMonitoringDelivery>(_FacilityMonitoringDelivery_QNAME, FacilityMonitoringDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FacilityResponse")
-    public JAXBElement<FacilityResponseStructure> createFacilityResponse(FacilityResponseStructure value) {
-        return new JAXBElement<FacilityResponseStructure>(_FacilityResponse_QNAME, FacilityResponseStructure.class, null, value);
+    public JAXBElement<FacilityResponse> createFacilityResponse(FacilityResponse value) {
+        return new JAXBElement<FacilityResponse>(_FacilityResponse_QNAME, FacilityResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OperatingDayRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OperatingDayRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "OperatingDayRef")
-    public JAXBElement<OperatingDayRefStructure> createOperatingDayRef(OperatingDayRefStructure value) {
-        return new JAXBElement<OperatingDayRefStructure>(_OperatingDayRef_QNAME, OperatingDayRefStructure.class, null, value);
+    public JAXBElement<OperatingDayRef> createOperatingDayRef(OperatingDayRef value) {
+        return new JAXBElement<OperatingDayRef>(_OperatingDayRef_QNAME, OperatingDayRef.class, null, value);
     }
 
     /**
@@ -2744,120 +2744,120 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OperatorRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OperatorRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "OperatorRef")
-    public JAXBElement<OperatorRefStructure> createOperatorRef(OperatorRefStructure value) {
-        return new JAXBElement<OperatorRefStructure>(_OperatorRef_QNAME, OperatorRefStructure.class, null, value);
+    public JAXBElement<OperatorRef> createOperatorRef(OperatorRef value) {
+        return new JAXBElement<OperatorRef>(_OperatorRef_QNAME, OperatorRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TripRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TripRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TripRequest")
-    public JAXBElement<TripRequestStructure> createTripRequest(TripRequestStructure value) {
-        return new JAXBElement<TripRequestStructure>(_TripRequest_QNAME, TripRequestStructure.class, null, value);
+    public JAXBElement<TripRequest> createTripRequest(TripRequest value) {
+        return new JAXBElement<TripRequest>(_TripRequest_QNAME, TripRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ServiceRequest")
-    public JAXBElement<ServiceRequestStructure> createServiceRequest(ServiceRequestStructure value) {
-        return new JAXBElement<ServiceRequestStructure>(_ServiceRequest_QNAME, ServiceRequestStructure.class, null, value);
+    public JAXBElement<ServiceRequest> createServiceRequest(ServiceRequest value) {
+        return new JAXBElement<ServiceRequest>(_ServiceRequest_QNAME, ServiceRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BookingInfoRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link BookingInfoRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "BookingInfoRequest")
-    public JAXBElement<BookingInfoRequestStructure> createBookingInfoRequest(BookingInfoRequestStructure value) {
-        return new JAXBElement<BookingInfoRequestStructure>(_BookingInfoRequest_QNAME, BookingInfoRequestStructure.class, null, value);
+    public JAXBElement<BookingInfoRequest> createBookingInfoRequest(BookingInfoRequest value) {
+        return new JAXBElement<BookingInfoRequest>(_BookingInfoRequest_QNAME, BookingInfoRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionReportResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionReportResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionReportResponse")
-    public JAXBElement<ConnectionReportResponseStructure> createConnectionReportResponse(ConnectionReportResponseStructure value) {
-        return new JAXBElement<ConnectionReportResponseStructure>(_ConnectionReportResponse_QNAME, ConnectionReportResponseStructure.class, null, value);
+    public JAXBElement<ConnectionReportResponse> createConnectionReportResponse(ConnectionReportResponse value) {
+        return new JAXBElement<ConnectionReportResponse>(_ConnectionReportResponse_QNAME, ConnectionReportResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PointOfInterestRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PointOfInterestRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PointOfInterestRef")
-    public JAXBElement<PointOfInterestRefStructure> createPointOfInterestRef(PointOfInterestRefStructure value) {
-        return new JAXBElement<PointOfInterestRefStructure>(_PointOfInterestRef_QNAME, PointOfInterestRefStructure.class, null, value);
+    public JAXBElement<PointOfInterestRef> createPointOfInterestRef(PointOfInterestRef value) {
+        return new JAXBElement<PointOfInterestRef>(_PointOfInterestRef_QNAME, PointOfInterestRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link JourneyRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link JourneyRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "JourneyRef")
-    public JAXBElement<JourneyRefStructure> createJourneyRef(JourneyRefStructure value) {
-        return new JAXBElement<JourneyRefStructure>(_JourneyRef_QNAME, JourneyRefStructure.class, null, value);
+    public JAXBElement<JourneyRef> createJourneyRef(JourneyRef value) {
+        return new JAXBElement<JourneyRef>(_JourneyRef_QNAME, JourneyRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FaresResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FaresResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FaresResponse")
-    public JAXBElement<FaresResponseStructure> createFaresResponse(FaresResponseStructure value) {
-        return new JAXBElement<FaresResponseStructure>(_FaresResponse_QNAME, FaresResponseStructure.class, null, value);
+    public JAXBElement<FaresResponse> createFaresResponse(FaresResponse value) {
+        return new JAXBElement<FaresResponse>(_FaresResponse_QNAME, FaresResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LineRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LineRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "LineRef")
-    public JAXBElement<LineRefStructure> createLineRef(LineRefStructure value) {
-        return new JAXBElement<LineRefStructure>(_LineRef_QNAME, LineRefStructure.class, null, value);
+    public JAXBElement<LineRef> createLineRef(LineRef value) {
+        return new JAXBElement<LineRef>(_LineRef_QNAME, LineRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopEventResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopEventResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "StopEventResponse")
-    public JAXBElement<StopEventResponseStructure> createStopEventResponse(StopEventResponseStructure value) {
-        return new JAXBElement<StopEventResponseStructure>(_StopEventResponse_QNAME, StopEventResponseStructure.class, null, value);
+    public JAXBElement<StopEventResponse> createStopEventResponse(StopEventResponse value) {
+        return new JAXBElement<StopEventResponse>(_StopEventResponse_QNAME, StopEventResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationRetrieveValueRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationRetrieveValueRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationRetrieveValueRequest")
-    public JAXBElement<PersonalisationRetrieveValueRequestStructure> createPersonalisationRetrieveValueRequest(PersonalisationRetrieveValueRequestStructure value) {
-        return new JAXBElement<PersonalisationRetrieveValueRequestStructure>(_PersonalisationRetrieveValueRequest_QNAME, PersonalisationRetrieveValueRequestStructure.class, null, value);
+    public JAXBElement<PersonalisationRetrieveValueRequest> createPersonalisationRetrieveValueRequest(PersonalisationRetrieveValueRequest value) {
+        return new JAXBElement<PersonalisationRetrieveValueRequest>(_PersonalisationRetrieveValueRequest_QNAME, PersonalisationRetrieveValueRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopPlaceRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopPlaceRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "StopPlaceRef")
-    public JAXBElement<StopPlaceRefStructure> createStopPlaceRef(StopPlaceRefStructure value) {
-        return new JAXBElement<StopPlaceRefStructure>(_StopPlaceRef_QNAME, StopPlaceRefStructure.class, null, value);
+    public JAXBElement<StopPlaceRef> createStopPlaceRef(StopPlaceRef value) {
+        return new JAXBElement<StopPlaceRef>(_StopPlaceRef_QNAME, StopPlaceRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationResponse")
-    public JAXBElement<PersonalisationResponseStructure> createPersonalisationResponse(PersonalisationResponseStructure value) {
-        return new JAXBElement<PersonalisationResponseStructure>(_PersonalisationResponse_QNAME, PersonalisationResponseStructure.class, null, value);
+    public JAXBElement<PersonalisationResponse> createPersonalisationResponse(PersonalisationResponse value) {
+        return new JAXBElement<PersonalisationResponse>(_PersonalisationResponse_QNAME, PersonalisationResponse.class, null, value);
     }
 
     /**
@@ -2870,237 +2870,237 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TicketRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TicketRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TicketRef")
-    public JAXBElement<TicketRefStructure> createTicketRef(TicketRefStructure value) {
-        return new JAXBElement<TicketRefStructure>(_TicketRef_QNAME, TicketRefStructure.class, null, value);
+    public JAXBElement<TicketRef> createTicketRef(TicketRef value) {
+        return new JAXBElement<TicketRef>(_TicketRef_QNAME, TicketRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalisationRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PersonalisationRequest")
-    public JAXBElement<PersonalisationRequestStructure> createPersonalisationRequest(PersonalisationRequestStructure value) {
-        return new JAXBElement<PersonalisationRequestStructure>(_PersonalisationRequest_QNAME, PersonalisationRequestStructure.class, null, value);
+    public JAXBElement<PersonalisationRequest> createPersonalisationRequest(PersonalisationRequest value) {
+        return new JAXBElement<PersonalisationRequest>(_PersonalisationRequest_QNAME, PersonalisationRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleInteractionRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleInteractionRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "VehicleInteractionRequest")
-    public JAXBElement<VehicleInteractionRequestStructure> createVehicleInteractionRequest(VehicleInteractionRequestStructure value) {
-        return new JAXBElement<VehicleInteractionRequestStructure>(_VehicleInteractionRequest_QNAME, VehicleInteractionRequestStructure.class, null, value);
+    public JAXBElement<VehicleInteractionRequest> createVehicleInteractionRequest(VehicleInteractionRequest value) {
+        return new JAXBElement<VehicleInteractionRequest>(_VehicleInteractionRequest_QNAME, VehicleInteractionRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TripMonitoringDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TripMonitoringDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TripMonitoringDelivery")
-    public JAXBElement<TripMonitoringDeliveryStructure> createTripMonitoringDelivery(TripMonitoringDeliveryStructure value) {
-        return new JAXBElement<TripMonitoringDeliveryStructure>(_TripMonitoringDelivery_QNAME, TripMonitoringDeliveryStructure.class, null, value);
+    public JAXBElement<TripMonitoringDelivery> createTripMonitoringDelivery(TripMonitoringDelivery value) {
+        return new JAXBElement<TripMonitoringDelivery>(_TripMonitoringDelivery_QNAME, TripMonitoringDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddressRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddressRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "AddressRef")
-    public JAXBElement<AddressRefStructure> createAddressRef(AddressRefStructure value) {
-        return new JAXBElement<AddressRefStructure>(_AddressRef_QNAME, AddressRefStructure.class, null, value);
+    public JAXBElement<AddressRef> createAddressRef(AddressRef value) {
+        return new JAXBElement<AddressRef>(_AddressRef_QNAME, AddressRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityStatusReportStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FacilityStatusReport }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FacilityStatusReport")
-    public JAXBElement<FacilityStatusReportStructure> createFacilityStatusReport(FacilityStatusReportStructure value) {
-        return new JAXBElement<FacilityStatusReportStructure>(_FacilityStatusReport_QNAME, FacilityStatusReportStructure.class, null, value);
+    public JAXBElement<FacilityStatusReport> createFacilityStatusReport(FacilityStatusReport value) {
+        return new JAXBElement<FacilityStatusReport>(_FacilityStatusReport_QNAME, FacilityStatusReport.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TravellerCardRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TravellerCardRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TravellerCardRef")
-    public JAXBElement<TravellerCardRefStructure> createTravellerCardRef(TravellerCardRefStructure value) {
-        return new JAXBElement<TravellerCardRefStructure>(_TravellerCardRef_QNAME, TravellerCardRefStructure.class, null, value);
+    public JAXBElement<TravellerCardRef> createTravellerCardRef(TravellerCardRef value) {
+        return new JAXBElement<TravellerCardRef>(_TravellerCardRef_QNAME, TravellerCardRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionDemandResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConnectionDemandResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ConnectionDemandResponse")
-    public JAXBElement<ConnectionDemandResponseStructure> createConnectionDemandResponse(ConnectionDemandResponseStructure value) {
-        return new JAXBElement<ConnectionDemandResponseStructure>(_ConnectionDemandResponse_QNAME, ConnectionDemandResponseStructure.class, null, value);
+    public JAXBElement<ConnectionDemandResponse> createConnectionDemandResponse(ConnectionDemandResponse value) {
+        return new JAXBElement<ConnectionDemandResponse>(_ConnectionDemandResponse_QNAME, ConnectionDemandResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ServiceDelivery")
-    public JAXBElement<ServiceDeliveryStructure> createServiceDelivery(ServiceDeliveryStructure value) {
-        return new JAXBElement<ServiceDeliveryStructure>(_ServiceDelivery_QNAME, ServiceDeliveryStructure.class, null, value);
+    public JAXBElement<ServiceDelivery> createServiceDelivery(ServiceDelivery value) {
+        return new JAXBElement<ServiceDelivery>(_ServiceDelivery_QNAME, ServiceDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PositioningRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PositioningRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "PositioningRequest")
-    public JAXBElement<PositioningRequestStructure> createPositioningRequest(PositioningRequestStructure value) {
-        return new JAXBElement<PositioningRequestStructure>(_PositioningRequest_QNAME, PositioningRequestStructure.class, null, value);
+    public JAXBElement<PositioningRequest> createPositioningRequest(PositioningRequest value) {
+        return new JAXBElement<PositioningRequest>(_PositioningRequest_QNAME, PositioningRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ParticipantRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ParticipantRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ParticipantRef")
-    public JAXBElement<ParticipantRefStructure> createParticipantRef(ParticipantRefStructure value) {
-        return new JAXBElement<ParticipantRefStructure>(_ParticipantRef_QNAME, ParticipantRefStructure.class, null, value);
+    public JAXBElement<ParticipantRef> createParticipantRef(ParticipantRef value) {
+        return new JAXBElement<ParticipantRef>(_ParticipantRef_QNAME, ParticipantRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopEventRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopEventRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "StopEventRequest")
-    public JAXBElement<StopEventRequestStructure> createStopEventRequest(StopEventRequestStructure value) {
-        return new JAXBElement<StopEventRequestStructure>(_StopEventRequest_QNAME, StopEventRequestStructure.class, null, value);
+    public JAXBElement<StopEventRequest> createStopEventRequest(StopEventRequest value) {
+        return new JAXBElement<StopEventRequest>(_StopEventRequest_QNAME, StopEventRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LocationInformationRefineResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LocationInformationRefineResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "LocationInformationRefineResponse")
-    public JAXBElement<LocationInformationRefineResponseStructure> createLocationInformationRefineResponse(LocationInformationRefineResponseStructure value) {
-        return new JAXBElement<LocationInformationRefineResponseStructure>(_LocationInformationRefineResponse_QNAME, LocationInformationRefineResponseStructure.class, null, value);
+    public JAXBElement<LocationInformationRefineResponse> createLocationInformationRefineResponse(LocationInformationRefineResponse value) {
+        return new JAXBElement<LocationInformationRefineResponse>(_LocationInformationRefineResponse_QNAME, LocationInformationRefineResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LocationInformationResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LocationInformationResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "LocationInformationResponse")
-    public JAXBElement<LocationInformationResponseStructure> createLocationInformationResponse(LocationInformationResponseStructure value) {
-        return new JAXBElement<LocationInformationResponseStructure>(_LocationInformationResponse_QNAME, LocationInformationResponseStructure.class, null, value);
+    public JAXBElement<LocationInformationResponse> createLocationInformationResponse(LocationInformationResponse value) {
+        return new JAXBElement<LocationInformationResponse>(_LocationInformationResponse_QNAME, LocationInformationResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeDeliveryStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SituationExchangeDelivery }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "SituationExchangeDelivery")
-    public JAXBElement<SituationExchangeDeliveryStructure> createSituationExchangeDelivery(SituationExchangeDeliveryStructure value) {
-        return new JAXBElement<SituationExchangeDeliveryStructure>(_SituationExchangeDelivery_QNAME, SituationExchangeDeliveryStructure.class, null, value);
+    public JAXBElement<SituationExchangeDelivery> createSituationExchangeDelivery(SituationExchangeDelivery value) {
+        return new JAXBElement<SituationExchangeDelivery>(_SituationExchangeDelivery_QNAME, SituationExchangeDelivery.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleFacilityStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VehicleFacility }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "VehicleFacility")
-    public JAXBElement<VehicleFacilityStructure> createVehicleFacility(VehicleFacilityStructure value) {
-        return new JAXBElement<VehicleFacilityStructure>(_VehicleFacility_QNAME, VehicleFacilityStructure.class, null, value);
+    public JAXBElement<VehicleFacility> createVehicleFacility(VehicleFacility value) {
+        return new JAXBElement<VehicleFacility>(_VehicleFacility_QNAME, VehicleFacility.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TripInfoResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TripInfoResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TripInfoResponse")
-    public JAXBElement<TripInfoResponseStructure> createTripInfoResponse(TripInfoResponseStructure value) {
-        return new JAXBElement<TripInfoResponseStructure>(_TripInfoResponse_QNAME, TripInfoResponseStructure.class, null, value);
+    public JAXBElement<TripInfoResponse> createTripInfoResponse(TripInfoResponse value) {
+        return new JAXBElement<TripInfoResponse>(_TripInfoResponse_QNAME, TripInfoResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FaresAuthorityRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FaresAuthorityRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "FaresAuthorityRef")
-    public JAXBElement<FaresAuthorityRefStructure> createFaresAuthorityRef(FaresAuthorityRefStructure value) {
-        return new JAXBElement<FaresAuthorityRefStructure>(_FaresAuthorityRef_QNAME, FaresAuthorityRefStructure.class, null, value);
+    public JAXBElement<FaresAuthorityRef> createFaresAuthorityRef(FaresAuthorityRef value) {
+        return new JAXBElement<FaresAuthorityRef>(_FaresAuthorityRef_QNAME, FaresAuthorityRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TripRefineResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TripRefineResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "TripRefineResponse")
-    public JAXBElement<TripRefineResponseStructure> createTripRefineResponse(TripRefineResponseStructure value) {
-        return new JAXBElement<TripRefineResponseStructure>(_TripRefineResponse_QNAME, TripRefineResponseStructure.class, null, value);
+    public JAXBElement<TripRefineResponse> createTripRefineResponse(TripRefineResponse value) {
+        return new JAXBElement<TripRefineResponse>(_TripRefineResponse_QNAME, TripRefineResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopRequestRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopRequestRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "StopRequestRequest")
-    public JAXBElement<StopRequestRequestStructure> createStopRequestRequest(StopRequestRequestStructure value) {
-        return new JAXBElement<StopRequestRequestStructure>(_StopRequestRequest_QNAME, StopRequestRequestStructure.class, null, value);
+    public JAXBElement<StopRequestRequest> createStopRequestRequest(StopRequestRequest value) {
+        return new JAXBElement<StopRequestRequest>(_StopRequestRequest_QNAME, StopRequestRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MapServiceResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link MapServiceResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "MapServiceResponse")
-    public JAXBElement<MapServiceResponseStructure> createMapServiceResponse(MapServiceResponseStructure value) {
-        return new JAXBElement<MapServiceResponseStructure>(_MapServiceResponse_QNAME, MapServiceResponseStructure.class, null, value);
+    public JAXBElement<MapServiceResponse> createMapServiceResponse(MapServiceResponse value) {
+        return new JAXBElement<MapServiceResponse>(_MapServiceResponse_QNAME, MapServiceResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LocationInformationRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LocationInformationRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "LocationInformationRequest")
-    public JAXBElement<LocationInformationRequestStructure> createLocationInformationRequest(LocationInformationRequestStructure value) {
-        return new JAXBElement<LocationInformationRequestStructure>(_LocationInformationRequest_QNAME, LocationInformationRequestStructure.class, null, value);
+    public JAXBElement<LocationInformationRequest> createLocationInformationRequest(LocationInformationRequest value) {
+        return new JAXBElement<LocationInformationRequest>(_LocationInformationRequest_QNAME, LocationInformationRequest.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DataReceivedResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DataReceivedResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "DataReceivedAcknowledgement")
-    public JAXBElement<DataReceivedResponseStructure> createDataReceivedAcknowledgement(DataReceivedResponseStructure value) {
-        return new JAXBElement<DataReceivedResponseStructure>(_DataReceivedAcknowledgement_QNAME, DataReceivedResponseStructure.class, null, value);
+    public JAXBElement<DataReceivedResponse> createDataReceivedAcknowledgement(DataReceivedResponse value) {
+        return new JAXBElement<DataReceivedResponse>(_DataReceivedAcknowledgement_QNAME, DataReceivedResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StopPointRefStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StopPointRef }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "StopPointRef")
-    public JAXBElement<StopPointRefStructure> createStopPointRef(StopPointRefStructure value) {
-        return new JAXBElement<StopPointRefStructure>(_StopPointRef_QNAME, StopPointRefStructure.class, null, value);
+    public JAXBElement<StopPointRef> createStopPointRef(StopPointRef value) {
+        return new JAXBElement<StopPointRef>(_StopPointRef_QNAME, StopPointRef.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RefineResponseStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RefineResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "RefineResponse")
-    public JAXBElement<RefineResponseStructure> createRefineResponse(RefineResponseStructure value) {
-        return new JAXBElement<RefineResponseStructure>(_RefineResponse_QNAME, RefineResponseStructure.class, null, value);
+    public JAXBElement<RefineResponse> createRefineResponse(RefineResponse value) {
+        return new JAXBElement<RefineResponse>(_RefineResponse_QNAME, RefineResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceRegisterRequestStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceRegisterRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "ServiceRegisterRequest")
-    public JAXBElement<ServiceRegisterRequestStructure> createServiceRegisterRequest(ServiceRegisterRequestStructure value) {
-        return new JAXBElement<ServiceRegisterRequestStructure>(_ServiceRegisterRequest_QNAME, ServiceRegisterRequestStructure.class, null, value);
+    public JAXBElement<ServiceRegisterRequest> createServiceRegisterRequest(ServiceRegisterRequest value) {
+        return new JAXBElement<ServiceRegisterRequest>(_ServiceRegisterRequest_QNAME, ServiceRegisterRequest.class, null, value);
     }
 
     /**
@@ -3113,12 +3113,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InfrastructureFacilityStructure }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InfrastructureFacility }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.vdv.de/trias", name = "InfrastructureFacility")
-    public JAXBElement<InfrastructureFacilityStructure> createInfrastructureFacility(InfrastructureFacilityStructure value) {
-        return new JAXBElement<InfrastructureFacilityStructure>(_InfrastructureFacility_QNAME, InfrastructureFacilityStructure.class, null, value);
+    public JAXBElement<InfrastructureFacility> createInfrastructureFacility(InfrastructureFacility value) {
+        return new JAXBElement<InfrastructureFacility>(_InfrastructureFacility_QNAME, InfrastructureFacility.class, null, value);
     }
 
 }

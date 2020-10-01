@@ -134,8 +134,9 @@ public class SourceInformation {
      *     {@link CountryEnum }
      *     
      */
-    public void setSourceCountry(CountryEnum value) {
+    public SourceInformation setSourceCountry(CountryEnum value) {
         this.sourceCountry = value;
+        return this;
     }
 
     /**
@@ -158,8 +159,9 @@ public class SourceInformation {
      *     {@link String }
      *     
      */
-    public void setSourceIdentification(String value) {
+    public SourceInformation setSourceIdentification(String value) {
         this.sourceIdentification = value;
+        return this;
     }
 
     /**
@@ -206,8 +208,9 @@ public class SourceInformation {
      *     {@link SourceTypeEnum }
      *     
      */
-    public void setSourceType(SourceTypeEnum value) {
+    public SourceInformation setSourceType(SourceTypeEnum value) {
         this.sourceType = value;
+        return this;
     }
 
     /**
@@ -230,8 +233,9 @@ public class SourceInformation {
      *     {@link Boolean }
      *     
      */
-    public void setReliable(Boolean value) {
+    public SourceInformation setReliable(Boolean value) {
         this.reliable = value;
+        return this;
     }
 
     /**
@@ -254,8 +258,9 @@ public class SourceInformation {
      *     {@link ExtensionType }
      *     
      */
-    public void setSourceInformationExtension(ExtensionType value) {
+    public SourceInformation setSourceInformationExtension(ExtensionType value) {
         this.sourceInformationExtension = value;
+        return this;
     }
 
 

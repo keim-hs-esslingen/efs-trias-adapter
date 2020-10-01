@@ -90,8 +90,9 @@ public class AxleSpacing {
      * Sets the value of the axleSpacing property.
      * 
      */
-    public void setAxleSpacing(float value) {
+    public AxleSpacing setAxleSpacing(float value) {
         this.axleSpacing = value;
+        return this;
     }
 
     /**
@@ -114,8 +115,9 @@ public class AxleSpacing {
      *     {@link BigInteger }
      *     
      */
-    public void setAxleSpacingSequenceIdentifier(BigInteger value) {
+    public AxleSpacing setAxleSpacingSequenceIdentifier(BigInteger value) {
         this.axleSpacingSequenceIdentifier = value;
+        return this;
     }
 
     /**
@@ -138,8 +140,9 @@ public class AxleSpacing {
      *     {@link ExtensionType }
      *     
      */
-    public void setAxleSpacingExtension(ExtensionType value) {
+    public AxleSpacing setAxleSpacingExtension(ExtensionType value) {
         this.axleSpacingExtension = value;
+        return this;
     }
 
 }

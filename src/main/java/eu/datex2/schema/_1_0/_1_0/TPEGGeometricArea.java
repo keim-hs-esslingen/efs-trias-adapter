@@ -104,8 +104,9 @@ public class TPEGGeometricArea
      *     {@link BigInteger }
      *     
      */
-    public void setRadius(BigInteger value) {
+    public TPEGGeometricArea setRadius(BigInteger value) {
         this.radius = value;
+        return this;
     }
 
     /**
@@ -128,8 +129,9 @@ public class TPEGGeometricArea
      *     {@link PointCoordinates }
      *     
      */
-    public void setCentrePoint(PointCoordinates value) {
+    public TPEGGeometricArea setCentrePoint(PointCoordinates value) {
         this.centrePoint = value;
+        return this;
     }
 
     /**
@@ -152,8 +154,9 @@ public class TPEGGeometricArea
      *     {@link TPEGAreaDescriptor }
      *     
      */
-    public void setName(TPEGAreaDescriptor value) {
+    public TPEGGeometricArea setName(TPEGAreaDescriptor value) {
         this.name = value;
+        return this;
     }
 
     /**
@@ -176,8 +179,9 @@ public class TPEGGeometricArea
      *     {@link ExtensionType }
      *     
      */
-    public void setTpeggeometricAreaExtension(ExtensionType value) {
+    public TPEGGeometricArea setTpeggeometricAreaExtension(ExtensionType value) {
         this.tpeggeometricAreaExtension = value;
+        return this;
     }
 
 }

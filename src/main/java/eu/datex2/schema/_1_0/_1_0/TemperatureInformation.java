@@ -93,8 +93,9 @@ public class TemperatureInformation
      *     {@link Temperature }
      *     
      */
-    public void setTemperature(Temperature value) {
+    public TemperatureInformation setTemperature(Temperature value) {
         this.temperature = value;
+        return this;
     }
 
     /**
@@ -117,8 +118,9 @@ public class TemperatureInformation
      *     {@link ExtensionType }
      *     
      */
-    public void setTemperatureInformationExtension(ExtensionType value) {
+    public TemperatureInformation setTemperatureInformationExtension(ExtensionType value) {
         this.temperatureInformationExtension = value;
+        return this;
     }
 
 }

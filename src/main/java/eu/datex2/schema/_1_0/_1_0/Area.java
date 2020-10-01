@@ -97,8 +97,9 @@ public class Area
      *     {@link AlertCArea }
      *     
      */
-    public void setAlertCArea(AlertCArea value) {
+    public Area setAlertCArea(AlertCArea value) {
         this.alertCArea = value;
+        return this;
     }
 
     /**
@@ -121,8 +122,9 @@ public class Area
      *     {@link TPEGAreaLocation }
      *     
      */
-    public void setTpegareaLocation(TPEGAreaLocation value) {
+    public Area setTpegareaLocation(TPEGAreaLocation value) {
         this.tpegareaLocation = value;
+        return this;
     }
 
     /**
@@ -145,8 +147,9 @@ public class Area
      *     {@link ExtensionType }
      *     
      */
-    public void setAreaExtension(ExtensionType value) {
+    public Area setAreaExtension(ExtensionType value) {
         this.areaExtension = value;
+        return this;
     }
 
 }

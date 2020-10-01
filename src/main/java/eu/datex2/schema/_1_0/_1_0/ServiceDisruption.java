@@ -126,8 +126,9 @@ public class ServiceDisruption
      *     {@link ExtensionType }
      *     
      */
-    public void setServiceDisruptionExtension(ExtensionType value) {
+    public ServiceDisruption setServiceDisruptionExtension(ExtensionType value) {
         this.serviceDisruptionExtension = value;
+        return this;
     }
 
 }

@@ -98,8 +98,9 @@ public abstract class Advice {
      *     {@link ExtensionType }
      *     
      */
-    public void setAdviceExtension(ExtensionType value) {
+    public Advice setAdviceExtension(ExtensionType value) {
         this.adviceExtension = value;
+        return this;
     }
 
 }

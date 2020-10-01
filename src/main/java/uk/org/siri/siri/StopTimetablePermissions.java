@@ -65,11 +65,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 @XmlRootElement(name = "StopTimetablePermissions", namespace = "http://www.siri.org.uk/siri")
 public class StopTimetablePermissions
-    extends PermissionsStructure
+    extends Permissions
 {
 
     @XmlElement(name = "StopTimetablePermission", namespace = "http://www.siri.org.uk/siri")
-    protected List<StopMonitoringServicePermissionStructure> stopTimetablePermission;
+    protected List<StopMonitoringServicePermission> stopTimetablePermission;
 
     /**
      * Gets the value of the stopTimetablePermission property.
@@ -89,13 +89,13 @@ public class StopTimetablePermissions
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link StopMonitoringServicePermissionStructure }
+     * {@link StopMonitoringServicePermission }
      * 
      * 
      */
-    public List<StopMonitoringServicePermissionStructure> getStopTimetablePermission() {
+    public List<StopMonitoringServicePermission> getStopTimetablePermission() {
         if (stopTimetablePermission == null) {
-            stopTimetablePermission = new ArrayList<StopMonitoringServicePermissionStructure>();
+            stopTimetablePermission = new ArrayList<StopMonitoringServicePermission>();
         }
         return this.stopTimetablePermission;
     }

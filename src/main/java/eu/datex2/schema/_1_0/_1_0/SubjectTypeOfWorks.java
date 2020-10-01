@@ -99,8 +99,9 @@ public class SubjectTypeOfWorks {
      *     {@link SubjectTypeOfWorksEnum }
      *     
      */
-    public void setSubjectTypeOfWorks(SubjectTypeOfWorksEnum value) {
+    public SubjectTypeOfWorks setSubjectTypeOfWorks(SubjectTypeOfWorksEnum value) {
         this.subjectTypeOfWorks = value;
+        return this;
     }
 
     /**
@@ -123,8 +124,9 @@ public class SubjectTypeOfWorks {
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfSubjects(BigInteger value) {
+    public SubjectTypeOfWorks setNumberOfSubjects(BigInteger value) {
         this.numberOfSubjects = value;
+        return this;
     }
 
     /**
@@ -147,8 +149,9 @@ public class SubjectTypeOfWorks {
      *     {@link ExtensionType }
      *     
      */
-    public void setSubjectTypeOfWorksExtension(ExtensionType value) {
+    public SubjectTypeOfWorks setSubjectTypeOfWorksExtension(ExtensionType value) {
         this.subjectTypeOfWorksExtension = value;
+        return this;
     }
 
 }

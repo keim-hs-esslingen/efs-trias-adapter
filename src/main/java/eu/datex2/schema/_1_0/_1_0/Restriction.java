@@ -104,8 +104,9 @@ public class Restriction {
      *     {@link WinterEquipmentRequirementEnum }
      *     
      */
-    public void setEquipmentRequirement(WinterEquipmentRequirementEnum value) {
+    public Restriction setEquipmentRequirement(WinterEquipmentRequirementEnum value) {
         this.equipmentRequirement = value;
+        return this;
     }
 
     /**
@@ -128,8 +129,9 @@ public class Restriction {
      *     {@link BigInteger }
      *     
      */
-    public void setMinimumCarOccupancy(BigInteger value) {
+    public Restriction setMinimumCarOccupancy(BigInteger value) {
         this.minimumCarOccupancy = value;
+        return this;
     }
 
     /**
@@ -152,8 +154,9 @@ public class Restriction {
      *     {@link BigInteger }
      *     
      */
-    public void setSequentialRampNumber(BigInteger value) {
+    public Restriction setSequentialRampNumber(BigInteger value) {
         this.sequentialRampNumber = value;
+        return this;
     }
 
     /**
@@ -176,8 +179,9 @@ public class Restriction {
      *     {@link ExtensionType }
      *     
      */
-    public void setRestrictionExtension(ExtensionType value) {
+    public Restriction setRestrictionExtension(ExtensionType value) {
         this.restrictionExtension = value;
+        return this;
     }
 
 }

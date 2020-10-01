@@ -102,8 +102,9 @@ public class AxleWeight {
      *     {@link BigInteger }
      *     
      */
-    public void setAxleSequenceIdentifier(BigInteger value) {
+    public AxleWeight setAxleSequenceIdentifier(BigInteger value) {
         this.axleSequenceIdentifier = value;
+        return this;
     }
 
     /**
@@ -126,8 +127,9 @@ public class AxleWeight {
      *     {@link Float }
      *     
      */
-    public void setAxleWeight(Float value) {
+    public AxleWeight setAxleWeight(Float value) {
         this.axleWeight = value;
+        return this;
     }
 
     /**
@@ -150,8 +152,9 @@ public class AxleWeight {
      *     {@link Float }
      *     
      */
-    public void setMaximumPermittedAxleWeight(Float value) {
+    public AxleWeight setMaximumPermittedAxleWeight(Float value) {
         this.maximumPermittedAxleWeight = value;
+        return this;
     }
 
     /**
@@ -174,8 +177,9 @@ public class AxleWeight {
      *     {@link ExtensionType }
      *     
      */
-    public void setAxleWeightExtension(ExtensionType value) {
+    public AxleWeight setAxleWeightExtension(ExtensionType value) {
         this.axleWeightExtension = value;
+        return this;
     }
 
 }

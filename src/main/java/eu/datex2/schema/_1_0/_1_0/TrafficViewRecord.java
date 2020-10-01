@@ -120,8 +120,9 @@ public class TrafficViewRecord {
      *     {@link BigInteger }
      *     
      */
-    public void setRecordSequenceNumber(BigInteger value) {
+    public TrafficViewRecord setRecordSequenceNumber(BigInteger value) {
         this.recordSequenceNumber = value;
+        return this;
     }
 
     /**
@@ -144,8 +145,9 @@ public class TrafficViewRecord {
      *     {@link TrafficElement }
      *     
      */
-    public void setTrafficElement(TrafficElement value) {
+    public TrafficViewRecord setTrafficElement(TrafficElement value) {
         this.trafficElement = value;
+        return this;
     }
 
     /**
@@ -168,8 +170,9 @@ public class TrafficViewRecord {
      *     {@link OperatorAction }
      *     
      */
-    public void setOperatorAction(OperatorAction value) {
+    public TrafficViewRecord setOperatorAction(OperatorAction value) {
         this.operatorAction = value;
+        return this;
     }
 
     /**
@@ -192,8 +195,9 @@ public class TrafficViewRecord {
      *     {@link ElaboratedData }
      *     
      */
-    public void setElaboratedData(ElaboratedData value) {
+    public TrafficViewRecord setElaboratedData(ElaboratedData value) {
         this.elaboratedData = value;
+        return this;
     }
 
     /**
@@ -216,8 +220,9 @@ public class TrafficViewRecord {
      *     {@link CCTVImages }
      *     
      */
-    public void setCctvimages(CCTVImages value) {
+    public TrafficViewRecord setCctvimages(CCTVImages value) {
         this.cctvimages = value;
+        return this;
     }
 
     /**
@@ -240,8 +245,9 @@ public class TrafficViewRecord {
      *     {@link ExtensionType }
      *     
      */
-    public void setTrafficViewRecordExtension(ExtensionType value) {
+    public TrafficViewRecord setTrafficViewRecordExtension(ExtensionType value) {
         this.trafficViewRecordExtension = value;
+        return this;
     }
 
     /**
@@ -264,8 +270,9 @@ public class TrafficViewRecord {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public TrafficViewRecord setId(String value) {
         this.id = value;
+        return this;
     }
 
 }

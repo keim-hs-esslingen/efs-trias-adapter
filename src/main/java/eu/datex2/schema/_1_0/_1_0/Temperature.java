@@ -103,8 +103,9 @@ public class Temperature {
      *     {@link Float }
      *     
      */
-    public void setAirTemperature(Float value) {
+    public Temperature setAirTemperature(Float value) {
         this.airTemperature = value;
+        return this;
     }
 
     /**
@@ -127,8 +128,9 @@ public class Temperature {
      *     {@link Float }
      *     
      */
-    public void setDewPointTemperature(Float value) {
+    public Temperature setDewPointTemperature(Float value) {
         this.dewPointTemperature = value;
+        return this;
     }
 
     /**
@@ -151,8 +153,9 @@ public class Temperature {
      *     {@link Float }
      *     
      */
-    public void setMaximumTemperature(Float value) {
+    public Temperature setMaximumTemperature(Float value) {
         this.maximumTemperature = value;
+        return this;
     }
 
     /**
@@ -175,8 +178,9 @@ public class Temperature {
      *     {@link Float }
      *     
      */
-    public void setMinimumTemperature(Float value) {
+    public Temperature setMinimumTemperature(Float value) {
         this.minimumTemperature = value;
+        return this;
     }
 
     /**
@@ -199,8 +203,9 @@ public class Temperature {
      *     {@link ExtensionType }
      *     
      */
-    public void setTemperatureExtension(ExtensionType value) {
+    public Temperature setTemperatureExtension(ExtensionType value) {
         this.temperatureExtension = value;
+        return this;
     }
 
 }

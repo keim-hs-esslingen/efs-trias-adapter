@@ -95,8 +95,9 @@ public class Management {
      *     {@link LifeCycleManagement }
      *     
      */
-    public void setLifeCycleManagement(LifeCycleManagement value) {
+    public Management setLifeCycleManagement(LifeCycleManagement value) {
         this.lifeCycleManagement = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class Management {
      *     {@link FilterExitManagement }
      *     
      */
-    public void setFilterExitManagement(FilterExitManagement value) {
+    public Management setFilterExitManagement(FilterExitManagement value) {
         this.filterExitManagement = value;
+        return this;
     }
 
     /**
@@ -143,8 +145,9 @@ public class Management {
      *     {@link ExtensionType }
      *     
      */
-    public void setManagementExtension(ExtensionType value) {
+    public Management setManagementExtension(ExtensionType value) {
         this.managementExtension = value;
+        return this;
     }
 
 }

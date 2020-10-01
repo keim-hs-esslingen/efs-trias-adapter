@@ -142,8 +142,9 @@ public class SupplementaryPositionalDescription {
      *     {@link Boolean }
      *     
      */
-    public void setFootpath(Boolean value) {
+    public SupplementaryPositionalDescription setFootpath(Boolean value) {
         this.footpath = value;
+        return this;
     }
 
     /**
@@ -195,8 +196,9 @@ public class SupplementaryPositionalDescription {
      *     {@link Float }
      *     
      */
-    public void setLengthAffected(Float value) {
+    public SupplementaryPositionalDescription setLengthAffected(Float value) {
         this.lengthAffected = value;
+        return this;
     }
 
     /**
@@ -248,8 +250,9 @@ public class SupplementaryPositionalDescription {
      *     {@link ExtensionType }
      *     
      */
-    public void setSupplementaryPositionalDescriptionExtension(ExtensionType value) {
+    public SupplementaryPositionalDescription setSupplementaryPositionalDescriptionExtension(ExtensionType value) {
         this.supplementaryPositionalDescriptionExtension = value;
+        return this;
     }
 
 }

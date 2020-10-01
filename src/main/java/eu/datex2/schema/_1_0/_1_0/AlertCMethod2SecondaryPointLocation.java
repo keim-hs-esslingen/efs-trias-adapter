@@ -91,8 +91,9 @@ public class AlertCMethod2SecondaryPointLocation {
      *     {@link AlertCLocation }
      *     
      */
-    public void setAlertCLocation(AlertCLocation value) {
+    public AlertCMethod2SecondaryPointLocation setAlertCLocation(AlertCLocation value) {
         this.alertCLocation = value;
+        return this;
     }
 
     /**
@@ -115,8 +116,9 @@ public class AlertCMethod2SecondaryPointLocation {
      *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod2SecondaryPointLocationExtension(ExtensionType value) {
+    public AlertCMethod2SecondaryPointLocation setAlertCMethod2SecondaryPointLocationExtension(ExtensionType value) {
         this.alertCMethod2SecondaryPointLocationExtension = value;
+        return this;
     }
 
 }

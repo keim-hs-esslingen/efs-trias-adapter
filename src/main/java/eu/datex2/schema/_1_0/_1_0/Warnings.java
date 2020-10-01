@@ -95,8 +95,9 @@ public class Warnings
      *     {@link WarningAdviceEnum }
      *     
      */
-    public void setWarningAdvice(WarningAdviceEnum value) {
+    public Warnings setWarningAdvice(WarningAdviceEnum value) {
         this.warningAdvice = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class Warnings
      *     {@link ExtensionType }
      *     
      */
-    public void setWarningsExtension(ExtensionType value) {
+    public Warnings setWarningsExtension(ExtensionType value) {
         this.warningsExtension = value;
+        return this;
     }
 
 }

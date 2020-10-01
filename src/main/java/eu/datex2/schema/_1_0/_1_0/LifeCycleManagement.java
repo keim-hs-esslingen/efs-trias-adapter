@@ -95,8 +95,9 @@ public class LifeCycleManagement {
      *     {@link Boolean }
      *     
      */
-    public void setCancel(Boolean value) {
+    public LifeCycleManagement setCancel(Boolean value) {
         this.cancel = value;
+        return this;
     }
 
     /**
@@ -119,8 +120,9 @@ public class LifeCycleManagement {
      *     {@link Boolean }
      *     
      */
-    public void setEnd(Boolean value) {
+    public LifeCycleManagement setEnd(Boolean value) {
         this.end = value;
+        return this;
     }
 
     /**
@@ -143,8 +145,9 @@ public class LifeCycleManagement {
      *     {@link ExtensionType }
      *     
      */
-    public void setLifeCycleManagementExtension(ExtensionType value) {
+    public LifeCycleManagement setLifeCycleManagementExtension(ExtensionType value) {
         this.lifeCycleManagementExtension = value;
+        return this;
     }
 
 }

@@ -108,8 +108,9 @@ public abstract class Obstruction
      *     {@link BigInteger }
      *     
      */
-    public void setNumberOfObstructions(BigInteger value) {
+    public Obstruction setNumberOfObstructions(BigInteger value) {
         this.numberOfObstructions = value;
+        return this;
     }
 
     /**
@@ -132,8 +133,9 @@ public abstract class Obstruction
      *     {@link Mobility }
      *     
      */
-    public void setMobilityOfObstruction(Mobility value) {
+    public Obstruction setMobilityOfObstruction(Mobility value) {
         this.mobilityOfObstruction = value;
+        return this;
     }
 
     /**
@@ -156,8 +158,9 @@ public abstract class Obstruction
      *     {@link ExtensionType }
      *     
      */
-    public void setObstructionExtension(ExtensionType value) {
+    public Obstruction setObstructionExtension(ExtensionType value) {
         this.obstructionExtension = value;
+        return this;
     }
 
 }

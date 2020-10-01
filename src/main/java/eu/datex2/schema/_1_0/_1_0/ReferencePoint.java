@@ -194,8 +194,9 @@ public class ReferencePoint {
      *     {@link String }
      *     
      */
-    public void setReferencePointIdentifier(String value) {
+    public ReferencePoint setReferencePointIdentifier(String value) {
         this.referencePointIdentifier = value;
+        return this;
     }
 
     /**
@@ -266,8 +267,9 @@ public class ReferencePoint {
      *     {@link String }
      *     
      */
-    public void setRoadNumber(String value) {
+    public ReferencePoint setRoadNumber(String value) {
         this.roadNumber = value;
+        return this;
     }
 
     /**
@@ -290,8 +292,9 @@ public class ReferencePoint {
      *     {@link DirectionEnum }
      *     
      */
-    public void setDirectionBound(DirectionEnum value) {
+    public ReferencePoint setDirectionBound(DirectionEnum value) {
         this.directionBound = value;
+        return this;
     }
 
     /**
@@ -314,8 +317,9 @@ public class ReferencePoint {
      *     {@link ReferencePointDirectionEnum }
      *     
      */
-    public void setDirectionRelative(ReferencePointDirectionEnum value) {
+    public ReferencePoint setDirectionRelative(ReferencePointDirectionEnum value) {
         this.directionRelative = value;
+        return this;
     }
 
     /**
@@ -338,8 +342,9 @@ public class ReferencePoint {
      *     {@link Float }
      *     
      */
-    public void setDistanceFromPrevious(Float value) {
+    public ReferencePoint setDistanceFromPrevious(Float value) {
         this.distanceFromPrevious = value;
+        return this;
     }
 
     /**
@@ -362,8 +367,9 @@ public class ReferencePoint {
      *     {@link Float }
      *     
      */
-    public void setDistanceToNext(Float value) {
+    public ReferencePoint setDistanceToNext(Float value) {
         this.distanceToNext = value;
+        return this;
     }
 
     /**
@@ -386,8 +392,9 @@ public class ReferencePoint {
      *     {@link Boolean }
      *     
      */
-    public void setElevatedRoadSection(Boolean value) {
+    public ReferencePoint setElevatedRoadSection(Boolean value) {
         this.elevatedRoadSection = value;
+        return this;
     }
 
     /**
@@ -434,8 +441,9 @@ public class ReferencePoint {
      *     {@link Float }
      *     
      */
-    public void setReferencePointDistance(Float value) {
+    public ReferencePoint setReferencePointDistance(Float value) {
         this.referencePointDistance = value;
+        return this;
     }
 
     /**
@@ -458,8 +466,9 @@ public class ReferencePoint {
      *     {@link ExtensionType }
      *     
      */
-    public void setReferencePointExtension(ExtensionType value) {
+    public ReferencePoint setReferencePointExtension(ExtensionType value) {
         this.referencePointExtension = value;
+        return this;
     }
 
 
