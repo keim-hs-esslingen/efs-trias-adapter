@@ -119,11 +119,6 @@ public class TriasRequestFactory {
                 .tripRequest(createTripRequestPayload(from, to, startTime, endTime));
     }
 
-    public Trias createLocationInformationRequest(String locationNameToSearch) {
-        return newTriasServiceRequest().locationInformationRequest(
-                LocationInformationRequestFactory.byLocationName(locationNameToSearch)
-        );
-    }
 
     public Trias createLocationInformationRequest(StopPointRefStructure stopPointRef) {
         return newTriasServiceRequest().locationInformationRequest(

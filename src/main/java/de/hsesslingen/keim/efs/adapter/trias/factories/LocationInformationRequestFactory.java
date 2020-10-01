@@ -28,6 +28,7 @@ import de.vdv.trias.GeoPositionStructure;
 import de.vdv.trias.GeoRestrictionsStructure;
 import de.vdv.trias.InitialLocationInputStructure;
 import de.vdv.trias.LocationInformationRequestStructure;
+import de.vdv.trias.LocationParamStructure;
 import de.vdv.trias.StopPointRefStructure;
 
 /**
@@ -37,8 +38,13 @@ import de.vdv.trias.StopPointRefStructure;
 public class LocationInformationRequestFactory {
 
     public static LocationInformationRequestStructure byInitialInput(InitialLocationInputStructure initialInput) {
+        return byInitialInput(initialInput, null);
+    }
+
+    public static LocationInformationRequestStructure byInitialInput(InitialLocationInputStructure initialInput, LocationParamStructure restrictions) {
         var locationInformationRequest = new LocationInformationRequestStructure();
         locationInformationRequest.setInitialInput(initialInput);
+        locationInformationRequest.setRestrictions(restrictions);
         return locationInformationRequest;
     }
 

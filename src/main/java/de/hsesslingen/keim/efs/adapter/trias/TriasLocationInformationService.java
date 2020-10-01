@@ -27,22 +27,25 @@ import de.hsesslingen.keim.efs.adapter.trias.factories.GeoPositionStructureFacto
 import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
-import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
 import de.vdv.trias.GeoCircleStructure;
 import de.vdv.trias.GeoPositionStructure;
 import de.vdv.trias.GeoRestrictionsStructure;
 import de.vdv.trias.StopPointRefStructure;
 import de.vdv.trias.Trias;
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.xml.bind.JAXBException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import static de.hsesslingen.keim.efs.adapter.trias.Utils.nullsafe;
+import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory.byInitialInput;
 import de.hsesslingen.keim.efs.middleware.provider.IPlacesService;
+import de.vdv.trias.InitialLocationInputStructure;
+import de.vdv.trias.LocationInformationResponseStructure;
+import de.vdv.trias.LocationParamStructure;
+import de.vdv.trias.LocationResultStructure;
+import java.util.stream.Stream;
 
 /**
  * The class TriasLocationInformationService is a Service to covert public
@@ -59,12 +62,11 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
     @Value("${trias.icon-urls.default-stop-place:}")
     private String stopPlaceIconUrl;
 
-    // get the custom settings from application.yml
-    @Value("${trias.api-url}")
-    private String API_URL;
+    @Autowired
+    private TriasRequestFactory requestFactory;
 
     @Autowired
-    private TriasRequestFactory triasRequestFactory;
+    private TriasProxy proxy;
 
     /**
      * In the Method getGeoPositionFromStopPoint a API - call is performed to
@@ -76,18 +78,9 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
      */
     public GeoPositionStructure getGeoPositionFromStopPoint(StopPointRefStructure stopPointRef) throws AbstractEfsException {
 
-        Trias locationRequestTrias = triasRequestFactory.createLocationInformationRequest(stopPointRef);
+        Trias locationRequestTrias = requestFactory.createLocationInformationRequest(stopPointRef);
 
-        Trias responseLocationTrias;
-
-        try {
-            responseLocationTrias = TriasHttpRequest.post(API_URL)
-                    .body(locationRequestTrias)
-                    .go()
-                    .getBody();
-        } catch (JAXBException ex) {
-            throw internalServerError("An error occured when converting to or from XML.");
-        }
+        Trias responseLocationTrias = proxy.send(locationRequestTrias);
 
         if (responseLocationTrias == null) {
             return null;
@@ -105,56 +98,36 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
     }
 
     @Override
-    public List<Place> search(String searchQuery, ICoordinates searchCenterCoordinates, Integer searchRadiusMeter, TriasCredentials credentials) {
+    public List<Place> search(String query, ICoordinates areaCenter, Integer radiusMeter, TriasCredentials credentials) {
 
-        Trias locationRequestTrias = triasRequestFactory.createLocationInformationRequest(searchQuery);
+        GeoRestrictionsStructure restrictions = null;
 
-        var req = locationRequestTrias.getServiceRequest().getRequestPayload().getLocationInformationRequest();
-
-        if (searchCenterCoordinates != null) {
-            var radius = searchRadiusMeter != null ? searchRadiusMeter : defaultSearchRadius;
+        if (areaCenter != null) {
+            var radius = radiusMeter != null ? radiusMeter : defaultSearchRadius;
 
             var circle = new GeoCircleStructure();
-            circle.setCenter(GeoPositionStructureFactory.create(searchCenterCoordinates));
+            circle.setCenter(GeoPositionStructureFactory.create(areaCenter));
             circle.setRadius(BigInteger.valueOf(radius));
 
-            var circleRestriction = new GeoRestrictionsStructure();
-            circleRestriction.setCircle(circle);
-
-            req.getInitialInput().setGeoRestriction(circleRestriction);
+            restrictions = new GeoRestrictionsStructure();
+            restrictions.setCircle(circle);
         }
 
-        Trias responseLocationTrias;
+        // Query TRIAS api for some initial results...
+        var results = queryInitialLocationInformation(query, null, restrictions, 2)
+                .limit(5)
+                .collect(Collectors.toList());
 
-        try {
-            responseLocationTrias = TriasHttpRequest.post(API_URL)
-                    .body(locationRequestTrias)
-                    .go()
-                    .getBody();
-        } catch (JAXBException ex) {
-            throw internalServerError("An error occured when converting to or from XML.");
-        }
-
-        if (responseLocationTrias == null) {
-            return new ArrayList<>();
-        }
-
-        var locationRes = responseLocationTrias.getServiceDelivery().getDeliveryPayload().getLocationInformationResponse().getLocationResult();
-
-        if (locationRes == null) {
-            return new ArrayList<>();
-        }
-
-        var places = locationRes.stream()
+        var places = results.stream()
                 .map(locRes -> locRes.getLocation())
                 .filter(location -> location != null)
                 .map(location -> {
                     var place = new Place();
 
-                    place.setName(location.getLocationName().get(0).getText());
                     place.setCoordinates(location.getGeoPosition());
 
                     // StopPlace represent the stop location in general.
+                    place.setName(nullsafe(() -> location.getStopPlace().getStopPlaceName().get(0).getText()));
                     place.setPlaceId(nullsafe(() -> location.getStopPlace().getStopPlaceRef().getValue()));
                     // StopPoint represents the exact stop point at the location, e.g. at which platform the train departs.
                     place.setStopId(nullsafe(() -> location.getStopPoint().getStopPointRef().getValue()));
@@ -166,6 +139,100 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
                 .collect(Collectors.toList());
 
         return places;
+    }
+
+    /**
+     * Creates a stream of location information responses by sending more and
+     * more Trias location information requests one after the other using the
+     * ContinueAt mechanism. The resulting stream can be flatmapped to the
+     * actual results.
+     *
+     * @param searchText
+     * @param geoPos
+     * @param restrictions
+     * @return
+     */
+    private Stream<LocationInformationResponseStructure> initialLocationInformationStream(
+            String searchText, GeoPositionStructure geoPos, GeoRestrictionsStructure restrictions
+    ) {
+        var initialInput = new InitialLocationInputStructure();
+
+        initialInput.setLocationName(searchText);
+        initialInput.setGeoPosition(geoPos);
+        initialInput.setGeoRestriction(restrictions);
+
+        var params = new LocationParamStructure();
+
+        var request = requestFactory.newTriasServiceRequest()
+                .locationInformationRequest(byInitialInput(initialInput, params));
+
+        var requests = new ContinuingTriasRequests(proxy, request,
+                previousResponse -> {
+                    var continueAtValue = nullsafe(()
+                            -> previousResponse.getServiceDelivery()
+                            .getDeliveryPayload()
+                            .getLocationInformationResponse()
+                            .getContinueAt()
+                    );
+
+                    if (continueAtValue == null) {
+                        return false;
+                    }
+
+                    params.setContinueAt(continueAtValue);
+                    return true;
+                }
+        );
+
+        return requests.stream()
+                .map(response -> nullsafe(()
+                -> response
+                        .getServiceDelivery()
+                        .getDeliveryPayload()
+                        .getLocationInformationResponse())
+                )
+                .filter(value -> value != null);
+    }
+
+    /**
+     * Keeps querying the Trias API for more and more location results matching
+     * the given input, until either the stream stops taking, or no more results
+     * are provided from the API.
+     *
+     * @param searchText
+     * @param geoPos
+     * @param restrictions
+     * @return
+     */
+    public Stream<LocationResultStructure> queryInitialLocationInformation(
+            String searchText, GeoPositionStructure geoPos, GeoRestrictionsStructure restrictions
+    ) {
+        return initialLocationInformationStream(searchText, geoPos, restrictions)
+                .map(locResponse -> locResponse.getLocationResult())
+                .filter(value -> value != null)
+                .flatMap(resultList -> resultList.stream());
+    }
+
+    /**
+     * Keeps querying the Trias API for more and more location results matching
+     * the given input, until either the stream stops taking, or the limited
+     * number of requests has been sent.
+     *
+     * @param searchText
+     * @param geoPos
+     * @param restrictions
+     * @param requestLimit The number of requests to send at most.
+     * @return
+     */
+    public Stream<LocationResultStructure> queryInitialLocationInformation(
+            String searchText, GeoPositionStructure geoPos,
+            GeoRestrictionsStructure restrictions, long requestLimit
+    ) {
+        return initialLocationInformationStream(searchText, geoPos, restrictions)
+                .limit(requestLimit)
+                .map(locResponse -> locResponse.getLocationResult())
+                .filter(value -> value != null)
+                .flatMap(resultList -> resultList.stream());
     }
 
 }
