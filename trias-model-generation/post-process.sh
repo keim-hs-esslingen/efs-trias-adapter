@@ -31,7 +31,6 @@ fi
 SDIR="$(dirname "$(readlink -f "$0")")"
 
 CLASSPAT="[a-zA-Z_0-9\.]+" # Classname Pattern
-SUFFIXPAT="Structure" # Suffix Pattern To Remove
 EOLPAT="([ {]*)\\\$?"
 
 processFile(){
@@ -49,18 +48,18 @@ processFile(){
 
     cat "$licensefile" "$srcfile" | sed -e "0,/yyyy/ {s/yyyy/$YEAR/}" -e '\_// Generated on: [0-9\.]* at [0-9:]* .*$_ d' | sponge "$srcfile"
 
-    sed -i -E -e "s/import ($CLASSPAT)$SUFFIXPAT/import \1/" \
-        -e "s/public class ($CLASSPAT)$SUFFIXPAT$EOLPAT/public class \1\2/" \
-        -e "s/public abstract class ($CLASSPAT)$SUFFIXPAT$EOLPAT/public abstract class \1\2/" \
-        -e "s/public interface ($CLASSPAT)$SUFFIXPAT$EOLPAT/public interface \1\2/" \
-        -e "s/ extends ($CLASSPAT)$SUFFIXPAT$EOLPAT/ extends \1\2/" \
-        -e "s/ implements ($CLASSPAT)$SUFFIXPAT$EOLPAT/ implements \1\2/" \
-        -e "s/([ \(<])($CLASSPAT)$SUFFIXPAT([ \(\)>\.])/\1\2\3/g" \
+    sed -i -E -e "s/import ($CLASSPAT)Structure/import \1/" \
+        -e "s/public class ($CLASSPAT)Structure$EOLPAT/public class \1\2/" \
+        -e "s/public abstract class ($CLASSPAT)Structure$EOLPAT/public abstract class \1\2/" \
+        -e "s/public interface ($CLASSPAT)Structure$EOLPAT/public interface \1\2/" \
+        -e "s/ extends ($CLASSPAT)Structure$EOLPAT/ extends \1\2/" \
+        -e "s/ implements ($CLASSPAT)Structure$EOLPAT/ implements \1\2/" \
+        -e "s/([ \(<])($CLASSPAT)Structure([ \(\)>\.])/\1\2\3/g" \
         "$srcfile"
 
-    if [[ "$srcfile" =~ "$SUFFIXPAT.java" ]]; then
-        local NEWNAME=$(echo "$srcfile" | sed -e "s/$SUFFIXPAT\.java/.java/")
-        # log "[$YELLOW Renaming $NONE]: $RED$(basename $srcfile)$NONE to $GREEN$(basename $NEWNAME)$NONE"
+    if [[ "$srcfile" =~ "Structure.java" ]]; then
+        local NEWNAME=$(echo "$srcfile" | sed -E -e "s/Structure\.java/.java/")
+        log "[$YELLOW Renaming $NONE]: $RED$(basename $srcfile)$NONE to $GREEN$(basename $NEWNAME)$NONE"
         mv "$srcfile" "$NEWNAME"
     fi
 }
