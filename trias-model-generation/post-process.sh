@@ -48,6 +48,7 @@ processFile(){
     # 4. Overwrite the source code file with the new content.
 
     cat "$licensefile" "$srcfile" | sed -e "0,/yyyy/ {s/yyyy/$YEAR/}" -e '\_// Generated on: [0-9\.]* at [0-9:]* .*$_ d' | sponge "$srcfile"
+
     sed -i -E -e "s/import ($CLASSPAT)$SUFFIXPAT/import \1/" \
         -e "s/public class ($CLASSPAT)$SUFFIXPAT$EOLPAT/public class \1\2/" \
         -e "s/public abstract class ($CLASSPAT)$SUFFIXPAT$EOLPAT/public abstract class \1\2/" \

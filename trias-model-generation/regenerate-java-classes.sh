@@ -40,7 +40,7 @@ cp ../bindings.xml ./bindings.xml
 
 echo "Generating classes..."
 # Compile classes
-"$XJC" -d "$TARGET_DIR" -npa -extension -classpath ../../src/main/java/ -b bindings.xml Trias.xsd > /dev/null
+"$XJC" -d "$TARGET_DIR" -npa -extension -b bindings.xml Trias.xsd > /dev/null
 
 # Remove local copy of bindings.xml to avoid confusion with original file.
 rm bindings.xml
