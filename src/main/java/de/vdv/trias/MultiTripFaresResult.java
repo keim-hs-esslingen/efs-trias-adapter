@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Structure of a Multi Trip Fares Request result
  * 

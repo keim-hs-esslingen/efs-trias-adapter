@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Tyoe for a string in a specified language
  * 

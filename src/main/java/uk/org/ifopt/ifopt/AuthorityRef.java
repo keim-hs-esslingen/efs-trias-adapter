@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for a reference to an Authority. The reference is by Authority Code.
  * 

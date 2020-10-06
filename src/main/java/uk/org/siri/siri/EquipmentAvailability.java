@@ -43,6 +43,8 @@ import uk.org.ifopt.ifopt.EquipmentStatusEnumeration;
 import uk.org.ifopt.ifopt.EquipmentTypeRef;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Availaibility Change of Equipment.
  * 

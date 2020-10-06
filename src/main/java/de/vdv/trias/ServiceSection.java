@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Properties of a service combined with a stop sequence interval.
  * 

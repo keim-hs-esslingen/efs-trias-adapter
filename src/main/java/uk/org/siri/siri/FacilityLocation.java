@@ -41,6 +41,8 @@ import uk.org.ifopt.ifopt.StopPlaceComponentRef;
 import uk.org.ifopt.ifopt.StopPlaceRef;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Location of the facility
  * 

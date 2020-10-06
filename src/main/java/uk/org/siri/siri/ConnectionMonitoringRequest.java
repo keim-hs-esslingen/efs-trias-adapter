@@ -44,6 +44,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Request Connection Monitoring Service.
  * 

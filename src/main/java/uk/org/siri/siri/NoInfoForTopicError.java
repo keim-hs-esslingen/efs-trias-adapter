@@ -36,6 +36,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Error: No Info.
  * 

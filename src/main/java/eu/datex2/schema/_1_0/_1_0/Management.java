@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Information relating to the management of the situation record.
  * 

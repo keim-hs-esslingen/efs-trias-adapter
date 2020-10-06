@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Text with id and language code.
  * 

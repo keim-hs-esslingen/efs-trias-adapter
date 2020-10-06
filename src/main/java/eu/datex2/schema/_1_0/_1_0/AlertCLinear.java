@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A linear section along a road defined between two points on the road by reference to a pre-defined Alert C location table.
  * 

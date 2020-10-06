@@ -56,6 +56,8 @@ import uk.org.siri.siri.SanitaryFacilityEnumeration;
 import uk.org.siri.siri.TicketingFacilityEnumeration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Structured attribute classification with associated text.
  * 

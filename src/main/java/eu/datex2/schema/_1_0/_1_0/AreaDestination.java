@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * The specification of the destination of a defined route or itinerary which is an area.
  * 

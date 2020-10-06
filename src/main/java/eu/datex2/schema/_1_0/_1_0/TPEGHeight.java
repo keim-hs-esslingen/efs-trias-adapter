@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Height information which provides additional descrimination for the applicable area.
  * 

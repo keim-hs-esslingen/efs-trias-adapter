@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.LinkProjection;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for information about the sectons affected by an Situation
  * 

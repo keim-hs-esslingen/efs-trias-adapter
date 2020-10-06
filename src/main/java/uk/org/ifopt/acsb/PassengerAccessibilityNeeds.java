@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for accessibility needs. Records the requirementrs of a passenger that may affect chocie of facilities
  * 

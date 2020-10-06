@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Request to delete a service from the register.
  * 

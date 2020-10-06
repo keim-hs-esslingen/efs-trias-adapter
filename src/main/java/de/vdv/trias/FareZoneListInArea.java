@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * List of fare zones within the area of a Fares Authority.
  * 

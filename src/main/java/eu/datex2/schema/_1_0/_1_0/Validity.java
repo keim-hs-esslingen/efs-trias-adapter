@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Specification of validity, either explicitly or by a validity time period specification which may be discontinous.
  * 

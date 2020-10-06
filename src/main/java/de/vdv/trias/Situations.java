@@ -41,6 +41,8 @@ import uk.org.siri.siri.PtSituationElement;
 import uk.org.siri.siri.RoadSituationElement;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Wrapper type for SIRI PtSituationsElementStructure
  * 

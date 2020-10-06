@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.CountryRef;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Reference to a  Situation.
  * 

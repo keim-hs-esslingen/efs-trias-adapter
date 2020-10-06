@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * The meeting of a vehicle journey with a specific stop.
  * 

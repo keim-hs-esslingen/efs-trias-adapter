@@ -45,6 +45,8 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Data type for Rea-ltime info about a Vehicle Journey Stop.
  * 

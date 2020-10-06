@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Data type for Cancellation of Timetabled Visit of a vehicle to a stop. May provide information about the arrival, the departure or both.
  * 

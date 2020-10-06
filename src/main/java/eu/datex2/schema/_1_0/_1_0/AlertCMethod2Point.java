@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A single point on the road network defined by reference to a point in a pre-defined Alert C location table and which has an associated direction of traffic flow.
  * 

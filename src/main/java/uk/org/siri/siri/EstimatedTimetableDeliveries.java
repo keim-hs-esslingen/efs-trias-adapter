@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Data type for Deliveries for Real-time Timetable Service. Used in WSDL.       
  * 

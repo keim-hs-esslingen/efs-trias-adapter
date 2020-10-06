@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Details associated with the management of the exchange between the supplier and the client.
  * 

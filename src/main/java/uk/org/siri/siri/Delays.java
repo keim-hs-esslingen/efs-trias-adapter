@@ -41,6 +41,8 @@ import eu.datex2.schema._1_0._1_0.DelayCodeEnum;
 import eu.datex2.schema._1_0._1_0.DelaysTypeEnum;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for easement info.
  * 

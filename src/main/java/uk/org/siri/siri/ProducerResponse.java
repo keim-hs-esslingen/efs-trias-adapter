@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 import de.vdv.trias.AbstractTriasResponse;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for General SIRI Producer Response.
  * 

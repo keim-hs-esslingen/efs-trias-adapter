@@ -42,6 +42,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Data Type for a  range of date times. Start time must be specified, end time is optional.
  * 

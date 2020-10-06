@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * The non negative offset distance from the Alert C referenced point to the actual point.
  * 

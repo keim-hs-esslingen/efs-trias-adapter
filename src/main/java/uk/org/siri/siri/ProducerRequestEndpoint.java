@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Unique reference to request to the producer. May be  used to reference request in subsequent interactions. Used for WSDL.
  * 

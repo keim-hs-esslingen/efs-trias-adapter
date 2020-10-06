@@ -44,6 +44,8 @@ import de.vdv.trias.ConnectionProtectionSubscriptionRequest;
 import de.vdv.trias.TripMonitoringSubscriptionRequest;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for SIRI Service subscriptions
  * 

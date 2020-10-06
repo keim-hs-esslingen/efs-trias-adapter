@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.AccessModesEnumeration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Annotated reference to affected  Network.
  * 

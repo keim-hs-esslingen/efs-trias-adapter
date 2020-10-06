@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * No-change-at restrictions for a journey, i.e. stops where the journey is not allowed to change at.
  * 

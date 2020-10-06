@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Visit of a vehicle to a stop monitoring point. May provide information about the arrival, the departure or both.
  * 

@@ -65,7 +65,7 @@ processFile(){
         "$srcfile"
     
     perl -0777 -pi \
-        -e "s/\;([\s\n]+\/\*\*.*\*\/\s*)\n/\;\nimport lombok.ToString\;\n\1@ToString\n/" \
+        -e "s/\/\*\*/import lombok.ToString;\n\@ToString\n\/**/" \
         "$srcfile"
 
     if [[ "$srcfile" =~ "Structure.java" ]]; then

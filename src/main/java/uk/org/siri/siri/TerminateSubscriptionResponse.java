@@ -43,6 +43,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Response to a request to terminate a subscription or subscriptions
  * 

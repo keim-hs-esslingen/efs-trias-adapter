@@ -39,6 +39,8 @@ import uk.org.siri.siri.FacilityMonitoringDelivery;
 import uk.org.siri.siri.SituationExchangeDelivery;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Choice of delivery payload elements.
  * 

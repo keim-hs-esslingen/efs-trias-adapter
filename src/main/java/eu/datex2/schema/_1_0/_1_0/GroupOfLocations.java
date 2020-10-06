@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A group of one or more physically separate locations. Locations maybe related, as in an itinerary or route, or maybe unrelated. It is not for identifying the same physical location using different referencing systems.
  * 

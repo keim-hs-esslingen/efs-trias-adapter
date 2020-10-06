@@ -42,6 +42,8 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Same as CheckStatusResponseStructure, but without extension to be consistent with the other operation definition.
  * 

@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Collection of enumerations which are used within the Exchange sub-model.
  * 

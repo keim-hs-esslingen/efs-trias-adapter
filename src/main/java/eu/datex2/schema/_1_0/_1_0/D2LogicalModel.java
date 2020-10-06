@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * The DATEX II logical model comprising exchange, content payload and management sub-models.
  * 

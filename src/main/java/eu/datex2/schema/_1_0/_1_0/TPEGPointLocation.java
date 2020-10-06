@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A single point on the road network defined by a TPEG-Loc structure and which has an associated direction of traffic flow.
  * 

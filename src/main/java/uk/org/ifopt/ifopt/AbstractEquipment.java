@@ -42,6 +42,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.siri.siri.NaturalLanguageString;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Elements  for Abstract equipment type
  * 

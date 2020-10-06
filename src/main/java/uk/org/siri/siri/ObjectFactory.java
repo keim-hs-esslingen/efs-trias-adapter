@@ -43,6 +43,8 @@ import javax.xml.namespace.QName;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 

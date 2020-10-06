@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.XmlType;
 import eu.datex2.schema._1_0._1_0.AreaOfInterestEnum;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Location model for scope of situation or effect.
  * 

@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Deliveries for Stop Monitoring Service. Used in WSDL.
  * 

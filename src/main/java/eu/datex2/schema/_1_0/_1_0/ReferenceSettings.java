@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Specification of the default value for traffic status on a set of predefined locations on the road network. Only when traffic status differs from this value at a location in the set need a value be sent.
  * 

@@ -44,6 +44,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A free text comment with an optional date/time stamp that can be used by the operator to convey uncoded observations/information.
  * 

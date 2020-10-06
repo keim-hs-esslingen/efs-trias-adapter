@@ -36,6 +36,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Request from Producer to Consumer to notify that data update is ready to fetch. Answered with a DataReadyResponse. 
  * 

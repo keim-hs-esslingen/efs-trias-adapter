@@ -36,6 +36,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Enumerations used within the location referencing sub-model except those for specific location referencing sub-models (e.g. TPEG-Loc) which are listed separately.
  * 

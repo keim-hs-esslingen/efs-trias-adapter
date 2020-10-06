@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Information/advice that supplements the traffic/travel information contained in a situation publication.
  * 

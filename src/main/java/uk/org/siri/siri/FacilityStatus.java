@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.acsb.AccessibilityAssessment;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Descritpion of the status of a facility
  * 

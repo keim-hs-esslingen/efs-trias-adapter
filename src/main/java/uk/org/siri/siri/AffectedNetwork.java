@@ -42,6 +42,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.AccessModesEnumeration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for information about the parts of the network affected by an incident. If not explclitly overrided Modes and submodes will be defaulted to any values present in the general Context.  
  * 

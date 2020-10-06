@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Measured or derived values relating to traffic or individual vehicle movements on a specific section or at a specific point on the road network.
  * 

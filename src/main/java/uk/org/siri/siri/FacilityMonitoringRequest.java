@@ -49,6 +49,8 @@ import uk.org.ifopt.ifopt.StopPlaceComponentRef;
 import uk.org.ifopt.ifopt.StopPlaceRef;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Service Request Type for Facility Monitoring Service
  * 

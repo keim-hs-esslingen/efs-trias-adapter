@@ -39,6 +39,8 @@ import eu.datex2.schema._1_0._1_0.ReferencePointLinear;
 import uk.org.ifopt.ifopt.LinkProjection;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Raod scope for scope of situation or effect.
  * 

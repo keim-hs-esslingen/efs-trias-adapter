@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Temporary limits imposed by the network/road operator at a location on the road network which may be advisory or mandatory.
  * 

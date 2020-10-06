@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.ifopt.ifopt.CountryRef;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Common parameters for all situations.
  * 

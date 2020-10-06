@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Unique identifier of a message within SIRI functional service  type and participant.
  * 

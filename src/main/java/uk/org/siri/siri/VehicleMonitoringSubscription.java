@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Data type for Subscription Request for Vehicle Monitoring Service.
  * 

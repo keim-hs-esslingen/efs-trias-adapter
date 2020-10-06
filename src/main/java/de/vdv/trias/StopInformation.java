@@ -44,6 +44,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * <p>Java class for StopInformation complex type.
  * 

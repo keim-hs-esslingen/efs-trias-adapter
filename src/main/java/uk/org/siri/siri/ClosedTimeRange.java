@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.OffsetTimeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Data Type for a  range of times. Both start and end time are required.
  * 

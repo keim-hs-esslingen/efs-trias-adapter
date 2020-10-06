@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.CountryRef;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Reference to a  Situation or an update to a situation. Participant ref is optional and may be supplied from context
  * 

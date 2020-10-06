@@ -51,6 +51,8 @@ import uk.org.siri.siri.SanitaryFacilityEnumeration;
 import uk.org.siri.siri.TicketingFacilityEnumeration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * <p>Java class for VehicleStatus complex type.
  * 

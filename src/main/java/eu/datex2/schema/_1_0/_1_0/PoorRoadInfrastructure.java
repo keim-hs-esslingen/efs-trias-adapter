@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Failures or malfunctions of road infrastructure or related equipment that may be of interest or concern to travellers.
  * 

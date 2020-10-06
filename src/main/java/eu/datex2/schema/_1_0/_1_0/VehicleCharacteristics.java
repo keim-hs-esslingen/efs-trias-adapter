@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * The charateristics of a vehicle, e.g. lorry of gross weight greater than 30 tonnes.
  * 

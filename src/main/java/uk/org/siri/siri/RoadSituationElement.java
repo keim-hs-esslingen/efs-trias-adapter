@@ -48,6 +48,8 @@ import eu.datex2.schema._1_0._1_0.PublicEventTypeEnum;
 import eu.datex2.schema._1_0._1_0.SituationRecord;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for individual PT situation.
  * 

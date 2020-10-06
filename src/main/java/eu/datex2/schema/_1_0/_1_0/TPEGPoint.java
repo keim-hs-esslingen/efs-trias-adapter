@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A point on the road network which is either a junction point or a non junction point.
  * 

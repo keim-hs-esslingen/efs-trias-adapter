@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.siri.siri.AbstractSubscription;
 
 
+import lombok.ToString;
+@ToString
 /**
  * <p>Java class for ConnectionProtectionSubscriptionRequest complex type.
  * 

@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A geographic or geometric area defined by a TPEG-Loc structure which may include height information for additional geospatial descrimination.
  * 

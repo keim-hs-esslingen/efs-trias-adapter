@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * <p>Java class for DisplayContent complex type.
  * 

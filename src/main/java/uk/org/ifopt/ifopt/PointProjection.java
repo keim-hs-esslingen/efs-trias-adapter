@@ -44,6 +44,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.siri.siri.Coordinates;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates  or any GML compatible point coordinates  format.         
  * 

@@ -52,6 +52,8 @@ import uk.org.siri.siri.SanitaryFacilityEnumeration;
 import uk.org.siri.siri.TicketingFacilityEnumeration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Model of a infrastructure facility.
  * 

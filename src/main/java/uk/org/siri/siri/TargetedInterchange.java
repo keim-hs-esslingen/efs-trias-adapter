@@ -42,6 +42,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Planned Connection between two vehicle journeys.
  * 

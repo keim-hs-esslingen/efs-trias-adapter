@@ -42,6 +42,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.vdv.trias.AbstractTriasSubscriptionRequest;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for COmmon Subscription Request
  * 

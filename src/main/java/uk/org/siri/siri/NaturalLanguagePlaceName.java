@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * @lang. ISO language code (default is en)
  * A string containing a phrase in a natural language name that requires at least one character of text and forbids certain reserved characters. 

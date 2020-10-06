@@ -42,6 +42,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A payload publication of traffic related information or associated management information created at a specific point in time that can be exchanged via a DATEX II interface.
  * 

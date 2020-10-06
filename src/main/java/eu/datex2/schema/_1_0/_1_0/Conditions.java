@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Any conditions which have the potential to degrade normal driving conditions.
  * 

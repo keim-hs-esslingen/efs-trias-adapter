@@ -53,6 +53,8 @@ import uk.org.ifopt.ifopt.CountryRef;
 import uk.org.ifopt.ifopt.StopPlaceRef;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Service Request Type for Situation Exchange Service
  * 

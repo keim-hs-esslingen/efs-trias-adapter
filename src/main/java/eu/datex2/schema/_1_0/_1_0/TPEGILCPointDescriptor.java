@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A descriptor for describing a junction by defining the intersecting roads.
  * 

@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Individual modes and their usage limits as stated by the passenger
  * 

@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A geographic or geometric defined area which may be qualified by height information to provide additional geospatial descrimination (e.g. for snow in an area but only above a certain altitude).
  * 

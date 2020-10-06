@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * The measured individual vehicle headway, i.e.the distance between this vehicle and the preceding vehicle).
  * 

@@ -42,6 +42,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.acsb.AccessibilityAssessment;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for a  Affected stop.
  * 

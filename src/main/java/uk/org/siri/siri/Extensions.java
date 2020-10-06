@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Extensions to schema. Wraps an 'any' tag to ensure decidability.
  * 

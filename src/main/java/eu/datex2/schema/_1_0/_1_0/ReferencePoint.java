@@ -44,6 +44,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * One of a sequence of reference points along a road, normally spaced at regular intervals along each carriageway with a sequence of identification from a known starting point.
  * 

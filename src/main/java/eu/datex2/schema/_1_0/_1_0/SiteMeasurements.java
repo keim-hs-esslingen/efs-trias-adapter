@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A  measurement data set derived from a specific measurement site.
  * 

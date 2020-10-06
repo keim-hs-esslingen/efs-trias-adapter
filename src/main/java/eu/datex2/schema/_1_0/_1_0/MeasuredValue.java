@@ -45,6 +45,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Contains optional characteristics for the specific measured value (ordered/indexed to correspond with that of the referenced measurement point) which override the static characteristics defined for the measurement point.
  * 

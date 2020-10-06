@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Highway maintenance, installation and construction activities that may potentially affect traffic operations.
  * 

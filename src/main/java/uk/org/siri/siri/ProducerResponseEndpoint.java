@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Unique reference to reponse from producer. May be  used to reference request in subsequent interactions. Used for WSDL. 
  * 

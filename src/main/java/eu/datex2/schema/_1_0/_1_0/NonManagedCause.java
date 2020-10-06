@@ -44,6 +44,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Contains details of the cause of a record within a situation, when this cause is not managed as a situation record in its own right.
  * 

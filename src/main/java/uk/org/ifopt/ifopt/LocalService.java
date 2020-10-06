@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.siri.siri.ServiceFeatureRef;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for  Local service.
  * 

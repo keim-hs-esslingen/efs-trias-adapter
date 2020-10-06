@@ -44,6 +44,8 @@ import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 import uk.org.ifopt.acsb.AccessibilityAssessment;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for information about a vehicle journey affected by an Situation
  * 

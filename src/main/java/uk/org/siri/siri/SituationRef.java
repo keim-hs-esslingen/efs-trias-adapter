@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Data Type for Reference to a Situation. Includes the Particpant , identifier and and version components of the identifier.
  * 

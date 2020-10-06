@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for GM Coordinates.
  * 

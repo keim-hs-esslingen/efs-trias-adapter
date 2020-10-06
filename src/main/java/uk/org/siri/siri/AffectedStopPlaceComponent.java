@@ -43,6 +43,8 @@ import uk.org.ifopt.ifopt.StopPlaceComponentTypeEnumeration;
 import uk.org.ifopt.ifopt.ZoneProjection;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for information about the quays affected by an Situation
  * 

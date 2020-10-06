@@ -43,6 +43,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.siri.siri.ProducerResponse;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Basic response structure common for all TRIAS service responses.
  * 

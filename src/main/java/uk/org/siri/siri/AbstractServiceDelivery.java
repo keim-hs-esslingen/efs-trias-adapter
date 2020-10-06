@@ -45,6 +45,8 @@ import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 import de.vdv.trias.TripMonitoringDelivery;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Common elementd for a SIRI service delivery of the Form xxxDelivery.
  * 

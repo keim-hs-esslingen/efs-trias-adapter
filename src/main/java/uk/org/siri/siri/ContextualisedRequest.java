@@ -43,6 +43,8 @@ import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 import de.vdv.trias.AbstractTriasServiceRequest;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for General SIRI Request.
  * 

@@ -42,6 +42,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A piece of a trip. A trip leg.may consist of multiple TrackSections. Describes the geographic embedding.
  * 

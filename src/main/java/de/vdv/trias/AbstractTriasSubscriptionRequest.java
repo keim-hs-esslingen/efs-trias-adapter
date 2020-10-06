@@ -44,6 +44,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.siri.siri.AbstractSubscriptionRequest;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Basic structure common for all TRIAS subscription requests.
  * 

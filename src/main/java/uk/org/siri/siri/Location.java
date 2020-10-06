@@ -43,6 +43,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for gepspatial Position of a point. May be expressed in concrete WGS 84 Coordinates  or any gml compatible point coordinates  format.         
  * 

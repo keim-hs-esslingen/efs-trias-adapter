@@ -42,6 +42,8 @@ import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 import uk.org.ifopt.ifopt.CountryRef;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for a reference.
  * 

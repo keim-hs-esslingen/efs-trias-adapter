@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Road surface conditions that are related to the weather which may affect the driving conditions, such as ice, snow or water.
  * 

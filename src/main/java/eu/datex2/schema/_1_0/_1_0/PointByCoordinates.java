@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A single point defined only by a coordinate set with an optional bearing direction.
  * 

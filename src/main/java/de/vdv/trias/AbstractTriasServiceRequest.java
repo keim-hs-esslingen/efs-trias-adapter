@@ -44,6 +44,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.siri.siri.ContextualisedRequest;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Basic request structure common for all TRIAS service requests.
  * 

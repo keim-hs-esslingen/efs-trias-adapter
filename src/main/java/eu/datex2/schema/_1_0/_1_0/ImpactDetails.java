@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Detailed assessment of the impact that an unplanned event or operator action defined by the situation record has on the driving conditions.
  * 

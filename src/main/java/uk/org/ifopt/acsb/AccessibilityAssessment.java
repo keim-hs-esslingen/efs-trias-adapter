@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.Extensions;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Assesment
  * 

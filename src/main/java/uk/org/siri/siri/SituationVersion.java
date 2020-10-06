@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for version number if entry is update to a previous version. Unique within IncidentNumber. Monotonically increasing within IncidentNumber.  Any values for  classification, description, affects, effects that are present in an update replace any values on previous incidents and updates with the same identifier.  Values that are not updated remain in effect. 
  * 

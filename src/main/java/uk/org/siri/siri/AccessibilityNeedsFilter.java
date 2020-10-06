@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.acsb.UserNeed;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for information about Accessibility  Facilities status
  * 

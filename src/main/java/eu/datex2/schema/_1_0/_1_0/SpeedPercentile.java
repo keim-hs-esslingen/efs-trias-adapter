@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Details of percentage of vehicles whose speeds fall below a stated threshold, expressed as a percentile of the observation set.
  * 

@@ -45,6 +45,8 @@ import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
 
+import lombok.ToString;
+@ToString
 /**
  * <p>Java class for anonymous complex type.
  * 

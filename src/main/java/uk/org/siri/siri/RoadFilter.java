@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlType;
 import eu.datex2.schema._1_0._1_0.DirectionEnum;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Parameters to filter Situation Exchange  requests, based on the situation Road, Logically ANDed with other values.
  * 

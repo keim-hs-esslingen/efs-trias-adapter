@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.AccessModesEnumeration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for a Affected modes to stop.
  * 

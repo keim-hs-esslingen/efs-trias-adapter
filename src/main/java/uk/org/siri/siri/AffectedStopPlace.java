@@ -43,6 +43,8 @@ import uk.org.ifopt.ifopt.StopPlaceRef;
 import uk.org.ifopt.ifopt.StopPlaceTypeEnumeration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for information about the Stop Places affected by an Situation
  * 

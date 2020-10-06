@@ -52,6 +52,8 @@ import uk.org.siri.siri.TerminateSubscriptionRequest;
 import uk.org.siri.siri.TerminateSubscriptionResponse;
 
 
+import lombok.ToString;
+@ToString
 /**
  * <p>Java class for anonymous complex type.
  * 

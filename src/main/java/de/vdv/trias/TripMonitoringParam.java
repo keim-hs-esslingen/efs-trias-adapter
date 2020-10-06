@@ -40,6 +40,8 @@ import javax.xml.datatype.Duration;
 import uk.org.siri.siri.SeverityEnumeration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * IPKOM Monitoring parameters
  * 

@@ -42,6 +42,8 @@ import uk.org.siri.siri.FacilityMonitoringSubscription;
 import uk.org.siri.siri.SituationExchangeSubscription;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Subscription request structure - wrapping generic SIRI request element.
  * 

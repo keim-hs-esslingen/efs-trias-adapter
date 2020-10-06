@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.acsb.Suitability;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for disruption.
  * 

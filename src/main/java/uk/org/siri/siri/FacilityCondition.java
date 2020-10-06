@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Description of any change concernin g a facility. New structure defined in SIRI XSD 1.1 for Faclities Management
  * 

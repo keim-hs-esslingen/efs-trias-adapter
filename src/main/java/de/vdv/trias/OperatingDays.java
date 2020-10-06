@@ -41,6 +41,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.LocalDateAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * A list of operating days coded a bit pattern between a starting day and end day.
  * 

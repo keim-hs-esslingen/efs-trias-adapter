@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Indicating whether an activity or a roadwork is mobile (e.g..  a march or parade) or static (e.g. a crowd, or sign-post maintenance).
  * 

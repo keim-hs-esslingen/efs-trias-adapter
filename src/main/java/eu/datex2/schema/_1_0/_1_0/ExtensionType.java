@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
 
+import lombok.ToString;
+@ToString
 /**
  * <p>Java class for ExtensionType complex type.
  * 

@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Specification of traffic management controls which affect the road network that have been instigated by the network/road operator. These controls may require either optional or mandatory compliance.
  * 

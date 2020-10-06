@@ -44,6 +44,8 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * An identifiable instance of a linear traffic view at a single point in time relating to a linear section of road, comprising one or more traffic view records.
  * 

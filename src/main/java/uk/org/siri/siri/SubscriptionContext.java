@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for Subscription context - Configuration parameters which may be evrriden 
  * 

@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * The spacing details between the axle sets of an individual vehicle numbered from the front to the back of the vehicle. 
  * 

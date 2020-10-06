@@ -36,6 +36,8 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * <p>Java class for RelativeTrafficFlowEnum.
  * 

@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.DoubleAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Expressed as WGS84
  * 

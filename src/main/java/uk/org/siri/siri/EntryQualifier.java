@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for a referenceUnique identifier of a Situation   within participant.
  * 

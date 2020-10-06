@@ -43,6 +43,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.ifopt.acsb.AccessibilityAssessment;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for annotated references to a place.
  * 

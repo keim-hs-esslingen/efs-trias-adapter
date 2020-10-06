@@ -41,6 +41,8 @@ import uk.org.siri.siri.AbstractServiceDelivery;
 import uk.org.siri.siri.FacilityCondition;
 
 
+import lombok.ToString;
+@ToString
 /**
  * <p>Java class for TripMonitoringDelivery complex type.
  * 

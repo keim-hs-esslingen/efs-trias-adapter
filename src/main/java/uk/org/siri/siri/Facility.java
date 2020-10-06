@@ -45,6 +45,8 @@ import uk.org.ifopt.acsb.Accessibility;
 import uk.org.ifopt.acsb.Suitability;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for sescription the facility itself
  * 

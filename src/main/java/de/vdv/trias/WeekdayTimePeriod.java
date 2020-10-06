@@ -44,6 +44,8 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.OffsetTimeAdapter;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Time period on a weekday.
  * 

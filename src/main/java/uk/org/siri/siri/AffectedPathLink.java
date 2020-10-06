@@ -44,6 +44,8 @@ import uk.org.ifopt.ifopt.AccessibilityFeatureEnumeration;
 import uk.org.ifopt.ifopt.LinkProjection;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Information about a connection link from a given stop.
  * 

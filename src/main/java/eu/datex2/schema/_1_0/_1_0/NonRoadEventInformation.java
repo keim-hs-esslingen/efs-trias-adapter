@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Information about an event which is not on the road, but which may influence the behaviour of drivers and hence the characteristics of the traffic flow.
  * 

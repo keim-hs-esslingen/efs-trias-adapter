@@ -42,6 +42,8 @@ import uk.org.ifopt.ifopt.Extensions;
 import uk.org.ifopt.ifopt.ValidityCondition;
 
 
+import lombok.ToString;
+@ToString
 /**
  * Type for limitation on navigation
  * 

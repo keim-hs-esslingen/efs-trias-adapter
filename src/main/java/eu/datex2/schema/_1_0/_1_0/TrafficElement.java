@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
+import lombok.ToString;
+@ToString
 /**
  * An event which is not planned by the traffic operator, which is affecting, or has the potential to affect traffic flow.
  * 
