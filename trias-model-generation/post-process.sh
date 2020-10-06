@@ -34,6 +34,13 @@ IDENTIFIER="[a-zA-Z0-9_]+"
 CLASSPAT="[a-zA-Z_0-9\.]+" # Classname Pattern
 EOLPAT="([ {]*)\\\$?"
 
+# PERL-SCRIPTS:
+# This script adds Lomboks @ToString annotation imports.
+IMPORT_TOSTRING="s/package ([^;]+);(\s+)/package \1;\2import lombok.ToString;\n/"
+# This script annotates classes with Lomboks @ToString annotation.
+ANNOTATE_TOSTRING="s/(\s+)public class /\1\@ToString\npublic class /"
+
+
 processFile(){
     SRCFILE=$1
     LICENSEFILE=$SDIR/licenseheader.txt
@@ -60,13 +67,11 @@ processFile(){
         -e "s/([ \(<])($CLASSPAT)Structure([ \(\)>\.])/\1\2\3/g" \
         "$SRCFILE"
 
-    perl -0777 -pi \
-        -e "s/    public void set($IDENTIFIER)\(($IDENTIFIER) value\) \{\n([^=]+)= value\;\n    \}/    public $CLASSNAME set\1(\2 value) {\n\3= value\;\n        return this\;\n    }/g" \
-        "$SRCFILE"
-    
-    perl -0777 -pi \
-        -e "s/package ([^;]+);(\s+)/package \1;\2import lombok.ToString;\n/;s/\)(\s+)public /)\1\@ToString\npublic /" \
-        "$SRCFILE"
+    # PERL-SCRIPTS:
+    # This script converts classical setter methods to chainable ones...
+    local CHAINABLE_SETTERS="s/    public void set($IDENTIFIER)\(($IDENTIFIER) value\) \{\n([^=]+)= value\;\n    \}/    public $CLASSNAME set\1(\2 value) {\n\3= value\;\n        return this\;\n    }/g"
+
+    perl -0777 -pi -e "$CHAINABLE_SETTERS;$IMPORT_TOSTRING;$ANNOTATE_TOSTRING" "$SRCFILE"
 }
 
 renameFile(){
