@@ -132,18 +132,26 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
     }
 
     @Override
-    public List<Place> search(String query, ICoordinates areaCenter, Integer radiusMeter, TriasCredentials credentials) {
-
+    public List<Place> search(String query, ICoordinates areaCenter, Integer radiusMeter, Integer limitTo, TriasCredentials credentials) {
+        
         GeoRestrictions restrictions = createCircleGeoRestrictions(areaCenter, radiusMeter);
 
         // Query TRIAS api for location information:
         // First we need to query it for some initial input based on a search string...
-        var futures = queryInitialLocationInformation(query, null, restrictions, 2)
-                // The initial results do not contain much information.
-                // Therefore we request more information about each of the result locations.
-                // We do this in asynchronously so the source stream does not wait for the results
-                // to be retrieved from the API but keeps asking for more initial results if necessary.
-                // 
+        Stream<LocationResult> initialResults;
+
+        // If limitTo is given, use that as limiter, otherwise simply limit to 1 request for initial results.
+        if (limitTo != null) {
+            initialResults = queryInitialLocationInformation(query, null, restrictions).limit(limitTo);
+        } else {
+            initialResults = queryInitialLocationInformation(query, null, restrictions, 1);
+        }
+
+        // The initial results do not contain much information.
+        // Therefore we request more information about each of the result locations.
+        // We do this in asynchronously so the source stream does not wait for the results
+        // to be retrieved from the API but keeps asking for more initial results if necessary.
+        var futures = initialResults
                 // The following map function returns a future that is collected in a list.
                 // In a second stream, these futures are resolved using the get() method.
                 .map(result -> asyncFuture(() -> getLocationInformation(fromLocation(result.getLocation()), null)))
