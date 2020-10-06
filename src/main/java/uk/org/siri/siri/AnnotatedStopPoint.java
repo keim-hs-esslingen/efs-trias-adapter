@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Summary information about a stop.
  * 
@@ -97,6 +96,7 @@ import lombok.ToString;
     "features",
     "lines"
 })
+@ToString
 public class AnnotatedStopPoint {
 
     @XmlElement(name = "StopPointRef", namespace = "http://www.siri.org.uk/siri", required = true)

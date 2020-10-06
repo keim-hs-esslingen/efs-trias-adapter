@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Request specific parameters
  * 
@@ -78,6 +77,7 @@ import lombok.ToString;
     "includeOperatingDays",
     "includeRealtimeData"
 })
+@ToString
 public class StopEventParam {
 
     @XmlElement(name = "PtModeFilter", namespace = "http://www.vdv.de/trias")

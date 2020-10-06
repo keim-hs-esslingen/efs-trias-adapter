@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Any conditions which have the potential to degrade normal driving conditions.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     PoorEnvironmentConditions.class,
     RoadConditions.class
 })
+@ToString
 public class Conditions
     extends TrafficElement
 {

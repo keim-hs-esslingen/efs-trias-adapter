@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Base for all types of locations
  * 
@@ -84,6 +83,7 @@ import lombok.ToString;
     "attribute",
     "extension"
 })
+@ToString
 public class Location {
 
     @XmlElement(name = "StopPoint", namespace = "http://www.vdv.de/trias")

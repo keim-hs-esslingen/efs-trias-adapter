@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for InitialLocationInput complex type.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "geoPosition",
     "geoRestriction"
 })
+@ToString
 public class InitialLocationInput {
 
     @XmlElement(name = "LocationName", namespace = "http://www.vdv.de/trias")

@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Wind conditions on the road. 
  * 
@@ -76,6 +75,7 @@ import lombok.ToString;
     "windSpeed",
     "windExtension"
 })
+@ToString
 public class Wind {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

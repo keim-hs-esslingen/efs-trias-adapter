@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A continuous or discontinous period of validity defined by overall bounding start and end times and the possible intersection of valid periods (potentially recurring) with the complement of exception periods (also potentially recurring).
  * 
@@ -74,6 +73,7 @@ import lombok.ToString;
     "exceptionPeriod",
     "overallPeriodExtension"
 })
+@ToString
 public class OverallPeriod {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0", required = true)

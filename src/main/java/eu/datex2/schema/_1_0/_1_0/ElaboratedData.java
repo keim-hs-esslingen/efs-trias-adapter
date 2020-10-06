@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * An identifiable instance of data which is derived/computed from one or more measurements over a period of time. It may be a current value or a forecast value predicted from historical measurements.
  * 
@@ -78,6 +77,7 @@ import lombok.ToString;
     "basicDataValue",
     "elaboratedDataExtension"
 })
+@ToString
 public class ElaboratedData {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

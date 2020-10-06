@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Action Publish situation To Alert Service.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "byEmail",
     "byMobile"
 })
+@ToString
 public class PublishToAlertsAction
     extends PushedAction
 {

@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a text that may be overridden.
  * 
@@ -60,6 +59,7 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DefaultedTextStructure", namespace = "http://www.siri.org.uk/siri")
+@ToString
 public class DefaultedText
     extends NaturalLanguageString
 {

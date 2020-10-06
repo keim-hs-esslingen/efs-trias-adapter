@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure combining a parallel running service with a stop sequence interval.
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "toStopSeqNumber",
     "service"
 })
+@ToString
 public class ParallelService {
 
     @XmlElement(name = "FromStopSeqNumber", namespace = "http://www.vdv.de/trias")

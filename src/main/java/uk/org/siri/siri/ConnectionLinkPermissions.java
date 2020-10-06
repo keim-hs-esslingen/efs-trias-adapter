@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for anonymous complex type.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "connectionLinkPermission"
 })
 @XmlRootElement(name = "ConnectionLinkPermissions", namespace = "http://www.siri.org.uk/siri")
+@ToString
 public class ConnectionLinkPermissions {
 
     @XmlElement(name = "AllowAll", namespace = "http://www.siri.org.uk/siri")

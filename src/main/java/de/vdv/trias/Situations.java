@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,8 +42,6 @@ import uk.org.siri.siri.PtSituationElement;
 import uk.org.siri.siri.RoadSituationElement;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Wrapper type for SIRI PtSituationsElementStructure
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "ptSituation",
     "roadSituation"
 })
+@ToString
 public class Situations {
 
     @XmlElement(name = "PtSituation", namespace = "http://www.vdv.de/trias")

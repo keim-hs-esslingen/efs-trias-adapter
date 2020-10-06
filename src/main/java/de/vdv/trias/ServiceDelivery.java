@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Delivery structure - wrapping generic SIRI response elements.
  * 
@@ -64,6 +63,7 @@ import lombok.ToString;
 @XmlType(name = "ServiceDeliveryStructure", namespace = "http://www.vdv.de/trias", propOrder = {
     "deliveryPayload"
 })
+@ToString
 public class ServiceDelivery
     extends AbstractTriasResponse
 {

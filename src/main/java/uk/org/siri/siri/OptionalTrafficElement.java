@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,8 +54,6 @@ import eu.datex2.schema._1_0._1_0.SourceInformation;
 import eu.datex2.schema._1_0._1_0.Validity;
 
 
-import lombok.ToString;
-@ToString
 /**
  * An event which is not planned by the traffic operator, which is affecting, or has the potential to affect traffic flow. This SIRI-SX element embeds the Datex2 TrafficElement, making all elements optional because  they may alternatvielky be specified by common  SIRI-SRX situation elements
  * 

@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,8 +46,6 @@ import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for anonymous complex type.
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "any"
 })
 @XmlRootElement(name = "Extensions", namespace = "http://www.ifopt.org.uk/ifopt")
+@ToString
 public class Extensions {
 
     @XmlAnyElement

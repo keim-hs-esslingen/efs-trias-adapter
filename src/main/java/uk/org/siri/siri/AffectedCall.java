@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -45,8 +46,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for information about a call affected by an Situation
  * 
@@ -96,6 +95,7 @@ import lombok.ToString;
     "expectedHeadwayInterval",
     "affectedInterchange"
 })
+@ToString
 public class AffectedCall
     extends AffectedStopPoint
 {

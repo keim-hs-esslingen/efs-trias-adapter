@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * General management information.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "messageChain",
     "managementDescriptiveDataExtension"
 })
+@ToString
 public class ManagementDescriptiveData {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

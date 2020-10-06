@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Attributes that are not valid on the whole service, but only on part of the journey leg.
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "fromStopSeqNumber",
     "toStopSeqNumber"
 })
+@ToString
 public class ServiceAttribute
     extends GeneralAttribute
 {

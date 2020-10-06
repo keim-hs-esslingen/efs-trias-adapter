@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Description of a via point on journey.
  * 
@@ -76,6 +75,7 @@ import lombok.ToString;
     "placeShortName",
     "viaPointDisplayPriority"
 })
+@ToString
 public class ViaPoint {
 
     @XmlElement(name = "ViaPointRef", namespace = "http://www.vdv.de/trias")

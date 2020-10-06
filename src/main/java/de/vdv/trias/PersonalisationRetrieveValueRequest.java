@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for PersonalisationRetrieveValueRequest complex type.
  * 
@@ -62,6 +61,7 @@ import lombok.ToString;
 @XmlType(name = "PersonalisationRetrieveValueRequestStructure", namespace = "http://www.vdv.de/trias", propOrder = {
     "valueId"
 })
+@ToString
 public class PersonalisationRetrieveValueRequest {
 
     @XmlElement(name = "ValueId", namespace = "http://www.vdv.de/trias", required = true)

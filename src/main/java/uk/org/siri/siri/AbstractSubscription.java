@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -44,8 +45,6 @@ import de.vdv.trias.ConnectionProtectionSubscriptionRequest;
 import de.vdv.trias.TripMonitoringSubscriptionRequest;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for SIRI Service subscriptions
  * 

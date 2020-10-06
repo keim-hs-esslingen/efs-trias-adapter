@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -53,8 +54,6 @@ import uk.org.ifopt.ifopt.CountryRef;
 import uk.org.ifopt.ifopt.StopPlaceRef;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Service Request Type for Situation Exchange Service
  * 
@@ -119,6 +118,7 @@ import lombok.ToString;
     "maximumNumberOfSituationElements",
     "extensions"
 })
+@ToString
 public class SituationExchangeRequest
     extends AbstractFunctionalServiceRequest
 {

@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for ConnectionReportResponse complex type.
  * 
@@ -64,6 +63,7 @@ import lombok.ToString;
 @XmlType(name = "ConnectionReportResponseStructure", namespace = "http://www.vdv.de/trias", propOrder = {
     "errorMessage"
 })
+@ToString
 public class ConnectionReportResponse {
 
     @XmlElement(name = "ErrorMessage", namespace = "http://www.vdv.de/trias")

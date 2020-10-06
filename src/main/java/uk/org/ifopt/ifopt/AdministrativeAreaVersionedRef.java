@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a versioned reference to an administrative area.
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
 @XmlType(name = "AdministrativeAreaVersionedRefStructure", namespace = "http://www.ifopt.org.uk/ifopt", propOrder = {
     "value"
 })
+@ToString
 public class AdministrativeAreaVersionedRef {
 
     @XmlValue

@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Position suggestion with ranking.
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "tripLocation",
     "ranking"
 })
+@ToString
 public class RankedPosition {
 
     @XmlElement(name = "StationaryLocation", namespace = "http://www.vdv.de/trias")

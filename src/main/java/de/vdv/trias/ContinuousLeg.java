@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -45,8 +46,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Leg of a journey that is not bound to a timetable.
  * 
@@ -93,6 +92,7 @@ import lombok.ToString;
     "situationFullRef",
     "extension"
 })
+@ToString
 public class ContinuousLeg {
 
     @XmlElement(name = "LegStart", namespace = "http://www.vdv.de/trias", required = true)

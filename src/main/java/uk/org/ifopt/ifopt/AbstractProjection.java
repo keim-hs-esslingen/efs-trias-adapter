@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for AbstractProjection complex type.
  * 
@@ -80,6 +79,7 @@ import lombok.ToString;
     PointProjection.class,
     LinkProjection.class
 })
+@ToString
 public class AbstractProjection {
 
     @XmlElement(name = "Features", namespace = "http://www.ifopt.org.uk/ifopt")

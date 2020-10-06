@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * The non negative offset distance from the Alert C referenced point to the actual point.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "offsetDistance",
     "offsetDistanceExtension"
 })
+@ToString
 public class OffsetDistance {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0", required = true)

@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * DataType for a note
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "situationFullRef",
     "note"
 })
+@ToString
 public class Note {
 
     @XmlElement(name = "SituationRef", namespace = "http://www.siri.org.uk/siri")

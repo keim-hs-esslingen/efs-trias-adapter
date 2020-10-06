@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Describes the intermediate stops of a passenger leg.
  * 
@@ -85,6 +84,7 @@ import lombok.ToString;
     "noBoardingAtStop",
     "noAlightingAtStop"
 })
+@ToString
 public class LegIntermediate {
 
     @XmlElement(name = "StopPointRef", namespace = "http://www.vdv.de/trias", required = true)

@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Description of any change concernin g a facility. New structure defined in SIRI XSD 1.1 for Faclities Management
  * 
@@ -80,6 +79,7 @@ import lombok.ToString;
     "validityPeriod",
     "extensions"
 })
+@ToString
 public class FacilityCondition {
 
     @XmlElement(name = "Facility", namespace = "http://www.siri.org.uk/siri")

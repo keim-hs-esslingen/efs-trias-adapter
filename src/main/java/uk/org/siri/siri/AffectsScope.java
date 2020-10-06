@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlType;
 import eu.datex2.schema._1_0._1_0.AreaOfInterestEnum;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Location model for scope of situation or effect.
  * 
@@ -152,6 +151,7 @@ import lombok.ToString;
     "roads",
     "extensions"
 })
+@ToString
 public class AffectsScope {
 
     @XmlElement(name = "AreaOfInterest", namespace = "http://www.siri.org.uk/siri")

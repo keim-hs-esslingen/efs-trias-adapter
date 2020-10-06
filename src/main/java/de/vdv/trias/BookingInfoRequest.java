@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Booking info request structure.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "operatorRef",
     "extension"
 })
+@ToString
 public class BookingInfoRequest {
 
     @XmlElement(name = "Service", namespace = "http://www.vdv.de/trias")

@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import java.time.OffsetTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.OffsetTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data Type for a  range of times. Start time must be specified, end time is optional.
  * 
@@ -74,6 +73,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     Timeband.class
 })
+@ToString
 public class HalfOpenTimeRange {
 
     @XmlElement(name = "StartTime", namespace = "http://www.ifopt.org.uk/ifopt", required = true, type = String.class)

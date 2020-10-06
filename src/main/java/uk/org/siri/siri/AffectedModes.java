@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.AccessModesEnumeration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a Affected modes to stop.
  * 
@@ -78,6 +77,7 @@ import lombok.ToString;
     "allModes",
     "mode"
 })
+@ToString
 public class AffectedModes {
 
     @XmlElement(name = "AllModes", namespace = "http://www.siri.org.uk/siri")

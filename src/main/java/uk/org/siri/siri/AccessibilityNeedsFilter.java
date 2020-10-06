@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.acsb.UserNeed;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for information about Accessibility  Facilities status
  * 
@@ -67,6 +66,7 @@ import lombok.ToString;
 @XmlType(name = "AccessibilityNeedsFilterStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "userNeed"
 })
+@ToString
 public class AccessibilityNeedsFilter {
 
     @XmlElement(name = "UserNeed", namespace = "http://www.siri.org.uk/siri", required = true)

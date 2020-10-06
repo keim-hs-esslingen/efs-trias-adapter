@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Details of an individual vehicle.
  * 
@@ -129,6 +128,7 @@ import lombok.ToString;
     "hazardousGoodsAssociatedWithVehicle",
     "vehicleExtension"
 })
+@ToString
 public class Vehicle {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

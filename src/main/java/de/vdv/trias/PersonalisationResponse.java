@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for PersonalisationResponse complex type.
  * 
@@ -74,6 +73,7 @@ import lombok.ToString;
     "deleteValue",
     "enumerateValue"
 })
+@ToString
 public class PersonalisationResponse {
 
     @XmlElement(name = "ErrorMessage", namespace = "http://www.vdv.de/trias")

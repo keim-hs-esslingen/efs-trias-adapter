@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Effect of equipment availability change on impaired access users.
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "mobilityImpairedAccess",
     "accessFacility"
 })
+@ToString
 public class MobilityDisruption {
 
     @XmlElement(name = "MobilityImpairedAccess", namespace = "http://www.siri.org.uk/siri")

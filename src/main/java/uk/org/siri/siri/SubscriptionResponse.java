@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Subscription Response.
  * 
@@ -73,6 +72,7 @@ import lombok.ToString;
     "serviceStartedTime",
     "extensions"
 })
+@ToString
 public class SubscriptionResponse
     extends ResponseEndpoint
 {

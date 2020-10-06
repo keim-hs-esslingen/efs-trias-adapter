@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * ype for Notify user by Email.
  * 
@@ -64,6 +63,7 @@ import lombok.ToString;
 @XmlType(name = "NotifyByEmailActionStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "email"
 })
+@ToString
 public class NotifyByEmailAction
     extends PushedAction
 {

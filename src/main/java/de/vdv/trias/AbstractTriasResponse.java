@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.siri.siri.ProducerResponse;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Basic response structure common for all TRIAS service responses.
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     ServiceDelivery.class
 })
+@ToString
 public class AbstractTriasResponse
     extends ProducerResponse
 {

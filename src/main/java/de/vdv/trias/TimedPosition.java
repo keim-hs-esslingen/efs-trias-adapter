@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Geographic position with timestamp.
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     "speed",
     "direction"
 })
+@ToString
 public class TimedPosition {
 
     @XmlElement(name = "Timestamp", namespace = "http://www.vdv.de/trias", required = true, type = String.class)

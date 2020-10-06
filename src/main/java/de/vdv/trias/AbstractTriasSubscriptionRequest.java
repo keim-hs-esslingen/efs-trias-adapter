@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.siri.siri.AbstractSubscriptionRequest;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Basic structure common for all TRIAS subscription requests.
  * 
@@ -76,6 +75,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     SubscriptionRequest.class
 })
+@ToString
 public class AbstractTriasSubscriptionRequest
     extends AbstractSubscriptionRequest
 {

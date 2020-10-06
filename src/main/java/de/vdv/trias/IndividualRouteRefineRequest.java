@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * IndividualRouteRefine request structure.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "individualRouteResult",
     "extension"
 })
+@ToString
 public class IndividualRouteRefineRequest {
 
     @XmlElement(name = "RefineParams", namespace = "http://www.vdv.de/trias")

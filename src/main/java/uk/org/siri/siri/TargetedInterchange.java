@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Planned Connection between two vehicle journeys.
  * 
@@ -89,6 +88,7 @@ import lombok.ToString;
     "advertised",
     "maximumWaitTime"
 })
+@ToString
 public class TargetedInterchange {
 
     @XmlElement(name = "InterchangeCode", namespace = "http://www.siri.org.uk/siri")

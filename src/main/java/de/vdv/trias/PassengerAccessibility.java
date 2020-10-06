@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure with elements to describe the passenger's abilities and accessibility requirements.
  * 
@@ -85,6 +84,7 @@ import lombok.ToString;
     "hearingImpaired",
     "readingImpaired"
 })
+@ToString
 public class PassengerAccessibility {
 
     @XmlElement(name = "NoSingleStep", namespace = "http://www.vdv.de/trias", defaultValue = "false")

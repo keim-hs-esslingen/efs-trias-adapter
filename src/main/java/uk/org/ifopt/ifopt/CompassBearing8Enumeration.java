@@ -31,12 +31,11 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for CompassBearing8Enumeration.
  * 

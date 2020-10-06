@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Request specific parameters
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "foreignObjectRefs",
     "extension"
 })
+@ToString
 public class LocationInformationRefineParam {
 
     @XmlElement(name = "ForeignObjectRefs", namespace = "http://www.vdv.de/trias")

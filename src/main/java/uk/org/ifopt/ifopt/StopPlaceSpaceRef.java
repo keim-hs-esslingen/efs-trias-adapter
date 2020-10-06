@@ -31,14 +31,13 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Unique reference to Identifier of Stop Place Space.
  * 
@@ -67,6 +66,7 @@ import lombok.ToString;
     BoardingPositionRef.class,
     VehicleStoppingPlaceRef.class
 })
+@ToString
 public class StopPlaceSpaceRef
     extends StopPlaceComponentRef
 {

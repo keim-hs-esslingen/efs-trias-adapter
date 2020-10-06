@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for ConnectionStatus complex type.
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "status",
     "alternative"
 })
+@ToString
 public class ConnectionStatus {
 
     @XmlElement(name = "Connection", namespace = "http://www.vdv.de/trias", required = true)

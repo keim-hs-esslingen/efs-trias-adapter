@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for IndividualRouteRequest complex type.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "mode",
     "params"
 })
+@ToString
 public class IndividualRouteRequest {
 
     @XmlElement(name = "Origin", namespace = "http://www.vdv.de/trias", required = true)

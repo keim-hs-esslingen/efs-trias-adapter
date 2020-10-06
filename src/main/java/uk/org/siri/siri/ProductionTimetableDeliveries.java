@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for  deliveries  of production timetable service. Used in WSDL.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
 @XmlType(name = "ProductionTimetableDeliveriesStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "productionTimetableDelivery"
 })
+@ToString
 public class ProductionTimetableDeliveries {
 
     @XmlElement(name = "ProductionTimetableDelivery", namespace = "http://www.siri.org.uk/siri", required = true)

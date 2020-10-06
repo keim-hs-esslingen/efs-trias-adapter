@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Description of a path in terms of accessibility.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "accessFeatureType",
     "count"
 })
+@ToString
 public class AccessPath {
 
     @XmlElement(name = "Transition", namespace = "http://www.vdv.de/trias")

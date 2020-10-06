@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,8 +42,6 @@ import uk.org.ifopt.ifopt.StopPlaceComponentRef;
 import uk.org.ifopt.ifopt.StopPlaceRef;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Location of the facility
  * 
@@ -81,6 +80,7 @@ import lombok.ToString;
     "serviceFeatureRef",
     "vehicleFeatureRef"
 })
+@ToString
 public class FacilityLocation {
 
     @XmlElement(name = "LineRef", namespace = "http://www.siri.org.uk/siri")

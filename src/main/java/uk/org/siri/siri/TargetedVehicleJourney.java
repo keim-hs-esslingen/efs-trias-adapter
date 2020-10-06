@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a targeted vehicle journey
  * 
@@ -98,6 +97,7 @@ import lombok.ToString;
     "destinationAimedArrivalTime",
     "targetedCall"
 })
+@ToString
 public class TargetedVehicleJourney {
 
     @XmlElement(name = "LineRef", namespace = "http://www.siri.org.uk/siri", required = true)

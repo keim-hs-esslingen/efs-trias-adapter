@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Progress between stops.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "linkDistance",
     "percentage"
 })
+@ToString
 public class ProgressBetweenStops {
 
     @XmlElement(name = "LinkDistance", namespace = "http://www.vdv.de/trias")

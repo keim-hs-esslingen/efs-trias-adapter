@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Description of a booking opportunity.
  * 
@@ -80,6 +79,7 @@ import lombok.ToString;
     "bookingDeadline",
     "extension"
 })
+@ToString
 public class BookingInfo {
 
     @XmlElement(name = "BookingAgencyName", namespace = "http://www.vdv.de/trias")

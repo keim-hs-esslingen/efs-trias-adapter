@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for time filter for connecting journeys
  * 
@@ -74,6 +73,7 @@ import lombok.ToString;
     "earliestArrivalTime",
     "latestArrivalTime"
 })
+@ToString
 public class ConnectingTimeFilter {
 
     @XmlElement(name = "LineRef", namespace = "http://www.siri.org.uk/siri", required = true)

@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Characteristics which are specific to an individual measurement type (specified in a known order) at the given measurement site.
  * 
@@ -81,6 +80,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     eu.datex2.schema._1_0._1_0.MeasurementSiteRecord.MeasurementSpecificCharacteristics.class
 })
+@ToString
 public class MeasurementSpecificCharacteristics {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.AccessModesEnumeration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Annotated reference to affected  Network.
  * 
@@ -78,6 +77,7 @@ import lombok.ToString;
     "waterSubmode",
     "accessMode"
 })
+@ToString
 public class Network {
 
     @XmlElement(name = "NetworkRef", namespace = "http://www.siri.org.uk/siri")

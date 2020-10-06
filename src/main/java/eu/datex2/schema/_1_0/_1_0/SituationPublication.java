@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A publication containing zero or more traffic/travel situations.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "situation",
     "situationPublicationExtension"
 })
+@ToString
 public class SituationPublication
     extends PayloadPublication
 {

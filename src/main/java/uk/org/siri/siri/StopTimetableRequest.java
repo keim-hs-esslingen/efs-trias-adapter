@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Service Request Type for Stop Timetables
  * 
@@ -76,6 +75,7 @@ import lombok.ToString;
     "language",
     "extensions"
 })
+@ToString
 public class StopTimetableRequest
     extends AbstractFunctionalServiceRequest
 {

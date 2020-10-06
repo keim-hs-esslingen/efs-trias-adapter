@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * The point (called Primary point) which is either a single point or at the downstream end of a linear road section. The point is specified by a reference to a point in a pre-defined Alert C location table.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "alertCLocation",
     "alertCMethod2PrimaryPointLocationExtension"
 })
+@ToString
 public class AlertCMethod2PrimaryPointLocation {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0", required = true)

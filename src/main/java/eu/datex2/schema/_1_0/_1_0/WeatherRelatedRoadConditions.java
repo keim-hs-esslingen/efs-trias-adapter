@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Road surface conditions that are related to the weather which may affect the driving conditions, such as ice, snow or water.
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "roadSurfaceConditionMeasurements",
     "weatherRelatedRoadConditionsExtension"
 })
+@ToString
 public class WeatherRelatedRoadConditions
     extends RoadConditions
 {

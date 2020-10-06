@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A passenger movement on a continuous service.
  * 
@@ -89,6 +88,7 @@ import lombok.ToString;
     "destinationText",
     "situationFullRef"
 })
+@ToString
 public class ContinuousService {
 
     @XmlElement(name = "ContinuousMode", namespace = "http://www.vdv.de/trias")

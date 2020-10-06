@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.acsb;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for accessibility needs. Records the requirementrs of a passenger that may affect chocie of facilities
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "userNeed",
     "accompaniedByCarer"
 })
+@ToString
 public class PassengerAccessibilityNeeds {
 
     @XmlElement(name = "UserNeed", namespace = "http://www.ifopt.org.uk/acsb")

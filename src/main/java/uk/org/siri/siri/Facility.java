@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -45,8 +46,6 @@ import uk.org.ifopt.acsb.Accessibility;
 import uk.org.ifopt.acsb.Suitability;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for sescription the facility itself
  * 
@@ -103,6 +102,7 @@ import lombok.ToString;
     "accessibilityAssessment",
     "extensions"
 })
+@ToString
 public class Facility {
 
     @XmlElement(name = "FacilityCode", namespace = "http://www.siri.org.uk/siri")

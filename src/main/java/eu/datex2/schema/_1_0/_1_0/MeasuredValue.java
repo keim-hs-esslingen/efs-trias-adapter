@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -45,8 +46,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Contains optional characteristics for the specific measured value (ordered/indexed to correspond with that of the referenced measurement point) which override the static characteristics defined for the measurement point.
  * 
@@ -99,6 +98,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     eu.datex2.schema._1_0._1_0.SiteMeasurements.MeasuredValue.class
 })
+@ToString
 public class MeasuredValue {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

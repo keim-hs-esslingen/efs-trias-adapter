@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for an interchange feeder Activity.
  * 
@@ -77,6 +76,7 @@ import lombok.ToString;
     MonitoredFeederArrival.class,
     MonitoredFeederArrivalCancellation.class
 })
+@ToString
 public class AbstractFeederItem
     extends AbstractIdentifiedItem
 {

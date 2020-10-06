@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for ExtensionType complex type.
  * 
@@ -65,6 +64,7 @@ import lombok.ToString;
 @XmlType(name = "ExtensionType", namespace = "http://datex2.eu/schema/1_0/1_0", propOrder = {
     "any"
 })
+@ToString
 public class ExtensionType {
 
     @XmlAnyElement(lax = true)

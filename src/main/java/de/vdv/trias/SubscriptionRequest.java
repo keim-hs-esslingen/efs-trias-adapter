@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import uk.org.siri.siri.FacilityMonitoringSubscription;
 import uk.org.siri.siri.SituationExchangeSubscription;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Subscription request structure - wrapping generic SIRI request element.
  * 
@@ -76,6 +75,7 @@ import lombok.ToString;
     "tripMonitoringSubscriptionRequest",
     "connectionProtectionSubscriptionRequest"
 })
+@ToString
 public class SubscriptionRequest
     extends AbstractTriasSubscriptionRequest
 {

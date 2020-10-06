@@ -31,14 +31,13 @@
 
 package uk.org.ifopt.acsb;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for accessibility
  * 
@@ -61,6 +60,7 @@ import lombok.ToString;
 @XmlType(name = "AccessibilityStructure", namespace = "http://www.ifopt.org.uk/acsb", propOrder = {
     "value"
 })
+@ToString
 public class Accessibility {
 
     @XmlValue

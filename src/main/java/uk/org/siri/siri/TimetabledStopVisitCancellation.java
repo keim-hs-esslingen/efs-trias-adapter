@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data type for Cancellation of Timetabled Visit of a vehicle to a stop. May provide information about the arrival, the departure or both.
  * 
@@ -83,6 +82,7 @@ import lombok.ToString;
     "externalLineRef",
     "extensions"
 })
+@ToString
 public class TimetabledStopVisitCancellation
     extends AbstractReferencingItem
 {

@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Specification of a continuous period within a 24 hour period by times.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "endTimeOfPeriod",
     "timePeriodByHourExtension"
 })
+@ToString
 public class TimePeriodByHour
     extends TimePeriodOfDay
 {

@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A geometric area defined by a centre point and a radius.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "name",
     "tpeggeometricAreaExtension"
 })
+@ToString
 public class TPEGGeometricArea
     extends TPEGAreaLocation
 {

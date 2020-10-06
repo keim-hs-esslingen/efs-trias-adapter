@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure of a Multi Trip Fares Request result
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     "passedZones",
     "staticInfoUrl"
 })
+@ToString
 public class MultiTripFaresResult {
 
     @XmlElement(name = "ErrorMessage", namespace = "http://www.vdv.de/trias")

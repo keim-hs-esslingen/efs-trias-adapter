@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.acsb;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for of a specific need
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     "needRanking",
     "extensions"
 })
+@ToString
 public class UserNeed {
 
     @XmlElement(name = "MobilityNeed", namespace = "http://www.ifopt.org.uk/acsb")

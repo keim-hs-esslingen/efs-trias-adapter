@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Specification of traffic management controls which affect the road network that have been instigated by the network/road operator. These controls may require either optional or mandatory compliance.
  * 
@@ -74,6 +73,7 @@ import lombok.ToString;
     TemporaryLimits.class,
     Rerouting.class
 })
+@ToString
 public class TrafficControl {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

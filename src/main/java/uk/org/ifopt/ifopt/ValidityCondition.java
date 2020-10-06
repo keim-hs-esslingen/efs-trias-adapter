@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a validity condition
  * 
@@ -87,6 +86,7 @@ import lombok.ToString;
     "dayType",
     "timebands"
 })
+@ToString
 public class ValidityCondition {
 
     @XmlElement(name = "FromDateTime", namespace = "http://www.ifopt.org.uk/ifopt", type = String.class)

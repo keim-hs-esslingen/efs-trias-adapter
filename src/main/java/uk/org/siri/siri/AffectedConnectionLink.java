@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a reference Information about a connection link from a given stop.
  * 
@@ -89,6 +88,7 @@ import lombok.ToString;
     "affectedPathLink",
     "extensions"
 })
+@ToString
 public class AffectedConnectionLink {
 
     @XmlElement(name = "ConnectionLinkRef", namespace = "http://www.siri.org.uk/siri")

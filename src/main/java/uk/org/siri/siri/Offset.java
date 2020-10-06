@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for information about the lines affected by an Situation
  * 
@@ -67,6 +66,7 @@ import lombok.ToString;
     "distanceFromStart",
     "distanceFromEnd"
 })
+@ToString
 public class Offset {
 
     @XmlElement(name = "DistanceFromStart", namespace = "http://www.siri.org.uk/siri")

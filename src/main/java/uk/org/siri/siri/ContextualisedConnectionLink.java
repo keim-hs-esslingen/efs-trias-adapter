@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Connection between two stops within a connection area. Used within teh context of one or other end
  * 
@@ -77,6 +76,7 @@ import lombok.ToString;
     "occasionalTravellerDuration",
     "impairedAccessDuration"
 })
+@ToString
 public class ContextualisedConnectionLink {
 
     @XmlElement(name = "ConnectionLinkCode", namespace = "http://www.siri.org.uk/siri")

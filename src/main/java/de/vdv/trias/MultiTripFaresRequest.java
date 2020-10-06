@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure of a Multi Trip Fares Request.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
 @XmlType(name = "MultiTripFaresRequestStructure", namespace = "http://www.vdv.de/trias", propOrder = {
     "trip"
 })
+@ToString
 public class MultiTripFaresRequest {
 
     @XmlElement(name = "Trip", namespace = "http://www.vdv.de/trias", required = true)

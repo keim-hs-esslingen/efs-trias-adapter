@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A free text comment with an optional date/time stamp that can be used by the operator to convey uncoded observations/information.
  * 
@@ -93,6 +92,7 @@ import lombok.ToString;
     "commentDateTime",
     "commentExtension"
 })
+@ToString
 public class DatexComment {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0", required = true)

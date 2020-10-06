@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,8 +48,6 @@ import eu.datex2.schema._1_0._1_0.ProbabilityOfOccurrenceEnum;
 import eu.datex2.schema._1_0._1_0.PublicEventTypeEnum;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for individual PT situation.
  * 
@@ -112,6 +111,7 @@ import lombok.ToString;
     "publishingActions",
     "extensions"
 })
+@ToString
 public class PtSituationElement
     extends SituationElement
 {

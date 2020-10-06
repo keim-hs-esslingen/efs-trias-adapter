@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import eu.datex2.schema._1_0._1_0.ReferencePointLinear;
 import uk.org.ifopt.ifopt.LinkProjection;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Raod scope for scope of situation or effect.
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "linkProjection",
     "offset"
 })
+@ToString
 public class AffectedRoad {
 
     @XmlElement(name = "Road", namespace = "http://www.siri.org.uk/siri")

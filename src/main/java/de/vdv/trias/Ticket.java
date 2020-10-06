@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Model of a ticket and related information.
  * 
@@ -98,6 +97,7 @@ import lombok.ToString;
     "bookingInfo",
     "extension"
 })
+@ToString
 public class Ticket {
 
     @XmlElement(name = "TicketId", namespace = "http://www.vdv.de/trias", required = true)

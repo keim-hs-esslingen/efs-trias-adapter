@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Error: Service does not support requested capability.
  * 
@@ -67,6 +66,7 @@ import lombok.ToString;
 @XmlType(name = "CapabilityNotSupportedErrorStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "capabilityRef"
 })
+@ToString
 public class CapabilityNotSupportedError
     extends ErrorCode
 {

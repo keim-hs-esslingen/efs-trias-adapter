@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Request structure for departure and arrival events at stops
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "location",
     "params"
 })
+@ToString
 public class StopEventRequest {
 
     @XmlElement(name = "Location", namespace = "http://www.vdv.de/trias", required = true)

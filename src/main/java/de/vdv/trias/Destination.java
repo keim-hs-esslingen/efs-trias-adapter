@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for Destination complex type.
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "destinationName",
     "destinationShortName"
 })
+@ToString
 public class Destination {
 
     @XmlElement(name = "DestinationRef", namespace = "http://www.vdv.de/trias", required = true)

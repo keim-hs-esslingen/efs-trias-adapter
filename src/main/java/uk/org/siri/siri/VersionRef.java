@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data Type for Reference Timetable Version.
  * 
@@ -63,6 +62,7 @@ import lombok.ToString;
 @XmlType(name = "VersionRefStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "value"
 })
+@ToString
 public class VersionRef {
 
     @XmlValue

@@ -31,13 +31,12 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a timeband.
  * 
@@ -58,6 +57,7 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TimebandStructure", namespace = "http://www.ifopt.org.uk/ifopt")
+@ToString
 public class Timeband
     extends HalfOpenTimeRange
 {

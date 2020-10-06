@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -46,8 +47,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure for an inter-modal passenger trip.
  * 
@@ -92,6 +91,7 @@ import lombok.ToString;
     "situationFullRef",
     "extension"
 })
+@ToString
 public class Trip {
 
     @XmlElement(name = "TripId", namespace = "http://www.vdv.de/trias", required = true)

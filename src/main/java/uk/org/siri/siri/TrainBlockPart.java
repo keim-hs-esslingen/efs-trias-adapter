@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Block part elements of Vehicle journey.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "trainPartRef",
     "positionOfTrainBlockPart"
 })
+@ToString
 public class TrainBlockPart {
 
     @XmlElement(name = "NumberOfBlockParts", namespace = "http://www.siri.org.uk/siri", required = true)

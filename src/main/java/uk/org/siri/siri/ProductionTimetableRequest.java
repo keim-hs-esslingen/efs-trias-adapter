@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Service Request Type for Production Timetables.
  * 
@@ -79,6 +78,7 @@ import lombok.ToString;
     "incrementalUpdates",
     "extensions"
 })
+@ToString
 public class ProductionTimetableRequest
     extends AbstractFunctionalServiceRequest
 {

@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.acsb.AccessibilityAssessment;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Descritpion of the status of a facility
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "accessibilityAssessment",
     "extensions"
 })
+@ToString
 public class FacilityStatus {
 
     @XmlElement(name = "Status", namespace = "http://www.siri.org.uk/siri", required = true)

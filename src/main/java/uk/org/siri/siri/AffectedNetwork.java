@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.AccessModesEnumeration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for information about the parts of the network affected by an incident. If not explclitly overrided Modes and submodes will be defaulted to any values present in the general Context.  
  * 
@@ -100,6 +99,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     uk.org.siri.siri.AffectsScope.Networks.AffectedNetwork.class
 })
+@ToString
 public class AffectedNetwork {
 
     @XmlElement(name = "AffectedOperator", namespace = "http://www.siri.org.uk/siri")

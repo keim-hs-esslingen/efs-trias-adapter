@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure to report the status of a facility.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "condition",
     "extension"
 })
+@ToString
 public class FacilityStatusReport {
 
     @XmlElement(name = "VehicleFacility", namespace = "http://www.vdv.de/trias")

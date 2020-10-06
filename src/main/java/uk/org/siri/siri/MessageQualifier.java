@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Unique identifier of a message within SIRI functional service  type and participant.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     MessageRef.class
 })
+@ToString
 public class MessageQualifier {
 
     @XmlValue

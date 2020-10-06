@@ -31,13 +31,12 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Enumerations used within the location referencing sub-model except those for specific location referencing sub-models (e.g. TPEG-Loc) which are listed separately.
  * 

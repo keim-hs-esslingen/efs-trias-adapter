@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Monitoring Service Capability access control
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "checkLineRef",
     "checkMonitoringRef"
 })
+@ToString
 public class MonitoringCapabilityAccessControl
     extends CapabilityAccessControl
 {

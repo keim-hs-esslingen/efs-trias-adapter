@@ -182,6 +182,7 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
     }
 
     private LocationResult getLocationInformation(LocationRef reference, LocationParam restrictions) {
+
         var request = requestFactory.newTriasServiceRequest()
                 .locationInformationRequest(
                         new LocationInformationRequest()
@@ -191,7 +192,11 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
 
         var response = proxy.send(request);
 
-        return nullsafe(() -> response.getServiceDelivery().getDeliveryPayload().getLocationInformationResponse().getLocationResult().get(0));
+        var result = nullsafe(() -> response.getServiceDelivery().getDeliveryPayload().getLocationInformationResponse().getLocationResult().get(0));
+
+        logger.debug("Received location information for location ref:\nLocationRef: {}\nLocationResult: {}", reference, result);
+
+        return result;
     }
 
     /**

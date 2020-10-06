@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for anonymous complex type.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "stopMonitoringPermission"
 })
 @XmlRootElement(name = "StopMonitoringPermissions", namespace = "http://www.siri.org.uk/siri")
+@ToString
 public class StopMonitoringPermissions
     extends Permissions
 {

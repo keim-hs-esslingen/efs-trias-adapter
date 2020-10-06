@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.siri.siri.AbstractSubscription;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for TripMonitoringSubscriptionRequest complex type.
  * 
@@ -67,6 +66,7 @@ import lombok.ToString;
     "tripRequest",
     "monitoringParameter"
 })
+@ToString
 public class TripMonitoringSubscriptionRequest
     extends AbstractSubscription
 {

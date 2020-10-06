@@ -31,13 +31,12 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Stop event response context. May hold objects that are referenced several times.
  * 
@@ -58,6 +57,7 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StopEventResponseContextStructure", namespace = "http://www.vdv.de/trias")
+@ToString
 public class StopEventResponseContext
     extends AbstractResponseContext
 {

@@ -31,13 +31,12 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for anonymous complex type.
  * 
@@ -56,6 +55,7 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
+@ToString
 public class StopPointsRequest
     extends StopPointsDiscoveryRequest
 {

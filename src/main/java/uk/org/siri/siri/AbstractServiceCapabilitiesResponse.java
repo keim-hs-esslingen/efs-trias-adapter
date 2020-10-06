@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for capabilities response.
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
     SituationExchangeCapabilitiesResponse.class,
     GeneralMessageCapabilitiesResponse.class
 })
+@ToString
 public class AbstractServiceCapabilitiesResponse
     extends Response
 {

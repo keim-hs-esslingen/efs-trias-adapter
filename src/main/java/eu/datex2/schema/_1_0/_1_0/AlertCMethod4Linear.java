@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A linear section along a road between two points, Primary and Secondary, which are pre-defined Alert C locations plus offset distance. Direction is FROM the Secondary point TO the Primary point, i.e. the Primary point is downstream of the Secondary point.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "alertCMethod4SecondaryPointLocation",
     "alertCMethod4LinearExtension"
 })
+@ToString
 public class AlertCMethod4Linear
     extends AlertCLinear
 {

@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Positioning response structure.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "errorMessage",
     "positioningResult"
 })
+@ToString
 public class PositioningResponse {
 
     @XmlElement(name = "ErrorMessage", namespace = "http://www.vdv.de/trias")

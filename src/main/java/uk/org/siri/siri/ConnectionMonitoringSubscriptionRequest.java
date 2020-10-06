@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Subscription Request for Connection Monitoring.
  * 
@@ -67,6 +66,7 @@ import lombok.ToString;
     "connectionMonitoringRequest",
     "changeBeforeUpdates"
 })
+@ToString
 public class ConnectionMonitoringSubscriptionRequest
     extends AbstractSubscription
 {

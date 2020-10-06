@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Request to lookup a service in the register.
  * 
@@ -73,6 +72,7 @@ import lombok.ToString;
     "participantRef",
     "serviceUsage"
 })
+@ToString
 public class ServiceRegisterLookupRequest {
 
     @XmlElement(name = "ServiceId", namespace = "http://www.vdv.de/trias")

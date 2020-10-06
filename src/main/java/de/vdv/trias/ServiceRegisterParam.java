@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Service register request parameters.
  * 
@@ -64,6 +63,7 @@ import lombok.ToString;
 @XmlType(name = "ServiceRegisterParamStructure", namespace = "http://www.vdv.de/trias", propOrder = {
     "extension"
 })
+@ToString
 public class ServiceRegisterParam {
 
     @XmlElement(name = "Extension", namespace = "http://www.vdv.de/trias")

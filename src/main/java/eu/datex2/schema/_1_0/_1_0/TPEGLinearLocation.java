@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A linear section along a road defined between two points on the road by a TPEG-Loc structure.
  * 
@@ -73,6 +72,7 @@ import lombok.ToString;
     "from",
     "tpeglinearLocationExtension"
 })
+@ToString
 public class TPEGLinearLocation {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0", required = true)

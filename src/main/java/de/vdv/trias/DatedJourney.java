@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure for a vehicle journey at a specific date.
  * 
@@ -84,6 +83,7 @@ import lombok.ToString;
     "occupancy",
     "situationFullRef"
 })
+@ToString
 public class DatedJourney {
 
     @XmlElement(name = "OperatingDayRef", namespace = "http://www.vdv.de/trias", required = true)

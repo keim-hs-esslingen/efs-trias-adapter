@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Info Link.
  * 
@@ -62,6 +61,7 @@ import lombok.ToString;
 @XmlType(name = "InfoLinkStructure", namespace = "http://www.ifopt.org.uk/ifopt", propOrder = {
     "value"
 })
+@ToString
 public class InfoLink {
 
     @XmlValue

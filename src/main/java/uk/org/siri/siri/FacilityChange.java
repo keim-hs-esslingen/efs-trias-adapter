@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for change to equipment availability. Basic structure defined in the first 1.0 SIRI XSD
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "situationRef",
     "mobilityDisruption"
 })
+@ToString
 public class FacilityChange {
 
     @XmlElement(name = "EquipmentAvailability", namespace = "http://www.siri.org.uk/siri")

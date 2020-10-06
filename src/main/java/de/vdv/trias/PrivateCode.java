@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Code within scope of a private referential system
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "system",
     "value"
 })
+@ToString
 public class PrivateCode {
 
     @XmlElement(name = "System", namespace = "http://www.vdv.de/trias", required = true)

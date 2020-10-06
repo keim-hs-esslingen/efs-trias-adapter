@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure for a single leg of a passenger trip.
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     "interchangeLeg",
     "continuousLeg"
 })
+@ToString
 public class TripLeg {
 
     @XmlElement(name = "LegId", namespace = "http://www.vdv.de/trias", required = true)

@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.acsb;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -42,8 +43,6 @@ import uk.org.ifopt.ifopt.Extensions;
 import uk.org.ifopt.ifopt.ValidityCondition;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for limitation on navigation
  * 
@@ -81,6 +80,7 @@ import lombok.ToString;
     "visualSignsAvailable",
     "extensions"
 })
+@ToString
 public class AccessibilityLimitation {
 
     @XmlElement(name = "LimitationId", namespace = "http://www.ifopt.org.uk/acsb")

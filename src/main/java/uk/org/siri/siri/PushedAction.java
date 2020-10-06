@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for publication action.
  * 
@@ -87,6 +86,7 @@ import lombok.ToString;
     NotifyByEmailAction.class,
     NotifyUserAction.class
 })
+@ToString
 public class PushedAction
     extends ParameterisedAction
 {

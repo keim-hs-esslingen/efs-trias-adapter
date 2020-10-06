@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Reference to a Feature
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "featureIdRef",
     "featureType"
 })
+@ToString
 public class FeatureRef {
 
     @XmlElement(name = "FeatureIdRef", namespace = "http://www.ifopt.org.uk/ifopt", required = true)

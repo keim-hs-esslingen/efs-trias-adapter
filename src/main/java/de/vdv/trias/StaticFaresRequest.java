@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.LocalDateAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * General fares information. May depend on date.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "date",
     "ticketRef"
 })
+@ToString
 public class StaticFaresRequest {
 
     @XmlElement(name = "Date", namespace = "http://www.vdv.de/trias", type = String.class)

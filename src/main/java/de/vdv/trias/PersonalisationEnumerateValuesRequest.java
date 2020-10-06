@@ -31,13 +31,12 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for PersonalisationEnumerateValuesRequest complex type.
  * 
@@ -56,6 +55,7 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonalisationEnumerateValuesRequestStructure", namespace = "http://www.vdv.de/trias")
+@ToString
 public class PersonalisationEnumerateValuesRequest {
 
 

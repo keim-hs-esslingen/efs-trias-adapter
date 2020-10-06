@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Refine response structure.
  * 
@@ -74,6 +73,7 @@ import lombok.ToString;
     "tripInfoRefineResponse",
     "tripRefineResponse"
 })
+@ToString
 public class RefineResponse {
 
     @XmlElement(name = "IndividualRouteRefineResponse", namespace = "http://www.vdv.de/trias")

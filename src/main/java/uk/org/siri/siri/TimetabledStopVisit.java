@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data type for Timetabled Visit of a vehicle to a stop. May provide information about the arrival, the departure or both.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "targetedVehicleJourney",
     "extensions"
 })
+@ToString
 public class TimetabledStopVisit
     extends AbstractIdentifiedItem
 {

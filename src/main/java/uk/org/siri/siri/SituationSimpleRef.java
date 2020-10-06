@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data Type for Reference to a Situation. Includes the Particpant , identifier and and version components of the identifier.
  * 
@@ -61,6 +60,7 @@ import lombok.ToString;
 @XmlType(name = "SituationSimpleRefStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "value"
 })
+@ToString
 public class SituationSimpleRef {
 
     @XmlValue

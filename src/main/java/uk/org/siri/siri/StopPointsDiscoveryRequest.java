@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Requests for stop reference data  for use in service requests.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     StopPointsRequest.class
 })
+@ToString
 public class StopPointsDiscoveryRequest
     extends AbstractDiscoveryRequest
 {

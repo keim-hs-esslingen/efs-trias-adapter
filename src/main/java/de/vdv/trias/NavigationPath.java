@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Description of a piece of a journey. May include geographic information, turn instructions and accessibility information.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
 @XmlType(name = "NavigationPathStructure", namespace = "http://www.vdv.de/trias", propOrder = {
     "navigationSection"
 })
+@ToString
 public class NavigationPath {
 
     @XmlElement(name = "NavigationSection", namespace = "http://www.vdv.de/trias", required = true)

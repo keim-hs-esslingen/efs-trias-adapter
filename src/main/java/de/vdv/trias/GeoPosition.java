@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.DoubleAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Expressed as WGS84
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "latitude",
     "altitude"
 })
+@ToString
 public class GeoPosition implements de.hsesslingen.keim.efs.middleware.model.ICoordinates {
 
     @XmlElement(name = "Longitude", namespace = "http://www.vdv.de/trias", required = true, type = String.class)

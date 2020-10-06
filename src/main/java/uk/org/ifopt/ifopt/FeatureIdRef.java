@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Reference to a GIS Feature
  * 
@@ -63,6 +62,7 @@ import lombok.ToString;
 @XmlType(name = "FeatureIdRefStructure", namespace = "http://www.ifopt.org.uk/ifopt", propOrder = {
     "value"
 })
+@ToString
 public class FeatureIdRef {
 
     @XmlValue

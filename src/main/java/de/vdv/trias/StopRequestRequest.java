@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for StopRequestRequest complex type.
  * 
@@ -81,6 +80,7 @@ import lombok.ToString;
     "hearingImpaired",
     "readingImpaired"
 })
+@ToString
 public class StopRequestRequest {
 
     @XmlElement(name = "StopRef", namespace = "http://www.vdv.de/trias", required = true)

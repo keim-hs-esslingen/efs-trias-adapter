@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for LocationInformationResponse complex type.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "errorMessage",
     "locationResult"
 })
+@ToString
 public class LocationInformationResponse {
 
     @XmlElement(name = "ContinueAt", namespace = "http://www.vdv.de/trias")

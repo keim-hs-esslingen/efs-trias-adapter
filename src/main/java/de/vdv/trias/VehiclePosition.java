@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Geographical and logical position of a vehicle.
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "bearing",
     "progressBetweenStops"
 })
+@ToString
 public class VehiclePosition {
 
     @XmlElement(name = "GeoPosition", namespace = "http://www.vdv.de/trias")

@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -43,8 +44,6 @@ import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 import de.vdv.trias.AbstractTriasServiceRequest;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for General SIRI Request.
  * 
@@ -80,6 +79,7 @@ import lombok.ToString;
     AbstractTriasServiceRequest.class,
     ServiceRequest.class
 })
+@ToString
 public class ContextualisedRequest {
 
     @XmlElement(name = "ServiceRequestContext", namespace = "http://www.siri.org.uk/siri")

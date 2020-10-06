@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -51,8 +52,6 @@ import uk.org.siri.siri.SanitaryFacilityEnumeration;
 import uk.org.siri.siri.TicketingFacilityEnumeration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for VehicleStatus complex type.
  * 
@@ -94,6 +93,7 @@ import lombok.ToString;
     "luggageFacility",
     "accommodationFacility"
 })
+@ToString
 public class VehicleStatus {
 
     @XmlElement(name = "DoorState", namespace = "http://www.vdv.de/trias")

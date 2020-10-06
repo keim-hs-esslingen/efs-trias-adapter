@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.CountryRef;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Reference to a  Situation or an update to a situation. Participant ref is optional and may be supplied from context
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "updateParticipantRef",
     "version"
 })
+@ToString
 public class SituationSharedRef {
 
     @XmlElement(name = "CountryRef", namespace = "http://www.siri.org.uk/siri")

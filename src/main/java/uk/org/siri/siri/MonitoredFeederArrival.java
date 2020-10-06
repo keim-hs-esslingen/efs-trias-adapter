@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Real time connection at a stop.
  * 
@@ -79,6 +78,7 @@ import lombok.ToString;
     "expectedArrivalTime",
     "extensions"
 })
+@ToString
 public class MonitoredFeederArrival
     extends AbstractFeederItem
 {

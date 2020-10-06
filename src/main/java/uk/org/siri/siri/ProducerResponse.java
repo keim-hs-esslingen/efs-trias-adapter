@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 import de.vdv.trias.AbstractTriasResponse;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for General SIRI Producer Response.
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     CapabilitiesResponse.class,
     ServiceDelivery.class
 })
+@ToString
 public class ProducerResponse
     extends Response
 {

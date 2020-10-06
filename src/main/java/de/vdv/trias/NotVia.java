@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Not-via restrictions for a journey, i.e. stops that the journey is not allowed to pass through.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "stopPointRef",
     "stopPlaceRef"
 })
+@ToString
 public class NotVia {
 
     @XmlElement(name = "StopPointRef", namespace = "http://www.vdv.de/trias")

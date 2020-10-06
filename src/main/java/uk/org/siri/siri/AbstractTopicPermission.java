@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Abstract Permission Topic.
  * 
@@ -73,6 +72,7 @@ import lombok.ToString;
     StopMonitorPermission.class,
     VehicleMonitorPermission.class
 })
+@ToString
 public class AbstractTopicPermission {
 
     @XmlElement(name = "Allow", namespace = "http://www.siri.org.uk/siri", defaultValue = "true")

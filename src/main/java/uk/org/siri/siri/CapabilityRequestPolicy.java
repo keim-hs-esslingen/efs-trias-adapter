@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Common Request Policy capabilities.
  * 
@@ -91,6 +90,7 @@ import lombok.ToString;
     ProductionTimetableCapabilityRequestPolicy.class,
     StopMonitoringCapabilityRequestPolicy.class
 })
+@ToString
 public class CapabilityRequestPolicy {
 
     @XmlElement(name = "NationalLanguage", namespace = "http://www.siri.org.uk/siri", required = true)

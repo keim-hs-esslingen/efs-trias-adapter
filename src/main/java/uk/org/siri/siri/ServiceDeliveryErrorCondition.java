@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Standard ErrorConditiosn for Service request
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "otherError",
     "description"
 })
+@ToString
 public class ServiceDeliveryErrorCondition {
 
     @XmlElement(name = "CapabilityNotSupportedError", namespace = "http://www.siri.org.uk/siri")

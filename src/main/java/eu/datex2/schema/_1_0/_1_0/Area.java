@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A geographic or geometric defined area which may be qualified by height information to provide additional geospatial descrimination (e.g. for snow in an area but only above a certain altitude).
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "tpegareaLocation",
     "areaExtension"
 })
+@ToString
 public class Area
     extends Location
 {

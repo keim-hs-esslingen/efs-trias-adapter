@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Refernce to a place visited by a vehicle Journey.
  * 
@@ -64,6 +63,7 @@ import lombok.ToString;
 @XmlType(name = "JourneyPlaceRefStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "value"
 })
+@ToString
 public class JourneyPlaceRef {
 
     @XmlValue

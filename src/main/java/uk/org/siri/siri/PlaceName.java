@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Names of via points, used to help identify the line, for example, Luton to Luton via Sutton. Currently 3 in VDV. Should only be included if  the detail level was requested. 
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "placeName",
     "placeShortName"
 })
+@ToString
 public class PlaceName {
 
     @XmlElement(name = "PlaceRef", namespace = "http://www.siri.org.uk/siri")

@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for General SIRI Request.
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     AbstractDiscoveryRequest.class,
     AbstractSubscriptionRequest.class
 })
+@ToString
 public class Request
     extends AbstractRequest
 {

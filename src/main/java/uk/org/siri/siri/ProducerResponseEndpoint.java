@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Unique reference to reponse from producer. May be  used to reference request in subsequent interactions. Used for WSDL. 
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "responseMessageIdentifier",
     "requestMessageRef"
 })
+@ToString
 public class ProducerResponseEndpoint
     extends Response
 {

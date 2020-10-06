@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,8 +44,6 @@ import uk.org.ifopt.ifopt.EquipmentStatusEnumeration;
 import uk.org.ifopt.ifopt.EquipmentTypeRef;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Availaibility Change of Equipment.
  * 
@@ -92,6 +91,7 @@ import lombok.ToString;
     "equipmentFeatures",
     "extensions"
 })
+@ToString
 public class EquipmentAvailability {
 
     @XmlElement(name = "EquipmentRef", namespace = "http://www.siri.org.uk/siri")

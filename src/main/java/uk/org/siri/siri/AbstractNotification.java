@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Notification Request
  * 
@@ -62,6 +61,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     DataReadyRequest.class
 })
+@ToString
 public class AbstractNotification
     extends ProducerRequestEndpoint
 {

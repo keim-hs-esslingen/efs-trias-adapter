@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * TripInfoRefine request parameter structure.
  * 
@@ -74,6 +73,7 @@ import lombok.ToString;
     "includeTrackProjection",
     "extension"
 })
+@ToString
 public class TripInfoRefineParam {
 
     @XmlElement(name = "ForeignObjectRefs", namespace = "http://www.vdv.de/trias")

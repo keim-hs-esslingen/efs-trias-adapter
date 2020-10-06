@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A group of one or more physically separate locations. Locations maybe related, as in an itinerary or route, or maybe unrelated. It is not for identifying the same physical location using different referencing systems.
  * 
@@ -74,6 +73,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     GroupOfLocationsByReference.class
 })
+@ToString
 public class GroupOfLocations {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0", required = true)

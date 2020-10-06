@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for stop timetable deliveries. Used in WSDL.
  * 
@@ -64,6 +63,7 @@ import lombok.ToString;
 @XmlType(name = "StopTimetableDeliveriesStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "stopTimetableDelivery"
 })
+@ToString
 public class StopTimetableDeliveries {
 
     @XmlElement(name = "StopTimetableDelivery", namespace = "http://www.siri.org.uk/siri", required = true)

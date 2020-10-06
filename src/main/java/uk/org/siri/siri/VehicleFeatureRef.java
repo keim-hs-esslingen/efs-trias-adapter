@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data Type for Reference to a Vehicle Feature Code. SIRI provides a recommended set of values covering most usages, intended to be TPEG comnpatible. See the SIRI facilities packaged
  * 
@@ -63,6 +62,7 @@ import lombok.ToString;
 @XmlType(name = "VehicleFeatureRefStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "value"
 })
+@ToString
 public class VehicleFeatureRef {
 
     @XmlValue

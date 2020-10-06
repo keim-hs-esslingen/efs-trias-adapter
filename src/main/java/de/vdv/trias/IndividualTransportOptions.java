@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Individual modes and their usage limits as stated by the passenger
  * 
@@ -77,6 +76,7 @@ import lombok.ToString;
     "minDuration",
     "speed"
 })
+@ToString
 public class IndividualTransportOptions {
 
     @XmlElement(name = "Mode", namespace = "http://www.vdv.de/trias", required = true)

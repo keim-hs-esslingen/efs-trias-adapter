@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.siri.siri.Coordinates;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates  or any GML compatible point coordinates  format.         
  * 
@@ -79,6 +78,7 @@ import lombok.ToString;
     "coordinates",
     "precision"
 })
+@ToString
 public class PointProjection
     extends AbstractProjection
 {

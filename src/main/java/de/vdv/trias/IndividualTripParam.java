@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Individual trip request parameter structure
  * 
@@ -92,6 +91,7 @@ import lombok.ToString;
     "includeSituationInfo",
     "extension"
 })
+@ToString
 public class IndividualTripParam {
 
     @XmlElement(name = "NoSingleStep", namespace = "http://www.vdv.de/trias", defaultValue = "false")

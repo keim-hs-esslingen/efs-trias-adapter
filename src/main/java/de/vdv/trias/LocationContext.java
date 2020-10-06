@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A location and access to it by individual transport.
  * 
@@ -78,6 +77,7 @@ import lombok.ToString;
     "depArrTime",
     "individualTransportOptions"
 })
+@ToString
 public class LocationContext {
 
     @XmlElement(name = "LocationRef", namespace = "http://www.vdv.de/trias")

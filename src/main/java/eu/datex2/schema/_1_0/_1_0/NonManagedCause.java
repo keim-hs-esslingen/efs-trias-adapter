@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Contains details of the cause of a record within a situation, when this cause is not managed as a situation record in its own right.
  * 
@@ -93,6 +92,7 @@ import lombok.ToString;
     "causeType",
     "nonManagedCauseExtension"
 })
+@ToString
 public class NonManagedCause
     extends Cause
 {

@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Reference to a Point of Interest
  * 
@@ -63,6 +62,7 @@ import lombok.ToString;
 @XmlType(name = "PointOfInterestRefStructure", namespace = "http://www.vdv.de/trias", propOrder = {
     "value"
 })
+@ToString
 public class PointOfInterestRef {
 
     @XmlValue

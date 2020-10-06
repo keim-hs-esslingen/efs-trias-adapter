@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A publication containing one or more measurement data sets, each set being measured at a single measurement site.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "siteMeasurements",
     "measuredDataPublicationExtension"
 })
+@ToString
 public class MeasuredDataPublication
     extends PayloadPublication
 {

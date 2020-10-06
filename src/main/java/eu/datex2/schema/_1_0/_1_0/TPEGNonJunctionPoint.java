@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A point on the road network which is not a road junction point.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "name",
     "tpegnonJunctionPointExtension"
 })
+@ToString
 public class TPEGNonJunctionPoint
     extends TPEGPoint
 {

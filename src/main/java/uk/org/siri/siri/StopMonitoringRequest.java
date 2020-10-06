@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -45,8 +46,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Service Request Type for Stop Monitoring Service.
  * 
@@ -89,6 +88,7 @@ import lombok.ToString;
     "maximumNumberOfCalls",
     "extensions"
 })
+@ToString
 public class StopMonitoringRequest
     extends AbstractFunctionalServiceRequest
 {

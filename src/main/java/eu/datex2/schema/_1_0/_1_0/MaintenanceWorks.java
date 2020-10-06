@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Roadworks involving the maintenance or installation of infrastructure.#NOTES#
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "roadMaintenanceType",
     "maintenanceWorksExtension"
 })
+@ToString
 public class MaintenanceWorks
     extends Roadworks
 {

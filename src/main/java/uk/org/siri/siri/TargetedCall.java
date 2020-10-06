@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -45,8 +46,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a targeted call.
  * 
@@ -86,6 +85,7 @@ import lombok.ToString;
     "departureBoardingActivity",
     "aimedHeadwayInterval"
 })
+@ToString
 public class TargetedCall {
 
     @XmlElement(name = "StopPointRef", namespace = "http://www.siri.org.uk/siri")

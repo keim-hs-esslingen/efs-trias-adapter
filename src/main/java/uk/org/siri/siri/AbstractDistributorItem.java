@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for an interchange Activity.
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
     StoppingPositionChangedDeparture.class,
     DistributorDepartureCancellation.class
 })
+@ToString
 public class AbstractDistributorItem
     extends AbstractItem
 {

@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for StopInformation complex type.
  * 
@@ -93,6 +92,7 @@ import lombok.ToString;
     "fareZone",
     "connection"
 })
+@ToString
 public class StopInformation {
 
     @XmlElement(name = "StopIndex", namespace = "http://www.vdv.de/trias")

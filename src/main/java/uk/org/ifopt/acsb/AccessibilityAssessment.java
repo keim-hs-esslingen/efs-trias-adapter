@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.acsb;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.Extensions;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Assesment
  * 
@@ -93,6 +92,7 @@ import lombok.ToString;
     "suitabilities",
     "extensions"
 })
+@ToString
 public class AccessibilityAssessment {
 
     @XmlElement(name = "MobilityImpairedAccess", namespace = "http://www.ifopt.org.uk/acsb")

@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlType;
 import eu.datex2.schema._1_0._1_0.DirectionEnum;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Parameters to filter Situation Exchange  requests, based on the situation Road, Logically ANDed with other values.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "directionBound",
     "referencePointIdentifier"
 })
+@ToString
 public class RoadFilter {
 
     @XmlElement(namespace = "http://www.siri.org.uk/siri")

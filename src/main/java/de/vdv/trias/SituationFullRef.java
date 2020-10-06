@@ -31,13 +31,12 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Reference structure for situation message. Situation details might be found in response context or through other communication channels.
  * 
@@ -58,6 +57,7 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SituationFullRefStructure", namespace = "http://www.vdv.de/trias")
+@ToString
 public class SituationFullRef
     extends uk.org.siri.siri.SituationFullRef
 {

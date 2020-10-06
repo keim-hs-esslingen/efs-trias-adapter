@@ -31,14 +31,13 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for reference to a Country Identifier. 
  * 
@@ -61,6 +60,7 @@ import lombok.ToString;
 @XmlType(name = "CountryRefStructure", namespace = "http://www.ifopt.org.uk/ifopt", propOrder = {
     "value"
 })
+@ToString
 public class CountryRef {
 
     @XmlValue

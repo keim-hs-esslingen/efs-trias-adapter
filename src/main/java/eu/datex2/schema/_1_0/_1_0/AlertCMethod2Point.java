@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A single point on the road network defined by reference to a point in a pre-defined Alert C location table and which has an associated direction of traffic flow.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "alertCMethod2PrimaryPointLocation",
     "alertCMethod2PointExtension"
 })
+@ToString
 public class AlertCMethod2Point
     extends AlertCPoint
 {

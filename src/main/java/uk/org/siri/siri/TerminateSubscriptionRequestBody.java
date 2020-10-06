@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Body of Terminate Subscription Request content. Used in WSDL.           
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "all",
     "subscriptionRef"
 })
+@ToString
 public class TerminateSubscriptionRequestBody {
 
     @XmlElement(name = "SubscriberRef", namespace = "http://www.siri.org.uk/siri")

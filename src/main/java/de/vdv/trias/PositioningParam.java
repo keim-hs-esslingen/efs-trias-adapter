@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Parameters that control the search.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "operatorFilter",
     "numberOfResults"
 })
+@ToString
 public class PositioningParam {
 
     @XmlElement(name = "PtModeFilter", namespace = "http://www.vdv.de/trias")

@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A service that calls at a nearby stop.
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "walkDistance",
     "walkDuration"
 })
+@ToString
 public class CallAtNearStop {
 
     @XmlElement(name = "CallAtStop", namespace = "http://www.vdv.de/trias", required = true)

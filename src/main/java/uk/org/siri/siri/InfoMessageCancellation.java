@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Revocation of a previous message.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "infoChannelRef",
     "extensions"
 })
+@ToString
 public class InfoMessageCancellation
     extends AbstractReferencingItem
 {

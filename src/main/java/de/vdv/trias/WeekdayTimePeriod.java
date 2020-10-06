@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.time.OffsetTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +45,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.OffsetTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Time period on a weekday.
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     "startTime",
     "duration"
 })
+@ToString
 public class WeekdayTimePeriod {
 
     @XmlElement(name = "Weekday", namespace = "http://www.vdv.de/trias")

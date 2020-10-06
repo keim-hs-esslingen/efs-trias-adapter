@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,8 +44,6 @@ import uk.org.ifopt.ifopt.StopPlaceRef;
 import uk.org.ifopt.ifopt.StopPlaceTypeEnumeration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for information about the Stop Places affected by an Situation
  * 
@@ -100,6 +99,7 @@ import lombok.ToString;
     "affectedNavigationPaths",
     "extensions"
 })
+@ToString
 public class AffectedStopPlace
     extends AffectedStopPlaceElement
 {

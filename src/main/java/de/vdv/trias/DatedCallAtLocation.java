@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Vehicle call at a general location.
  * 
@@ -85,6 +84,7 @@ import lombok.ToString;
     "noBoardingAtStop",
     "noAlightingAtStop"
 })
+@ToString
 public class DatedCallAtLocation {
 
     @XmlElement(name = "JourneyRef", namespace = "http://www.vdv.de/trias", required = true)

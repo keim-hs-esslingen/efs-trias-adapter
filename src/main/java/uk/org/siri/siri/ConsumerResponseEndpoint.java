@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Unique reference to this response created by Consumer. May be  used to reference the request in subsequent interactions. Used by WSDL.. 
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     DataReadyResponse.class,
     DataReceivedResponse.class
 })
+@ToString
 public class ConsumerResponseEndpoint
     extends Response
 {

@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Complete model of an Address
  * 
@@ -83,6 +82,7 @@ import lombok.ToString;
     "houseNumber",
     "crossingStreet"
 })
+@ToString
 public class Address {
 
     @XmlElement(name = "AddressCode", namespace = "http://www.vdv.de/trias", required = true)

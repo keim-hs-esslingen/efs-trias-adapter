@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.time.LocalDate;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.LocalDateAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Sub-request: stop-related fare information.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "stopPointRef",
     "date"
 })
+@ToString
 public class StopFaresRequest {
 
     @XmlElement(name = "StopPointRef", namespace = "http://www.vdv.de/trias", required = true)

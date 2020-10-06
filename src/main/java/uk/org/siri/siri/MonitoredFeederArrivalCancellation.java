@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Deletion of a feeder connection.
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
     "reason",
     "extensions"
 })
+@ToString
 public class MonitoredFeederArrivalCancellation
     extends AbstractFeederItem
 {

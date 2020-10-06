@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Description of the remedy to the change of a facility status (mainly when it becomes partially or totally anavailable)
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "description",
     "extensions"
 })
+@ToString
 public class Remedy {
 
     @XmlElement(name = "RemedyType", namespace = "http://www.siri.org.uk/siri")

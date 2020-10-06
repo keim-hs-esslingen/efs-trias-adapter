@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * An obstruction on the road resulting from the failure of equipment on, under, above or close to the road.
  * 
@@ -67,6 +66,7 @@ import lombok.ToString;
     "equipmentDamageType",
     "equipmentDamageObstructionExtension"
 })
+@ToString
 public class EquipmentDamageObstruction
     extends Obstruction
 {

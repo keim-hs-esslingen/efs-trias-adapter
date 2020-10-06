@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,8 +47,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Monitored Vehicle Journey.
  * 
@@ -130,6 +129,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     uk.org.siri.siri.VehicleActivity.MonitoredVehicleJourney.class
 })
+@ToString
 public class MonitoredVehicleJourney {
 
     @XmlElement(name = "LineRef", namespace = "http://www.siri.org.uk/siri")

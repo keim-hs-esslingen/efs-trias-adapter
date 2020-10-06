@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * The status of traffic conditions on a specific section or at a specific point on the road network.
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
     "trafficTrendType",
     "trafficStatusValueExtension"
 })
+@ToString
 public class TrafficStatusValue
     extends BasicDataValue
 {

@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for anonymous complex type.
  * 
@@ -100,6 +99,7 @@ import lombok.ToString;
     "extensions"
 })
 @XmlRootElement(name = "Siri", namespace = "http://www.siri.org.uk/siri")
+@ToString
 public class Siri {
 
     @XmlElement(name = "ServiceRequest", namespace = "http://www.siri.org.uk/siri")

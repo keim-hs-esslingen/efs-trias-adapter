@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Provides information on the status of one or more car parks.
  * 
@@ -86,6 +85,7 @@ import lombok.ToString;
     "totalCapacity",
     "carParksExtension"
 })
+@ToString
 public class CarParks
     extends NonRoadEventInformation
 {

@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.time.OffsetTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.OffsetTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for Time complex type.
  * 
@@ -63,6 +62,7 @@ import lombok.ToString;
 @XmlType(name = "Time", namespace = "http://datex2.eu/schema/1_0/1_0", propOrder = {
     "value"
 })
+@ToString
 public class Time {
 
     @XmlValue

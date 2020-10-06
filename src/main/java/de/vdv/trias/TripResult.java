@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure for a single trip result and its accompanying error messages.
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     "trip",
     "tripFares"
 })
+@ToString
 public class TripResult {
 
     @XmlElement(name = "ResultId", namespace = "http://www.vdv.de/trias", required = true)

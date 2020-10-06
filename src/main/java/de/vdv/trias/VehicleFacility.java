@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -51,8 +52,6 @@ import uk.org.siri.siri.SanitaryFacilityEnumeration;
 import uk.org.siri.siri.TicketingFacilityEnumeration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Model of a vehicle facility.
  * 
@@ -99,6 +98,7 @@ import lombok.ToString;
     "facilityDescription",
     "locationDescription"
 })
+@ToString
 public class VehicleFacility {
 
     @XmlElement(name = "FacilityRef", namespace = "http://www.vdv.de/trias")

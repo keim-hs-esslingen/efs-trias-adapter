@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Classification and naming of a mode.
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
     "shortName",
     "description"
 })
+@ToString
 public class Mode {
 
     @XmlElement(name = "PtMode", namespace = "http://www.vdv.de/trias", required = true)

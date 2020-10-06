@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.ifopt.acsb.AccessibilityAssessment;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for annotated references to a place.
  * 
@@ -84,6 +83,7 @@ import lombok.ToString;
     "accessibilityAssessment",
     "extensions"
 })
+@ToString
 public class AffectedPlace {
 
     @XmlElement(name = "PlaceRef", namespace = "http://www.siri.org.uk/siri")

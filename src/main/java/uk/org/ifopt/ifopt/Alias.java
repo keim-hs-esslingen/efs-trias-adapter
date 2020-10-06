@@ -31,14 +31,13 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Alternative Private Code
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "privateCode",
     "identifierType"
 })
+@ToString
 public class Alias {
 
     @XmlElement(name = "PrivateCode", namespace = "http://www.ifopt.org.uk/ifopt", required = true)

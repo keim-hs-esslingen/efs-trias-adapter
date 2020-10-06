@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,8 +44,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for gepspatial Position of a point. May be expressed in concrete WGS 84 Coordinates  or any gml compatible point coordinates  format.         
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
     "coordinates",
     "precision"
 })
+@ToString
 public class Location {
 
     @XmlElement(name = "Longitude", namespace = "http://www.siri.org.uk/siri")

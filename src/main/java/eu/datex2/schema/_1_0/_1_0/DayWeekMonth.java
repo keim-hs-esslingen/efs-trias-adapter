@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Specification of periods defined by the intersection of days, weeks and months. 
  * 
@@ -73,6 +72,7 @@ import lombok.ToString;
     "applicableMonth",
     "dayWeekMonthExtension"
 })
+@ToString
 public class DayWeekMonth {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0", required = true)

@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 
 
-import lombok.ToString;
-@ToString
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
@@ -54,6 +53,7 @@ import lombok.ToString;
  * 
  */
 @XmlRegistry
+@ToString
 public class ObjectFactory {
 
     private final static QName _D2LogicalModel_QNAME = new QName("http://datex2.eu/schema/1_0/1_0", "d2LogicalModel");

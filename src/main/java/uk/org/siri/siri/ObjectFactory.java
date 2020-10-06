@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import javax.xml.bind.JAXBElement;
@@ -43,8 +44,6 @@ import javax.xml.namespace.QName;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
@@ -60,6 +59,7 @@ import lombok.ToString;
  * 
  */
 @XmlRegistry
+@ToString
 public class ObjectFactory {
 
     private final static QName _SituationExchangeCapabilitiesRequest_QNAME = new QName("http://www.siri.org.uk/siri", "SituationExchangeCapabilitiesRequest");

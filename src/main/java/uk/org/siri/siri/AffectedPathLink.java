@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import uk.org.ifopt.ifopt.AccessibilityFeatureEnumeration;
 import uk.org.ifopt.ifopt.LinkProjection;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Information about a connection link from a given stop.
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
     "offset",
     "extensions"
 })
+@ToString
 public class AffectedPathLink {
 
     @XmlElement(name = "LinkRef", namespace = "http://www.siri.org.uk/siri")

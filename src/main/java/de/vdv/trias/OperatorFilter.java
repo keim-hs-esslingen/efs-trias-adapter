@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Filter for in/exclusion of transport operators.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "exclude",
     "operatorRef"
 })
+@ToString
 public class OperatorFilter {
 
     @XmlElement(name = "Exclude", namespace = "http://www.vdv.de/trias", defaultValue = "true")

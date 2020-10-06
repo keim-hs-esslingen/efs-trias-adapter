@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Service that provides shared vehicles.
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     "timeBufferAfter",
     "infoURL"
 })
+@ToString
 public class SharingService {
 
     @XmlElement(name = "OperatorRef", namespace = "http://www.vdv.de/trias", required = true)

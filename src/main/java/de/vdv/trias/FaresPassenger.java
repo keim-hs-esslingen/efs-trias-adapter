@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structure of a passenger profile for fares calculation.
  * 
@@ -80,6 +79,7 @@ import lombok.ToString;
     "zonesAlreadyPaid",
     "ownedTicket"
 })
+@ToString
 public class FaresPassenger {
 
     @XmlElement(name = "Age", namespace = "http://www.vdv.de/trias")

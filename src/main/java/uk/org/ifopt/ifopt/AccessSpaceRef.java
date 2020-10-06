@@ -31,13 +31,12 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Unique reference to Identifier of Access space.
  * 
@@ -58,6 +57,7 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AccessSpaceRefStructure", namespace = "http://www.ifopt.org.uk/ifopt")
+@ToString
 public class AccessSpaceRef
     extends StopPlaceSpaceRef
 {

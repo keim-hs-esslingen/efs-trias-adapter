@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Request specific parameters
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "includeRealtimeData",
     "extension"
 })
+@ToString
 public class StopEventRefineParam {
 
     @XmlElement(name = "ForeignObjectRefs", namespace = "http://www.vdv.de/trias")

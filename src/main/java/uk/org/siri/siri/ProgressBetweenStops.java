@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data type for Progress 
  * 
@@ -67,6 +66,7 @@ import lombok.ToString;
     "linkDistance",
     "percentage"
 })
+@ToString
 public class ProgressBetweenStops {
 
     @XmlElement(name = "LinkDistance", namespace = "http://www.siri.org.uk/siri")

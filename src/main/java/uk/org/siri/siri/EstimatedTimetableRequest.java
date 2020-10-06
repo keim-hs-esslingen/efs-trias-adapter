@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data type for Service Request Type for Estimated Timetable 
  * 
@@ -79,6 +78,7 @@ import lombok.ToString;
     "language",
     "extensions"
 })
+@ToString
 public class EstimatedTimetableRequest
     extends AbstractFunctionalServiceRequest
 {

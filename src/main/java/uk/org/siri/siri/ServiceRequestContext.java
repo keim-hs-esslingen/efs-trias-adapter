@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Configurable context for requests. Intended Primarily as a documentation mechanism.
  * 
@@ -94,6 +93,7 @@ import lombok.ToString;
     "allowedPredictors",
     "predictionFunction"
 })
+@ToString
 public class ServiceRequestContext {
 
     @XmlElement(name = "CheckStatusAddress", namespace = "http://www.siri.org.uk/siri")

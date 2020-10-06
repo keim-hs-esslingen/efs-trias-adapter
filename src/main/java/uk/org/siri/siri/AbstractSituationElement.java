@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -43,8 +44,6 @@ import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 import uk.org.ifopt.ifopt.CountryRef;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for abstract EntryAbstract type.  
  * 
@@ -80,6 +79,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     SituationElement.class
 })
+@ToString
 public class AbstractSituationElement {
 
     @XmlElement(name = "CreationTime", namespace = "http://www.siri.org.uk/siri", required = true, type = String.class)

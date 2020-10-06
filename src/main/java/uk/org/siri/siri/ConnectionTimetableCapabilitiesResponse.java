@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data type for Delivery for Connection TimetableService.
  * 
@@ -84,6 +83,7 @@ import lombok.ToString;
     "connectionTimetablePermissions",
     "extensions"
 })
+@ToString
 public class ConnectionTimetableCapabilitiesResponse
     extends AbstractServiceCapabilitiesResponse
 {

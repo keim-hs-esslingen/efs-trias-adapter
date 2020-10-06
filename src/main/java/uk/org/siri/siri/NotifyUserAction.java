@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Notify user by other means.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "userName",
     "userRef"
 })
+@ToString
 public class NotifyUserAction
     extends PushedAction
 {

@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for  Information on casualties.
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "numberOfDeaths",
     "numberOfInjured"
 })
+@ToString
 public class Casualties {
 
     @XmlElement(name = "NumberOfDeaths", namespace = "http://www.siri.org.uk/siri")

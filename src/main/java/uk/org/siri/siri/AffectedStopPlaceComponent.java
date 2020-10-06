@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +44,6 @@ import uk.org.ifopt.ifopt.StopPlaceComponentTypeEnumeration;
 import uk.org.ifopt.ifopt.ZoneProjection;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for information about the quays affected by an Situation
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
     "offset",
     "extensions"
 })
+@ToString
 public class AffectedStopPlaceComponent
     extends AffectedStopPlaceElement
 {

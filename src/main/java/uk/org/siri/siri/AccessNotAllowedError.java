@@ -31,13 +31,12 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type forError: invalid access.
  * 
@@ -58,6 +57,7 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AccessNotAllowedErrorStructure", namespace = "http://www.siri.org.uk/siri")
+@ToString
 public class AccessNotAllowedError
     extends ErrorCode
 {

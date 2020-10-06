@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Sets of measured times relating to an individual vehicle derived from a detector at the specified measurement point.
  * 
@@ -76,6 +75,7 @@ import lombok.ToString;
     "timeHeadway",
     "vehicleDetectionTimeExtension"
 })
+@ToString
 public class VehicleDetectionTime {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

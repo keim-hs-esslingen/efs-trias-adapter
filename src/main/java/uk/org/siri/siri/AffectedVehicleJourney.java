@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +45,6 @@ import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 import uk.org.ifopt.acsb.AccessibilityAssessment;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for information about a vehicle journey affected by an Situation
  * 
@@ -109,6 +108,7 @@ import lombok.ToString;
     "calls",
     "extensions"
 })
+@ToString
 public class AffectedVehicleJourney {
 
     @XmlElement(name = "VehicleJourneyRef", namespace = "http://www.siri.org.uk/siri")

@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Response structure to FacilityStatusReport.
  * 
@@ -64,6 +63,7 @@ import lombok.ToString;
 @XmlType(name = "FacilityStatusReportResponseStructure", namespace = "http://www.vdv.de/trias", propOrder = {
     "errorMessage"
 })
+@ToString
 public class FacilityStatusReportResponse {
 
     @XmlElement(name = "ErrorMessage", namespace = "http://www.vdv.de/trias", required = true)

@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for an individual Stop Monitoring  a Multiple Request
  * 
@@ -87,6 +86,7 @@ import lombok.ToString;
     "maximumNumberOfCalls",
     "extensions"
 })
+@ToString
 public class StopMonitoringFilter {
 
     @XmlElement(name = "PreviewInterval", namespace = "http://www.siri.org.uk/siri")

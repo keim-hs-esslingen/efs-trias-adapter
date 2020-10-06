@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for MapSize complex type.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "width",
     "height"
 })
+@ToString
 public class MapSize {
 
     @XmlElement(name = "Width", namespace = "http://www.vdv.de/trias", required = true)

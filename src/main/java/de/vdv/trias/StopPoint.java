@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Complete model of a stop point.
  * 
@@ -80,6 +79,7 @@ import lombok.ToString;
     "lighting",
     "covered"
 })
+@ToString
 public class StopPoint {
 
     @XmlElement(name = "StopPointRef", namespace = "http://www.vdv.de/trias", required = true)

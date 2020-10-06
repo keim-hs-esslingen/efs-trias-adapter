@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Details of a variable message sign and its displayed information.
  * 
@@ -80,6 +79,7 @@ import lombok.ToString;
     "vmsType",
     "variableMessageSignSettingExtension"
 })
+@ToString
 public class VariableMessageSignSetting
     extends SignSetting
 {

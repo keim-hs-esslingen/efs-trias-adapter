@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.OffsetTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.OffsetTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data Type for a  range of times. Both start and end time are required.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "startTime",
     "endTime"
 })
+@ToString
 public class ClosedTimeRange {
 
     @XmlElement(name = "StartTime", namespace = "http://www.siri.org.uk/siri", required = true, type = String.class)

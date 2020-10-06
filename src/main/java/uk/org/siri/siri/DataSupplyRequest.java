@@ -31,14 +31,13 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Data supply Request
  * 
@@ -65,6 +64,7 @@ import lombok.ToString;
     "notificationRef",
     "allData"
 })
+@ToString
 public class DataSupplyRequest
     extends ConsumerRequestEndpoint
 {

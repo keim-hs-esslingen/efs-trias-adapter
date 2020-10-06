@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Visit of a vehicle to a stop monitoring point. May provide information about the arrival, the departure or both.
  * 
@@ -75,6 +74,7 @@ import lombok.ToString;
     "stopFacility",
     "extensions"
 })
+@ToString
 public class MonitoredStopVisit
     extends AbstractIdentifiedItem
 {

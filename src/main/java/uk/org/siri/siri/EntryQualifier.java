@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a referenceUnique identifier of a Situation   within participant.
  * 
@@ -62,6 +61,7 @@ import lombok.ToString;
 @XmlType(name = "EntryQualifierStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "value"
 })
+@ToString
 public class EntryQualifier {
 
     @XmlValue

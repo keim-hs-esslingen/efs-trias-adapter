@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * The charateristics of a vehicle, e.g. lorry of gross weight greater than 30 tonnes.
  * 
@@ -89,6 +88,7 @@ import lombok.ToString;
     "numberOfAxlesCharacteristic",
     "vehicleCharacteristicsExtension"
 })
+@ToString
 public class VehicleCharacteristics {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

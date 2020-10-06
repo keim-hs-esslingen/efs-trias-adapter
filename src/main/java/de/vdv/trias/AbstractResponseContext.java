@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Abstract structure providing response contexts related to journeys.
  * 
@@ -84,6 +83,7 @@ import lombok.ToString;
     StopEventResponseContext.class,
     TripResponseContext.class
 })
+@ToString
 public class AbstractResponseContext {
 
     @XmlElement(name = "Locations", namespace = "http://www.vdv.de/trias")

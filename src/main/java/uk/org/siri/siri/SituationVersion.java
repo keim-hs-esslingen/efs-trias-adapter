@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for version number if entry is update to a previous version. Unique within IncidentNumber. Monotonically increasing within IncidentNumber.  Any values for  classification, description, affects, effects that are present in an update replace any values on previous incidents and updates with the same identifier.  Values that are not updated remain in effect. 
  * 
@@ -62,6 +61,7 @@ import lombok.ToString;
 @XmlType(name = "SituationVersion", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "value"
 })
+@ToString
 public class SituationVersion {
 
     @XmlValue

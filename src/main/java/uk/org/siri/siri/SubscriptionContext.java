@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Subscription context - Configuration parameters which may be evrriden 
  * 
@@ -65,6 +64,7 @@ import lombok.ToString;
 @XmlType(name = "SubscriptionContextStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "heartbeatInterval"
 })
+@ToString
 public class SubscriptionContext {
 
     @XmlElement(name = "HeartbeatInterval", namespace = "http://www.siri.org.uk/siri")

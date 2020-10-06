@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * An area defined by reference to a predefined Alert C location table.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "areaLocation",
     "alertCAreaExtension"
 })
+@ToString
 public class AlertCArea {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0", required = true)

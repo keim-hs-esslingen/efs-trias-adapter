@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
@@ -44,8 +45,6 @@ import uk.org.siri.siri.SituationExchangeSubscription;
 import uk.org.siri.siri.TerminateSubscriptionRequest;
 
 
-import lombok.ToString;
-@ToString
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
@@ -61,6 +60,7 @@ import lombok.ToString;
  * 
  */
 @XmlRegistry
+@ToString
 public class ObjectFactory {
 
     private final static QName _FacilityRequest_QNAME = new QName("http://www.vdv.de/trias", "FacilityRequest");

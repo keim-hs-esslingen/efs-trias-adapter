@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Filter for in/exclusion of lines (and directions).
  * 
@@ -68,6 +67,7 @@ import lombok.ToString;
     "line",
     "exclude"
 })
+@ToString
 public class LineDirectionFilter {
 
     @XmlElement(name = "Line", namespace = "http://www.vdv.de/trias", required = true)

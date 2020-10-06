@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Tyoe for a string in a specified language
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     DefaultedText.class
 })
+@ToString
 public class NaturalLanguageString {
 
     @XmlValue

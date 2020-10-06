@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * The DATEX II logical model comprising exchange, content payload and management sub-models.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "payloadPublication",
     "d2LogicalModelExtension"
 })
+@ToString
 public class D2LogicalModel {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0", required = true)

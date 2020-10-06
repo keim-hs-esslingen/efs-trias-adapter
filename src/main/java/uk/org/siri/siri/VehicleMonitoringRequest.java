@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Service Request Type for Vehicle Monitoring Service
  * 
@@ -79,6 +78,7 @@ import lombok.ToString;
     "vehicleMonitoringDetailLevel",
     "extensions"
 })
+@ToString
 public class VehicleMonitoringRequest
     extends AbstractFunctionalServiceRequest
 {

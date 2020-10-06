@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAnyElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Extensions to schema. Wraps an 'any' tag to ensure decidability.
  * 
@@ -65,6 +64,7 @@ import lombok.ToString;
 @XmlType(name = "ExtensionsStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "any"
 })
+@ToString
 public class Extensions {
 
     @XmlAnyElement(lax = true)

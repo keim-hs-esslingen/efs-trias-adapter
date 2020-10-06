@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Delivery for Production Timetable Service type.
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "datedTimetableVersionFrame",
     "extensions"
 })
+@ToString
 public class ProductionTimetableDelivery
     extends AbstractServiceDelivery
 {

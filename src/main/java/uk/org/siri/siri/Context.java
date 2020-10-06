@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.ifopt.ifopt.CountryRef;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Common parameters for all situations.
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
     "actions",
     "extensions"
 })
+@ToString
 public class Context {
 
     @XmlElement(name = "CountryRef", namespace = "http://www.siri.org.uk/siri")

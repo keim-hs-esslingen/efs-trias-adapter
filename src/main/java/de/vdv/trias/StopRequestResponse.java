@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for StopRequestResponse complex type.
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "requestedStop",
     "estimatedArrivalTime"
 })
+@ToString
 public class StopRequestResponse {
 
     @XmlElement(name = "StopRequestReceived", namespace = "http://www.vdv.de/trias")

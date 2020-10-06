@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Properties of a service combined with a stop sequence interval.
  * 
@@ -77,6 +76,7 @@ import lombok.ToString;
     "routeDescription",
     "via"
 })
+@ToString
 public class ServiceSection {
 
     @XmlElement(name = "FromStopSeqNumber", namespace = "http://www.vdv.de/trias")

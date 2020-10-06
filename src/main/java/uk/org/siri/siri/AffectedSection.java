@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.LinkProjection;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for information about the sectons affected by an Situation
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "offset",
     "extensions"
 })
+@ToString
 public class AffectedSection {
 
     @XmlElement(name = "SectionRef", namespace = "http://www.siri.org.uk/siri")

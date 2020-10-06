@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -52,8 +53,6 @@ import uk.org.siri.siri.TerminateSubscriptionRequest;
 import uk.org.siri.siri.TerminateSubscriptionResponse;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for anonymous complex type.
  * 
@@ -94,6 +93,7 @@ import lombok.ToString;
     "extension"
 })
 @XmlRootElement(name = "Trias", namespace = "http://www.vdv.de/trias")
+@ToString
 public class Trias {
 
     @XmlElement(name = "ServiceRequest", namespace = "http://www.vdv.de/trias")

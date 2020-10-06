@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -43,8 +44,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Abstract supertype fro discovery responses.
  * 
@@ -82,6 +81,7 @@ import lombok.ToString;
     InfoChannelDelivery.class,
     StopPointsDelivery.class
 })
+@ToString
 public class AbstractDiscoveryDelivery
     extends Response
 {

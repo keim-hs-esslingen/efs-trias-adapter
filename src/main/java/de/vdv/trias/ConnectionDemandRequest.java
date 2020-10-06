@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for ConnectionDemandRequest complex type.
  * 
@@ -81,6 +80,7 @@ import lombok.ToString;
     "passengerAccessibilityNeeds",
     "extension"
 })
+@ToString
 public class ConnectionDemandRequest {
 
     @XmlElement(name = "RequestId", namespace = "http://www.vdv.de/trias", required = true)

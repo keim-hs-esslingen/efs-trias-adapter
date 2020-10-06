@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -45,8 +46,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data type for Planned Vehicle Journey Stop (Production Timetable Service).
  * 
@@ -94,6 +93,7 @@ import lombok.ToString;
     "targetedInterchange",
     "extensions"
 })
+@ToString
 public class DatedCall {
 
     @XmlElement(name = "StopPointRef", namespace = "http://www.siri.org.uk/siri", required = true)

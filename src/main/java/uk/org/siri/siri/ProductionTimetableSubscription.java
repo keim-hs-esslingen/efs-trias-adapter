@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -38,8 +39,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Subscription Request for Production Timetable Service.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     ProductionTimetableSubscriptionRequest.class
 })
+@ToString
 public class ProductionTimetableSubscription
     extends AbstractSubscription
 {

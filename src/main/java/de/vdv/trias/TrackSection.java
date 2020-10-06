@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A piece of a trip. A trip leg.may consist of multiple TrackSections. Describes the geographic embedding.
  * 
@@ -91,6 +90,7 @@ import lombok.ToString;
     "length",
     "extension"
 })
+@ToString
 public class TrackSection {
 
     @XmlElement(name = "TrackStart", namespace = "http://www.vdv.de/trias")

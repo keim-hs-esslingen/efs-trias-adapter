@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +41,6 @@ import javax.xml.datatype.Duration;
 import uk.org.siri.siri.SeverityEnumeration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * IPKOM Monitoring parameters
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "acceptThirdPartyInformation",
     "includeAlternatives"
 })
+@ToString
 public class TripMonitoringParam {
 
     @XmlElement(name = "Severity", namespace = "http://www.vdv.de/trias")

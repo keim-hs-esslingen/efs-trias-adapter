@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.siri.siri.ServiceFeatureRef;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for  Local service.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
     "featureRefs",
     "extensions"
 })
+@ToString
 public class LocalService
     extends InstalledEquipment
 {

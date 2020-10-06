@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -56,8 +57,6 @@ import uk.org.siri.siri.SanitaryFacilityEnumeration;
 import uk.org.siri.siri.TicketingFacilityEnumeration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Structured attribute classification with associated text.
  * 
@@ -110,6 +109,7 @@ import lombok.ToString;
 @XmlSeeAlso({
     ServiceAttribute.class
 })
+@ToString
 public class GeneralAttribute {
 
     @XmlElement(name = "Text", namespace = "http://www.vdv.de/trias", required = true)

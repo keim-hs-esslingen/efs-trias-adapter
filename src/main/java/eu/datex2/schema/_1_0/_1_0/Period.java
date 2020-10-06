@@ -31,6 +31,7 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,8 +45,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * A continuous time period or a set of discontinuous time periods defined by the intersection of a set of criteria all within an overall delimiting interval.
  * 
@@ -99,6 +98,7 @@ import lombok.ToString;
     "recurringDayWeekMonthPeriod",
     "periodExtension"
 })
+@ToString
 public class Period {
 
     @XmlElement(namespace = "http://datex2.eu/schema/1_0/1_0")

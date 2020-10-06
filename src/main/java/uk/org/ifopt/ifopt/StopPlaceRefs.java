@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for a  collection of one or more stop refs.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
 @XmlType(name = "StopPlaceRefsStructure", namespace = "http://www.ifopt.org.uk/ifopt", propOrder = {
     "stopPlaceRef"
 })
+@ToString
 public class StopPlaceRefs {
 
     @XmlElement(name = "StopPlaceRef", namespace = "http://www.ifopt.org.uk/ifopt", required = true)

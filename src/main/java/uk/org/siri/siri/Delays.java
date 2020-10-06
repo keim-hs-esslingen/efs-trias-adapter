@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +42,6 @@ import eu.datex2.schema._1_0._1_0.DelayCodeEnum;
 import eu.datex2.schema._1_0._1_0.DelaysTypeEnum;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for easement info.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "delayType",
     "delay"
 })
+@ToString
 public class Delays {
 
     @XmlElement(name = "DelayBand", namespace = "http://www.siri.org.uk/siri")

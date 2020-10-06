@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,6 @@ import uk.org.siri.siri.FacilityMonitoringDelivery;
 import uk.org.siri.siri.SituationExchangeDelivery;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Choice of delivery payload elements.
  * 
@@ -116,6 +115,7 @@ import lombok.ToString;
     "vehicleDataResponse",
     "vehicleInteractionResponse"
 })
+@ToString
 public class DeliveryPayload {
 
     @XmlElement(name = "BookingInfoResponse", namespace = "http://www.vdv.de/trias")

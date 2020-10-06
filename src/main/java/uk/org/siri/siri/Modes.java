@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Data Type for Transport Modes
  * 
@@ -69,6 +68,7 @@ import lombok.ToString;
 @XmlType(name = "ModesStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "mode"
 })
+@ToString
 public class Modes {
 
     @XmlElement(name = "Mode", namespace = "http://www.siri.org.uk/siri", required = true)

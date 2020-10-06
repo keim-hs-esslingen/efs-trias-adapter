@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for VehicleActivity complex type.
  * 
@@ -74,6 +73,7 @@ import lombok.ToString;
     "locationState",
     "nextExitSide"
 })
+@ToString
 public class VehicleActivity {
 
     @XmlElement(name = "TimetableDelay", namespace = "http://www.vdv.de/trias")

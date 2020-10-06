@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -42,8 +43,6 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for Response with Service Features available to make requests.
  * 
@@ -70,6 +69,7 @@ import lombok.ToString;
 @XmlType(name = "ServiceFeaturesDeliveryStructure", namespace = "http://www.siri.org.uk/siri", propOrder = {
     "serviceFeature"
 })
+@ToString
 public class ServiceFeaturesDelivery
     extends AbstractDiscoveryDelivery
 {

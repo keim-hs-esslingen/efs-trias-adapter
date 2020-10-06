@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.time.ZonedDateTime;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,8 +43,6 @@ import javax.xml.datatype.Duration;
 import de.hsesslingen.keim.efs.adapter.trias.jaxb.ZonedDateTimeAdapter;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Same as CheckStatusResponseStructure, but without extension to be consistent with the other operation definition.
  * 
@@ -73,6 +72,7 @@ import lombok.ToString;
     "shortestPossibleCycle",
     "serviceStartedTime"
 })
+@ToString
 public class CheckStatusResponseBody {
 
     @XmlElement(name = "Status", namespace = "http://www.siri.org.uk/siri", defaultValue = "true")

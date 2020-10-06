@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Parameters for fares request.
  * 
@@ -71,6 +70,7 @@ import lombok.ToString;
     "travelClass",
     "traveller"
 })
+@ToString
 public class FaresParam {
 
     @XmlElement(name = "FareAuthorityFilter", namespace = "http://www.vdv.de/trias")

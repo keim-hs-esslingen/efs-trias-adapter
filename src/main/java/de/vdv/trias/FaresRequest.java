@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Fares request structure.
  * 
@@ -76,6 +75,7 @@ import lombok.ToString;
     "params",
     "extension"
 })
+@ToString
 public class FaresRequest {
 
     @XmlElement(name = "StopFaresRequest", namespace = "http://www.vdv.de/trias")

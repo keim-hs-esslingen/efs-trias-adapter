@@ -31,6 +31,7 @@
 
 package uk.org.ifopt.ifopt;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,8 +40,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for collection of info links.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
 @XmlType(name = "InfoLinksStructure", namespace = "http://www.ifopt.org.uk/ifopt", propOrder = {
     "infoLink"
 })
+@ToString
 public class InfoLinks {
 
     @XmlElement(name = "InfoLink", namespace = "http://www.ifopt.org.uk/ifopt", required = true)

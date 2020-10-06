@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,8 +42,6 @@ import uk.org.siri.siri.AbstractServiceDelivery;
 import uk.org.siri.siri.FacilityCondition;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for TripMonitoringDelivery complex type.
  * 
@@ -73,6 +72,7 @@ import lombok.ToString;
     "tripResponse",
     "errorMessage"
 })
+@ToString
 public class TripMonitoringDelivery
     extends AbstractServiceDelivery
 {

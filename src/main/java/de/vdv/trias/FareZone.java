@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Model of a fare zone
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "fareZoneRef",
     "fareZoneText"
 })
+@ToString
 public class FareZone {
 
     @XmlElement(name = "FareZoneRef", namespace = "http://www.vdv.de/trias", required = true)

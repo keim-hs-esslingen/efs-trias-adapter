@@ -31,14 +31,13 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Temporary limits imposed by the network/road operator at a location on the road network which may be advisory or mandatory.
  * 
@@ -66,6 +65,7 @@ import lombok.ToString;
     "temporarySpeedLimit",
     "temporaryLimitsExtension"
 })
+@ToString
 public class TemporaryLimits
     extends TrafficControl
 {

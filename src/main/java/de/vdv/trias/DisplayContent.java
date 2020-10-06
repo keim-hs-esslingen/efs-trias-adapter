@@ -31,6 +31,7 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,8 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 
-import lombok.ToString;
-@ToString
 /**
  * <p>Java class for DisplayContent complex type.
  * 
@@ -72,6 +71,7 @@ import lombok.ToString;
     "periodDuration",
     "duration"
 })
+@ToString
 public class DisplayContent {
 
     @XmlElement(name = "Line", namespace = "http://www.vdv.de/trias")

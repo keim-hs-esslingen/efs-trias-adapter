@@ -31,14 +31,13 @@
 
 package de.vdv.trias;
 
+import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Line and direction.
  * 
@@ -63,6 +62,7 @@ import lombok.ToString;
     "lineRef",
     "directionRef"
 })
+@ToString
 public class LineDirection {
 
     @XmlElement(name = "LineRef", namespace = "http://www.vdv.de/trias", required = true)

@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,8 +42,6 @@ import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.acsb.Suitability;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Type for disruption.
  * 
@@ -100,6 +99,7 @@ import lombok.ToString;
     "easements",
     "extensions"
 })
+@ToString
 public class PtConsequence {
 
     @XmlElement(name = "Period", namespace = "http://www.siri.org.uk/siri")

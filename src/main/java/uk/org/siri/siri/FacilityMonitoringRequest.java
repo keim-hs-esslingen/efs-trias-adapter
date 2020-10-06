@@ -31,6 +31,7 @@
 
 package uk.org.siri.siri;
 
+import lombok.ToString;
 import java.math.BigInteger;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -49,8 +50,6 @@ import uk.org.ifopt.ifopt.StopPlaceComponentRef;
 import uk.org.ifopt.ifopt.StopPlaceRef;
 
 
-import lombok.ToString;
-@ToString
 /**
  * Service Request Type for Facility Monitoring Service
  * 
@@ -94,6 +93,7 @@ import lombok.ToString;
     "maximumNumberOfFacilityConditions",
     "extensions"
 })
+@ToString
 public class FacilityMonitoringRequest
     extends AbstractFunctionalServiceRequest
 {
