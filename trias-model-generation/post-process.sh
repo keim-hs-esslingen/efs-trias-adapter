@@ -35,8 +35,8 @@ CLASSPAT="[a-zA-Z_0-9\.]+" # Classname Pattern
 EOLPAT="([ {]*)\\\$?"
 
 processFile(){
-    srcfile=$1
-    licensefile=$SDIR/licenseheader.txt
+    SRCFILE=$1
+    LICENSEFILE=$SDIR/licenseheader.txt
 
     # Get the current year
     YEAR=$(date +%Y)
@@ -47,9 +47,9 @@ processFile(){
     # 3. Remove the generation timestamp created by the xjc command.
     # 4. Overwrite the source code file with the new content.
 
-    cat "$licensefile" "$srcfile" | sed -e "0,/yyyy/ {s/yyyy/$YEAR/}" -e '\_// Generated on: [0-9\.]* at [0-9:]* .*$_ d' | sponge "$srcfile"
+    cat "$LICENSEFILE" "$SRCFILE" | sed -e "0,/yyyy/ {s/yyyy/$YEAR/}" -e '\_// Generated on: [0-9\.]* at [0-9:]* .*$_ d' | sponge "$SRCFILE"
 
-    local CLASSNAME=$(echo $(basename "$srcfile") | sed -E -e "s/(Structure)?.java//")
+    local CLASSNAME=$(echo $(basename "$SRCFILE") | sed -E -e "s/(Structure)?.java//")
 
     sed -i -E -e "s/import ($CLASSPAT)Structure/import \1/" \
         -e "s/public class ($CLASSPAT)Structure$EOLPAT/public class \1\2/" \
@@ -58,30 +58,41 @@ processFile(){
         -e "s/ extends ($CLASSPAT)Structure$EOLPAT/ extends \1\2/" \
         -e "s/ implements ($CLASSPAT)Structure$EOLPAT/ implements \1\2/" \
         -e "s/([ \(<])($CLASSPAT)Structure([ \(\)>\.])/\1\2\3/g" \
-        "$srcfile"
+        "$SRCFILE"
 
     perl -0777 -pi \
         -e "s/    public void set($IDENTIFIER)\(($IDENTIFIER) value\) \{\n([^=]+)= value\;\n    \}/    public $CLASSNAME set\1(\2 value) {\n\3= value\;\n        return this\;\n    }/g" \
-        "$srcfile"
+        "$SRCFILE"
     
     perl -0777 -pi \
-        -e "s/\/\*\*/import lombok.ToString;\n\@ToString\n\/**/" \
-        "$srcfile"
+        -e "s/package ([^;]+);(\s+)/package \1;\2import lombok.ToString;\n/;s/\)(\s+)public /)\1\@ToString\npublic /" \
+        "$SRCFILE"
+}
 
-    if [[ "$srcfile" =~ "Structure.java" ]]; then
-        local NEWNAME=$(echo "$srcfile" | sed -e "s/Structure\.java/.java/")
-        log "[$YELLOW Renaming $NONE]: $RED$(basename $srcfile)$NONE to $GREEN$(basename $NEWNAME)$NONE"
-        mv "$srcfile" "$NEWNAME"
+renameFile(){
+    SRCFILE=$1
+
+    if [[ "$SRCFILE" =~ "Structure.java" ]]; then
+        local NEWNAME=$(echo "$SRCFILE" | sed -e "s/Structure\.java/.java/")
+        log "[$YELLOW Renaming $NONE]: $RED$(basename $SRCFILE)$NONE to $GREEN$(basename $NEWNAME)$NONE"
+        mv "$SRCFILE" "$NEWNAME"
     fi
 }
 
-
-log "[$GREEN General $NONE]: Adding licenseheaders and removing generation timestamps..."
+log "[$GREEN General $NONE]: Processing transformations for each Java file..."
 
 # Call general processFile function for each file once.
 find "$TARGET_DIR" -name '*.java' -print0 | 
-    while IFS= read -r -d '' line; do 
-        processFile "$line"
+    while IFS= read -r -d '' LINE; do 
+        processFile "$LINE"
+    done
+
+log "[$GREEN General $NONE]: Renaming files with refactored class names..."
+
+# Rename all refactored files
+find "$TARGET_DIR" -name '*.java' -print0 | 
+    while IFS= read -r -d '' LINE; do 
+        renameFile "$LINE"
     done
 
 # Make replacements in various files
@@ -89,6 +100,9 @@ replace(){
     log "[$YELLOW Replacing $NONE]: \"$RED$2$NONE\" with \"$GREEN$3$NONE\" in file $PURPLE$1$NONE"
     sed -i -e "s/$2/$3/g" $1
 }
+
+
+log "[$GREEN General $NONE]: Doing some final replacements..."
 
 # Some reusable variables for convenience:
 VDV="$TARGET_DIR/de/vdv/trias"
