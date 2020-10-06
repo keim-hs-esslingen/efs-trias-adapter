@@ -44,7 +44,6 @@ import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationRefFactory
 import de.hsesslingen.keim.efs.adapter.trias.factories.PlaceFactory;
 import de.hsesslingen.keim.efs.middleware.provider.IPlacesService;
 import de.vdv.trias.InitialLocationInput;
-import de.vdv.trias.Location;
 import de.vdv.trias.LocationInformationRequest;
 import de.vdv.trias.LocationInformationResponse;
 import de.vdv.trias.LocationParam;
@@ -72,9 +71,6 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
 
     @Value("${trias.defaults.place-search-radius-meter:500}")
     private int defaultSearchRadius;
-
-    @Value("${trias.icon-urls.default-stop-place:}")
-    private String stopPlaceIconUrl;
 
     @Autowired
     private TriasRequestFactory requestFactory;
@@ -117,12 +113,6 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
 
     private <R> Future<R> asyncFuture(Callable<R> callable) {
         return executor.submit(callable);
-    }
-
-    private Place convertLocationToPlace(Location location) {
-        var place = PlaceFactory.fromLocation(location);
-        place.setIconUrl(stopPlaceIconUrl);
-        return place;
     }
 
     private GeoRestrictions createCircleGeoRestrictions(ICoordinates circleCenter, Integer radiusMeter) {
@@ -175,7 +165,7 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
                 .map(result -> result.getLocation())
                 .filter(location -> location != null)
                 // Convert location result to place...
-                .map(location -> convertLocationToPlace(location))
+                .map(location -> PlaceFactory.fromLocation(location))
                 .collect(Collectors.toList());
 
         return places;
@@ -194,7 +184,7 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
 
         var result = nullsafe(() -> response.getServiceDelivery().getDeliveryPayload().getLocationInformationResponse().getLocationResult().get(0));
 
-        logger.debug("Received location information for location ref:\nLocationRef: {}\nLocationResult: {}", reference, result);
+        logger.trace("Received location information for location ref:\n{}\n{}", reference, result);
 
         return result;
     }

@@ -63,7 +63,7 @@ public class TriasHttpRequest {
         }
     }
 
-    private Request<String> request;
+    private Request<byte[]> request;
 
     public TriasHttpRequest(HttpMethod method, String uri) {
         this.request = new Request(method, uri);
@@ -283,14 +283,19 @@ public class TriasHttpRequest {
         // Configure request...
         request.body(requestXml);
         request.contentType(CONTENT_TYPE);
-        request.expect(String.class);
+        request.expect(byte[].class);
 
         // Send it...
-        ResponseEntity<String> response = request.go();
+        ResponseEntity<byte[]> response = request.go();
 
-        // Deserialize response...
-        String xml = response.getBody();
-        Trias trias = (Trias) jaxbContext.createUnmarshaller().unmarshal(new StringReader(xml));
+        // Extract raw bytes...
+        byte[] bytes = response.getBody();
+
+        // Convert to string with UTF-8 encoding...
+        var xml = new String(bytes, Charset.forName("UTF-8"));
+
+        // Deserialize xml string...
+        var trias = (Trias) jaxbContext.createUnmarshaller().unmarshal(new StringReader(xml));
 
         // Build adapted response object...
         return ResponseEntity.status(response.getStatusCode()).body(trias);

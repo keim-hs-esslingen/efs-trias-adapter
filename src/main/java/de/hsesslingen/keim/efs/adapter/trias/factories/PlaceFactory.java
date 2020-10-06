@@ -149,8 +149,14 @@ public class PlaceFactory {
             place = new Place();
         }
 
-        if (isBlank(place.getName()) && value.getLocationName() != null && !value.getLocationName().isEmpty()) {
-            place.setName(value.getLocationName().get(0).getText());
+        if (value.getLocationName() != null && !value.getLocationName().isEmpty()) {
+            var locationName = value.getLocationName().get(0).getText();
+            
+            if (isBlank(place.getName())) {
+                place.setName(locationName);
+            } else {
+                place.setParentName(locationName);
+            }
         }
 
         if (value.getGeoPosition() != null) {
