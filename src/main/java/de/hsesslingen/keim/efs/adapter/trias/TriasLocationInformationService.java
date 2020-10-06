@@ -40,12 +40,24 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import static de.hsesslingen.keim.efs.adapter.trias.Utils.nullsafe;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory.byInitialInput;
+import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationRefFactory.fromLocation;
+import de.hsesslingen.keim.efs.adapter.trias.factories.PlaceFactory;
 import de.hsesslingen.keim.efs.middleware.provider.IPlacesService;
 import de.vdv.trias.InitialLocationInput;
+import de.vdv.trias.Location;
+import de.vdv.trias.LocationInformationRequest;
 import de.vdv.trias.LocationInformationResponse;
 import de.vdv.trias.LocationParam;
+import de.vdv.trias.LocationRef;
 import de.vdv.trias.LocationResult;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Future;
 import java.util.stream.Stream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * The class TriasLocationInformationService is a Service to covert public
@@ -55,6 +67,8 @@ import java.util.stream.Stream;
  */
 @Service
 public class TriasLocationInformationService implements IPlacesService<TriasCredentials> {
+
+    private static final Logger logger = LoggerFactory.getLogger(TriasLocationInformationService.class);
 
     @Value("${trias.defaults.place-search-radius-meter:500}")
     private int defaultSearchRadius;
@@ -67,6 +81,10 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
 
     @Autowired
     private TriasProxy proxy;
+
+    @Autowired
+    @Qualifier("trias-parallel-request-thread-pool")
+    private ExecutorService executor;
 
     /**
      * In the Method getGeoPositionFromStopPoint a API - call is performed to
@@ -97,48 +115,83 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
         return null;
     }
 
-    @Override
-    public List<Place> search(String query, ICoordinates areaCenter, Integer radiusMeter, TriasCredentials credentials) {
+    private <R> Future<R> asyncFuture(Callable<R> callable) {
+        return executor.submit(callable);
+    }
 
+    private Place convertLocationToPlace(Location location) {
+        var place = PlaceFactory.fromLocation(location);
+        place.setIconUrl(stopPlaceIconUrl);
+        return place;
+    }
+
+    private GeoRestrictions createCircleGeoRestrictions(ICoordinates circleCenter, Integer radiusMeter) {
         GeoRestrictions restrictions = null;
 
-        if (areaCenter != null) {
+        if (circleCenter != null) {
             var radius = radiusMeter != null ? radiusMeter : defaultSearchRadius;
 
             var circle = new GeoCircle();
-            circle.setCenter(GeoPositionFactory.create(areaCenter));
+            circle.setCenter(GeoPositionFactory.create(circleCenter));
             circle.setRadius(BigInteger.valueOf(radius));
 
-            restrictions = new GeoRestrictions();
-            restrictions.setCircle(circle);
+            restrictions = new GeoRestrictions().setCircle(circle);
         }
 
-        // Query TRIAS api for some initial results...
-        var results = queryInitialLocationInformation(query, null, restrictions, 2)
-                .limit(5)
+        return restrictions;
+    }
+
+    @Override
+    public List<Place> search(String query, ICoordinates areaCenter, Integer radiusMeter, TriasCredentials credentials) {
+
+        GeoRestrictions restrictions = createCircleGeoRestrictions(areaCenter, radiusMeter);
+
+        // Query TRIAS api for location information:
+        // First we need to query it for some initial input based on a search string...
+        var futures = queryInitialLocationInformation(query, null, restrictions, 2)
+                // The initial results do not contain much information.
+                // Therefore we request more information about each of the result locations.
+                // We do this in asynchronously so the source stream does not wait for the results
+                // to be retrieved from the API but keeps asking for more initial results if necessary.
+                // 
+                // The following map function returns a future that is collected in a list.
+                // In a second stream, these futures are resolved using the get() method.
+                .map(result -> asyncFuture(() -> getLocationInformation(fromLocation(result.getLocation()), null)))
                 .collect(Collectors.toList());
 
-        var places = results.stream()
-                .map(locRes -> locRes.getLocation())
-                .filter(location -> location != null)
-                .map(location -> {
-                    var place = new Place();
-
-                    place.setCoordinates(location.getGeoPosition());
-
-                    // StopPlace represent the stop location in general.
-                    place.setName(nullsafe(() -> location.getStopPlace().getStopPlaceName().get(0).getText()));
-                    place.setPlaceId(nullsafe(() -> location.getStopPlace().getStopPlaceRef().getValue()));
-                    // StopPoint represents the exact stop point at the location, e.g. at which platform the train departs.
-                    place.setStopId(nullsafe(() -> location.getStopPoint().getStopPointRef().getValue()));
-
-                    place.setIconUrl(stopPlaceIconUrl);
-
-                    return place;
+        // Resolve futures with more information about result locations.
+        // The resolved results are covnerted to places on the fly.
+        var places = futures.stream()
+                .map(future -> {
+                    try {
+                        return future.get();
+                    } catch (InterruptedException | ExecutionException ex) {
+                        return null;
+                    }
                 })
+                // Filter null values due to exceptions in previous map function...
+                .filter(result -> result != null)
+                // Map to contained object and filter again for null results...
+                .map(result -> result.getLocation())
+                .filter(location -> location != null)
+                // Convert location result to place...
+                .map(location -> convertLocationToPlace(location))
                 .collect(Collectors.toList());
 
         return places;
+    }
+
+    private LocationResult getLocationInformation(LocationRef reference, LocationParam restrictions) {
+        var request = requestFactory.newTriasServiceRequest()
+                .locationInformationRequest(
+                        new LocationInformationRequest()
+                                .setLocationRef(reference)
+                                .setRestrictions(restrictions)
+                );
+
+        var response = proxy.send(request);
+
+        return nullsafe(() -> response.getServiceDelivery().getDeliveryPayload().getLocationInformationResponse().getLocationResult().get(0));
     }
 
     /**
@@ -155,6 +208,8 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
     private Stream<LocationInformationResponse> initialLocationInformationStream(
             String searchText, GeoPosition geoPos, GeoRestrictions restrictions
     ) {
+        logger.debug("Requesting initial location information for search text \"{}\".", searchText);
+
         var initialInput = new InitialLocationInput();
 
         initialInput.setLocationName(searchText);
@@ -166,7 +221,7 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
         var request = requestFactory.newTriasServiceRequest()
                 .locationInformationRequest(byInitialInput(initialInput, params));
 
-        var requests = new ContinuingTriasRequests(proxy, request,
+        var requests = new ContinuousTriasRequests(proxy, request,
                 previousResponse -> {
                     var continueAtValue = nullsafe(()
                             -> previousResponse.getServiceDelivery()
@@ -184,7 +239,7 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
                 }
         );
 
-        return requests.stream()
+        var stream = requests.stream()
                 .map(response -> nullsafe(()
                 -> response
                         .getServiceDelivery()
@@ -192,6 +247,31 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
                         .getLocationInformationResponse())
                 )
                 .filter(value -> value != null);
+
+        // Log some debug stuff if enabled...
+        if (logger.isDebugEnabled()) {
+            stream = stream.peek(response -> {
+                var locRes = response.getLocationResult();
+
+                if (locRes == null) {
+                    if (response.getErrorMessage() != null && !response.getErrorMessage().isEmpty()) {
+                        final var error = response.getErrorMessage().get(0);
+                        logger.debug("Received a null list as result for search text \"{}\" with continueAt={}. Error={}",
+                                searchText, response.getContinueAt(),
+                                // Get potential error safely...
+                                nullsafe(() -> error.getText().get(0).getText()));
+                    } else {
+                        logger.debug("Received a null list as result for search text \"{}\" with continueAt={}. No error provided.",
+                                searchText, response.getContinueAt());
+                    }
+                } else {
+                    logger.debug("Received {} initial location information results for search text \"{}\" with continueAt={}.",
+                            locRes.size(), searchText, response.getContinueAt());
+                }
+            });
+        }
+
+        return stream;
     }
 
     /**

@@ -23,7 +23,7 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias;
 
-import de.hsesslingen.keim.efs.adapter.trias.TriasResponseFactory;
+import de.hsesslingen.keim.efs.adapter.trias.TriasResponseConverter;
 import de.hsesslingen.keim.efs.middleware.model.Leg;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
 import java.util.List;
@@ -61,7 +61,7 @@ public class TriasResponseFactoryTest {
 
     @Test
     public void test_getLastNonWalkLeg() {
-        var factory = new TriasResponseFactory();
+        var factory = new TriasResponseConverter();
 
         // Test 1
         var expected = new Leg().setMode(Mode.BUS);

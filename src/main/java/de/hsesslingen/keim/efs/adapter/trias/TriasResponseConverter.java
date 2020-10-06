@@ -69,9 +69,9 @@ import org.slf4j.LoggerFactory;
  * @author Ben Oesch and Emanuel Reichsöllner
  */
 @Component
-public class TriasResponseFactory {
+public class TriasResponseConverter {
 
-    private static final Logger logger = LoggerFactory.getLogger(TriasResponseFactory.class);
+    private static final Logger logger = LoggerFactory.getLogger(TriasResponseConverter.class);
 
     @Value("${middleware.provider.mobility-service.id}")
     private String serviceId;

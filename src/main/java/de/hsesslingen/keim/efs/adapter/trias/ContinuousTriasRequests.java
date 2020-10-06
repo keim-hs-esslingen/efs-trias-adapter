@@ -35,7 +35,7 @@ import java.util.stream.StreamSupport;
  *
  * @author keim
  */
-public class ContinuingTriasRequests {
+public class ContinuousTriasRequests {
 
     private TriasProxy proxy;
     private Trias request;
@@ -45,7 +45,7 @@ public class ContinuingTriasRequests {
     private boolean hasNext = true;
     private ContinuingTriasSpliterator spliterator = new ContinuingTriasSpliterator();
 
-    public ContinuingTriasRequests(TriasProxy proxy, Trias request, Function<Trias, Boolean> prepareNext) {
+    public ContinuousTriasRequests(TriasProxy proxy, Trias request, Function<Trias, Boolean> prepareNext) {
         this.proxy = proxy;
         this.request = request;
         this.prepareNext = prepareNext;

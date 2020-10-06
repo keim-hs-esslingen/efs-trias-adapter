@@ -25,11 +25,12 @@ package de.hsesslingen.keim.efs.adapter.trias;
 
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
-import de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextBuilder;
 import de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory;
+import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationRefFactory.fromPlace;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TripParamBuilder;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TripRequestBuilder;
+import de.vdv.trias.LocationContext;
 import de.vdv.trias.StopPointRef;
 import de.vdv.trias.Trias;
 import de.vdv.trias.TripRequest;
@@ -94,14 +95,12 @@ public class TriasRequestFactory {
 
     public TripRequest createTripRequestPayload(Place from, Place to, ZonedDateTime startTime, ZonedDateTime endTime) {
         return new TripRequestBuilder()
-                .origin(new LocationContextBuilder()
-                        .place(from)
-                        .depArrTime(startTime)
-                        .build())
-                .destination(new LocationContextBuilder()
-                        .place(to)
-                        .depArrTime(endTime)
-                        .build())
+                .origin(new LocationContext()
+                        .setLocationRef(fromPlace(from))
+                        .setDepArrTime(startTime))
+                .destination(new LocationContext()
+                        .setLocationRef(fromPlace(to))
+                        .setDepArrTime(endTime))
                 .params(new TripParamBuilder()
                         .ptModeFilterByExclude(true)
                         .includeFares(true)
@@ -118,7 +117,6 @@ public class TriasRequestFactory {
         return new TriasServiceRequest(triasVersion, apiUserReference)
                 .tripRequest(createTripRequestPayload(from, to, startTime, endTime));
     }
-
 
     public Trias createLocationInformationRequest(StopPointRef stopPointRef) {
         return newTriasServiceRequest().locationInformationRequest(

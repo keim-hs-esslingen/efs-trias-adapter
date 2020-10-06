@@ -61,10 +61,10 @@ public class TriasAdapterService implements IOptionsService<TriasCredentials>, I
     private String API_URL;
 
     @Autowired
-    private TriasRequestFactory triasRequestFactory;
+    private TriasRequestFactory requestFactory;
 
     @Autowired
-    private TriasResponseFactory triasResponseFactory;
+    private TriasResponseConverter responseConverter;
 
     @Override
     public List<Options> getOptions(Place from, ZonedDateTime startTime, TriasCredentials credentials) throws AbstractEfsException {
@@ -80,7 +80,7 @@ public class TriasAdapterService implements IOptionsService<TriasCredentials>, I
             return new ArrayList<>();
         }
 
-        var requestTrias = triasRequestFactory.createTripRequest(from, to, startTime, endTime);
+        var requestTrias = requestFactory.createTripRequest(from, to, startTime, endTime);
 
         Trias responseTrias;
 
@@ -102,7 +102,7 @@ public class TriasAdapterService implements IOptionsService<TriasCredentials>, I
             System.out.println("\n\nReqeust took " + nanos + " nanos or " + seconds + " seconds.\n\n");
         }
 
-        return triasResponseFactory.extractMobilityOptionsFromTrias(responseTrias);
+        return responseConverter.extractMobilityOptionsFromTrias(responseTrias);
     }
 
     @Override

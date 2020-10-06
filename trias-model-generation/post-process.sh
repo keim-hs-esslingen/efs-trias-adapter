@@ -60,8 +60,13 @@ processFile(){
         -e "s/([ \(<])($CLASSPAT)Structure([ \(\)>\.])/\1\2\3/g" \
         "$srcfile"
 
-    perl -0777 -pi -e "s/    public void set($IDENTIFIER)\(($IDENTIFIER) value\) \{\n([^=]+)= value\;\n    \}/    public $CLASSNAME set\1(\2 value) {\n\3= value\;\n        return this\;\n    }/g" "$srcfile"
-        
+    perl -0777 -pi \
+        -e "s/    public void set($IDENTIFIER)\(($IDENTIFIER) value\) \{\n([^=]+)= value\;\n    \}/    public $CLASSNAME set\1(\2 value) {\n\3= value\;\n        return this\;\n    }/g" \
+        "$srcfile"
+    
+    perl -0777 -pi \
+        -e "s/\;([\s\n]+\/\*\*.*\*\/\s*)\n/\;\nimport lombok.ToString\;\n\1@ToString\n/" \
+        "$srcfile"
 
     if [[ "$srcfile" =~ "Structure.java" ]]; then
         local NEWNAME=$(echo "$srcfile" | sed -e "s/Structure\.java/.java/")
