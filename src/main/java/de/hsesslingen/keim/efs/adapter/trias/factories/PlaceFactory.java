@@ -30,7 +30,7 @@ import de.vdv.trias.Location;
 import de.vdv.trias.PointOfInterest;
 import de.vdv.trias.StopPlace;
 import de.vdv.trias.StopPoint;
-import static org.apache.commons.lang.StringUtils.isBlank;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 /**
  *
