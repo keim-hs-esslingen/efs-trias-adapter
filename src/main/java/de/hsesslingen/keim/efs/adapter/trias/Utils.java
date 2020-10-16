@@ -47,7 +47,7 @@ public class Utils {
         try {
             return getter.get();
         } catch (NullPointerException ex) {
-            logger.debug("Caught null pointer exception in nullsafe(...): %s", ex.getMessage());
+            logger.debug("Caught null pointer exception in nullsafe(...): {}", ex.getMessage());
             return null;
         }
     }
