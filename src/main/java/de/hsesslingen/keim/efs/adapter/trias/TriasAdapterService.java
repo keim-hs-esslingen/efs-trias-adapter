@@ -67,11 +67,6 @@ public class TriasAdapterService implements IOptionsService<TriasCredentials>, I
     private TriasResponseConverter responseConverter;
 
     @Override
-    public List<Options> getOptions(Place from, ZonedDateTime startTime, TriasCredentials credentials) throws AbstractEfsException {
-        return getOptions(from, null, startTime, null, DEFAULT_MAX_RADIUS_METERS, false, credentials);
-    }
-
-    @Override
     public List<Options> getOptions(Place from, Place to, ZonedDateTime startTime, ZonedDateTime endTime,
             Integer radiusMeter, Boolean sharingAllowed, TriasCredentials credentials) throws AbstractEfsException {
 
