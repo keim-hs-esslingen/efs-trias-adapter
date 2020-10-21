@@ -24,10 +24,6 @@
 package de.hsesslingen.keim.efs.adapter.trias;
 
 import de.hsesslingen.keim.efs.middleware.provider.IBookingService;
-import de.hsesslingen.keim.efs.middleware.model.Booking;
-import de.hsesslingen.keim.efs.middleware.model.BookingAction;
-import de.hsesslingen.keim.efs.middleware.model.BookingState;
-import de.hsesslingen.keim.efs.middleware.model.NewBooking;
 import de.hsesslingen.keim.efs.middleware.model.Options;
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.provider.IOptionsService;
@@ -40,7 +36,6 @@ import java.util.List;
 import javax.xml.bind.JAXBException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.stereotype.Service;
 
 /**
@@ -51,10 +46,7 @@ import org.springframework.stereotype.Service;
  * @see IBookingService
  */
 @Service
-@ConditionalOnMissingBean(IBookingService.class)
-public class TriasAdapterService implements IOptionsService<TriasCredentials>, IBookingService<TriasCredentials> {
-
-    private static final int DEFAULT_MAX_RADIUS_METERS = 500;
+public class TriasOptionsService implements IOptionsService<TriasCredentials> {
 
     // get the custom settings from application.yml
     @Value("${trias.api-url}")
@@ -98,32 +90,6 @@ public class TriasAdapterService implements IOptionsService<TriasCredentials>, I
         }
 
         return responseConverter.extractMobilityOptionsFromTrias(responseTrias);
-    }
-
-    @Override
-    public List<Booking> getBookings(BookingState state, TriasCredentials credentials) throws AbstractEfsException {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Booking createNewBooking(NewBooking newBooking, TriasCredentials credentials) throws AbstractEfsException {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Booking getBookingById(String id, TriasCredentials credentials) throws AbstractEfsException {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Booking modifyBooking(String id, Booking booking,
-            TriasCredentials credentials) throws AbstractEfsException {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void performAction(String bookingId, BookingAction action, String assetId, String secret, String more, TriasCredentials credentials) {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }
