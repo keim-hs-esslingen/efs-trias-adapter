@@ -54,12 +54,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import de.hsesslingen.keim.efs.adapter.trias.supertypes.ILegEnd;
+import de.vdv.trias.ContinuousModesEnumeration;
 import de.vdv.trias.IndividualModesEnumeration;
+import de.vdv.trias.InterchangeModesEnumeration;
 import de.vdv.trias.TripLeg;
 import de.vdv.trias.TripResult;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.stream.Collectors;
+import static java.util.stream.Collectors.toList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -311,8 +313,8 @@ public class TriasResponseConverter {
 
     /**
      * if the MobilityOption contains more than one Leg with different
-     * TravelModes we assign the TravelMode of the Leg with the longest
-     * Distance as MainMode
+     * TravelModes we assign the TravelMode of the Leg with the longest Distance
+     * as MainMode
      *
      * @param legs
      * @return
@@ -335,6 +337,37 @@ public class TriasResponseConverter {
         return mainMode;
     }
 
+    public boolean canConvertTripResultToOption(TripResult tripResult) {
+        // Check if any of the contained legs is NOT a walk leg.
+        return tripResult.getTrip().getTripLeg().stream().anyMatch(l -> {
+            if (l.getContinuousLeg() != null) {
+                var service = l.getContinuousLeg().getService();
+
+                if (service.getIndividualMode() != null
+                        && service.getIndividualMode() == IndividualModesEnumeration.WALK) {
+                    return false;
+                } else if (service.getContinuousMode() != null
+                        && service.getContinuousMode() == ContinuousModesEnumeration.WALK) {
+                    return false;
+                }
+            }
+
+            if (l.getInterchangeLeg() != null) {
+                var leg = l.getInterchangeLeg();
+
+                if (leg.getInterchangeMode() != null
+                        && leg.getInterchangeMode() == InterchangeModesEnumeration.WALK) {
+                    return false;
+                } else if (leg.getContinuousMode() != null
+                        && leg.getContinuousMode() == ContinuousModesEnumeration.WALK) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+    }
+
     /**
      * Each trip result from TRIAS represents an Option from EFS
      *
@@ -350,11 +383,10 @@ public class TriasResponseConverter {
         var meta = new TypeOfAsset();
 
         // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
-        var legs = tripResult.getTrip().getTripLeg()
-                .parallelStream()
+        var legs = tripResult.getTrip().getTripLeg().stream()
                 .map(this::createLegFromTripLeg)
                 .filter(leg -> leg != null)
-                .collect(Collectors.toList());
+                .collect(toList());
 
         if (!legs.isEmpty()) {
             // Get the first leg that is not WALK:
@@ -412,16 +444,23 @@ public class TriasResponseConverter {
         return option;
     }
 
-    public List<Options> extractMobilityOptionsFromTrias(Trias responseTrias) {
+    public List<Options> extractMobilityOptionsFromTrias(Trias responseTrias, Integer limitTo) {
         // Convert the trip results in parallel to options...
-        return responseTrias.getServiceDelivery()
+        var stream = responseTrias.getServiceDelivery()
                 .getDeliveryPayload()
                 .getTripResponse()
                 .getTripResult()
-                .parallelStream()
-                .map(this::createOptionFromTripResult)
+                .stream()
+                .filter(this::canConvertTripResultToOption);
+
+        // If required, limit to given value.
+        if (limitTo != null) {
+            stream = stream.limit(limitTo);
+        }
+
+        return stream.map(this::createOptionFromTripResult)
                 .filter(opt -> opt != null)
-                .collect(Collectors.toList());
+                .collect(toList());
     }
 
 }

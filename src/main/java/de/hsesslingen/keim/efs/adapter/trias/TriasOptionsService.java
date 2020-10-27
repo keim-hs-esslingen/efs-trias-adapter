@@ -27,12 +27,14 @@ import de.hsesslingen.keim.efs.middleware.provider.IBookingService;
 import de.hsesslingen.keim.efs.middleware.model.Options;
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.provider.IOptionsService;
-import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
+import de.hsesslingen.keim.efs.mobility.service.MobilityType;
+import de.hsesslingen.keim.efs.mobility.service.Mode;
 import de.vdv.trias.Trias;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import javax.xml.bind.JAXBException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -59,10 +61,20 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
     private TriasResponseConverter responseConverter;
 
     @Override
-    public List<Options> getOptions(Place from, Place to, ZonedDateTime startTime, ZonedDateTime endTime,
-            Integer radiusMeter, Boolean sharingAllowed, TriasCredentials credentials) throws AbstractEfsException {
+    public List<Options> getOptions(
+            Place from,
+            Place to,
+            ZonedDateTime startTime,
+            ZonedDateTime endTime,
+            Integer radiusMeter,
+            Boolean sharingAllowed,
+            Set<Mode> modesAllowed,
+            Set<MobilityType> mobilityTypesAllowed,
+            Integer limitTo,
+            TriasCredentials credentials
+    ) {
 
-        // if no destination is specified an empty Optionslist is returned
+        // if no destination is specified an empty options-list is returned
         if (to == null) {
             return new ArrayList<>();
         }
@@ -71,8 +83,6 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
 
         Trias responseTrias;
 
-        long start = System.nanoTime();
-
         try {
             responseTrias = TriasHttpRequest.post(API_URL)
                     .body(requestTrias)
@@ -80,16 +90,9 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
                     .getBody();
         } catch (JAXBException ex) {
             throw internalServerError("An error occured when converting to or from XML.");
-        } finally {
-            long end = System.nanoTime();
+        } 
 
-            long nanos = end - start;
-            double seconds = nanos / 1000000000d;
-
-            System.out.println("\n\nReqeust took " + nanos + " nanos or " + seconds + " seconds.\n\n");
-        }
-
-        return responseConverter.extractMobilityOptionsFromTrias(responseTrias);
+        return responseConverter.extractMobilityOptionsFromTrias(responseTrias, limitTo);
     }
 
 }
