@@ -25,7 +25,7 @@ package de.hsesslingen.keim.efs.adapter.trias;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.hsesslingen.keim.efs.middleware.model.Leg;
-import de.hsesslingen.keim.efs.middleware.model.Options;
+import de.hsesslingen.keim.efs.middleware.model.Option;
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.model.TypeOfAsset;
 import de.hsesslingen.keim.efs.mobility.exception.HttpException;
@@ -374,7 +374,7 @@ public class TriasResponseConverter {
      * @param tripResult
      * @return
      */
-    private Options createOptionFromTripResult(TripResult tripResult) {
+    private Option createOptionFromTripResult(TripResult tripResult) {
 
         // each option can store just one LegBaseItem
         var mainLeg = new Leg();
@@ -404,7 +404,7 @@ public class TriasResponseConverter {
             // Get the last leg that is not WALK:
             var last = getLastNonWalkLeg(legs);
 
-            // since the efsMaas  Options- Object can contain just one MainLeg (LegBaseItem) a workaround is done here 
+            // since the efsMaas  Option- Object can contain just one MainLeg (LegBaseItem) a workaround is done here 
             //assign the StartTime and OriginPlace of the first Leg to the legBaseItem
             mainLeg.setStartTime(first.getStartTime());
             mainLeg.setFrom(first.getFrom());
@@ -413,7 +413,7 @@ public class TriasResponseConverter {
             mainLeg.setEndTime(last.getEndTime());
             mainLeg.setTo(last.getTo());
 
-            // now we are facing a problem here: the efsMaas  Options- Object can contain just one MainLeg (LegBaseItem) so a workaround has to be done here.
+            // now we are facing a problem here: the efsMaas  Option- Object can contain just one MainLeg (LegBaseItem) so a workaround has to be done here.
             // first we have to decide which Travel Mode should be displayed as the Main- Travelmode.
             // we call the Method assignMainMode() which assigns from several Legs the Mode of the Leg with the longest Distance as MainMode
             Mode mainMode = assignMainMode(legs);
@@ -421,7 +421,7 @@ public class TriasResponseConverter {
             meta.setMode(mainMode);
             mainLeg.setMode(mainMode);
 
-            // for the detailed Leg Information for the intermediate Legs we use a Sub Json which we store in the field Options-Meta-other
+            // for the detailed Leg Information for the intermediate Legs we use a Sub Json which we store in the field Option-Meta-other
             // we assign "[]" that in case of an Mapping error, at least an empty JSON is returned here
             String optionsAsJsonString = "[]";
 
@@ -438,13 +438,13 @@ public class TriasResponseConverter {
             logger.trace("Sub-Legs: " + optionsAsJsonString);
         }
 
-        var option = new Options();
+        var option = new Option();
         option.setLeg(mainLeg);
         option.setMeta(meta);
         return option;
     }
 
-    public List<Options> extractMobilityOptionsFromTrias(Trias responseTrias, Integer limitTo) {
+    public List<Option> extractMobilityOptionsFromTrias(Trias responseTrias, Integer limitTo) {
         // Convert the trip results in parallel to options...
         var stream = responseTrias.getServiceDelivery()
                 .getDeliveryPayload()

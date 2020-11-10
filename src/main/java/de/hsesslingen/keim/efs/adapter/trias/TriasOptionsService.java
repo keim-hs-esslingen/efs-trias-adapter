@@ -24,7 +24,7 @@
 package de.hsesslingen.keim.efs.adapter.trias;
 
 import de.hsesslingen.keim.efs.middleware.provider.IBookingService;
-import de.hsesslingen.keim.efs.middleware.model.Options;
+import de.hsesslingen.keim.efs.middleware.model.Option;
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.provider.IOptionsService;
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
@@ -61,7 +61,7 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
     private TriasResponseConverter responseConverter;
 
     @Override
-    public List<Options> getOptions(
+    public List<Option> getOptions(
             Place from,
             Place to,
             ZonedDateTime startTime,
