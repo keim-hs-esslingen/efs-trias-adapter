@@ -63,6 +63,7 @@ import java.util.concurrent.ExecutionException;
 import static java.util.stream.Collectors.toList;
 import org.slf4j.Logger;
 import static org.slf4j.LoggerFactory.getLogger;
+import org.springframework.beans.factory.annotation.Value;
 
 /**
  * This class creates EFS- Mobility Objects from Trias Response - Objects
@@ -73,6 +74,9 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class TriasResponseConverter {
 
     private static final Logger logger = getLogger(TriasResponseConverter.class);
+
+    @Value("${middleware.provider.mobility-service.id}")
+    private String serviceId;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -188,7 +192,7 @@ public class TriasResponseConverter {
 
         // origin Time 
         if (continuousLeg.getTimeWindowStart() != null) {
-            leg.setStartTime(continuousLeg.getTimeWindowStart().toInstant());
+            leg.setStartTime(continuousLeg.getTimeWindowStart());
         }
 
         // origin Place
@@ -198,7 +202,7 @@ public class TriasResponseConverter {
 
         // destination Time
         if (continuousLeg.getTimeWindowEnd() != null) {
-            leg.setEndTime(continuousLeg.getTimeWindowEnd().toInstant());
+            leg.setEndTime(continuousLeg.getTimeWindowEnd());
         }
 
         //destination Place
@@ -231,13 +235,13 @@ public class TriasResponseConverter {
         // The Trias Object LegBoard contains Information about boarding the vehicle 
         var departure = timedLeg.getLegBoard().getServiceDeparture().getTimetabledTime();
         if (departure != null) {
-            leg.setStartTime(departure.toInstant());
+            leg.setStartTime(departure);
         }
 
         // The Trias Object LegAlight contains Information about getting off (alighting) the vehicle 
         var arrival = timedLeg.getLegAlight().getServiceArrival().getTimetabledTime();
         if (arrival != null) {
-            leg.setEndTime(arrival.toInstant());
+            leg.setEndTime(arrival);
         }
 
         // ### TRIP LENGTH ###
@@ -431,7 +435,7 @@ public class TriasResponseConverter {
 
         mainLeg.setAsset(asset);
 
-        return new Option(mainLeg);
+        return new Option(serviceId, mainLeg);
     }
 
     public List<Option> extractMobilityOptionsFromTrias(Trias responseTrias, Integer limitTo) {
