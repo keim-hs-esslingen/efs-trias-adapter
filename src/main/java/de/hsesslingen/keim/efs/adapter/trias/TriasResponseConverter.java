@@ -73,19 +73,16 @@ import org.springframework.beans.factory.annotation.Value;
 @Component
 public class TriasResponseConverter {
 
-    private static final Logger logger = getLogger(TriasResponseConverter.class);
-
     @Value("${middleware.provider.mobility-service.id}")
     private String serviceId;
-
-    @Autowired
-    private ObjectMapper objectMapper;
 
     @Autowired
     private TriasLocationInformationService triasLocationInformationService;
 
     public Place createPlaceFromLocationRef(LocationRef locationRef) {
         var place = new Place();
+
+        place.setServiceId(serviceId);
 
         if (locationRef.getGeoPosition() != null) {
             place.setLat(locationRef.getGeoPosition().getLatitude());
@@ -112,6 +109,8 @@ public class TriasResponseConverter {
 
     public Place createPlaceFromStopPoint(ILegEnd legEnd, GeoPosition geoPosition) {
         var place = new Place();
+
+        place.setServiceId(serviceId);
 
         if (legEnd.getStopPointRef() != null) {
             place.setId(legEnd.getStopPointRef().getValue());
@@ -244,6 +243,15 @@ public class TriasResponseConverter {
             leg.setEndTime(arrival);
         }
 
+        var asset = new Asset();
+        
+        var legService = timedLeg.getService();
+        var journeyRef = legService.getJourneyRef().getValue();
+        var destinationText = legService.getDestinationText();
+        asset.setId(journeyRef);
+        asset.setMode(Mode.BUS)
+        
+        
         // ### TRIP LENGTH ###
         var trackSections = timedLeg.getLegTrack().getTrackSection();
 
@@ -262,7 +270,8 @@ public class TriasResponseConverter {
         var serviceSections = timedLeg.getService().getServiceSection();
 
         if (!serviceSections.isEmpty()) {
-            leg.setMode(ptModeToMode(serviceSections.get(0).getMode().getPtMode()));
+            var service = serviceSections.get(0);
+            leg.setMode(ptModeToMode(service.getMode().getPtMode()));
         }
 
         // ### REST OF PLACE INFO ###
@@ -271,8 +280,10 @@ public class TriasResponseConverter {
             leg.setFrom(futureBoard.get());
             leg.setTo(futureAlight.get());
         } catch (InterruptedException | ExecutionException ex) {
-            throw HttpException.internalServerError(ex, "Unable to retrieve geo location data for start and end points.");
+            throw HttpException.internalServerError(ex, "Unable to retrieve geo location for start or end point or both.");
         }
+        
+        leg.setAssetId(asset.getId());
 
         return leg;
     }
@@ -287,50 +298,6 @@ public class TriasResponseConverter {
         }
 
         return null;
-    }
-
-    Leg getLastNonWalkLeg(List<Leg> legs) {
-        // First try the very last one...
-        Leg res = legs.get(legs.size() - 1);
-
-        if (res.getMode() != Mode.WALK) {
-            return res;
-        }
-
-        //If that did work, create a list iterator and walk backwards from the end.
-        var lit = legs.listIterator(legs.size() - 1);
-
-        do {
-            res = lit.previous();
-        } while (res.getMode() == Mode.WALK);
-
-        return res;
-    }
-
-    /**
-     * if the MobilityOption contains more than one Leg with different
-     * TravelModes we assign the TravelMode of the Leg with the longest Distance
-     * as MainMode
-     *
-     * @param legs
-     * @return
-     */
-    public Mode assignMainMode(List<Leg> legs) {
-
-        // set Mode.WALK as default Mode if no other Mode can be assigned
-        Mode mainMode = Mode.WALK;
-
-        int longestDistance = 0;
-
-        for (Leg leg : legs) {
-            if (leg.getDistanceMeter() != null) {
-                if (leg.getDistanceMeter() > longestDistance) {
-                    mainMode = leg.getMode();
-                    longestDistance = leg.getDistanceMeter();
-                }
-            }
-        }
-        return mainMode;
     }
 
     public boolean canConvertTripResultToOption(TripResult tripResult) {
@@ -372,70 +339,63 @@ public class TriasResponseConverter {
      */
     private Option createOptionFromTripResult(TripResult tripResult) {
 
-        // each option can store just one LegBaseItem
-        var mainLeg = new Leg();
+        // Initializing some one-value-arrays that will be populated in the following stream.
+        var nonWalkLegsCount = new int[]{0};
 
-        var asset = new Asset();
+        // Initialize an array of legs to collect special legs.
+        // 0 = first non-walk leg, 1 = last non-walk leg, 2 = longest leg in collection
+        var specialLegs = new Leg[3];
 
         // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
         var legs = tripResult.getTrip().getTripLeg().stream()
                 .map(this::createLegFromTripLeg)
                 .filter(leg -> leg != null)
+                .peek(leg -> {
+                    if (leg.getMode() != Mode.WALK) {
+                        ++nonWalkLegsCount[0];
+
+                        // Set first leg...
+                        if (specialLegs[0] == null) {
+                            specialLegs[0] = leg;
+                        }
+
+                        // Set last leg... (can be same as first leg)
+                        specialLegs[1] = leg;
+
+                        // Check if current leg is longer that longest leg so far...
+                        if (specialLegs[2] == null
+                                || specialLegs[2].getDistanceMeter() < leg.getDistanceMeter()) {
+                            specialLegs[2] = leg;
+                        }
+                    }
+                })
                 .collect(toList());
 
-        if (!legs.isEmpty()) {
-            // Get the first leg that is not WALK:
-            var firstOpt = legs.stream()
-                    .filter(l -> l.getMode() != Mode.WALK)
-                    .findFirst();
-
-            if (!firstOpt.isPresent()) {
-                // If we don't have any NON-walk legs, return null!
-                return null;
-            }
-
-            var first = firstOpt.get();
-
-            // Get the last leg that is not WALK:
-            var last = getLastNonWalkLeg(legs);
-
-            // since the efsMaas  Option- Object can contain just one MainLeg (LegBaseItem) a workaround is done here 
-            //assign the StartTime and OriginPlace of the first Leg to the legBaseItem
-            mainLeg.setStartTime(first.getStartTime());
-            mainLeg.setFrom(first.getFrom());
-
-            //assign the EndTime and DestinationPlace of the last Leg to the legBaseItem
-            mainLeg.setEndTime(last.getEndTime());
-            mainLeg.setTo(last.getTo());
-
-            // now we are facing a problem here: the efsMaas  Option- Object can contain just one MainLeg (LegBaseItem) so a workaround has to be done here.
-            // first we have to decide which Travel Mode should be displayed as the Main- Travelmode.
-            // we call the Method assignMainMode() which assigns from several Legs the Mode of the Leg with the longest Distance as MainMode
-            Mode mainMode = assignMainMode(legs);
-
-            asset.setMode(mainMode);
-            mainLeg.setMode(mainMode);
-
-            // for the detailed Leg Information for the intermediate Legs we use a Sub Json which we store in the field Option-Meta-other
-            // we assign "[]" that in case of an Mapping error, at least an empty JSON is returned here
-            String optionsAsJsonString = "[]";
-
-            // convert whole Leg - List (including WALK - Legs) to JSON :
-            try {
-                optionsAsJsonString = objectMapper.writeValueAsString(legs);
-            } catch (IOException e) {
-
-            }
-
-            // assign the whole Leg - List as subJSON to the field meta.other
-            asset.setOther(optionsAsJsonString);
-
-            logger.trace("Sub-Legs: " + optionsAsJsonString);
+        if (nonWalkLegsCount[0] == 0) {
+            return null;
         }
 
-        mainLeg.setAsset(asset);
+        var first = specialLegs[0];
+        var last = specialLegs[1];
+        var longest = specialLegs[2];
 
-        return new Option(serviceId, mainLeg);
+        // Initialize the super leg, which is the leg that spans from first to last non-walk legs.
+        var superLeg = new Leg();
+
+        // since the efsMaas  Option- Object can contain just one MainLeg (LegBaseItem) a workaround is done here 
+        //assign the StartTime and OriginPlace of the first Leg to the legBaseItem
+        superLeg.setStartTime(first.getStartTime());
+        superLeg.setFrom(first.getFrom());
+
+        //assign the EndTime and DestinationPlace of the last Leg to the legBaseItem
+        superLeg.setEndTime(last.getEndTime());
+        superLeg.setTo(last.getTo());
+
+        superLeg.setSubLegs(legs);
+        superLeg.setMode(longest.getMode());
+        superLeg.setAsset(longest.getAsset());
+
+        return new Option(serviceId, superLeg);
     }
 
     public List<Option> extractMobilityOptionsFromTrias(Trias responseTrias, Integer limitTo) {
