@@ -27,7 +27,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.hsesslingen.keim.efs.middleware.model.Leg;
 import de.hsesslingen.keim.efs.middleware.model.Option;
 import de.hsesslingen.keim.efs.middleware.model.Place;
-import de.hsesslingen.keim.efs.middleware.model.TypeOfAsset;
 import de.hsesslingen.keim.efs.mobility.exception.HttpException;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
 import de.vdv.trias.ContinuousLeg;
@@ -51,9 +50,9 @@ import de.vdv.trias.Trias;
 import java.io.IOException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import de.hsesslingen.keim.efs.adapter.trias.supertypes.ILegEnd;
+import de.hsesslingen.keim.efs.middleware.model.Asset;
 import de.vdv.trias.ContinuousModesEnumeration;
 import de.vdv.trias.IndividualModesEnumeration;
 import de.vdv.trias.InterchangeModesEnumeration;
@@ -63,7 +62,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import static java.util.stream.Collectors.toList;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static org.slf4j.LoggerFactory.getLogger;
 
 /**
  * This class creates EFS- Mobility Objects from Trias Response - Objects
@@ -73,10 +72,7 @@ import org.slf4j.LoggerFactory;
 @Component
 public class TriasResponseConverter {
 
-    private static final Logger logger = LoggerFactory.getLogger(TriasResponseConverter.class);
-
-    @Value("${middleware.provider.mobility-service.id}")
-    private String serviceId;
+    private static final Logger logger = getLogger(TriasResponseConverter.class);
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -93,7 +89,7 @@ public class TriasResponseConverter {
         }
 
         if (locationRef.getStopPointRef() != null) {
-            place.setStopId(locationRef.getStopPointRef().getValue());
+            place.setId(locationRef.getStopPointRef().getValue());
         }
 
         var names = locationRef.getLocationName(); // names is never null. See src.
@@ -114,7 +110,7 @@ public class TriasResponseConverter {
         var place = new Place();
 
         if (legEnd.getStopPointRef() != null) {
-            place.setStopId(legEnd.getStopPointRef().getValue());
+            place.setId(legEnd.getStopPointRef().getValue());
         }
 
         if (!legEnd.getStopPointName().isEmpty()) {
@@ -212,14 +208,12 @@ public class TriasResponseConverter {
 
         // triplength
         if (continuousLeg.getLength() != null) {
-            leg.setDistance(continuousLeg.getLength().intValue());
+            leg.setDistanceMeter(continuousLeg.getLength().intValue());
         }
 
         if (continuousLeg.getService().getIndividualMode() != null) {
             leg.setMode(indivModeToMode(continuousLeg.getService().getIndividualMode()));
         }
-
-        leg.setServiceId(serviceId);
 
         return leg;
     }
@@ -257,7 +251,7 @@ public class TriasResponseConverter {
                     .mapToInt(s -> s.getLength().intValue())
                     .sum();
 
-            leg.setDistance(totalTrackLength);
+            leg.setDistanceMeter(totalTrackLength);
         }
 
         // ### MODE INFO ###
@@ -266,8 +260,6 @@ public class TriasResponseConverter {
         if (!serviceSections.isEmpty()) {
             leg.setMode(ptModeToMode(serviceSections.get(0).getMode().getPtMode()));
         }
-
-        leg.setServiceId(serviceId);
 
         // ### REST OF PLACE INFO ###
         try {
@@ -327,10 +319,10 @@ public class TriasResponseConverter {
         int longestDistance = 0;
 
         for (Leg leg : legs) {
-            if (leg.getDistance() != null) {
-                if (leg.getDistance() > longestDistance) {
+            if (leg.getDistanceMeter() != null) {
+                if (leg.getDistanceMeter() > longestDistance) {
                     mainMode = leg.getMode();
-                    longestDistance = leg.getDistance();
+                    longestDistance = leg.getDistanceMeter();
                 }
             }
         }
@@ -378,9 +370,8 @@ public class TriasResponseConverter {
 
         // each option can store just one LegBaseItem
         var mainLeg = new Leg();
-        mainLeg.setServiceId(serviceId);
 
-        var meta = new TypeOfAsset();
+        var asset = new Asset();
 
         // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
         var legs = tripResult.getTrip().getTripLeg().stream()
@@ -418,7 +409,7 @@ public class TriasResponseConverter {
             // we call the Method assignMainMode() which assigns from several Legs the Mode of the Leg with the longest Distance as MainMode
             Mode mainMode = assignMainMode(legs);
 
-            meta.setMode(mainMode);
+            asset.setMode(mainMode);
             mainLeg.setMode(mainMode);
 
             // for the detailed Leg Information for the intermediate Legs we use a Sub Json which we store in the field Option-Meta-other
@@ -433,15 +424,14 @@ public class TriasResponseConverter {
             }
 
             // assign the whole Leg - List as subJSON to the field meta.other
-            meta.setOther(optionsAsJsonString);
+            asset.setOther(optionsAsJsonString);
 
             logger.trace("Sub-Legs: " + optionsAsJsonString);
         }
 
-        var option = new Option();
-        option.setLeg(mainLeg);
-        option.setMeta(meta);
-        return option;
+        mainLeg.setAsset(asset);
+
+        return new Option(mainLeg);
     }
 
     public List<Option> extractMobilityOptionsFromTrias(Trias responseTrias, Integer limitTo) {

@@ -40,12 +40,12 @@ public class LocationRefFactory {
     public static LocationRef fromPlace(Place place) {
         var ref = new LocationRef();
 
-        if (place.getStopId() != null) {
-            return ref.setStopPointRef(new StopPointRef().setValue(place.getStopId()));
+        if (place.getId() != null) {
+            return ref.setStopPointRef(new StopPointRef().setValue(place.getId()));
         }
 
-        if (place.getStopId() != null) {
-            return ref.setStopPlaceRef(new StopPlaceRef().setValue(place.getStopId()));
+        if (place.getId() != null) {
+            return ref.setStopPlaceRef(new StopPlaceRef().setValue(place.getId()));
         }
 
         if (place.hasCoordinates()) {

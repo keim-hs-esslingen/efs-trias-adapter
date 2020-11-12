@@ -52,7 +52,7 @@ public class PlaceFactory {
         }
 
         if (value.getStopPointRef() != null) {
-            place.setStopId(value.getStopPointRef().getValue());
+            place.setId(value.getStopPointRef().getValue());
         }
 
         return place;
@@ -72,7 +72,7 @@ public class PlaceFactory {
         }
 
         if (value.getStopPlaceRef() != null) {
-            place.setStopId(value.getStopPlaceRef().getValue());
+            place.setId(value.getStopPlaceRef().getValue());
         }
 
         return place;
@@ -86,7 +86,7 @@ public class PlaceFactory {
         }
 
         if (value.getLocalityCode() != null) {
-            place.setStopId(value.getLocalityCode());
+            place.setId(value.getLocalityCode());
         }
 
         return place;
@@ -106,7 +106,7 @@ public class PlaceFactory {
         }
 
         if (value.getPointOfInterestCode() != null) {
-            place.setStopId(value.getPointOfInterestCode());
+            place.setId(value.getPointOfInterestCode());
         }
 
         return place;
@@ -126,7 +126,7 @@ public class PlaceFactory {
         }
 
         if (value.getAddressCode() != null) {
-            place.setStopId(value.getAddressCode());
+            place.setId(value.getAddressCode());
         }
 
         return place;
@@ -151,7 +151,7 @@ public class PlaceFactory {
 
         if (value.getLocationName() != null && !value.getLocationName().isEmpty()) {
             var locationName = value.getLocationName().get(0).getText();
-            
+
             if (isBlank(place.getName())) {
                 place.setName(locationName);
             } else {
