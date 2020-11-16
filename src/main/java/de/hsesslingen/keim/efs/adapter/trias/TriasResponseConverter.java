@@ -23,36 +23,26 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import static de.hsesslingen.keim.efs.adapter.trias.factories.ModeConverter.from;
+import static de.hsesslingen.keim.efs.adapter.trias.factories.TriasModelUtils.extract;
+import static de.hsesslingen.keim.efs.adapter.trias.factories.TriasModelUtils.firstOf;
+import static de.hsesslingen.keim.efs.adapter.trias.factories.TriasModelUtils.ifPresent;
 import de.hsesslingen.keim.efs.middleware.model.Leg;
 import de.hsesslingen.keim.efs.middleware.model.Option;
 import de.hsesslingen.keim.efs.middleware.model.Place;
-import de.hsesslingen.keim.efs.mobility.exception.HttpException;
-import de.hsesslingen.keim.efs.mobility.service.Mode;
 import de.vdv.trias.ContinuousLeg;
 import de.vdv.trias.GeoPosition;
-import static de.vdv.trias.IndividualModesEnumeration.CYCLE;
-import static de.vdv.trias.IndividualModesEnumeration.MOTORCYCLE;
-import static de.vdv.trias.IndividualModesEnumeration.OTHERS_DRIVE_CAR;
-import static de.vdv.trias.IndividualModesEnumeration.SELF_DRIVE_CAR;
-import static de.vdv.trias.IndividualModesEnumeration.TRUCK;
 import de.vdv.trias.LocationRef;
-import de.vdv.trias.PtModesEnumeration;
-import static de.vdv.trias.PtModesEnumeration.CABLEWAY;
-import static de.vdv.trias.PtModesEnumeration.COACH;
-import static de.vdv.trias.PtModesEnumeration.INTERCITY_RAIL;
-import static de.vdv.trias.PtModesEnumeration.METRO;
-import static de.vdv.trias.PtModesEnumeration.TROLLEY_BUS;
-import static de.vdv.trias.PtModesEnumeration.URBAN_RAIL;
-import static de.vdv.trias.PtModesEnumeration.WATER;
 import de.vdv.trias.TimedLeg;
 import de.vdv.trias.Trias;
-import java.io.IOException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import de.hsesslingen.keim.efs.adapter.trias.supertypes.ILegEnd;
 import de.hsesslingen.keim.efs.middleware.model.Asset;
+import static de.hsesslingen.keim.efs.middleware.utils.StringUtils.joinNonEmpty;
+import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
+import de.hsesslingen.keim.efs.mobility.service.Mode;
 import de.vdv.trias.ContinuousModesEnumeration;
 import de.vdv.trias.IndividualModesEnumeration;
 import de.vdv.trias.InterchangeModesEnumeration;
@@ -60,9 +50,9 @@ import de.vdv.trias.TripLeg;
 import de.vdv.trias.TripResult;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
-import org.slf4j.Logger;
-import static org.slf4j.LoggerFactory.getLogger;
+import static org.apache.commons.lang3.StringUtils.isNotBlank;
 import org.springframework.beans.factory.annotation.Value;
 
 /**
@@ -79,7 +69,11 @@ public class TriasResponseConverter {
     @Autowired
     private TriasLocationInformationService triasLocationInformationService;
 
-    public Place createPlaceFromLocationRef(LocationRef locationRef) {
+    public Place createPlace(LocationRef locationRef) {
+        if (locationRef == null) {
+            return null;
+        }
+
         var place = new Place();
 
         place.setServiceId(serviceId);
@@ -102,12 +96,20 @@ public class TriasResponseConverter {
         return place;
     }
 
-    public Place createPlaceFromStopPoint(ILegEnd legEnd) {
+    public Place createPlace(ILegEnd legEnd) {
+        if (legEnd == null) {
+            return null;
+        }
+
         var pos = triasLocationInformationService.getGeoPositionFromStopPoint(legEnd.getStopPointRef());
-        return createPlaceFromStopPoint(legEnd, pos);
+        return createPlace(legEnd, pos);
     }
 
-    public Place createPlaceFromStopPoint(ILegEnd legEnd, GeoPosition geoPosition) {
+    public Place createPlace(ILegEnd legEnd, GeoPosition geoPosition) {
+        if (legEnd == null) {
+            return null;
+        }
+
         var place = new Place();
 
         place.setServiceId(serviceId);
@@ -128,173 +130,153 @@ public class TriasResponseConverter {
         return place;
     }
 
-    private Mode ptModeToMode(PtModesEnumeration mode) {
-        switch (mode) {
-            case BUS:
-            case TROLLEY_BUS:
-                return Mode.BUS;
-            case COACH:
-                return Mode.BUSISH;
-            case TRAM:
-                return Mode.TRAM;
-            case TAXI:
-                return Mode.TAXI;
-            case METRO:
-                return Mode.SUBWAY;
-            case RAIL:
-            case INTERCITY_RAIL:
-                return Mode.RAIL;
-            case FUNICULAR:
-                return Mode.FUNICULAR;
-            case WATER:
-                return Mode.FERRY;
-            case CABLEWAY:
-                return Mode.GONDOLA;
-            case URBAN_RAIL:
-                return Mode.TRAINISH;
-            default:
-                return null;
-        }
-    }
-
-    private Mode indivModeToMode(IndividualModesEnumeration mode) {
-        switch (mode) {
-            case WALK:
-                return Mode.WALK;
-            case CYCLE:
-            case MOTORCYCLE:
-                return Mode.BICYCLE;
-            case TAXI:
-                return Mode.TAXI;
-            case SELF_DRIVE_CAR:
-            case TRUCK:
-                return Mode.CAR;
-            case OTHERS_DRIVE_CAR:
-                return Mode.BUSISH;
-            default:
-                return null;
-        }
-    }
-
-    private CompletableFuture<Place> createPlaceFromLegEndAsync(ILegEnd legEnd) {
+    private CompletableFuture<Place> createPlaceAsync(ILegEnd legEnd) {
         return CompletableFuture.supplyAsync(() -> {
             // First get the geo coordinates from the server.
             var geoPos = triasLocationInformationService.getGeoPositionFromStopPoint(legEnd.getStopPointRef());
             // The convert it to a place.
-            return createPlaceFromStopPoint(legEnd, geoPos);
+            return createPlace(legEnd, geoPos);
         });
     }
 
-    // A Trias - contninous Leg means a Leg that is not bound to a Timetable like walking, bicycle- or carride
-    public Leg createLegFromContinuousLeg(ContinuousLeg continuousLeg) {
+    /**
+     * Converts a {@link ContinuousLeg} to a {@link Leg}. A ContinuousLeg means
+     * a leg that is not bound to a timetable like walking, bicycle- or carride,
+     * ...
+     *
+     * @param cLeg
+     * @return
+     */
+    public Leg createLeg(ContinuousLeg cLeg) {
         var leg = new Leg();
 
-        // origin Time 
-        if (continuousLeg.getTimeWindowStart() != null) {
-            leg.setStartTime(continuousLeg.getTimeWindowStart());
-        }
-
-        // origin Place
-        if (continuousLeg.getLegStart() != null) {
-            leg.setFrom(createPlaceFromLocationRef(continuousLeg.getLegStart()));
-        }
-
-        // destination Time
-        if (continuousLeg.getTimeWindowEnd() != null) {
-            leg.setEndTime(continuousLeg.getTimeWindowEnd());
-        }
-
-        //destination Place
-        if (continuousLeg.getLegEnd() != null) {
-            leg.setTo(createPlaceFromLocationRef(continuousLeg.getLegEnd()));
-        }
+        // origin Time
+        leg.setStartTime(cLeg.getTimeWindowStart());
+        leg.setFrom(TriasResponseConverter.this.createPlace(cLeg.getLegStart()));
+        leg.setEndTime(cLeg.getTimeWindowEnd());
+        leg.setTo(TriasResponseConverter.this.createPlace(cLeg.getLegEnd()));
 
         // triplength
-        if (continuousLeg.getLength() != null) {
-            leg.setDistanceMeter(continuousLeg.getLength().intValue());
-        }
+        ifPresent(cLeg.getLength(), length -> {
+            leg.setDistanceMeter(length.intValue());
+        });
 
-        if (continuousLeg.getService().getIndividualMode() != null) {
-            leg.setMode(indivModeToMode(continuousLeg.getService().getIndividualMode()));
+        Mode mode = from(cLeg);
+        leg.setMode(mode);
+
+        if (mode != Mode.WALK) {
+            var asset = new Asset()
+                    .setServiceId(serviceId)
+                    .setMode(mode);
+
+            var service = cLeg.getService();
+
+            ifPresent(service.getJourneyRef(), ref -> {
+                asset.setId(ref.getValue());
+            });
+
+            var section = firstOf(service.getServiceSection());
+
+            if (section != null) {
+                var lineName = extract(section.getPublishedLineName(), null);
+                var dstTxt = extract(service.getDestinationText(), null);
+
+                asset.setName(joinNonEmpty(" ", lineName, dstTxt));
+            }
+
+            leg.setAsset(asset);
+            leg.setAssetId(asset.getId());
         }
 
         return leg;
     }
 
-    // A Trias - timed Leg means a Leg with timetabled schedule like Bus, Tram, Train,...
-    public Leg createLegFromTimedLeg(TimedLeg timedLeg) {
+    /**
+     * Converts a {@link TimedLeg} to a {@link Leg}. A TimedLeg means a leg with
+     * timetabled schedule like Bus, Tram, Train,...
+     *
+     * @param timedLeg
+     * @return
+     */
+    public Leg createLeg(TimedLeg timedLeg) {
         var leg = new Leg();
+        var asset = new Asset().setServiceId(serviceId);
 
         // ### PLACE INFO ###
         // Kick of async retrieval of place creation, which involves a call to the TRIAS api for geo coordinates.
-        var futureBoard = createPlaceFromLegEndAsync(timedLeg.getLegBoard());
-        var futureAlight = createPlaceFromLegEndAsync(timedLeg.getLegAlight());
+        var placeFormFuture = createPlaceAsync(timedLeg.getLegBoard());
+        var placeToFuture = createPlaceAsync(timedLeg.getLegAlight());
 
         // ### TIME INFO ###
-        // The Trias Object LegBoard contains Information about boarding the vehicle 
-        var departure = timedLeg.getLegBoard().getServiceDeparture().getTimetabledTime();
-        if (departure != null) {
-            leg.setStartTime(departure);
+        leg.setStartTime(timedLeg.getLegBoard().getServiceDeparture().getTimetabledTime());
+        leg.setEndTime(timedLeg.getLegAlight().getServiceArrival().getTimetabledTime());
+
+        var service = timedLeg.getService(); // Service is not-null according to docs.
+
+        asset.setId(service.getJourneyRef().getValue()); // JourneyRef is not-null according to docs.
+
+        firstOf(service.getServiceSection(), section -> {
+            var lineName = extract(section.getPublishedLineName());
+            var dstTxt = extract(service.getDestinationText());
+            asset.setName(joinNonEmpty(" ", lineName, dstTxt));
+        });
+
+        var attributes = service.getAttribute();
+        if (!attributes.isEmpty()) {
+            var description = attributes.stream()
+                    .map(attr -> extract(attr.getText()))
+                    .collect(joining("</p><p>"));
+
+            if (isNotBlank(description)) {
+                description = "<p>" + description + "</p>";
+            }
+
+            asset.setDescription(description);
         }
 
-        // The Trias Object LegAlight contains Information about getting off (alighting) the vehicle 
-        var arrival = timedLeg.getLegAlight().getServiceArrival().getTimetabledTime();
-        if (arrival != null) {
-            leg.setEndTime(arrival);
-        }
+        Mode mode = from(timedLeg);
+        asset.setMode(mode);
+        leg.setMode(mode);
 
-        var asset = new Asset();
-        
-        var legService = timedLeg.getService();
-        var journeyRef = legService.getJourneyRef().getValue();
-        var destinationText = legService.getDestinationText();
-        asset.setId(journeyRef);
-        asset.setMode(Mode.BUS)
-        
-        
         // ### TRIP LENGTH ###
-        var trackSections = timedLeg.getLegTrack().getTrackSection();
-
-        if (trackSections != null && !trackSections.isEmpty()) {
-            // triplength is calculated by summing up all TrackSection - Length
-            // if the field length is null then 0 is added
-            var totalTrackLength = trackSections.stream()
+        ifPresent(timedLeg.getLegTrack(), track -> {
+            // triplength is calculated by summing up all TrackSection lengths.
+            var totalTrackLength = track.getTrackSection().stream()
                     .filter(s -> s.getLength() != null)
                     .mapToInt(s -> s.getLength().intValue())
                     .sum();
 
             leg.setDistanceMeter(totalTrackLength);
-        }
-
-        // ### MODE INFO ###
-        var serviceSections = timedLeg.getService().getServiceSection();
-
-        if (!serviceSections.isEmpty()) {
-            var service = serviceSections.get(0);
-            leg.setMode(ptModeToMode(service.getMode().getPtMode()));
-        }
+        });
 
         // ### REST OF PLACE INFO ###
         try {
             // Wait for the asynchronous creation of place data to finish and then insert the gained information...
-            leg.setFrom(futureBoard.get());
-            leg.setTo(futureAlight.get());
+            leg.setFrom(placeFormFuture.get().setServiceId(serviceId));
+            leg.setTo(placeToFuture.get().setServiceId(serviceId));
         } catch (InterruptedException | ExecutionException ex) {
-            throw HttpException.internalServerError(ex, "Unable to retrieve geo location for start or end point or both.");
+            throw internalServerError(ex, "Unable to retrieve geo location for start or end point or both.");
         }
-        
+
+        leg.setAsset(asset);
         leg.setAssetId(asset.getId());
 
         return leg;
     }
 
-    private Leg createLegFromTripLeg(TripLeg tripLeg) {
+    /**
+     * Converts a {@link TripLeg} to a {@link Leg}.
+     *
+     * @param tripLeg
+     * @return
+     */
+    public Leg createLeg(TripLeg tripLeg) {
         if (tripLeg.getContinuousLeg() != null) {
-            return createLegFromContinuousLeg(tripLeg.getContinuousLeg());
+            return createLeg(tripLeg.getContinuousLeg());
         }
 
         if (tripLeg.getTimedLeg() != null) {
-            return createLegFromTimedLeg(tripLeg.getTimedLeg());
+            return TriasResponseConverter.this.createLeg(tripLeg.getTimedLeg());
         }
 
         return null;
@@ -337,7 +319,7 @@ public class TriasResponseConverter {
      * @param tripResult
      * @return
      */
-    private Option createOptionFromTripResult(TripResult tripResult) {
+    private Option createOption(TripResult tripResult) {
 
         // Initializing some one-value-arrays that will be populated in the following stream.
         var nonWalkLegsCount = new int[]{0};
@@ -348,7 +330,7 @@ public class TriasResponseConverter {
 
         // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
         var legs = tripResult.getTrip().getTripLeg().stream()
-                .map(this::createLegFromTripLeg)
+                .map(this::createLeg)
                 .filter(leg -> leg != null)
                 .peek(leg -> {
                     if (leg.getMode() != Mode.WALK) {
@@ -398,7 +380,7 @@ public class TriasResponseConverter {
         return new Option(serviceId, superLeg);
     }
 
-    public List<Option> extractMobilityOptionsFromTrias(Trias responseTrias, Integer limitTo) {
+    public List<Option> extractOptions(Trias responseTrias, Integer limitTo) {
         // Convert the trip results in parallel to options...
         var stream = responseTrias.getServiceDelivery()
                 .getDeliveryPayload()
@@ -412,7 +394,7 @@ public class TriasResponseConverter {
             stream = stream.limit(limitTo);
         }
 
-        return stream.map(this::createOptionFromTripResult)
+        return stream.map(this::createOption)
                 .filter(opt -> opt != null)
                 .collect(toList());
     }

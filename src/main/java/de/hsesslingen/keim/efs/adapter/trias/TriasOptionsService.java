@@ -92,7 +92,7 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
             throw internalServerError("An error occured when converting to or from XML.");
         } 
 
-        return responseConverter.extractMobilityOptionsFromTrias(responseTrias, limitTo);
+        return responseConverter.extractOptions(responseTrias, limitTo);
     }
 
 }
