@@ -27,6 +27,8 @@ import de.hsesslingen.keim.efs.mobility.service.Mode;
 import de.vdv.trias.ContinuousLeg;
 import de.vdv.trias.ContinuousModesEnumeration;
 import de.vdv.trias.IndividualModesEnumeration;
+import de.vdv.trias.InterchangeLeg;
+import de.vdv.trias.InterchangeModesEnumeration;
 import de.vdv.trias.PtModesEnumeration;
 import de.vdv.trias.TimedLeg;
 
@@ -74,6 +76,42 @@ public class ModeConverter {
         return mode;
     }
 
+    public static Mode from(InterchangeModesEnumeration mode, Mode fallback) {
+        switch (mode) {
+            case BIKE_AND_RIDE:
+            case BIKE_HIRE:
+                return Mode.BICYCLE;
+            case CAR_HIRE:
+                return Mode.CAR;
+            case WALK:
+                return Mode.WALK;
+            default:
+                return fallback;
+        }
+    }
+
+    public static Mode from(InterchangeModesEnumeration mode) {
+        return from(mode, null);
+    }
+
+    public static Mode from(InterchangeLeg leg, Mode fallback) {
+        var mode = from(leg.getInterchangeMode());
+
+        if (mode == null) {
+            mode = from(leg.getContinuousMode());
+        }
+
+        if (mode == null) {
+            mode = fallback;
+        }
+
+        return mode;
+    }
+
+    public static Mode from(InterchangeLeg leg) {
+        return from(leg, null);
+    }
+
     public static Mode from(PtModesEnumeration mode) {
         switch (mode) {
             case BUS:
@@ -109,5 +147,38 @@ public class ModeConverter {
 
     public static Mode from(TimedLeg leg) {
         return from(leg.getService().getServiceSection().get(0).getMode());
+    }
+
+    public static PtModesEnumeration toPtMode(Mode mode) {
+        switch (mode) {
+            case BUS:
+                return PtModesEnumeration.BUS;
+            case BUSISH:
+                return PtModesEnumeration.TROLLEY_BUS;
+            case CABLE_CAR:
+            case GONDOLA:
+                return PtModesEnumeration.CABLEWAY;
+            case FUNICULAR:
+                return PtModesEnumeration.FUNICULAR;
+            case FERRY:
+                return PtModesEnumeration.WATER;
+            case RAIL:
+                return PtModesEnumeration.RAIL;
+            case TRAM:
+                return PtModesEnumeration.TRAM;
+            case TRAINISH:
+                return PtModesEnumeration.URBAN_RAIL;
+            case TAXI:
+                return PtModesEnumeration.TAXI;
+            case SUBWAY:
+                return PtModesEnumeration.METRO;
+            case CAR:
+            case WALK:
+            case BICYCLE:
+            case LEG_SWITCH:
+            case TRANSIT:
+            default:
+                return null;
+        }
     }
 }

@@ -23,9 +23,15 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias;
 
+import de.vdv.trias.InternationalText;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
+import java.util.regex.Pattern;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static org.slf4j.LoggerFactory.getLogger;
 
 /**
  *
@@ -33,7 +39,9 @@ import org.slf4j.LoggerFactory;
  */
 public class Utils {
 
-    private static Logger logger = LoggerFactory.getLogger(Utils.class);
+    private static final Logger logger = getLogger(Utils.class);
+
+    private static final Pattern EN_LOCALE = Pattern.compile("en|en[\\-_]en|en[\\-_]us|en[\\-_]gb");
 
     /**
      * Simply runs the getter and returns the result but catches
@@ -50,6 +58,118 @@ public class Utils {
             logger.debug("Caught null pointer exception in nullsafe(...): {}", ex.getMessage());
             return null;
         }
+    }
+
+    /**
+     * Extracts the most preffered text value of the given list of
+     * {@link InternationalText}.
+     * <p>
+     * The persued order is:
+     * <ol>
+     * <li>Text in language of client (given by clientLocale)</li>
+     * <li>Text in english</li>
+     * <li>First text in list</li>
+     * <li>{@code null}</li>
+     * </ol>
+     *
+     * @param texts
+     * @param clientLocale If null, the client locale preferation is ignored.
+     * @return
+     */
+    public static String extract(List<InternationalText> texts, String clientLocale) {
+        if (texts.isEmpty()) {
+            return null;
+        }
+        String firstText = firstAsOptional(texts).map(first -> first.getText()).orElse(null);
+        String clientLocaleText = null;
+        String englishText = null;
+        for (InternationalText intText : texts) {
+            String lang = intText.getLanguage();
+            if (clientLocale != null && clientLocale.equalsIgnoreCase(lang)) {
+                clientLocaleText = intText.getText();
+            } else if ("en".equalsIgnoreCase(lang) || EN_LOCALE.matcher(lang).matches()) {
+                englishText = intText.getText();
+            }
+        }
+        String choice = clientLocaleText != null ? clientLocaleText : englishText != null ? englishText : firstText;
+        return choice;
+    }
+
+    /**
+     * Uses {@link TriasModelUtils#extract(List, String)} with a
+     * {@code clientLocale} of null.
+     *
+     * @param texts
+     * @return
+     */
+    public static String extract(List<InternationalText> texts) {
+        return extract(texts, null);
+    }
+
+    public static <C extends Collection> void ifNotEmpty(C collection, Consumer<C> consumer) {
+        if (collection != null && !collection.isEmpty()) {
+            consumer.accept(collection);
+        }
+    }
+
+    /**
+     * Returns the first element of the list, or null, if that list is empty.
+     *
+     * @param <T>
+     * @param list
+     * @return
+     */
+    public static <T> Optional<T> firstAsOptional(List<T> list) {
+        if (list.isEmpty()) {
+            return Optional.empty();
+        }
+        return Optional.of(list.get(0));
+    }
+
+    /**
+     * If {@link obj} is not {@code null}, the given function is applied with
+     * {@link obj} as argument.
+     *
+     * @param <T>
+     * @param obj
+     * @param func
+     */
+    public static <T> void ifPresent(T obj, Consumer<T> func) {
+        if (obj != null) {
+            func.accept(obj);
+        }
+    }
+
+    /**
+     * Returns the first element of the list, or null, if that list is empty.
+     *
+     * @param <T>
+     * @param list
+     * @return
+     */
+    public static <T> T firstOf(List<T> list) {
+        if (list.isEmpty()) {
+            return null;
+        }
+        return list.get(0);
+    }
+
+    /**
+     * Applies the given {@link Consuer} to the first element of {@link list},
+     * if {@link list} is not empty.
+     *
+     * @param <T>
+     * @param list
+     * @param consumer
+     * @return
+     */
+    public static <T> T firstOf(List<T> list, Consumer<T> consumer) {
+        if (!list.isEmpty()) {
+            T first = list.get(0);
+            consumer.accept(first);
+            return first;
+        }
+        return null;
     }
 
 }

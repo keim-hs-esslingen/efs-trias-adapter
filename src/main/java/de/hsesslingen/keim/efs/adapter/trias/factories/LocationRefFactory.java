@@ -55,7 +55,7 @@ public class LocationRefFactory {
         return ref;
     }
 
-    public static LocationRef fromLocation(Location location) {
+    public static LocationRef from(Location location) {
         var ref = new LocationRef();
 
         if (location.getStopPoint() != null) {

@@ -23,10 +23,11 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias;
 
+import static de.hsesslingen.keim.efs.adapter.trias.Utils.extract;
+import static de.hsesslingen.keim.efs.adapter.trias.Utils.firstOf;
+import static de.hsesslingen.keim.efs.adapter.trias.Utils.ifNotEmpty;
+import static de.hsesslingen.keim.efs.adapter.trias.Utils.ifPresent;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.ModeConverter.from;
-import static de.hsesslingen.keim.efs.adapter.trias.factories.TriasModelUtils.extract;
-import static de.hsesslingen.keim.efs.adapter.trias.factories.TriasModelUtils.firstOf;
-import static de.hsesslingen.keim.efs.adapter.trias.factories.TriasModelUtils.ifPresent;
 import de.hsesslingen.keim.efs.middleware.model.Leg;
 import de.hsesslingen.keim.efs.middleware.model.Option;
 import de.hsesslingen.keim.efs.middleware.model.Place;
@@ -40,18 +41,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import de.hsesslingen.keim.efs.adapter.trias.supertypes.ILegEnd;
 import de.hsesslingen.keim.efs.middleware.model.Asset;
+import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
 import static de.hsesslingen.keim.efs.middleware.utils.StringUtils.joinNonEmpty;
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
+import static de.hsesslingen.keim.efs.mobility.service.Mode.LEG_SWITCH;
 import de.vdv.trias.ContinuousModesEnumeration;
 import de.vdv.trias.IndividualModesEnumeration;
+import de.vdv.trias.InterchangeLeg;
 import de.vdv.trias.InterchangeModesEnumeration;
+import de.vdv.trias.LegTrack;
+import de.vdv.trias.NavigationPath;
+import de.vdv.trias.TrackSection;
 import de.vdv.trias.TripLeg;
 import de.vdv.trias.TripResult;
+import java.util.ArrayList;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
+import java.util.stream.Stream;
+import static org.apache.commons.lang3.ObjectUtils.isEmpty;
+import static org.apache.commons.lang3.ObjectUtils.isNotEmpty;
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -139,37 +150,113 @@ public class TriasResponseConverter {
         });
     }
 
+    private void enrichLegWithTrackInformation(Leg leg, Stream<TrackSection> sectionsStream) {
+        if (leg == null || isEmpty(sectionsStream)) {
+            return;
+        }
+
+        var geoPath = new ArrayList<ICoordinates>();
+
+        // triplength is calculated by summing up all TrackSection lengths.
+        var totalTrackLength = sectionsStream
+                // Filter null values, even though there should be any....
+                .filter(s -> s.getLength() != null)
+                // Copy all geo positions of this section to a single collection...
+                .peek(s -> geoPath.addAll(s.getProjection().getPosition()))
+                // Convert to length value for summing...
+                .mapToInt(s -> s.getLength().intValue())
+                .sum();
+
+        // Set distance and geoPath in leg...
+        leg.setDistanceMeter(totalTrackLength);
+        ifNotEmpty(geoPath, leg::setGeoPath);
+    }
+
+    private void enrichLegWithTrackInformation(Leg leg, LegTrack track) {
+        if (track == null) {
+            return;
+        }
+
+        enrichLegWithTrackInformation(leg, track.getTrackSection().stream());
+    }
+
+    private void enrichLegWithTrackInformation(Leg leg, NavigationPath path) {
+        if (path == null || isEmpty(path.getNavigationSection())) {
+            return;
+        }
+
+        // Prepare track sections stream...
+        var trackSectionsStream = path.getNavigationSection().stream()
+                .map(nsec -> nsec.getTrackSection())
+                .filter(tsec -> tsec != null);
+
+        enrichLegWithTrackInformation(leg, trackSectionsStream);
+    }
+
     /**
-     * Converts a {@link ContinuousLeg} to a {@link Leg}. A ContinuousLeg means
-     * a leg that is not bound to a timetable like walking, bicycle- or carride,
-     * ...
+     * Converts a {@link InterchangeLeg} to a {@link Leg}.
      *
-     * @param cLeg
+     * @param interLeg
+     * @param serviceId
      * @return
      */
-    public Leg createLeg(ContinuousLeg cLeg) {
+    public Leg createLeg(InterchangeLeg interLeg, String serviceId) {
         var leg = new Leg();
 
-        // origin Time
-        leg.setStartTime(cLeg.getTimeWindowStart());
-        leg.setFrom(TriasResponseConverter.this.createPlace(cLeg.getLegStart()));
-        leg.setEndTime(cLeg.getTimeWindowEnd());
-        leg.setTo(TriasResponseConverter.this.createPlace(cLeg.getLegEnd()));
+        leg.setStartTime(interLeg.getTimeWindowStart());
+        leg.setFrom(createPlace(interLeg.getLegStart()));
+        leg.setEndTime(interLeg.getTimeWindowEnd());
+        leg.setTo(createPlace(interLeg.getLegEnd()));
 
         // triplength
-        ifPresent(cLeg.getLength(), length -> {
+        ifPresent(interLeg.getLength(), length -> {
             leg.setDistanceMeter(length.intValue());
         });
 
-        Mode mode = from(cLeg);
+        // Set mode to LEG_SWITCH for interchange legs.
+        leg.setMode(LEG_SWITCH);
+
+        // Add track information from interLeg to leg.
+        enrichLegWithTrackInformation(leg, interLeg.getNavigationPath());
+
+        return leg;
+    }
+
+    /**
+     * Converts a {@link ContinuousLeg} to a {@link Leg}.A ContinuousLeg means a
+     * leg that is not bound to a timetable like walking, bicycle- or carride,
+     * ...
+     *
+     * @param contiLeg
+     * @param serviceId
+     * @return
+     */
+    public Leg createLeg(ContinuousLeg contiLeg, String serviceId) {
+        var leg = new Leg();
+
+        // origin Time
+        leg.setStartTime(contiLeg.getTimeWindowStart());
+        leg.setFrom(createPlace(contiLeg.getLegStart()));
+        leg.setEndTime(contiLeg.getTimeWindowEnd());
+        leg.setTo(createPlace(contiLeg.getLegEnd()));
+
+        // triplength
+        ifPresent(contiLeg.getLength(), length -> {
+            leg.setDistanceMeter(length.intValue());
+        });
+
+        Mode mode = from(contiLeg);
         leg.setMode(mode);
+
+        // Add track information from contiLeg to leg.
+        enrichLegWithTrackInformation(leg, contiLeg.getLegTrack());
 
         if (mode != Mode.WALK) {
             var asset = new Asset()
                     .setServiceId(serviceId)
                     .setMode(mode);
 
-            var service = cLeg.getService();
+            var service = contiLeg.getService();
 
             ifPresent(service.getJourneyRef(), ref -> {
                 asset.setId(ref.getValue());
@@ -192,13 +279,14 @@ public class TriasResponseConverter {
     }
 
     /**
-     * Converts a {@link TimedLeg} to a {@link Leg}. A TimedLeg means a leg with
+     * Converts a {@link TimedLeg} to a {@link Leg}.A TimedLeg means a leg with
      * timetabled schedule like Bus, Tram, Train,...
      *
      * @param timedLeg
+     * @param serviceId
      * @return
      */
-    public Leg createLeg(TimedLeg timedLeg) {
+    public Leg createLeg(TimedLeg timedLeg, String serviceId) {
         var leg = new Leg();
         var asset = new Asset().setServiceId(serviceId);
 
@@ -221,9 +309,8 @@ public class TriasResponseConverter {
             asset.setName(joinNonEmpty(" ", lineName, dstTxt));
         });
 
-        var attributes = service.getAttribute();
-        if (!attributes.isEmpty()) {
-            var description = attributes.stream()
+        if (isNotEmpty(service.getAttribute())) {
+            var description = service.getAttribute().stream()
                     .map(attr -> extract(attr.getText()))
                     .collect(joining("</p><p>"));
 
@@ -238,16 +325,8 @@ public class TriasResponseConverter {
         asset.setMode(mode);
         leg.setMode(mode);
 
-        // ### TRIP LENGTH ###
-        ifPresent(timedLeg.getLegTrack(), track -> {
-            // triplength is calculated by summing up all TrackSection lengths.
-            var totalTrackLength = track.getTrackSection().stream()
-                    .filter(s -> s.getLength() != null)
-                    .mapToInt(s -> s.getLength().intValue())
-                    .sum();
-
-            leg.setDistanceMeter(totalTrackLength);
-        });
+        // Add track information from timedLeg to leg.
+        enrichLegWithTrackInformation(leg, timedLeg.getLegTrack());
 
         // ### REST OF PLACE INFO ###
         try {
@@ -268,15 +347,20 @@ public class TriasResponseConverter {
      * Converts a {@link TripLeg} to a {@link Leg}.
      *
      * @param tripLeg
+     * @param serviceId
      * @return
      */
-    public Leg createLeg(TripLeg tripLeg) {
+    public Leg createLeg(TripLeg tripLeg, String serviceId) {
         if (tripLeg.getContinuousLeg() != null) {
-            return createLeg(tripLeg.getContinuousLeg());
+            return createLeg(tripLeg.getContinuousLeg(), serviceId);
         }
 
         if (tripLeg.getTimedLeg() != null) {
-            return TriasResponseConverter.this.createLeg(tripLeg.getTimedLeg());
+            return createLeg(tripLeg.getTimedLeg(), serviceId);
+        }
+
+        if (tripLeg.getInterchangeLeg() != null) {
+            return createLeg(tripLeg.getInterchangeLeg(), serviceId);
         }
 
         return null;
@@ -288,11 +372,9 @@ public class TriasResponseConverter {
             if (l.getContinuousLeg() != null) {
                 var service = l.getContinuousLeg().getService();
 
-                if (service.getIndividualMode() != null
-                        && service.getIndividualMode() == IndividualModesEnumeration.WALK) {
+                if (service.getIndividualMode() == IndividualModesEnumeration.WALK) {
                     return false;
-                } else if (service.getContinuousMode() != null
-                        && service.getContinuousMode() == ContinuousModesEnumeration.WALK) {
+                } else if (service.getContinuousMode() == ContinuousModesEnumeration.WALK) {
                     return false;
                 }
             }
@@ -300,11 +382,9 @@ public class TriasResponseConverter {
             if (l.getInterchangeLeg() != null) {
                 var leg = l.getInterchangeLeg();
 
-                if (leg.getInterchangeMode() != null
-                        && leg.getInterchangeMode() == InterchangeModesEnumeration.WALK) {
+                if (leg.getInterchangeMode() == InterchangeModesEnumeration.WALK) {
                     return false;
-                } else if (leg.getContinuousMode() != null
-                        && leg.getContinuousMode() == ContinuousModesEnumeration.WALK) {
+                } else if (leg.getContinuousMode() == ContinuousModesEnumeration.WALK) {
                     return false;
                 }
             }
@@ -330,7 +410,7 @@ public class TriasResponseConverter {
 
         // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
         var legs = tripResult.getTrip().getTripLeg().stream()
-                .map(this::createLeg)
+                .map(tripLeg -> createLeg(tripLeg, serviceId))
                 .filter(leg -> leg != null)
                 .peek(leg -> {
                     if (leg.getMode() != Mode.WALK) {

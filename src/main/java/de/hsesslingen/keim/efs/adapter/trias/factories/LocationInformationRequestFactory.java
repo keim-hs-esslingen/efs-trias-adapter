@@ -56,9 +56,14 @@ public class LocationInformationRequestFactory {
     }
 
     public static LocationInformationRequest byLocationRef(LocationRef value) {
-        var locationInformationRequest = new LocationInformationRequest();
-        locationInformationRequest.setLocationRef(value);
-        return locationInformationRequest;
+        return new LocationInformationRequest()
+                .setLocationRef(value);
+    }
+
+    public static LocationInformationRequest byLocationRef(LocationRef value, LocationParam restrictions) {
+        return new LocationInformationRequest()
+                .setLocationRef(value)
+                .setRestrictions(restrictions);
     }
 
     /**
