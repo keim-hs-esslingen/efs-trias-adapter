@@ -25,7 +25,6 @@ package de.hsesslingen.keim.efs.adapter.trias;
 
 import static de.hsesslingen.keim.efs.adapter.trias.Utils.extract;
 import static de.hsesslingen.keim.efs.adapter.trias.Utils.firstOf;
-import static de.hsesslingen.keim.efs.adapter.trias.Utils.ifNotEmpty;
 import static de.hsesslingen.keim.efs.adapter.trias.Utils.ifPresent;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.ModeConverter.from;
 import de.hsesslingen.keim.efs.middleware.model.Leg;
@@ -41,6 +40,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import de.hsesslingen.keim.efs.adapter.trias.supertypes.ILegEnd;
 import de.hsesslingen.keim.efs.middleware.model.Asset;
+import de.hsesslingen.keim.efs.middleware.model.Coordinates;
 import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
 import static de.hsesslingen.keim.efs.middleware.utils.StringUtils.joinNonEmpty;
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
@@ -169,7 +169,14 @@ public class TriasResponseConverter {
 
         // Set distance and geoPath in leg...
         leg.setDistanceMeter(totalTrackLength);
-        ifNotEmpty(geoPath, leg::setGeoPath);
+
+        if (isNotEmpty(geoPath)) {
+            leg.setGeoPath(
+                    geoPath.stream()
+                            .map(Coordinates::copy)
+                            .collect(toList())
+            );
+        }
     }
 
     private void enrichLegWithTrackInformation(Leg leg, LegTrack track) {
