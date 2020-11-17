@@ -30,6 +30,7 @@ import de.vdv.trias.IndividualModesEnumeration;
 import de.vdv.trias.InterchangeLeg;
 import de.vdv.trias.InterchangeModesEnumeration;
 import de.vdv.trias.PtModesEnumeration;
+import de.vdv.trias.TelecabinSubmodeEnumeration;
 import de.vdv.trias.TimedLeg;
 
 /**
@@ -43,15 +44,14 @@ public class ModeConverter {
             case WALK:
                 return Mode.WALK;
             case CYCLE:
-            case MOTORCYCLE:
                 return Mode.BICYCLE;
             case TAXI:
+            case OTHERS_DRIVE_CAR:
                 return Mode.TAXI;
             case SELF_DRIVE_CAR:
             case TRUCK:
+            case MOTORCYCLE:
                 return Mode.CAR;
-            case OTHERS_DRIVE_CAR:
-                return Mode.BUSISH;
             default:
                 return null;
         }
@@ -112,73 +112,107 @@ public class ModeConverter {
         return from(leg, null);
     }
 
-    public static Mode from(PtModesEnumeration mode) {
-        switch (mode) {
+    public static Mode from(de.vdv.trias.Mode mode, Mode fallback) {
+        var ptMode = mode.getPtMode();
+
+        switch (ptMode) {
             case BUS:
             case TROLLEY_BUS:
                 return Mode.BUS;
             case COACH:
-                return Mode.BUSISH;
+                return Mode.OTHER;
             case TRAM:
                 return Mode.TRAM;
             case TAXI:
                 return Mode.TAXI;
             case METRO:
-                return Mode.SUBWAY;
+                return Mode.METRO;
             case RAIL:
             case INTERCITY_RAIL:
+            case URBAN_RAIL:
                 return Mode.RAIL;
             case FUNICULAR:
                 return Mode.FUNICULAR;
             case WATER:
                 return Mode.FERRY;
             case CABLEWAY:
-                return Mode.GONDOLA;
-            case URBAN_RAIL:
-                return Mode.TRAINISH;
+                switch (mode.getTelecabinSubmode()) {
+                    case CABLE_CAR:
+                    case UNDEFINED:
+                    case UNKNOWN:
+                        return Mode.CABLE_TRAM;
+                    default:
+                        return Mode.AERIAL_LIFT;
+                }
+            case AIR:
+                return Mode.FLIGHT;
+            case ALL:
+                return Mode.MULTIPLE;
             default:
-                return null;
+                return fallback;
         }
     }
 
     public static Mode from(de.vdv.trias.Mode mode) {
-        return from(mode.getPtMode());
+        return from(mode, null);
+    }
+
+    public static Mode from(TimedLeg leg, Mode fallback) {
+        return from(leg.getService().getServiceSection().get(0).getMode(), fallback);
     }
 
     public static Mode from(TimedLeg leg) {
-        return from(leg.getService().getServiceSection().get(0).getMode());
+        return from(leg.getService().getServiceSection().get(0).getMode(), null);
     }
 
-    public static PtModesEnumeration toPtMode(Mode mode) {
+    public static de.vdv.trias.Mode toTriasMode(Mode mode) {
+        var res = new de.vdv.trias.Mode();
+
         switch (mode) {
             case BUS:
-                return PtModesEnumeration.BUS;
-            case BUSISH:
-                return PtModesEnumeration.TROLLEY_BUS;
-            case CABLE_CAR:
-            case GONDOLA:
-                return PtModesEnumeration.CABLEWAY;
+                res.setPtMode(PtModesEnumeration.BUS);
+                break;
+            case CABLE_TRAM:
+                res.setPtMode(PtModesEnumeration.CABLEWAY);
+                res.setTelecabinSubmode(TelecabinSubmodeEnumeration.CABLE_CAR);
+                break;
+            case AERIAL_LIFT:
+                res.setPtMode(PtModesEnumeration.CABLEWAY);
+                res.setTelecabinSubmode(TelecabinSubmodeEnumeration.TELECABIN);
+                break;
             case FUNICULAR:
-                return PtModesEnumeration.FUNICULAR;
+                res.setPtMode(PtModesEnumeration.FUNICULAR);
+                break;
             case FERRY:
-                return PtModesEnumeration.WATER;
+            case GONDOLA:
+                res.setPtMode(PtModesEnumeration.WATER);
+                break;
             case RAIL:
-                return PtModesEnumeration.RAIL;
+                res.setPtMode(PtModesEnumeration.RAIL);
+                break;
             case TRAM:
-                return PtModesEnumeration.TRAM;
-            case TRAINISH:
-                return PtModesEnumeration.URBAN_RAIL;
+                res.setPtMode(PtModesEnumeration.TRAM);
+                break;
+            case METRO:
+                res.setPtMode(PtModesEnumeration.METRO);
+                break;
             case TAXI:
-                return PtModesEnumeration.TAXI;
-            case SUBWAY:
-                return PtModesEnumeration.METRO;
+                res.setPtMode(PtModesEnumeration.TAXI);
+                break;
+            case FLIGHT:
+                res.setPtMode(PtModesEnumeration.AIR);
+                break;
             case CAR:
             case WALK:
             case BICYCLE:
             case LEG_SWITCH:
-            case TRANSIT:
+            case KICK_SCOOTER:
+            case OTHER:
+            case MULTIPLE:
             default:
-                return null;
+                res.setPtMode(PtModesEnumeration.UNKNOWN);
         }
+
+        return res;
     }
 }

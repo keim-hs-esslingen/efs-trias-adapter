@@ -25,7 +25,6 @@ package de.hsesslingen.keim.efs.adapter.trias;
 
 import static de.hsesslingen.keim.efs.adapter.trias.TriasConfig.TRIAS_VERSION;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextFactory.from;
-import static de.hsesslingen.keim.efs.adapter.trias.factories.ModeConverter.toPtMode;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TripRequestBuilder;
 import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
@@ -34,7 +33,6 @@ import de.hsesslingen.keim.efs.middleware.model.Option;
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.provider.IOptionsService;
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
-import de.hsesslingen.keim.efs.mobility.service.MobilityType;
 import de.hsesslingen.keim.efs.mobility.service.Mode;
 import de.vdv.trias.PtModeFilter;
 import de.vdv.trias.TripParam;
@@ -51,6 +49,7 @@ import static org.apache.commons.lang3.ObjectUtils.isNotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import static de.hsesslingen.keim.efs.adapter.trias.factories.ModeConverter.toTriasMode;
 
 /**
  * The class TriasAdapterService is the Implementation of the Interface
@@ -94,7 +93,6 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
             Integer radiusMeter,
             Boolean sharingAllowed,
             Set<Mode> modesAllowed,
-            Set<MobilityType> mobilityTypesAllowed,
             Integer limitTo,
             Boolean includeGeoPaths,
             TriasCredentials credentials
@@ -115,7 +113,9 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
             var filter = new PtModeFilter();
 
             modesAllowed.stream()
-                    .map(m -> toPtMode(m))
+                    .map(m -> toTriasMode(m))
+                    .filter(tm -> tm != null)
+                    .map(tm -> tm.getPtMode())
                     .filter(pt -> pt != null)
                     .forEach(filter.getPtMode()::add);
 
