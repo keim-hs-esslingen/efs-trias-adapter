@@ -464,7 +464,7 @@ public class TriasResponseConverter {
         superLeg.setMode(longest.getMode());
         superLeg.setAsset(longest.getAsset());
 
-        return new Option(serviceId, superLeg);
+        return new Option(serviceId, superLeg, false);
     }
 
     public List<Option> extractOptions(Trias responseTrias, Integer limitTo) {
