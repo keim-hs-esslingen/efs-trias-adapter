@@ -45,11 +45,11 @@ import java.util.List;
 import java.util.Set;
 import javax.annotation.PostConstruct;
 import javax.xml.bind.JAXBException;
-import static org.apache.commons.lang3.ObjectUtils.isNotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.ModeConverter.toTriasMode;
+import static org.springframework.util.CollectionUtils.isEmpty;
 
 /**
  * The class TriasAdapterService is the Implementation of the Interface
@@ -73,6 +73,9 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
     @Autowired
     private TriasResponseConverter responseConverter;
 
+    @Autowired
+    private PtModeFilterConfig ptModeFilterConfig;
+
     @PostConstruct
     public void init() {
         if (apiUserReference == null || apiUserReference.isBlank()) {
@@ -82,6 +85,74 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
 
     private TriasServiceRequest createTripRequestTrias(TripRequest request) {
         return new TriasServiceRequest(TRIAS_VERSION, apiUserReference).tripRequest(request);
+    }
+
+    /**
+     * Adds the {@link PtModeEnumeration} and alls sub modes from {@link src} to
+     * the filter, except for those, which are configured to be excluded in
+     * {@link PtModeFilterConfig}.
+     *
+     * @param target
+     * @param src
+     */
+    private void addAllExceptConfigured(PtModeFilter target, de.vdv.trias.Mode src) {
+        // Add only those modes and submodes that are not excluded by configuration.
+        if (!ptModeFilterConfig.getPtModes().contains(src.getPtMode())) {
+            target.getPtMode().add(src.getPtMode());
+        }
+
+        var submodes = target.getPtSubmodeChoiceGroup();
+
+        if (!ptModeFilterConfig.getAirSub().contains(src.getAirSubmode())) {
+            submodes.add(src.getAirSubmode());
+        }
+        if (!ptModeFilterConfig.getBusSub().contains(src.getBusSubmode())) {
+            submodes.add(src.getBusSubmode());
+        }
+        if (!ptModeFilterConfig.getCoachSub().contains(src.getCoachSubmode())) {
+            submodes.add(src.getCoachSubmode());
+        }
+        if (!ptModeFilterConfig.getFunicularSub().contains(src.getFunicularSubmode())) {
+            submodes.add(src.getFunicularSubmode());
+        }
+        if (!ptModeFilterConfig.getMetroSub().contains(src.getMetroSubmode())) {
+            submodes.add(src.getMetroSubmode());
+        }
+        if (!ptModeFilterConfig.getRailSub().contains(src.getRailSubmode())) {
+            submodes.add(src.getRailSubmode());
+        }
+        if (!ptModeFilterConfig.getTelecabinSub().contains(src.getTelecabinSubmode())) {
+            submodes.add(src.getTelecabinSubmode());
+        }
+        if (!ptModeFilterConfig.getTramSub().contains(src.getTramSubmode())) {
+            submodes.add(src.getTramSubmode());
+        }
+        if (!ptModeFilterConfig.getWaterSub().contains(src.getWaterSubmode())) {
+            submodes.add(src.getWaterSubmode());
+        }
+    }
+
+    private PtModeFilter createFilter(Set<Mode> modesAllowed) {
+        if (!isEmpty(modesAllowed)) {
+            var filter = new PtModeFilter().setExclude(false);
+
+            // We have a list of allowed modes. Add those as non-excluded filter modes.
+            modesAllowed.stream()
+                    .map(m -> toTriasMode(m))
+                    .filter(tm -> tm != null)
+                    .forEach(tm -> addAllExceptConfigured(filter, tm));
+
+            return filter;
+
+        } else if (ptModeFilterConfig.hasExcludedSubModes()) {
+            var filter = new PtModeFilter().setExclude(true);
+            // Simply add all configured excluded modes from ptModeFilterConfig to the filter.
+            filter.getPtMode().addAll(ptModeFilterConfig.getPtModes());
+            filter.getPtSubmodeChoiceGroup().addAll(ptModeFilterConfig.getAllSubmodes());
+            return filter;
+        }
+
+        return null;
     }
 
     @Override
@@ -107,20 +178,8 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
                 .setIncludeEstimatedTimes(true)
                 .setIncludeLegProjection(includeGeoPaths)
                 .setIncludeTrackSections(includeGeoPaths)
-                .setNumberOfResults(limitTo != null ? valueOf(limitTo) : defaultNumberOfResults);
-
-        if (isNotEmpty(modesAllowed)) {
-            var filter = new PtModeFilter();
-
-            modesAllowed.stream()
-                    .map(m -> toTriasMode(m))
-                    .filter(tm -> tm != null)
-                    .map(tm -> tm.getPtMode())
-                    .filter(pt -> pt != null)
-                    .forEach(filter.getPtMode()::add);
-
-            params.setPtModeFilter(filter);
-        }
+                .setNumberOfResults(limitTo != null ? valueOf(limitTo) : defaultNumberOfResults)
+                .setPtModeFilter(createFilter(modesAllowed));
 
         var tripRequest = new TripRequestBuilder()
                 .origin(from(from, startTime))
