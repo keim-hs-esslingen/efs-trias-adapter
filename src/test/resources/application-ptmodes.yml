@@ -1,0 +1,20 @@
+middleware:
+  service-directory-url: http://localhost:9900/api
+  provider:
+    mobility-service:
+      id: vrn
+      provider-name: VRN
+      service-name: Verkehrsverbund Rhein-Neckar
+      service-url: http://localhost:9922/api
+      service-area: Heidelberg City plus suburban area
+      modes: BUS,TRAM,CABLE_TRAM
+      apis: OPTIONS_API,BOOKING_API,PLACES_API
+
+trias:    
+  api-url: https://trias.vrn.de/Middleware/trias
+  trias-version: 1.2
+  number-of-results: 3
+  api-user-reference: HS-ESSLINGEN
+  excluded-pt-modes:
+    pt-modes: AIR,INTERCITY_RAIL
+    water-sub: POST_BOAT

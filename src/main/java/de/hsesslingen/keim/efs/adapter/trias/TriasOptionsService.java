@@ -132,7 +132,16 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
         }
     }
 
-    private PtModeFilter createFilter(Set<Mode> modesAllowed) {
+    /**
+     * Creates a filter based on requested allowed modes and configured excluded
+     * modes.
+     * <p>
+     * This method is protected to be able to run unit tests against it.
+     *
+     * @param modesAllowed
+     * @return
+     */
+    protected PtModeFilter createFilter(Set<Mode> modesAllowed) {
         if (!isEmpty(modesAllowed)) {
             var filter = new PtModeFilter().setExclude(false);
 
@@ -144,7 +153,7 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
 
             return filter;
 
-        } else if (ptModeFilterConfig.hasExcludedSubModes()) {
+        } else if (ptModeFilterConfig.hasExcludedModes()) {
             var filter = new PtModeFilter().setExclude(true);
             // Simply add all configured excluded modes from ptModeFilterConfig to the filter.
             filter.getPtMode().addAll(ptModeFilterConfig.getPtModes());

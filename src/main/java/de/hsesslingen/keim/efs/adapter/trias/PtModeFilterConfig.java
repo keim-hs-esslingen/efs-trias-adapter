@@ -35,7 +35,6 @@ import de.vdv.trias.TramSubmodeEnumeration;
 import de.vdv.trias.WaterSubmodeEnumeration;
 import java.util.ArrayList;
 import java.util.List;
-import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
@@ -50,45 +49,115 @@ import org.springframework.validation.annotation.Validated;
 @ConfigurationProperties(prefix = "trias.excluded-pt-modes")
 public class PtModeFilterConfig {
 
-    @Getter
     @Setter
     private List<PtModesEnumeration> ptModes;
 
-    @Getter
     @Setter
     private List<AirSubmodeEnumeration> airSub;
 
-    @Getter
     @Setter
     private List<BusSubmodeEnumeration> busSub;
 
-    @Getter
     @Setter
     private List<CoachSubmodeEnumeration> coachSub;
 
-    @Getter
     @Setter
     private List<FunicularSubmodeEnumeration> funicularSub;
 
-    @Getter
     @Setter
     private List<MetroSubmodeEnumeration> metroSub;
 
-    @Getter
     @Setter
     private List<RailSubmodeEnumeration> railSub;
 
-    @Getter
     @Setter
     private List<TelecabinSubmodeEnumeration> telecabinSub;
 
-    @Getter
     @Setter
     private List<TramSubmodeEnumeration> tramSub;
 
-    @Getter
     @Setter
     private List<WaterSubmodeEnumeration> waterSub;
+
+    public List<PtModesEnumeration> getPtModes() {
+        if (ptModes == null) {
+            ptModes = new ArrayList<>();
+        }
+
+        return ptModes;
+    }
+
+    public List<AirSubmodeEnumeration> getAirSub() {
+        if (airSub == null) {
+            airSub = new ArrayList<>();
+        }
+
+        return airSub;
+    }
+
+    public List<BusSubmodeEnumeration> getBusSub() {
+        if (busSub == null) {
+            busSub = new ArrayList<>();
+        }
+
+        return busSub;
+    }
+
+    public List<CoachSubmodeEnumeration> getCoachSub() {
+        if (coachSub == null) {
+            coachSub = new ArrayList<>();
+        }
+
+        return coachSub;
+    }
+
+    public List<FunicularSubmodeEnumeration> getFunicularSub() {
+        if (funicularSub == null) {
+            funicularSub = new ArrayList<>();
+        }
+
+        return funicularSub;
+    }
+
+    public List<MetroSubmodeEnumeration> getMetroSub() {
+        if (metroSub == null) {
+            metroSub = new ArrayList<>();
+        }
+
+        return metroSub;
+    }
+
+    public List<RailSubmodeEnumeration> getRailSub() {
+        if (railSub == null) {
+            railSub = new ArrayList<>();
+        }
+
+        return railSub;
+    }
+
+    public List<TelecabinSubmodeEnumeration> getTelecabinSub() {
+        if (telecabinSub == null) {
+            telecabinSub = new ArrayList<>();
+        }
+
+        return telecabinSub;
+    }
+
+    public List<TramSubmodeEnumeration> getTramSub() {
+        if (tramSub == null) {
+            tramSub = new ArrayList<>();
+        }
+
+        return tramSub;
+    }
+
+    public List<WaterSubmodeEnumeration> getWaterSub() {
+        if (waterSub == null) {
+            waterSub = new ArrayList<>();
+        }
+
+        return waterSub;
+    }
 
     private boolean hasCollectedSubmodes = false;
     private List<Object> allSubmodes;
@@ -99,15 +168,15 @@ public class PtModeFilterConfig {
             allSubmodes = (allSubmodes != null) ? allSubmodes : new ArrayList<>();
             allSubmodes.clear(); // Clear once.
 
-            allSubmodes.addAll(airSub);
-            allSubmodes.addAll(busSub);
-            allSubmodes.addAll(coachSub);
-            allSubmodes.addAll(funicularSub);
-            allSubmodes.addAll(metroSub);
-            allSubmodes.addAll(railSub);
-            allSubmodes.addAll(telecabinSub);
-            allSubmodes.addAll(tramSub);
-            allSubmodes.addAll(waterSub);
+            allSubmodes.addAll(getAirSub());
+            allSubmodes.addAll(getBusSub());
+            allSubmodes.addAll(getCoachSub());
+            allSubmodes.addAll(getFunicularSub());
+            allSubmodes.addAll(getMetroSub());
+            allSubmodes.addAll(getRailSub());
+            allSubmodes.addAll(getTelecabinSub());
+            allSubmodes.addAll(getTramSub());
+            allSubmodes.addAll(getWaterSub());
 
             hasCollectedSubmodes = true;
         }
@@ -115,7 +184,7 @@ public class PtModeFilterConfig {
         return allSubmodes;
     }
 
-    public boolean hasExcludedSubModes() {
-        return getAllSubmodes().size() > 0;
+    public boolean hasExcludedModes() {
+        return getPtModes().size() > 0 || getAllSubmodes().size() > 0;
     }
 }
