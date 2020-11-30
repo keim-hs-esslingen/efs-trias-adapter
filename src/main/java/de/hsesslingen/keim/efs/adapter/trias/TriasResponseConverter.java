@@ -412,8 +412,8 @@ public class TriasResponseConverter {
         var nonWalkLegsCount = new int[]{0};
 
         // Initialize an array of legs to collect special legs.
-        // 0 = first non-walk leg, 1 = last non-walk leg, 2 = longest leg in collection
-        var specialLegs = new Leg[3];
+        // 0 = first non-walk leg, 1 = last non-walk leg
+        var specialLegs = new Leg[2];
 
         // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
         var legs = tripResult.getTrip().getTripLeg().stream()
@@ -430,23 +430,18 @@ public class TriasResponseConverter {
 
                         // Set last leg... (can be same as first leg)
                         specialLegs[1] = leg;
-
-                        // Check if current leg is longer that longest leg so far...
-                        if (specialLegs[2] == null
-                                || specialLegs[2].getDistanceMeter() < leg.getDistanceMeter()) {
-                            specialLegs[2] = leg;
-                        }
                     }
                 })
                 .collect(toList());
 
-        if (nonWalkLegsCount[0] == 0) {
+        var numberOfNonWalkLegs = nonWalkLegsCount[0];
+
+        if (numberOfNonWalkLegs == 0) {
             return null;
         }
 
         var first = specialLegs[0];
         var last = specialLegs[1];
-        var longest = specialLegs[2];
 
         // Initialize the super leg, which is the leg that spans from first to last non-walk legs.
         var superLeg = new Leg();
@@ -461,10 +456,16 @@ public class TriasResponseConverter {
         superLeg.setTo(last.getTo());
 
         superLeg.setSubLegs(legs);
-        superLeg.setMode(longest.getMode());
-        superLeg.setAsset(longest.getAsset());
 
-        return new Option(serviceId, superLeg, false);
+        if (numberOfNonWalkLegs > 1) {
+            superLeg.setMode(Mode.MULTIPLE);
+        } else {
+            superLeg.setMode(first.getMode());
+            superLeg.setAsset(first.getAsset());
+        }
+
+        return new Option(serviceId, superLeg,
+                false);
     }
 
     public List<Option> extractOptions(Trias responseTrias, Integer limitTo) {
