@@ -1,5 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 de.hsesslingen.keim.efs.adapter.trias.TriasProxy,\
-de.hsesslingen.keim.efs.adapter.trias.TriasLocationInformationService,\
-de.hsesslingen.keim.efs.adapter.trias.TriasResponseConverter,\
+de.hsesslingen.keim.efs.adapter.trias.TriasLocationInfoService,\
 de.hsesslingen.keim.efs.adapter.trias.PtModeFilterConfig

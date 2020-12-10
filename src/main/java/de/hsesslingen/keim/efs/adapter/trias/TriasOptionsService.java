@@ -24,6 +24,7 @@
 package de.hsesslingen.keim.efs.adapter.trias;
 
 import static de.hsesslingen.keim.efs.adapter.trias.TriasConfig.TRIAS_VERSION;
+import de.hsesslingen.keim.efs.adapter.trias.factories.LegFactory;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextFactory.from;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TripRequestBuilder;
@@ -49,6 +50,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.ModeConverter.toTriasMode;
+import de.hsesslingen.keim.efs.middleware.model.Leg;
+import de.vdv.trias.ContinuousModesEnumeration;
+import de.vdv.trias.IndividualModesEnumeration;
+import de.vdv.trias.InterchangeModesEnumeration;
+import de.vdv.trias.Trias;
+import de.vdv.trias.TripResult;
+import static java.util.stream.Collectors.toList;
 import static org.springframework.util.CollectionUtils.isEmpty;
 
 /**
@@ -70,8 +78,11 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
     @Value("${trias.number-of-results:5}")
     private BigInteger defaultNumberOfResults;
 
+    @Value("${middleware.provider.mobility-service.id}")
+    private String serviceId;
+
     @Autowired
-    private TriasResponseConverter responseConverter;
+    private TriasLocationInfoService locationService;
 
     @Autowired
     private PtModeFilterConfig ptModeFilterConfig;
@@ -164,6 +175,120 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
         return null;
     }
 
+    private boolean canConvertTripResultToOption(TripResult tripResult) {
+        // Check if any of the contained legs is NOT a walk leg.
+        return tripResult.getTrip().getTripLeg().stream().anyMatch(l -> {
+            if (l.getContinuousLeg() != null) {
+                var service = l.getContinuousLeg().getService();
+
+                if (service.getIndividualMode() == IndividualModesEnumeration.WALK) {
+                    return false;
+                } else if (service.getContinuousMode() == ContinuousModesEnumeration.WALK) {
+                    return false;
+                }
+            }
+
+            if (l.getInterchangeLeg() != null) {
+                var leg = l.getInterchangeLeg();
+
+                if (leg.getInterchangeMode() == InterchangeModesEnumeration.WALK) {
+                    return false;
+                } else if (leg.getContinuousMode() == ContinuousModesEnumeration.WALK) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+    }
+
+    /**
+     * Each trip result from TRIAS represents an Option from EFS
+     *
+     * @param tripResult
+     * @return
+     */
+    private Option createOption(TripResult tripResult) {
+
+        // Initializing some one-value-arrays that will be populated in the following stream.
+        var nonWalkLegsCount = new int[]{0};
+
+        // Initialize an array of legs to collect special legs.
+        // 0 = first non-walk leg, 1 = last non-walk leg
+        var specialLegs = new Leg[2];
+
+        // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
+        var legs = tripResult.getTrip().getTripLeg().stream()
+                .map(tripLeg -> LegFactory.from(tripLeg, serviceId, locationService::getGeoPosition))
+                .filter(leg -> leg != null)
+                .peek(leg -> {
+                    if (leg.getMode() != Mode.WALK) {
+                        ++nonWalkLegsCount[0];
+
+                        // Set first leg...
+                        if (specialLegs[0] == null) {
+                            specialLegs[0] = leg;
+                        }
+
+                        // Set last leg... (can be same as first leg)
+                        specialLegs[1] = leg;
+                    }
+                })
+                .collect(toList());
+
+        var numberOfNonWalkLegs = nonWalkLegsCount[0];
+
+        if (numberOfNonWalkLegs == 0) {
+            return null;
+        }
+
+        var first = specialLegs[0];
+        var last = specialLegs[1];
+
+        // Initialize the super leg, which is the leg that spans from first to last non-walk legs.
+        var superLeg = new Leg();
+
+        // since the efsMaas  Option- Object can contain just one MainLeg (LegBaseItem) a workaround is done here 
+        //assign the StartTime and OriginPlace of the first Leg to the legBaseItem
+        superLeg.setStartTime(first.getStartTime());
+        superLeg.setFrom(first.getFrom());
+
+        //assign the EndTime and DestinationPlace of the last Leg to the legBaseItem
+        superLeg.setEndTime(last.getEndTime());
+        superLeg.setTo(last.getTo());
+
+        superLeg.setSubLegs(legs);
+
+        if (numberOfNonWalkLegs > 1) {
+            superLeg.setMode(Mode.MULTIPLE);
+        } else {
+            superLeg.setMode(first.getMode());
+            superLeg.setAsset(first.getAsset());
+        }
+
+        return new Option(serviceId, superLeg,
+                false);
+    }
+
+    private List<Option> extractOptions(Trias responseTrias, Integer limitTo) {
+        // Convert the trip results in parallel to options...
+        var stream = responseTrias.getServiceDelivery()
+                .getDeliveryPayload()
+                .getTripResponse()
+                .getTripResult()
+                .stream()
+                .filter(this::canConvertTripResultToOption);
+
+        // If required, limit to given value.
+        if (limitTo != null) {
+            stream = stream.limit(limitTo);
+        }
+
+        return stream.map(this::createOption)
+                .filter(opt -> opt != null)
+                .collect(toList());
+    }
+
     @Override
     public List<Option> getOptions(
             Place from,
@@ -202,7 +327,7 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
                     .go()
                     .getBody();
 
-            return responseConverter.extractOptions(responseTrias, limitTo);
+            return extractOptions(responseTrias, limitTo);
         } catch (JAXBException ex) {
             throw internalServerError("An error occured when converting to or from XML.");
         }

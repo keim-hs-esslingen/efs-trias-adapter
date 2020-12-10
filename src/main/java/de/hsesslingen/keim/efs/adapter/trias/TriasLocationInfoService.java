@@ -35,15 +35,10 @@ import de.vdv.trias.StopPointRef;
 import de.vdv.trias.Trias;
 import java.math.BigInteger;
 import java.util.List;
-import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import static de.hsesslingen.keim.efs.adapter.trias.Utils.nullsafe;
-import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory.byInitialInput;
-import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory.byLocationRef;
-import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationInformationRequestFactory.byStopPointRef;
-import de.hsesslingen.keim.efs.adapter.trias.factories.PlaceFactory;
 import de.hsesslingen.keim.efs.middleware.provider.IPlacesService;
 import de.vdv.trias.InitialLocationInput;
 import de.vdv.trias.LocationInformationRequest;
@@ -58,9 +53,12 @@ import java.util.concurrent.Future;
 import java.util.stream.Stream;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Qualifier;
-import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationRefFactory.from;
+import de.hsesslingen.keim.efs.adapter.trias.factories.LocationRefFactory;
+import de.hsesslingen.keim.efs.adapter.trias.factories.PlaceFactory;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
+import static java.util.stream.Collectors.toList;
 import static org.slf4j.LoggerFactory.getLogger;
+import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationInfoRequestFactory.from;
 
 /**
  * The class TriasLocationInformationService is a Service to covert public
@@ -69,15 +67,18 @@ import static org.slf4j.LoggerFactory.getLogger;
  * @author Ben Oesch and Emanuel Reichsöllner
  */
 @Service
-public class TriasLocationInformationService implements IPlacesService<TriasCredentials> {
+public class TriasLocationInfoService implements IPlacesService<TriasCredentials> {
 
-    private static final Logger logger = getLogger(TriasLocationInformationService.class);
+    private static final Logger logger = getLogger(TriasLocationInfoService.class);
 
     @Value("${trias.api-user-reference}")
     private String apiUserReference;
 
     @Value("${trias.defaults.place-search-radius-meter:500}")
     private int defaultSearchRadius;
+
+    @Value("${middleware.provider.mobility-service.id}")
+    private String serviceId;
 
     @Autowired
     private TriasProxy proxy;
@@ -91,15 +92,15 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
     }
 
     public Trias createInfoRequest(StopPointRef stopPointRef) {
-        return createInfoRequest(byStopPointRef(stopPointRef));
+        return createInfoRequest(from(stopPointRef));
     }
 
     public Trias createInfoRequest(LocationRef locationRef) {
-        return createInfoRequest(byLocationRef(locationRef));
+        return createInfoRequest(from(locationRef));
     }
 
     public Trias createInfoRequest(LocationRef locationRef, LocationParam restrictions) {
-        return createInfoRequest(byLocationRef(locationRef, restrictions));
+        return createInfoRequest(from(locationRef, restrictions));
     }
 
     /**
@@ -110,9 +111,9 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
      * @return GeoPosition
      * @throws AbstractEfsException
      */
-    public GeoPosition getGeoPositionFromStopPoint(StopPointRef stopPointRef) throws AbstractEfsException {
+    public GeoPosition getGeoPosition(StopPointRef stopPointRef) throws AbstractEfsException {
 
-        Trias locationRequestTrias = TriasLocationInformationService.this.createInfoRequest(stopPointRef);
+        Trias locationRequestTrias = TriasLocationInfoService.this.createInfoRequest(stopPointRef);
 
         Trias responseLocationTrias = proxy.send(locationRequestTrias);
 
@@ -142,7 +143,7 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
             var radius = radiusMeter != null ? radiusMeter : defaultSearchRadius;
 
             var circle = new GeoCircle();
-            circle.setCenter(GeoPositionFactory.create(circleCenter));
+            circle.setCenter(GeoPositionFactory.from(circleCenter));
             circle.setRadius(BigInteger.valueOf(radius));
 
             restrictions = new GeoRestrictions().setCircle(circle);
@@ -174,8 +175,8 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
         var futures = initialResults
                 // The following map function returns a future that is collected in a list.
                 // In a second stream, these futures are resolved using the get() method.
-                .map(result -> asyncFuture(() -> getLocationInformation(from(result.getLocation()), null)))
-                .collect(Collectors.toList());
+                .map(result -> asyncFuture(() -> getLocationInformation(LocationRefFactory.from(result.getLocation()), null)))
+                .collect(toList());
 
         // Resolve futures with more information about result locations.
         // The resolved results are covnerted to places on the fly.
@@ -193,15 +194,15 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
                 .map(result -> result.getLocation())
                 .filter(location -> location != null)
                 // Convert location result to place...
-                .map(location -> PlaceFactory.fromLocation(location))
-                .collect(Collectors.toList());
+                .map(location -> PlaceFactory.from(location, serviceId))
+                .collect(toList());
 
         return places;
     }
 
     private LocationResult getLocationInformation(LocationRef reference, LocationParam restrictions) {
 
-        var request = TriasLocationInformationService.this.createInfoRequest(reference, restrictions);
+        var request = createInfoRequest(reference, restrictions);
 
         var response = proxy.send(request);
 
@@ -236,7 +237,7 @@ public class TriasLocationInformationService implements IPlacesService<TriasCred
 
         var params = new LocationParam();
 
-        var request = createInfoRequest(byInitialInput(initialInput, params));
+        var request = createInfoRequest(from(initialInput, params));
 
         var requests = new ContinuousTriasRequests(proxy, request,
                 previousResponse -> {

@@ -36,31 +36,31 @@ import de.vdv.trias.StopPointRef;
  *
  * @author keim
  */
-public class LocationInformationRequestFactory {
+public class LocationInfoRequestFactory {
 
-    public static LocationInformationRequest byInitialInput(InitialLocationInput initialInput) {
-        return byInitialInput(initialInput, null);
+    public static LocationInformationRequest from(InitialLocationInput initialInput) {
+        return LocationInfoRequestFactory.from(initialInput, null);
     }
 
-    public static LocationInformationRequest byInitialInput(InitialLocationInput initialInput, LocationParam restrictions) {
+    public static LocationInformationRequest from(InitialLocationInput initialInput, LocationParam restrictions) {
         var locationInformationRequest = new LocationInformationRequest();
         locationInformationRequest.setInitialInput(initialInput);
         locationInformationRequest.setRestrictions(restrictions);
         return locationInformationRequest;
     }
 
-    public static LocationInformationRequest byStopPointRef(StopPointRef value) {
+    public static LocationInformationRequest from(StopPointRef value) {
         var locationInformationRequest = new LocationInformationRequest();
         locationInformationRequest.setLocationRef(new LocationRef().setStopPointRef(value));
         return locationInformationRequest;
     }
 
-    public static LocationInformationRequest byLocationRef(LocationRef value) {
+    public static LocationInformationRequest from(LocationRef value) {
         return new LocationInformationRequest()
                 .setLocationRef(value);
     }
 
-    public static LocationInformationRequest byLocationRef(LocationRef value, LocationParam restrictions) {
+    public static LocationInformationRequest from(LocationRef value, LocationParam restrictions) {
         return new LocationInformationRequest()
                 .setLocationRef(value)
                 .setRestrictions(restrictions);
@@ -76,34 +76,34 @@ public class LocationInformationRequestFactory {
      * @param locationName
      * @return
      */
-    public static LocationInformationRequest byLocationName(String locationName) {
+    public static LocationInformationRequest from(String locationName) {
         var initialInput = new InitialLocationInput();
         initialInput.setLocationName(locationName);
 
-        return byInitialInput(initialInput);
+        return from(initialInput);
     }
 
-    public static LocationInformationRequest byGeoPosition(GeoPosition geoPosition) {
-        var initialInput = new InitialLocationInput();
+    public static LocationInformationRequest from(GeoPosition geoPosition) {
+        var initialInput = new InitialLocationInput();        
         initialInput.setGeoPosition(geoPosition);
 
-        return byInitialInput(initialInput);
+        return from(initialInput);
     }
 
-    public static LocationInformationRequest byGeoPosition(ICoordinates geoPosition) {
-        return byGeoPosition(GeoPositionFactory.create(geoPosition));
+    public static LocationInformationRequest from(ICoordinates geoPosition) {
+        return from(GeoPositionFactory.from(geoPosition));
     }
 
-    public static LocationInformationRequest byGeoPosition(double lat, double lon) {
-        return byGeoPosition(GeoPositionFactory.create(lat, lon));
+    public static LocationInformationRequest from(double lat, double lon) {
+        return from(GeoPositionFactory.from(lat, lon));
     }
 
-    public static LocationInformationRequest byInitialInput(String locationName, GeoPosition geoPosition, GeoRestrictions geoRestriction) {
+    public static LocationInformationRequest from(String locationName, GeoPosition geoPosition, GeoRestrictions geoRestriction) {
         var initialInput = new InitialLocationInput();
         initialInput.setLocationName(locationName);
         initialInput.setGeoPosition(geoPosition);
         initialInput.setGeoRestriction(geoRestriction);
 
-        return byInitialInput(initialInput);
+        return from(initialInput);
     }
 }

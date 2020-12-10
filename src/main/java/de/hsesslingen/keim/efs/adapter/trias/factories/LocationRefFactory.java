@@ -37,7 +37,7 @@ import de.vdv.trias.StopPointRef;
  */
 public class LocationRefFactory {
 
-    public static LocationRef fromPlace(Place place) {
+    public static LocationRef from(Place place) {
         var ref = new LocationRef();
 
         if (place.getId() != null) {
@@ -49,7 +49,7 @@ public class LocationRefFactory {
         }
 
         if (place.hasCoordinates()) {
-            return ref.setGeoPosition(GeoPositionFactory.create(place));
+            return ref.setGeoPosition(GeoPositionFactory.from(place));
         }
 
         return ref;

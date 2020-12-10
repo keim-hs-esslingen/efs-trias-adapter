@@ -32,7 +32,7 @@ import de.vdv.trias.GeoPosition;
  */
 public final class GeoPositionFactory {
 
-    public static GeoPosition create(double lat, double lon) {
+    public static GeoPosition from(double lat, double lon) {
         var geo = new GeoPosition();
 
         geo.setLatitude(lat);
@@ -41,7 +41,7 @@ public final class GeoPositionFactory {
         return geo;
     }
 
-    public static GeoPosition create(ICoordinates coordinates) {
-        return create(coordinates.getLat(), coordinates.getLon());
+    public static GeoPosition from(ICoordinates coordinates) {
+        return from(coordinates.getLat(), coordinates.getLon());
     }
 }

@@ -23,7 +23,6 @@
  */
 package de.hsesslingen.keim.efs.adapter.trias.factories;
 
-import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationRefFactory.fromPlace;
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.vdv.trias.LocationContext;
 import de.vdv.trias.LocationRef;
@@ -38,7 +37,7 @@ public class LocationContextFactory {
 
     public static LocationContext from(Place place, ZonedDateTime dateTime) {
         return new LocationContext()
-                .setLocationRef(fromPlace(place))
+                .setLocationRef(LocationRefFactory.from(place))
                 .setDepArrTime(dateTime);
     }
 
