@@ -148,9 +148,10 @@ public class LegFactory {
      *
      * @param contiLeg
      * @param serviceId
+     * @param defaultImageUrl A default URL for asset images.
      * @return
      */
-    public static Leg from(ContinuousLeg contiLeg, String serviceId) {
+    public static Leg from(ContinuousLeg contiLeg, String serviceId, String defaultImageUrl) {
         var leg = new Leg();
 
         // origin Time
@@ -173,6 +174,7 @@ public class LegFactory {
         if (mode != Mode.WALK) {
             var asset = new Asset()
                     .setServiceId(serviceId)
+                    .setImageUrl(defaultImageUrl)
                     .setMode(mode);
 
             var service = contiLeg.getService();
@@ -210,11 +212,19 @@ public class LegFactory {
      * @param geoPositionGetter A function that allows retrieval of GeoPosition
      * information for a given StopPointRef, as a TimedLeg does not contain this
      * information elsewhere.
+     * @param defaultImageUrl A default URL for asset images.
      * @return
      */
-    public static Leg from(TimedLeg timedLeg, String serviceId, Function<StopPointRef, GeoPosition> geoPositionGetter) {
+    public static Leg from(
+            TimedLeg timedLeg,
+            String serviceId,
+            Function<StopPointRef, GeoPosition> geoPositionGetter,
+            String defaultImageUrl
+    ) {
         var leg = new Leg();
-        var asset = new Asset().setServiceId(serviceId);
+        var asset = new Asset()
+                .setServiceId(serviceId)
+                .setImageUrl(defaultImageUrl);
 
         // ### PLACE INFO ###
         // Kick of async retrieval of place creation, which involves a call to the TRIAS api for geo coordinates.
@@ -278,15 +288,16 @@ public class LegFactory {
      * information for a given StopPointRef. This is needed if {@link tripLeg}
      * contains a {@link TimedLeg} which does not contain a GeoPosition for its
      * leg ends.
+     * @param defaultImageUrl A default URL for asset images.
      * @return
      */
-    public static Leg from(TripLeg tripLeg, String serviceId, Function<StopPointRef, GeoPosition> geoPositionGetter) {
+    public static Leg from(TripLeg tripLeg, String serviceId, Function<StopPointRef, GeoPosition> geoPositionGetter, String defaultImageUrl) {
         if (tripLeg.getContinuousLeg() != null) {
-            return LegFactory.from(tripLeg.getContinuousLeg(), serviceId);
+            return LegFactory.from(tripLeg.getContinuousLeg(), serviceId, defaultImageUrl);
         }
 
         if (tripLeg.getTimedLeg() != null) {
-            return LegFactory.from(tripLeg.getTimedLeg(), serviceId, geoPositionGetter);
+            return LegFactory.from(tripLeg.getTimedLeg(), serviceId, geoPositionGetter, defaultImageUrl);
         }
 
         if (tripLeg.getInterchangeLeg() != null) {

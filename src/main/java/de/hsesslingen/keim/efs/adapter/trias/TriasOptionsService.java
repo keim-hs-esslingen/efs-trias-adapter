@@ -78,6 +78,9 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
     @Value("${trias.number-of-results:5}")
     private BigInteger defaultNumberOfResults;
 
+    @Value("${trias.default-image-url:}")
+    private String defaultImageUrl;
+
     @Value("${middleware.provider.mobility-service.id}")
     private String serviceId;
 
@@ -219,7 +222,7 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
 
         // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
         var legs = tripResult.getTrip().getTripLeg().stream()
-                .map(tripLeg -> LegFactory.from(tripLeg, serviceId, locationService::getGeoPosition))
+                .map(tripLeg -> LegFactory.from(tripLeg, serviceId, locationService::getGeoPosition, defaultImageUrl))
                 .filter(leg -> leg != null)
                 .peek(leg -> {
                     if (leg.getMode() != Mode.WALK) {
@@ -266,13 +269,12 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
             superLeg.setAsset(first.getAsset());
         }
 
-        return new Option(serviceId, superLeg,
-                false);
+        return new Option(serviceId, superLeg, false);
     }
 
     private List<Option> extractOptions(Trias responseTrias, Integer limitTo) {
         // Convert the trip results in parallel to options...
-        var stream = responseTrias.getServiceDelivery()
+        var tripResultStream = responseTrias.getServiceDelivery()
                 .getDeliveryPayload()
                 .getTripResponse()
                 .getTripResult()
@@ -281,10 +283,10 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
 
         // If required, limit to given value.
         if (limitTo != null) {
-            stream = stream.limit(limitTo);
+            tripResultStream = tripResultStream.limit(limitTo);
         }
 
-        return stream.map(this::createOption)
+        return tripResultStream.map(this::createOption)
                 .filter(opt -> opt != null)
                 .collect(toList());
     }
@@ -302,7 +304,6 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
             Boolean includeGeoPaths,
             TriasCredentials credentials
     ) {
-
         // if no destination is specified an empty options-list is returned
         if (to == null) {
             return new ArrayList<>();
