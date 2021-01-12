@@ -28,7 +28,7 @@ import de.hsesslingen.keim.efs.adapter.trias.factories.LegFactory;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextFactory.from;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TripRequestBuilder;
-import de.hsesslingen.keim.efs.middleware.exception.MissingConfigParamException;
+import de.hsesslingen.keim.efs.mobility.exception.MissingConfigParamException;
 import de.hsesslingen.keim.efs.middleware.provider.IBookingService;
 import de.hsesslingen.keim.efs.middleware.model.Option;
 import de.hsesslingen.keim.efs.middleware.model.Place;

@@ -27,7 +27,6 @@ import static de.hsesslingen.keim.efs.adapter.trias.TriasConfig.TRIAS_VERSION;
 import de.hsesslingen.keim.efs.adapter.trias.factories.GeoPositionFactory;
 import de.hsesslingen.keim.efs.middleware.model.ICoordinates;
 import de.hsesslingen.keim.efs.middleware.model.Place;
-import de.hsesslingen.keim.efs.mobility.exception.AbstractEfsException;
 import de.vdv.trias.GeoCircle;
 import de.vdv.trias.GeoPosition;
 import de.vdv.trias.GeoRestrictions;
@@ -109,13 +108,12 @@ public class TriasLocationInfoService implements IPlacesService<TriasCredentials
      *
      * @param stopPointRef
      * @return GeoPosition
-     * @throws AbstractEfsException
      */
-    public GeoPosition getGeoPosition(StopPointRef stopPointRef) throws AbstractEfsException {
+    public GeoPosition getGeoPosition(StopPointRef stopPointRef) {
 
-        Trias locationRequestTrias = TriasLocationInfoService.this.createInfoRequest(stopPointRef);
+        var locationRequestTrias = createInfoRequest(stopPointRef);
 
-        Trias responseLocationTrias = proxy.send(locationRequestTrias);
+        var responseLocationTrias = proxy.send(locationRequestTrias);
 
         if (responseLocationTrias == null) {
             return null;
