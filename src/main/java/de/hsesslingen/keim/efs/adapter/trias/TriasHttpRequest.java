@@ -63,7 +63,7 @@ public class TriasHttpRequest {
         }
     }
 
-    private Request<byte[]> request;
+    private final Request<byte[]> request;
 
     public TriasHttpRequest(HttpMethod method, String uri) {
         this.request = new Request(method, uri);
