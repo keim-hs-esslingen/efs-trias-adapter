@@ -24,6 +24,7 @@
 package de.hsesslingen.keim.efs.adapter.trias;
 
 import static de.hsesslingen.keim.efs.adapter.trias.TriasConfig.TRIAS_VERSION;
+import static de.hsesslingen.keim.efs.adapter.trias.Utils.tryGet;
 import de.hsesslingen.keim.efs.adapter.trias.factories.LegFactory;
 import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextFactory.from;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
@@ -221,9 +222,19 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
         var specialLegs = new Leg[2];
 
         // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
-        var legs = tripResult.getTrip().getTripLeg().stream()
-                .map(tripLeg -> LegFactory.from(tripLeg, serviceId, locationService::getGeoPosition, defaultImageUrl))
-                .filter(leg -> leg != null)
+        var legs = tripResult.getTrip().getTripLeg()
+                // Using parallel Stream because conversion of legs might involve API request.
+                // Parallelizing requests might increase performance drastically.
+                .parallelStream()
+                // Converting tripLeg to leg, which might include a TRIAS-API call.
+                // Using tryGet to catch exceptions arising from those API calls.
+                .map(tripLeg -> tryGet(() -> LegFactory.from(tripLeg, serviceId, locationService::getGeoPosition, defaultImageUrl)))
+                // Filtering out the failed conversions.
+                .filter(opt -> opt.isPresent())
+                .map(opt -> opt.get())
+                // Allowing only options with legs whose from and to values have coordinates.
+                .filter((Leg leg) -> leg.getFrom().hasCoordinates() && leg.getTo().hasCoordinates())
+                // Collecting come values...
                 .peek(leg -> {
                     if (leg.getMode() != Mode.WALK) {
                         ++nonWalkLegsCount[0];

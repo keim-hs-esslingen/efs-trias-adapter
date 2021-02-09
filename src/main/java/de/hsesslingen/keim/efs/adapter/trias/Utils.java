@@ -61,15 +61,33 @@ public class Utils {
     }
 
     /**
+     * Tries to use to given {@link Supplier} to retrieve the desired value and
+     * returns it if possible. If an exception occurs while getting the value,
+     * it is caught, logged and an empty optional is returned.
+     *
+     * @param <T>
+     * @param getter
+     * @return
+     */
+    public static <T> Optional<T> tryGet(Supplier<T> getter) {
+        try {
+            return Optional.of(getter.get());
+        } catch (Exception ex) {
+            logger.debug("Caught exception in tryGet(getter): {}", ex.getMessage());
+            return Optional.empty();
+        }
+    }
+
+    /**
      * Extracts the most preffered text value of the given list of
      * {@link InternationalText}.
      * <p>
      * The persued order is:
      * <ol>
-     * <li>Text in language of client (given by clientLocale)</li>
-     * <li>Text in english</li>
-     * <li>First text in list</li>
-     * <li>{@code null}</li>
+     * <li>Text in language of client (given by clientLocale)
+     * <li>Text in english
+     * <li>First text in list
+     * <li>{@code null}
      * </ol>
      *
      * @param texts
