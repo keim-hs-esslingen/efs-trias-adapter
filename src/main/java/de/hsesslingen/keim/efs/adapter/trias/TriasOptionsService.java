@@ -1,32 +1,35 @@
 /*
  * MIT License
- * 
+ *
  * Copyright (c) 2020 Hochschule Esslingen
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE. 
+ * SOFTWARE.
  */
 package de.hsesslingen.keim.efs.adapter.trias;
 
 import static de.hsesslingen.keim.efs.adapter.trias.TriasConfig.TRIAS_VERSION;
 import static de.hsesslingen.keim.efs.adapter.trias.Utils.tryGet;
+
 import de.hsesslingen.keim.efs.adapter.trias.factories.LegFactory;
+
 import static de.hsesslingen.keim.efs.adapter.trias.factories.LocationContextFactory.from;
+
 import de.hsesslingen.keim.efs.adapter.trias.factories.TriasServiceRequest;
 import de.hsesslingen.keim.efs.adapter.trias.factories.TripRequestBuilder;
 import de.hsesslingen.keim.efs.mobility.exception.MissingConfigParamException;
@@ -34,30 +37,34 @@ import de.hsesslingen.keim.efs.middleware.provider.IBookingService;
 import de.hsesslingen.keim.efs.middleware.model.Option;
 import de.hsesslingen.keim.efs.middleware.model.Place;
 import de.hsesslingen.keim.efs.middleware.provider.IOptionsService;
+
 import static de.hsesslingen.keim.efs.mobility.exception.HttpException.*;
+
 import de.hsesslingen.keim.efs.mobility.service.Mode;
-import de.vdv.trias.PtModeFilter;
-import de.vdv.trias.TripParam;
-import de.vdv.trias.TripRequest;
+import de.vdv.trias.*;
+
 import java.math.BigInteger;
+
 import static java.math.BigInteger.valueOf;
+
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import javax.annotation.PostConstruct;
 import javax.xml.bind.JAXBException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
 import static de.hsesslingen.keim.efs.adapter.trias.factories.ModeConverter.toTriasMode;
+
 import de.hsesslingen.keim.efs.middleware.model.Leg;
-import de.vdv.trias.ContinuousModesEnumeration;
-import de.vdv.trias.IndividualModesEnumeration;
-import de.vdv.trias.InterchangeModesEnumeration;
-import de.vdv.trias.Trias;
-import de.vdv.trias.TripResult;
+
 import static java.util.stream.Collectors.toList;
+import static org.apache.commons.lang3.ObjectUtils.isNotEmpty;
 import static org.springframework.util.CollectionUtils.isEmpty;
 
 /**
@@ -179,31 +186,126 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
         return null;
     }
 
-    private boolean canConvertTripResultToOption(TripResult tripResult) {
-        // Check if any of the contained legs is NOT a walk leg.
-        return tripResult.getTrip().getTripLeg().stream().anyMatch(l -> {
-            if (l.getContinuousLeg() != null) {
-                var service = l.getContinuousLeg().getService();
+    private boolean isWalkLeg(TripLeg l) {
+        if (l.getContinuousLeg() != null) {
+            var service = l.getContinuousLeg().getService();
 
-                if (service.getIndividualMode() == IndividualModesEnumeration.WALK) {
-                    return false;
-                } else if (service.getContinuousMode() == ContinuousModesEnumeration.WALK) {
-                    return false;
+            if (service.getIndividualMode() == IndividualModesEnumeration.WALK) {
+                return false;
+            } else if (service.getContinuousMode() == ContinuousModesEnumeration.WALK) {
+                return false;
+            }
+        }
+
+        if (l.getInterchangeLeg() != null) {
+            var leg = l.getInterchangeLeg();
+
+            if (leg.getInterchangeMode() == InterchangeModesEnumeration.WALK) {
+                return false;
+            } else if (leg.getContinuousMode() == ContinuousModesEnumeration.WALK) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private int getLengthOfLeg(TripLeg l) {
+        if (l.getContinuousLeg() != null) {
+            var cl = l.getContinuousLeg();
+
+            if (cl.getLength() != null) {
+                return cl.getLength().intValue();
+
+            } else if (cl.getLegTrack() != null) {
+                var clt = cl.getLegTrack();
+
+                if (isNotEmpty(clt.getTrackSection())) {
+                    var addedLength = 0;
+
+                    for (var sec : clt.getTrackSection()) {
+                        if (sec.getLength() != null) {
+                            addedLength += sec.getLength().intValue();
+                        }
+                    }
+
+                    return addedLength;
                 }
             }
+        }
 
-            if (l.getInterchangeLeg() != null) {
-                var leg = l.getInterchangeLeg();
+        if (l.getInterchangeLeg() != null) {
+            var il = l.getInterchangeLeg();
 
-                if (leg.getInterchangeMode() == InterchangeModesEnumeration.WALK) {
-                    return false;
-                } else if (leg.getContinuousMode() == ContinuousModesEnumeration.WALK) {
-                    return false;
+            if (il.getLength() != null) {
+                return il.getLength().intValue();
+            }
+        }
+
+        return 0;
+    }
+
+    private boolean isRoundTrip(TripLeg l) {
+        if (l.getContinuousLeg() != null) {
+            var cl = l.getContinuousLeg();
+            var start = cl.getLegStart();
+            var end = cl.getLegEnd();
+
+            if (start != null && end != null) {
+                if (start.getStopPointRef() != null
+                        && end.getStopPointRef() != null
+                        && Objects.equals(start.getStopPointRef().getValue(), end.getStopPointRef().getValue())
+                ) {
+                    return true;
+                }
+
+                if (start.getStopPlaceRef() != null
+                        && end.getStopPlaceRef() != null
+                        && Objects.equals(start.getStopPlaceRef().getValue(), end.getStopPlaceRef().getValue())
+                ) {
+                    return true;
                 }
             }
+        } else if (l.getTimedLeg() != null) {
+            var cl = l.getTimedLeg();
+            var start = cl.getLegAlight();
+            var end = cl.getLegBoard();
 
-            return true;
-        });
+            if (start != null && end != null) {
+                if (start.getStopPointRef() != null
+                        && end.getStopPointRef() != null
+                        && Objects.equals(start.getStopPointRef().getValue(), end.getStopPointRef().getValue())
+                ) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    private boolean canConvertTripResultToOption(TripResult tripResult, int allowedWalkingLegLength) {
+        var legsItr = tripResult.getTrip().getTripLeg().stream().iterator();
+
+        var containsNonWalkLeg = false;
+
+        while (legsItr.hasNext()) {
+            var l = legsItr.next();
+
+            if (isWalkLeg(l)) {
+                if (getLengthOfLeg(l) > allowedWalkingLegLength) {
+                    return false;
+                }
+            } else {
+                containsNonWalkLeg = true;
+            }
+
+            if(isRoundTrip(l)){
+                return false;
+            }
+        }
+
+        return containsNonWalkLeg;
     }
 
     /**
@@ -283,14 +385,14 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
         return new Option(serviceId, superLeg, false);
     }
 
-    private List<Option> extractOptions(Trias responseTrias, Integer limitTo) {
+    private List<Option> extractOptions(Trias responseTrias, Integer limitTo, int allowedMaxWalkDistance) {
         // Convert the trip results in parallel to options...
         var tripResultStream = responseTrias.getServiceDelivery()
                 .getDeliveryPayload()
                 .getTripResponse()
                 .getTripResult()
                 .stream()
-                .filter(this::canConvertTripResultToOption);
+                .filter(r -> canConvertTripResultToOption(r, allowedMaxWalkDistance));
 
         // If required, limit to given value.
         if (limitTo != null) {
@@ -298,7 +400,7 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
         }
 
         return tripResultStream.map(this::createOption)
-                .filter(opt -> opt != null)
+                .filter(Objects::nonNull)
                 .collect(toList());
     }
 
@@ -320,6 +422,8 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
             return new ArrayList<>();
         }
 
+        var radius = radiusMeter != null ? radiusMeter : 500;
+
         var params = new TripParam()
                 .setIncludeEstimatedTimes(true)
                 .setIncludeLegProjection(includeGeoPaths)
@@ -339,7 +443,7 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
                     .go()
                     .getBody();
 
-            return extractOptions(responseTrias, limitTo);
+            return extractOptions(responseTrias, limitTo, radius);
         } catch (JAXBException ex) {
             throw internalServerError("An error occured when converting to or from XML.");
         }
