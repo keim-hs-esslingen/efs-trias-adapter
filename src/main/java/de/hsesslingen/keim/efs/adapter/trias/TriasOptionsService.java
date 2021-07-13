@@ -48,10 +48,8 @@ import java.math.BigInteger;
 import static java.math.BigInteger.valueOf;
 
 import java.time.ZonedDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.Future;
 import javax.annotation.PostConstruct;
 import javax.xml.bind.JAXBException;
 
@@ -63,6 +61,7 @@ import static de.hsesslingen.keim.efs.adapter.trias.factories.ModeConverter.toTr
 
 import de.hsesslingen.keim.efs.middleware.model.Leg;
 
+import static java.util.concurrent.CompletableFuture.supplyAsync;
 import static java.util.stream.Collectors.toList;
 import static org.apache.commons.lang3.ObjectUtils.isNotEmpty;
 import static org.springframework.util.CollectionUtils.isEmpty;
@@ -293,14 +292,16 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
             var l = legsItr.next();
 
             if (isWalkLeg(l)) {
-                if (getLengthOfLeg(l) > allowedWalkingLegLength) {
+                var length = getLengthOfLeg(l);
+
+                if (length > allowedWalkingLegLength) {
                     return false;
                 }
             } else {
                 containsNonWalkLeg = true;
             }
 
-            if(isRoundTrip(l)){
+            if (isRoundTrip(l)) {
                 return false;
             }
         }
@@ -316,6 +317,19 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
      */
     private Option createOption(TripResult tripResult) {
 
+        // First run an async conversion of TripLeg to Leg.
+        // This operation might involve API-Calls, therefore it is parallelized.
+        // We are not using a parallel stream because this might mess up the order of the legs.
+        var futures = tripResult.getTrip().getTripLeg().stream()
+                // Converting tripLeg to leg, which might include a TRIAS-API call.
+                // Using tryGet to catch exceptions arising from those API calls.
+                .map(leg ->
+                        supplyAsync(() ->
+                                tryGet(() -> LegFactory.from(leg, serviceId, locationService::getGeoPosition, defaultImageUrl))
+                        )
+                )
+                .collect(toList());
+
         // Initializing some one-value-arrays that will be populated in the following stream.
         var nonWalkLegsCount = new int[]{0};
 
@@ -323,17 +337,17 @@ public class TriasOptionsService implements IOptionsService<TriasCredentials> {
         // 0 = first non-walk leg, 1 = last non-walk leg
         var specialLegs = new Leg[2];
 
-        // therefore the details about sub-legs are stored in a list and later convertet to a string which is stored in meta.other
-        var legs = tripResult.getTrip().getTripLeg()
-                // Using parallel Stream because conversion of legs might involve API request.
-                // Parallelizing requests might increase performance drastically.
-                .parallelStream()
-                // Converting tripLeg to leg, which might include a TRIAS-API call.
-                // Using tryGet to catch exceptions arising from those API calls.
-                .map(tripLeg -> tryGet(() -> LegFactory.from(tripLeg, serviceId, locationService::getGeoPosition, defaultImageUrl)))
+        var legs = futures.stream()
+                .map(f -> {
+                    try {
+                        return f.get();
+                    } catch (Exception ex) {
+                        return Optional.<Leg>empty();
+                    }
+                })
                 // Filtering out the failed conversions.
-                .filter(opt -> opt.isPresent())
-                .map(opt -> opt.get())
+                .filter(Optional::isPresent)
+                .map(Optional::get)
                 // Allowing only options with legs whose from and to values have coordinates.
                 .filter((Leg leg) -> leg.getFrom().hasCoordinates() && leg.getTo().hasCoordinates())
                 // Collecting come values...
